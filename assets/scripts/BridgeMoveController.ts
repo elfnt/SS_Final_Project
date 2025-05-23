@@ -4,7 +4,7 @@ const { ccclass, property } = cc._decorator;
 export default class BridgeMoveController extends cc.Component {
 
     @property
-    maxOffsetY: number = 200; // 上限：原始位置 + 200
+    maxOffsetY: number = 1000; // 上限：原始位置 + 1000
 
     @property
     minOffsetY: number = -50; // 下限：原始位置 - 50
