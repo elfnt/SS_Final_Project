@@ -39,25 +39,25 @@ export default class BridgeMoveController extends cc.Component {
     }
 
     update(dt: number) {
-        if (!this.isOscillating) return;
-
-        const topY = this.originalY + this.maxOffsetY;
-        const bottomY = this.originalY + this.minOffsetY;
-
-        let deltaY = this.moveSpeed * dt;
-
-        if (this.isGoingUp) {
-            this.node.y += deltaY;
-            if (this.node.y >= topY) {
-                this.node.y = topY;
-                this.isGoingUp = false;
-            }
-        } else {
-            this.node.y -= deltaY;
-            if (this.node.y <= bottomY) {
-                this.node.y = bottomY;
-                this.isGoingUp = true;
-            }
-        }
+    const rb = this.getComponent(cc.RigidBody);
+    if (!rb || !this.isOscillating) {
+        if (rb) rb.linearVelocity = cc.Vec2.ZERO;
+        return;
     }
+
+    const y = this.node.y;
+    const topY = this.originalY + this.maxOffsetY;
+    const bottomY = this.originalY + this.minOffsetY;
+
+    // ✅ 每幀檢查是否該改方向
+    if (y >= topY) {
+        this.isGoingUp = false;
+    } else if (y <= bottomY) {
+        this.isGoingUp = true;
+    }
+
+    const deltaY = this.isGoingUp ? this.moveSpeed : -this.moveSpeed;
+    rb.linearVelocity = cc.v2(0, deltaY);
+}
+
 }
