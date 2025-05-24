@@ -4,14 +4,22 @@
   ],
   "group-list": [
     "default",
-    "Ground"
+    "Ground",
+    "Player"
   ],
   "collision-matrix": [
     [
       true,
+      true,
       true
     ],
     [
+      true,
+      true,
+      true
+    ],
+    [
+      true,
       true,
       true
     ]
