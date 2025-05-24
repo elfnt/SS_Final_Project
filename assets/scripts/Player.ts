@@ -41,15 +41,6 @@ export default class Player extends cc.Component {
             rbType: this.rb ? this.rb.type : 'n/a',
         });
 
-        if (this.physicsCollider) {
-            this.physicsCollider.friction = 0.2;
-            this.physicsCollider.restitution = 0;
-            this.physicsCollider.density = 1;
-            this.physicsCollider.enabled = true;
-            this.physicsCollider.apply();
-        } else {
-            cc.warn("[Player] Missing PhysicsBoxCollider component!");
-        }
 
         this.addKeyboardListeners();
         this.startPosition = this.node.getPosition().clone();
@@ -104,17 +95,6 @@ export default class Player extends cc.Component {
         this.updateCameraPosition();
         this.updateAnimationState();
 
-        // Handle fall damage
-        if (this.node.y < -320) {
-            cc.log('[DEBUG] Player fell below -320, y=', this.node.y, 'rb:', this.rb ? this.rb.linearVelocity : 'n/a');
-            // Remove disabling of collider/sensor here to allow recovery if player lands again
-            // this.handleDeath("fall");
-        }
-        // Win condition
-        if (this.node.x >= 1880) {
-            cc.director.loadScene("Win");
-        }
-
         // Always keep player upright (prevent tilting/rotation)
         this.node.angle = 0;
         if (this.rb) {
@@ -140,11 +120,9 @@ export default class Player extends cc.Component {
             const normal = contact.getWorldManifold().normal;
             cc.log(`[DEBUG] Player: y=${this.node.y}, Ground group: ${otherCollider.node.group}, normal.y=${normal.y}`);
             // Only set on ground if contact normal is upwards (Player is above ground)
-            if (-normal.y > 0.7) {
-                this.isOnGround = true;
-                this.isJumping = false;
-                cc.log("[DEBUG] Player is now ON ground.");
-            }
+            this.isOnGround = true;
+            this.isJumping = false;
+            cc.log("[DEBUG] Player is now ON ground.");
         }
     }
 
