@@ -38,7 +38,7 @@ export default class FlashSensor extends cc.Component {
                 cc.log("screenmask's opacity = 0");
                 cc.tween(this.screenMask)
                     .to(0.1, { opacity: 255 })
-                    .delay(0.5)
+                    .delay(1)
                     .to(0.1, { opacity: 0 })
                     .delay(0.5)
                     .call(() => {
