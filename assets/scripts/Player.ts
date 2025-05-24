@@ -55,9 +55,6 @@ export default class Player extends cc.Component {
         this.startPosition = this.node.getPosition().clone();
     }
 
-    start() {
-        this.resetState();
-    }
 
     addKeyboardListeners() {
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
@@ -81,7 +78,7 @@ export default class Player extends cc.Component {
                 this.direction.x = 1;
                 this.node.scaleX = Math.abs(this.node.scaleX);
                 break;
-            case cc.macro.KEY.up:
+            case cc.macro.KEY.space:
                 if (this.isOnGround) {
                     this.jump();
                 }
@@ -149,25 +146,6 @@ export default class Player extends cc.Component {
                 cc.log("[DEBUG] Player is now ON ground.");
             }
         }
-
-        // Enemy contact
-        if (otherCollider.node.group === "Enemy") {
-            const normal = contact.getWorldManifold().normal;
-            cc.log(`[DEBUG] Player-Enemy contact normal.y=${normal.y}`);
-            // If Player is above the enemy (stomping), normal.y should be negative (pointing up from Player to Goomba)
-            if (-normal.y > 0.7) {
-                // Stomped the enemy, do NOT die
-                cc.log("[DEBUG] Player stomped enemy, not dying.");
-                this.bounce();
-            } else {
-                // If Player is not invincible and not dead, handle enemy damage
-                if (!this.invincible && !this.isDead) {
-                    this.handleDeath("enemy");
-                    this.invincible = true;
-                    this.scheduleOnce(() => { this.invincible = false; }, this.invincibleDuration);
-                }
-            }
-        }
     }
 
     onEndContact(contact, selfCollider, otherCollider) {
@@ -189,12 +167,6 @@ export default class Player extends cc.Component {
         cc.audioEngine.playEffect(this.jumpSound, false);
     }
 
-    bounce() {
-        if (this.rb) {
-            this.rb.linearVelocity = cc.v2(this.rb.linearVelocity.x, 400);
-        }
-        // Optionally play bounce sound, add score, etc.
-    }
 
     setAnimationState(name: string) {
         if (this.animation && this.animation.currentClip?.name !== name) {
@@ -249,29 +221,6 @@ export default class Player extends cc.Component {
         }
     }
 
-    resetToStart() {
-        if (this.rb) {
-            this.rb.linearVelocity = cc.v2(0, 0);
-        }
-        this.node.setPosition(this.startPosition);
-        this.resetState();
-        this.addKeyboardListeners();
-    }
-
-    resetState() {
-        this.isDead = false;
-        this.isJumping = false;
-        this.isOnGround = false;
-        this.direction = cc.Vec2.ZERO.clone();
-        this.invincible = false;
-
-        if (this.physicsCollider) {
-            this.physicsCollider.sensor = false;
-            this.physicsCollider.apply();
-        }
-
-        this.setAnimationState("Idle");
-    }
 
     onDestroy() {
         this.removeKeyboardListeners();
