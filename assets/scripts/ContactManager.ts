@@ -5,7 +5,7 @@ const { ccclass, property } = cc._decorator;
 export default class ContactManager extends cc.Component {
 
     @property(cc.Node)
-    bridge: cc.Node = null;  // æŒ‡åˆ°æ©‹çš„ç¯€é»ž
+    bridge: cc.Node = null;  // ?????°æ?????ç¯?é»?
 
     onLoad() {
         cc.director.getPhysicsManager().enabled = true;

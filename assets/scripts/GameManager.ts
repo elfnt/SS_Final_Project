@@ -6,11 +6,6 @@ export default class GameManager extends cc.Component {
     @property(cc.Node)
     egg: cc.Node = null;
 
-    @property(cc.Node)
-    cameraNode: cc.Node = null; // ✅ 可以自由拉位置的 Camera Node
-
-    private offset: cc.Vec2 = cc.v2(0, 0); // ✅ 初始偏移
-
     onLoad() {
         const physicsMgr = cc.director.getPhysicsManager();
         physicsMgr.enabled = true;
@@ -22,20 +17,14 @@ export default class GameManager extends cc.Component {
     }
 
     start() {
-        if (this.egg && this.cameraNode) {
-            // ✅ 計算 camera 與 egg 的初始世界座標差
+        if (this.egg) {
+            // ✅ 計算 egg 的初始世界座標
             const eggPos = this.egg.convertToWorldSpaceAR(cc.v2(0, 0));
-            const camPos = this.cameraNode.convertToWorldSpaceAR(cc.v2(0, 0));
-            this.offset = camPos.sub(eggPos);
         }
     }
 
     update(dt: number) {
-        if (this.egg && this.cameraNode) {
-            const eggPos = this.egg.convertToWorldSpaceAR(cc.v2(0, 0));
-            const newCamWorldPos = eggPos.add(this.offset);
-            const newCamLocalPos = this.cameraNode.parent.convertToNodeSpaceAR(newCamWorldPos);
-            this.cameraNode.setPosition(newCamLocalPos);
-        }
+        // Remove camera follow logic from GameManager
+        // Camera will now be controlled by Player or Egg script
     }
 }

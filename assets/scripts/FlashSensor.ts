@@ -19,7 +19,7 @@ export default class FlashSensor extends cc.Component {
             cc.log("parent = ",parent);
             if (parent) {
                 parent.sortAllChildren();
-                cc.log('[FlashSensor] sortAllChildren() 執行完成');
+                cc.log('[FlashSensor] sortAllChildren() ��瑁��摰����');
             } else {
                 cc.warn('[FlashSensor] parent is null at start');
             }
@@ -50,7 +50,7 @@ export default class FlashSensor extends cc.Component {
     }
 
     update(dt: number) {
-        // 黏著 camera 移動
+        // 暺���� camera 蝘餃��
         if (this.cameraNode && this.screenMask) {
             this.screenMask.setPosition(this.cameraNode.getPosition());
         }

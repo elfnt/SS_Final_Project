@@ -3,7 +3,7 @@
   "_name": "Move",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.5166666666666667,
+  "_duration": 0.6,
   "sample": 60,
   "speed": 1,
   "wrapMode": 2,
@@ -31,6 +31,12 @@
           },
           {
             "frame": 0.5,
+            "value": {
+              "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
+            }
+          },
+          {
+            "frame": 0.5833333333333334,
             "value": {
               "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
             }
