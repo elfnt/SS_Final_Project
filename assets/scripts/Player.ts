@@ -116,7 +116,7 @@ export default class Player extends cc.Component {
         if (this.isDead) return;
 
         // Ground contact
-        if (otherCollider.node.group === "Ground") {
+        if (otherCollider.node.group === "Ground" || otherCollider.node.group === "Item") {
             const normal = contact.getWorldManifold().normal;
             cc.log(`[DEBUG] Player: y=${this.node.y}, Ground group: ${otherCollider.node.group}, normal.y=${normal.y}`);
             // Only set on ground if contact normal is upwards (Player is above ground)
