@@ -4606,8 +4606,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -6896.806,
-        276.73,
+        -6895.263,
+        287.528,
         0,
         0,
         0,
@@ -4647,7 +4647,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "70ea3873-75d6-4887-966c-57a6b34c7191"
+      "__uuid__": "f9284eb3-5b6b-4df8-9449-a945165f41b1"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -4683,7 +4683,7 @@
     },
     "_angularVelocity": 0,
     "_fixedRotation": false,
-    "enabledContactListener": false,
+    "enabledContactListener": true,
     "bullet": false,
     "awakeOnLoad": true,
     "_id": "6dVOVWcmpHdbOEZEJyhyA/"
@@ -5064,11 +5064,19 @@
       "__id__": 118
     },
     "_enabled": true,
-    "label": null,
-    "text": "hello",
     "moveSpeed": 5,
     "jumpForce": 10,
+    "normalSprite": {
+      "__uuid__": "f9284eb3-5b6b-4df8-9449-a945165f41b1"
+    },
+    "crackedSprite": {
+      "__uuid__": "c2dc86a7-8a9f-4e4f-ad1b-5a904515fae2"
+    },
+    "brokenSprite": {
+      "__uuid__": "98a00f32-06d5-42d8-a686-a216f718506b"
+    },
     "maxLife": 100,
+    "enableDebugControls": true,
     "groundGroup": "Ground",
     "_id": "d2u2IrhNlLvr1cUoju4kUI"
   },
