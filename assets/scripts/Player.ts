@@ -12,6 +12,8 @@ export default class Player extends cc.Component {
 @property({ type: cc.Node }) itemContainer: cc.Node = null;
 /** 搜尋最近道具半徑 */
 @property itemDetectRadius = 100;
+/** Whether this player can be controlled with keyboard */
+@property isLocalPlayer: boolean = true;
 
 /* ═══════════ 內部狀態 ═══════════ */
 private anim: cc.Animation = null;
@@ -35,9 +37,19 @@ onLoad() {
     this.anim = this.getComponent(cc.Animation);
     this.rb   = this.getComponent(cc.RigidBody);
     cc.director.getPhysicsManager().enabled = true;
-    this.addKeyListeners();
+    
+    // Only add key listeners if this is the local player
+    if (this.isLocalPlayer) {
+        this.addKeyListeners();
+    }
 }
-onDestroy() { this.removeKeyListeners(); }
+
+onDestroy() { 
+    // Only remove key listeners if this is the local player
+    if (this.isLocalPlayer) {
+        this.removeKeyListeners(); 
+    }
+}
 
 /* ═══════════ Input ═══════════ */
 private addKeyListeners() {

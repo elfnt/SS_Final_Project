@@ -23,54 +23,90 @@ export default class FirebaseTest extends cc.Component {
     @property
     otherPlayerId: string = "player2"; // ID of the other player - making it public for easier testing
 
-    onLoad() {
-        // Dynamically assign player IDs based on a query parameter or device
-        const urlParams = new URLSearchParams(window.location.search);
-        this.playerId = urlParams.get("playerId") || "player1";
-        this.otherPlayerId = this.playerId === "player1" ? "player2" : "player1";
+onLoad() {
+    // Get or generate a game code
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameCode = urlParams.get("gameCode") || this.generateGameCode();
+    
+    // Determine which player this client will control
+    this.playerId = urlParams.get("playerId") || "player1";
+    this.otherPlayerId = this.playerId === "player1" ? "player2" : "player1";
+    
+    console.log(`Game code: ${gameCode}`);
+    console.log(`Initialized as: ${this.playerId}, watching: ${this.otherPlayerId}`);
+
+    // Check if nodes exist before accessing them
+    if (this.playerNode && this.otherPlayerNode) {
+        // Set up which player is local and which is remote
+        const playerScript = this.playerNode.getComponent('Player');
+        const otherPlayerScript = this.otherPlayerNode.getComponent('Player');
         
-        console.log(`Initialized as: ${this.playerId}, watching: ${this.otherPlayerId}`);
+        if (playerScript) playerScript.isLocalPlayer = true;
+        if (otherPlayerScript) otherPlayerScript.isLocalPlayer = false;
+    } else {
+        console.warn("Player nodes not properly assigned in the Inspector");
+    }
 
-        const firebaseManager = FirebaseManager.getInstance();
+    const firebaseManager = FirebaseManager.getInstance();
 
-        // Save initial player data based on the Inspector positions
+    // Use the game code as part of the Firebase path
+    const playerPath = `games/${gameCode}/players/${this.playerId}`;
+    const otherPlayerPath = `games/${gameCode}/players/${this.otherPlayerId}`;
+
+    if (this.playerNode) {
+        // Save initial player data
         const initialPlayerData = {
-            position: { x: this.playerNode.x, y: this.playerNode.y },
+            position: { x: this.playerNode.x, y: this.playerNode.y }
         };
-        firebaseManager.savePlayerData(this.playerId, initialPlayerData);
+        firebaseManager.savePlayerData(playerPath, initialPlayerData);
 
-        // First, fetch the current position of the other player
-        firebaseManager.fetchPlayerData(this.otherPlayerId)
-            .then((data) => {
-                if (data && data.position) {
-                    console.log(`Initial position of ${this.otherPlayerId}: `, data.position);
-                    this.otherPlayerNode.setPosition(data.position.x, data.position.y);
-                }
-            })
-            .catch((error) => {
-                console.error(`Error fetching ${this.otherPlayerId} data:`, error);
-            });
+        // Attach touch listener to playerNode for local control
+        this.playerNode.on(cc.Node.EventType.TOUCH_MOVE, (event) => {
+            const delta = event.getDelta();
+            this.playerNode.x += delta.x;
+            this.playerNode.y += delta.y;
 
-        // Then, listen for real-time updates of the other player's position
-        firebaseManager.listenToPlayerData(this.otherPlayerId, (data) => {
+            // Update the player's position in Firebase
+            const updatedPlayerData = {
+                position: { x: this.playerNode.x, y: this.playerNode.y }
+            };
+            firebaseManager.savePlayerData(playerPath, updatedPlayerData);
+        });
+    }
+
+    if (this.otherPlayerNode) {
+        // Listen for real-time updates of the other player's position
+        firebaseManager.listenToPlayerData(otherPlayerPath, (data) => {
             if (data && data.position) {
                 this.otherPlayerNode.setPosition(data.position.x, data.position.y);
             }
         });
+    }
+    
+    // Display the game code for the second player to join
+    this.displayGameCode(gameCode);
+}
 
-        // Update this player's position in Firebase as they move
-        if (this.playerId === "player1" || this.playerId === "player2") {
-            this.node.on(cc.Node.EventType.TOUCH_MOVE, (event) => {
-                const delta = event.getDelta();
-                this.playerNode.x += delta.x;
-                this.playerNode.y += delta.y;
+// Generate a random 6-character game code
+private generateGameCode(): string {
+    const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // Omitting similar-looking characters
+    let code = '';
+    for (let i = 0; i < 6; i++) {
+        code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return code;
+}
 
-                // Update the player's position in Firebase
-                const updatedPlayerData = {
-                    position: { x: this.playerNode.x, y: this.playerNode.y },
-                };
-                firebaseManager.savePlayerData(this.playerId, updatedPlayerData);
-            });
+// Display the game code in the UI (you'll need to implement this)
+private displayGameCode(code: string) {
+    // Example: Display in a UI label
+    const codeLabel = this.node.getChildByName('CodeLabel');
+    if (codeLabel) {
+        const label = codeLabel.getComponent(cc.Label);
+        if (label) {
+            label.string = `Game Code: ${code}`;
         }
     }
+    console.log(`Share this game code with your friend: ${code}`);
+}
 }
