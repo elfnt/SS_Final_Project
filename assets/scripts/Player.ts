@@ -9,7 +9,6 @@ export default class Player extends cc.Component {
 @property({ type: cc.AudioClip }) jumpSound: cc.AudioClip = null;
 @property({ type: cc.AudioClip }) deathSound: cc.AudioClip = null;
 /** 頭頂空節點（場景中拖進來） */
-@property({ type: cc.Node }) itemContainer: cc.Node = null;
 /** 搜尋最近道具半徑 */
 @property itemDetectRadius = 100;
 
@@ -27,6 +26,8 @@ private nearestItem: cc.Node = null;
 private originalWorldScale: cc.Vec2 = null;
 private originalItemFixedRotation: boolean = null;
 private originalItemFriction: number = null;
+private lastFacing: number = 1;   // 1 = 朝右,  -1 = 朝左
+
 
 
 
@@ -50,33 +51,44 @@ private removeKeyListeners() {
 }
 private onKeyDown(e: cc.Event.EventKeyboard) {
     if (this.isDead) return;
+
     switch (e.keyCode) {
-        case cc.macro.KEY.left:
+        /* ─── 移動 (A / D) ─── */
+        case cc.macro.KEY.a:           // ←
             this.dir.x = -1;
+            this.lastFacing = -1;      // 記錄最後朝向
             this.node.scaleX = -Math.abs(this.node.scaleX);
             break;
-        case cc.macro.KEY.right:
+
+        case cc.macro.KEY.d:           // →
             this.dir.x = 1;
+            this.lastFacing = 1;
             this.node.scaleX =  Math.abs(this.node.scaleX);
             break;
+
+        /* ─── 跳躍 (Space) ─── */
         case cc.macro.KEY.space:
             if (this.isOnGround) this.jump();
             break;
-            case cc.macro.KEY.ctrl:
-                if (this.heldItem) {
-                    this.dropItem();
-                } else if (this.nearestItem && this.dir.x === 0) {
-                    this.pickUpItem(this.nearestItem);
-                } else {
-                    cc.log("[DEBUG] 拿取失敗：請靜止時再撿起道具");
-                }
-                break;
+
+        /* ─── 拾 / 放 (E) ─── */
+        case cc.macro.KEY.e:
+            if (this.heldItem) {
+                this.dropItem();
+            } else if (this.nearestItem && this.dir.x === 0) {
+                this.pickUpItem(this.nearestItem);
+            } else {
+                cc.log("[DEBUG] 拿取失敗：請靜止時再撿起道具");
+            }
+            break;
     }
 }
+
 private onKeyUp(e: cc.Event.EventKeyboard) {
     if (this.isDead) return;
-    if (e.keyCode === cc.macro.KEY.left  && this.dir.x === -1) this.dir.x = 0;
-    if (e.keyCode === cc.macro.KEY.right && this.dir.x ===  1) this.dir.x = 0;
+
+    if (e.keyCode === cc.macro.KEY.a && this.dir.x === -1) this.dir.x = 0;
+    if (e.keyCode === cc.macro.KEY.d && this.dir.x ===  1) this.dir.x = 0;
 }
 
 /* ═══════════ update ═══════════ */
@@ -173,84 +185,73 @@ private pickUpItem(item: cc.Node) {
     this.heldItem = item;
     this.highlight(item, false);
 
-    /* 記錄世界縮放（Vec2） */
-    const ws = cc.v2(item.scaleX * item.parent.scaleX,    // worldScaleX
-                     item.scaleY * item.parent.scaleY);   // worldScaleY
+    // 記錄世界縮放
+    const ws = cc.v2(item.scaleX * item.parent.scaleX,
+                     item.scaleY * item.parent.scaleY);
     this.originalWorldScale = ws;
 
-    /* 停用物理 */
+    // 記錄物理屬性
     const rb = item.getComponent(cc.RigidBody);
-    const col = item.getComponent(cc.PhysicsBoxCollider); // ✅ Collider 是 friction 的擁有者
-
+    const col = item.getComponent(cc.PhysicsBoxCollider);
     if (rb) {
         this.originalItemFixedRotation = rb.fixedRotation;
         rb.enabled = true;
-        rb.type = cc.RigidBodyType.Dynamic;     // ✅ 一律使用 Dynamic
+        rb.type = cc.RigidBodyType.Dynamic;
         rb.fixedRotation = true;
         rb.linearVelocity = cc.v2(0, 0);
         rb.angularVelocity = 0;
     }
-
     if (col) {
         this.originalItemFriction = col.friction;
-        col.friction = 100;                     // ✅ 超高摩擦力讓它不滑動
-        col.apply();                            // 必須 apply 才會立即生效
+        col.friction = 100;
+        col.apply();
     }
 
-
-    /* 把 container 放在頭上＋一些高度 */
-    this.itemContainer.setPosition(0, this.node.height/2 + 20);
-
-    /* 重新掛到 container */
-    item.parent = this.itemContainer;
-    item.setPosition(0, 0);
-
-    /* 算新的 localScale = worldScale / parentWorldScale */
-    const pwsx = this.itemContainer.scaleX * this.itemContainer.parent.scaleX;
-    const pwsy = this.itemContainer.scaleY * this.itemContainer.parent.scaleY;
-    item.setScale(ws.x / pwsx, ws.y / pwsy);
+    // 將物品隱藏，模擬收入背包
+    item.active = false;
 }
+
 
 /* ---- 放下 ---- */
 private dropItem() {
     if (!this.heldItem) return;
 
-    /* 丟到面向方向前方 */
-    const dx  = this.node.scaleX > 0 ? 30 : -30;
-    const wpt = this.itemContainer.convertToWorldSpaceAR(cc.v2(dx, -10));
-    const lpt = this.node.parent.convertToNodeSpaceAR(wpt);
+    // ① 啟用物品（從背包取出）
+    this.heldItem.active = true;
 
+    // ② 判斷面向方向（若靜止則使用最後方向）
+    const facing = this.dir.x !== 0 ? this.dir.x : this.lastFacing;
+    const offset = cc.v2(100 * facing, -10); // 向面對方向偏移 + 稍微往下
+    const dropPos = this.node.position.add(offset); // 計算最終位置
+
+    // ③ 掛回原場景層級並設定位置（使用 x, y 避開 Vec3 錯誤）
     this.heldItem.parent = this.node.parent;
-    this.heldItem.setPosition(lpt.x, lpt.y);
+    this.heldItem.setPosition(dropPos.x, dropPos.y);
 
-    /* 還原 localScale → worldScale / 新parent worldScale */
+    // ④ 還原縮放
     const pwsx = this.heldItem.parent.scaleX;
     const pwsy = this.heldItem.parent.scaleY;
-    this.heldItem.setScale(this.originalWorldScale.x / pwsx,
-                           this.originalWorldScale.y / pwsy);
+    this.heldItem.setScale(
+        this.originalWorldScale.x / pwsx,
+        this.originalWorldScale.y / pwsy
+    );
 
-    /* 恢復物理 */
+    // ⑤ 還原物理屬性
     const rb  = this.heldItem.getComponent(cc.RigidBody);
     const col = this.heldItem.getComponent(cc.PhysicsBoxCollider);
-    if (rb) {
-        rb.enabled = true;
-        // rb.type = cc.RigidBodyType.Dynamic;
-    
-        // ✅ 還原原本的 fixedRotation 設定
-        if (this.originalItemFixedRotation !== null) {
-            rb.fixedRotation = this.originalItemFixedRotation;
-            this.originalItemFixedRotation = null;
-        }
+    if (rb && this.originalItemFixedRotation !== null) {
+        rb.fixedRotation = this.originalItemFixedRotation;
+        this.originalItemFixedRotation = null;
     }
     if (col && this.originalItemFriction !== null) {
-        col.friction = this.originalItemFriction;  // ✅ 還原原本的 friction
+        col.friction = this.originalItemFriction;
         col.apply();
         this.originalItemFriction = null;
     }
 
-    /* 清除狀態 */
-    this.heldItem            = null;
-    this.nearestItem         = null;
-    this.originalWorldScale  = null;
+    // ⑥ 清空狀態
+    this.heldItem = null;
+    this.nearestItem = null;
+    this.originalWorldScale = null;
 }
 }
