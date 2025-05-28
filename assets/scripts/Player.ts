@@ -221,8 +221,8 @@ private dropItem() {
 
     // ② 判斷面向方向（若靜止則使用最後方向）
     const facing = this.dir.x !== 0 ? this.dir.x : this.lastFacing;
-    const offset = cc.v2(100 * facing, -10); // 向面對方向偏移 + 稍微往下
-    const dropPos = this.node.position.add(offset); // 計算最終位置
+    const offset = cc.v3(100 * facing, -10, 0); // 向面對方向偏移 + 稍微往下
+    const dropPos = (this.node.position as cc.Vec3).add(offset); // 計算最終位置
 
     // ③ 掛回原場景層級並設定位置（使用 x, y 避開 Vec3 錯誤）
     this.heldItem.parent = this.node.parent;
