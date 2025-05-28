@@ -6,10 +6,14 @@ export default class MainMenu extends cc.Component {
     startButton: cc.Node = null;
 
     @property(cc.Node)
-    characterButton: cc.Node = null; // 👈 加這個
+    settingButton: cc.Node = null;
+
+    @property(cc.Node)
+    characterButton: cc.Node = null;
 
     onLoad () {
         this.startButton.on('click', this.onStartGame, this);
+        this.settingButton.on('click', this.onClickOpenSettings, this);
         this.characterButton.on('click', this.onCharacterSelect, this); // 👈 綁定事件
     }
 
@@ -17,7 +21,12 @@ export default class MainMenu extends cc.Component {
         cc.director.loadScene('GameScene');
     }
 
+    onClickOpenSettings() {
+        cc.director.loadScene("Setting");
+    }
+
     onCharacterSelect () {
         cc.director.loadScene('CharacterSelect'); // 👈 切換到角色選擇場景
     }
+
 }
