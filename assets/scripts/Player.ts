@@ -2,20 +2,17 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class Player extends cc.Component {
-/* ��������������������������������� Inspector ��������������������������������� */
+/* ═══════════ Inspector ═══════════ */
 @property moveSpeed = 200;
 @property jumpHeight = 150;
 @property({ type: cc.Node }) cameraNode: cc.Node = null;
 @property({ type: cc.AudioClip }) jumpSound: cc.AudioClip = null;
 @property({ type: cc.AudioClip }) deathSound: cc.AudioClip = null;
-/** ��剝��蝛箇��暺�嚗���湔�臭葉�����脖��嚗� */
-@property({ type: cc.Node }) itemContainer: cc.Node = null;
-/** ���撠����餈������瑕��敺� */
+/** 頭頂空節點（場景中拖進來） */
+/** 搜尋最近道具半徑 */
 @property itemDetectRadius = 100;
-/** Whether this player can be controlled with keyboard */
-@property isLocalPlayer: boolean = true;
 
-/* ��������������������������������� ��折�函����� ��������������������������������� */
+/* ═══════════ 內部狀態 ═══════════ */
 private anim: cc.Animation = null;
 private rb: cc.RigidBody = null;
 private dir = cc.v2(0, 0);
@@ -29,29 +26,21 @@ private nearestItem: cc.Node = null;
 private originalWorldScale: cc.Vec2 = null;
 private originalItemFixedRotation: boolean = null;
 private originalItemFriction: number = null;
+private lastFacing: number = 1;   // 1 = 朝右,  -1 = 朝左
 
 
 
-/* ��������������������������������� Life-cycle ��������������������������������� */
+
+/* ═══════════ Life-cycle ═══════════ */
 onLoad() {
     this.anim = this.getComponent(cc.Animation);
     this.rb   = this.getComponent(cc.RigidBody);
     cc.director.getPhysicsManager().enabled = true;
-    
-    // Only add key listeners if this is the local player
-    if (this.isLocalPlayer) {
-        this.addKeyListeners();
-    }
+    this.addKeyListeners();
 }
+onDestroy() { this.removeKeyListeners(); }
 
-onDestroy() { 
-    // Only remove key listeners if this is the local player
-    if (this.isLocalPlayer) {
-        this.removeKeyListeners(); 
-    }
-}
-
-/* ��������������������������������� Input ��������������������������������� */
+/* ═══════════ Input ═══════════ */
 private addKeyListeners() {
     cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
     cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP,   this.onKeyUp,   this);
@@ -62,36 +51,47 @@ private removeKeyListeners() {
 }
 private onKeyDown(e: cc.Event.EventKeyboard) {
     if (this.isDead) return;
+
     switch (e.keyCode) {
-        case cc.macro.KEY.left:
+        /* ─── 移動 (A / D) ─── */
+        case cc.macro.KEY.a:           // ←
             this.dir.x = -1;
+            this.lastFacing = -1;      // 記錄最後朝向
             this.node.scaleX = -Math.abs(this.node.scaleX);
             break;
-        case cc.macro.KEY.right:
+
+        case cc.macro.KEY.d:           // →
             this.dir.x = 1;
+            this.lastFacing = 1;
             this.node.scaleX =  Math.abs(this.node.scaleX);
             break;
+
+        /* ─── 跳躍 (Space) ─── */
         case cc.macro.KEY.space:
             if (this.isOnGround) this.jump();
             break;
-            case cc.macro.KEY.ctrl:
-                if (this.heldItem) {
-                    this.dropItem();
-                } else if (this.nearestItem && this.dir.x === 0) {
-                    this.pickUpItem(this.nearestItem);
-                } else {
-                    cc.log("[DEBUG] ��踹��憭望��嚗�隢����甇Ｘ�������輯絲������");
-                }
-                break;
+
+        /* ─── 拾 / 放 (E) ─── */
+        case cc.macro.KEY.e:
+            if (this.heldItem) {
+                this.dropItem();
+            } else if (this.nearestItem && this.dir.x === 0) {
+                this.pickUpItem(this.nearestItem);
+            } else {
+                cc.log("[DEBUG] 拿取失敗：請靜止時再撿起道具");
+            }
+            break;
     }
 }
+
 private onKeyUp(e: cc.Event.EventKeyboard) {
     if (this.isDead) return;
-    if (e.keyCode === cc.macro.KEY.left  && this.dir.x === -1) this.dir.x = 0;
-    if (e.keyCode === cc.macro.KEY.right && this.dir.x ===  1) this.dir.x = 0;
+
+    if (e.keyCode === cc.macro.KEY.a && this.dir.x === -1) this.dir.x = 0;
+    if (e.keyCode === cc.macro.KEY.d && this.dir.x ===  1) this.dir.x = 0;
 }
 
-/* ��������������������������������� update ��������������������������������� */
+/* ═══════════ update ═══════════ */
 update(dt: number) {
     if (this.isDead) return;
 
@@ -100,7 +100,7 @@ update(dt: number) {
     this.updateAnim();
     this.detectNearestItem();
 
-    /* 蝡���湛��蝳�甇Ｘ��頧� */
+    /* 站直＋禁止旋轉 */
     this.node.angle = 0;
     if (this.rb) {
         this.rb.angularVelocity = 0;
@@ -108,7 +108,7 @@ update(dt: number) {
     }
 }
 
-/* ��������������������������������� 蝘餃�� / 頝唾�� ��������������������������������� */
+/* ═══════════ 移動 / 跳躍 ═══════════ */
 private moveHorizontal() {
     if (!this.rb) return;
     const v = this.rb.linearVelocity;
@@ -127,11 +127,11 @@ private jump() {
     if (this.jumpSound) cc.audioEngine.playEffect(this.jumpSound, false);
 }
 
-/* ��������������������������������� Ground Collision ��������������������������������� */
+/* ═══════════ Ground Collision ═══════════ */
 onBeginContact(contact, selfCol, otherCol) {
     if (this.isDead) return;
     if (otherCol.node.group === 'Ground' || otherCol.node.group === 'Item') {
-        const n = contact.getWorldManifold().normal; // self ��� other
+        const n = contact.getWorldManifold().normal; // self → other
         if (n.y < -0.5) { this.isOnGround = true; this.isJumping = false; }
     }
 }
@@ -139,14 +139,14 @@ onEndContact(contact, self, other) {
     if (other.node.group === 'Ground') this.isOnGround = false;
 }
 
-/* ��������������������������������� Camera ��������������������������������� */
+/* ═══════════ Camera ═══════════ */
 private updateCamera() {
     if (!this.cameraNode) return;
     const w = cc.winSize;
     this.cameraNode.setPosition(this.node.x - w.width/2, this.node.y - w.height/2);
 }
 
-/* ��������������������������������� Animation ��������������������������������� */
+/* ═══════════ Animation ═══════════ */
 private updateAnim() {
     let name = 'Default';
     if (this.isDead)            name = 'Die';
@@ -156,7 +156,7 @@ private updateAnim() {
         this.anim.play(name);
 }
 
-/* ��������������������������������� Item System ��������������������������������� */
+/* ═══════════ Item System ═══════════ */
 private detectNearestItem() {
     const list: cc.Node[] = [];
     this.gatherItems(cc.director.getScene(), list);
@@ -180,89 +180,78 @@ private highlight(n: cc.Node, on: boolean) {
     n.opacity = on ? 230 : 255;
 }
 
-/* ---- ��輯絲 ---- */
+/* ---- 撿起 ---- */
 private pickUpItem(item: cc.Node) {
     this.heldItem = item;
     this.highlight(item, false);
 
-    /* 閮����銝����蝮格�橘��Vec2嚗� */
-    const ws = cc.v2(item.scaleX * item.parent.scaleX,    // worldScaleX
-                     item.scaleY * item.parent.scaleY);   // worldScaleY
+    // 記錄世界縮放
+    const ws = cc.v2(item.scaleX * item.parent.scaleX,
+                     item.scaleY * item.parent.scaleY);
     this.originalWorldScale = ws;
 
-    /* �����函�拍�� */
+    // 記錄物理屬性
     const rb = item.getComponent(cc.RigidBody);
-    const col = item.getComponent(cc.PhysicsBoxCollider); // ��� Collider ��� friction ������������
-
+    const col = item.getComponent(cc.PhysicsBoxCollider);
     if (rb) {
         this.originalItemFixedRotation = rb.fixedRotation;
         rb.enabled = true;
-        rb.type = cc.RigidBodyType.Dynamic;     // ��� 銝�敺�雿輻�� Dynamic
+        rb.type = cc.RigidBodyType.Dynamic;
         rb.fixedRotation = true;
         rb.linearVelocity = cc.v2(0, 0);
         rb.angularVelocity = 0;
     }
-
     if (col) {
         this.originalItemFriction = col.friction;
-        col.friction = 100;                     // ��� 頞�擃���拇�血��霈�摰�銝�皛����
-        col.apply();                            // 敹���� apply ������蝡���喟�����
+        col.friction = 100;
+        col.apply();
     }
 
-
-    /* ��� container ��曉�券�凋��嚗�銝�鈭�擃�摨� */
-    this.itemContainer.setPosition(0, this.node.height/2 + 20);
-
-    /* �����唳����� container */
-    item.parent = this.itemContainer;
-    item.setPosition(0, 0);
-
-    /* 蝞���啁�� localScale = worldScale / parentWorldScale */
-    const pwsx = this.itemContainer.scaleX * this.itemContainer.parent.scaleX;
-    const pwsy = this.itemContainer.scaleY * this.itemContainer.parent.scaleY;
-    item.setScale(ws.x / pwsx, ws.y / pwsy);
+    // 將物品隱藏，模擬收入背包
+    item.active = false;
 }
 
-/* ---- ��曆�� ---- */
+
+/* ---- 放下 ---- */
 private dropItem() {
     if (!this.heldItem) return;
 
-    /* 銝���圈�Ｗ����孵�������� */
-    const dx  = this.node.scaleX > 0 ? 30 : -30;
-    const wpt = this.itemContainer.convertToWorldSpaceAR(cc.v2(dx, -10));
-    const lpt = this.node.parent.convertToNodeSpaceAR(wpt);
+    // ① 啟用物品（從背包取出）
+    this.heldItem.active = true;
 
+    // ② 判斷面向方向（若靜止則使用最後方向）
+    const facing = this.dir.x !== 0 ? this.dir.x : this.lastFacing;
+    const offset = cc.v2(100 * facing, -10); // 向面對方向偏移 + 稍微往下
+    const dropPos = this.node.position.add(offset); // 計算最終位置
+
+    // ③ 掛回原場景層級並設定位置（使用 x, y 避開 Vec3 錯誤）
     this.heldItem.parent = this.node.parent;
-    this.heldItem.setPosition(lpt.x, lpt.y);
+    this.heldItem.setPosition(dropPos.x, dropPos.y);
 
-    /* ������ localScale ��� worldScale / ��郡arent worldScale */
+    // ④ 還原縮放
     const pwsx = this.heldItem.parent.scaleX;
     const pwsy = this.heldItem.parent.scaleY;
-    this.heldItem.setScale(this.originalWorldScale.x / pwsx,
-                           this.originalWorldScale.y / pwsy);
+    this.heldItem.setScale(
+        this.originalWorldScale.x / pwsx,
+        this.originalWorldScale.y / pwsy
+    );
 
-    /* ��Ｗ儔��拍�� */
+    // ⑤ 還原物理屬性
     const rb  = this.heldItem.getComponent(cc.RigidBody);
     const col = this.heldItem.getComponent(cc.PhysicsBoxCollider);
-    if (rb) {
-        rb.enabled = true;
-        // rb.type = cc.RigidBodyType.Dynamic;
-    
-        // ��� �����������祉�� fixedRotation 閮剖��
-        if (this.originalItemFixedRotation !== null) {
-            rb.fixedRotation = this.originalItemFixedRotation;
-            this.originalItemFixedRotation = null;
-        }
+    if (rb && this.originalItemFixedRotation !== null) {
+        rb.fixedRotation = this.originalItemFixedRotation;
+        this.originalItemFixedRotation = null;
     }
     if (col && this.originalItemFriction !== null) {
-        col.friction = this.originalItemFriction;  // ��� �����������祉�� friction
+        col.friction = this.originalItemFriction;
         col.apply();
         this.originalItemFriction = null;
     }
 
-    /* 皜���斤����� */
-    this.heldItem            = null;
-    this.nearestItem         = null;
-    this.originalWorldScale  = null;
+    // ⑥ 清空狀態
+    this.heldItem = null;
+    this.nearestItem = null;
+    this.originalWorldScale = null;
 }
 }
