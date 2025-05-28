@@ -14,7 +14,7 @@ export default class MainMenu extends cc.Component {
     }
 
     onStartGame () {
-        cc.director.loadScene('GameScene');
+        cc.director.loadScene('Login');
     }
 
     onCharacterSelect () {
