@@ -3741,7 +3741,7 @@
       "a": 255
     },
     "_depth": -1,
-    "_zoomRatio": 0.6,
+    "_zoomRatio": 0.3,
     "_targetTexture": null,
     "_fov": 60,
     "_orthoSize": 10,
@@ -3976,7 +3976,7 @@
     "tag": 0,
     "_density": 30,
     "_sensor": false,
-    "_friction": 0.2,
+    "_friction": 0.5,
     "_restitution": 0,
     "body": null,
     "_offset": {
@@ -4350,7 +4350,7 @@
       "__uuid__": "c2dc86a7-8a9f-4e4f-ad1b-5a904515fae2"
     },
     "brokenSprite": {
-      "__uuid__": "04dbfcfd-df36-460d-8cf4-423d22f52f41"
+      "__uuid__": "b67a664e-255f-4bb1-bad0-c1414175eeb3"
     },
     "maxLife": 100,
     "enableDebugControls": true,
