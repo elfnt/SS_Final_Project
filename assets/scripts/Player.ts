@@ -31,6 +31,7 @@ export default class Player extends cc.Component {
     private originalItemFriction: number = null;
     private lastFacing: number = 1;
 
+    private respawnPoint: cc.Vec2 = null;
     onLoad() {
         this.anim = this.getComponent(cc.Animation);
         this.rb = this.getComponent(cc.RigidBody);
@@ -41,6 +42,7 @@ export default class Player extends cc.Component {
         this.retrievePlayerInfo();
         this.createNameLabel();
         cc.log("[Player] Using name:", this.playerName);
+        this.respawnPoint = this.node.getPosition();
     }
     
     retrievePlayerInfo() {
@@ -210,5 +212,10 @@ export default class Player extends cc.Component {
         if (col && this.originalItemFriction !== null) { col.friction = this.originalItemFriction; col.apply(); this.originalItemFriction = null; }
         
         this.heldItem = null; this.nearestItem = null; this.originalWorldScale = null;
+    }
+    public respawn() {
+        this.node.setPosition(this.respawnPoint.x, this.respawnPoint.y);
+        this.rb.linearVelocity = cc.v2(0, 0);
+        this.rb.angularVelocity = 0;
     }
 }

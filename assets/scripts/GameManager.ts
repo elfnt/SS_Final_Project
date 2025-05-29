@@ -6,6 +6,12 @@ export default class GameManager extends cc.Component {
     @property(cc.Node)
     egg: cc.Node = null;
 
+    @property(cc.Node)
+    player: cc.Node = null;
+
+    private eggScript: any = null;
+    private playerScript: any = null;
+
     onLoad() {
         const physicsMgr = cc.director.getPhysicsManager();
         physicsMgr.enabled = true;
@@ -16,14 +22,16 @@ export default class GameManager extends cc.Component {
     }
 
     start() {
-        if (this.egg) {
-            // ✅ 計算 egg 的初始世界座標
-            const eggPos = this.egg.convertToWorldSpaceAR(cc.v2(0, 0));
-        }
+        if (this.egg) this.eggScript = this.egg.getComponent("Egg");
+        if (this.player) this.playerScript = this.player.getComponent("Player");
     }
 
     update(dt: number) {
-        // Remove camera follow logic from GameManager
-        // Camera will now be controlled by Player or Egg script
+        if (this.egg && this.egg.y < -1200 && this.eggScript) {
+            this.eggScript.respawn();
+        }
+        if (this.player && this.player.y < -1200 && this.playerScript) {
+            this.playerScript.respawn();
+        }
     }
 }

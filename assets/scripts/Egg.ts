@@ -46,6 +46,8 @@ export default class NewClass extends cc.Component {
     private isAlive: boolean = true;
     private lastGroundContact = null;
 
+    private rb: cc.RigidBody = null;
+    private respawnPoint: cc.Vec2 = null;
     onLoad() {
         this.currentLife = this.maxLife;
         this.lastY = this.node.position.y;
@@ -60,6 +62,8 @@ export default class NewClass extends cc.Component {
         if (this.sprite && this.normalSprite) {
             this.sprite.spriteFrame = this.normalSprite;
         }
+        this.rb = this.getComponent(cc.RigidBody);
+        this.respawnPoint = this.node.getPosition();
     }
 
     onEnable() {
@@ -192,5 +196,10 @@ export default class NewClass extends cc.Component {
         cc.log("Egg is broken! Game Over.");
         // You could emit an event here for game over handling
         // this.node.emit('egg-died');
+    }
+    public respawn() {
+        this.node.setPosition(this.respawnPoint.x, this.respawnPoint.y);
+        this.rb.linearVelocity = cc.v2(0, 0);
+        this.rb.angularVelocity = 0;
     }
 }
