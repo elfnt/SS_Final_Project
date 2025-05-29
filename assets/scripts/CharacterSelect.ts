@@ -53,6 +53,6 @@ export default class CharacterSelect extends cc.Component {
 
     confirmSelection() {
         cc.sys.localStorage.setItem("selectedCharacter", this.selectedIndex);
-        cc.director.loadScene("MainMenu"); // 改成你遊戲的主場景名稱
+        cc.director.loadScene("GameScene"); // 改成你遊戲的主場景名稱
     }
 }
