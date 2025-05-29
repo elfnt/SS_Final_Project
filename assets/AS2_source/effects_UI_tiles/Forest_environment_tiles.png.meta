@@ -1,0 +1,38 @@
+{
+  "ver": "2.3.7",
+  "uuid": "a0efa08f-d05f-49d7-a570-59bf77b817fc",
+  "importer": "texture",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1248,
+  "height": 384,
+  "platformSettings": {},
+  "subMetas": {
+    "Forest_environment_tiles": {
+      "ver": "1.0.6",
+      "uuid": "a21f06be-2d9a-435c-af93-3a274f3c8484",
+      "importer": "sprite-frame",
+      "rawTextureUuid": "a0efa08f-d05f-49d7-a570-59bf77b817fc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": -1,
+      "trimX": 0,
+      "trimY": 2,
+      "width": 1247,
+      "height": 382,
+      "rawWidth": 1248,
+      "rawHeight": 384,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

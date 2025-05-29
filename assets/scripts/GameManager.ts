@@ -5,10 +5,8 @@ export default class GameManager extends cc.Component {
 
     @property(cc.Node)
     egg: cc.Node = null;
-
     @property(cc.Node)
     player: cc.Node = null;
-
     private eggScript: any = null;
     private playerScript: any = null;
 
@@ -19,6 +17,7 @@ export default class GameManager extends cc.Component {
             cc.PhysicsManager.DrawBits.e_aabbBit |
             cc.PhysicsManager.DrawBits.e_jointBit |
             cc.PhysicsManager.DrawBits.e_shapeBit;
+        //physicsMgr.debugDrawFlags = 0;
     }
 
     start() {
