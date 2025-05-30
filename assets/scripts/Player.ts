@@ -71,6 +71,7 @@ export default class Player extends cc.Component {
         this.rb = this.getComponent(cc.RigidBody);
         cc.director.getPhysicsManager().enabled = true;
         if (this.rb) this.rb.fixedRotation = true;
+
         this.physicsGravityY = Math.abs(cc.director.getPhysicsManager().gravity.y);
 
         this.retrievePlayerIdAndName(); // Sets this.playerId and this.playerName
@@ -116,28 +117,32 @@ export default class Player extends cc.Component {
         ];
         this.node.setScale(scaleMap[index], scaleMap[index]);
 
-    const collider = this.getComponent(cc.PhysicsBoxCollider);
-    if (collider) {
-        switch (selectedCharacter) {
-            case "mario":
-                collider.size = new cc.Size(16, 16);
-                collider.offset = cc.v2(0, 0); // 讓腳底貼地
-                break;
-            case "chick1":
-                collider.size = new cc.Size(16, 16);
-                collider.offset = cc.v2(0, -300); // 根據實際圖像調整
-                break;
-            case "chick2":
-                collider.size = new cc.Size(16, 16);
-                collider.offset = cc.v2(0, -14);
-                break;
-            case "chick3":
-                collider.size = new cc.Size(16, 16);
-                collider.offset = cc.v2(0, -13);
-                break;
+        const collider = this.getComponent(cc.PhysicsBoxCollider);
+        if (collider) {
+            switch (selectedCharacter) {
+                case "mario":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, 0); // 讓腳底貼地
+                    collider.density = 1;
+                    break;
+                case "chick1":
+                    collider.size = new cc.Size(640, 16);
+                    collider.offset = cc.v2(0, -300); // 根據實際圖像調整
+                    collider.density = 2000;
+                    break;
+                case "chick2":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, -14);
+                    collider.density = 3;
+                    break;
+                case "chick3":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, -13);
+                    collider.density = 3;
+                    break;
+            }
+            collider.apply();
         }
-        collider.apply();
-    }
 
         if (this.characterSprites[index]) {
             sprite.spriteFrame = this.characterSprites[index];
