@@ -8,6 +8,9 @@
     "outDir": "temp/vscode-dist",
     "forceConsistentCasingInFileNames": true
   },
+  "files": [
+    "creator.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "library",
