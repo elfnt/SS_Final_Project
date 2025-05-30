@@ -143,7 +143,7 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "_defaultClip": {
       "__uuid__": "ab394749-ad21-499b-8a8f-f7a76d8fcc86"
     },
@@ -217,6 +217,46 @@
       "b": 255,
       "a": 255
     },
+    "characterDefaultClips": [
+      {
+        "__uuid__": "ab394749-ad21-499b-8a8f-f7a76d8fcc86"
+      },
+      {
+        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+      },
+      null,
+      null
+    ],
+    "characterMoveClips": [
+      {
+        "__uuid__": "580ea680-e6ff-4e8b-9c05-d49efbe06f6f"
+      },
+      {
+        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+      },
+      null,
+      null
+    ],
+    "characterJumpClips": [
+      {
+        "__uuid__": "0da82aaf-5499-4ad4-a49c-b2cb614f75e7"
+      },
+      {
+        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+      },
+      null,
+      null
+    ],
+    "characterSprites": [
+      {
+        "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
+      },
+      {
+        "__uuid__": "56d38144-87e2-4da4-94cd-98b700c18009"
+      },
+      null,
+      null
+    ],
     "lerpSpeed": 10,
     "_id": ""
   },

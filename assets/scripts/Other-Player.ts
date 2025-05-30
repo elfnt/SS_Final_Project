@@ -9,6 +9,7 @@ interface PlayerState {
     facing?: number;
     online?: boolean;
     position?: { x: number; y: number }; // Support for nested position
+    character?: string;
 }
 
 @ccclass
@@ -31,6 +32,11 @@ export default class RemotePlayer extends cc.Component {
 
     @property(cc.Color)
     nameLabelColor: cc.Color = cc.Color.WHITE;
+
+    @property([cc.AnimationClip]) characterDefaultClips: cc.AnimationClip[] = [];
+    @property([cc.AnimationClip]) characterMoveClips: cc.AnimationClip[] = [];
+    @property([cc.AnimationClip]) characterJumpClips: cc.AnimationClip[] = [];
+    @property([cc.SpriteFrame]) characterSprites: cc.SpriteFrame[] = [];
 
     private playerId: string = "";
     private anim: cc.Animation = null;
@@ -180,6 +186,37 @@ export default class RemotePlayer extends cc.Component {
             this.node.scaleX = Math.abs(this.node.scaleX) * newState.facing;
         }
         this.updateNameLabelScale(); // Always update label scale after potential parent scale change
+
+        const characterMap = {
+            mario: 0,
+            chick1: 1,
+            chick2: 2,
+            chick3: 3
+        };
+
+        if (newState.character) {
+            const index = characterMap[newState.character] ?? 0;
+
+            const scaleMap = [4, 0.08, 0.08, 0.08];
+            this.node.setScale(scaleMap[index], scaleMap[index]);
+
+            if (this.characterSprites[index] && this.playerSprite) {
+                this.playerSprite.spriteFrame = this.characterSprites[index];
+                (this.playerSprite as any)._refreshAssembler?.();
+            }
+
+            if (this.anim) {
+                this.anim.stop();
+                this.anim.addClip(this.characterDefaultClips[index], "Default");
+                this.anim.addClip(this.characterMoveClips[index], "Move");
+                this.anim.addClip(this.characterJumpClips[index], "Jump");
+                this.anim.defaultClip = this.characterDefaultClips[index];
+                this.anim.play(newState.animation || "Default");
+            }
+
+            cc.log(`[RemotePlayer] 套用了角色外觀：${newState.character} (index=${index})`);
+        }
+
 
         if (this.anim && newState.animation) {
             const currentName = this.anim.currentClip ? this.anim.currentClip.name : null;

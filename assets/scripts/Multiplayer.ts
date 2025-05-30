@@ -15,6 +15,7 @@ interface PlayerState {
     online?: boolean;
     lastUpdate?: any; // Can be number (timestamp) or Firebase ServerValue.TIMESTAMP
     // Add any other state you need (e.g., score, health)
+     character?: string;
 }
 
 @ccclass

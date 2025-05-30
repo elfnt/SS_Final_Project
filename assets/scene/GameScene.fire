@@ -1028,6 +1028,16 @@
       null,
       null
     ],
+    "characterSprites": [
+      {
+        "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
+      },
+      {
+        "__uuid__": "56d38144-87e2-4da4-94cd-98b700c18009"
+      },
+      null,
+      null
+    ],
     "_id": "26F/HCtQtDoYU+pl6iUX0l"
   },
   {

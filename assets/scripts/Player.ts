@@ -16,6 +16,7 @@ interface PlayerState {
     online: boolean;
     lastUpdate: any;
     // Add other game-specific states if needed
+    character?: string;
 }
 
 const characterMap = {
@@ -39,7 +40,8 @@ export default class Player extends cc.Component {
     @property([cc.AnimationClip]) characterDefaultClips: cc.AnimationClip[] = [];
     @property([cc.AnimationClip]) characterMoveClips: cc.AnimationClip[] = [];
     @property([cc.AnimationClip]) characterJumpClips: cc.AnimationClip[] = [];
-    characterSprites: cc.SpriteFrame[] = [];
+    @property([cc.SpriteFrame]) characterSprites: cc.SpriteFrame[] = [];
+
     private anim: cc.Animation = null;
     private rb: cc.RigidBody = null;
     private dir = cc.v2(0, 0);
@@ -101,10 +103,10 @@ export default class Player extends cc.Component {
         this.sendCurrentStateToFirebase(true);
         this.timeSinceLastSync = 0;
     }
-
+    private selectedCharacter: string = "mario";
     private applyCharacterFromSelection() {
-        const selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
-        const index = characterMap[selectedCharacter] ?? 0;
+        this.selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
+        const index = characterMap[this.selectedCharacter] ?? 0;
 
         const sprite = this.getComponent(cc.Sprite);
         const anim = this.getComponent(cc.Animation);
@@ -119,7 +121,7 @@ export default class Player extends cc.Component {
 
         const collider = this.getComponent(cc.PhysicsBoxCollider);
         if (collider) {
-            switch (selectedCharacter) {
+            switch (this.selectedCharacter) {
                 case "mario":
                     collider.size = new cc.Size(16, 16);
                     collider.offset = cc.v2(0, 0); // 讓腳底貼地
@@ -158,7 +160,7 @@ export default class Player extends cc.Component {
             anim.play("Default");
         }
 
-        cc.log(`[Player] 已套用角色：${selectedCharacter}（index=${index}）`);
+        cc.log(`[Player] 已套用角色：${this.selectedCharacter}（index=${index}）`);
     }
 
 
@@ -242,6 +244,7 @@ export default class Player extends cc.Component {
             // cc.warn("[Player] Cannot send state: PlayerID or MultiplayerManager missing.");
             return;
         }
+        const selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
 
         const state: PlayerState = {
             name: this.playerName,
@@ -250,7 +253,8 @@ export default class Player extends cc.Component {
             animation: this.anim?.currentClip?.name || "Default",
             facing: this.node.scaleX > 0 ? 1 : -1,
             online: true, // Player sending state is online
-            lastUpdate: firebase.database.ServerValue.TIMESTAMP // Firebase server timestamp
+            lastUpdate: firebase.database.ServerValue.TIMESTAMP, // Firebase server timestamp
+            character: this.selectedCharacter
         };
 
         this.multiplayerManager.sendPlayerState(this.playerId, state);
