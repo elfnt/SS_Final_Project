@@ -1,5 +1,7 @@
 // Player.ts (Local Player Controller for Multiplayer)
 import MultiplayerManager from "./Multiplayer"; // Your MultiplayerManager.ts file
+import AutoRespawn from "./respawn"; // 請確保路徑正確
+
 
 const { ccclass, property } = cc._decorator;
 
@@ -26,7 +28,6 @@ export default class Player extends cc.Component {
     @property itemDetectRadius = 100;
     @property playerName: string = "Player";
     @property syncInterval: number = 0.1; // Time in seconds between Firebase updates
-
     private anim: cc.Animation = null;
     private rb: cc.RigidBody = null;
     private dir = cc.v2(0, 0);
@@ -272,6 +273,11 @@ export default class Player extends cc.Component {
 
     onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
         if (this.isDead) return;
+        if (otherCol.node.name.toLowerCase().includes("laser")) {
+            cc.log("[Player] Hit laser — triggering death.");
+            this.die();
+        }
+
         if (otherCol.node.group === "Ground" || otherCol.node.group === "Item") {
             const worldManifold = contact.getWorldManifold();
             const normal = worldManifold.normal;
@@ -350,31 +356,51 @@ export default class Player extends cc.Component {
     // Your existing respawn/die logic
     public die() {
         if (this.isDead) return;
+
         this.isDead = true;
-        this.dir.x = 0; 
+        this.dir.x = 0;
+
         if (this.rb) {
             this.rb.linearVelocity = cc.Vec2.ZERO;
-            this.rb.enabled = false; 
+            this.rb.enabled = false;
         }
+
         cc.log(`[Player] ${this.playerName} died.`);
-        if (this.deathSound) cc.audioEngine.playEffect(this.deathSound, false);
+
+        if (this.deathSound) {
+            cc.audioEngine.playEffect(this.deathSound, false);
+        }
+
+        
+
         this.scheduleOnce(() => {
-            this.respawnPlayer();
+            this.respawn();
         }, 2);
     }
+
     
-    public respawnPlayer() {
+    public respawn() {
+        // 重設自身位置
         this.node.setPosition(this.respawnPoint.x, this.respawnPoint.y);
+
         if (this.rb) {
-            this.rb.enabled = true; 
+            this.rb.enabled = true;
             this.rb.linearVelocity = cc.v2(0, 0);
             this.rb.angularVelocity = 0;
         }
+
+        // 重設內部狀態
         this.isDead = false;
         this.isJumping = false;
-        this.isOnGround = true; 
+        this.isOnGround = true;
         this.dir.x = 0;
-        this.sendCurrentStateToFirebase(true); // Send state immediately after respawn
+
+        this.sendCurrentStateToFirebase(true);
         cc.log(`[Player] ${this.playerName} respawned.`);
+
+        // ✅ 廣播事件，讓 Dropbox 知道要 reset
+        cc.systemEvent.emit("PLAYER_RESPAWNED");
     }
+
+
 }

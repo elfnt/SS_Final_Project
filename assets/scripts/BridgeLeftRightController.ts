@@ -1,31 +1,42 @@
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class BridgeOscillator extends cc.Component {
+export default class BridgeLeftRightController extends cc.Component {
+    @property
+    moveDistance: number = 500; // 最大偏移量（左右來回）
 
     @property
-    moveDistance: number = 500; // ✅ 左右最大偏移量（±500）
+    moveSpeed: number = 200; // 移動速度
 
-    @property
-    moveSpeed: number = 100; // ✅ 每秒移動速度
-
-    private direction: number = 1;  // +1 表示往右，-1 表示往左
+    private direction: number = 1;
     private originX: number = 0;
+    private rb: cc.RigidBody = null;
 
     onLoad() {
         this.originX = this.node.x;
+        this.rb = this.getComponent(cc.RigidBody);
+
+        if (!this.rb) {
+            cc.error("[Bridge] Missing RigidBody component!");
+            return;
+        }
+
+        this.rb.type = cc.RigidBodyType.Kinematic; // 確保是 Kinematic
+        this.rb.awake = true;
+        this.rb.gravityScale = 0; // 不受重力影響
+        this.rb.linearVelocity = cc.v2(this.moveSpeed * this.direction, 0);
     }
 
     update(dt: number) {
-        // 計算新位置
-        this.node.x += this.direction * this.moveSpeed * dt;
+        if (!this.rb) return;
 
         const offset = this.node.x - this.originX;
 
+        // 如果超出偏移距離，反向並更新速度
         if (Math.abs(offset) >= this.moveDistance) {
-            // 超過最大偏移時，反向
-            this.node.x = this.originX + this.moveDistance * this.direction;
             this.direction *= -1;
+            this.rb.linearVelocity = cc.v2(this.moveSpeed * this.direction, 0);
+            this.rb.awake = true;
         }
     }
 }
