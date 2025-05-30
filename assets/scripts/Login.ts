@@ -45,7 +45,7 @@ export default class Login extends cc.Component {
         window.localStorage.setItem('playerId', playerId);
         
         // Go to game scene
-        cc.director.loadScene('GameScene');
+        cc.director.loadScene('CharacterSelect');
     }
     
     showError(message: string) {
