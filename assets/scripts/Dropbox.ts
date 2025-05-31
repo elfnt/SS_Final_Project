@@ -31,7 +31,7 @@ export default class Dropbox extends cc.Component {
                     this.rb.type = cc.RigidBodyType.Dynamic;
                     this.rb.awake = true;
                 }
-            }, 0.5);
+            }, 1.0);
         }
     }
 
@@ -45,16 +45,15 @@ export default class Dropbox extends cc.Component {
         this.node.setPosition(this.originalPosition);
 
         if (this.rb) {
-            this.rb.enabled = false;
-            this.rb.type = cc.RigidBodyType.Kinematic;
+            this.rb.type = cc.RigidBodyType.Static;
             this.rb.linearVelocity = cc.Vec2.ZERO;
             this.rb.angularVelocity = 0;
 
-            this.scheduleOnce(() => {
-                this.rb.enabled = true;
-            }, 0.01);
+            // ✅ 強制同步物理位置，不會偏移也能刷新接觸
+            this.rb.syncPosition(true);
         }
 
         cc.log(`[Dropbox] Reset to (${this.originalPosition.x}, ${this.originalPosition.y})`);
     }
+
 }
