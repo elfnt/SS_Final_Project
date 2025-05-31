@@ -1,5 +1,6 @@
 const { ccclass, property } = cc._decorator;
 
+const characterNames = ["mario", "chick1", "chick2", "chick3"];
 @ccclass
 export default class CharacterSelect extends cc.Component {
     @property([cc.Node])
@@ -52,7 +53,10 @@ export default class CharacterSelect extends cc.Component {
     }
 
     confirmSelection() {
-        cc.sys.localStorage.setItem("selectedCharacter", this.selectedIndex);
-        cc.director.loadScene("MainMenu"); // 改成你遊戲的主場景名稱
+        const selectedName = characterNames[this.selectedIndex];
+        cc.sys.localStorage.setItem("selectedCharacter", selectedName);
+        cc.log("[選角] 儲存角色名：", selectedName);
+        cc.director.loadScene("GameScene");
     }
+
 }

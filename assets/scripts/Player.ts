@@ -16,7 +16,15 @@ interface PlayerState {
     online: boolean;
     lastUpdate: any;
     // Add other game-specific states if needed
+    character?: string;
 }
+
+const characterMap = {
+    mario: 0,
+    chick1: 1,
+    chick2: 2,
+    chick3: 3
+};
 
 @ccclass
 export default class Player extends cc.Component {
@@ -28,6 +36,12 @@ export default class Player extends cc.Component {
     @property itemDetectRadius = 100;
     @property playerName: string = "Player";
     @property syncInterval: number = 0.1; // Time in seconds between Firebase updates
+    //@property([cc.SpriteFrame])
+    @property([cc.AnimationClip]) characterDefaultClips: cc.AnimationClip[] = [];
+    @property([cc.AnimationClip]) characterMoveClips: cc.AnimationClip[] = [];
+    @property([cc.AnimationClip]) characterJumpClips: cc.AnimationClip[] = [];
+    @property([cc.SpriteFrame]) characterSprites: cc.SpriteFrame[] = [];
+
     private anim: cc.Animation = null;
     private rb: cc.RigidBody = null;
     private dir = cc.v2(0, 0);
@@ -51,10 +65,15 @@ export default class Player extends cc.Component {
 
     onLoad() {
         cc.log("[Player] onLoad started.");
+        cc.log("[Player] onLoad started.");
+
+        this.applyCharacterFromSelection();
+
         this.anim = this.getComponent(cc.Animation);
         this.rb = this.getComponent(cc.RigidBody);
         cc.director.getPhysicsManager().enabled = true;
         if (this.rb) this.rb.fixedRotation = true;
+
         this.physicsGravityY = Math.abs(cc.director.getPhysicsManager().gravity.y);
 
         this.retrievePlayerIdAndName(); // Sets this.playerId and this.playerName
@@ -84,6 +103,67 @@ export default class Player extends cc.Component {
         this.sendCurrentStateToFirebase(true);
         this.timeSinceLastSync = 0;
     }
+    private selectedCharacter: string = "mario";
+    private applyCharacterFromSelection() {
+        this.selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
+        const index = characterMap[this.selectedCharacter] ?? 0;
+
+        const sprite = this.getComponent(cc.Sprite);
+        const anim = this.getComponent(cc.Animation);
+
+        const scaleMap = [
+            4,  // mario 正常比例
+            0.08,  // chick1 比例較大
+            0.08,  // chick2
+            0.08   // chick3
+        ];
+        this.node.setScale(scaleMap[index], scaleMap[index]);
+
+        const collider = this.getComponent(cc.PhysicsBoxCollider);
+        if (collider) {
+            switch (this.selectedCharacter) {
+                case "mario":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, 0); // 讓腳底貼地
+                    collider.density = 1;
+                    break;
+                case "chick1":
+                    collider.size = new cc.Size(640, 16);
+                    collider.offset = cc.v2(0, -300); // 根據實際圖像調整
+                    collider.density = 2000;
+                    break;
+                case "chick2":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, -14);
+                    collider.density = 3;
+                    break;
+                case "chick3":
+                    collider.size = new cc.Size(16, 16);
+                    collider.offset = cc.v2(0, -13);
+                    collider.density = 3;
+                    break;
+            }
+            collider.apply();
+        }
+
+        if (this.characterSprites[index]) {
+            sprite.spriteFrame = this.characterSprites[index];
+            (sprite as any)._refreshAssembler?.();
+        }
+
+        if (anim) {
+            //anim.clips = []; // 先清掉原本動畫
+            anim.addClip(this.characterDefaultClips[index], "Default");
+            anim.addClip(this.characterMoveClips[index], "Move");
+            anim.addClip(this.characterJumpClips[index], "Jump");
+            anim.defaultClip = this.characterDefaultClips[index];
+            anim.play("Default");
+        }
+
+        cc.log(`[Player] 已套用角色：${this.selectedCharacter}（index=${index}）`);
+    }
+
+
 
     retrievePlayerIdAndName() {
         // Use playerId from localStorage if available (set by Login.ts)
@@ -164,6 +244,7 @@ export default class Player extends cc.Component {
             // cc.warn("[Player] Cannot send state: PlayerID or MultiplayerManager missing.");
             return;
         }
+        const selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
 
         const state: PlayerState = {
             name: this.playerName,
@@ -172,7 +253,8 @@ export default class Player extends cc.Component {
             animation: this.anim?.currentClip?.name || "Default",
             facing: this.node.scaleX > 0 ? 1 : -1,
             online: true, // Player sending state is online
-            lastUpdate: firebase.database.ServerValue.TIMESTAMP // Firebase server timestamp
+            lastUpdate: firebase.database.ServerValue.TIMESTAMP, // Firebase server timestamp
+            character: this.selectedCharacter
         };
 
         this.multiplayerManager.sendPlayerState(this.playerId, state);
