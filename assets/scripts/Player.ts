@@ -360,7 +360,7 @@ export default class Player extends cc.Component {
             this.die();
         }
 
-        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item") {
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
             const worldManifold = contact.getWorldManifold();
             const normal = worldManifold.normal;
             // Check if contact normal is pointing upwards from player's perspective (player landing on something)
