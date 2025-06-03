@@ -1000,7 +1000,7 @@
     "syncInterval": 0.1,
     "characterDefaultClips": [
       {
-        "__uuid__": "ab394749-ad21-499b-8a8f-f7a76d8fcc86"
+        "__uuid__": "4c121de3-e895-4366-9eb0-68a76030d00b"
       },
       {
         "__uuid__": "32d1a098-736f-445a-8198-7417b0682fda"
@@ -1017,12 +1017,14 @@
         "__uuid__": "580ea680-e6ff-4e8b-9c05-d49efbe06f6f"
       },
       {
-        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+        "__uuid__": "3551d4ac-690f-44f0-be17-7b3726c87bc4"
       },
       {
         "__uuid__": "d7a09ac3-35ad-4c6f-ac1a-31836d3242e3"
       },
-      null
+      {
+        "__uuid__": "3810f67f-57a0-4a27-ae62-bb7f0a1216ce"
+      }
     ],
     "characterJumpClips": [
       {
@@ -1036,7 +1038,7 @@
     ],
     "characterSprites": [
       {
-        "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
+        "__uuid__": "2072ecf7-282a-405e-8d99-54fb5027d580"
       },
       {
         "__uuid__": "8ddd8f9f-8848-4a07-96bb-a01dff5709fc"
@@ -1125,20 +1127,39 @@
       {
         "__uuid__": "32d1a098-736f-445a-8198-7417b0682fda"
       },
-      null,
-      null,
+      {
+        "__uuid__": "3551d4ac-690f-44f0-be17-7b3726c87bc4"
+      },
+      {
+        "__uuid__": "b0bab432-562a-4567-987a-be06f8465efd"
+      },
       {
         "__uuid__": "df4ebf56-c460-434a-93d4-8d13671b88ce"
       },
       {
         "__uuid__": "d7a09ac3-35ad-4c6f-ac1a-31836d3242e3"
       },
-      null,
+      {
+        "__uuid__": "c36db036-fd9a-4e4d-9350-4c4f55f58643"
+      },
       {
         "__uuid__": "5c0e0144-1fb7-4594-bf08-855a333921c1"
       },
-      null,
-      null
+      {
+        "__uuid__": "3810f67f-57a0-4a27-ae62-bb7f0a1216ce"
+      },
+      {
+        "__uuid__": "ccc04c18-e64d-4562-b8b6-99c4edc28ef7"
+      },
+      {
+        "__uuid__": "4c121de3-e895-4366-9eb0-68a76030d00b"
+      },
+      {
+        "__uuid__": "66e002ce-17ff-46a0-9f72-c99d3b097264"
+      },
+      {
+        "__uuid__": "4d7ec899-36c1-4424-bc40-f987d4c99067"
+      }
     ],
     "playOnLoad": false,
     "_id": "29+vs8A1RNxLtljiGMvmap"

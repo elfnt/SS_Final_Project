@@ -1,6 +1,6 @@
 {
   "ver": "2.3.7",
-  "uuid": "70f8a7da-f7e2-40ed-bf8b-940fc6d7dba7",
+  "uuid": "bdc4b2f7-9587-4c1c-935c-2b1888aa718e",
   "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
@@ -12,11 +12,11 @@
   "height": 24,
   "platformSettings": {},
   "subMetas": {
-    "dino_yellow_move_3": {
+    "dino_green_move_3": {
       "ver": "1.0.6",
-      "uuid": "28b76675-b34f-4688-847f-1148158acf7f",
+      "uuid": "59ba5672-4615-4c2e-8086-e57d013226c9",
       "importer": "sprite-frame",
-      "rawTextureUuid": "70f8a7da-f7e2-40ed-bf8b-940fc6d7dba7",
+      "rawTextureUuid": "bdc4b2f7-9587-4c1c-935c-2b1888aa718e",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,

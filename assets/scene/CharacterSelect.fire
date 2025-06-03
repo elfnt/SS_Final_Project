@@ -502,7 +502,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "mario_small_27",
+    "_name": "dino_green",
     "_objFlags": 0,
     "_parent": {
       "__id__": 9
@@ -525,8 +525,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 16,
-      "height": 16
+      "width": 15,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -578,7 +578,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "8c8644e0-6b44-47fd-8420-5011bec04a29"
+      "__uuid__": "2072ecf7-282a-405e-8d99-54fb5027d580"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -591,9 +591,7 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": {
-      "__uuid__": "308cb1f3-c74f-42c8-8b88-9dda4f2b808b"
-    },
+    "_atlas": null,
     "_id": "310R4Ar1ZI468S+/7JYY2y"
   },
   {
