@@ -65,7 +65,6 @@ export default class Player extends cc.Component {
 
     onLoad() {
         cc.log("[Player] onLoad started.");
-        cc.log("[Player] onLoad started.");
 
         this.applyCharacterFromSelection();
 
@@ -211,11 +210,6 @@ export default class Player extends cc.Component {
             cc.log(`[Player] Marking ${this.playerId} as offline due to onDestroy.`);
             this.multiplayerManager.setLocalPlayerOffline(this.playerId);
         }
-        // Optionally cancel onDisconnect if it was set and you want to prevent it from firing
-        // if this is a graceful shutdown. Often, letting it fire is fine.
-        // if (typeof firebase !== 'undefined' && firebase.database && this.playerId) {
-        //     firebase.database().ref(`players/${this.playerId}`).onDisconnect().cancel();
-        // }
     }
 
     update(dt: number) {
@@ -381,7 +375,9 @@ export default class Player extends cc.Component {
 
 
     onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
-        if (otherCol.node.group === "Ground") this.isOnGround = false;
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player") {
+            this.isOnGround = false;
+        }
     }
 
     private detectNearestItem() {
@@ -492,6 +488,4 @@ export default class Player extends cc.Component {
         // ✅ 廣播事件，讓 Dropbox 知道要 reset
         cc.systemEvent.emit("PLAYER_RESPAWNED");
     }
-
-
 }

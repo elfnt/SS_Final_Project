@@ -1,11 +1,8 @@
-// Multiplayer.ts (was MultiplayerManager.ts)
-// Attach this script to an empty node in your first scene (e.g., "MultiplayerSystem").
-// Set its execution order after FirebaseManager (e.g., -50).
-import FirebaseManager from "./FirebaseManager"; // To get initialized database instance
+// Multiplayer.ts
+import FirebaseManager from "./FirebaseManager";
 
 const { ccclass, property } = cc._decorator;
 
-// This interface should be consistent across Player.ts, Multiplayer.ts, and Other-Player.ts
 interface PlayerState {
     name: string;
     x: number;
@@ -13,31 +10,35 @@ interface PlayerState {
     animation?: string;
     facing?: number;
     online?: boolean;
-    lastUpdate?: any; // Can be number (timestamp) or Firebase ServerValue.TIMESTAMP
-    // Add any other state you need (e.g., score, health)
-     character?: string;
+    lastUpdate?: any;
+    character?: string;
 }
+
+const SCRIPT_NAMES = { // Consider moving to GameConstants.ts
+    OTHER_PLAYER: 'Other-Player'
+};
+
+declare const firebase: any;
 
 @ccclass
 export default class MultiplayerManager extends cc.Component {
 
-    @property(cc.Prefab)
-    remotePlayerPrefab: cc.Prefab = null; // Assign your Remote Player Prefab in the editor
+    @property(cc.Prefab) remotePlayerPrefab: cc.Prefab = null;
+    // @property(cc.Node) remotePlayerContainer: cc.Node = null; // Optional: for better scene organization
 
     private static instance: MultiplayerManager = null;
     private localPlayerId: string = null;
     private playersRef: firebase.database.Reference = null;
-    private remotePlayers: { [id: string]: cc.Node } = {}; // Store remote player nodes
+    private remotePlayers: { [id: string]: cc.Node } = {};
 
     public static getInstance(): MultiplayerManager {
         if (!MultiplayerManager.instance) {
-            cc.error("MultiplayerManager instance is not yet available. Ensure its node is in the scene and active, and its script execution order is set (e.g., -50).");
+            cc.error("MultiplayerManager instance not available.");
         }
         return MultiplayerManager.instance;
     }
 
     onLoad() {
-        cc.log("MultiplayerManager: onLoad started.");
         if (MultiplayerManager.instance && MultiplayerManager.instance !== this) {
             cc.log("MultiplayerManager: Destroying duplicate instance.");
             this.node.destroy();
@@ -45,181 +46,164 @@ export default class MultiplayerManager extends cc.Component {
         }
         MultiplayerManager.instance = this;
         cc.game.addPersistRootNode(this.node);
-        cc.log("MultiplayerManager: Instance set and node persisted.");
+        // cc.log("MultiplayerManager: Instance set and persisted.");
     }
 
     start() {
-        cc.log("MultiplayerManager: start() called.");
         const firebaseManager = FirebaseManager.getInstance();
         if (!firebaseManager || !firebaseManager.database) {
-            cc.error("MultiplayerManager: FirebaseManager or its database not ready in start()!");
+            cc.error("MultiplayerManager: FirebaseManager not ready!");
             this.enabled = false;
             return;
         }
         this.playersRef = firebaseManager.database.ref("players");
-        cc.log("MultiplayerManager: playersRef initialized.");
-
-        // Retrieve localPlayerId (ensure it's set by Login.ts or Player.ts before this scene/node loads if needed)
         this.localPlayerId = cc.sys.localStorage.getItem('playerId');
 
         if (!this.localPlayerId) {
-            cc.error("MultiplayerManager: Local player ID not found in localStorage during start()!");
-            // Decide how to handle this: disable multiplayer, wait, or generate new one.
-            // For now, we'll return, but you might need a more robust solution.
+            cc.error("MultiplayerManager: LocalPlayerId not found!");
+            this.enabled = false; // Added to prevent further issues
             return;
         }
-        cc.log(`MultiplayerManager: Local Player ID is ${this.localPlayerId}`);
-
         if (!this.remotePlayerPrefab) {
-            cc.error("MultiplayerManager: Remote Player Prefab not assigned in the editor!");
+            cc.error("MultiplayerManager: RemotePlayerPrefab not assigned!");
             this.enabled = false;
             return;
         }
-
+        // if (!this.remotePlayerContainer) cc.warn("MultiplayerManager: RemotePlayerContainer not assigned. Defaulting to scene root.");
+        // cc.log(`MultiplayerManager: Started for ${this.localPlayerId}`);
         this.listenForPlayerChanges();
     }
 
     listenForPlayerChanges() {
         if (!this.playersRef) {
-            cc.error("MultiplayerManager: playersRef is null in listenForPlayerChanges. Initialization failed.");
+            cc.error("MultiplayerManager: playersRef is null. Cannot listen.");
             return;
         }
-        cc.log("MultiplayerManager: Setting up Firebase listeners for 'players' node.");
+        // cc.log("MultiplayerManager: Setting up Firebase listeners.");
+        this.playersRef.on('child_added', this.handleRemotePlayerAdded, this);
+        this.playersRef.on('child_changed', this.handleRemotePlayerChanged, this);
+        this.playersRef.on('child_removed', this.handleRemotePlayerRemoved, this);
+    }
 
-        this.playersRef.on('child_added', (snapshot) => {
-            const playerId = snapshot.key;
-            const playerData = snapshot.val() as PlayerState;
+    private handleRemotePlayerAdded(snapshot: firebase.database.DataSnapshot) {
+        const playerId = snapshot.key;
+        const playerData = snapshot.val() as PlayerState;
 
-            if (!playerId || !playerData) {
-                cc.warn("MultiplayerManager: child_added received invalid data", snapshot);
-                return;
-            }
+        if (!this.isValidPlayerData(playerId, playerData, 'added', snapshot)) return;
+        if (playerId === this.localPlayerId || !playerData.online) return;
 
-            if (playerId === this.localPlayerId) {
-                cc.log(`MultiplayerManager: child_added for local player ${playerId}, ignoring.`);
-                return;
-            }
+        if (this.remotePlayers[playerId]) {
+            // cc.log(`MultiplayerManager: Player ${playerId} (added) already exists, updating.`);
+            this.updateRemotePlayerNode(this.remotePlayers[playerId], playerId, playerData);
+            return;
+        }
+        // cc.log(`MultiplayerManager: Player ${playerId} joined.`, playerData);
+        this.createRemotePlayerNode(playerId, playerData);
+    }
+
+    private handleRemotePlayerChanged(snapshot: firebase.database.DataSnapshot) {
+        const playerId = snapshot.key;
+        const playerData = snapshot.val() as PlayerState;
+
+        if (!this.isValidPlayerData(playerId, playerData, 'changed', snapshot)) return;
+        if (playerId === this.localPlayerId) return;
+
+        const remotePlayerNode = this.remotePlayers[playerId];
+        if (remotePlayerNode) {
             if (!playerData.online) {
-                 cc.log(`MultiplayerManager: child_added for ${playerId} but marked offline, ignoring for now.`, playerData);
+                this.removeRemotePlayer(playerId, `offline`);
                 return;
             }
-            if (this.remotePlayers[playerId]) {
-                 cc.log(`MultiplayerManager: Remote player ${playerId} already exists, updating instead of adding.`);
-                 // Potentially update state if it exists but wasn't caught by child_changed
-                 const remoteNode = this.remotePlayers[playerId];
-                 const remoteScript = remoteNode.getComponent('Other-Player'); // Your remote player script name
-                 if (remoteScript) {
-                     remoteScript.updateState(playerData);
-                 }
-                return;
-            }
+            this.updateRemotePlayerNode(remotePlayerNode, playerId, playerData);
+        } else if (playerData.online) {
+            // cc.log(`MultiplayerManager: Player ${playerId} (changed/online) not found. Re-creating.`, playerData);
+            this.createRemotePlayerNode(playerId, playerData);
+        }
+    }
 
-            cc.log(`MultiplayerManager: New player joined: ${playerId}`, playerData);
-            const newRemotePlayerNode = cc.instantiate(this.remotePlayerPrefab);
-            newRemotePlayerNode.parent = cc.director.getScene(); // Or a specific layer for players
-            
-            const remotePlayerScript = newRemotePlayerNode.getComponent('Other-Player'); // Your remote player script name
-            if (remotePlayerScript) {
-                remotePlayerScript.initialize(playerId, playerData);
-            } else {
-                cc.warn(`MultiplayerManager: RemotePlayer prefab for ${playerId} does not have Other-Player.ts script attached.`);
-                newRemotePlayerNode.setPosition(playerData.x || 0, playerData.y || 0);
-            }
-            this.remotePlayers[playerId] = newRemotePlayerNode;
-        });
+    private handleRemotePlayerRemoved(snapshot: firebase.database.DataSnapshot) {
+        const playerId = snapshot.key;
+        if (!playerId) {
+            cc.warn("MultiplayerManager: child_removed invalid ID", snapshot);
+            return;
+        }
+        this.removeRemotePlayer(playerId, `removed from Firebase`);
+    }
 
-        this.playersRef.on('child_changed', (snapshot) => {
-            const playerId = snapshot.key;
-            const playerData = snapshot.val() as PlayerState;
+    private isValidPlayerData(playerId: string | null, playerData: PlayerState | null, eventType: string, snapshot: firebase.database.DataSnapshot): boolean {
+        if (!playerId || !playerData) {
+            cc.warn(`MultiplayerManager: Invalid data for ${snapshot.key} on ${eventType}`, snapshot.val());
+            return false;
+        }
+        return true;
+    }
 
-            if (!playerId || !playerData) {
-                cc.warn("MultiplayerManager: child_changed received invalid data", snapshot);
-                return;
-            }
+    private createRemotePlayerNode(playerId: string, playerData: PlayerState) {
+        if (!this.remotePlayerPrefab) return; // Should be caught in start, but good check
+        const newNode = cc.instantiate(this.remotePlayerPrefab);
+        // newNode.parent = this.remotePlayerContainer || cc.director.getScene();
+        newNode.parent = cc.director.getScene(); // Current behavior
 
-            if (playerId === this.localPlayerId) {
-                return; // Local player handles its own updates
-            }
+        const script = newNode.getComponent(SCRIPT_NAMES.OTHER_PLAYER);
+        if (script) {
+            script.initialize(playerId, playerData);
+        } else {
+            cc.warn(`MultiplayerManager: Prefab for ${playerId} missing ${SCRIPT_NAMES.OTHER_PLAYER} script.`);
+            newNode.setPosition(playerData.x || 0, playerData.y || 0);
+        }
+        this.remotePlayers[playerId] = newNode;
+    }
 
-            const remotePlayerNode = this.remotePlayers[playerId];
-            if (remotePlayerNode) {
-                if (!playerData.online) {
-                    cc.log(`MultiplayerManager: Player ${playerId} data changed to offline. Removing.`);
-                    remotePlayerNode.destroy();
-                    delete this.remotePlayers[playerId];
-                    return;
-                }
-                // cc.log(`MultiplayerManager: Player data changed: ${playerId}`, playerData); // Can be too verbose
-                const remotePlayerScript = remotePlayerNode.getComponent('Other-Player'); // Your remote player script name
-                if (remotePlayerScript) {
-                    remotePlayerScript.updateState(playerData);
-                } else {
-                     cc.warn(`MultiplayerManager: RemotePlayer node for ${playerId} missing Other-Player.ts script during update.`);
-                    remotePlayerNode.setPosition(playerData.x || 0, playerData.y || 0);
-                    // You might want to update other visual properties here too
-                }
-            } else if (playerData.online) {
-                // Player reconnected or was missed by child_added
-                cc.log(`MultiplayerManager: Player data changed for ${playerId} (now online), but node not found. Re-creating.`, playerData);
-                const newRemotePlayerNode = cc.instantiate(this.remotePlayerPrefab);
-                newRemotePlayerNode.parent = cc.director.getScene(); // Or a specific layer
-                const remotePlayerScript = newRemotePlayerNode.getComponent('Other-Player'); // Your remote player script name
-                if (remotePlayerScript) {
-                    remotePlayerScript.initialize(playerId, playerData);
-                } else {
-                     cc.warn(`MultiplayerManager: RemotePlayer prefab for re-created ${playerId} does not have Other-Player.ts script attached.`);
-                    newRemotePlayerNode.setPosition(playerData.x || 0, playerData.y || 0);
-                }
-                this.remotePlayers[playerId] = newRemotePlayerNode;
-            }
-        });
+    private updateRemotePlayerNode(node: cc.Node, playerId: string, playerData: PlayerState) {
+        const script = node.getComponent(SCRIPT_NAMES.OTHER_PLAYER);
+        if (script) {
+            script.updateState(playerData);
+        } else {
+            cc.warn(`MultiplayerManager: Node for ${playerId} missing ${SCRIPT_NAMES.OTHER_PLAYER} script for update.`);
+            node.setPosition(playerData.x || 0, playerData.y || 0);
+        }
+    }
 
-        this.playersRef.on('child_removed', (snapshot) => {
-            const playerId = snapshot.key;
-             if (!playerId) {
-                cc.warn("MultiplayerManager: child_removed received invalid data", snapshot);
-                return;
-            }
-            cc.log(`MultiplayerManager: Player removed from Firebase: ${playerId}`);
-            const remotePlayerNode = this.remotePlayers[playerId];
-            if (remotePlayerNode) {
-                remotePlayerNode.destroy();
-                delete this.remotePlayers[playerId];
-            }
-        });
+    private removeRemotePlayer(playerId: string, reason: string) {
+        const node = this.remotePlayers[playerId];
+        if (node) {
+            // cc.log(`MultiplayerManager: Removing ${playerId} (Reason: ${reason}).`);
+            node.destroy();
+            delete this.remotePlayers[playerId];
+        } else {
+            // cc.log(`MultiplayerManager: Attempted remove for ${playerId} (Reason: ${reason}), node not found.`);
+        }
     }
 
     public sendPlayerState(playerId: string, state: PlayerState) {
         if (!this.playersRef || !playerId) {
-            cc.warn("MultiplayerManager: Cannot send player state. playersRef or playerId missing.");
+            cc.warn("MultiplayerManager: Cannot send state. Ref/ID missing.");
             return;
         }
-        // 'lastUpdate' and 'online' are already part of the state object from Player.ts
-        this.playersRef.child(playerId).update(state) // Use update() to avoid overwriting onDisconnect or other specific fields
-            .catch(err => cc.error("MultiplayerManager: Error sending player state for " + playerId + ":", err));
+        this.playersRef.child(playerId).update(state)
+            .catch(err => cc.error(`MultiplayerManager: Error sending state for ${playerId}:`, err));
     }
 
     public setLocalPlayerOffline(playerId: string) {
         if (!this.playersRef || !playerId) {
-            cc.warn("MultiplayerManager: Cannot set local player offline. playersRef or playerId missing.");
+            cc.warn("MultiplayerManager: Cannot set offline. Ref/ID missing.");
             return;
         }
-        cc.log(`MultiplayerManager: Setting player ${playerId} to offline in Firebase.`);
+        // cc.log(`MultiplayerManager: Setting ${playerId} offline.`);
         this.playersRef.child(playerId).update({
             online: false,
             lastUpdate: firebase.database.ServerValue.TIMESTAMP
-        }).catch(err => cc.error("MultiplayerManager: Error setting player offline for " + playerId + ":", err));
+        }).catch(err => cc.error(`MultiplayerManager: Error setting ${playerId} offline:`, err));
     }
     
     onDestroy() {
-        cc.log("MultiplayerManager: onDestroy called.");
+        // cc.log("MultiplayerManager: onDestroy.");
         if (this.playersRef) {
-            this.playersRef.off('child_added');
-            this.playersRef.off('child_changed');
-            this.playersRef.off('child_removed');
-            cc.log("MultiplayerManager: Firebase listeners removed.");
+            this.playersRef.off('child_added', this.handleRemotePlayerAdded, this);
+            this.playersRef.off('child_changed', this.handleRemotePlayerChanged, this);
+            this.playersRef.off('child_removed', this.handleRemotePlayerRemoved, this);
+            // cc.log("MultiplayerManager: Firebase listeners removed.");
         }
-        // Note: onDisconnect for the local player is handled in Player.ts
         if (MultiplayerManager.instance === this) {
             MultiplayerManager.instance = null;
         }
