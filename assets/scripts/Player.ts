@@ -355,21 +355,30 @@ export default class Player extends cc.Component {
 
     onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
         if (this.isDead) return;
+
+        // ✅ 防止被已裁切或關閉的雷射誤殺
         if (otherCol.node.name.toLowerCase().includes("laser")) {
+            const laserCol = otherCol.getComponent(cc.PhysicsBoxCollider);
+            if (laserCol && !laserCol.enabled) {
+                cc.log("[Player] Laser 被遮擋，不觸發死亡");
+                return;
+            }
+
             cc.log("[Player] Hit laser — triggering death.");
             this.die();
         }
 
+        // ✅ 地面檢測
         if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
             const worldManifold = contact.getWorldManifold();
             const normal = worldManifold.normal;
-            // Check if contact normal is pointing upwards from player's perspective (player landing on something)
-            // Or, if the normal from the other object is pointing downwards onto the player
-            if (normal.y < -0.5 && contact.isTouching()) { // Your original logic
-                 this.isOnGround = true; this.isJumping = false;
+            if (normal.y < -0.5 && contact.isTouching()) {
+                this.isOnGround = true;
+                this.isJumping = false;
             }
         }
     }
+
 
     onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
         if (otherCol.node.group === "Ground") this.isOnGround = false;
