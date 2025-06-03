@@ -56,7 +56,7 @@ export default class CharacterSelect extends cc.Component {
         const selectedName = characterNames[this.selectedIndex];
         cc.sys.localStorage.setItem("selectedCharacter", selectedName);
         cc.log("[選角] 儲存角色名：", selectedName);
-        cc.director.loadScene("GameScene");
+        cc.director.loadScene("Lobby");
     }
 
 }
