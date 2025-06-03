@@ -757,7 +757,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chick1",
+    "_name": "dino_yellow",
     "_objFlags": 0,
     "_parent": {
       "__id__": 14
@@ -780,8 +780,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 653,
-      "height": 770
+      "width": 15,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -792,16 +792,16 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -111.139,
-        113.789,
+        -109.255,
+        68.574,
         0,
         0,
         0,
         0,
         1,
-        0.2,
-        0.2,
-        0.23
+        4,
+        4,
+        4.358
       ]
     },
     "_eulerAngles": {
@@ -833,7 +833,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "56d38144-87e2-4da4-94cd-98b700c18009"
+      "__uuid__": "8ddd8f9f-8848-4a07-96bb-a01dff5709fc"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1010,7 +1010,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chick2",
+    "_name": "dino_blue",
     "_objFlags": 0,
     "_parent": {
       "__id__": 19
@@ -1033,8 +1033,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 816,
-      "height": 882
+      "width": 16,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1045,15 +1045,15 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        91.73,
-        116.411,
+        101.15,
+        65.544,
         0,
         0,
         0,
         0,
         1,
-        0.18,
-        0.18,
+        4,
+        4,
         0.2
       ]
     },
@@ -1086,7 +1086,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "080d2735-aad5-4fb2-b2bb-3b5d1ff9c4a5"
+      "__uuid__": "7a3c7406-d2f6-481c-9637-824a55a3b284"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1263,7 +1263,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "chick3",
+    "_name": "dino_red",
     "_objFlags": 0,
     "_parent": {
       "__id__": 24
@@ -1286,8 +1286,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 728,
-      "height": 858
+      "width": 15,
+      "height": 17
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1298,15 +1298,15 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        301.518,
-        113.855,
+        312.822,
+        62.988,
         0,
         0,
         0,
         0,
         1,
-        0.18,
-        0.18,
+        4,
+        4,
         0.2
       ]
     },
@@ -1339,7 +1339,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "5995afff-9e04-4b20-b959-498374532a1e"
+      "__uuid__": "eab5af5a-4543-426a-b18c-52b6fdd353c3"
     },
     "_type": 0,
     "_sizeMode": 1,

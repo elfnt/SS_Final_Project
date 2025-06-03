@@ -113,38 +113,20 @@ export default class Player extends cc.Component {
 
         const scaleMap = [
             4,  // mario 正常比例
-            0.08,  // chick1 比例較大
-            0.08,  // chick2
-            0.08   // chick3
+            4,  // chick1 比例較大
+            4,  // chick2
+            4   // chick3
         ];
         this.node.setScale(scaleMap[index], scaleMap[index]);
 
         const collider = this.getComponent(cc.PhysicsBoxCollider);
         if (collider) {
-            switch (this.selectedCharacter) {
-                case "mario":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, 0); // 讓腳底貼地
-                    collider.density = 1;
-                    break;
-                case "chick1":
-                    collider.size = new cc.Size(640, 16);
-                    collider.offset = cc.v2(0, -300); // 根據實際圖像調整
-                    collider.density = 2000;
-                    break;
-                case "chick2":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, -14);
-                    collider.density = 3;
-                    break;
-                case "chick3":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, -13);
-                    collider.density = 3;
-                    break;
-            }
+            collider.size = new cc.Size(16, 16);
+            collider.offset = cc.v2(0, 0);
+            collider.density = 1;
             collider.apply();
         }
+
 
         if (this.characterSprites[index]) {
             sprite.spriteFrame = this.characterSprites[index];

@@ -1003,10 +1003,14 @@
         "__uuid__": "ab394749-ad21-499b-8a8f-f7a76d8fcc86"
       },
       {
-        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+        "__uuid__": "32d1a098-736f-445a-8198-7417b0682fda"
       },
-      null,
-      null
+      {
+        "__uuid__": "df4ebf56-c460-434a-93d4-8d13671b88ce"
+      },
+      {
+        "__uuid__": "5c0e0144-1fb7-4594-bf08-855a333921c1"
+      }
     ],
     "characterMoveClips": [
       {
@@ -1015,7 +1019,9 @@
       {
         "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
       },
-      null,
+      {
+        "__uuid__": "d7a09ac3-35ad-4c6f-ac1a-31836d3242e3"
+      },
       null
     ],
     "characterJumpClips": [
@@ -1033,10 +1039,14 @@
         "__uuid__": "13db7527-e372-49e1-a375-01f97c072266"
       },
       {
-        "__uuid__": "56d38144-87e2-4da4-94cd-98b700c18009"
+        "__uuid__": "8ddd8f9f-8848-4a07-96bb-a01dff5709fc"
       },
-      null,
-      null
+      {
+        "__uuid__": "7a3c7406-d2f6-481c-9637-824a55a3b284"
+      },
+      {
+        "__uuid__": "eab5af5a-4543-426a-b18c-52b6fdd353c3"
+      }
     ],
     "_id": "26F/HCtQtDoYU+pl6iUX0l"
   },
@@ -1098,7 +1108,7 @@
     "node": {
       "__id__": 12
     },
-    "_enabled": false,
+    "_enabled": true,
     "_defaultClip": {
       "__uuid__": "ab394749-ad21-499b-8a8f-f7a76d8fcc86"
     },
@@ -1113,8 +1123,22 @@
         "__uuid__": "0da82aaf-5499-4ad4-a49c-b2cb614f75e7"
       },
       {
-        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
-      }
+        "__uuid__": "32d1a098-736f-445a-8198-7417b0682fda"
+      },
+      null,
+      null,
+      {
+        "__uuid__": "df4ebf56-c460-434a-93d4-8d13671b88ce"
+      },
+      {
+        "__uuid__": "d7a09ac3-35ad-4c6f-ac1a-31836d3242e3"
+      },
+      null,
+      {
+        "__uuid__": "5c0e0144-1fb7-4594-bf08-855a333921c1"
+      },
+      null,
+      null
     ],
     "playOnLoad": false,
     "_id": "29+vs8A1RNxLtljiGMvmap"
@@ -8205,6 +8229,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "c5J2IuHr1KOLbWpYZyQTZm"
   },
   {
@@ -8370,6 +8395,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "d9ytpKNG1PDbI7wwTeUF4Y"
   },
   {
@@ -8856,6 +8882,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "9eTdyBFKRGbZdtKCuzckqt"
   },
   {
