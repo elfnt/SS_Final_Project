@@ -1,9 +1,25 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "",
+  "_name": "dino_yellow_jump",
   "_objFlags": 0,
-  "_duration": 0,
+  "_native": "",
+  "_duration": 0.016666666666666666,
   "sample": 60,
-  "curveData": {},
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "4cb52955-d9d6-4539-a26c-92ff34b837eb"
+            }
+          }
+        ]
+      }
+    }
+  },
   "events": []
 }

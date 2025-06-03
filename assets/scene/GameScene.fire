@@ -1014,7 +1014,7 @@
     ],
     "characterMoveClips": [
       {
-        "__uuid__": "580ea680-e6ff-4e8b-9c05-d49efbe06f6f"
+        "__uuid__": "66e002ce-17ff-46a0-9f72-c99d3b097264"
       },
       {
         "__uuid__": "3551d4ac-690f-44f0-be17-7b3726c87bc4"
@@ -1028,13 +1028,17 @@
     ],
     "characterJumpClips": [
       {
-        "__uuid__": "0da82aaf-5499-4ad4-a49c-b2cb614f75e7"
+        "__uuid__": "4d7ec899-36c1-4424-bc40-f987d4c99067"
       },
       {
-        "__uuid__": "58d9548d-9de6-4f5a-b22d-658c75da85c8"
+        "__uuid__": "b0bab432-562a-4567-987a-be06f8465efd"
       },
-      null,
-      null
+      {
+        "__uuid__": "c36db036-fd9a-4e4d-9350-4c4f55f58643"
+      },
+      {
+        "__uuid__": "ccc04c18-e64d-4562-b8b6-99c4edc28ef7"
+      }
     ],
     "characterSprites": [
       {

@@ -63,9 +63,13 @@ export default class Player extends cc.Component {
     private respawnPoint: cc.Vec2 = null;
     private multiplayerManager: MultiplayerManager = null;
 
-    onLoad() {
+    async onLoad() {
         cc.log("[Player] onLoad started.");
         cc.log("[Player] onLoad started.");
+        while (!MultiplayerManager.getInstance()) {
+            await new Promise(resolve => setTimeout(resolve, 50));
+        }
+        this.multiplayerManager = MultiplayerManager.getInstance();
 
         this.applyCharacterFromSelection();
 
