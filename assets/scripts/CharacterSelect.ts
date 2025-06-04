@@ -14,7 +14,7 @@ export default class CharacterSelect extends cc.Component {
     onLoad() {
         // 預設選中最左邊的角色
         this.updateSelection();
-        
+
         // 監聽鍵盤事件
         cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
         if (this.confirmButton) {

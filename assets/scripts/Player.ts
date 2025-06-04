@@ -63,7 +63,7 @@ export default class Player extends cc.Component {
     private respawnPoint: cc.Vec2 = null;
     private multiplayerManager: MultiplayerManager = null;
 
-    async onLoad() {
+    onLoad() {
         cc.log("[Player] onLoad started.");
 
         this.applyCharacterFromSelection();
@@ -339,21 +339,30 @@ retrievePlayerIdAndName() {
 
     onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
         if (this.isDead) return;
+
+        // ✅ 防止被已裁切或關閉的雷射誤殺
         if (otherCol.node.name.toLowerCase().includes("laser")) {
+            const laserCol = otherCol.getComponent(cc.PhysicsBoxCollider);
+            if (laserCol && !laserCol.enabled) {
+                cc.log("[Player] Laser 被遮擋，不觸發死亡");
+                return;
+            }
+
             cc.log("[Player] Hit laser — triggering death.");
             this.die();
         }
 
-        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player" || otherCol.node.group === "Item") {
+        // ✅ 地面檢測
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
             const worldManifold = contact.getWorldManifold();
             const normal = worldManifold.normal;
-            // If the contact normal points up from the player's perspective, set isOnGround
             if (normal.y < -0.5 && contact.isTouching()) {
                 this.isOnGround = true;
                 this.isJumping = false;
             }
         }
     }
+
 
     onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
         if (otherCol.node.group === "Ground" || otherCol.node.group === "Player") {
