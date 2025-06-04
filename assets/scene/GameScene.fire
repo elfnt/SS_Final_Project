@@ -244,8 +244,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -7692.284,
-        -27.987,
+        -7515.196,
+        -21.429,
         0,
         0,
         0,
@@ -8205,6 +8205,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "c5J2IuHr1KOLbWpYZyQTZm"
   },
   {
@@ -8370,6 +8371,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "d9ytpKNG1PDbI7wwTeUF4Y"
   },
   {
@@ -8856,6 +8858,7 @@
     },
     "_enabled": true,
     "fallThreshold": -1200,
+    "resetOnPlayerDeath": true,
     "_id": "9eTdyBFKRGbZdtKCuzckqt"
   },
   {
