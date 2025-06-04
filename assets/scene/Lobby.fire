@@ -1222,6 +1222,7 @@
     "remotePlayerPrefab": {
       "__uuid__": "cdd7f682-258d-46ff-aff7-2ea756bb5bd5"
     },
+    "enableImposterMode": true,
     "_id": "21S37iGURNhahmgCPqYQIy"
   },
   {
@@ -1283,8 +1284,8 @@
         0,
         0,
         1,
-        1,
-        1,
+        2,
+        2,
         1
       ]
     },
@@ -1596,8 +1597,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        771.747,
-        495.121,
+        831.901,
+        534.92,
         0,
         0,
         0,
@@ -1767,8 +1768,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "start",
-    "_N$string": "start",
+    "_string": "START",
+    "_N$string": "START",
     "_fontSize": 20,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -1939,7 +1940,6 @@
       "__id__": 44
     },
     "waitingLabel": null,
-    "playerSlots": [],
     "_id": "b1PAw9XotLDpMek9zn2VwZ"
   }
 ]
