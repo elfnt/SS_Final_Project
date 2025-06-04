@@ -487,5 +487,6 @@ export default class Player extends cc.Component {
 
         // ✅ 廣播事件，讓 Dropbox 知道要 reset
         cc.systemEvent.emit("PLAYER_RESPAWNED");
+        cc.systemEvent.emit("RESET_SENSOR");
     }
 }

@@ -18,13 +18,25 @@ export default class BoxController extends cc.Component {
 
     onLoad() {
         this.node.getComponent(cc.PhysicsBoxCollider)?.apply();
-        this.initialPosition = this.node.getPosition().clone();
-        this.listenToRemoteBoxPosition();
-        this.setInitialBoxPositionToFirebase();
     }
 
     start() {
-        this.resetToInitialPosition();
+        this.scheduleOnce(() => {
+            this.initialPosition = this.node.getPosition().clone();
+
+            const firebaseManager = FirebaseManager.getInstance();
+            if (firebaseManager?.database) {
+                // 只有 Firebase 有執行的情況下，我們才 reset
+                firebaseManager.database.ref(`boxes/${this.boxId}/position`).set({
+                    x: Math.round(this.initialPosition.x),
+                    y: Math.round(this.initialPosition.y)
+                });
+                cc.log(`[→ BoxController] 已設定 box '${this.boxId}' 回到 Firebase 預設位置: (${this.initialPosition.x}, ${this.initialPosition.y})`);
+            }
+
+            this.listenToRemoteBoxPosition();
+            this.node.setPosition(this.initialPosition);
+        }, 0);
     }
 
     update() {
@@ -38,7 +50,9 @@ export default class BoxController extends cc.Component {
     }
 
     onBeginContact(contact, selfCollider, otherCollider) {
-        const playerComp = otherCollider.node.getComponent("Player") || otherCollider.node.getComponent("Other-Player");
+        const playerComp =
+            otherCollider.node.getComponent("Player") ||
+            otherCollider.node.getComponent("Other-Player");
         const playerId = playerComp?.playerId;
         cc.log(`[BoxController] 檢查 controller：目前接觸者 = ${playerId}`);
         if (playerId && !this.touchingPlayerIds.has(playerId)) {
@@ -49,7 +63,9 @@ export default class BoxController extends cc.Component {
     }
 
     onEndContact(contact, selfCollider, otherCollider) {
-        const playerComp = otherCollider.node.getComponent("Player") || otherCollider.node.getComponent("Other-Player");
+        const playerComp =
+            otherCollider.node.getComponent("Player") ||
+            otherCollider.node.getComponent("Other-Player");
         const playerId = playerComp?.playerId;
 
         if (playerId && this.touchingPlayerIds.has(playerId)) {
@@ -58,24 +74,6 @@ export default class BoxController extends cc.Component {
             if (this.touchingPlayerIds.size === 0) {
                 this.releaseControl();
             }
-        }
-    }
-
-    private setInitialBoxPositionToFirebase() {
-        const firebaseManager = FirebaseManager.getInstance();
-        if (firebaseManager?.database) {
-            firebaseManager.database.ref(`boxes/${this.boxId}/position`).set({
-                x: Math.round(this.initialPosition.x),
-                y: Math.round(this.initialPosition.y)
-            });
-            cc.log(`[BoxController] 初始位置已寫入 Firebase：(${this.initialPosition.x}, ${this.initialPosition.y})`);
-        }
-    }
-
-    private resetToInitialPosition() {
-        if (this.initialPosition) {
-            this.node.setPosition(this.initialPosition);
-            this.updateBoxPositionInFirebase();
         }
     }
 
