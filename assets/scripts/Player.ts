@@ -122,7 +122,7 @@ export default class Player extends cc.Component {
         if (collider) {
             collider.size = new cc.Size(16, 16);
             collider.offset = cc.v2(0, 0);
-            collider.density = 25;
+            collider.density = 100;
             collider.apply();
         }
 
