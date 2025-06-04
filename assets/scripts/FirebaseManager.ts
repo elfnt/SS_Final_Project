@@ -1,7 +1,4 @@
 // FirebaseManager.ts
-// Attach this script to an empty node in your first scene (e.g., "FirebaseSystem").
-// Set its execution order to a high priority (e.g., -100) in Project Settings.
-
 const { ccclass, property } = cc._decorator;
 
 declare const firebase: any; // For Firebase v8 SDK (global 'firebase' object)
@@ -12,158 +9,196 @@ export default class FirebaseManager extends cc.Component {
     public database: firebase.database.Database = null;
     public auth: firebase.auth.Auth = null;
 
-    // IMPORTANT: Replace with your actual Firebase project configuration!
+    // Firebase configuration (ensure this is correct)
     private firebaseConfig = {
-  apiKey: "AIzaSyAijSWSyEjHUC95bhCwAGIyKZFIDC69xRQ",
-  authDomain: "ssfp-8139e.firebaseapp.com",
-  databaseURL: "https://ssfp-8139e-default-rtdb.firebaseio.com",
-  projectId: "ssfp-8139e",
-  storageBucket: "ssfp-8139e.firebasestorage.app",
-  messagingSenderId: "647323954046",
-  appId: "1:647323954046:web:7058021c9a4cbd782da12f",
-  measurementId: "G-XVETSBJZRP"
-    };
+        apiKey: "AIzaSyAijSWSyEjHUC95bhCwAGIyKZFIDC69xRQ",
+        authDomain: "ssfp-8139e.firebaseapp.com",
+        databaseURL: "https://ssfp-8139e-default-rtdb.firebaseio.com",
+        projectId: "ssfp-8139e",
+        storageBucket: "ssfp-8139e.firebasestorage.app",
+        messagingSenderId: "647323954046",
+        appId: "1:647323954046:web:7058021c9a4cbd782da12f",
+        measurementId: "G-XVETSBJZRP"
+    }; //
 
     public static getInstance(): FirebaseManager {
         if (!this._instance) {
-            cc.error("FirebaseManager instance is not yet available. Ensure its node is in the scene and active, and its script execution order is set high (e.g., -100).");
+            cc.error("FirebaseManager instance not available. Ensure it's in the scene with high execution priority.");
         }
         return this._instance;
     }
 
     onLoad() {
-        cc.log("FirebaseManager: onLoad started.");
         if (FirebaseManager._instance && FirebaseManager._instance !== this) {
-            cc.log("FirebaseManager: Destroying duplicate instance.");
             this.node.destroy();
             return;
         }
         FirebaseManager._instance = this;
         cc.game.addPersistRootNode(this.node);
-        cc.log("FirebaseManager: Instance set and node persisted.");
-
         this.initializeFirebase();
     }
 
-    initializeFirebase() {
+    private initializeFirebase() {
         try {
             if (typeof firebase === 'undefined') {
-                cc.error("FirebaseManager: Firebase SDK (global 'firebase' object) is not loaded. Ensure it's included in your project (e.g., via index.html for v8).");
+                cc.error("Firebase SDK not loaded. Check your project setup.");
                 this.enabled = false;
                 return;
             }
-
-            cc.log("FirebaseManager: Attempting to initialize Firebase app...");
-            if (!firebase.apps.length) { // Check if the default app is already initialized
-                firebase.initializeApp(this.firebaseConfig);
-                cc.log("FirebaseManager: Firebase app initialized successfully.");
+            if (!firebase.apps.length) {
+                firebase.initializeApp(this.firebaseConfig); //
             } else {
-                firebase.app(); // Get the default app if already initialized
-                cc.log("FirebaseManager: Firebase app already initialized.");
+                firebase.app();
             }
-
-            // Initialize services after app initialization is confirmed
-            this.database = firebase.database();
-            this.auth = firebase.auth(); // Initialize auth service too if you plan to use it
-            cc.log("FirebaseManager: Firebase services (Database, Auth) references obtained.");
-
+            this.database = firebase.database(); //
+            this.auth = firebase.auth(); //
+            cc.log("[FirebaseManager] Firebase initialized successfully.");
         } catch (error) {
-            cc.error("FirebaseManager: Error during Firebase initialization:", error);
-            if (error.message && error.message.includes("already exists")) {
-                 cc.warn("FirebaseManager: Firebase app named '[DEFAULT]' already exists. This is usually fine. Ensuring services are initialized.");
+            cc.error("Firebase initialization error:", error);
+            if (error.message?.includes("already exists")) {
                 if (!this.database) this.database = firebase.database();
                 if (!this.auth) this.auth = firebase.auth();
+                 cc.log("[FirebaseManager] Firebase app already existed, services re-acquired.");
             } else {
-                this.enabled = false; // Disable this component on other critical errors
+                this.enabled = false;
             }
         }
     }
 
-    // Your existing methods like savePlayerData, fetchPlayerData, etc.
-    // Ensure they check `if (!this.database)` before use.
-    public async savePlayerData(playerId: string, data: any): Promise<void> {
+    private async checkDatabase(): Promise<void> { // Note: Changed to async and returns Promise
         if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot save player data.");
-            return Promise.reject(new Error("Firebase Database not initialized."));
-        }
-        try {
-            await this.database.ref(`players/${playerId}`).set(data);
-            // cc.log(`Player data saved for ${playerId}`); // Less verbose
-        } catch (error) {
-            console.error(`Error saving player data for ${playerId}:`, error);
-            throw error;
-        }
-    }
-
-    public async fetchPlayerData(playerId: string): Promise<any> {
-        if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot fetch player data.");
-            return Promise.reject(new Error("Firebase Database not initialized."));
-        }
-        try {
-            const snapshot = await this.database.ref(`players/${playerId}`).once("value");
-            if (snapshot.exists()) {
-                return snapshot.val();
-            } else {
-                cc.log(`No data found for player ${playerId}.`);
-                return null;
+            const errorMsg = "Firebase Database not initialized.";
+            cc.error("FirebaseManager: " + errorMsg);
+            // Attempt re-initialization or fail gracefully
+            this.initializeFirebase(); // Attempt to re-initialize
+            if (!this.database) { // Check again after attempt
+                 return Promise.reject(new Error(errorMsg));
             }
-        } catch (error) {
-            console.error("Error fetching player data:", error);
-            throw error;
         }
+        return Promise.resolve();
     }
 
-    public listenToPlayerData(playerId: string, callback: (data: any) => void): void {
-        if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot listen to player data.");
-            return;
-        }
-        const playerRef = this.database.ref(`players/${playerId}`);
-        playerRef.on("value", (snapshot) => {
-            callback(snapshot.val());
-        }, (error) => {
-            cc.error(`FirebaseManager: Error listening to player data for ${playerId}:`, error);
+    public async savePlayerData(playerId: string, data: any): Promise<void> { //
+        await this.checkDatabase(); //
+        return this.database.ref(`players/${playerId}`).set(data); //
+    }
+
+    public async fetchPlayerData(playerId: string): Promise<any> { //
+        await this.checkDatabase(); //
+        const snapshot = await this.database.ref(`players/${playerId}`).once("value"); //
+        return snapshot.exists() ? snapshot.val() : null; //
+    }
+
+    public listenToPlayerData(playerId: string, callback: (data: any) => void): void { //
+        this.checkDatabase().then(() => {
+            this.database.ref(`players/${playerId}`).on("value", 
+                snapshot => callback(snapshot.val()),
+                error => cc.error(`Error listening to player data for ${playerId}:`, error)
+            ); //
+        }).catch(err => cc.error("Cannot listenToPlayerData, DB not ready:", err));
+    }
+
+    public async removePlayer(playerId: string): Promise<void> { //
+        await this.checkDatabase(); //
+        return this.database.ref(`players/${playerId}`).remove(); //
+    }
+
+    public syncGameState(gameId: string, callback: (state: any) => void): void { //
+         this.checkDatabase().then(() => {
+            this.database.ref(`games/${gameId}`).on("value", 
+                snapshot => callback(snapshot.val()),
+                error => cc.error(`Error syncing game state for ${gameId}:`, error)
+            ); //
+        }).catch(err => cc.error("Cannot syncGameState, DB not ready:", err));
+    }
+
+    public async updateGameState(gameId: string, state: any): Promise<void> { //
+        await this.checkDatabase(); //
+        return this.database.ref(`games/${gameId}`).update(state); // Use update instead of set if you want to merge
+    }
+
+public async createGameSession(gameId: string, hostId: string): Promise<void> {
+    await this.checkDatabase();
+    const gameSessionRef = this.database.ref(`games/${gameId}`);
+    const snapshot = await gameSessionRef.once('value');
+    if (!snapshot.exists()) {
+        cc.log(`[FirebaseManager] Creating new game session: ${gameId}`);
+        return gameSessionRef.set({
+            hostId: hostId,
+            state: "waiting",
+            // Remove this line: players: {},
+            imposter: null,
+            startTime: null
         });
-        // To stop listening later, you'd need to store playerRef and call playerRef.off("value", callback);
+    } else {
+        cc.log(`[FirebaseManager] Game session ${gameId} already exists.`);
+        return Promise.resolve();
     }
+}
 
-    public async removePlayer(playerId: string): Promise<void> {
-        if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot remove player.");
-            return Promise.reject(new Error("Firebase Database not initialized."));
-        }
-        try {
-            await this.database.ref(`players/${playerId}`).remove();
-            cc.log(`Player ${playerId} removed from the database.`);
-        } catch (error) {
-            console.error("Error removing player:", error);
-            throw error;
-        }
-    }
 
-    public syncGameState(gameId: string, callback: (state: any) => void): void {
-        if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot sync game state.");
-            return;
+public async assignImposter(gameId: string): Promise<string | null> {
+    try {
+        await this.checkDatabase();
+        
+        // First, get all online players from the /players path
+        const playersSnapshot = await this.database.ref('players')
+            .orderByChild('online')
+            .equalTo(true)
+            .once('value');
+            
+        const players = playersSnapshot.val() || {};
+        const playerIds = Object.keys(players);
+        
+        //cc.log(`[FirebaseManager] Found ${playerIds.length} online players`);
+        
+        const MIN_PLAYERS_TO_START = 4;
+        if (playerIds.length < MIN_PLAYERS_TO_START) {
+            cc.warn(`[FirebaseManager] Not enough online players: ${playerIds.length}`);
+            return null;
         }
-        this.database.ref(`games/${gameId}`).on("value", (snapshot) => {
-            callback(snapshot.val());
-        }, (error) => {
-            cc.error(`FirebaseManager: Error syncing game state for ${gameId}:`, error);
+        
+// Create activePlayers object with the first 4 players
+const activePlayers = {};
+const playerSlice = playerIds.slice(0, 4);
+for (let i = 0; i < playerSlice.length; i++) {
+    const id = playerSlice[i];
+    const name = players[id].name || "Unknown";
+    activePlayers[id] = { 
+        active: true,
+        name: name 
+    };
+}
+        // Pick a random imposter from the 4 selected players
+        const randomIndex = Math.floor(Math.random() * 4); 
+        const imposterId = playerSlice[randomIndex];
+        const imposterName = activePlayers[imposterId]?.name || "Unknown";
+
+        // Update game state, store both imposter id and name
+        await this.database.ref(`games/${gameId}`).update({
+            imposter: {
+            id: imposterId,
+            name: imposterName
+            },
+            state: "active",
+            startTime: firebase.database.ServerValue.TIMESTAMP,
+            activePlayers: activePlayers
         });
-    }
 
-    public async updateGameState(gameId: string, state: any): Promise<void> {
-        if (!this.database) {
-            cc.error("FirebaseManager: Database not initialized. Cannot update game state.");
-            return Promise.reject(new Error("Firebase Database not initialized."));
-        }
-        try {
-            await this.database.ref(`games/${gameId}`).set(state);
-        } catch (error) {
-            console.error("Error updating game state:", error);
-            throw error;
-        }
+        cc.log(`[FirebaseManager] Imposter assigned: ${imposterId} (${imposterName}) for game ${gameId}. State set to active.`);
+        return imposterId;
+    } catch (error) {
+        cc.error(`[FirebaseManager] Error assigning imposter:`, error);
+        return null;
+    }
+}
+
+    public async endGameSession(gameId: string, winnerType: string): Promise<void> { //
+        await this.checkDatabase(); //
+        return this.database.ref(`games/${gameId}`).update({ //
+            state: "ended", //
+            endTime: firebase.database.ServerValue.TIMESTAMP, //
+            winner: winnerType // "imposter" or "crew" //
+        });
     }
 }

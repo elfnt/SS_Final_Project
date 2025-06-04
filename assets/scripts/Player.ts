@@ -65,11 +65,6 @@ export default class Player extends cc.Component {
 
     async onLoad() {
         cc.log("[Player] onLoad started.");
-        cc.log("[Player] onLoad started.");
-        while (!MultiplayerManager.getInstance()) {
-            await new Promise(resolve => setTimeout(resolve, 50));
-        }
-        this.multiplayerManager = MultiplayerManager.getInstance();
 
         this.applyCharacterFromSelection();
 
@@ -121,13 +116,13 @@ export default class Player extends cc.Component {
             4,  // chick2
             4   // chick3
         ];
-        this.node.setScale(scaleMap[index], scaleMap[index]);
+        //this.node.setScale(scaleMap[index], scaleMap[index]);
 
         const collider = this.getComponent(cc.PhysicsBoxCollider);
         if (collider) {
             collider.size = new cc.Size(16, 16);
             collider.offset = cc.v2(0, 0);
-            collider.density = 1;
+            collider.density = 25;
             collider.apply();
         }
 
@@ -151,29 +146,43 @@ export default class Player extends cc.Component {
 
 
 
-    retrievePlayerIdAndName() {
-        // Use playerId from localStorage if available (set by Login.ts)
-        this.playerId = cc.sys.localStorage.getItem('playerId');
-        this.playerName = cc.sys.localStorage.getItem('playerName') || this.playerName; // Use default if not found
+// In Player.ts
+retrievePlayerIdAndName() {
+    const storedPlayerId = cc.sys.localStorage.getItem('playerId');
+    const storedPlayerName = cc.sys.localStorage.getItem('playerName');
 
-        if (!this.playerId) {
-            // Fallback if not set by Login scene (e.g., direct entry to GameScene for testing)
-            this.playerId = `player_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
-            cc.sys.localStorage.setItem('playerId', this.playerId);
-            cc.warn(`[Player] Generated new PlayerID: ${this.playerId} as none was found in localStorage.`);
-             if (!cc.sys.localStorage.getItem('playerName')) { // If name also wasn't set
-                cc.sys.localStorage.setItem('playerName', this.playerName);
-             }
-        } else {
-            cc.log(`[Player] Retrieved PlayerID: ${this.playerId}, Name: ${this.playerName} from localStorage.`);
-        }
+    cc.log(`[Player] Node: ${this.node.name} - retrievePlayerIdAndName called.`);
+    cc.log(`[Player] From localStorage: storedPlayerId = "<span class="math-inline">\{storedPlayerId\}", storedPlayerName \= "</span>{storedPlayerName}"`);
 
-        // For potential global access by other scripts if absolutely necessary, though direct passing or managers are better.
-        if (typeof window !== 'undefined') {
-            window['playerId'] = this.playerId;
-            window['playerName'] = this.playerName;
+    if (storedPlayerId) {
+        this.playerId = storedPlayerId;
+    } else {
+        this.playerId = `player_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+        cc.sys.localStorage.setItem('playerId', this.playerId);
+        cc.warn(`[Player] Generated new PlayerID: ${this.playerId} (was null in localStorage).`);
+    }
+
+    // Use the storedPlayerName if it's valid, otherwise use the default @property value
+    if (storedPlayerName && storedPlayerName.trim() !== "") {
+        this.playerName = storedPlayerName;
+    } else {
+        // this.playerName will already be its default value from @property (e.g., "Player")
+        // If no name was in localStorage, and we generated a new ID, let's save the default name too.
+        if (!storedPlayerId && this.playerName && this.playerName.trim() !== "") { // Only if new ID was generated
+             cc.sys.localStorage.setItem('playerName', this.playerName);
+             cc.log(`[Player] No playerName in localStorage with new ID, saved default property name: "${this.playerName}"`);
+        } else if (storedPlayerId && (!storedPlayerName || storedPlayerName.trim() === "")) {
+             cc.warn(`[Player] PlayerID "<span class="math-inline">\{this\.playerId\}" was found, but no valid playerName in localStorage\. Using default property name\: "</span>{this.playerName}". Consider re-saving a default if this is unexpected.`);
         }
     }
+
+    cc.log(`[Player] Final assigned - ID: "<span class="math-inline">\{this\.playerId\}", Name\: "</span>{this.playerName}"`);
+
+    if (typeof window !== 'undefined') { //
+        window['playerId'] = this.playerId; //
+        window['playerName'] = this.playerName; //
+    }
+}
 
     setupOnDisconnect() {
         if (typeof firebase === 'undefined' || !firebase.database) {
@@ -197,11 +206,6 @@ export default class Player extends cc.Component {
             cc.log(`[Player] Marking ${this.playerId} as offline due to onDestroy.`);
             this.multiplayerManager.setLocalPlayerOffline(this.playerId);
         }
-        // Optionally cancel onDisconnect if it was set and you want to prevent it from firing
-        // if this is a graceful shutdown. Often, letting it fire is fine.
-        // if (typeof firebase !== 'undefined' && firebase.database && this.playerId) {
-        //     firebase.database().ref(`players/${this.playerId}`).onDisconnect().cancel();
-        // }
     }
 
     update(dt: number) {
@@ -304,8 +308,8 @@ export default class Player extends cc.Component {
         if (this.isDead) return;
         const absScaleX = Math.abs(this.node.scaleX) || 1;
         switch (e.keyCode) {
-            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1; this.node.scaleX = -absScaleX; break;
-            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = absScaleX; break;
+            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1;this.node.scaleX = Math.abs(this.node.scaleX) * -1; break;
+            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = Math.abs(this.node.scaleX); break;
             case cc.macro.KEY.space: if (this.isOnGround) this.jump(); break;
             case cc.macro.KEY.e:
                 if (this.heldItem) this.dropItem();
@@ -321,14 +325,8 @@ export default class Player extends cc.Component {
 
     private updateCamera() {
          if (this.cameraNode) {
-            // Center camera on player - assuming camera is at the root of the scene or a direct child of it.
-            // Adjust if your camera setup is different (e.g. camera is child of a node that moves)
             this.cameraNode.x = this.node.x;
             this.cameraNode.y = this.node.y;
-            // Your original was: this.cameraNode.setPosition(this.node.x - cc.winSize.width / 2, this.node.y - cc.winSize.height / 2);
-            // This assumes the camera's anchor point is (0,0) and it moves to keep player at center of screen.
-            // If your camera node's anchor point is (0.5, 0.5), then this.cameraNode.setPosition(this.node.position) would be simpler.
-            // For now, I'll keep a simple follow.
         }
     }
 
@@ -346,19 +344,21 @@ export default class Player extends cc.Component {
             this.die();
         }
 
-        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player" || otherCol.node.group === "Item") {
             const worldManifold = contact.getWorldManifold();
             const normal = worldManifold.normal;
-            // Check if contact normal is pointing upwards from player's perspective (player landing on something)
-            // Or, if the normal from the other object is pointing downwards onto the player
-            if (normal.y < -0.5 && contact.isTouching()) { // Your original logic
-                 this.isOnGround = true; this.isJumping = false;
+            // If the contact normal points up from the player's perspective, set isOnGround
+            if (normal.y < -0.5 && contact.isTouching()) {
+                this.isOnGround = true;
+                this.isJumping = false;
             }
         }
     }
 
     onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
-        if (otherCol.node.group === "Ground") this.isOnGround = false;
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player") {
+            this.isOnGround = false;
+        }
     }
 
     private detectNearestItem() {
@@ -469,6 +469,4 @@ export default class Player extends cc.Component {
         // ✅ 廣播事件，讓 Dropbox 知道要 reset
         cc.systemEvent.emit("PLAYER_RESPAWNED");
     }
-
-
 }
