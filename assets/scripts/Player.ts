@@ -63,6 +63,8 @@ export default class Player extends cc.Component {
     private respawnPoint: cc.Vec2 = null;
     private multiplayerManager: MultiplayerManager = null;
 
+    private currentAnim: string = "";
+
     onLoad() {
         cc.log("[Player] onLoad started.");
 
@@ -331,10 +333,22 @@ retrievePlayerIdAndName() {
     }
 
     private updateAnim() {
-        const animName = this.isDead ? "Die" : this.isJumping ? "Jump" : this.dir.x !== 0 ? "Move" : "Default";
-        if (this.anim && (this.anim.currentClip?.name !== animName || !this.anim.getAnimationState(animName).isPlaying)) {
-            this.anim.play(animName);
+        const next = this.isDead ? "Die"
+                    : this.isJumping ? "Jump"
+                    : this.dir.x !== 0 ? "Move"
+                    : "Default";
+    
+        if (next === this.currentAnim) return;    // 別名一樣 → 什麼都不做
+    
+        const state = this.anim?.getAnimationState(next);
+        if (!state) {                             // clip 沒加進來
+            cc.warn(`[updateAnim] ❗ 找不到 clip "${next}"`);
+            return;
         }
+    
+        this.anim.play(next);
+        this.currentAnim = next;                  // 更新記錄
+        cc.log(`[updateAnim] ▶ play("${next}")`);
     }
 
     onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
