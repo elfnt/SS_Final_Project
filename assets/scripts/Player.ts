@@ -33,6 +33,8 @@ export default class Player extends cc.Component {
     @property({ type: cc.Node }) cameraNode: cc.Node = null;
     @property({ type: cc.AudioClip }) jumpSound: cc.AudioClip = null;
     @property({ type: cc.AudioClip }) deathSound: cc.AudioClip = null;
+    @property({ type: cc.AudioClip }) pickUpSound: cc.AudioClip = null;
+    @property({ type: cc.AudioClip }) dropItemSound: cc.AudioClip = null;
     @property itemDetectRadius = 100;
     @property playerName: string = "Player";
     @property syncInterval: number = 0.1; // Time in seconds between Firebase updates
@@ -112,12 +114,6 @@ export default class Player extends cc.Component {
         const sprite = this.getComponent(cc.Sprite);
         const anim = this.getComponent(cc.Animation);
 
-        const scaleMap = [
-            4,  // mario 正常比例
-            4,  // chick1 比例較大
-            4,  // chick2
-            4   // chick3
-        ];
         //this.node.setScale(scaleMap[index], scaleMap[index]);
 
         const collider = this.getComponent(cc.PhysicsBoxCollider);
@@ -421,6 +417,7 @@ retrievePlayerIdAndName() {
         }
         if (col) { this.originalItemFriction = col.friction; col.friction = 100; col.apply(); }
         item.active = false;
+        if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
     }
 
     private dropItem() {
@@ -442,6 +439,7 @@ retrievePlayerIdAndName() {
         if (rb && this.originalItemFixedRotation !== null) { rb.fixedRotation = this.originalItemFixedRotation; this.originalItemFixedRotation = null; }
         if (col && this.originalItemFriction !== null) { col.friction = this.originalItemFriction; col.apply(); this.originalItemFriction = null; }
         this.heldItem = null; this.nearestItem = null; this.originalWorldScale = null;
+        if (this.dropItemSound) cc.audioEngine.playEffect(this.dropItemSound, false);
     }
 
     // Your existing respawn/die logic

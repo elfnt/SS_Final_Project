@@ -197,11 +197,13 @@ export default class RemotePlayer extends cc.Component {
         if (newState.character) {
             const index = characterMap[newState.character] ?? 0;
 
-            const scaleMap = [4, 4, 4, 4];
+            //const scaleMap = [4, 4, 4, 4];
             //this.node.setScale(scaleMap[index], scaleMap[index]);
             const currentFacing = newState.facing ?? Math.sign(this.node.scaleX || 1);
-            const scale = scaleMap[index];
-            this.node.setScale(scale * currentFacing, scale);
+            const scaleX = this.node.scaleX;
+            const scaleY = this.node.scaleY;
+            const facing = newState.facing ?? Math.sign(scaleX || 1);
+            this.node.setScale(Math.abs(scaleX) * facing, scaleY);
 
             if (this.characterSprites[index] && this.playerSprite) {
                 this.playerSprite.spriteFrame = this.characterSprites[index];
