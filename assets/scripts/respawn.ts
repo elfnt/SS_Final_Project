@@ -72,10 +72,11 @@ export default class AutoRespawn extends cc.Component {
         firebaseManager.database.ref(`boxes/${this.firebaseKey}/position`).set({
             x: Math.round(this.node.x),
             y: Math.round(this.node.y),
-            angle: this.angleISet
+            rotation: Math.round(this.angleISet)
         });
 
-        cc.log(`[AutoRespawn] 已同步 ${this.firebaseKey} 位置到 Firebase`);
+        cc.log(`[AutoRespawn] 已同步 ${this.firebaseKey} 的位置與角度到 Firebase: (${this.node.x}, ${this.node.y}, rot=${this.angleISet})`);
     }
+
 
 }

@@ -4,7 +4,6 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class BoxController extends cc.Component {
-
     @property({ tooltip: "Firebase 上的 box ID" })
     boxId: string = "box1";
 
@@ -13,6 +12,7 @@ export default class BoxController extends cc.Component {
 
     private touchingPlayerIds: Set<string> = new Set();
     private lastSentPos: cc.Vec2 = null;
+    private lastSentRot: number = null;
     private isControlling: boolean = false;
     private initialPosition: cc.Vec2 = null;
 
@@ -26,12 +26,12 @@ export default class BoxController extends cc.Component {
 
             const firebaseManager = FirebaseManager.getInstance();
             if (firebaseManager?.database) {
-                // 只有 Firebase 有執行的情況下，我們才 reset
                 firebaseManager.database.ref(`boxes/${this.boxId}/position`).set({
                     x: Math.round(this.initialPosition.x),
-                    y: Math.round(this.initialPosition.y)
+                    y: Math.round(this.initialPosition.y),
+                    rotation: Math.round(this.node.angle)
                 });
-                cc.log(`[→ BoxController] 已設定 box '${this.boxId}' 回到 Firebase 預設位置: (${this.initialPosition.x}, ${this.initialPosition.y})`);
+                cc.log(`[→ BoxController] 設定 box '${this.boxId}' 初始位置與角度: (${this.initialPosition.x}, ${this.initialPosition.y}, rot=${this.node.angle})`);
             }
 
             this.listenToRemoteBoxPosition();
@@ -40,12 +40,45 @@ export default class BoxController extends cc.Component {
     }
 
     update() {
-        if (!this.isControlling) return;
-
         const currentPos = this.node.getPosition();
-        if (!this.lastSentPos || !currentPos.fuzzyEquals(this.lastSentPos, 0.5)) {
+        const currentRot = this.node.angle;
+
+        const xChanged = !this.lastSentPos || Math.abs(currentPos.x - this.lastSentPos.x) > 0.5;
+        const yChanged = !this.lastSentPos || Math.abs(currentPos.y - this.lastSentPos.y) > 0.5;
+        const rotChanged = this.lastSentRot === null || Math.abs(currentRot - this.lastSentRot) > 1;
+
+        if (xChanged || yChanged || rotChanged) {
             this.lastSentPos = currentPos.clone();
+            this.lastSentRot = currentRot;
             this.updateBoxPositionInFirebase();
+        }
+    }
+
+    private updateBoxPositionInFirebase() {
+        const firebaseManager = FirebaseManager.getInstance();
+        if (firebaseManager?.database) {
+            firebaseManager.database.ref(`boxes/${this.boxId}/position`).set({
+                x: Math.round(this.node.x),
+                y: Math.round(this.node.y),
+                rotation: Math.round(this.node.angle)
+            });
+        }
+    }
+
+    private listenToRemoteBoxPosition() {
+        const firebaseManager = FirebaseManager.getInstance();
+        if (firebaseManager?.database) {
+            firebaseManager.database.ref(`boxes/${this.boxId}/position`).on("value", (snapshot) => {
+                const pos = snapshot.val();
+                if (!this.isControlling && pos) {
+                    if (Math.abs(pos.x - this.node.x) > 0.5 || Math.abs(pos.y - this.node.y) > 0.5) {
+                        this.node.setPosition(pos.x, pos.y);
+                    }
+                    if (typeof pos.rotation === "number" && Math.abs(pos.rotation - this.node.angle) > 1) {
+                        this.node.angle = pos.rotation;
+                    }
+                }
+            });
         }
     }
 
@@ -93,28 +126,6 @@ export default class BoxController extends cc.Component {
         if (firebaseManager?.database) {
             firebaseManager.database.ref(`boxes/${this.boxId}`).update({
                 status: remaining
-            });
-        }
-    }
-
-    private updateBoxPositionInFirebase() {
-        const firebaseManager = FirebaseManager.getInstance();
-        if (firebaseManager?.database) {
-            firebaseManager.database.ref(`boxes/${this.boxId}/position`).set({
-                x: Math.round(this.node.x),
-                y: Math.round(this.node.y)
-            });
-        }
-    }
-
-    private listenToRemoteBoxPosition() {
-        const firebaseManager = FirebaseManager.getInstance();
-        if (firebaseManager?.database) {
-            firebaseManager.database.ref(`boxes/${this.boxId}/position`).on("value", (snapshot) => {
-                const pos = snapshot.val();
-                if (!this.isControlling && pos && (Math.abs(pos.x - this.node.x) > 0.5 || Math.abs(pos.y - this.node.y) > 0.5)) {
-                    this.node.setPosition(pos.x, pos.y);
-                }
             });
         }
     }
