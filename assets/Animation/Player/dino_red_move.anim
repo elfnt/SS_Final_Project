@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dino_red_move",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "230d8ed7-4791-42e5-b877-942b558269fa"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "5f00fbb4-3eb5-420d-a9b5-e438b0f7b416"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "bc6f59a0-4e75-4173-9be3-56895a404c37"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "3005e759-d414-486c-9eb4-a50d4f0dbdac"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "6f9ba501-6dd8-4c5a-8d1e-bf255aeecbb2"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

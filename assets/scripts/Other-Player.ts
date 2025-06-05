@@ -197,8 +197,13 @@ export default class RemotePlayer extends cc.Component {
         if (newState.character) {
             const index = characterMap[newState.character] ?? 0;
 
-            const scaleMap = [4, 0.08, 0.08, 0.08];
-            this.node.setScale(scaleMap[index], scaleMap[index]);
+            //const scaleMap = [4, 4, 4, 4];
+            //this.node.setScale(scaleMap[index], scaleMap[index]);
+            const currentFacing = newState.facing ?? Math.sign(this.node.scaleX || 1);
+            const scaleX = this.node.scaleX;
+            const scaleY = this.node.scaleY;
+            const facing = newState.facing ?? Math.sign(scaleX || 1);
+            this.node.setScale(Math.abs(scaleX) * facing, scaleY);
 
             if (this.characterSprites[index] && this.playerSprite) {
                 this.playerSprite.spriteFrame = this.characterSprites[index];
@@ -207,11 +212,21 @@ export default class RemotePlayer extends cc.Component {
 
             if (this.anim) {
                 this.anim.stop();
-                this.anim.addClip(this.characterDefaultClips[index], "Default");
-                this.anim.addClip(this.characterMoveClips[index], "Move");
-                this.anim.addClip(this.characterJumpClips[index], "Jump");
+                ["Default", "Move", "Jump"].forEach(name => {
+                    const state = this.anim.getAnimationState(name);
+                    if (state) {
+                        this.anim.removeClip(state.clip, true); // 第二個參數設為 true 是強制刪除
+                    }
+                });
+                // 取得角色 index
+                const index = characterMap[newState.character] ?? 0;
+
+                // 加入真正的動畫名稱為 clip key
+                this.anim.addClip(this.characterDefaultClips[index], `${newState.character}_default`);
+                this.anim.addClip(this.characterMoveClips[index], `${newState.character}_move`);
+                this.anim.addClip(this.characterJumpClips[index], `${newState.character}_jump`);
+                
                 this.anim.defaultClip = this.characterDefaultClips[index];
-                this.anim.play(newState.animation || "Default");
             }
 
             cc.log(`[RemotePlayer] 套用了角色外觀：${newState.character} (index=${index})`);
@@ -220,10 +235,13 @@ export default class RemotePlayer extends cc.Component {
 
         if (this.anim && newState.animation) {
             const currentName = this.anim.currentClip ? this.anim.currentClip.name : null;
+            cc.log(`[RemotePlayer] 要播放的動畫名稱：${newState.animation}，目前動畫：${currentName}`);
             if (currentName !== newState.animation || !this.anim.getAnimationState(newState.animation)?.isPlaying) {
                 this.anim.play(newState.animation);
+                cc.log(`[RemotePlayer] ✅ 播放動畫：${newState.animation}`);
             }
         }
+
         
         this.node.opacity = 255;
         if (this.playerSprite) this.playerSprite.enabled = true;

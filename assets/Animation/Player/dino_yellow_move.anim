@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dino_yellow_move",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "54d81fd4-f146-4409-b31d-1e64b287c2f7"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "36a03f0e-f63c-44f0-8100-5de02176e128"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "28b76675-b34f-4688-847f-1148158acf7f"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "b37dafc2-00c5-4e79-b48e-27ea4546a802"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "b94c816a-a39c-48c1-bbd6-3febb9d70f91"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}

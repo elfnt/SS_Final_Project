@@ -33,6 +33,8 @@ export default class Player extends cc.Component {
     @property({ type: cc.Node }) cameraNode: cc.Node = null;
     @property({ type: cc.AudioClip }) jumpSound: cc.AudioClip = null;
     @property({ type: cc.AudioClip }) deathSound: cc.AudioClip = null;
+    @property({ type: cc.AudioClip }) pickUpSound: cc.AudioClip = null;
+    @property({ type: cc.AudioClip }) dropItemSound: cc.AudioClip = null;
     @property itemDetectRadius = 100;
     @property playerName: string = "Player";
     @property syncInterval: number = 0.1; // Time in seconds between Firebase updates
@@ -62,6 +64,8 @@ export default class Player extends cc.Component {
 
     private respawnPoint: cc.Vec2 = null;
     private multiplayerManager: MultiplayerManager = null;
+
+    private currentAnim: string = "";
 
     onLoad() {
         cc.log("[Player] onLoad started.");
@@ -110,40 +114,16 @@ export default class Player extends cc.Component {
         const sprite = this.getComponent(cc.Sprite);
         const anim = this.getComponent(cc.Animation);
 
-        const scaleMap = [
-            4,  // mario 正常比例
-            0.08,  // chick1 比例較大
-            0.08,  // chick2
-            0.08   // chick3
-        ];
-        this.node.setScale(scaleMap[index], scaleMap[index]);
+        //this.node.setScale(scaleMap[index], scaleMap[index]);
 
         const collider = this.getComponent(cc.PhysicsBoxCollider);
         if (collider) {
-            switch (this.selectedCharacter) {
-                case "mario":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, 0); // 讓腳底貼地
-                    collider.density = 1;
-                    break;
-                case "chick1":
-                    collider.size = new cc.Size(640, 16);
-                    collider.offset = cc.v2(0, -300); // 根據實際圖像調整
-                    collider.density = 2000;
-                    break;
-                case "chick2":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, -14);
-                    collider.density = 3;
-                    break;
-                case "chick3":
-                    collider.size = new cc.Size(16, 16);
-                    collider.offset = cc.v2(0, -13);
-                    collider.density = 3;
-                    break;
-            }
+            collider.size = new cc.Size(16, 16);
+            collider.offset = cc.v2(0, 0);
+            collider.density = 100;
             collider.apply();
         }
+
 
         if (this.characterSprites[index]) {
             sprite.spriteFrame = this.characterSprites[index];
@@ -164,29 +144,43 @@ export default class Player extends cc.Component {
 
 
 
-    retrievePlayerIdAndName() {
-        // Use playerId from localStorage if available (set by Login.ts)
-        this.playerId = cc.sys.localStorage.getItem('playerId');
-        this.playerName = cc.sys.localStorage.getItem('playerName') || this.playerName; // Use default if not found
+// In Player.ts
+retrievePlayerIdAndName() {
+    const storedPlayerId = cc.sys.localStorage.getItem('playerId');
+    const storedPlayerName = cc.sys.localStorage.getItem('playerName');
 
-        if (!this.playerId) {
-            // Fallback if not set by Login scene (e.g., direct entry to GameScene for testing)
-            this.playerId = `player_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
-            cc.sys.localStorage.setItem('playerId', this.playerId);
-            cc.warn(`[Player] Generated new PlayerID: ${this.playerId} as none was found in localStorage.`);
-             if (!cc.sys.localStorage.getItem('playerName')) { // If name also wasn't set
-                cc.sys.localStorage.setItem('playerName', this.playerName);
-             }
-        } else {
-            cc.log(`[Player] Retrieved PlayerID: ${this.playerId}, Name: ${this.playerName} from localStorage.`);
-        }
+    cc.log(`[Player] Node: ${this.node.name} - retrievePlayerIdAndName called.`);
+    cc.log(`[Player] From localStorage: storedPlayerId = "<span class="math-inline">\{storedPlayerId\}", storedPlayerName \= "</span>{storedPlayerName}"`);
 
-        // For potential global access by other scripts if absolutely necessary, though direct passing or managers are better.
-        if (typeof window !== 'undefined') {
-            window['playerId'] = this.playerId;
-            window['playerName'] = this.playerName;
+    if (storedPlayerId) {
+        this.playerId = storedPlayerId;
+    } else {
+        this.playerId = `player_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+        cc.sys.localStorage.setItem('playerId', this.playerId);
+        cc.warn(`[Player] Generated new PlayerID: ${this.playerId} (was null in localStorage).`);
+    }
+
+    // Use the storedPlayerName if it's valid, otherwise use the default @property value
+    if (storedPlayerName && storedPlayerName.trim() !== "") {
+        this.playerName = storedPlayerName;
+    } else {
+        // this.playerName will already be its default value from @property (e.g., "Player")
+        // If no name was in localStorage, and we generated a new ID, let's save the default name too.
+        if (!storedPlayerId && this.playerName && this.playerName.trim() !== "") { // Only if new ID was generated
+             cc.sys.localStorage.setItem('playerName', this.playerName);
+             cc.log(`[Player] No playerName in localStorage with new ID, saved default property name: "${this.playerName}"`);
+        } else if (storedPlayerId && (!storedPlayerName || storedPlayerName.trim() === "")) {
+             cc.warn(`[Player] PlayerID "<span class="math-inline">\{this\.playerId\}" was found, but no valid playerName in localStorage\. Using default property name\: "</span>{this.playerName}". Consider re-saving a default if this is unexpected.`);
         }
     }
+
+    cc.log(`[Player] Final assigned - ID: "<span class="math-inline">\{this\.playerId\}", Name\: "</span>{this.playerName}"`);
+
+    if (typeof window !== 'undefined') { //
+        window['playerId'] = this.playerId; //
+        window['playerName'] = this.playerName; //
+    }
+}
 
     setupOnDisconnect() {
         if (typeof firebase === 'undefined' || !firebase.database) {
@@ -312,8 +306,8 @@ export default class Player extends cc.Component {
         if (this.isDead) return;
         const absScaleX = Math.abs(this.node.scaleX) || 1;
         switch (e.keyCode) {
-            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1; this.node.scaleX = -absScaleX; break;
-            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = absScaleX; break;
+            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1;this.node.scaleX = Math.abs(this.node.scaleX) * -1; break;
+            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = Math.abs(this.node.scaleX); break;
             case cc.macro.KEY.space: if (this.isOnGround) this.jump(); break;
             case cc.macro.KEY.e:
                 if (this.heldItem) this.dropItem();
@@ -329,22 +323,28 @@ export default class Player extends cc.Component {
 
     private updateCamera() {
          if (this.cameraNode) {
-            // Center camera on player - assuming camera is at the root of the scene or a direct child of it.
-            // Adjust if your camera setup is different (e.g. camera is child of a node that moves)
             this.cameraNode.x = this.node.x;
             this.cameraNode.y = this.node.y;
-            // Your original was: this.cameraNode.setPosition(this.node.x - cc.winSize.width / 2, this.node.y - cc.winSize.height / 2);
-            // This assumes the camera's anchor point is (0,0) and it moves to keep player at center of screen.
-            // If your camera node's anchor point is (0.5, 0.5), then this.cameraNode.setPosition(this.node.position) would be simpler.
-            // For now, I'll keep a simple follow.
         }
     }
 
     private updateAnim() {
-        const animName = this.isDead ? "Die" : this.isJumping ? "Jump" : this.dir.x !== 0 ? "Move" : "Default";
-        if (this.anim && (this.anim.currentClip?.name !== animName || !this.anim.getAnimationState(animName).isPlaying)) {
-            this.anim.play(animName);
+        const next = this.isDead ? "Die"
+                    : this.isJumping ? "Jump"
+                    : this.dir.x !== 0 ? "Move"
+                    : "Default";
+    
+        if (next === this.currentAnim) return;    // 別名一樣 → 什麼都不做
+    
+        const state = this.anim?.getAnimationState(next);
+        if (!state) {                             // clip 沒加進來
+            cc.warn(`[updateAnim] ❗ 找不到 clip "${next}"`);
+            return;
         }
+    
+        this.anim.play(next);
+        this.currentAnim = next;                  // 更新記錄
+        cc.log(`[updateAnim] ▶ play("${next}")`);
     }
 
     onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
@@ -417,6 +417,7 @@ export default class Player extends cc.Component {
         }
         if (col) { this.originalItemFriction = col.friction; col.friction = 100; col.apply(); }
         item.active = false;
+        if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
     }
 
     private dropItem() {
@@ -438,6 +439,7 @@ export default class Player extends cc.Component {
         if (rb && this.originalItemFixedRotation !== null) { rb.fixedRotation = this.originalItemFixedRotation; this.originalItemFixedRotation = null; }
         if (col && this.originalItemFriction !== null) { col.friction = this.originalItemFriction; col.apply(); this.originalItemFriction = null; }
         this.heldItem = null; this.nearestItem = null; this.originalWorldScale = null;
+        if (this.dropItemSound) cc.audioEngine.playEffect(this.dropItemSound, false);
     }
 
     // Your existing respawn/die logic

@@ -1,0 +1,49 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "dino_blue_move",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.6833333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 2,
+  "curveData": {
+    "comps": {
+      "cc.Sprite": {
+        "spriteFrame": [
+          {
+            "frame": 0,
+            "value": {
+              "__uuid__": "a45c96d0-cd6d-4d02-a31f-f14a975f29d7"
+            }
+          },
+          {
+            "frame": 0.16666666666666666,
+            "value": {
+              "__uuid__": "d83296e5-fcf7-4269-9105-addc2249b6bd"
+            }
+          },
+          {
+            "frame": 0.3333333333333333,
+            "value": {
+              "__uuid__": "b5058472-9694-4037-aea0-cf627f92f044"
+            }
+          },
+          {
+            "frame": 0.5,
+            "value": {
+              "__uuid__": "60d9c702-a471-4d57-b2ea-e8e2f605e914"
+            }
+          },
+          {
+            "frame": 0.6666666666666666,
+            "value": {
+              "__uuid__": "3f607e4c-15fd-4052-bb7e-debbb1eca056"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "events": []
+}
