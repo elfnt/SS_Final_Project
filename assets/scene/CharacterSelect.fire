@@ -502,7 +502,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "dino_green",
+    "_name": "mario_small_27",
     "_objFlags": 0,
     "_parent": {
       "__id__": 9
@@ -525,8 +525,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 15,
-      "height": 17
+      "width": 16,
+      "height": 16
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -578,7 +578,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "2072ecf7-282a-405e-8d99-54fb5027d580"
+      "__uuid__": "8c8644e0-6b44-47fd-8420-5011bec04a29"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -591,7 +591,9 @@
     "_fillStart": 0,
     "_fillRange": 0,
     "_isTrimmedMode": true,
-    "_atlas": null,
+    "_atlas": {
+      "__uuid__": "308cb1f3-c74f-42c8-8b88-9dda4f2b808b"
+    },
     "_id": "310R4Ar1ZI468S+/7JYY2y"
   },
   {
@@ -755,7 +757,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "dino_yellow",
+    "_name": "chick1",
     "_objFlags": 0,
     "_parent": {
       "__id__": 14
@@ -778,8 +780,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 15,
-      "height": 17
+      "width": 653,
+      "height": 770
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -790,16 +792,16 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -109.255,
-        68.574,
+        -111.139,
+        113.789,
         0,
         0,
         0,
         0,
         1,
-        4,
-        4,
-        4.358
+        0.2,
+        0.2,
+        0.23
       ]
     },
     "_eulerAngles": {
@@ -831,7 +833,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "8ddd8f9f-8848-4a07-96bb-a01dff5709fc"
+      "__uuid__": "56d38144-87e2-4da4-94cd-98b700c18009"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1008,7 +1010,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "dino_blue",
+    "_name": "chick2",
     "_objFlags": 0,
     "_parent": {
       "__id__": 19
@@ -1031,8 +1033,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 16,
-      "height": 17
+      "width": 816,
+      "height": 882
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1043,15 +1045,15 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        101.15,
-        65.544,
+        91.73,
+        116.411,
         0,
         0,
         0,
         0,
         1,
-        4,
-        4,
+        0.18,
+        0.18,
         0.2
       ]
     },
@@ -1084,7 +1086,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "7a3c7406-d2f6-481c-9637-824a55a3b284"
+      "__uuid__": "080d2735-aad5-4fb2-b2bb-3b5d1ff9c4a5"
     },
     "_type": 0,
     "_sizeMode": 1,
@@ -1261,7 +1263,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "dino_red",
+    "_name": "chick3",
     "_objFlags": 0,
     "_parent": {
       "__id__": 24
@@ -1284,8 +1286,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 15,
-      "height": 17
+      "width": 728,
+      "height": 858
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1296,15 +1298,15 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        312.822,
-        62.988,
+        301.518,
+        113.855,
         0,
         0,
         0,
         0,
         1,
-        4,
-        4,
+        0.18,
+        0.18,
         0.2
       ]
     },
@@ -1337,7 +1339,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "eab5af5a-4543-426a-b18c-52b6fdd353c3"
+      "__uuid__": "5995afff-9e04-4b20-b959-498374532a1e"
     },
     "_type": 0,
     "_sizeMode": 1,
