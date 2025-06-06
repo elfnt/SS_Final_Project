@@ -96,13 +96,31 @@ export default class EndScene extends cc.Component {
         this.playersContainer.parent.setContentSize(this.playersContainer.parent.getContentSize());
     }
     
-    private getPlayersDataFromCache() {
-        try {
-            return JSON.parse(cc.sys.localStorage.getItem('lastActivePlayers')) || this.getTestData();
-        } catch(e) {
-            return this.getTestData();
+private getPlayersDataFromCache() {
+    try {
+        // Get saved player list
+        const cachedPlayers = JSON.parse(cc.sys.localStorage.getItem('lastActivePlayers')) || [];
+        
+        // Get local player information
+        const localPlayerId = cc.sys.localStorage.getItem('playerId');
+        const localPlayerName = cc.sys.localStorage.getItem('playerName') || "You";
+        
+        // Check if local player is already included
+        const localPlayerIncluded = cachedPlayers.some(p => p.id === localPlayerId);
+        
+        // Add local player if not already in the list
+        if (localPlayerId && !localPlayerIncluded) {
+            cachedPlayers.push({
+                id: localPlayerId,
+                name: localPlayerName
+            });
         }
+        
+        return cachedPlayers.length > 0 ? cachedPlayers : this.getTestData();
+    } catch(e) {
+        return this.getTestData();
     }
+}
 
     private getTestData() {
         return [
