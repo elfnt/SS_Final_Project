@@ -41,7 +41,7 @@ export default class EndScene extends cc.Component {
         // Setup continue button
         this.continueButton.node.on('click', () => {
             cc.sys.localStorage.removeItem('voteData');
-            cc.director.loadScene("Lobby");
+            cc.director.loadScene("MainMenu");
         });
     }
     
