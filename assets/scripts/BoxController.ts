@@ -40,6 +40,10 @@ export default class BoxLogicController extends cc.Component {
         const firebase = FirebaseManager.getInstance();
         const localId = cc.sys.localStorage.getItem("playerId");
 
+        // ✅ 強制清除殘留的 respawn 鎖
+        firebase.database.ref(`boxes/${this.boxId}/isRespawn`).set(false);
+
+        // ✅ 設定初始 controller（若還沒有）
         firebase.database.ref(`boxes/${this.boxId}/controllerId`).once("value", snapshot => {
             if (!snapshot.exists()) {
                 firebase.database.ref(`boxes/${this.boxId}`).update({
@@ -52,6 +56,7 @@ export default class BoxLogicController extends cc.Component {
         this.listenToFirebase();
         this.uploadInitialPosition();
     }
+
 
     start() {
         this.schedule(() => {
