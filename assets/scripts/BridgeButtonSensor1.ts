@@ -17,42 +17,71 @@ export default class BridgeButtonSensor1 extends cc.Component {
     private itemCount: number = 0;
     private remotePlayerCount: number = 0;
 
-    private firebase = null;
-    private isControlling = false;
-    private hasUploadedInitialInfo = false;
+    private maxRetry = 10;
+    private retryInterval = 0.5;
 
     onLoad() {
-        this.firebase = FirebaseManager.getInstance();
-        if (!this.firebase?.database) return;
+        this.forceResetBoxTriggered(() => this.initWithRetry(0));
+    }
 
-        const localId = cc.sys.localStorage.getItem("playerId");
+    private forceResetBoxTriggered(callback: () => void) {
+        const firebase = FirebaseManager.getInstance();
+        if (!firebase?.database) {
+            cc.error(`[Sensor] ❌ 無法重設 boxTriggered，Firebase 尚未就緒`);
+            return;
+        }
 
-        // ✅ 初始化 sensor 的 position 與 size
-        this.uploadSensorInitialInfo();
+        const path = `boxes/${this.boxId}/boxTriggered`;
+        firebase.database.ref(path).set(false)
+            .then(() => {
+                cc.log(`[Sensor] 🧹 強制初始化 boxTriggered=false`);
+                callback();
+            })
+            .catch(err => cc.error(`[Sensor] ❌ 強制初始化失敗`, err));
+    }
 
-        // ✅ 嘗試成為 controller
-        this.firebase.database.ref(`sensors/${this.sensorId}/controllerId`).once("value", (snap) => {
-            const val = snap.val();
-            if (!val) {
-                this.firebase.database.ref(`sensors/${this.sensorId}`).update({ controllerId: localId });
-                this.isControlling = true;
-            } else if (val === localId) {
-                this.isControlling = true;
+    private initWithRetry(attempt: number) {
+        const firebase = FirebaseManager.getInstance();
+        if (!firebase || !firebase.database) {
+            if (attempt >= this.maxRetry) {
+                cc.error(`[Sensor] ❌ Firebase 初始化失敗：超過重試次數 ${this.maxRetry}`);
+                return;
+            }
+
+            cc.warn(`[Sensor] ⏳ Firebase 尚未就緒，延遲再試... (${attempt + 1})`);
+            this.scheduleOnce(() => this.initWithRetry(attempt + 1), this.retryInterval);
+            return;
+        }
+
+        this.init(firebase);
+    }
+
+    private init(firebase: FirebaseManager) {
+        cc.log(`[Sensor] ✅ Firebase 就緒，初始化感應器，boxId="${this.boxId}"`);
+
+        const path = `boxes/${this.boxId}/boxTriggered`;
+
+        // ✅ 監聽 boxTriggered 狀態同步
+        firebase.database.ref(path).on("value", (snapshot) => {
+            const val = snapshot.val();
+            if (typeof val === "boolean") {
+                this.boxTriggered = val;
+                cc.log(`[Sensor] 🟡 boxTriggered（來自 Firebase）= ${val}`);
+                if (val) this.tryStartBridge();
+                else this.tryStopBridge();
             }
         });
 
-        // ✅ 監聽 sensor 狀態變化（所有人）
-        this.firebase.database.ref(`sensors/${this.sensorId}/triggered`).on("value", (snap) => {
-            const val = snap.val();
-            if (val === true) {
-                this.tryStartBridge();
-            } else {
-                this.tryStopBridge();
-            }
+        // ✅ 監聽 box 位置
+        const posPath = `boxes/${this.boxId}/position`;
+        firebase.database.ref(posPath).on("value", (snapshot) => {
+            const pos = snapshot.val();
+            if (!pos) return;
+            this.checkOverlapWithSensor(cc.v2(pos.x, pos.y));
         });
 
-        // ✅ 監聽玩家位置（所有人）
-        this.firebase.database.ref("players").on("value", (snapshot) => {
+        // ✅ 監聽玩家位置
+        firebase.database.ref("players").on("value", (snapshot) => {
             const players = snapshot.val();
             let count = 0;
             const sensorPos = this.node.convertToWorldSpaceAR(cc.v2());
@@ -78,70 +107,96 @@ export default class BridgeButtonSensor1 extends cc.Component {
         this.schedule(this.checkBoxOverlap.bind(this), 0.1);
     }
 
-    private uploadSensorInitialInfo() {
-        if (this.hasUploadedInitialInfo) return;
-        const pos = this.node.convertToWorldSpaceAR(cc.v2());
+    private checkOverlapWithSensor(pos: cc.Vec2) {
+        const sensorPos = this.node.getPosition();
         const size = this.node.getContentSize();
 
-        this.firebase.database.ref(`sensors/${this.sensorId}/info`).set({
-            x: Math.round(pos.x),
-            y: Math.round(pos.y),
-            width: Math.round(size.width * this.node.scaleX),
-            height: Math.round(size.height * this.node.scaleY)
-        });
+        const dx = Math.abs(pos.x - sensorPos.x);
+        const dy = Math.abs(pos.y - sensorPos.y);
+        const inRange = dx <= size.width / 2 && dy <= size.height / 2;
 
-        this.hasUploadedInitialInfo = true;
-    }
+        cc.log(`[Sensor] 🔍 檢查範圍：inRange=${inRange}, boxTriggered=${this.boxTriggered}`);
 
-    private checkBoxOverlap() {
-        if (!this.isControlling) return;
+        const firebase = FirebaseManager.getInstance();
+        if (!firebase?.database) return;
 
-        const boxRef = this.firebase.database.ref(`boxes/${this.boxId}/position`);
-        boxRef.once("value", (snap) => {
-            const pos = snap.val();
-            if (!pos) return;
-
-            const sensorPos = this.node.convertToWorldSpaceAR(cc.v2());
-            const size = this.node.getContentSize();
-            const halfWidth = size.width / 2 * this.node.scaleX;
-            const halfHeight = size.height / 2 * this.node.scaleY;
-
-            const dx = Math.abs(pos.x - sensorPos.x);
-            const dy = Math.abs(pos.y - sensorPos.y);
-            const inRange = dx <= halfWidth && dy <= halfHeight;
-
-            // ✅ 只在狀態變化時才更新 Firebase
-            this.firebase.database.ref(`sensors/${this.sensorId}/triggered`).once("value", (triggerSnap) => {
-                const wasTriggered = triggerSnap.val();
-                if (wasTriggered !== inRange) {
-                    this.firebase.database.ref(`sensors/${this.sensorId}`).update({ triggered: inRange });
-                    cc.log(`[BridgeSensor] ✅ updated sensor ${this.sensorId} triggered=${inRange}`);
-                }
-            });
-        });
+        const path = `boxes/${this.boxId}/boxTriggered`;
+        if (inRange && !this.boxTriggered) {
+            cc.log(`[Sensor] ✅ box 進入感應 → 寫入 ${path} = true`);
+            firebase.database.ref(path).set(true);
+        }
     }
 
     onBeginContact(contact, selfCollider, otherCollider) {
-        if (otherCollider.node.name === "Player") {
+        const nodeName = otherCollider.node.name;
+        const nodeGroup = otherCollider.node.group;
+        cc.log(`[Sensor] 💥 接觸：name=${nodeName}, group=${nodeGroup}`);
+
+        const firebase = FirebaseManager.getInstance();
+        const path = `boxes/${this.boxId}/boxTriggered`;
+
+        if (nodeName === this.boxId) {
+            firebase.database.ref(path).set(true)
+                .then(() => cc.log(`[Sensor] 📦 接觸 box 寫入 boxTriggered=true`));
+            this.boxTriggered = true;
+        }
+
+        if (nodeName === "Player") {
             this.playerCount++;
-        } else if (otherCollider.node.group === "Item") {
+        } else if (nodeGroup === "Item") {
             this.itemCount++;
         }
+
+        this.tryStartBridge();
     }
 
     onEndContact(contact, selfCollider, otherCollider) {
-        if (otherCollider.node.name === "Player") {
+        const nodeName = otherCollider.node.name;
+        const nodeGroup = otherCollider.node.group;
+
+        if (nodeName === "Player") {
             this.playerCount = Math.max(0, this.playerCount - 1);
-        } else if (otherCollider.node.group === "Item") {
+        } else if (nodeGroup === "Item") {
             this.itemCount = Math.max(0, this.itemCount - 1);
+        }
+
+        if (nodeName === this.boxId) {
+            // ✅ 當 box 離開感應區 → 將 boxTriggered 設為 false
+            const firebase = FirebaseManager.getInstance();
+            const path = `boxes/${this.boxId}/boxTriggered`;
+
+            firebase.database.ref(path).set(false)
+                .then(() => cc.log(`[Sensor] 📦 離開 box → boxTriggered=false`))
+                .catch(err => cc.error(`[Sensor] ❌ 無法清除 boxTriggered`, err));
+
+            this.boxTriggered = false;
+        }
+
+        this.tryStopBridge();
+    }
+
+
+    private tryStartBridge() {
+        if (
+            this.playerCount > 0 ||
+            this.remotePlayerCount > 0 ||
+            this.itemCount > 0 ||
+            this.boxTriggered
+        ) {
+            cc.log(`[Bridge] ✅ 啟動橋梁`);
+            this.bridge.getComponent("BridgeMoveController")?.startOscillation();
         }
     }
 
-    private tryStartBridge() {
-        this.bridge.getComponent("BridgeMoveController")?.startOscillation();
-    }
-
     private tryStopBridge() {
-        this.bridge.getComponent("BridgeMoveController")?.stopOscillation();
+        if (
+            this.playerCount === 0 &&
+            this.remotePlayerCount === 0 &&
+            this.itemCount === 0 &&
+            !this.boxTriggered
+        ) {
+            cc.log(`[Bridge] ⛔ 停止橋梁`);
+            this.bridge.getComponent("BridgeMoveController")?.stopOscillation();
+        }
     }
 }

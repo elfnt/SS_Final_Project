@@ -38,7 +38,24 @@ export default class GameManager extends cc.Component {
 
         this.currentTime = this.totalTime;
         this.updateTimerLabel();
+        this.resetAllItemsToInitial();
     }
+
+    resetAllItemsToInitial() {
+        // 假設你的所有道具都放在一個父節點 ItemsRoot 下
+        const itemsRoot = cc.find("Items");
+        if (!itemsRoot) {
+            cc.warn("找不到 ItemsRoot 節點！");
+            return;
+        }
+        itemsRoot.children.forEach(node => {
+            const ctrl = node.getComponent("ItemController") as any;
+            if (ctrl && typeof ctrl.resetToInitial === "function") {
+                ctrl.resetToInitial();
+            }
+        });
+    }
+    
 
     update(dt: number) {
         if (!this.isGameRunning || this.isGamePaused) return;

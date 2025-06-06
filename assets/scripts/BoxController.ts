@@ -54,10 +54,10 @@ export default class BoxLogicController extends cc.Component {
                 }).then(() => {
                     this.controllerId = localId;
                     this.isControlling = true;
-                    cc.log(`[BoxLogic] ✅ 初始化 controllerId=${localId}（自動接管 ${this.boxId}）`);
+                    //cc.log(`[BoxLogic] ✅ 初始化 controllerId=${localId}（自動接管 ${this.boxId}）`);
                 });
             } else {
-                cc.log(`[BoxLogic] ℹ️ 現有 controllerId=${remote}，我不是控制者`);
+                //cc.log(`[BoxLogic] ℹ️ 現有 controllerId=${remote}，我不是控制者`);
             }
         });
 
@@ -70,10 +70,10 @@ export default class BoxLogicController extends cc.Component {
         this.schedule(() => {
             //cc.log(`[BoxLogic] 定時器觸發，isControlling=${this.isControlling}, isRespawning=${this.isRespawning}`);
             if (!this.isRespawning && this.isControlling) {
-                cc.log(`[BoxLogic] ✅ 上傳位置中（我為控制者）`);
+                //cc.log(`[BoxLogic] ✅ 上傳位置中（我為控制者）`);
                 this.tryUploadPosition();
             } else {
-                cc.log(`[BoxLogic] ⛔ 不上傳，isControlling=${this.isControlling}, isRespawning=${this.isRespawning}`);
+                //cc.log(`[BoxLogic] ⛔ 不上傳，isControlling=${this.isControlling}, isRespawning=${this.isRespawning}`);
             }
         }, 0.05);
     }
@@ -117,7 +117,7 @@ export default class BoxLogicController extends cc.Component {
             if (current === localId && isNewToucher && controllerStillTouching) {
                 this.isControlling = true;
                 this.controllerId = localId;
-                cc.log(`[BoxLogic] ✅ 我是控制者並正在接觸 → 啟用 isControlling`);
+                //cc.log(`[BoxLogic] ✅ 我是控制者並正在接觸 → 啟用 isControlling`);
                 return;
             }
 
@@ -129,7 +129,7 @@ export default class BoxLogicController extends cc.Component {
                     }).then(() => {
                         this.controllerId = id;
                         this.isControlling = true;
-                        cc.log(`[BoxLogic] ✅ ${id} 成為控制者（原控制者離開）`);
+                        //cc.log(`[BoxLogic] ✅ ${id} 成為控制者（原控制者離開）`);
                     });
                 }
             } else {
@@ -155,7 +155,7 @@ export default class BoxLogicController extends cc.Component {
         const yChanged = !this.lastSentPos || Math.abs(pos.y - this.lastSentPos.y) > 0.5;
         const rotChanged = this.lastSentRot === null || Math.abs(angle - this.lastSentRot) > 1;
 
-        if (xChanged || yChanged || rotChanged || shouldForceUpload) {
+        if (xChanged || yChanged || rotChanged) {
             this.lastSentPos = pos.clone();
             this.lastSentRot = angle;
             this.hasUploadedInitially = true;
@@ -166,9 +166,9 @@ export default class BoxLogicController extends cc.Component {
                 y: Math.round(pos.y),
                 rotation: Math.round(angle)
             }).then(() => {
-                cc.log(`[BoxLogic] ✅ 上傳位置：(${pos.x}, ${pos.y}, rot=${angle})`);
+                //cc.log(`[BoxLogic] ✅ 上傳位置：(${pos.x}, ${pos.y}, rot=${angle})`);
             }).catch((err) => {
-                cc.error(`[BoxLogic] ❌ 上傳失敗：`, err);
+                //cc.error(`[BoxLogic] ❌ 上傳失敗：`, err);
             });
         }
     }

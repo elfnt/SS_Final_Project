@@ -6538,7 +6538,7 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 5,
+    "_density": 20,
     "_sensor": false,
     "_friction": 0.5,
     "_restitution": 0,
