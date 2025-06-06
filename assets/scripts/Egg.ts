@@ -1,25 +1,10 @@
 import FirebaseManager from "./FirebaseManager";
 const { ccclass, property } = cc._decorator;
 
-// --- 線性插值輔助 ---
-function lerp(a: number, b: number, t: number): number {
-    return a + (b - a) * t;
-}
-function lerpVec2(a: cc.Vec2, b: cc.Vec2, t: number): cc.Vec2 {
-    return cc.v2(lerp(a.x, b.x, t), lerp(a.y, b.y, t));
-}
-function lerpAngle(a: number, b: number, t: number): number {
-    // 處理跨 0~360 的插值
-    let diff = b - a;
-    while (diff > 180) diff -= 360;
-    while (diff < -180) diff += 360;
-    return a + diff * t;
-}
-
 @ccclass
 export default class Egg extends cc.Component {
     @property({ tooltip: "Firebase 上的蛋 ID" })
-    eggId: string = "egg1"; // 每顆蛋唯一
+    eggId: string = "egg1";
 
     @property moveSpeed = 5;
     @property jumpForce = 10;
@@ -46,14 +31,6 @@ export default class Egg extends cc.Component {
     private lastSyncedRot: number = 0;
     private lastSyncedLife: number = 0;
 
-    // --- 平滑插值的目標值 ---
-    private targetPos: cc.Vec2 = null;
-    private targetRot: number = 0;
-    private targetLife: number = 100;
-
-    // --- 插值參數 ---
-    private lerpFactor = 0.35; // 插值比例，越大越快跟上遠端，建議0.2~0.5
-
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite) || this.node.getComponentInChildren(cc.Sprite);
         if (this.sprite && this.normalSprite) this.sprite.spriteFrame = this.normalSprite;
@@ -63,12 +40,9 @@ export default class Egg extends cc.Component {
         this.currentLife = this.maxLife;
         this.lastY = this.node.y;
 
-        this.targetPos = this.node.getPosition().clone();
-        this.targetRot = this.node.angle;
-        this.targetLife = this.currentLife;
-
         this.initEggInFirebase();
         this.listenToFirebase();
+
         cc.log(`[Egg][${this.eggId}] onLoad called!`);
     }
 
@@ -96,7 +70,6 @@ export default class Egg extends cc.Component {
         }
     }
 
-    // 落地與受傷邏輯（保持你原本的寫法）
     onBeginContact(contact, selfCollider, otherCollider) {
         const other = otherCollider.node;
         const name = other.name.toLowerCase();
@@ -169,25 +142,6 @@ export default class Egg extends cc.Component {
             }
             this.timeSinceLastSync = 0;
         }
-
-        // ----------- **平滑插值顯示** -----------
-        // 插值 position
-        if (this.targetPos) {
-            let cur = this.node.getPosition();
-            let lerped = lerpVec2(cur, this.targetPos, this.lerpFactor);
-            this.node.setPosition(lerped);
-        }
-        // 插值 rotation
-        if (typeof this.targetRot === "number") {
-            let curA = this.node.angle;
-            let lerpedA = lerpAngle(curA, this.targetRot, this.lerpFactor);
-            this.node.angle = lerpedA;
-        }
-        // 生命值可以直接跳變（不影響體感）
-        if (typeof this.targetLife === "number" && this.currentLife !== this.targetLife) {
-            this.currentLife = this.targetLife;
-            this.updateEggAppearance();
-        }
     }
 
     private initEggInFirebase() {
@@ -205,24 +159,18 @@ export default class Egg extends cc.Component {
         });
     }
 
+    // 🚩🚩🚩 這才是所有人都同步的方式，會自動監聽變化
     private listenToFirebase() {
         const db = FirebaseManager.getInstance()?.database;
-        cc.log(`[Egg][${this.eggId}] listenToFirebase 被呼叫！`);
         if (!db) return;
         db.ref(`eggs/${this.eggId}`).on("value", (snap) => {
             const data = snap.val();
-            cc.log(`[Egg][${this.eggId}] [監聽] Firebase 狀態：`, data);
             if (!data) return;
-
-            // 更新「目標狀態」（update 裡插值用）
-            if (data.position) {
-                this.targetPos = cc.v2(data.position.x, data.position.y);
-            }
-            if (typeof data.rotation === "number") {
-                this.targetRot = data.rotation;
-            }
-            if (typeof data.life === "number") {
-                this.targetLife = data.life;
+            if (data.position) this.node.setPosition(data.position.x, data.position.y);
+            if (typeof data.rotation === "number") this.node.angle = data.rotation;
+            if (typeof data.life === "number" && this.currentLife !== data.life) {
+                this.currentLife = data.life;
+                this.updateEggAppearance();
             }
         });
     }
@@ -231,11 +179,6 @@ export default class Egg extends cc.Component {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
         db.ref(`eggs/${this.eggId}`).update({
-            life: this.currentLife,
-            position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
-            rotation: Math.round(this.node.angle)
-        });
-        cc.log(`[Egg][${this.eggId}] [寫入] Firebase:`, {
             life: this.currentLife,
             position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
             rotation: Math.round(this.node.angle)
@@ -280,10 +223,5 @@ export default class Egg extends cc.Component {
             collider.enabled = true;
             collider.apply();
         }
-
-        // respawn 也立刻套用到「插值目標」
-        this.targetPos = this.node.getPosition().clone();
-        this.targetRot = this.node.angle;
-        this.targetLife = this.currentLife;
     }
 }
