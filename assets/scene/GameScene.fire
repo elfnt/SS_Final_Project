@@ -10441,9 +10441,9 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 1,
+    "_density": 30,
     "_sensor": false,
-    "_friction": 1000,
+    "_friction": 50000,
     "_restitution": 0,
     "body": null,
     "_offset": {
