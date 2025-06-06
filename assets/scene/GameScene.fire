@@ -883,8 +883,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -7170.304,
-        274.287,
+        -5608.492,
+        -174.588,
         0,
         0,
         0,
@@ -6215,6 +6215,7 @@
       "__id__": 136
     },
     "boxId": "box3",
+    "sensorId": "sensor1",
     "_id": "f9FMys1dZIWr4cv1IMgt9T"
   },
   {
@@ -6521,7 +6522,7 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 1,
+    "_density": 5,
     "_sensor": false,
     "_friction": 0.5,
     "_restitution": 0,

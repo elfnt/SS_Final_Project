@@ -19,6 +19,7 @@ export default class BridgeButtonSensor1 extends cc.Component {
 
     private firebase = null;
     private isControlling = false;
+    private hasUploadedInitialInfo = false;
 
     onLoad() {
         this.firebase = FirebaseManager.getInstance();
@@ -26,7 +27,10 @@ export default class BridgeButtonSensor1 extends cc.Component {
 
         const localId = cc.sys.localStorage.getItem("playerId");
 
-        // 取得控制權
+        // ✅ 初始化 sensor 的 position 與 size
+        this.uploadSensorInitialInfo();
+
+        // ✅ 嘗試成為 controller
         this.firebase.database.ref(`sensors/${this.sensorId}/controllerId`).once("value", (snap) => {
             const val = snap.val();
             if (!val) {
@@ -37,7 +41,7 @@ export default class BridgeButtonSensor1 extends cc.Component {
             }
         });
 
-        // ✅ 監聽 sensor 狀態
+        // ✅ 監聽 sensor 狀態變化（所有人）
         this.firebase.database.ref(`sensors/${this.sensorId}/triggered`).on("value", (snap) => {
             const val = snap.val();
             if (val === true) {
@@ -47,7 +51,7 @@ export default class BridgeButtonSensor1 extends cc.Component {
             }
         });
 
-        // ✅ 監聽玩家位置（群體）
+        // ✅ 監聽玩家位置（所有人）
         this.firebase.database.ref("players").on("value", (snapshot) => {
             const players = snapshot.val();
             let count = 0;
@@ -70,9 +74,26 @@ export default class BridgeButtonSensor1 extends cc.Component {
 
             this.remotePlayerCount = count;
         });
+
+        this.schedule(this.checkBoxOverlap.bind(this), 0.1);
     }
 
-    update() {
+    private uploadSensorInitialInfo() {
+        if (this.hasUploadedInitialInfo) return;
+        const pos = this.node.convertToWorldSpaceAR(cc.v2());
+        const size = this.node.getContentSize();
+
+        this.firebase.database.ref(`sensors/${this.sensorId}/info`).set({
+            x: Math.round(pos.x),
+            y: Math.round(pos.y),
+            width: Math.round(size.width * this.node.scaleX),
+            height: Math.round(size.height * this.node.scaleY)
+        });
+
+        this.hasUploadedInitialInfo = true;
+    }
+
+    private checkBoxOverlap() {
         if (!this.isControlling) return;
 
         const boxRef = this.firebase.database.ref(`boxes/${this.boxId}/position`);
@@ -87,9 +108,16 @@ export default class BridgeButtonSensor1 extends cc.Component {
 
             const dx = Math.abs(pos.x - sensorPos.x);
             const dy = Math.abs(pos.y - sensorPos.y);
-
             const inRange = dx <= halfWidth && dy <= halfHeight;
-            this.firebase.database.ref(`sensors/${this.sensorId}`).update({ triggered: inRange });
+
+            // ✅ 只在狀態變化時才更新 Firebase
+            this.firebase.database.ref(`sensors/${this.sensorId}/triggered`).once("value", (triggerSnap) => {
+                const wasTriggered = triggerSnap.val();
+                if (wasTriggered !== inRange) {
+                    this.firebase.database.ref(`sensors/${this.sensorId}`).update({ triggered: inRange });
+                    cc.log(`[BridgeSensor] ✅ updated sensor ${this.sensorId} triggered=${inRange}`);
+                }
+            });
         });
     }
 

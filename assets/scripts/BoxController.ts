@@ -32,6 +32,7 @@ export default class BoxLogicController extends cc.Component {
 
     private lastSentPos: cc.Vec2 = null;
     private lastSentRot: number = null;
+    private hasUploadedInitially = false;
 
     onLoad() {
         this.rb = this.getComponent(cc.RigidBody);
@@ -40,16 +41,12 @@ export default class BoxLogicController extends cc.Component {
         const firebase = FirebaseManager.getInstance();
         const localId = cc.sys.localStorage.getItem("playerId");
 
-        // ✅ 強制清除殘留的 respawn 鎖
         firebase.database.ref(`boxes/${this.boxId}/isRespawn`).set(false);
 
-        // ✅ 設定初始 controller（若還沒有）
         firebase.database.ref(`boxes/${this.boxId}/controllerId`).once("value", snapshot => {
             if (!snapshot.exists()) {
-                firebase.database.ref(`boxes/${this.boxId}`).update({
-                    controllerId: localId
-                });
-                cc.log(`[BoxLogic] 初始控制者設為 ${localId}`);
+                firebase.database.ref(`boxes/${this.boxId}`).update({ controllerId: localId });
+                //cc.log(`[BoxLogic] 初始控制者設為 ${localId}`);
             }
         });
 
@@ -57,9 +54,9 @@ export default class BoxLogicController extends cc.Component {
         this.uploadInitialPosition();
     }
 
-
     start() {
         this.schedule(() => {
+            //cc.log(`[BoxLogic] 定時器觸發，isControlling=${this.isControlling}, isRespawning=${this.isRespawning}`);
             if (!this.isRespawning && this.isControlling) {
                 this.tryUploadPosition();
             }
@@ -97,20 +94,25 @@ export default class BoxLogicController extends cc.Component {
 
         firebase.database.ref(`boxes/${this.boxId}/controllerId`).once("value", snapshot => {
             const current = snapshot.val();
-
-            const controllerStillTouching = current && this.touchingPlayerIds.has(current);
             const isNewToucher = this.touchingPlayerIds.has(id);
+            const controllerStillTouching = current && this.touchingPlayerIds.has(current);
 
-            // ✅ 只有「controller 不在碰」且「新玩家碰到了」才換控制權
-            if (!controllerStillTouching && isNewToucher) {
-                if (id === localId) {
-                    this.isControlling = true;
-                    this.controllerId = id;
-                    firebase.database.ref(`boxes/${this.boxId}`).update({
-                        controllerId: id
-                    });
-                    cc.log(`[BoxLogic] 🎮 ${id} 成為新的控制者（原控制者已離開）`);
-                }
+            if (current === localId) {
+                // ✅ 我本來就是控制者，不需要再接管
+                this.isControlling = true;
+                this.controllerId = current;
+                //cc.log(`[BoxLogic] 🎮 ${id} 已是控制者`);
+                return;
+            }
+
+            if (!controllerStillTouching && isNewToucher && id === localId) {
+                // ✅ 原控制者離開，且我碰到了，且我是 local player
+                this.isControlling = true;
+                this.controllerId = id;
+                firebase.database.ref(`boxes/${this.boxId}`).update({
+                    controllerId: id
+                });
+                cc.log(`[BoxLogic] 🎮 ${id} 成為新的控制者（原控制者已離開）`);
             } else {
                 cc.log(`[BoxLogic] ${id} 嘗試接管但 ${current} 仍為控制者或條件不符`);
             }
@@ -118,19 +120,28 @@ export default class BoxLogicController extends cc.Component {
     }
 
 
-   private tryUploadPosition() {
+    private tryUploadPosition() {
+        //cc.log(`[BoxLogic] 🔁 tryUploadPosition() 被呼叫`);
+
         const pos = this.node.getPosition();
         const angle = this.node.angle;
+
+        if (this.node.name === "button_orange") {
+            //cc.log("pos.x =", pos.x);
+            //cc.log("this.lastSentPos?.x =", this.lastSentPos?.x);
+        }
 
         const xChanged = !this.lastSentPos || Math.abs(pos.x - this.lastSentPos.x) > 0.5;
         const yChanged = !this.lastSentPos || Math.abs(pos.y - this.lastSentPos.y) > 0.5;
         const rotChanged = this.lastSentRot === null || Math.abs(angle - this.lastSentRot) > 1;
+        const shouldForceUpload = !this.hasUploadedInitially;
 
-        cc.log(`[BoxLogic] 📤 嘗試上傳 position，xChanged=${xChanged}, yChanged=${yChanged}, rotChanged=${rotChanged}`);
+        //cc.log(`[BoxLogic] 📤 嘗試上傳 position › xChanged=${xChanged}, yChanged=${yChanged}, rotChanged=${rotChanged}`);
 
-        if (xChanged || yChanged || rotChanged) {
+        if (xChanged || yChanged || rotChanged || shouldForceUpload) {
             this.lastSentPos = pos.clone();
             this.lastSentRot = angle;
+            this.hasUploadedInitially = true;
 
             const firebase = FirebaseManager.getInstance();
             firebase.database.ref(`boxes/${this.boxId}/position`).set({
@@ -138,13 +149,12 @@ export default class BoxLogicController extends cc.Component {
                 y: Math.round(pos.y),
                 rotation: Math.round(angle)
             }).then(() => {
-                cc.log(`[BoxLogic] ✅ 成功上傳位置：(${pos.x}, ${pos.y}, rot=${angle})`);
+                //cc.log(`[BoxLogic] ✅ 成功上傳位置：(${pos.x}, ${pos.y}, rot=${angle})`);
             }).catch((err) => {
                 cc.error(`[BoxLogic] ❌ 上傳 Firebase 失敗：`, err);
             });
         }
     }
-
 
     private listenToFirebase() {
         const firebase = FirebaseManager.getInstance();
@@ -159,11 +169,10 @@ export default class BoxLogicController extends cc.Component {
             this.controllerId = remoteController;
             this.isControlling = (remoteController === localId);
 
-            cc.log(`[BoxLogic] 🔍 localId=${localId}, controllerId=${remoteController}, isControlling=${this.isControlling}`);
+            //cc.log(`[BoxLogic] 🔍 localId=${localId}, controllerId=${remoteController}, isControlling=${this.isControlling}`);
 
             this.isRespawning = !!data.isRespawn;
 
-            // 如果不是控制者才同步位置
             const pos = data.position;
             if (!this.isControlling && pos && !this.isRespawning) {
                 if (this.rb && this.rb.enabled) this.rb.enabled = false;
@@ -177,7 +186,7 @@ export default class BoxLogicController extends cc.Component {
                         this.rb.awake = true;
                     }
                 }, 0.01);
-                cc.log(`[BoxLogic] ⬇️ 非控制者同步位置至 ${pos.x}, ${pos.y}, rot=${pos.rotation}`);
+                //cc.log(`[BoxLogic] ⬇️ 非控制者同步位置至 ${pos.x}, ${pos.y}, rot=${pos.rotation}`);
             }
         });
     }
@@ -206,11 +215,11 @@ export default class BoxLogicController extends cc.Component {
                 rotation: Math.round(this.angleISet)
             }
         }).then(() => {
-            cc.log(`[BoxLogic] isRespawn = true`);
+            //cc.log(`[BoxLogic] isRespawn = true`);
             setTimeout(() => {
                 ref.update({ isRespawn: false });
                 this.isRespawning = false;
-                cc.log(`[BoxLogic] isRespawn = false`);
+                //cc.log(`[BoxLogic] isRespawn = false`);
             }, this.respawnLockSeconds * 1000);
         });
     }
