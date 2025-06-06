@@ -14,71 +14,61 @@ export default class EndScene extends cc.Component {
     @property(cc.Button)
     continueButton: cc.Button = null;
 
-    private players: {id: string, name: string, isImposter: boolean}[] = [];
-    private voteCounts: {[key: string]: number} = {};
-    private crewWins: boolean = false;
-    
     onLoad() {
-        // Retrieve vote data from local storage
+        // Retrieve vote data passed from the previous scene
         const voteDataStr = cc.sys.localStorage.getItem('voteData');
         if (!voteDataStr) {
-            this.resultLabel.string = "No vote data found!";
+            this.resultLabel.string = "Error: No data found!";
+            // Fallback for testing
+            this.displayResults({
+                voteCounts: {},
+                imposterId: 'none',
+                crewWins: true
+            });
             return;
         }
         
         const voteData = JSON.parse(voteDataStr);
         this.displayResults(voteData);
         
-        // Setup continue button
         this.continueButton.node.on('click', () => {
-            cc.director.loadScene("MainMenu");
+            // Clear the data so it's not reused
+            cc.sys.localStorage.removeItem('voteData');
+            cc.director.loadScene("Lobby"); // Or your main menu scene
         });
     }
     
     private displayResults(voteData: any) {
         const { voteCounts, imposterId, crewWins } = voteData;
-        this.voteCounts = voteCounts;
-        this.crewWins = crewWins;
         
-        // Update the result label
-        this.resultLabel.string = crewWins ? 
-            "Crew Wins! All players correctly identified the imposter!" : 
-            "Imposter Wins! Not everyone voted correctly!";
+        this.resultLabel.string = crewWins ? "PLAYERS WIN" : "IMPOSTER WINS";
         
-        // Get players
-        this.players = this.getPlayersData();
-        this.players.forEach(p => p.isImposter = (p.id === imposterId));
+        // Get player data, falling back to test data if needed
+        const players = this.getPlayersDataFromCache();
         
-        // Create player avatars with vote counts
-        this.players.forEach((player, index) => {
+        // Create an avatar for each player
+        players.forEach((player, index) => {
             const playerNode = cc.instantiate(this.playerPrefab);
             this.playersContainer.addChild(playerNode);
             
-            // Position players in a row
-            playerNode.x = (index - Math.floor(this.players.length / 2)) * 200;
+            // Position players in a centered row
+            const xPos = (index - (players.length - 1) / 2) * 150;
+            playerNode.position = cc.v3(xPos, 0, 0);
             
             // Set player name
             const nameLabel = playerNode.getChildByName("NameLabel")?.getComponent(cc.Label);
             if (nameLabel) nameLabel.string = player.name;
             
-            // Create vote count label above head
+            // Create vote count label
             const voteCountNode = new cc.Node("VoteCount");
             const voteCountLabel = voteCountNode.addComponent(cc.Label);
             voteCountLabel.fontSize = 30;
             voteCountLabel.string = `${voteCounts[player.id] || 0} votes`;
             playerNode.addChild(voteCountNode);
-            voteCountNode.y = 80; // Position above head
+            voteCountNode.y = 80;
             
-            // Highlight imposter
-            if (player.isImposter) {
-                const highlight = new cc.Node("ImposterHighlight");
-                const graphics = highlight.addComponent(cc.Graphics);
-                graphics.lineWidth = 4;
-                graphics.strokeColor = cc.Color.RED;
-                graphics.circle(0, 0, 60);
-                graphics.stroke();
-                playerNode.addChild(highlight);
-                
+            // Highlight the imposter
+            if (player.id === imposterId) {
                 const roleLabel = new cc.Node("RoleLabel");
                 const roleLabelComp = roleLabel.addComponent(cc.Label);
                 roleLabelComp.string = "IMPOSTER";
@@ -90,19 +80,23 @@ export default class EndScene extends cc.Component {
         });
     }
     
-    private getPlayersData() {
+    private getPlayersDataFromCache() {
+        // In a real game, this data might be passed via a persistent node
+        // or re-fetched. For now, we use a fallback.
         try {
-            // This would come from your MultiplayerManager in actual game
-            const MultiplayerManager = require("./MultiplayerManager").default;
-            return MultiplayerManager.getInstance().getOnlinePlayers();
-        } catch (e) {
-            // Fallback to test data if MultiplayerManager is not available
-            return [
-                { id: 'test_1', name: 'You (Local)' },
-                { id: 'test_2', name: 'Red (Sus)' },
-                { id: 'test_3', name: 'Green' },
-                { id: 'test_4', name: 'Blue' }
-            ];
+            const playersData = JSON.parse(cc.sys.localStorage.getItem('lastActivePlayers'));
+            return playersData || this.getTestData();
+        } catch(e) {
+            return this.getTestData();
         }
+    }
+
+    private getTestData() {
+        return [
+            { id: 'test_1', name: 'Player 1' },
+            { id: 'test_2', name: 'Player 2' },
+            { id: 'test_3', name: 'Player 3' },
+            { id: 'test_4', name: 'Player 4' }
+        ];
     }
 }
