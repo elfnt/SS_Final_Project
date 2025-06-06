@@ -61,7 +61,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "autoReleaseAssets": false,
-    "_id": "c6ee6441-9178-4f28-a517-51d701d1f141"
+    "_id": "65e88b75-bd92-4600-b109-36d0ec840f5f"
   },
   {
     "__type__": "cc.Node",
@@ -302,7 +302,7 @@
     "_id": "31D3mBjmROzr4NDMW+zrAw"
   },
   {
-    "__type__": "d28abbmttFGqrZw2oraAbg/",
+    "__type__": "cc120cZ6R1OyZsVDO9qirk1",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -321,7 +321,7 @@
     "continueButton": {
       "__id__": 10
     },
-    "_id": "14wSeMQx5JN763TnwRCmSM"
+    "_id": "c16w3dhUVOVZ4uL7Xr+z15"
   },
   {
     "__type__": "cc.Node",
@@ -396,8 +396,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "Label",
-    "_N$string": "Label",
+    "_string": "Shows who win",
+    "_N$string": "Shows who win",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -439,7 +439,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.87,
+      "width": 275.68,
       "height": 50.4
     },
     "_anchorPoint": {

@@ -1,4 +1,4 @@
-// Vote.ts (Shortened)
+// Vote.ts (Modified for direct EndScene transition)
 import MultiplayerManager, { PlayerState } from './Multiplayer';
 import FirebaseManager from './FirebaseManager';
 
@@ -52,7 +52,7 @@ export default class VoteManager extends cc.Component {
         this.statusLabel.string = "Vote for the imposter!";
     }
 
-private getPlayersForVoting(): { id: string, name: string }[] {
+    private getPlayersForVoting(): { id: string, name: string }[] {
         if (this.testMode) {
             return [
                 { id: 'test_2', name: 'Red (Sus)' },
@@ -61,11 +61,8 @@ private getPlayersForVoting(): { id: string, name: string }[] {
             ];
         }
 
-        // The line below is the corrected part
         return this.multiplayerManager.getOnlinePlayers()
-            // First, filter out any players that don't have an ID or are the local player
             .filter(p => p.id && p.id !== this.localPlayer.id)
-            // Then, map the result to the required {id, name} structure
             .map(p => ({ id: p.id, name: p.name }));
     }
     
@@ -85,7 +82,6 @@ private getPlayersForVoting(): { id: string, name: string }[] {
         const graphics = this.selectionBorder.addComponent(cc.Graphics);
         graphics.lineWidth = 5;
         graphics.strokeColor = cc.Color.WHITE;
-        // The border size will be set when a player is selected
         this.selectionBorder.active = false;
     }
 
@@ -178,35 +174,75 @@ private getPlayersForVoting(): { id: string, name: string }[] {
         this.lockVotingUI();
 
         if (this.testMode) {
-            const target = this.selectedPlayer || this.getPlayersForVoting()[0];
-            this.showFinalResults(target, target.id === 'test_2');
+            // For test mode, just transfer to EndScene with test data
+            this.statusLabel.string = "Votes counted! Revealing results...";
+            
+            // Prepare test data for EndScene
+            const voteData = {
+                voteCounts: { 'test_2': 2, 'test_3': 1, 'test_4': 0 },
+                imposterId: 'test_2',
+                crewWins: true
+            };
+            
+            // Store in localStorage for EndScene to retrieve
+            cc.sys.localStorage.setItem('voteData', JSON.stringify(voteData));
+            
+            // Save active players list for EndScene
+            cc.sys.localStorage.setItem('lastActivePlayers', JSON.stringify(this.getPlayersForVoting()));
+            
+            // Show transition message briefly before loading EndScene
+            this.scheduleOnce(() => cc.director.loadScene("EndScene"), 1.5);
             return;
         }
 
+        // Get votes from Firebase
         const votesSnapshot = await this.firebaseManager.database.ref(`games/${this.gameId}/voting/votes`).once('value');
         await this.processVoteResults(votesSnapshot.val() || {});
     }
 
     private async processVoteResults(votes: { [key: string]: { target: string } }) {
-        const voteCounts = new Map<string, number>();
+        // Count the votes for each player
+        const voteCounts: {[key: string]: number} = {};
         Object.values(votes).forEach(vote => {
-            voteCounts.set(vote.target, (voteCounts.get(vote.target) || 0) + 1);
+            const targetId = vote.target;
+            voteCounts[targetId] = (voteCounts[targetId] || 0) + 1;
         });
 
+        // Find the player with the most votes
         let ejectedPlayerId: string | null = null;
         let maxVotes = 0;
-        voteCounts.forEach((count, id) => {
-            if (count > maxVotes) {
-                maxVotes = count;
+        
+        Object.keys(voteCounts).forEach(id => {
+            if (voteCounts[id] > maxVotes) {
+                maxVotes = voteCounts[id];
                 ejectedPlayerId = id;
-            } else if (count === maxVotes) {
+            } else if (voteCounts[id] === maxVotes) {
                 ejectedPlayerId = null; // In case of a tie, no one is ejected
             }
         });
 
+        // Handle tie case
         if (!ejectedPlayerId) {
-            this.statusLabel.string = "Vote tied! No one was ejected.";
-            this.scheduleOnce(() => cc.director.loadScene("GameScene"), 3);
+            this.statusLabel.string = "Vote counting complete...";
+            
+            // Prepare tie data for EndScene
+            const voteData = {
+                voteCounts: voteCounts,
+                imposterId: null, // We'll get this from Firebase
+                crewWins: false,
+                tie: true
+            };
+            
+            // Get the imposter ID from Firebase
+            const imposterSnapshot = await this.firebaseManager.database.ref(`games/${this.gameId}/imposter/id`).once('value');
+            voteData.imposterId = imposterSnapshot.val();
+            
+            // Save data for EndScene
+            cc.sys.localStorage.setItem('voteData', JSON.stringify(voteData));
+            cc.sys.localStorage.setItem('lastActivePlayers', JSON.stringify(this.multiplayerManager.getOnlinePlayers()));
+            
+            // Skip to next round
+            this.scheduleOnce(() => cc.director.loadScene("GameScene"), 1.5);
             return;
         }
 
@@ -214,33 +250,39 @@ private getPlayersForVoting(): { id: string, name: string }[] {
         const gameRef = this.firebaseManager.database.ref(`games/${this.gameId}`);
         await gameRef.child('voting').update({ completed: true, ejectedPlayerId });
 
+        // Get imposter information
         const imposterSnapshot = await gameRef.child('imposter/id').once('value');
-        const wasImposter = ejectedPlayerId === imposterSnapshot.val();
+        const imposterIdFromDB = imposterSnapshot.val();
+        const wasImposter = ejectedPlayerId === imposterIdFromDB;
         
+        // Prepare data for EndScene
+        this.statusLabel.string = "Votes counted! Revealing results...";
+        
+        // Find the ejected player (if they exist)
         const ejectedPlayer = this.multiplayerManager.getOnlinePlayers().find(p => p.id === ejectedPlayerId);
-        if (ejectedPlayer && ejectedPlayer.id && ejectedPlayer.name) {
-            this.showFinalResults({ id: ejectedPlayer.id, name: ejectedPlayer.name }, wasImposter);
-        } else {
-            this.statusLabel.string = "Ejected player not found.";
+        if (!ejectedPlayer) {
+            this.statusLabel.string = "Processing results...";
         }
-
+        
+        // Create data package for EndScene
+        const voteData = {
+            voteCounts: voteCounts,
+            imposterId: imposterIdFromDB,
+            ejectedPlayerId: ejectedPlayerId,
+            crewWins: wasImposter
+        };
+        
+        // Save active players for EndScene to display
+        cc.sys.localStorage.setItem('voteData', JSON.stringify(voteData));
+        cc.sys.localStorage.setItem('lastActivePlayers', JSON.stringify(this.multiplayerManager.getOnlinePlayers()));
+        
+        // Update game state if imposter was ejected
         if (wasImposter) {
             await gameRef.update({ state: "ended", winner: "crew" });
-        } else {
-            this.scheduleOnce(() => cc.director.loadScene("GameScene"), 5);
         }
-    }
-
-    private showFinalResults(player: { id: string, name: string }, wasImposter: boolean) {
-        this.statusLabel.string = `${player.name} was ${wasImposter ? "" : "NOT "}the Imposter!`;
-        if (wasImposter) this.statusLabel.string += "\nCrew Wins!";
-
-        const ejectedButton = this.voteButtons.get(player.id);
-        if (ejectedButton) {
-            this.selectionBorder.parent = ejectedButton;
-            this.selectionBorder.active = true;
-            this.selectionBorder.getComponent(cc.Graphics).strokeColor = wasImposter ? cc.Color.RED : cc.Color.GRAY;
-        }
+        
+        // Transition to EndScene to show results
+        this.scheduleOnce(() => cc.director.loadScene("EndScene1"), 1.5);
     }
 
     onDestroy() {
