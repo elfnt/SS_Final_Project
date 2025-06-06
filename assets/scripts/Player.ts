@@ -1,7 +1,8 @@
 // Player.ts (Local Player Controller for Multiplayer)
 import MultiplayerManager from "./Multiplayer"; // Your MultiplayerManager.ts file
 import AutoRespawn from "./respawn"; // 請確保路徑正確
-
+import FirebaseManager from "./FirebaseManager"; // Your FirebaseManager.ts file
+import ItemController from "./ItemController";
 
 const { ccclass, property } = cc._decorator;
 
@@ -51,7 +52,7 @@ export default class Player extends cc.Component {
     private isJumping = false;
     private isDead = false;
     private playerNameLabel: cc.Label = null;
-    private playerId: string = ""; // Unique ID for this player
+    public playerId: string = ""; // Unique ID for this player
     private timeSinceLastSync: number = 0;
     private physicsGravityY: number = 0;
 
@@ -407,40 +408,37 @@ retrievePlayerIdAndName() {
     }
 
     private pickUpItem(item: cc.Node) {
-        this.heldItem = item; this.highlight(item, false);
-        this.originalWorldScale = cc.v2(item.scaleX * (item.parent ? item.parent.scaleX : 1), item.scaleY * (item.parent ? item.parent.scaleY : 1));
-        const rb = item.getComponent(cc.RigidBody); const col = item.getComponent(cc.PhysicsBoxCollider);
-        if (rb) {
-            this.originalItemFixedRotation = rb.fixedRotation; rb.enabled = true;
-            rb.type = cc.RigidBodyType.Dynamic; rb.fixedRotation = true;
-            rb.linearVelocity = cc.Vec2.ZERO; rb.angularVelocity = 0;
-        }
-        if (col) { this.originalItemFriction = col.friction; col.friction = 100; col.apply(); }
-        item.active = false;
-        if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
+        const db = FirebaseManager.getInstance().database;
+        const itemId = item.getComponent(ItemController)?.itemId || item.name;
+        db.ref(`boxes/${itemId}`).transaction((box) => {
+            if (box && box.active) {
+                box.active = false;    // 表示消失
+                return box;
+            }
+            return;
+        }, (err, committed, snap) => {
+            if (committed) {
+                this.heldItem = item; // 本地記錄
+                if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
+            }
+        });
     }
-
+    
+    
     private dropItem() {
         if (!this.heldItem) return;
-        this.heldItem.active = true;
-        const facing = this.dir.x !== 0 ? this.dir.x : this.lastFacing;
-        const dropPos = this.node.position.add(cc.v3(100 * facing, -10, 0));
-        this.heldItem.parent = this.node.parent; // Assumes player and items share the same root parent in the scene
-        this.heldItem.setPosition(dropPos.x, dropPos.y);
-        if (this.originalWorldScale && this.heldItem.parent) {
-             this.heldItem.setScale(
-                 this.originalWorldScale.x / this.heldItem.parent.scaleX,
-                 this.originalWorldScale.y / this.heldItem.parent.scaleY
-             );
-        } else if (this.originalWorldScale) {
-            this.heldItem.setScale(this.originalWorldScale);
-        }
-        const rb = this.heldItem.getComponent(cc.RigidBody); const col = this.heldItem.getComponent(cc.PhysicsBoxCollider);
-        if (rb && this.originalItemFixedRotation !== null) { rb.fixedRotation = this.originalItemFixedRotation; this.originalItemFixedRotation = null; }
-        if (col && this.originalItemFriction !== null) { col.friction = this.originalItemFriction; col.apply(); this.originalItemFriction = null; }
-        this.heldItem = null; this.nearestItem = null; this.originalWorldScale = null;
+        const db = FirebaseManager.getInstance().database;
+        const itemId = this.heldItem.getComponent(ItemController)?.itemId || this.heldItem.name;
+        const dropPos = this.node.position.add(cc.v3(100 * (this.dir.x || this.lastFacing), -10, 0));
+        db.ref(`boxes/${itemId}`).update({
+            active: true,
+            position: { x: Math.round(dropPos.x), y: Math.round(dropPos.y) }
+        });
+        this.heldItem = null;
         if (this.dropItemSound) cc.audioEngine.playEffect(this.dropItemSound, false);
     }
+    
+    
 
     // Your existing respawn/die logic
     public die() {
