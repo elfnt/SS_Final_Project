@@ -27,6 +27,10 @@ export default class Egg extends cc.Component {
     private syncInterval = 0.1;
     private timeSinceLastSync = 0;
 
+    private lastSyncedPos: cc.Vec2 = null;
+    private lastSyncedRot: number = 0;
+    private lastSyncedLife: number = 0;
+
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite) || this.node.getComponentInChildren(cc.Sprite);
         if (this.sprite && this.normalSprite) this.sprite.spriteFrame = this.normalSprite;
@@ -38,7 +42,6 @@ export default class Egg extends cc.Component {
 
         this.initEggInFirebase();
         this.listenToFirebase();
-
         cc.log(`[Egg][${this.eggId}] onLoad called!`);
     }
 
@@ -66,7 +69,47 @@ export default class Egg extends cc.Component {
         }
     }
 
-    // ... 你的落地、受傷邏輯照舊 ...
+    // 落地與受傷邏輯（保持你原本的寫法）
+    onBeginContact(contact, selfCollider, otherCollider) {
+        const other = otherCollider.node;
+        const name = other.name.toLowerCase();
+        const isSafe = name.includes("spring") || name.includes("sponge");
+        if (isSafe) {
+            cc.log(`[Egg][${this.eggId}] Safe landing on ${other.name}, skipping damage.`);
+            this.lastY = this.node.y;
+            return;
+        }
+        if (other.group !== this.groundGroup) return;
+        if (this.lastGroundContact === other) return;
+        this.lastGroundContact = other;
+
+        const fallHeight = this.lastY - this.node.y;
+        cc.log(`[Egg][${this.eggId}] Fall height: ${fallHeight}`);
+
+        if (fallHeight < 3) {
+            cc.log(`[Egg][${this.eggId}] Fall too short (${fallHeight}), ignoring.`);
+            return;
+        }
+        if (fallHeight > 100) {
+            const normalized = Math.min((fallHeight - 100) / 400, 1);
+            const damage = Math.floor(this.maxLife * normalized);
+            this.currentLife = Math.max(0, this.currentLife - damage);
+            this.updateEggAppearance();
+
+            if (this.currentLife <= 0) {
+                this.die();
+            }
+            cc.log(`[Egg][${this.eggId}] Fall damage: ${damage}, Remaining life: ${this.currentLife}`);
+        }
+        this.lastY = this.node.y;
+    }
+    onEndContact(contact, selfCol, otherCol) {
+        if (otherCol.node.group !== this.groundGroup) return;
+        if (this.lastGroundContact === otherCol.node) {
+            this.lastGroundContact = null;
+        }
+        this.lastY = this.node.y;
+    }
 
     update(dt: number) {
         if (!this.isAlive) return;
@@ -78,10 +121,25 @@ export default class Egg extends cc.Component {
         }
         if (this.node.y > this.lastY) this.lastY = this.node.y;
 
-        // ====== 所有人都會定時同步自己的蛋狀態到雲端 ======
+        // === 只有蛋有移動/旋轉/生命變化時才同步 ===
         this.timeSinceLastSync += dt;
         if (this.timeSinceLastSync >= this.syncInterval) {
-            this.syncStateToFirebase();
+            const curPos = this.node.getPosition();
+            const curRot = this.node.angle;
+            const curLife = this.currentLife;
+
+            if (
+                !this.lastSyncedPos ||
+                Math.abs(curPos.x - this.lastSyncedPos.x) > 1 ||
+                Math.abs(curPos.y - this.lastSyncedPos.y) > 1 ||
+                Math.abs(curRot - this.lastSyncedRot) > 0.5 ||
+                curLife !== this.lastSyncedLife
+            ) {
+                this.syncStateToFirebase();
+                this.lastSyncedPos = curPos.clone();
+                this.lastSyncedRot = curRot;
+                this.lastSyncedLife = curLife;
+            }
             this.timeSinceLastSync = 0;
         }
     }
@@ -109,12 +167,20 @@ export default class Egg extends cc.Component {
             const data = snap.val();
             cc.log(`[Egg][${this.eggId}] [監聽] Firebase 狀態：`, data);
             if (!data) return;
-            // 無論是不是自己都強制同步（但同步速度太快時畫面可能會有些小衝突，通常夠用了）
-            this.node.setPosition(data.position.x, data.position.y);
-            this.node.angle = data.rotation || 0;
-            this.currentLife = data.life;
-            this.updateEggAppearance();
-            cc.log(`[Egg][${this.eggId}] [套用] position(${data.position.x}, ${data.position.y}) rotation(${data.rotation}), life(${data.life})`);
+
+            // 只要 fetch 下來的資料跟本地不同就套用
+            if (
+                Math.abs(this.node.x - data.position.x) > 1 ||
+                Math.abs(this.node.y - data.position.y) > 1 ||
+                Math.abs(this.node.angle - (data.rotation || 0)) > 0.5 ||
+                this.currentLife !== data.life
+            ) {
+                this.node.setPosition(data.position.x, data.position.y);
+                this.node.angle = data.rotation || 0;
+                this.currentLife = data.life;
+                this.updateEggAppearance();
+                cc.log(`[Egg][${this.eggId}] [套用] position(${data.position.x}, ${data.position.y}) rotation(${data.rotation}), life(${data.life})`);
+            }
         });
     }
 
