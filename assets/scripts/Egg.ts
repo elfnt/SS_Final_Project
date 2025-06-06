@@ -181,5 +181,10 @@ export default class Egg extends cc.Component {
             collider.enabled = true;
             collider.apply(); // 確保碰撞箱重新啟用
         }
+
+        // ✅ 廣播蛋已重生事件給 Dropbox
+        cc.systemEvent.emit("EGG_RESPAWNED");
+        cc.log("[Egg] 🎉 EGG_RESPAWNED 廣播發送");
     }
+
 }

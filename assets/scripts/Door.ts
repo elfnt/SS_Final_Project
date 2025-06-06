@@ -4,7 +4,7 @@ const { ccclass, property } = cc._decorator;
 export default class Door extends cc.Component {
 
     onBeginContact(contact, selfCollider, otherCollider) {
-        if (otherCollider.node.name === 'Player') {
+        if (otherCollider.node.name === 'Egg') {
             // 銷毀 player
             otherCollider.node.destroy();
 
