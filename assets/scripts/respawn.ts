@@ -5,12 +5,9 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class AutoRespawn extends cc.Component {
 
-    @property({ tooltip: "當 Y 低於這個值時自動重生（選填）" })
+    @property({ tooltip: "當 Y 低於這個值時自動重生" })
     fallThreshold: number = -1200;
 
-    @property({ tooltip: "是否在玩家死亡時也自動重生" })
-    resetOnPlayerDeath: boolean = true;
-    
     @property({ tooltip: "預設重生角度（角度制）" })
     angleISet: number = 0;
 
@@ -29,23 +26,15 @@ export default class AutoRespawn extends cc.Component {
         // ✅ 嘗試從 BoxController 或物件名稱取得 Firebase Key
         const boxController = this.getComponent("BoxController") as any;
         this.firebaseKey = boxController?.boxId || this.node.name;
-
-        if (this.resetOnPlayerDeath) {
-            cc.systemEvent.on("PLAYER_RESPAWNED", this.respawn, this);
-        }
-    }
-
-    onDestroy() {
-        cc.systemEvent.off("PLAYER_RESPAWNED", this.respawn, this);
     }
 
     update(dt: number) {
-        if (this.fallThreshold != null && this.node.y < this.fallThreshold) {
+        if (this.node.y < this.fallThreshold) {
             this.respawn();
         }
     }
 
-    public respawn() {
+    private respawn() {
         this.node.setPosition(this.respawnPoint);
         this.node.angle = this.angleISet;
 
@@ -54,16 +43,16 @@ export default class AutoRespawn extends cc.Component {
             this.rb.type = this.originalBodyType;
             this.rb.linearVelocity = cc.Vec2.ZERO;
             this.rb.angularVelocity = 0;
+
             this.scheduleOnce(() => {
                 this.rb.enabled = true;
                 this.rb.awake = true;
             }, 0.01);
         }
 
-        cc.log(`[AutoRespawn] ${this.node.name} reset to (${this.respawnPoint.x}, ${this.respawnPoint.y}) angle: ${this.angleISet}`);
+        cc.log(`[AutoRespawn] ${this.node.name} 重生於 (${this.respawnPoint.x}, ${this.respawnPoint.y}) 角度=${this.angleISet}`);
         this.updateFirebasePosition();
     }
-
 
     private updateFirebasePosition() {
         const firebaseManager = FirebaseManager.getInstance();
@@ -72,11 +61,9 @@ export default class AutoRespawn extends cc.Component {
         firebaseManager.database.ref(`boxes/${this.firebaseKey}/position`).set({
             x: Math.round(this.node.x),
             y: Math.round(this.node.y),
-            rotation: Math.round(this.angleISet)
+            rotation: Math.round(this.node.angle)
         });
 
-        cc.log(`[AutoRespawn] 已同步 ${this.firebaseKey} 的位置與角度到 Firebase: (${this.node.x}, ${this.node.y}, rot=${this.angleISet})`);
+        cc.log(`[AutoRespawn] ✅ 已同步 ${this.firebaseKey} 到 Firebase (${this.node.x}, ${this.node.y}, rot=${this.node.angle})`);
     }
-
-
 }
