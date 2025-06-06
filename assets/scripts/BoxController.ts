@@ -40,31 +40,49 @@ export default class BoxLogicController extends cc.Component {
 
         const firebase = FirebaseManager.getInstance();
         const localId = cc.sys.localStorage.getItem("playerId");
+        const ref = firebase.database.ref(`boxes/${this.boxId}`);
 
-        firebase.database.ref(`boxes/${this.boxId}/isRespawn`).set(false);
+        // ✅ 初始化 Firebase 狀態
+        ref.update({
+            isRespawn: true,
+            controllerId: localId,
+            position: {
+                x: Math.round(this.initialPosition.x),
+                y: Math.round(this.initialPosition.y),
+                rotation: Math.round(this.node.angle)
+            },
+            boxTriggered: false,
+            status: 0
+        }).then(() => {
+            cc.log(`[BoxLogic] ✅ 開局初始化 isRespawn = true，並寫入初始位置`);
 
-        firebase.database.ref(`boxes/${this.boxId}/controllerId`).once("value", snapshot => {
-            const remote = snapshot.val();
-            const localId = cc.sys.localStorage.getItem("playerId");
+            // ✅ 更新 node 的位置
+            this.node.setPosition(this.initialPosition);
+            this.node.angle = this.angleISet;
 
-            if (!remote) {
-                // ✅ 設定為我自己，並同步本地狀態
-                firebase.database.ref(`boxes/${this.boxId}`).update({
-                    controllerId: localId
-                }).then(() => {
-                    this.controllerId = localId;
-                    this.isControlling = true;
-                    //cc.log(`[BoxLogic] ✅ 初始化 controllerId=${localId}（自動接管 ${this.boxId}）`);
-                });
-            } else {
-                //cc.log(`[BoxLogic] ℹ️ 現有 controllerId=${remote}，我不是控制者`);
-            }
+            // ✅ 啟動 Firebase 監聽
+            this.listenToFirebase();
+
+            // ✅ 啟動位置上傳排程
+            this.schedule(() => {
+                if (!this.isRespawning && this.isControlling) {
+                    this.tryUploadPosition();
+                }
+            }, 0.05);
+
+            // ✅ 延遲清除重生狀態
+            setTimeout(() => {
+                ref.update({ isRespawn: false });
+                this.isRespawning = false;
+                cc.log(`[BoxLogic] 🕒 isRespawn = false`);
+            }, this.respawnLockSeconds * 1000);
         });
-
-
-        this.listenToFirebase();
-        this.uploadInitialPosition();
     }
+
+
+
+
+
 
     start() {
         this.schedule(() => {
@@ -243,12 +261,19 @@ export default class BoxLogicController extends cc.Component {
 
     private uploadInitialPosition() {
         const firebase = FirebaseManager.getInstance();
-        firebase.database.ref(`boxes/${this.boxId}/position`).set({
+        const posPath = `boxes/${this.boxId}/position`;
+
+        firebase.database.ref(posPath).set({
             x: Math.round(this.initialPosition.x),
             y: Math.round(this.initialPosition.y),
             rotation: Math.round(this.node.angle)
+        }).then(() => {
+            cc.log(`[BoxLogic] ✅ 強制覆蓋 Firebase 初始位置：${posPath}`);
+        }).catch(err => {
+            cc.error(`[BoxLogic] ❌ 寫入位置失敗：`, err);
         });
     }
+
 
     private updateRemainingStatus() {
         let remaining: number;

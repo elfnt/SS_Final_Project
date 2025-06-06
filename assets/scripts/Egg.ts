@@ -4,7 +4,7 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class Egg extends cc.Component {
     @property({ tooltip: "Firebase 上的蛋 ID" })
-    eggId: string = "egg1"; // 每顆蛋唯一
+    eggId: string = "egg1";
 
     @property moveSpeed = 5;
     @property jumpForce = 10;
@@ -14,6 +14,7 @@ export default class Egg extends cc.Component {
     @property maxLife = 100;
     @property({ tooltip: 'Enable keyboard debug (C crack / B break)' }) enableDebugControls = true;
     @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
+    @property({ type: cc.Prefab, tooltip: '爆炸粒子特效 prefab' }) explosionPrefab: cc.Prefab = null;
 
     private sprite: cc.Sprite = null;
     private velocity = cc.v2(0, 0);
@@ -24,7 +25,7 @@ export default class Egg extends cc.Component {
     private rb: cc.RigidBody = null;
     private respawnPoint: cc.Vec2 = null;
 
-    private syncInterval = 0.02;
+    private syncInterval = 0.05;
     private timeSinceLastSync = 0;
 
     private lastSyncedPos: cc.Vec2 = null;
@@ -42,6 +43,7 @@ export default class Egg extends cc.Component {
 
         this.initEggInFirebase();
         this.listenToFirebase();
+
         cc.log(`[Egg][${this.eggId}] onLoad called!`);
     }
 
@@ -69,7 +71,6 @@ export default class Egg extends cc.Component {
         }
     }
 
-    // 落地與受傷邏輯（保持你原本的寫法）
     onBeginContact(contact, selfCollider, otherCollider) {
         const other = otherCollider.node;
         const name = other.name.toLowerCase();
@@ -100,6 +101,12 @@ export default class Egg extends cc.Component {
                 this.die();
             }
             cc.log(`[Egg][${this.eggId}] Fall damage: ${damage}, Remaining life: ${this.currentLife}`);
+            // 🔥 觸發爆炸粒子特效
+            if (this.explosionPrefab) {
+                const explosion = cc.instantiate(this.explosionPrefab);
+                explosion.setPosition(this.node.getPosition()); // 或者改為 contact.getWorldManifold().points[0]
+                this.node.parent.addChild(explosion); // 加到蛋的父節點或 Canvas 上
+            }
         }
         this.lastY = this.node.y;
     }
@@ -159,27 +166,18 @@ export default class Egg extends cc.Component {
         });
     }
 
+    // 🚩🚩🚩 這才是所有人都同步的方式，會自動監聽變化
     private listenToFirebase() {
         const db = FirebaseManager.getInstance()?.database;
-        cc.log(`[Egg][${this.eggId}] listenToFirebase 被呼叫！`);
         if (!db) return;
         db.ref(`eggs/${this.eggId}`).on("value", (snap) => {
             const data = snap.val();
-            cc.log(`[Egg][${this.eggId}] [監聽] Firebase 狀態：`, data);
             if (!data) return;
-
-            // 只要 fetch 下來的資料跟本地不同就套用
-            if (
-                Math.abs(this.node.x - data.position.x) > 1 ||
-                Math.abs(this.node.y - data.position.y) > 1 ||
-                Math.abs(this.node.angle - (data.rotation || 0)) > 0.5 ||
-                this.currentLife !== data.life
-            ) {
-                this.node.setPosition(data.position.x, data.position.y);
-                this.node.angle = data.rotation || 0;
+            if (data.position) this.node.setPosition(data.position.x, data.position.y);
+            if (typeof data.rotation === "number") this.node.angle = data.rotation;
+            if (typeof data.life === "number" && this.currentLife !== data.life) {
                 this.currentLife = data.life;
                 this.updateEggAppearance();
-                cc.log(`[Egg][${this.eggId}] [套用] position(${data.position.x}, ${data.position.y}) rotation(${data.rotation}), life(${data.life})`);
             }
         });
     }
@@ -188,11 +186,6 @@ export default class Egg extends cc.Component {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
         db.ref(`eggs/${this.eggId}`).update({
-            life: this.currentLife,
-            position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
-            rotation: Math.round(this.node.angle)
-        });
-        cc.log(`[Egg][${this.eggId}] [寫入] Firebase:`, {
             life: this.currentLife,
             position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
             rotation: Math.round(this.node.angle)
