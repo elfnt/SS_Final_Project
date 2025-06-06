@@ -1,3 +1,4 @@
+// FirebaseManager.ts (Updated)
 const { ccclass, property } = cc._decorator;
 declare const firebase: any; // 使用 Firebase v8 SDK（global 'firebase' 物件）
 
@@ -72,11 +73,9 @@ export default class FirebaseManager extends cc.Component {
             } else {
                 firebase.app();
             }
-
-            // 初始化 database 與 auth
             this.database = firebase.database();
             this.auth = firebase.auth();
-            cc.log("[FirebaseManager] 成功初始化 Firebase Database 與 Auth");
+            cc.log("[FirebaseManager] Firebase initialized successfully.");
         } catch (error) {
             cc.error("[FirebaseManager] 初始化 Firebase 發生錯誤：", error);
             // 如果是 already exists 錯誤，就嘗試取用現有的 database/auth
@@ -89,12 +88,14 @@ export default class FirebaseManager extends cc.Component {
         }
     }
 
-    // 以下是你原本的各種方法，不必修改
-    private checkDatabase(): Promise<void> {
+    private async checkDatabase(): Promise<void> {
         if (!this.database) {
-            const error = new Error("Firebase Database not initialized.");
-            cc.error("[FirebaseManager] " + error.message);
-            return Promise.reject(error);
+            const errorMsg = "Firebase Database not initialized.";
+            cc.error("FirebaseManager: " + errorMsg);
+            this.initializeFirebase(); // Attempt to re-initialize
+            if (!this.database) {
+                 return Promise.reject(new Error(errorMsg));
+            }
         }
         return Promise.resolve();
     }
@@ -111,15 +112,12 @@ export default class FirebaseManager extends cc.Component {
     }
 
     public listenToPlayerData(playerId: string, callback: (data: any) => void): void {
-        if (!this.database) {
-            cc.error("[FirebaseManager] Database 未初始化，無法監聽玩家資料");
-            return;
-        }
-        this.database.ref(`players/${playerId}`).on(
-            "value",
-            snapshot => callback(snapshot.val()),
-            error => cc.error(`[FirebaseManager] 監聽玩家 ${playerId} 資料時出錯：`, error)
-        );
+        this.checkDatabase().then(() => {
+            this.database.ref(`players/${playerId}`).on("value", 
+                snapshot => callback(snapshot.val()),
+                error => cc.error(`Error listening to player data for ${playerId}:`, error)
+            );
+        }).catch(err => cc.error("Cannot listenToPlayerData, DB not ready:", err));
     }
 
     public async removePlayer(playerId: string): Promise<void> {
@@ -127,55 +125,84 @@ export default class FirebaseManager extends cc.Component {
         return this.database.ref(`players/${playerId}`).remove();
     }
 
+    public syncGameState(gameId: string, callback: (state: any) => void): void {
+         this.checkDatabase().then(() => {
+            this.database.ref(`games/${gameId}`).on("value", 
+                snapshot => callback(snapshot.val()),
+                error => cc.error(`Error syncing game state for ${gameId}:`, error)
+            );
+        }).catch(err => cc.error("Cannot syncGameState, DB not ready:", err));
+    }
+
     public async updateGameState(gameId: string, state: any): Promise<void> {
         await this.checkDatabase();
-        return this.database.ref(`games/${gameId}`).set(state);
+        return this.database.ref(`games/${gameId}`).update(state);
     }
 
-    public syncGameState(gameId: string, callback: (state: any) => void): void {
-        if (!this.database) {
-            cc.error("[FirebaseManager] Database 未初始化，無法同步遊戲狀態");
-            return;
+    /**
+     * Creates a new game session, assigns an imposter, and sets the game state to active.
+     * This is the single, authoritative function for starting a game.
+     * @param gameId The ID of the game to create/start.
+     * @param hostId The ID of the player who initiated the game start.
+     * @returns The ID of the assigned imposter, or null if the game couldn't be started.
+     */
+    public async assignImposter(gameId: string, hostId: string): Promise<string | null> {
+        try {
+            await this.checkDatabase();
+            
+            const playersSnapshot = await this.database.ref('players')
+                .orderByChild('online')
+                .equalTo(true)
+                .once('value');
+                
+            const playersData = playersSnapshot.val() || {};
+            const playerIds = Object.keys(playersData);
+            
+            const MIN_PLAYERS_TO_START = 4;
+            if (playerIds.length < MIN_PLAYERS_TO_START) {
+                cc.warn(`[FirebaseManager] Not enough online players to start: ${playerIds.length}`);
+                return null;
+            }
+            
+            // Select the first 4 players and create the activePlayers object
+            const activePlayers = {};
+            const selectedPlayerIds = playerIds.slice(0, MIN_PLAYERS_TO_START);
+            
+            for (const id of selectedPlayerIds) {
+                activePlayers[id] = { 
+                    active: true,
+                    name: playersData[id].name || "Unknown" 
+                };
+            }
+
+            // Pick a random imposter from the selected players
+            const randomIndex = Math.floor(Math.random() * selectedPlayerIds.length); 
+            const imposterId = selectedPlayerIds[randomIndex];
+            const imposterName = activePlayers[imposterId]?.name || "Unknown";
+
+            // Define the entire new game state object.
+            const newGameState = {
+                hostId: hostId,
+                state: "active",
+                startTime: firebase.database.ServerValue.TIMESTAMP,
+                activePlayers: activePlayers,
+                imposter: {
+                    id: imposterId,
+                    name: imposterName
+                },
+                winner: null, // Ensure winner from previous game is cleared
+                endTime: null   // Ensure endTime from previous game is cleared
+            };
+
+            // Use 'set' to create a clean game state, overwriting any old session data.
+            await this.database.ref(`games/${gameId}`).set(newGameState);
+
+            cc.log(`[FirebaseManager] New game started. Imposter: ${imposterId} (${imposterName}). State set to active.`);
+            return imposterId;
+        } catch (error) {
+            cc.error(`[FirebaseManager] Error assigning imposter:`, error);
+            return null;
         }
-        this.database.ref(`games/${gameId}`).on(
-            "value",
-            snapshot => callback(snapshot.val()),
-            error => cc.error(`[FirebaseManager] 同步遊戲 ${gameId} 狀態時出錯：`, error)
-        );
-    }
-
-    public async createGameSession(gameId: string, hostId: string): Promise<void> {
-        await this.checkDatabase();
-        return this.database.ref(`games/${gameId}`).set({
-            hostId: hostId,
-            state: "waiting",
-            players: {},
-            imposter: null,
-            startTime: null
-        });
-    }
-
-    public async joinGameSession(gameId: string, playerId: string): Promise<void> {
-        await this.checkDatabase();
-        return this.database.ref(`games/${gameId}/players/${playerId}`).set({
-            joined: true,
-            joinTime: firebase.database.ServerValue.TIMESTAMP
-        });
-    }
-
-    public async assignImposter(gameId: string): Promise<string> {
-        await this.checkDatabase();
-        const snapshot = await this.database.ref(`games/${gameId}/players`).once("value");
-        const players = snapshot.val();
-        if (!players) return null;
-        const playerIds = Object.keys(players);
-        const impostorId = playerIds[Math.floor(Math.random() * playerIds.length)];
-        await this.database.ref(`games/${gameId}`).update({
-            imposter: impostorId,
-            state: "started",
-            startTime: firebase.database.ServerValue.TIMESTAMP
-        });
-        return impostorId;
     }
 
     public async endGameSession(gameId: string, winnerType: string): Promise<void> {

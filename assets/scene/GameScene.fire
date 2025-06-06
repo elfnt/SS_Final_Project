@@ -11528,6 +11528,17 @@
     "_id": "7cyzFwXVFMH76X9ygJQJRR"
   },
   {
+    "__type__": "5e776dR7f1CG57Z4mehlL19",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 282
+    },
+    "_enabled": true,
+    "itemId": "spring1",
+    "_id": "44WZT7h39F5qZPqoAl1ZvT"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 287
@@ -11690,6 +11701,17 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "aeVid7oZtLNK5f2u/r0UYz"
+  },
+  {
+    "__type__": "5e776dR7f1CG57Z4mehlL19",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 289
+    },
+    "_enabled": true,
+    "itemId": "sponge1",
+    "_id": "cfL0x2toRMf7sZNLymfZcz"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -11885,6 +11907,17 @@
       }
     ],
     "_id": "adbGPEvaxEobA/ZcwuzKRk"
+  },
+  {
+    "__type__": "5e776dR7f1CG57Z4mehlL19",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 295
+    },
+    "_enabled": true,
+    "itemId": "jumppad1",
+    "_id": "83WGsCL/5Bd4deE0WnO6yR"
   },
   {
     "__type__": "cc.PrefabInfo",

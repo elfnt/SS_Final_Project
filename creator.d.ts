@@ -2,7 +2,7 @@
 /** !#en
 The main namespace of Cocos2d-JS, all engine core classes, functions, properties and constants are defined in this namespace.
 !#zh
-Cocos å¼•æ“çš„ä¸»è¦å‘½åç©ºé—´ï¼Œå¼•æ“ä»£ç ä¸­æ‰€æœ‰çš„ç±»ï¼Œå‡½æ•°ï¼Œå±æ€§å’Œå¸¸é‡éƒ½åœ¨è¿™ä¸ªå‘½åç©ºé—´ä¸­å®šä¹‰ã€‚ */
+Cocos å¼???????ä¸»è????½å??ç©ºé?´ï??å¼????ä»????ä¸­æ????????ç±»ï????½æ?°ï??å±???§å??å¸¸é????½å?¨è??ä¸ªå?½å??ç©ºé?´ä¸­å®?ä¹???? */
 declare namespace cc {	
 	/** The current version of Cocos2d being used.<br/>
 	Please DO NOT remove this String, it is an important flag for bug tracking.<br/>
@@ -13,7 +13,7 @@ declare namespace cc {
 	Creates the speed action which changes the speed of an action, making it take longer (speed > 1)
 	or less (speed < 1) time. <br/>
 	Useful to simulate 'slow motion' or 'fast forward' effect.
-	!#zh ä¿®æ”¹ç›®æ ‡åŠ¨ä½œçš„é€Ÿç‡ã€‚
+	!#zh ä¿®æ?¹ç?®æ????¨ä??????????????
 	@param action action
 	@param speed speed
 	
@@ -27,7 +27,7 @@ declare namespace cc {
 	export function speed(action: ActionInterval, speed: number): Action;	
 	/**
 	!#en Create a follow action which makes its target follows another node.
-	!#zh è¿½è¸ªç›®æ ‡èŠ‚ç‚¹çš„ä½ç½®ã€‚
+	!#zh è¿½è¸ª??®æ???????¹ç??ä½?ç½®ã??
 	@param followedNode followedNode
 	@param rect rect
 	
@@ -51,7 +51,7 @@ declare namespace cc {
 	export function setPoints(points: any[]): void;	
 	/**
 	!#en Creates an action with a Cardinal Spline array of points and tension.
-	!#zh æŒ‰åŸºæ•°æ ·æ¡æ›²çº¿è½¨è¿¹ç§»åŠ¨åˆ°ç›®æ ‡ä½ç½®ã€‚
+	!#zh ?????ºæ?°æ?·æ?¡æ?²çº¿è½¨è¿¹ç§»å?¨å?°ç?®æ??ä½?ç½®ã??
 	@param duration duration
 	@param points array of control points
 	@param tension tension
@@ -70,7 +70,7 @@ declare namespace cc {
 	export function updatePosition(newPos: Vec2): void;	
 	/**
 	!#en Creates an action with a Cardinal Spline array of points and tension.
-	!#zh æŒ‰åŸºæ•°æ ·æ¡æ›²çº¿è½¨è¿¹ç§»åŠ¨æŒ‡å®šçš„è·ç¦»ã€‚
+	!#zh ?????ºæ?°æ?·æ?¡æ?²çº¿è½¨è¿¹ç§»å?¨æ??å®????è·?ç¦»ã??
 	@param duration duration
 	@param points points
 	@param tension tension 
@@ -78,7 +78,7 @@ declare namespace cc {
 	export function cardinalSplineBy(duration: number, points: any[], tension: number): ActionInterval;	
 	/**
 	!#en Creates an action with a Cardinal Spline array of points and tension.
-	!#zh æŒ‰ Catmull Rom æ ·æ¡æ›²çº¿è½¨è¿¹ç§»åŠ¨åˆ°ç›®æ ‡ä½ç½®ã€‚
+	!#zh ??? Catmull Rom ??·æ?¡æ?²çº¿è½¨è¿¹ç§»å?¨å?°ç?®æ??ä½?ç½®ã??
 	@param dt dt
 	@param points points
 	
@@ -90,7 +90,7 @@ declare namespace cc {
 	export function catmullRomTo(dt: number, points: any[]): ActionInterval;	
 	/**
 	!#en Creates an action with a Cardinal Spline array of points and tension.
-	!#zh æŒ‰ Catmull Rom æ ·æ¡æ›²çº¿è½¨è¿¹ç§»åŠ¨æŒ‡å®šçš„è·ç¦»ã€‚
+	!#zh ??? Catmull Rom ??·æ?¡æ?²çº¿è½¨è¿¹ç§»å?¨æ??å®????è·?ç¦»ã??
 	@param dt dt
 	@param points points
 	
@@ -104,7 +104,7 @@ declare namespace cc {
 	!#en
 	Creates the action easing object with the rate parameter. <br />
 	From slow to fast.
-	!#zh åˆ›å»º easeIn ç¼“åŠ¨å¯¹è±¡ï¼Œç”±æ…¢åˆ°å¿«ã€‚
+	!#zh ???å»? easeIn ç¼???¨å¯¹è±¡ï????±æ?¢å?°å¿«???
 	@param rate rate
 	
 	@example 
@@ -117,7 +117,7 @@ declare namespace cc {
 	!#en
 	Creates the action easing object with the rate parameter. <br />
 	From fast to slow.
-	!#zh åˆ›å»º easeOut ç¼“åŠ¨å¯¹è±¡ï¼Œç”±å¿«åˆ°æ…¢ã€‚
+	!#zh ???å»? easeOut ç¼???¨å¯¹è±¡ï????±å¿«??°æ?¢ã??
 	@param rate rate
 	
 	@example 
@@ -130,7 +130,7 @@ declare namespace cc {
 	!#en
 	Creates the action easing object with the rate parameter. <br />
 	Slow to fast then to slow.
-	!#zh åˆ›å»º easeInOut ç¼“åŠ¨å¯¹è±¡ï¼Œæ…¢åˆ°å¿«ï¼Œç„¶åæ…¢ã€‚
+	!#zh ???å»? easeInOut ç¼???¨å¯¹è±¡ï????¢å?°å¿«ï¼???¶å????¢ã??
 	@param rate rate
 	
 	@example 
@@ -145,9 +145,9 @@ declare namespace cc {
 	Reference easeInExpo: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeExponentialIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseExponentialIn æ˜¯æŒ‰æŒ‡æ•°å‡½æ•°ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInExpoï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeExponentialIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseExponentialIn ??¯æ???????°å?½æ?°ç????¨è????¥ç????¨ä?????<br />
+	?????? easeInExpoï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -161,9 +161,9 @@ declare namespace cc {
 	Reference easeOutExpo: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeExponentialOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseExponentialOut æ˜¯æŒ‰æŒ‡æ•°å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutExpoï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeExponentialOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseExponentialOut ??¯æ???????°å?½æ?°ç????¨é????ºç????¨ä?????<br />
+	?????? easeOutExpoï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -177,9 +177,9 @@ declare namespace cc {
 	Reference easeInOutExpo: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeExponentialInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseExponentialInOut æ˜¯æŒ‰æŒ‡æ•°å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutExpoï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeExponentialInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseExponentialInOut ??¯æ???????°å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutExpoï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -193,9 +193,9 @@ declare namespace cc {
 	Reference easeInSine: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º EaseSineIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseSineIn æ˜¯æŒ‰æ­£å¼¦å‡½æ•°ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInSineï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? EaseSineIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseSineIn ??¯æ??æ­?å¼¦å?½æ?°ç????¨è????¥ç????¨ä?????<br />
+	?????? easeInSineï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -209,9 +209,9 @@ declare namespace cc {
 	Reference easeOutSine: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º EaseSineOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseSineIn æ˜¯æŒ‰æ­£å¼¦å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutSineï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? EaseSineOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseSineIn ??¯æ??æ­?å¼¦å?½æ?°ç????¨é????ºç????¨ä?????<br />
+	?????? easeOutSineï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -225,9 +225,9 @@ declare namespace cc {
 	Reference easeInOutSine: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeSineInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseSineIn æ˜¯æŒ‰æ­£å¼¦å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutSineï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeSineInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseSineIn ??¯æ??æ­?å¼¦å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutSineï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -241,9 +241,9 @@ declare namespace cc {
 	Reference easeInElastic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeElasticIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseElasticIn æ˜¯æŒ‰å¼¹æ€§æ›²çº¿ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚æ•° easeInElasticï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeElasticIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseElasticIn ??¯æ??å¼¹æ?§æ?²çº¿ç¼???¨è????¥ç????¨ä?????<br />
+	?????? easeInElasticï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	@param period period
 	
 	@example 
@@ -259,9 +259,9 @@ declare namespace cc {
 	Reference easeOutElastic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeElasticOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseElasticOut æ˜¯æŒ‰å¼¹æ€§æ›²çº¿ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutElasticï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeElasticOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseElasticOut ??¯æ??å¼¹æ?§æ?²çº¿ç¼???¨é????ºç????¨ä?????<br />
+	?????? easeOutElasticï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	@param period period
 	
 	@example 
@@ -277,9 +277,9 @@ declare namespace cc {
 	Reference easeInOutElastic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeElasticInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseElasticInOut æ˜¯æŒ‰å¼¹æ€§æ›²çº¿ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutElasticï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeElasticInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseElasticInOut ??¯æ??å¼¹æ?§æ?²çº¿ç¼???¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutElasticï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	@param period period
 	
 	@example 
@@ -294,8 +294,8 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	Eased bounce effect at the beginning.
 	!#zh
-	åˆ›å»º easeBounceIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseBounceIn æ˜¯æŒ‰å¼¹è·³åŠ¨ä½œç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚
+	???å»? easeBounceIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseBounceIn ??¯æ??å¼¹è·³??¨ä??ç¼???¨è????¥ç????¨ä?????
 	
 	@example 
 	```js
@@ -309,8 +309,8 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	Eased bounce effect at the ending.
 	!#zh
-	åˆ›å»º easeBounceOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseBounceOut æ˜¯æŒ‰å¼¹è·³åŠ¨ä½œç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚
+	???å»? easeBounceOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseBounceOut ??¯æ??å¼¹è·³??¨ä??ç¼???¨é????ºç????¨ä?????
 	
 	@example 
 	```js
@@ -324,8 +324,8 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	Eased bounce effect at the begining and ending.
 	!#zh
-	åˆ›å»º easeBounceInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseBounceInOut æ˜¯æŒ‰å¼¹è·³åŠ¨ä½œç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚
+	???å»? easeBounceInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseBounceInOut ??¯æ??å¼¹è·³??¨ä??ç¼???¨è????¥å¹¶?????ºç????¨ä?????
 	
 	@example 
 	```js
@@ -339,8 +339,8 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	In the opposite direction to move slowly, and then accelerated to the right direction.
 	!#zh
-	åˆ›å»º easeBackIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	easeBackIn æ˜¯åœ¨ç›¸åçš„æ–¹å‘ç¼“æ…¢ç§»åŠ¨ï¼Œç„¶ååŠ é€Ÿåˆ°æ­£ç¡®çš„æ–¹å‘ã€‚<br />
+	???å»? easeBackIn ç¼???¨å¯¹è±¡ã??<br />
+	easeBackIn ??¯å?¨ç?¸å???????¹å??ç¼???¢ç§»??¨ï????¶å??????????°æ­£ç¡®ç????¹å?????<br />
 	
 	@example 
 	```js
@@ -354,8 +354,8 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	Fast moving more than the finish, and then slowly back to the finish.
 	!#zh
-	åˆ›å»º easeBackOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	easeBackOut å¿«é€Ÿç§»åŠ¨è¶…å‡ºç›®æ ‡ï¼Œç„¶åæ…¢æ…¢å›åˆ°ç›®æ ‡ç‚¹ã€‚
+	???å»? easeBackOut ç¼???¨å¯¹è±¡ã??<br />
+	easeBackOut å¿«é??ç§»å?¨è????ºç?®æ??ï¼???¶å????¢æ?¢å????°ç?®æ????¹ã??
 	
 	@example 
 	```js
@@ -369,7 +369,7 @@ declare namespace cc {
 	Creates the action easing object. <br />
 	Begining of cc.EaseBackIn. Ending of cc.EaseBackOut.
 	!#zh
-	åˆ›å»º easeBackInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
+	???å»? easeBackInOut ç¼???¨å¯¹è±¡ã??<br />
 	
 	@example 
 	```js
@@ -384,8 +384,8 @@ declare namespace cc {
 	Into the 4 reference point. <br />
 	To calculate the motion curve.
 	!#zh
-	åˆ›å»º easeBezierAction ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseBezierAction æ˜¯æŒ‰è´å¡å°”æ›²çº¿ç¼“åŠ¨çš„åŠ¨ä½œã€‚
+	???å»? easeBezierAction ç¼???¨å¯¹è±¡ã??<br />
+	EaseBezierAction ??¯æ??è´?å¡?å°???²çº¿ç¼???¨ç????¨ä?????
 	@param p0 The first bezier parameter
 	@param p1 The second bezier parameter
 	@param p2 The third bezier parameter
@@ -404,9 +404,9 @@ declare namespace cc {
 	Reference easeInQuad: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuadraticActionIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuadraticInæ˜¯æŒ‰äºŒæ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInQuadï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuadraticActionIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuadraticIn??¯æ??äº?æ¬¡å?½æ?°ç????¨è????¥ç????¨ä?????<br />
+	?????? easeInQuadï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -421,9 +421,9 @@ declare namespace cc {
 	Reference easeOutQuad: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuadraticActionOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuadraticOut æ˜¯æŒ‰äºŒæ¬¡å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutQuadï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuadraticActionOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuadraticOut ??¯æ??äº?æ¬¡å?½æ?°ç????¨é????ºç????¨ä?????<br />
+	?????? easeOutQuadï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -438,9 +438,9 @@ declare namespace cc {
 	Reference easeInOutQuad: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuadraticActionInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuadraticInOut æ˜¯æŒ‰äºŒæ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutQuadï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuadraticActionInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuadraticInOut ??¯æ??äº?æ¬¡å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutQuadï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -455,9 +455,9 @@ declare namespace cc {
 	Reference easeIntQuart: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuarticActionIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuarticIn æ˜¯æŒ‰å››æ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeIntQuartï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuarticActionIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuarticIn ??¯æ?????æ¬¡å?½æ?°ç????¨è????¥ç????¨ä?????<br />
+	?????? easeIntQuartï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -472,9 +472,9 @@ declare namespace cc {
 	Reference easeOutQuart: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuarticActionOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuarticOut æ˜¯æŒ‰å››æ¬¡å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutQuartï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuarticActionOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuarticOut ??¯æ?????æ¬¡å?½æ?°ç????¨é????ºç????¨ä?????<br />
+	?????? easeOutQuartï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -489,9 +489,9 @@ declare namespace cc {
 	Reference easeInOutQuart: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuarticActionInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuarticInOut æ˜¯æŒ‰å››æ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutQuartï¼šhttp://www.zhihu.com/question/21981571/answer/19925418 
+	???å»? easeQuarticActionInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuarticInOut ??¯æ?????æ¬¡å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutQuartï¼?http://www.zhihu.com/question/21981571/answer/19925418 
 	*/
 	export function easeQuarticActionInOut(): any;	
 	/**
@@ -500,9 +500,9 @@ declare namespace cc {
 	Reference easeInQuint: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuinticActionIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuinticIn æ˜¯æŒ‰äº”æ¬¡å‡½æ•°ç¼“åŠ¨è¿›çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInQuintï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuinticActionIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuinticIn ??¯æ??äº?æ¬¡å?½æ?°ç????¨è???????¨ä?????<br />
+	?????? easeInQuintï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -517,9 +517,9 @@ declare namespace cc {
 	Reference easeOutQuint: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuinticActionOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuinticOut æ˜¯æŒ‰äº”æ¬¡å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œ
-	å‚è€ƒ easeOutQuintï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuinticActionOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuinticOut ??¯æ??äº?æ¬¡å?½æ?°ç????¨é????ºç????¨ä??
+	?????? easeOutQuintï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -534,9 +534,9 @@ declare namespace cc {
 	Reference easeInOutQuint: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeQuinticActionInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseQuinticInOutæ˜¯æŒ‰äº”æ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutQuintï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeQuinticActionInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseQuinticInOut??¯æ??äº?æ¬¡å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutQuintï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -551,9 +551,9 @@ declare namespace cc {
 	Reference easeInCirc: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCircleActionIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCircleInæ˜¯æŒ‰åœ†å½¢æ›²çº¿ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInCircï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeCircleActionIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseCircleIn??¯æ?????å½¢æ?²çº¿ç¼???¨è????¥ç????¨ä?????<br />
+	?????? easeInCircï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -568,9 +568,9 @@ declare namespace cc {
 	Reference easeOutCirc: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCircleActionOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCircleOutæ˜¯æŒ‰åœ†å½¢æ›²çº¿ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutCircï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeCircleActionOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseCircleOut??¯æ?????å½¢æ?²çº¿ç¼???¨é????ºç????¨ä?????<br />
+	?????? easeOutCircï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -585,9 +585,9 @@ declare namespace cc {
 	Reference easeInOutCirc: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCircleActionInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCircleInOut æ˜¯æŒ‰åœ†å½¢æ›²çº¿ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutCircï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeCircleActionInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseCircleInOut ??¯æ?????å½¢æ?²çº¿ç¼???¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutCircï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -602,9 +602,9 @@ declare namespace cc {
 	Reference easeInCubic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCubicActionIn ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCubicIn æ˜¯æŒ‰ä¸‰æ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥çš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInCubicï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeCubicActionIn ç¼???¨å¯¹è±¡ã??<br />
+	EaseCubicIn ??¯æ??ä¸?æ¬¡å?½æ?°ç????¨è????¥ç????¨ä?????<br />
+	?????? easeInCubicï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -619,9 +619,9 @@ declare namespace cc {
 	Reference easeOutCubic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCubicActionOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCubicOut æ˜¯æŒ‰ä¸‰æ¬¡å‡½æ•°ç¼“åŠ¨é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeOutCubicï¼šhttp://www.zhihu.com/question/21981571/answer/19925418
+	???å»? easeCubicActionOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseCubicOut ??¯æ??ä¸?æ¬¡å?½æ?°ç????¨é????ºç????¨ä?????<br />
+	?????? easeOutCubicï¼?http://www.zhihu.com/question/21981571/answer/19925418
 	
 	@example 
 	```js
@@ -636,14 +636,14 @@ declare namespace cc {
 	Reference easeInOutCubic: <br />
 	http://www.zhihu.com/question/21981571/answer/19925418
 	!#zh
-	åˆ›å»º easeCubicActionInOut ç¼“åŠ¨å¯¹è±¡ã€‚<br />
-	EaseCubicInOutæ˜¯æŒ‰ä¸‰æ¬¡å‡½æ•°ç¼“åŠ¨è¿›å…¥å¹¶é€€å‡ºçš„åŠ¨ä½œã€‚<br />
-	å‚è€ƒ easeInOutCubicï¼šhttp://www.zhihu.com/question/21981571/answer/19925418 
+	???å»? easeCubicActionInOut ç¼???¨å¯¹è±¡ã??<br />
+	EaseCubicInOut??¯æ??ä¸?æ¬¡å?½æ?°ç????¨è????¥å¹¶?????ºç????¨ä?????<br />
+	?????? easeInOutCubicï¼?http://www.zhihu.com/question/21981571/answer/19925418 
 	*/
 	export function easeCubicActionInOut(): any;	
 	/**
 	!#en Show the Node.
-	!#zh ç«‹å³æ˜¾ç¤ºã€‚
+	!#zh ç«???³æ?¾ç¤º???
 	
 	@example 
 	```js
@@ -654,7 +654,7 @@ declare namespace cc {
 	export function show(): ActionInstant;	
 	/**
 	!#en Hide the node.
-	!#zh ç«‹å³éšè—ã€‚
+	!#zh ç«???³é????????
 	
 	@example 
 	```js
@@ -665,7 +665,7 @@ declare namespace cc {
 	export function hide(): ActionInstant;	
 	/**
 	!#en Toggles the visibility of a node.
-	!#zh æ˜¾éšçŠ¶æ€åˆ‡æ¢ã€‚
+	!#zh ??¾é????¶æ???????¢ã??
 	
 	@example 
 	```js
@@ -676,7 +676,7 @@ declare namespace cc {
 	export function toggleVisibility(): ActionInstant;	
 	/**
 	!#en Create a RemoveSelf object with a flag indicate whether the target should be cleaned up while removing.
-	!#zh ä»çˆ¶èŠ‚ç‚¹ç§»é™¤è‡ªèº«ã€‚
+	!#zh ä»???¶è????¹ç§»??¤è?ªèº«???
 	@param isNeedCleanUp  isNeedCleanUp 
 	
 	@example 
@@ -688,7 +688,7 @@ declare namespace cc {
 	export function removeSelf(isNeedCleanUp ?: boolean): ActionInstant;	
 	/**
 	!#en Destroy self
-	!#zh åˆ›å»ºä¸€ä¸ªé”€æ¯è‡ªèº«çš„åŠ¨ä½œã€‚
+	!#zh ???å»ºä??ä¸ªé??æ¯???ªèº«?????¨ä?????
 	
 	@example 
 	```js
@@ -698,7 +698,7 @@ declare namespace cc {
 	export function destroySelf(): ActionInstant;	
 	/**
 	!#en Create a FlipX action to flip or unflip the target.
-	!#zh Xè½´ç¿»è½¬ã€‚
+	!#zh Xè½´ç¿»è½¬ã??
 	@param flip Indicate whether the target should be flipped or not
 	
 	@example 
@@ -709,7 +709,7 @@ declare namespace cc {
 	export function flipX(flip: boolean): ActionInstant;	
 	/**
 	!#en Create a FlipY action to flip or unflip the target.
-	!#zh Yè½´ç¿»è½¬ã€‚
+	!#zh Yè½´ç¿»è½¬ã??
 	@param flip flip
 	
 	@example 
@@ -720,7 +720,7 @@ declare namespace cc {
 	export function flipY(flip: boolean): ActionInstant;	
 	/**
 	!#en Creates a Place action with a position.
-	!#zh æ”¾ç½®åœ¨ç›®æ ‡ä½ç½®ã€‚
+	!#zh ??¾ç½®??¨ç?®æ??ä½?ç½®ã??
 	@param pos pos
 	@param y y
 	
@@ -734,7 +734,7 @@ declare namespace cc {
 	export function place(pos: Vec2|number, y?: number): ActionInstant;	
 	/**
 	!#en Creates the action with the callback.
-	!#zh æ‰§è¡Œå›è°ƒå‡½æ•°ã€‚
+	!#zh ??§è?????è°???½æ?°ã??
 	@param selector selector
 	@param selectorTarget selectorTarget
 	@param data data for function, it accepts all data types.
@@ -754,7 +754,7 @@ declare namespace cc {
 	!#en
 	Helper constructor to create an array of sequenceable actions
 	The created action will run actions sequentially, one after another.
-	!#zh é¡ºåºæ‰§è¡ŒåŠ¨ä½œï¼Œåˆ›å»ºçš„åŠ¨ä½œå°†æŒ‰é¡ºåºä¾æ¬¡è¿è¡Œã€‚
+	!#zh é¡ºå????§è????¨ä??ï¼????å»ºç????¨ä??å°????é¡ºå??ä¾?æ¬¡è??è¡????
 	@param actionOrActionArray actionOrActionArray
 	@param tempArray tempArray
 	
@@ -771,7 +771,7 @@ declare namespace cc {
 	export function sequence(actionOrActionArray: FiniteTimeAction|FiniteTimeAction[], ...tempArray: FiniteTimeAction[]): ActionInterval;	
 	/**
 	!#en Creates a Repeat action. Times is an unsigned integer between 1 and pow(2,30)
-	!#zh é‡å¤åŠ¨ä½œï¼Œå¯ä»¥æŒ‰ä¸€å®šæ¬¡æ•°é‡å¤ä¸€ä¸ªåŠ¨ï¼Œå¦‚æœæƒ³æ°¸è¿œé‡å¤ä¸€ä¸ªåŠ¨ä½œè¯·ä½¿ç”¨ repeatForever åŠ¨ä½œæ¥å®Œæˆã€‚
+	!#zh ???å¤???¨ä??ï¼???¯ä»¥???ä¸?å®?æ¬¡æ?°é??å¤?ä¸?ä¸ªå?¨ï??å¦??????³æ°¸è¿????å¤?ä¸?ä¸ªå?¨ä??è¯·ä½¿??? repeatForever ??¨ä????¥å????????
 	@param action action
 	@param times times
 	
@@ -784,7 +784,7 @@ declare namespace cc {
 	export function repeat(action: FiniteTimeAction, times: number): ActionInterval;	
 	/**
 	!#en Create a acton which repeat forever, as it runs forever, it can't be added into cc.sequence and cc.spawn.
-	!#zh æ°¸è¿œåœ°é‡å¤ä¸€ä¸ªåŠ¨ä½œï¼Œæœ‰é™æ¬¡æ•°å†…é‡å¤ä¸€ä¸ªåŠ¨ä½œè¯·ä½¿ç”¨ repeat åŠ¨ä½œï¼Œç”±äºè¿™ä¸ªåŠ¨ä½œä¸ä¼šåœæ­¢ï¼Œæ‰€ä»¥ä¸èƒ½è¢«æ·»åŠ åˆ° cc.sequence æˆ– cc.spawn ä¸­ã€‚
+	!#zh æ°¸è????°é??å¤?ä¸?ä¸ªå?¨ä??ï¼???????æ¬¡æ?°å?????å¤?ä¸?ä¸ªå?¨ä??è¯·ä½¿??? repeat ??¨ä??ï¼???±ä??è¿?ä¸ªå?¨ä??ä¸?ä¼????æ­¢ï?????ä»¥ä????½è¢«æ·»å????? cc.sequence ??? cc.spawn ä¸­ã??
 	@param action action
 	
 	@example 
@@ -796,7 +796,7 @@ declare namespace cc {
 	export function repeatForever(action: FiniteTimeAction): ActionInterval;	
 	/**
 	!#en Create a spawn action which runs several actions in parallel.
-	!#zh åŒæ­¥æ‰§è¡ŒåŠ¨ä½œï¼ŒåŒæ­¥æ‰§è¡Œä¸€ç»„åŠ¨ä½œã€‚
+	!#zh ???æ­¥æ?§è????¨ä??ï¼????æ­¥æ?§è??ä¸?ç»???¨ä?????
 	@param actionOrActionArray actionOrActionArray
 	@param tempArray tempArray
 	
@@ -812,7 +812,7 @@ declare namespace cc {
 	!#en
 	Rotates a Node object to a certain angle by modifying its angle property. <br/>
 	The direction will be decided by the shortest angle.
-	!#zh æ—‹è½¬åˆ°ç›®æ ‡è§’åº¦ï¼Œé€šè¿‡é€å¸§ä¿®æ”¹å®ƒçš„ angle å±æ€§ï¼Œæ—‹è½¬æ–¹å‘å°†ç”±æœ€çŸ­çš„è§’åº¦å†³å®šã€‚
+	!#zh ???è½¬å?°ç?®æ??è§?åº¦ï?????è¿????å¸§ä¿®??¹å????? angle å±???§ï?????è½¬æ?¹å??å°???±æ????­ç??è§?åº¦å?³å?????
 	@param duration duration in seconds
 	@param dstAngle dstAngle in degrees.
 	
@@ -827,7 +827,7 @@ declare namespace cc {
 	!#en
 	Rotates a Node object clockwise a number of degrees by modifying its angle property.
 	Relative to its properties to modify.
-	!#zh æ—‹è½¬æŒ‡å®šçš„è§’åº¦ã€‚
+	!#zh ???è½¬æ??å®????è§?åº¦ã??
 	@param duration duration in seconds
 	@param deltaAngle deltaAngle in degrees
 	
@@ -844,7 +844,7 @@ declare namespace cc {
 	x and y are relative to the position of the object.                                                     <br/>
 	Several MoveBy actions can be concurrently called, and the resulting                                  <br/>
 	movement will be the sum of individual movements.
-	!#zh ç§»åŠ¨æŒ‡å®šçš„è·ç¦»ã€‚
+	!#zh ç§»å?¨æ??å®????è·?ç¦»ã??
 	@param duration duration in seconds
 	@param deltaPos deltaPos
 	@param deltaY deltaY
@@ -861,7 +861,7 @@ declare namespace cc {
 	Moves a Node object to the position x,y. x and y are absolute coordinates by modifying its position property. <br/>
 	Several MoveTo actions can be concurrently called, and the resulting                                            <br/>
 	movement will be the sum of individual movements.
-	!#zh ç§»åŠ¨åˆ°ç›®æ ‡ä½ç½®ã€‚
+	!#zh ç§»å?¨å?°ç?®æ??ä½?ç½®ã??
 	@param duration duration in seconds
 	@param position position
 	@param y y
@@ -877,7 +877,7 @@ declare namespace cc {
 	!#en
 	Create a action which skews a Node object to given angles by modifying its skewX and skewY properties.
 	Changes to the specified value.
-	!#zh åæ–œåˆ°ç›®æ ‡è§’åº¦ã€‚
+	!#zh ????????°ç?®æ??è§?åº¦ã??
 	@param t time in seconds
 	@param sx sx
 	@param sy sy
@@ -893,7 +893,7 @@ declare namespace cc {
 	!#en
 	Skews a Node object by skewX and skewY degrees. <br />
 	Relative to its property modification.
-	!#zh åæ–œæŒ‡å®šçš„è§’åº¦ã€‚
+	!#zh ?????????å®????è§?åº¦ã??
 	@param t time in seconds
 	@param sx sx skew in degrees for X axis
 	@param sy sy skew in degrees for Y axis
@@ -909,7 +909,7 @@ declare namespace cc {
 	!#en
 	Moves a Node object simulating a parabolic jump movement by modifying it's position property.
 	Relative to its movement.
-	!#zh ç”¨è·³è·ƒçš„æ–¹å¼ç§»åŠ¨æŒ‡å®šçš„è·ç¦»ã€‚
+	!#zh ??¨è·³è·??????¹å??ç§»å?¨æ??å®????è·?ç¦»ã??
 	@param duration duration
 	@param position position
 	@param y y
@@ -928,7 +928,7 @@ declare namespace cc {
 	!#en
 	Moves a Node object to a parabolic position simulating a jump movement by modifying its position property. <br />
 	Jump to the specified location.
-	!#zh ç”¨è·³è·ƒçš„æ–¹å¼ç§»åŠ¨åˆ°ç›®æ ‡ä½ç½®ã€‚
+	!#zh ??¨è·³è·??????¹å??ç§»å?¨å?°ç?®æ??ä½?ç½®ã??
 	@param duration duration
 	@param position position
 	@param y y
@@ -947,7 +947,7 @@ declare namespace cc {
 	!#en
 	An action that moves the target with a cubic Bezier curve by a certain distance.
 	Relative to its movement.
-	!#zh æŒ‰è´èµ›å°”æ›²çº¿è½¨è¿¹ç§»åŠ¨æŒ‡å®šçš„è·ç¦»ã€‚
+	!#zh ???è´?èµ?å°???²çº¿è½¨è¿¹ç§»å?¨æ??å®????è·?ç¦»ã??
 	@param t time in seconds
 	@param c Array of points
 	
@@ -961,7 +961,7 @@ declare namespace cc {
 	export function bezierBy(t: number, c: Vec2[]): ActionInterval;	
 	/**
 	!#en An action that moves the target with a cubic Bezier curve to a destination point.
-	!#zh æŒ‰è´èµ›å°”æ›²çº¿è½¨è¿¹ç§»åŠ¨åˆ°ç›®æ ‡ä½ç½®ã€‚
+	!#zh ???è´?èµ?å°???²çº¿è½¨è¿¹ç§»å?¨å?°ç?®æ??ä½?ç½®ã??
 	@param t t
 	@param c Array of points
 	
@@ -975,7 +975,7 @@ declare namespace cc {
 	export function bezierTo(t: number, c: Vec2[]): ActionInterval;	
 	/**
 	!#en Scales a Node object to a zoom factor by modifying it's scale property.
-	!#zh å°†èŠ‚ç‚¹å¤§å°ç¼©æ”¾åˆ°æŒ‡å®šçš„å€æ•°ã€‚
+	!#zh å°??????¹å¤§å°?ç¼©æ?¾å?°æ??å®?????????°ã??
 	@param duration duration
 	@param sx scale parameter in X
 	@param sy scale parameter in Y, if Null equal to sx
@@ -995,7 +995,7 @@ declare namespace cc {
 	!#en
 	Scales a Node object a zoom factor by modifying it's scale property.
 	Relative to its changes.
-	!#zh æŒ‰æŒ‡å®šçš„å€æ•°ç¼©æ”¾èŠ‚ç‚¹å¤§å°ã€‚
+	!#zh ??????å®?????????°ç¼©??¾è????¹å¤§å°????
 	@param duration duration in seconds
 	@param sx sx  scale parameter in X
 	@param sy sy scale parameter in Y, if Null equal to sx
@@ -1012,7 +1012,7 @@ declare namespace cc {
 	export function scaleBy(duration: number, sx: number, sy?: number|void): ActionInterval;	
 	/**
 	!#en Blinks a Node object by modifying it's visible property.
-	!#zh é—ªçƒï¼ˆåŸºäºé€æ˜åº¦ï¼‰ã€‚
+	!#zh ??ªç??ï¼???ºä????????åº¦ï?????
 	@param duration duration in seconds
 	@param blinks blinks in times
 	
@@ -1027,7 +1027,7 @@ declare namespace cc {
 	!#en
 	Fades an object that implements the cc.RGBAProtocol protocol.
 	It modifies the opacity from the current value to a custom one.
-	!#zh ä¿®æ”¹é€æ˜åº¦åˆ°æŒ‡å®šå€¼ã€‚
+	!#zh ä¿®æ?¹é?????åº¦å?°æ??å®???¼ã??
 	@param duration duration
 	@param opacity 0-255, 0 is transparent
 	
@@ -1040,7 +1040,7 @@ declare namespace cc {
 	export function fadeTo(duration: number, opacity: number): ActionInterval;	
 	/**
 	!#en Fades In an object that implements the cc.RGBAProtocol protocol. It modifies the opacity from 0 to 255.
-	!#zh æ¸æ˜¾æ•ˆæœã€‚
+	!#zh æ¸???¾æ????????
 	@param duration duration in seconds
 	
 	@example 
@@ -1052,7 +1052,7 @@ declare namespace cc {
 	export function fadeIn(duration: number): ActionInterval;	
 	/**
 	!#en Fades Out an object that implements the cc.RGBAProtocol protocol. It modifies the opacity from 255 to 0.
-	!#zh æ¸éšæ•ˆæœã€‚
+	!#zh æ¸?????????????
 	@param d duration in seconds
 	
 	@example 
@@ -1064,7 +1064,7 @@ declare namespace cc {
 	export function fadeOut(d: number): ActionInterval;	
 	/**
 	!#en Tints a Node that implements the cc.NodeRGB protocol from current tint to a custom one.
-	!#zh ä¿®æ”¹é¢œè‰²åˆ°æŒ‡å®šå€¼ã€‚
+	!#zh ä¿®æ?¹é????²å?°æ??å®???¼ã??
 	@param duration duration
 	@param red 0-255
 	@param green 0-255
@@ -1081,7 +1081,7 @@ declare namespace cc {
 	!#en
 	Tints a Node that implements the cc.NodeRGB protocol from current tint to a custom one.
 	Relative to their own color change.
-	!#zh æŒ‰ç…§æŒ‡å®šçš„å¢é‡ä¿®æ”¹é¢œè‰²ã€‚
+	!#zh ?????§æ??å®????å¢????ä¿®æ?¹é????²ã??
 	@param duration duration in seconds
 	@param deltaRed deltaRed
 	@param deltaGreen deltaGreen
@@ -1096,7 +1096,7 @@ declare namespace cc {
 	export function tintBy(duration: number, deltaRed: number, deltaGreen: number, deltaBlue: number): ActionInterval;	
 	/**
 	!#en Delays the action a certain amount of seconds.
-	!#zh å»¶è¿ŸæŒ‡å®šçš„æ—¶é—´é‡ã€‚
+	!#zh å»¶è?????å®??????¶é?´é?????
 	@param d duration in seconds
 	
 	@example 
@@ -1108,7 +1108,7 @@ declare namespace cc {
 	export function delayTime(d: number): ActionInterval;	
 	/**
 	!#en Executes an action in reverse order, from time=duration to time=0.
-	!#zh åè½¬ç›®æ ‡åŠ¨ä½œçš„æ—¶é—´è½´ã€‚
+	!#zh ???è½¬ç?®æ????¨ä???????¶é?´è½´???
 	@param action action
 	
 	@example 
@@ -1120,7 +1120,7 @@ declare namespace cc {
 	export function reverseTime(action: FiniteTimeAction): ActionInterval;	
 	/**
 	!#en Create an action with the specified action and forced target.
-	!#zh ç”¨å·²æœ‰åŠ¨ä½œå’Œä¸€ä¸ªæ–°çš„ç›®æ ‡èŠ‚ç‚¹åˆ›å»ºåŠ¨ä½œã€‚
+	!#zh ??¨å·²?????¨ä?????ä¸?ä¸ªæ?°ç????®æ???????¹å??å»ºå?¨ä?????
 	@param target target
 	@param action action 
 	*/
@@ -1131,7 +1131,7 @@ declare namespace cc {
 	*/
 	export function tween<T> (target?: T) : Tween<T>;	
 	/** !#en This is a Easing instance.
-	!#zh è¿™æ˜¯ä¸€ä¸ª Easing ç±»å®ä¾‹ã€‚ */
+	!#zh è¿???¯ä??ä¸? Easing ç±»å??ä¾???? */
 	export var easing: Easing;	
 	/**
 	!#en
@@ -1139,9 +1139,9 @@ declare namespace cc {
 	- In Cocos Creator, error is red.<br/>
 	- In Chrome, error have a red icon along with red message text.<br/>
 	!#zh
-	è¾“å‡ºé”™è¯¯æ¶ˆæ¯åˆ° Cocos Creator ç¼–è¾‘å™¨çš„ Console æˆ–è¿è¡Œæ—¶é¡µé¢ç«¯çš„ Console ä¸­ã€‚<br/>
-	- åœ¨ Cocos Creator ä¸­ï¼Œé”™è¯¯ä¿¡æ¯æ˜¾ç¤ºæ˜¯çº¢è‰²çš„ã€‚<br/>
-	- åœ¨ Chrome ä¸­ï¼Œé”™è¯¯ä¿¡æ¯æœ‰çº¢è‰²çš„å›¾æ ‡ä»¥åŠçº¢è‰²çš„æ¶ˆæ¯æ–‡æœ¬ã€‚<br/>
+	è¾???ºé??è¯¯æ????¯å?? Cocos Creator ç¼?è¾???¨ç?? Console ???è¿?è¡???¶é¡µ??¢ç«¯??? Console ä¸­ã??<br/>
+	- ??? Cocos Creator ä¸­ï?????è¯¯ä¿¡??¯æ?¾ç¤º??¯çº¢??²ç?????<br/>
+	- ??? Chrome ä¸­ï?????è¯¯ä¿¡??¯æ??çº¢è?²ç????¾æ??ä»¥å??çº¢è?²ç??æ¶???¯æ????¬ã??<br/>
 	@param msg A JavaScript string containing zero or more substitution strings.
 	@param subst JavaScript objects with which to replace substitution strings within msg. This gives you additional control over the format of the output. 
 	*/
@@ -1152,31 +1152,31 @@ declare namespace cc {
 	- In Cocos Creator, warning is yellow.
 	- In Chrome, warning have a yellow warning icon with the message text.
 	!#zh
-	è¾“å‡ºè­¦å‘Šæ¶ˆæ¯åˆ° Cocos Creator ç¼–è¾‘å™¨çš„ Console æˆ–è¿è¡Œæ—¶ Web ç«¯çš„ Console ä¸­ã€‚<br/>
-	- åœ¨ Cocos Creator ä¸­ï¼Œè­¦å‘Šä¿¡æ¯æ˜¾ç¤ºæ˜¯é»„è‰²çš„ã€‚<br/>
-	- åœ¨ Chrome ä¸­ï¼Œè­¦å‘Šä¿¡æ¯æœ‰ç€é»„è‰²çš„å›¾æ ‡ä»¥åŠé»„è‰²çš„æ¶ˆæ¯æ–‡æœ¬ã€‚<br/>
+	è¾???ºè­¦???æ¶???¯å?? Cocos Creator ç¼?è¾???¨ç?? Console ???è¿?è¡???? Web ç«¯ç?? Console ä¸­ã??<br/>
+	- ??? Cocos Creator ä¸­ï??è­¦å??ä¿¡æ?¯æ?¾ç¤º??¯é????²ç?????<br/>
+	- ??? Chrome ä¸­ï??è­¦å??ä¿¡æ?¯æ?????é»???²ç????¾æ??ä»¥å??é»???²ç??æ¶???¯æ????¬ã??<br/>
 	@param msg A JavaScript string containing zero or more substitution strings.
 	@param subst JavaScript objects with which to replace substitution strings within msg. This gives you additional control over the format of the output. 
 	*/
 	export function warn(msg: any, ...subst: any[]): void;	
 	/**
 	!#en Outputs a message to the Cocos Creator Console (editor) or Web Console (runtime).
-	!#zh è¾“å‡ºä¸€æ¡æ¶ˆæ¯åˆ° Cocos Creator ç¼–è¾‘å™¨çš„ Console æˆ–è¿è¡Œæ—¶ Web ç«¯çš„ Console ä¸­ã€‚
+	!#zh è¾???ºä????¡æ????¯å?? Cocos Creator ç¼?è¾???¨ç?? Console ???è¿?è¡???? Web ç«¯ç?? Console ä¸­ã??
 	@param msg A JavaScript string containing zero or more substitution strings.
 	@param subst JavaScript objects with which to replace substitution strings within msg. This gives you additional control over the format of the output. 
 	*/
 	export function log(msg: string|any, ...subst: any[]): void;	
 	/** !#en Director
-	!#zh å¯¼æ¼”ç±»ã€‚ */
+	!#zh å¯¼æ??ç±»ã?? */
 	export var director: Director;	
 	/** !#en This is a Game instance.
-	!#zh è¿™æ˜¯ä¸€ä¸ª Game ç±»çš„å®ä¾‹ï¼ŒåŒ…å«æ¸¸æˆä¸»ä½“ä¿¡æ¯å¹¶è´Ÿè´£é©±åŠ¨æ¸¸æˆçš„æ¸¸æˆå¯¹è±¡ã€‚ã€‚ */
+	!#zh è¿???¯ä??ä¸? Game ç±»ç??å®?ä¾?ï¼??????«æ¸¸???ä¸»ä??ä¿¡æ?¯å¹¶è´?è´?é©±å?¨æ¸¸??????æ¸¸æ??å¯¹è±¡?????? */
 	export var game: Game;	
 	/**
 	!#en
 	Rotates a Node object to a certain angle by modifying its quternion property. <br/>
 	The direction will be decided by the shortest angle.
-	!#zh æ—‹è½¬åˆ°ç›®æ ‡è§’åº¦ï¼Œé€šè¿‡é€å¸§ä¿®æ”¹å®ƒçš„ quternion å±æ€§ï¼Œæ—‹è½¬æ–¹å‘å°†ç”±æœ€çŸ­çš„è§’åº¦å†³å®šã€‚
+	!#zh ???è½¬å?°ç?®æ??è§?åº¦ï?????è¿????å¸§ä¿®??¹å????? quternion å±???§ï?????è½¬æ?¹å??å°???±æ????­ç??è§?åº¦å?³å?????
 	@param duration duration in seconds
 	@param dstAngleX dstAngleX in degrees.
 	@param dstAngleY dstAngleY in degrees.
@@ -1193,7 +1193,7 @@ declare namespace cc {
 	!#en
 	Rotates a Node object counter clockwise a number of degrees by modifying its quaternion property.
 	Relative to its properties to modify.
-	!#zh æ—‹è½¬æŒ‡å®šçš„ 3D è§’åº¦ã€‚
+	!#zh ???è½¬æ??å®???? 3D è§?åº¦ã??
 	@param duration duration in seconds
 	@param deltaAngleX deltaAngleX in degrees
 	@param deltaAngleY deltaAngleY in degrees
@@ -1211,10 +1211,10 @@ declare namespace cc {
 	cc.resources is a bundle and controls all asset under assets/resources
 	
 	!#zh
-	cc.resources æ˜¯ä¸€ä¸ª bundleï¼Œç”¨äºç®¡ç†æ‰€æœ‰åœ¨ assets/resources ä¸‹çš„èµ„æº */
+	cc.resources ??¯ä??ä¸? bundleï¼???¨ä??ç®¡ç??????????? assets/resources ä¸????èµ?æº? */
 	export var resources: AssetManager.Bundle;	
 	/** !#en The System event singleton for global usage
-	!#zh ç³»ç»Ÿäº‹ä»¶å•ä¾‹ï¼Œæ–¹ä¾¿å…¨å±€ä½¿ç”¨ */
+	!#zh ç³»ç??äº?ä»¶å??ä¾?ï¼???¹ä¾¿??¨å??ä½¿ç?? */
 	export var systemEvent: SystemEvent;	
 	/**
 	Finds a node by hierarchy path, the path is case-sensitive.
@@ -1227,7 +1227,7 @@ declare namespace cc {
 	export function find(path: string, referenceNode?: Node): Node;	
 	/**
 	!#en Defines a CCClass using the given specification, please see [Class](/docs/editors_and_tools/creator-chapters/scripting/class.html) for details.
-	!#zh å®šä¹‰ä¸€ä¸ª CCClassï¼Œä¼ å…¥å‚æ•°å¿…é¡»æ˜¯ä¸€ä¸ªåŒ…å«ç±»å‹å‚æ•°çš„å­—é¢é‡å¯¹è±¡ï¼Œå…·ä½“ç”¨æ³•è¯·æŸ¥é˜…[ç±»å‹å®šä¹‰](/docs/creator/scripting/class.html)ã€‚
+	!#zh å®?ä¹?ä¸?ä¸? CCClassï¼?ä¼???¥å????°å??é¡»æ?¯ä??ä¸ªå????«ç±»????????°ç??å­???¢é??å¯¹è±¡ï¼???·ä????¨æ??è¯·æ?¥é??[ç±»å??å®?ä¹?](/docs/creator/scripting/class.html)???
 	@param options options
 	
 	@example 
@@ -1287,8 +1287,8 @@ declare namespace cc {
 	Otherwise it will use the value specified by user who writes the enum definition.
 	
 	!#zh
-	å®šä¹‰ä¸€ä¸ªæšä¸¾ç±»å‹ã€‚<br/>
-	ç”¨æˆ·å¯ä»¥æŠŠæšä¸¾å€¼è®¾ä¸ºä»»æ„çš„æ•´æ•°ï¼Œå¦‚æœè®¾ä¸º -1ï¼Œç³»ç»Ÿå°†ä¼šåˆ†é…ä¸ºä¸Šä¸€ä¸ªæšä¸¾å€¼ + 1ã€‚
+	å®?ä¹?ä¸?ä¸ªæ??ä¸¾ç±»??????<br/>
+	??¨æ?·å?¯ä»¥??????ä¸¾å?¼è®¾ä¸ºä»»????????´æ?°ï??å¦????è®¾ä¸º -1ï¼?ç³»ç??å°?ä¼???????ä¸ºä??ä¸?ä¸ªæ??ä¸¾å?? + 1???
 	@param obj a JavaScript literal object containing enum names and values, or a TypeScript enum type
 	
 	@example 
@@ -1423,8 +1423,8 @@ declare namespace cc {
 	but this is often caused by a particular logical requirements, which is not normally required.
 	
 	!#zh
-	æ£€æŸ¥è¯¥å¯¹è±¡æ˜¯å¦ä¸ä¸º null å¹¶ä¸”å°šæœªé”€æ¯ã€‚<br>
-	å½“ä¸€ä¸ªå¯¹è±¡çš„ `destroy` è°ƒç”¨ä»¥åï¼Œä¼šåœ¨è¿™ä¸€å¸§ç»“æŸåæ‰çœŸæ­£é”€æ¯ã€‚å› æ­¤ä»ä¸‹ä¸€å¸§å¼€å§‹ `isValid` å°±ä¼šè¿”å› falseï¼Œè€Œå½“å‰å¸§å†… `isValid` ä»ç„¶ä¼šæ˜¯ trueã€‚å¦‚æœå¸Œæœ›åˆ¤æ–­å½“å‰å¸§æ˜¯å¦è°ƒç”¨è¿‡ `destroy`ï¼Œè¯·ä½¿ç”¨ `cc.isValid(obj, true)`ï¼Œä¸è¿‡è¿™å¾€å¾€æ˜¯ç‰¹æ®Šçš„ä¸šåŠ¡éœ€æ±‚å¼•èµ·çš„ï¼Œé€šå¸¸æƒ…å†µä¸‹ä¸éœ€è¦è¿™æ ·ã€‚
+	æ£???¥è¯¥å¯¹è±¡??¯å?¦ä??ä¸? null å¹¶ä??å°???ªé??æ¯????<br>
+	å½?ä¸?ä¸ªå¯¹è±¡ç?? `destroy` è°???¨ä»¥???ï¼?ä¼???¨è??ä¸?å¸§ç??????????????æ­????æ¯???????æ­¤ä??ä¸?ä¸?å¸§å??å§? `isValid` å°±ä??è¿???? falseï¼????å½????å¸§å?? `isValid` ä»???¶ä????? true???å¦????å¸??????¤æ?­å?????å¸§æ?¯å?¦è????¨è?? `destroy`ï¼?è¯·ä½¿??? `cc.isValid(obj, true)`ï¼?ä¸?è¿?è¿?å¾?å¾???¯ç?¹æ?????ä¸???¡é??æ±?å¼?èµ·ç??ï¼????å¸¸æ????µä??ä¸????è¦?è¿???·ã??
 	@param value value
 	@param strictMode If true, Object called destroy() in this frame will also treated as invalid.
 	
@@ -1440,10 +1440,10 @@ declare namespace cc {
 	*/
 	export function isValid(value: any, strictMode?: boolean): boolean;	
 	/** !#en cc.view is the shared view object.
-	!#zh cc.view æ˜¯å…¨å±€çš„è§†å›¾å¯¹è±¡ã€‚ */
+	!#zh cc.view ??¯å?¨å?????è§???¾å¯¹è±¡ã?? */
 	export var view: View;	
 	/** !#en cc.winSize is the alias object for the size of the current game window.
-	!#zh cc.winSize ä¸ºå½“å‰çš„æ¸¸æˆçª—å£çš„å¤§å°ã€‚ */
+	!#zh cc.winSize ä¸ºå????????æ¸¸æ??çª???????å¤§å????? */
 	export var winSize: Size;	
 	/** Specify that the input value must be integer in Inspector.
 	Also used to indicates that the elements in array should be type integer. */
@@ -1456,7 +1456,7 @@ declare namespace cc {
 	export var String: string;	
 	/**
 	!#en Deserialize json to cc.Asset
-	!#zh å°† JSON ååºåˆ—åŒ–ä¸ºå¯¹è±¡å®ä¾‹ã€‚
+	!#zh å°? JSON ???åº???????ä¸ºå¯¹è±¡å??ä¾????
 	@param data the serialized cc.Asset json string or json object.
 	@param details additional loading result
 	@param options options 
@@ -1464,9 +1464,9 @@ declare namespace cc {
 	export function deserialize(data: string|any, details?: Details, options?: any): any;	
 	/**
 	!#en Clones the object `original` and returns the clone, or instantiate a node from the Prefab.
-	!#zh å…‹éš†æŒ‡å®šçš„ä»»æ„ç±»å‹çš„å¯¹è±¡ï¼Œæˆ–è€…ä» Prefab å®ä¾‹åŒ–å‡ºæ–°èŠ‚ç‚¹ã€‚
+	!#zh ?????????å®????ä»»æ??ç±»å?????å¯¹è±¡ï¼???????ä»? Prefab å®?ä¾??????ºæ?°è????¹ã??
 	
-	ï¼ˆInstantiate æ—¶ï¼Œfunction å’Œ dom ç­‰éå¯åºåˆ—åŒ–å¯¹è±¡ä¼šç›´æ¥ä¿ç•™åŸæœ‰å¼•ç”¨ï¼ŒAsset ä¼šç›´æ¥è¿›è¡Œæµ…æ‹·è´ï¼Œå¯åºåˆ—åŒ–ç±»å‹ä¼šè¿›è¡Œæ·±æ‹·è´ã€‚ï¼‰
+	ï¼?Instantiate ??¶ï??function ??? dom ç­??????¯å????????å¯¹è±¡ä¼???´æ?¥ä???????????å¼???¨ï??Asset ä¼???´æ?¥è??è¡?æµ???·è??ï¼???¯å????????ç±»å??ä¼?è¿?è¡?æ·±æ?·è?????ï¼?
 	@param original An existing object that you want to make a copy of.
 	
 	@example 
@@ -1489,8 +1489,8 @@ declare namespace cc {
 	Alpha channel is optional. Default value is 255.
 	
 	!#zh
-	é€šè¿‡è¯¥æ–¹æ³•æ¥åˆ›å»ºä¸€ä¸ªæ–°çš„ {{#crossLink "Color/Color:method"}}cc.Color{{/crossLink}} å¯¹è±¡ã€‚
-	Alpha é€šé“æ˜¯å¯é€‰çš„ã€‚é»˜è®¤å€¼æ˜¯ 255ã€‚
+	???è¿?è¯¥æ?¹æ????¥å??å»ºä??ä¸ªæ?°ç?? {{#crossLink "Color/Color:method"}}cc.Color{{/crossLink}} å¯¹è±¡???
+	Alpha ????????¯å?¯é????????é»?è®¤å?¼æ?? 255???
 	@param r r
 	@param g g
 	@param b b
@@ -1511,7 +1511,7 @@ declare namespace cc {
 	export function color(r?: number, g?: number, b?: number, a?: number): Color;	
 	/**
 	!#en The convenience method to create a new {{#crossLink "Mat4"}}cc.Mat4{{/crossLink}}.
-	!#zh é€šè¿‡è¯¥ç®€ä¾¿çš„å‡½æ•°è¿›è¡Œåˆ›å»º {{#crossLink "Mat4"}}cc.Mat4{{/crossLink}} å¯¹è±¡ã€‚
+	!#zh ???è¿?è¯¥ç??ä¾¿ç????½æ?°è??è¡????å»? {{#crossLink "Mat4"}}cc.Mat4{{/crossLink}} å¯¹è±¡???
 	@param m00 Component in column 0, row 0 position (index 0)
 	@param m01 Component in column 0, row 1 position (index 1)
 	@param m02 Component in column 0, row 2 position (index 2)
@@ -1532,7 +1532,7 @@ declare namespace cc {
 	export function mat4(m00?: number, m01?: number, m02?: number, m03?: number, m10?: number, m11?: number, m12?: number, m13?: number, m20?: number, m21?: number, m22?: number, m23?: number, m30?: number, m31?: number, m32?: number, m33?: number): Mat4;	
 	/**
 	!#en The convenience method to create a new {{#crossLink "Quat"}}cc.Quat{{/crossLink}}.
-	!#zh é€šè¿‡è¯¥ç®€ä¾¿çš„å‡½æ•°è¿›è¡Œåˆ›å»º {{#crossLink "Quat"}}cc.Quat{{/crossLink}} å¯¹è±¡ã€‚
+	!#zh ???è¿?è¯¥ç??ä¾¿ç????½æ?°è??è¡????å»? {{#crossLink "Quat"}}cc.Quat{{/crossLink}} å¯¹è±¡???
 	@param x x
 	@param y y
 	@param z z
@@ -1544,7 +1544,7 @@ declare namespace cc {
 	The convenience method to create a new Rect.
 	see {{#crossLink "Rect/Rect:method"}}cc.Rect{{/crossLink}}
 	!#zh
-	è¯¥æ–¹æ³•ç”¨æ¥å¿«é€Ÿåˆ›å»ºä¸€ä¸ªæ–°çš„çŸ©å½¢ã€‚{{#crossLink "Rect/Rect:method"}}cc.Rect{{/crossLink}}
+	è¯¥æ?¹æ????¨æ?¥å¿«??????å»ºä??ä¸ªæ?°ç????©å½¢???{{#crossLink "Rect/Rect:method"}}cc.Rect{{/crossLink}}
 	@param x x
 	@param y y
 	@param w w
@@ -1561,8 +1561,8 @@ declare namespace cc {
 	Helper function that creates a cc.Size.<br/>
 	Please use cc.p or cc.v2 instead, it will soon replace cc.Size.
 	!#zh
-	åˆ›å»ºä¸€ä¸ª cc.Size å¯¹è±¡çš„å¸®åŠ©å‡½æ•°ã€‚<br/>
-	æ³¨æ„ï¼šå¯ä»¥ä½¿ç”¨ cc.p æˆ–è€…æ˜¯ cc.v2 ä»£æ›¿ï¼Œå®ƒä»¬å°†å¾ˆå¿«å–ä»£ cc.Sizeã€‚
+	???å»ºä??ä¸? cc.Size å¯¹è±¡???å¸®å?©å?½æ?°ã??<br/>
+	æ³¨æ??ï¼???¯ä»¥ä½¿ç?? cc.p ????????? cc.v2 ä»???¿ï??å®?ä»¬å??å¾?å¿«å??ä»? cc.Size???
 	@param w width or a size object
 	@param h height
 	
@@ -1659,7 +1659,7 @@ declare namespace cc {
 	export function sign(v: number): void;	
 	/**
 	!#en The convenience method to create a new {{#crossLink "Vec2"}}cc.Vec2{{/crossLink}}.
-	!#zh é€šè¿‡è¯¥ç®€ä¾¿çš„å‡½æ•°è¿›è¡Œåˆ›å»º {{#crossLink "Vec2"}}cc.Vec2{{/crossLink}} å¯¹è±¡ã€‚
+	!#zh ???è¿?è¯¥ç??ä¾¿ç????½æ?°è??è¡????å»? {{#crossLink "Vec2"}}cc.Vec2{{/crossLink}} å¯¹è±¡???
 	@param x x
 	@param y y
 	
@@ -1674,7 +1674,7 @@ declare namespace cc {
 	export function v2(x?: number|any, y?: number): Vec2;	
 	/**
 	!#en The convenience method to create a new {{#crossLink "Vec3"}}cc.Vec3{{/crossLink}}.
-	!#zh é€šè¿‡è¯¥ç®€ä¾¿çš„å‡½æ•°è¿›è¡Œåˆ›å»º {{#crossLink "Vec3"}}cc.Vec3{{/crossLink}} å¯¹è±¡ã€‚
+	!#zh ???è¿?è¯¥ç??ä¾¿ç????½æ?°è??è¡????å»? {{#crossLink "Vec3"}}cc.Vec3{{/crossLink}} å¯¹è±¡???
 	@param x x
 	@param y y
 	@param z z
@@ -1709,50 +1709,50 @@ declare namespace cc {
 	*/
 	export function reset(): void;	
 	/** !#en Base class cc.Action for action classes.
-	!#zh Action ç±»æ˜¯æ‰€æœ‰åŠ¨ä½œç±»å‹çš„åŸºç±»ã€‚ */
+	!#zh Action ç±»æ?¯æ???????¨ä??ç±»å???????ºç±»??? */
 	export class Action {		
 		/**
 		!#en
 		to copy object with deep copy.
 		returns a clone of action.
-		!#zh è¿”å›ä¸€ä¸ªå…‹éš†çš„åŠ¨ä½œã€‚ 
+		!#zh è¿????ä¸?ä¸ªå??????????¨ä????? 
 		*/
 		clone(): Action;		
 		/**
 		!#en
 		return true if the action has finished.
-		!#zh å¦‚æœåŠ¨ä½œå·²å®Œæˆå°±è¿”å› trueã€‚ 
+		!#zh å¦??????¨ä??å·²å?????å°±è????? true??? 
 		*/
 		isDone(): boolean;		
 		/**
 		!#en get the target.
-		!#zh è·å–å½“å‰ç›®æ ‡èŠ‚ç‚¹ã€‚ 
+		!#zh ??·å??å½??????®æ???????¹ã?? 
 		*/
 		getTarget(): Node;		
 		/**
 		!#en The action will modify the target properties.
-		!#zh è®¾ç½®ç›®æ ‡èŠ‚ç‚¹ã€‚
+		!#zh è®¾ç½®??®æ???????¹ã??
 		@param target target 
 		*/
 		setTarget(target: Node): void;		
 		/**
 		!#en get the original target.
-		!#zh è·å–åŸå§‹ç›®æ ‡èŠ‚ç‚¹ã€‚ 
+		!#zh ??·å?????å§???®æ???????¹ã?? 
 		*/
 		getOriginalTarget(): Node;		
 		/**
 		!#en get tag number.
-		!#zh è·å–ç”¨äºè¯†åˆ«åŠ¨ä½œçš„æ ‡ç­¾ã€‚ 
+		!#zh ??·å????¨ä??è¯???«å?¨ä????????ç­¾ã?? 
 		*/
 		getTag(): number;		
 		/**
 		!#en set tag number.
-		!#zh è®¾ç½®æ ‡ç­¾ï¼Œç”¨äºè¯†åˆ«åŠ¨ä½œã€‚
+		!#zh è®¾ç½®???ç­¾ï????¨ä??è¯???«å?¨ä?????
 		@param tag tag 
 		*/
 		setTag(tag: number): void;		
 		/** !#en Default Action tag.
-		!#zh é»˜è®¤åŠ¨ä½œæ ‡ç­¾ã€‚ */
+		!#zh é»?è®¤å?¨ä?????ç­¾ã?? */
 		static TAG_INVALID: number;	
 	}	
 	/** !#en
@@ -1762,16 +1762,16 @@ declare namespace cc {
 	- An action with a duration of 35.5 seconds.
 	
 	Infinite time actions are valid
-	!#zh æœ‰é™æ—¶é—´åŠ¨ä½œï¼Œè¿™ç§åŠ¨ä½œæ‹¥æœ‰æ—¶é•¿ duration å±æ€§ã€‚ */
+	!#zh ????????¶é?´å?¨ä??ï¼?è¿?ç§???¨ä????¥æ????¶é?? duration å±???§ã?? */
 	export class FiniteTimeAction extends Action {		
 		/**
 		!#en get duration of the action. (seconds).
-		!#zh è·å–åŠ¨ä½œä»¥ç§’ä¸ºå•ä½çš„æŒç»­æ—¶é—´ã€‚ 
+		!#zh ??·å????¨ä??ä»¥ç??ä¸ºå??ä½???????ç»­æ?¶é?´ã?? 
 		*/
 		getDuration(): number;		
 		/**
 		!#en set duration of the action. (seconds).
-		!#zh è®¾ç½®åŠ¨ä½œä»¥ç§’ä¸ºå•ä½çš„æŒç»­æ—¶é—´ã€‚
+		!#zh è®¾ç½®??¨ä??ä»¥ç??ä¸ºå??ä½???????ç»­æ?¶é?´ã??
 		@param duration duration 
 		*/
 		setDuration(duration: number): void;		
@@ -1782,19 +1782,19 @@ declare namespace cc {
 		- The action will be x coordinates of 0 move to 100. <br />
 		- The reversed action will be x of 100 move to 0.
 		- Will be rewritten
-		!#zh è¿”å›ä¸€ä¸ªæ–°çš„åŠ¨ä½œï¼Œæ‰§è¡Œä¸åŸåŠ¨ä½œå®Œå…¨ç›¸åçš„åŠ¨ä½œã€‚ 
+		!#zh è¿????ä¸?ä¸ªæ?°ç????¨ä??ï¼???§è??ä¸??????¨ä??å®???¨ç?¸å???????¨ä????? 
 		*/
 		reverse(): void;		
 		/**
 		!#en
 		to copy object with deep copy.
 		returns a clone of action.
-		!#zh è¿”å›ä¸€ä¸ªå…‹éš†çš„åŠ¨ä½œã€‚ 
+		!#zh è¿????ä¸?ä¸ªå??????????¨ä????? 
 		*/
 		clone(): FiniteTimeAction;	
 	}	
 	/** !#en Instant actions are immediate actions. They don't have a duration like the ActionInterval actions.
-	!#zh å³æ—¶åŠ¨ä½œï¼Œè¿™ç§åŠ¨ä½œç«‹å³å°±ä¼šæ‰§è¡Œï¼Œç»§æ‰¿è‡ª FiniteTimeActionã€‚ */
+	!#zh ??³æ?¶å?¨ä??ï¼?è¿?ç§???¨ä??ç«???³å°±ä¼???§è??ï¼?ç»§æ?¿è?? FiniteTimeAction??? */
 	export class ActionInstant extends FiniteTimeAction {	
 	}	
 	/** !#en
@@ -1809,11 +1809,11 @@ declare namespace cc {
 	
 	<p>For example, you can simulate a Ping Pong effect running the action normally and<br/>
 	then running it again in Reverse mode. </p>
-	!#zh æ—¶é—´é—´éš”åŠ¨ä½œï¼Œè¿™ç§åŠ¨ä½œåœ¨å·²å®šæ—¶é—´å†…å®Œæˆï¼Œç»§æ‰¿ FiniteTimeActionã€‚ */
+	!#zh ??¶é?´é?´é????¨ä??ï¼?è¿?ç§???¨ä????¨å·²å®???¶é?´å??å®????ï¼?ç»§æ?? FiniteTimeAction??? */
 	export class ActionInterval extends FiniteTimeAction {		
 		/**
 		!#en Implementation of ease motion.
-		!#zh ç¼“åŠ¨è¿åŠ¨ã€‚
+		!#zh ç¼???¨è????¨ã??
 		@param easeObj easeObj
 		
 		@example 
@@ -1826,7 +1826,7 @@ declare namespace cc {
 		!#en
 		Repeats an action a number of times.
 		To repeat an action forever use the CCRepeatForever action.
-		!#zh é‡å¤åŠ¨ä½œå¯ä»¥æŒ‰ä¸€å®šæ¬¡æ•°é‡å¤ä¸€ä¸ªåŠ¨ä½œï¼Œä½¿ç”¨ RepeatForever åŠ¨ä½œæ¥æ°¸è¿œé‡å¤ä¸€ä¸ªåŠ¨ä½œã€‚
+		!#zh ???å¤???¨ä????¯ä»¥???ä¸?å®?æ¬¡æ?°é??å¤?ä¸?ä¸ªå?¨ä??ï¼?ä½¿ç?? RepeatForever ??¨ä????¥æ°¸è¿????å¤?ä¸?ä¸ªå?¨ä?????
 		@param times times 
 		*/
 		repeat(times: number): ActionInterval;		
@@ -1834,7 +1834,7 @@ declare namespace cc {
 		!#en
 		Repeats an action for ever.  <br/>
 		To repeat the an action for a limited number of times use the Repeat action. <br/>
-		!#zh æ°¸è¿œåœ°é‡å¤ä¸€ä¸ªåŠ¨ä½œï¼Œæœ‰é™æ¬¡æ•°å†…é‡å¤ä¸€ä¸ªåŠ¨ä½œè¯·ä½¿ç”¨ Repeat åŠ¨ä½œã€‚ 
+		!#zh æ°¸è????°é??å¤?ä¸?ä¸ªå?¨ä??ï¼???????æ¬¡æ?°å?????å¤?ä¸?ä¸ªå?¨ä??è¯·ä½¿??? Repeat ??¨ä????? 
 		*/
 		repeatForever(): ActionInterval;	
 	}	
@@ -1847,12 +1847,12 @@ declare namespace cc {
 	- When you want to run an action where the target is different from a CCNode.<br/>
 	- When you want to pause / resume the actions<br/>
 	!#zh
-	cc.ActionManager æ˜¯å¯ä»¥ç®¡ç†åŠ¨ä½œçš„å•ä¾‹ç±»ã€‚<br/>
-	é€šå¸¸ä½ å¹¶ä¸éœ€è¦ç›´æ¥ä½¿ç”¨è¿™ä¸ªç±»ï¼Œ99%çš„æƒ…å†µæ‚¨å°†ä½¿ç”¨ CCNode çš„æ¥å£ã€‚<br/>
-	ä½†ä¹Ÿæœ‰ä¸€äº›æƒ…å†µä¸‹ï¼Œæ‚¨å¯èƒ½éœ€è¦ä½¿ç”¨è¿™ä¸ªç±»ã€‚ <br/>
-	ä¾‹å¦‚ï¼š
-	 - å½“ä½ æƒ³è¦è¿è¡Œä¸€ä¸ªåŠ¨ä½œï¼Œä½†ç›®æ ‡ä¸æ˜¯ CCNode ç±»å‹æ—¶ã€‚ <br/>
-	 - å½“ä½ æƒ³è¦æš‚åœ/æ¢å¤åŠ¨ä½œæ—¶ã€‚ <br/> */
+	cc.ActionManager ??¯å?¯ä»¥ç®¡ç????¨ä????????ä¾?ç±»ã??<br/>
+	???å¸¸ä??å¹¶ä?????è¦???´æ?¥ä½¿??¨è??ä¸ªç±»ï¼?99%????????µæ?¨å??ä½¿ç?? CCNode ?????¥å?????<br/>
+	ä½?ä¹????ä¸?äº??????µä??ï¼???¨å?¯è?½é??è¦?ä½¿ç?¨è??ä¸ªç±»??? <br/>
+	ä¾?å¦?ï¼?
+	 - å½?ä½???³è??è¿?è¡?ä¸?ä¸ªå?¨ä??ï¼?ä½???®æ??ä¸???? CCNode ç±»å????¶ã?? <br/>
+	 - å½?ä½???³è????????/??¢å????¨ä????¶ã?? <br/> */
 	export class ActionManager {		
 		/**
 		!#en
@@ -1861,10 +1861,10 @@ declare namespace cc {
 		If the target is not present, a new instance of this target will be created either paused or not, and the action will be added to the newly created target.
 		When the target is paused, the queued actions won't be 'ticked'.
 		!#zh
-		å¢åŠ ä¸€ä¸ªåŠ¨ä½œï¼ŒåŒæ—¶è¿˜éœ€è¦æä¾›åŠ¨ä½œçš„ç›®æ ‡å¯¹è±¡ï¼Œç›®æ ‡å¯¹è±¡æ˜¯å¦æš‚åœä½œä¸ºå‚æ•°ã€‚<br/>
-		å¦‚æœç›®æ ‡å·²å­˜åœ¨ï¼ŒåŠ¨ä½œå°†ä¼šè¢«ç›´æ¥æ·»åŠ åˆ°ç°æœ‰çš„èŠ‚ç‚¹ä¸­ã€‚<br/>
-		å¦‚æœç›®æ ‡ä¸å­˜åœ¨ï¼Œå°†ä¸ºè¿™ä¸€ç›®æ ‡åˆ›å»ºä¸€ä¸ªæ–°çš„å®ä¾‹ï¼Œå¹¶å°†åŠ¨ä½œæ·»åŠ è¿›å»ã€‚<br/>
-		å½“ç›®æ ‡çŠ¶æ€çš„ paused ä¸º trueï¼ŒåŠ¨ä½œå°†ä¸ä¼šè¢«æ‰§è¡Œ
+		å¢????ä¸?ä¸ªå?¨ä??ï¼??????¶è?????è¦????ä¾???¨ä???????®æ??å¯¹è±¡ï¼???®æ??å¯¹è±¡??¯å?¦æ?????ä½?ä¸ºå????°ã??<br/>
+		å¦??????®æ??å·²å????¨ï????¨ä??å°?ä¼?è¢«ç?´æ?¥æ·»?????°ç?°æ??????????¹ä¸­???<br/>
+		å¦??????®æ??ä¸?å­???¨ï??å°?ä¸ºè??ä¸???®æ?????å»ºä??ä¸ªæ?°ç??å®?ä¾?ï¼?å¹¶å????¨ä??æ·»å??è¿???»ã??<br/>
+		å½???®æ????¶æ????? paused ä¸? trueï¼???¨ä??å°?ä¸?ä¼?è¢«æ?§è??
 		@param action action
 		@param target target
 		@param paused paused 
@@ -1872,7 +1872,7 @@ declare namespace cc {
 		addAction(action: Action, target: Node, paused: boolean): void;		
 		/**
 		!#en Removes all actions from all the targets.
-		!#zh ç§»é™¤æ‰€æœ‰å¯¹è±¡çš„æ‰€æœ‰åŠ¨ä½œã€‚ 
+		!#zh ç§»é?¤æ?????å¯¹è±¡???????????¨ä????? 
 		*/
 		removeAllActions(): void;		
 		/**
@@ -1880,28 +1880,28 @@ declare namespace cc {
 		Removes all actions from a certain target. <br/>
 		All the actions that belongs to the target will be removed.
 		!#zh
-		ç§»é™¤æŒ‡å®šå¯¹è±¡ä¸Šçš„æ‰€æœ‰åŠ¨ä½œã€‚<br/>
-		å±äºè¯¥ç›®æ ‡çš„æ‰€æœ‰çš„åŠ¨ä½œå°†è¢«åˆ é™¤ã€‚
+		ç§»é?¤æ??å®?å¯¹è±¡ä¸????????????¨ä?????<br/>
+		å±?äº?è¯¥ç?®æ????????????????¨ä??å°?è¢«å????¤ã??
 		@param target target
 		@param forceDelete forceDelete 
 		*/
 		removeAllActionsFromTarget(target: Node, forceDelete: boolean): void;		
 		/**
 		!#en Removes an action given an action reference.
-		!#zh ç§»é™¤æŒ‡å®šçš„åŠ¨ä½œã€‚
+		!#zh ç§»é?¤æ??å®??????¨ä?????
 		@param action action 
 		*/
 		removeAction(action: Action): void;		
 		/**
 		!#en Removes an action given its tag and the target.
-		!#zh åˆ é™¤æŒ‡å®šå¯¹è±¡ä¸‹ç‰¹å®šæ ‡ç­¾çš„ä¸€ä¸ªåŠ¨ä½œï¼Œå°†åˆ é™¤é¦–ä¸ªåŒ¹é…åˆ°çš„åŠ¨ä½œã€‚
+		!#zh ?????¤æ??å®?å¯¹è±¡ä¸???¹å?????ç­¾ç??ä¸?ä¸ªå?¨ä??ï¼?å°??????¤é??ä¸ªå?¹é????°ç????¨ä?????
 		@param tag tag
 		@param target target 
 		*/
 		removeActionByTag(tag: number, target?: Node): void;		
 		/**
 		!#en Gets an action given its tag an a target.
-		!#zh é€šè¿‡ç›®æ ‡å¯¹è±¡å’Œæ ‡ç­¾è·å–ä¸€ä¸ªåŠ¨ä½œã€‚
+		!#zh ???è¿???®æ??å¯¹è±¡??????ç­¾è?·å??ä¸?ä¸ªå?¨ä?????
 		@param tag tag
 		@param target target 
 		*/
@@ -1914,40 +1914,40 @@ declare namespace cc {
 		- If you are running 1 Sequence of 7 actions, it will return 1. <br/>
 		- If you are running 7 Sequences of 2 actions, it will return 7.
 		!#zh
-		è¿”å›æŒ‡å®šå¯¹è±¡ä¸‹æ‰€æœ‰æ­£åœ¨è¿è¡Œçš„åŠ¨ä½œæ•°é‡ã€‚ <br/>
-		ç»„åˆåŠ¨ä½œè¢«ç®—ä½œä¸€ä¸ªåŠ¨ä½œã€‚<br/>
-		ä¾‹å¦‚ï¼š<br/>
-		 - å¦‚æœæ‚¨æ­£åœ¨è¿è¡Œ 7 ä¸ªåŠ¨ä½œç»„æˆçš„åºåˆ—åŠ¨ä½œï¼ˆSequenceï¼‰ï¼Œè¿™ä¸ªå‡½æ•°å°†è¿”å› 1ã€‚<br/>
-		 - å¦‚æœä½ æ­£åœ¨è¿è¡Œ 2 ä¸ªåºåˆ—åŠ¨ä½œï¼ˆSequenceï¼‰å’Œ 5 ä¸ªæ™®é€šåŠ¨ä½œï¼Œè¿™ä¸ªå‡½æ•°å°†è¿”å› 7ã€‚<br/>
+		è¿???????å®?å¯¹è±¡ä¸???????æ­???¨è??è¡??????¨ä????°é????? <br/>
+		ç»??????¨ä??è¢«ç??ä½?ä¸?ä¸ªå?¨ä?????<br/>
+		ä¾?å¦?ï¼?<br/>
+		 - å¦??????¨æ­£??¨è??è¡? 7 ä¸ªå?¨ä??ç»???????åº??????¨ä??ï¼?Sequenceï¼?ï¼?è¿?ä¸ªå?½æ?°å??è¿???? 1???<br/>
+		 - å¦????ä½?æ­???¨è??è¡? 2 ä¸ªå???????¨ä??ï¼?Sequenceï¼???? 5 ä¸ªæ?®é????¨ä??ï¼?è¿?ä¸ªå?½æ?°å??è¿???? 7???<br/>
 		@param target target 
 		*/
 		getNumberOfRunningActionsInTarget(target: Node): number;		
 		/**
 		!#en Pauses the target: all running actions and newly added actions will be paused.
-		!#zh æš‚åœæŒ‡å®šå¯¹è±¡ï¼šæ‰€æœ‰æ­£åœ¨è¿è¡Œçš„åŠ¨ä½œå’Œæ–°æ·»åŠ çš„åŠ¨ä½œéƒ½å°†ä¼šæš‚åœã€‚
+		!#zh ?????????å®?å¯¹è±¡ï¼???????æ­???¨è??è¡??????¨ä???????°æ·»????????¨ä????½å??ä¼??????????
 		@param target target 
 		*/
 		pauseTarget(target: Node): void;		
 		/**
 		!#en Resumes the target. All queued actions will be resumed.
-		!#zh è®©æŒ‡å®šç›®æ ‡æ¢å¤è¿è¡Œã€‚åœ¨æ‰§è¡Œåºåˆ—ä¸­æ‰€æœ‰è¢«æš‚åœçš„åŠ¨ä½œå°†é‡æ–°æ¢å¤è¿è¡Œã€‚
+		!#zh è®©æ??å®???®æ????¢å??è¿?è¡??????¨æ?§è??åº????ä¸­æ?????è¢«æ??????????¨ä??å°??????°æ?¢å??è¿?è¡????
 		@param target target 
 		*/
 		resumeTarget(target: Node): void;		
 		/**
 		!#en Pauses all running actions, returning a list of targets whose actions were paused.
-		!#zh æš‚åœæ‰€æœ‰æ­£åœ¨è¿è¡Œçš„åŠ¨ä½œï¼Œè¿”å›ä¸€ä¸ªåŒ…å«äº†é‚£äº›åŠ¨ä½œè¢«æš‚åœäº†çš„ç›®æ ‡å¯¹è±¡çš„åˆ—è¡¨ã€‚ 
+		!#zh ????????????æ­???¨è??è¡??????¨ä??ï¼?è¿????ä¸?ä¸ªå????«ä?????äº???¨ä??è¢«æ?????äº??????®æ??å¯¹è±¡??????è¡¨ã?? 
 		*/
 		pauseAllRunningActions(): any[];		
 		/**
 		!#en Resume a set of targets (convenience function to reverse a pauseAllRunningActions or pauseTargets call).
-		!#zh è®©ä¸€ç»„æŒ‡å®šå¯¹è±¡æ¢å¤è¿è¡Œï¼ˆç”¨æ¥é€†è½¬ pauseAllRunningActions æ•ˆæœçš„ä¾¿æ·å‡½æ•°ï¼‰ã€‚
+		!#zh è®©ä??ç»????å®?å¯¹è±¡??¢å??è¿?è¡?ï¼???¨æ?¥é??è½? pauseAllRunningActions ?????????ä¾¿æ?·å?½æ?°ï?????
 		@param targetsToResume targetsToResume 
 		*/
 		resumeTargets(targetsToResume: any[]): void;		
 		/**
 		!#en Pause a set of targets.
-		!#zh æš‚åœä¸€ç»„æŒ‡å®šå¯¹è±¡ã€‚
+		!#zh ??????ä¸?ç»????å®?å¯¹è±¡???
 		@param targetsToPause targetsToPause 
 		*/
 		pauseTargets(targetsToPause: any[]): void;		
@@ -1956,13 +1956,13 @@ declare namespace cc {
 		purges the shared action manager. It releases the retained instance. <br/>
 		because it uses this, so it can not be static.
 		!#zh
-		æ¸…é™¤å…±ç”¨çš„åŠ¨ä½œç®¡ç†å™¨ã€‚å®ƒé‡Šæ”¾äº†æŒæœ‰çš„å®ä¾‹ã€‚ <br/>
-		å› ä¸ºå®ƒä½¿ç”¨ thisï¼Œå› æ­¤å®ƒä¸èƒ½æ˜¯é™æ€çš„ã€‚ 
+		æ¸???¤å?±ç?¨ç????¨ä??ç®¡ç????¨ã??å®??????¾ä???????????å®?ä¾???? <br/>
+		???ä¸ºå??ä½¿ç?? thisï¼????æ­¤å??ä¸???½æ?¯é??????????? 
 		*/
 		purgeSharedManager(): void;		
 		/**
-		!#en The ActionManager updateã€‚
-		!#zh ActionManager ä¸»å¾ªç¯ã€‚
+		!#en The ActionManager update???
+		!#zh ActionManager ä¸»å¾ª??¯ã??
 		@param dt delta time in seconds 
 		*/
 		update(dt: number): void;	
@@ -1974,11 +1974,11 @@ declare namespace cc {
 	 - Support working with `cc.Action`.
 	 - Support easing and progress function.
 	!#zh
-	Tween æä¾›äº†ä¸€ä¸ªç®€å•çµæ´»çš„æ–¹æ³•æ¥åˆ›å»º actionã€‚ç›¸å¯¹äº Cocos ä¼ ç»Ÿçš„ `cc.Action`ï¼Œ`cc.Tween` åœ¨åˆ›å»ºåŠ¨ç”»ä¸Šè¦çµæ´»éå¸¸å¤šï¼š
-	 - æ”¯æŒä»¥é“¾å¼ç»“æ„çš„æ–¹å¼åˆ›å»ºä¸€ä¸ªåŠ¨ç”»åºåˆ—ã€‚
-	 - æ”¯æŒå¯¹ä»»æ„å¯¹è±¡çš„ä»»æ„å±æ€§è¿›è¡Œç¼“åŠ¨ï¼Œä¸å†å±€é™äºèŠ‚ç‚¹ä¸Šçš„å±æ€§ï¼Œè€Œ `cc.Action` æ·»åŠ ä¸€ä¸ªå±æ€§çš„æ”¯æŒæ—¶è¿˜éœ€è¦æ·»åŠ ä¸€ä¸ªæ–°çš„ action ç±»å‹ã€‚
-	 - æ”¯æŒä¸ `cc.Action` æ··ç”¨ã€‚
-	 - æ”¯æŒè®¾ç½® {{#crossLink "Easing"}}{{/crossLink}} æˆ–è€… progress å‡½æ•°ã€‚ */
+	Tween ???ä¾?äº?ä¸?ä¸ªç???????µæ´»?????¹æ????¥å??å»? action?????¸å¯¹äº? Cocos ä¼?ç»???? `cc.Action`ï¼?`cc.Tween` ??¨å??å»ºå?¨ç?»ä??è¦???µæ´»???å¸¸å??ï¼?
+	 - ??¯æ??ä»¥é?¾å??ç»?????????¹å?????å»ºä??ä¸ªå?¨ç?»å????????
+	 - ??¯æ??å¯¹ä»»???å¯¹è±¡???ä»»æ??å±???§è??è¡?ç¼???¨ï??ä¸????å±????äº??????¹ä?????å±???§ï????? `cc.Action` æ·»å??ä¸?ä¸ªå????§ç????¯æ????¶è?????è¦?æ·»å??ä¸?ä¸ªæ?°ç?? action ç±»å?????
+	 - ??¯æ??ä¸? `cc.Action` æ··ç?¨ã??
+	 - ??¯æ??è®¾ç½® {{#crossLink "Easing"}}{{/crossLink}} ?????? progress ??½æ?°ã?? */
 	export class Tween<T = any> {		
 		/**
 		
@@ -1987,18 +1987,18 @@ declare namespace cc {
 		constructor(target?: any);		
 		/**
 		!#en Stop all tweens
-		!#zh åœæ­¢æ‰€æœ‰ç¼“åŠ¨ 
+		!#zh ???æ­¢æ?????ç¼???? 
 		*/
 		static stopAll(): void;		
 		/**
 		!#en Stop all tweens by tag
-		!#zh åœæ­¢æ‰€æœ‰æŒ‡å®šæ ‡ç­¾çš„ç¼“åŠ¨
+		!#zh ???æ­¢æ????????å®????ç­¾ç??ç¼????
 		@param tag tag 
 		*/
 		static stopAllByTag(tag: number): void;		
 		/**
 		!#en Stop all tweens by target
-		!#zh åœæ­¢æ‰€æœ‰æŒ‡å®šå¯¹è±¡çš„ç¼“åŠ¨
+		!#zh ???æ­¢æ????????å®?å¯¹è±¡???ç¼????
 		@param target target 
 		*/
 		static stopAllByTarget(target: any): void;		
@@ -2006,7 +2006,7 @@ declare namespace cc {
 		!#en
 		Insert an action or tween to this sequence
 		!#zh
-		æ’å…¥ä¸€ä¸ª action æˆ–è€… tween åˆ°é˜Ÿåˆ—ä¸­
+		?????¥ä??ä¸? action ?????? tween ??°é?????ä¸?
 		@param other other 
 		*/
 		then(other: Action|Tween<T>): Tween<T>;		
@@ -2014,7 +2014,7 @@ declare namespace cc {
 		!#en
 		Set tween target
 		!#zh
-		è®¾ç½® tween çš„ target
+		è®¾ç½® tween ??? target
 		@param target target 
 		*/
 		target(target: any): Tween<T>;		
@@ -2022,19 +2022,19 @@ declare namespace cc {
 		!#en
 		Start this tween
 		!#zh
-		è¿è¡Œå½“å‰ tween 
+		è¿?è¡?å½???? tween 
 		*/
 		start(): Tween<T>;		
 		/**
 		!#en
 		Stop this tween
 		!#zh
-		åœæ­¢å½“å‰ tween 
+		???æ­¢å????? tween 
 		*/
 		stop(): Tween<T>;		
 		/**
 		!#en Sets tween tag
-		!#zh è®¾ç½®ç¼“åŠ¨çš„æ ‡ç­¾
+		!#zh è®¾ç½®ç¼???¨ç?????ç­?
 		@param tag tag 
 		*/
 		tag(tag: number): Tween<T>;		
@@ -2042,7 +2042,7 @@ declare namespace cc {
 		!#en
 		Clone a tween
 		!#zh
-		å…‹éš†å½“å‰ tween
+		??????å½???? tween
 		@param target target 
 		*/
 		clone(target?: any): Tween<T>;		
@@ -2050,12 +2050,12 @@ declare namespace cc {
 		!#en
 		Integrate all previous actions to an action.
 		!#zh
-		å°†ä¹‹å‰æ‰€æœ‰çš„ action æ•´åˆä¸ºä¸€ä¸ª actionã€‚ 
+		å°?ä¹????????????? action ??´å??ä¸ºä??ä¸? action??? 
 		*/
 		union(): Tween;		
 		/**
 		!#en Sets target's position property according to the bezier curve.
-		!#zh æŒ‰ç…§è´å¡å°”è·¯å¾„è®¾ç½®ç›®æ ‡çš„ position å±æ€§ã€‚
+		!#zh ?????§è??å¡?å°?è·¯å??è®¾ç½®??®æ????? position å±???§ã??
 		@param duration duration
 		@param c1 c1
 		@param c2 c2
@@ -2064,7 +2064,7 @@ declare namespace cc {
 		bezierTo(duration: number, c1: Vec2, c2: Vec2, to: Vec2): Tween<T>;		
 		/**
 		!#en Sets target's position property according to the bezier curve.
-		!#zh æŒ‰ç…§è´å¡å°”è·¯å¾„è®¾ç½®ç›®æ ‡çš„ position å±æ€§ã€‚
+		!#zh ?????§è??å¡?å°?è·¯å??è®¾ç½®??®æ????? position å±???§ã??
 		@param duration duration
 		@param c1 c1
 		@param c2 c2
@@ -2073,17 +2073,17 @@ declare namespace cc {
 		bezierBy(duration: number, c1: Vec2, c2: Vec2, to: Vec2): Tween<T>;		
 		/**
 		!#en Flips target's scaleX
-		!#zh ç¿»è½¬ç›®æ ‡çš„ scaleX å±æ€§ 
+		!#zh ç¿»è½¬??®æ????? scaleX å±???? 
 		*/
 		flipX(): Tween<T>;		
 		/**
 		!#en Flips target's scaleY
-		!#zh ç¿»è½¬ç›®æ ‡çš„ scaleY å±æ€§ 
+		!#zh ç¿»è½¬??®æ????? scaleY å±???? 
 		*/
 		flipY(): Tween<T>;		
 		/**
 		!#en Blinks target by set target's opacity property
-		!#zh é€šè¿‡è®¾ç½®ç›®æ ‡çš„ opacity å±æ€§è¾¾åˆ°é—ªçƒæ•ˆæœ
+		!#zh ???è¿?è®¾ç½®??®æ????? opacity å±???§è¾¾??°é?ªç????????
 		@param duration duration
 		@param times times
 		@param opts opts 
@@ -2093,7 +2093,7 @@ declare namespace cc {
 		!#en
 		Add an action which calculate with absolute value
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå¯¹å±æ€§è¿›è¡Œç»å¯¹å€¼è®¡ç®—çš„ action
+		æ·»å??ä¸?ä¸ªå¯¹å±???§è??è¡?ç»?å¯¹å?¼è®¡ç®???? action
 		@param duration duration
 		@param props {scale: 2, position: cc.v3(100, 100, 100)}
 		@param opts opts 
@@ -2103,7 +2103,7 @@ declare namespace cc {
 		!#en
 		Add an action which calculate with relative value
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå¯¹å±æ€§è¿›è¡Œç›¸å¯¹å€¼è®¡ç®—çš„ action
+		æ·»å??ä¸?ä¸ªå¯¹å±???§è??è¡???¸å¯¹??¼è®¡ç®???? action
 		@param duration duration
 		@param props {scale: 2, position: cc.v3(100, 100, 100)}
 		@param opts opts 
@@ -2113,7 +2113,7 @@ declare namespace cc {
 		!#en
 		Directly set target properties
 		!#zh
-		ç›´æ¥è®¾ç½® target çš„å±æ€§
+		??´æ?¥è®¾ç½? target ???å±????
 		@param props props 
 		*/
 		set (props: ConstructorType<T>) : Tween<T>;		
@@ -2121,7 +2121,7 @@ declare namespace cc {
 		!#en
 		Add an delay action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå»¶æ—¶ action
+		æ·»å??ä¸?ä¸ªå»¶??? action
 		@param duration duration 
 		*/
 		delay(duration: number): Tween<T>;		
@@ -2129,7 +2129,7 @@ declare namespace cc {
 		!#en
 		Add an callback action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå›è°ƒ action
+		æ·»å??ä¸?ä¸ªå??è°? action
 		@param callback callback
 		@param selectTarget selectTarget 
 		*/
@@ -2138,28 +2138,28 @@ declare namespace cc {
 		!#en
 		Add an hide action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªéšè— action 
+		æ·»å??ä¸?ä¸ªé????? action 
 		*/
 		hide(): Tween<T>;		
 		/**
 		!#en
 		Add an show action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªæ˜¾ç¤º action 
+		æ·»å??ä¸?ä¸ªæ?¾ç¤º action 
 		*/
 		show(): Tween<T>;		
 		/**
 		!#en
 		Add an removeSelf action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªç§»é™¤è‡ªå·± action 
+		æ·»å??ä¸?ä¸ªç§»??¤è?ªå·± action 
 		*/
 		removeSelf(): Tween<T>;		
 		/**
 		!#en
 		Add an sequence action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªé˜Ÿåˆ— action
+		æ·»å??ä¸?ä¸ªé????? action
 		@param action action
 		@param actions actions 
 		*/
@@ -2168,7 +2168,7 @@ declare namespace cc {
 		!#en
 		Add an parallel action
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå¹¶è¡Œ action
+		æ·»å??ä¸?ä¸ªå¹¶è¡? action
 		@param action action
 		@param actions actions 
 		*/
@@ -2177,7 +2177,7 @@ declare namespace cc {
 		!#en
 		Add an repeat action. This action will integrate before actions to a sequence action as their parameters.
 		!#zh
-		æ·»åŠ ä¸€ä¸ªé‡å¤ actionï¼Œè¿™ä¸ª action ä¼šå°†å‰ä¸€ä¸ªåŠ¨ä½œä½œä¸ºä»–çš„å‚æ•°ã€‚
+		æ·»å??ä¸?ä¸ªé??å¤? actionï¼?è¿?ä¸? action ä¼?å°????ä¸?ä¸ªå?¨ä??ä½?ä¸ºä??????????°ã??
 		@param repeatTimes repeatTimes
 		@param action action 
 		*/
@@ -2186,7 +2186,7 @@ declare namespace cc {
 		!#en
 		Add an repeat forever action. This action will integrate before actions to a sequence action as their parameters.
 		!#zh
-		æ·»åŠ ä¸€ä¸ªæ°¸ä¹…é‡å¤ actionï¼Œè¿™ä¸ª action ä¼šå°†å‰ä¸€ä¸ªåŠ¨ä½œä½œä¸ºä»–çš„å‚æ•°ã€‚
+		æ·»å??ä¸?ä¸ªæ°¸ä¹????å¤? actionï¼?è¿?ä¸? action ä¼?å°????ä¸?ä¸ªå?¨ä??ä½?ä¸ºä??????????°ã??
 		@param action action 
 		*/
 		repeatForever(action?: Action|Tween<T>): Tween<T>;		
@@ -2194,23 +2194,23 @@ declare namespace cc {
 		!#en
 		Add an reverse time action. This action will integrate before actions to a sequence action as their parameters.
 		!#zh
-		æ·»åŠ ä¸€ä¸ªå€’ç½®æ—¶é—´ actionï¼Œè¿™ä¸ª action ä¼šå°†å‰ä¸€ä¸ªåŠ¨ä½œä½œä¸ºä»–çš„å‚æ•°ã€‚
+		æ·»å??ä¸?ä¸ªå??ç½®æ?¶é?? actionï¼?è¿?ä¸? action ä¼?å°????ä¸?ä¸ªå?¨ä??ä½?ä¸ºä??????????°ã??
 		@param action action 
 		*/
 		reverseTime(action?: Action|Tween<T>): Tween<T>;	
 	}	
 	/** !#en `cc.audioEngine` is the singleton object, it provide simple audio APIs.
 	!#zh
-	cc.audioengineæ˜¯å•ä¾‹å¯¹è±¡ã€‚<br/>
-	ä¸»è¦ç”¨æ¥æ’­æ”¾éŸ³é¢‘ï¼Œæ’­æ”¾çš„æ—¶å€™ä¼šè¿”å›ä¸€ä¸ª audioIDï¼Œä¹‹åéƒ½å¯ä»¥é€šè¿‡è¿™ä¸ª audioID æ¥æ“ä½œè¿™ä¸ªéŸ³é¢‘å¯¹è±¡ã€‚<br/>
-	ä¸ä½¿ç”¨çš„æ—¶å€™ï¼Œè¯·ä½¿ç”¨ `cc.audioEngine.uncache(filePath);` è¿›è¡Œèµ„æºé‡Šæ”¾ <br/>
-	æ³¨æ„ï¼š<br/>
-	åœ¨ Android ç³»ç»Ÿæµè§ˆå™¨ä¸Šï¼Œä¸åŒæµè§ˆå™¨ï¼Œä¸åŒç‰ˆæœ¬çš„æ•ˆæœä¸å°½ç›¸åŒã€‚<br/>
-	æ¯”å¦‚è¯´ï¼šå¤§å¤šæ•°æµè§ˆå™¨éƒ½éœ€è¦ç”¨æˆ·ç‰©ç†äº¤äº’æ‰å¯ä»¥å¼€å§‹æ’­æ”¾éŸ³æ•ˆï¼Œæœ‰ä¸€äº›ä¸æ”¯æŒ WebAudioï¼Œæœ‰ä¸€äº›ä¸æ”¯æŒå¤šéŸ³è½¨æ’­æ”¾ã€‚æ€»ä¹‹å¦‚æœå¯¹éŸ³ä¹ä¾èµ–æ¯”è¾ƒå¼ºï¼Œè¯·åšå°½å¯èƒ½å¤šçš„æµ‹è¯•ã€‚ */
+	cc.audioengine??¯å??ä¾?å¯¹è±¡???<br/>
+	ä¸»è????¨æ?¥æ?­æ?¾é?³é??ï¼???­æ?¾ç????¶å??ä¼?è¿????ä¸?ä¸? audioIDï¼?ä¹??????½å?¯ä»¥???è¿?è¿?ä¸? audioID ??¥æ??ä½?è¿?ä¸ªé?³é??å¯¹è±¡???<br/>
+	ä¸?ä½¿ç?¨ç????¶å??ï¼?è¯·ä½¿??? `cc.audioEngine.uncache(filePath);` è¿?è¡?èµ?æº??????? <br/>
+	æ³¨æ??ï¼?<br/>
+	??? Android ç³»ç??æµ?è§???¨ä??ï¼?ä¸????æµ?è§???¨ï??ä¸?????????¬ç????????ä¸?å°½ç?¸å?????<br/>
+	æ¯?å¦?è¯´ï??å¤§å????°æ??è§???¨é?½é??è¦???¨æ?·ç?©ç??äº¤ä???????¯ä»¥å¼?å§???­æ?¾é?³æ??ï¼????ä¸?äº?ä¸???¯æ?? WebAudioï¼????ä¸?äº?ä¸???¯æ??å¤???³è½¨??­æ?¾ã????»ä??å¦????å¯¹é?³ä??ä¾?èµ?æ¯?è¾?å¼ºï??è¯·å??å°½å?¯è?½å?????æµ?è¯???? */
 	export class audioEngine {		
 		/**
 		!#en Play audio.
-		!#zh æ’­æ”¾éŸ³é¢‘
+		!#zh ??­æ?¾é?³é??
 		@param clip The audio clip to play.
 		@param loop Whether the music loop or not.
 		@param volume Volume size.
@@ -2225,7 +2225,7 @@ declare namespace cc {
 		static play(clip: AudioClip, loop: boolean, volume: number): number;		
 		/**
 		!#en Set audio loop.
-		!#zh è®¾ç½®éŸ³é¢‘æ˜¯å¦å¾ªç¯ã€‚
+		!#zh è®¾ç½®??³é????¯å?¦å¾ª??¯ã??
 		@param audioID audio id.
 		@param loop Whether cycle.
 		
@@ -2237,7 +2237,7 @@ declare namespace cc {
 		static setLoop(audioID: number, loop: boolean): void;		
 		/**
 		!#en Get audio cycle state.
-		!#zh è·å–éŸ³é¢‘çš„å¾ªç¯çŠ¶æ€ã€‚
+		!#zh ??·å????³é?????å¾ªç?¯ç?¶æ?????
 		@param audioID audio id.
 		
 		@example 
@@ -2248,7 +2248,7 @@ declare namespace cc {
 		static isLoop(audioID: number): boolean;		
 		/**
 		!#en Set the volume of audio.
-		!#zh è®¾ç½®éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh è®¾ç½®??³é??ï¼?0.0 ~ 1.0ï¼????
 		@param audioID audio id.
 		@param volume Volume must be in 0.0~1.0 .
 		
@@ -2260,7 +2260,7 @@ declare namespace cc {
 		static setVolume(audioID: number, volume: number): void;		
 		/**
 		!#en The volume of the music max value is 1.0,the min value is 0.0 .
-		!#zh è·å–éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh ??·å????³é??ï¼?0.0 ~ 1.0ï¼????
 		@param audioID audio id.
 		
 		@example 
@@ -2271,7 +2271,7 @@ declare namespace cc {
 		static getVolume(audioID: number): number;		
 		/**
 		!#en Set current time
-		!#zh è®¾ç½®å½“å‰çš„éŸ³é¢‘æ—¶é—´ã€‚
+		!#zh è®¾ç½®å½?????????³é????¶é?´ã??
 		@param audioID audio id.
 		@param sec current time.
 		
@@ -2283,7 +2283,7 @@ declare namespace cc {
 		static setCurrentTime(audioID: number, sec: number): boolean;		
 		/**
 		!#en Get current time
-		!#zh è·å–å½“å‰çš„éŸ³é¢‘æ’­æ”¾æ—¶é—´ã€‚
+		!#zh ??·å??å½?????????³é????­æ?¾æ?¶é?´ã??
 		@param audioID audio id.
 		
 		@example 
@@ -2294,7 +2294,7 @@ declare namespace cc {
 		static getCurrentTime(audioID: number): number;		
 		/**
 		!#en Get audio duration
-		!#zh è·å–éŸ³é¢‘æ€»æ—¶é•¿ã€‚
+		!#zh ??·å????³é????»æ?¶é?¿ã??
 		@param audioID audio id.
 		
 		@example 
@@ -2305,7 +2305,7 @@ declare namespace cc {
 		static getDuration(audioID: number): number;		
 		/**
 		!#en Get audio state
-		!#zh è·å–éŸ³é¢‘çŠ¶æ€ã€‚
+		!#zh ??·å????³é????¶æ?????
 		@param audioID audio id.
 		
 		@example 
@@ -2316,7 +2316,7 @@ declare namespace cc {
 		static getState(audioID: number): audioEngine.AudioState;		
 		/**
 		!#en Set Audio finish callback
-		!#zh è®¾ç½®ä¸€ä¸ªéŸ³é¢‘ç»“æŸåçš„å›è°ƒ
+		!#zh è®¾ç½®ä¸?ä¸ªé?³é??ç»?????????????è°?
 		@param audioID audio id.
 		@param callback loaded callback.
 		
@@ -2328,7 +2328,7 @@ declare namespace cc {
 		static setFinishCallback(audioID: number, callback: Function): void;		
 		/**
 		!#en Pause playing audio.
-		!#zh æš‚åœæ­£åœ¨æ’­æ”¾éŸ³é¢‘ã€‚
+		!#zh ??????æ­???¨æ?­æ?¾é?³é?????
 		@param audioID The return value of function play.
 		
 		@example 
@@ -2339,7 +2339,7 @@ declare namespace cc {
 		static pause(audioID: number): void;		
 		/**
 		!#en Pause all playing audio
-		!#zh æš‚åœç°åœ¨æ­£åœ¨æ’­æ”¾çš„æ‰€æœ‰éŸ³é¢‘ã€‚
+		!#zh ????????°å?¨æ­£??¨æ?­æ?¾ç??????????³é?????
 		
 		@example 
 		```js
@@ -2349,7 +2349,7 @@ declare namespace cc {
 		static pauseAll(): void;		
 		/**
 		!#en Resume playing audio.
-		!#zh æ¢å¤æ’­æ”¾æŒ‡å®šçš„éŸ³é¢‘ã€‚
+		!#zh ??¢å????­æ?¾æ??å®??????³é?????
 		@param audioID The return value of function play.
 		
 		@example 
@@ -2360,7 +2360,7 @@ declare namespace cc {
 		static resume(audioID: number): void;		
 		/**
 		!#en Resume all playing audio.
-		!#zh æ¢å¤æ’­æ”¾æ‰€æœ‰ä¹‹å‰æš‚åœçš„æ‰€æœ‰éŸ³é¢‘ã€‚
+		!#zh ??¢å????­æ?¾æ?????ä¹?????????????????????³é?????
 		
 		@example 
 		```js
@@ -2370,7 +2370,7 @@ declare namespace cc {
 		static resumeAll(): void;		
 		/**
 		!#en Stop playing audio.
-		!#zh åœæ­¢æ’­æ”¾æŒ‡å®šéŸ³é¢‘ã€‚
+		!#zh ???æ­¢æ?­æ?¾æ??å®???³é?????
 		@param audioID The return value of function play.
 		
 		@example 
@@ -2381,7 +2381,7 @@ declare namespace cc {
 		static stop(audioID: number): void;		
 		/**
 		!#en Stop all playing audio.
-		!#zh åœæ­¢æ­£åœ¨æ’­æ”¾çš„æ‰€æœ‰éŸ³é¢‘ã€‚
+		!#zh ???æ­¢æ­£??¨æ?­æ?¾ç??????????³é?????
 		
 		@example 
 		```js
@@ -2391,7 +2391,7 @@ declare namespace cc {
 		static stopAll(): void;		
 		/**
 		!#en Set up an audio can generate a few examples.
-		!#zh è®¾ç½®ä¸€ä¸ªéŸ³é¢‘å¯ä»¥è®¾ç½®å‡ ä¸ªå®ä¾‹
+		!#zh è®¾ç½®ä¸?ä¸ªé?³é????¯ä»¥è®¾ç½®???ä¸ªå??ä¾?
 		@param num a number of instances to be created from within an audio
 		
 		@example 
@@ -2402,7 +2402,7 @@ declare namespace cc {
 		static setMaxAudioInstance(num: number): void;		
 		/**
 		!#en Getting audio can produce several examples.
-		!#zh è·å–ä¸€ä¸ªéŸ³é¢‘å¯ä»¥è®¾ç½®å‡ ä¸ªå®ä¾‹
+		!#zh ??·å??ä¸?ä¸ªé?³é????¯ä»¥è®¾ç½®???ä¸ªå??ä¾?
 		
 		@example 
 		```js
@@ -2412,7 +2412,7 @@ declare namespace cc {
 		static getMaxAudioInstance(): number;		
 		/**
 		!#en Unload the preloaded audio from internal buffer.
-		!#zh å¸è½½é¢„åŠ è½½çš„éŸ³é¢‘ã€‚
+		!#zh ??¸è½½é¢????è½½ç????³é?????
 		@param clip clip
 		
 		@example 
@@ -2423,7 +2423,7 @@ declare namespace cc {
 		static uncache(clip: AudioClip): void;		
 		/**
 		!#en Unload all audio from internal buffer.
-		!#zh å¸è½½æ‰€æœ‰éŸ³é¢‘ã€‚
+		!#zh ??¸è½½????????³é?????
 		
 		@example 
 		```js
@@ -2433,7 +2433,7 @@ declare namespace cc {
 		static uncacheAll(): void;		
 		/**
 		!#en Play background music
-		!#zh æ’­æ”¾èƒŒæ™¯éŸ³ä¹
+		!#zh ??­æ?¾è????¯é?³ä??
 		@param clip The audio clip to play.
 		@param loop Whether the music loop or not.
 		
@@ -2447,7 +2447,7 @@ declare namespace cc {
 		static playMusic(clip: AudioClip, loop: boolean): number;		
 		/**
 		!#en Stop background music.
-		!#zh åœæ­¢æ’­æ”¾èƒŒæ™¯éŸ³ä¹ã€‚
+		!#zh ???æ­¢æ?­æ?¾è????¯é?³ä?????
 		
 		@example 
 		```js
@@ -2457,7 +2457,7 @@ declare namespace cc {
 		static stopMusic(): void;		
 		/**
 		!#en Pause the background music.
-		!#zh æš‚åœæ’­æ”¾èƒŒæ™¯éŸ³ä¹ã€‚
+		!#zh ????????­æ?¾è????¯é?³ä?????
 		
 		@example 
 		```js
@@ -2467,7 +2467,7 @@ declare namespace cc {
 		static pauseMusic(): void;		
 		/**
 		!#en Resume playing background music.
-		!#zh æ¢å¤æ’­æ”¾èƒŒæ™¯éŸ³ä¹ã€‚
+		!#zh ??¢å????­æ?¾è????¯é?³ä?????
 		
 		@example 
 		```js
@@ -2477,7 +2477,7 @@ declare namespace cc {
 		static resumeMusic(): void;		
 		/**
 		!#en Get the volume(0.0 ~ 1.0).
-		!#zh è·å–éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh ??·å????³é??ï¼?0.0 ~ 1.0ï¼????
 		
 		@example 
 		```js
@@ -2487,7 +2487,7 @@ declare namespace cc {
 		static getMusicVolume(): number;		
 		/**
 		!#en Set the background music volume.
-		!#zh è®¾ç½®èƒŒæ™¯éŸ³ä¹éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh è®¾ç½®?????¯é?³ä????³é??ï¼?0.0 ~ 1.0ï¼????
 		@param volume Volume must be in 0.0~1.0.
 		
 		@example 
@@ -2498,7 +2498,7 @@ declare namespace cc {
 		static setMusicVolume(volume: number): void;		
 		/**
 		!#en Background music playing state
-		!#zh èƒŒæ™¯éŸ³ä¹æ˜¯å¦æ­£åœ¨æ’­æ”¾
+		!#zh ?????¯é?³ä????¯å?¦æ­£??¨æ?­æ??
 		
 		@example 
 		```js
@@ -2508,7 +2508,7 @@ declare namespace cc {
 		static isMusicPlaying(): boolean;		
 		/**
 		!#en Play effect audio.
-		!#zh æ’­æ”¾éŸ³æ•ˆ
+		!#zh ??­æ?¾é?³æ??
 		@param clip The audio clip to play.
 		@param loop Whether the music loop or not.
 		
@@ -2522,7 +2522,7 @@ declare namespace cc {
 		static playEffect(clip: AudioClip, loop: boolean): number;		
 		/**
 		!#en Set the volume of effect audio.
-		!#zh è®¾ç½®éŸ³æ•ˆéŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh è®¾ç½®??³æ????³é??ï¼?0.0 ~ 1.0ï¼????
 		@param volume Volume must be in 0.0~1.0.
 		
 		@example 
@@ -2533,7 +2533,7 @@ declare namespace cc {
 		static setEffectsVolume(volume: number): void;		
 		/**
 		!#en The volume of the effect audio max value is 1.0,the min value is 0.0 .
-		!#zh è·å–éŸ³æ•ˆéŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚
+		!#zh ??·å????³æ????³é??ï¼?0.0 ~ 1.0ï¼????
 		
 		@example 
 		```js
@@ -2543,7 +2543,7 @@ declare namespace cc {
 		static getEffectsVolume(): number;		
 		/**
 		!#en Pause effect audio.
-		!#zh æš‚åœæ’­æ”¾éŸ³æ•ˆã€‚
+		!#zh ????????­æ?¾é?³æ?????
 		@param audioID audio id.
 		
 		@example 
@@ -2554,7 +2554,7 @@ declare namespace cc {
 		static pauseEffect(audioID: number): void;		
 		/**
 		!#en Stop playing all the sound effects.
-		!#zh æš‚åœæ’­æ”¾æ‰€æœ‰éŸ³æ•ˆã€‚
+		!#zh ????????­æ?¾æ???????³æ?????
 		
 		@example 
 		```js
@@ -2564,7 +2564,7 @@ declare namespace cc {
 		static pauseAllEffects(): void;		
 		/**
 		!#en Resume effect audio.
-		!#zh æ¢å¤æ’­æ”¾éŸ³æ•ˆéŸ³é¢‘ã€‚
+		!#zh ??¢å????­æ?¾é?³æ????³é?????
 		@param audioID The return value of function play.
 		
 		@example 
@@ -2575,7 +2575,7 @@ declare namespace cc {
 		static resumeEffect(audioID: number): void;		
 		/**
 		!#en Resume all effect audio.
-		!#zh æ¢å¤æ’­æ”¾æ‰€æœ‰ä¹‹å‰æš‚åœçš„éŸ³æ•ˆã€‚
+		!#zh ??¢å????­æ?¾æ?????ä¹???????????????³æ?????
 		
 		@example 
 		```js
@@ -2585,7 +2585,7 @@ declare namespace cc {
 		static resumeAllEffects(): void;		
 		/**
 		!#en Stop playing the effect audio.
-		!#zh åœæ­¢æ’­æ”¾éŸ³æ•ˆã€‚
+		!#zh ???æ­¢æ?­æ?¾é?³æ?????
 		@param audioID audio id.
 		
 		@example 
@@ -2596,7 +2596,7 @@ declare namespace cc {
 		static stopEffect(audioID: number): void;		
 		/**
 		!#en Stop playing all the effects.
-		!#zh åœæ­¢æ’­æ”¾æ‰€æœ‰éŸ³æ•ˆã€‚
+		!#zh ???æ­¢æ?­æ?¾æ???????³æ?????
 		
 		@example 
 		```js
@@ -2606,29 +2606,29 @@ declare namespace cc {
 		static stopAllEffects(): void;	
 	}	
 	/** !#en Class for animation data handling.
-	!#zh åŠ¨ç”»å‰ªè¾‘ï¼Œç”¨äºå­˜å‚¨åŠ¨ç”»æ•°æ®ã€‚ */
+	!#zh ??¨ç?»å?ªè??ï¼???¨ä??å­???¨å?¨ç?»æ?°æ?®ã?? */
 	export class AnimationClip extends Asset {		
 		/** !#en Duration of this animation.
-		!#zh åŠ¨ç”»çš„æŒç»­æ—¶é—´ã€‚ */
+		!#zh ??¨ç?»ç?????ç»­æ?¶é?´ã?? */
 		duration: number;		
 		/** !#en FrameRate of this animation.
-		!#zh åŠ¨ç”»çš„å¸§é€Ÿç‡ã€‚ */
+		!#zh ??¨ç?»ç??å¸§é???????? */
 		sample: number;		
 		/** !#en Speed of this animation.
-		!#zh åŠ¨ç”»çš„æ’­æ”¾é€Ÿåº¦ã€‚ */
+		!#zh ??¨ç?»ç????­æ?¾é??åº¦ã?? */
 		speed: number;		
 		/** !#en WrapMode of this animation.
-		!#zh åŠ¨ç”»çš„å¾ªç¯æ¨¡å¼ã€‚ */
+		!#zh ??¨ç?»ç??å¾ªç?¯æ¨¡å¼???? */
 		wrapMode: WrapMode;		
 		/** !#en Curve data.
-		!#zh æ›²çº¿æ•°æ®ã€‚ */
+		!#zh ??²çº¿??°æ?®ã?? */
 		curveData: any;		
 		/** !#en Event data.
-		!#zh äº‹ä»¶æ•°æ®ã€‚ */
+		!#zh äº?ä»¶æ?°æ?®ã?? */
 		events: {frame: number, func: string, params: string[]}[];		
 		/**
 		!#en Crate clip with a set of sprite frames
-		!#zh ä½¿ç”¨ä¸€ç»„åºåˆ—å¸§å›¾ç‰‡æ¥åˆ›å»ºåŠ¨ç”»å‰ªè¾‘
+		!#zh ä½¿ç?¨ä??ç»?åº????å¸§å?¾ç????¥å??å»ºå?¨ç?»å?ªè??
 		@param spriteFrames spriteFrames
 		@param sample sample
 		
@@ -2643,198 +2643,198 @@ declare namespace cc {
 	This class provide easing methods for {{#crossLink "tween"}}{{/crossLink}} class.<br>
 	Demonstratio: https://easings.net/
 	!#zh
-	ç¼“åŠ¨å‡½æ•°ç±»ï¼Œä¸º {{#crossLink "Tween"}}{{/crossLink}} æä¾›ç¼“åŠ¨æ•ˆæœå‡½æ•°ã€‚<br>
-	å‡½æ•°æ•ˆæœæ¼”ç¤ºï¼š https://easings.net/ */
+	ç¼???¨å?½æ?°ç±»ï¼?ä¸? {{#crossLink "Tween"}}{{/crossLink}} ???ä¾?ç¼???¨æ???????½æ?°ã??<br>
+	??½æ?°æ?????æ¼?ç¤ºï?? https://easings.net/ */
 	export class Easing {		
 		/**
 		!#en Easing in with quadratic formula. From slow to fast.
-		!#zh å¹³æ–¹æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh å¹³æ?¹æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		quadIn(t: number): number;		
 		/**
 		!#en Easing out with quadratic formula. From fast to slow.
-		!#zh å¹³æ–¹æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh å¹³æ?¹æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quadOut(t: number): number;		
 		/**
 		!#en Easing in and out with quadratic formula. From slow to fast, then back to slow.
-		!#zh å¹³æ–¹æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«å†åˆ°æ…¢ã€‚
+		!#zh å¹³æ?¹æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«?????°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quadInOut(t: number): number;		
 		/**
 		!#en Easing in with cubic formula. From slow to fast.
-		!#zh ç«‹æ–¹æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh ç«???¹æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		cubicIn(t: number): number;		
 		/**
 		!#en Easing out with cubic formula. From slow to fast.
-		!#zh ç«‹æ–¹æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh ç«???¹æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		cubicOut(t: number): number;		
 		/**
 		!#en Easing in and out with cubic formula. From slow to fast, then back to slow.
-		!#zh ç«‹æ–¹æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«å†åˆ°æ…¢ã€‚
+		!#zh ç«???¹æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«?????°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		cubicInOut(t: number): number;		
 		/**
 		!#en Easing in with quartic formula. From slow to fast.
-		!#zh å››æ¬¡æ–¹æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh ???æ¬¡æ?¹æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		quartIn(t: number): number;		
 		/**
 		!#en Easing out with quartic formula. From fast to slow.
-		!#zh å››æ¬¡æ–¹æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh ???æ¬¡æ?¹æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quartOut(t: number): number;		
 		/**
 		!#en Easing in and out with quartic formula. From slow to fast, then back to slow.
-		!#zh å››æ¬¡æ–¹æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«å†åˆ°æ…¢ã€‚
+		!#zh ???æ¬¡æ?¹æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«?????°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quartInOut(t: number): number;		
 		/**
 		!#en Easing in with quintic formula. From slow to fast.
-		!#zh äº”æ¬¡æ–¹æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh äº?æ¬¡æ?¹æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		quintIn(t: number): number;		
 		/**
 		!#en Easing out with quintic formula. From fast to slow.
-		!#zh äº”æ¬¡æ–¹æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh äº?æ¬¡æ?¹æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quintOut(t: number): number;		
 		/**
 		!#en Easing in and out with quintic formula. From slow to fast, then back to slow.
-		!#zh äº”æ¬¡æ–¹æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«å†åˆ°æ…¢ã€‚
+		!#zh äº?æ¬¡æ?¹æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«?????°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		quintInOut(t: number): number;		
 		/**
 		!#en Easing in and out with sine formula. From slow to fast.
-		!#zh æ­£å¼¦æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh æ­?å¼¦æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		sineIn(t: number): number;		
 		/**
 		!#en Easing in and out with sine formula. From fast to slow.
-		!#zh æ­£å¼¦æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh æ­?å¼¦æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		sineOut(t: number): number;		
 		/**
 		!#en Easing in and out with sine formula. From slow to fast, then back to slow.
-		!#zh æ­£å¼¦æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«å†åˆ°æ…¢ã€‚
+		!#zh æ­?å¼¦æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«?????°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		sineInOut(t: number): number;		
 		/**
 		!#en Easing in and out with exponential formula. From slow to fast.
-		!#zh æŒ‡æ•°æ›²çº¿ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh ?????°æ?²çº¿ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		expoIn(t: number): number;		
 		/**
 		!#en Easing in and out with exponential formula. From fast to slow.
-		!#zh æŒ‡æ•°æ›²çº¿ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh ?????°æ?²çº¿ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		expoOut(t: number): number;		
 		/**
 		!#en Easing in and out with exponential formula. From slow to fast.
-		!#zh æŒ‡æ•°æ›²çº¿ç¼“å…¥å’Œç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¾ˆå¿«å†åˆ°æ…¢ã€‚
+		!#zh ?????°æ?²çº¿ç¼???¥å??ç¼???ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å??å¿«å????°æ?¢ã??
 		@param t The current time as a percentage of the total time, then back to slow. 
 		*/
 		expoInOut(t: number): number;		
 		/**
 		!#en Easing in and out with circular formula. From slow to fast.
-		!#zh å¾ªç¯å…¬å¼ç¼“å…¥å‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¿«ã€‚
+		!#zh å¾ªç?¯å?¬å??ç¼???¥å?½æ?°ã??è¿???¨ç?±æ?¢å?°å¿«???
 		@param t The current time as a percentage of the total time. 
 		*/
 		circIn(t: number): number;		
 		/**
 		!#en Easing in and out with circular formula. From fast to slow.
-		!#zh å¾ªç¯å…¬å¼ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±å¿«åˆ°æ…¢ã€‚
+		!#zh å¾ªç?¯å?¬å??ç¼???ºå?½æ?°ã??è¿???¨ç?±å¿«??°æ?¢ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		circOut(t: number): number;		
 		/**
 		!#en Easing in and out with circular formula. From slow to fast.
-		!#zh æŒ‡æ•°æ›²çº¿ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚è¿åŠ¨ç”±æ…¢åˆ°å¾ˆå¿«å†åˆ°æ…¢ã€‚
+		!#zh ?????°æ?²çº¿ç¼???¥ç????ºå?½æ?°ã??è¿???¨ç?±æ?¢å?°å??å¿«å????°æ?¢ã??
 		@param t The current time as a percentage of the total time, then back to slow. 
 		*/
 		circInOut(t: number): number;		
 		/**
 		!#en Easing in action with a spring oscillating effect.
-		!#zh å¼¹ç°§å›éœ‡æ•ˆæœçš„ç¼“å…¥å‡½æ•°ã€‚
+		!#zh å¼¹ç°§???????????????ç¼???¥å?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		elasticIn(t: number): number;		
 		/**
 		!#en Easing out action with a spring oscillating effect.
-		!#zh å¼¹ç°§å›éœ‡æ•ˆæœçš„ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh å¼¹ç°§???????????????ç¼???ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		elasticOut(t: number): number;		
 		/**
 		!#en Easing in and out action with a spring oscillating effect.
-		!#zh å¼¹ç°§å›éœ‡æ•ˆæœçš„ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh å¼¹ç°§???????????????ç¼???¥ç????ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		elasticInOut(t: number): number;		
 		/**
 		!#en Easing in action with "back up" behavior.
-		!#zh å›é€€æ•ˆæœçš„ç¼“å…¥å‡½æ•°ã€‚
+		!#zh ???????????????ç¼???¥å?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		backIn(t: number): number;		
 		/**
 		!#en Easing out action with "back up" behavior.
-		!#zh å›é€€æ•ˆæœçš„ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh ???????????????ç¼???ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		backOut(t: number): number;		
 		/**
 		!#en Easing in and out action with "back up" behavior.
-		!#zh å›é€€æ•ˆæœçš„ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh ???????????????ç¼???¥ç????ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		backInOut(t: number): number;		
 		/**
 		!#en Easing in action with bouncing effect.
-		!#zh å¼¹è·³æ•ˆæœçš„ç¼“å…¥å‡½æ•°ã€‚
+		!#zh å¼¹è·³?????????ç¼???¥å?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		bounceIn(t: number): number;		
 		/**
 		!#en Easing out action with bouncing effect.
-		!#zh å¼¹è·³æ•ˆæœçš„ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh å¼¹è·³?????????ç¼???ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		bounceOut(t: number): number;		
 		/**
 		!#en Easing in and out action with bouncing effect.
-		!#zh å¼¹è·³æ•ˆæœçš„ç¼“å…¥ç¼“å‡ºå‡½æ•°ã€‚
+		!#zh å¼¹è·³?????????ç¼???¥ç????ºå?½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		bounceInOut(t: number): number;		
 		/**
 		!#en Target will run action with smooth effect.
-		!#zh å¹³æ»‘æ•ˆæœå‡½æ•°ã€‚
+		!#zh å¹³æ??????????½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		smooth(t: number): number;		
 		/**
 		!#en Target will run action with fade effect.
-		!#zh æ¸è¤ªæ•ˆæœå‡½æ•°ã€‚
+		!#zh æ¸?è¤ªæ???????½æ?°ã??
 		@param t The current time as a percentage of the total time. 
 		*/
 		fade(t: number): number;	
@@ -2843,8 +2843,8 @@ declare namespace cc {
 	The AnimationState gives full control over animation playback process.
 	In most cases the Animation Component is sufficient and easier to use. Use the AnimationState if you need full control.
 	!#zh
-	AnimationState å®Œå…¨æ§åˆ¶åŠ¨ç”»æ’­æ”¾è¿‡ç¨‹ã€‚<br/>
-	å¤§å¤šæ•°æƒ…å†µä¸‹ åŠ¨ç”»ç»„ä»¶ æ˜¯è¶³å¤Ÿå’Œæ˜“äºä½¿ç”¨çš„ã€‚å¦‚æœæ‚¨éœ€è¦æ›´å¤šçš„åŠ¨ç”»æ§åˆ¶æ¥å£ï¼Œè¯·ä½¿ç”¨ AnimationStateã€‚ */
+	AnimationState å®???¨æ?§å?¶å?¨ç?»æ?­æ?¾è??ç¨????<br/>
+	å¤§å????°æ????µä?? ??¨ç?»ç??ä»? ??¯è¶³å¤???????äº?ä½¿ç?¨ç?????å¦??????¨é??è¦???´å???????¨ç?»æ?§å?¶æ?¥å??ï¼?è¯·ä½¿??? AnimationState??? */
 	export class AnimationState extends Playable {		
 		/**
 		
@@ -2853,11 +2853,11 @@ declare namespace cc {
 		*/
 		constructor(clip: AnimationClip, name?: string);		
 		/** !#en The curves list.
-		!#zh æ›²çº¿åˆ—è¡¨ã€‚ */
+		!#zh ??²çº¿???è¡¨ã?? */
 		curves: any[];		
 		/** !#en The start delay which represents the number of seconds from an animation's start time to the start of
 		the active interval.
-		!#zh å»¶è¿Ÿå¤šå°‘ç§’æ’­æ”¾ã€‚ */
+		!#zh å»¶è??å¤?å°?ç§???­æ?¾ã?? */
 		delay: number;		
 		/** !#en The animation's iteration count property.
 		
@@ -2867,67 +2867,67 @@ declare namespace cc {
 		Values less than zero and NaN values are treated as the value 1.0 for the purpose of timing model
 		calculations.
 		
-		!#zh è¿­ä»£æ¬¡æ•°ï¼ŒæŒ‡åŠ¨ç”»æ’­æ”¾å¤šå°‘æ¬¡åç»“æŸ, normalize timeã€‚ å¦‚ 2.5ï¼ˆ2æ¬¡åŠï¼‰ */
+		!#zh è¿­ä»£æ¬¡æ?°ï???????¨ç?»æ?­æ?¾å??å°?æ¬¡å??ç»????, normalize time??? å¦? 2.5ï¼?2æ¬¡å??ï¼? */
 		repeatCount: number;		
 		/** !#en The iteration duration of this animation in seconds. (length)
-		!#zh å•æ¬¡åŠ¨ç”»çš„æŒç»­æ—¶é—´ï¼Œç§’ã€‚ */
+		!#zh ???æ¬¡å?¨ç?»ç?????ç»­æ?¶é?´ï??ç§???? */
 		duration: number;		
 		/** !#en The animation's playback speed. 1 is normal playback speed.
-		!#zh æ’­æ”¾é€Ÿç‡ã€‚ */
+		!#zh ??­æ?¾é???????? */
 		speed: number;		
 		/** !#en
 		Wrapping mode of the playing animation.
 		Notice : dynamic change wrapMode will reset time and repeatCount property
 		!#zh
-		åŠ¨ç”»å¾ªç¯æ–¹å¼ã€‚
-		éœ€è¦æ³¨æ„çš„æ˜¯ï¼ŒåŠ¨æ€ä¿®æ”¹ wrapMode æ—¶ï¼Œä¼šé‡ç½® time ä»¥åŠ repeatCount */
+		??¨ç?»å¾ª??¯æ?¹å?????
+		???è¦?æ³¨æ???????¯ï????¨æ??ä¿®æ?? wrapMode ??¶ï??ä¼????ç½? time ä»¥å?? repeatCount */
 		wrapMode: WrapMode;		
 		/** !#en The current time of this animation in seconds.
-		!#zh åŠ¨ç”»å½“å‰çš„æ—¶é—´ï¼Œç§’ã€‚ */
+		!#zh ??¨ç?»å??????????¶é?´ï??ç§???? */
 		time: number;		
 		/** !#en The clip that is being played by this animation state.
-		!#zh æ­¤åŠ¨ç”»çŠ¶æ€æ­£åœ¨æ’­æ”¾çš„å‰ªè¾‘ã€‚ */
+		!#zh æ­¤å?¨ç?»ç?¶æ??æ­???¨æ?­æ?¾ç????ªè????? */
 		clip: AnimationClip;		
 		/** !#en The name of the playing animation.
-		!#zh åŠ¨ç”»çš„åå­— */
+		!#zh ??¨ç?»ç?????å­? */
 		name: string;	
 	}	
 	/** undefined */
 	export class Playable {		
 		/** !#en Is playing or paused in play mode?
-		!#zh å½“å‰æ˜¯å¦æ­£åœ¨æ’­æ”¾ã€‚ */
+		!#zh å½??????¯å?¦æ­£??¨æ?­æ?¾ã?? */
 		isPlaying: boolean;		
 		/** !#en Is currently paused? This can be true even if in edit mode(isPlaying == false).
-		!#zh å½“å‰æ˜¯å¦æ­£åœ¨æš‚åœ */
+		!#zh å½??????¯å?¦æ­£??¨æ????? */
 		isPaused: boolean;		
 		/**
 		!#en Play this animation.
-		!#zh æ’­æ”¾åŠ¨ç”»ã€‚ 
+		!#zh ??­æ?¾å?¨ç?»ã?? 
 		*/
 		play(): void;		
 		/**
 		!#en Stop this animation.
-		!#zh åœæ­¢åŠ¨ç”»æ’­æ”¾ã€‚ 
+		!#zh ???æ­¢å?¨ç?»æ?­æ?¾ã?? 
 		*/
 		stop(): void;		
 		/**
 		!#en Pause this animation.
-		!#zh æš‚åœåŠ¨ç”»ã€‚ 
+		!#zh ????????¨ç?»ã?? 
 		*/
 		pause(): void;		
 		/**
 		!#en Resume this animation.
-		!#zh é‡æ–°æ’­æ”¾åŠ¨ç”»ã€‚ 
+		!#zh ?????°æ?­æ?¾å?¨ç?»ã?? 
 		*/
 		resume(): void;		
 		/**
 		!#en Perform a single frame step.
-		!#zh æ‰§è¡Œä¸€å¸§åŠ¨ç”»ã€‚ 
+		!#zh ??§è??ä¸?å¸§å?¨ç?»ã?? 
 		*/
 		step(): void;	
 	}	
 	/** !#en Specifies how time is treated when it is outside of the keyframe range of an Animation.
-	!#zh åŠ¨ç”»ä½¿ç”¨çš„å¾ªç¯æ¨¡å¼ã€‚ */
+	!#zh ??¨ç?»ä½¿??¨ç??å¾ªç?¯æ¨¡å¼???? */
 	export enum WrapMode {		
 		Default = 0,
 		Normal = 0,
@@ -2938,23 +2938,23 @@ declare namespace cc {
 		PingPongReverse = 0,	
 	}	
 	/** !#en An object to boot the game.
-	!#zh åŒ…å«æ¸¸æˆä¸»ä½“ä¿¡æ¯å¹¶è´Ÿè´£é©±åŠ¨æ¸¸æˆçš„æ¸¸æˆå¯¹è±¡ã€‚ */
+	!#zh ?????«æ¸¸???ä¸»ä??ä¿¡æ?¯å¹¶è´?è´?é©±å?¨æ¸¸??????æ¸¸æ??å¯¹è±¡??? */
 	export class debug {		
 		/**
 		!#en Gets error message with the error id and possible parameters.
-		!#zh é€šè¿‡ error id å’Œå¿…è¦çš„å‚æ•°æ¥è·å–é”™è¯¯ä¿¡æ¯ã€‚
+		!#zh ???è¿? error id ???å¿?è¦?????????°æ?¥è?·å?????è¯¯ä¿¡??¯ã??
 		@param errorId errorId
 		@param param param 
 		*/
 		static getError(errorId: number, param?: any): string;		
 		/**
 		!#en Returns whether or not to display the FPS informations.
-		!#zh æ˜¯å¦æ˜¾ç¤º FPS ä¿¡æ¯ã€‚ 
+		!#zh ??¯å?¦æ?¾ç¤º FPS ä¿¡æ?¯ã?? 
 		*/
 		static isDisplayStats(): boolean;		
 		/**
 		!#en Sets whether display the FPS on the bottom-left corner.
-		!#zh è®¾ç½®æ˜¯å¦åœ¨å·¦ä¸‹è§’æ˜¾ç¤º FPSã€‚
+		!#zh è®¾ç½®??¯å?¦å?¨å·¦ä¸?è§???¾ç¤º FPS???
 		@param displayStats displayStats 
 		*/
 		static setDisplayStats(displayStats: boolean): void;	
@@ -2993,34 +2993,34 @@ declare namespace cc {
 	
 	!#zh
 	<p>
-	    æ³¨æ„ï¼šç”¨ cc.director ä»£æ›¿ cc.Directorã€‚<br/>
-	    cc.director ä¸€ä¸ªç®¡ç†ä½ çš„æ¸¸æˆçš„é€»è¾‘æµç¨‹çš„å•ä¾‹å¯¹è±¡ã€‚<br/>
-	    ç”±äº cc.director æ˜¯ä¸€ä¸ªå•ä¾‹ï¼Œä½ ä¸éœ€è¦è°ƒç”¨ä»»ä½•æ„é€ å‡½æ•°æˆ–åˆ›å»ºå‡½æ•°ï¼Œ<br/>
-	    ä½¿ç”¨å®ƒçš„æ ‡å‡†æ–¹æ³•æ˜¯é€šè¿‡è°ƒç”¨ï¼š<br/>
+	    æ³¨æ??ï¼???? cc.director ä»???? cc.Director???<br/>
+	    cc.director ä¸?ä¸ªç®¡???ä½????æ¸¸æ???????»è??æµ?ç¨???????ä¾?å¯¹è±¡???<br/>
+	    ??±ä?? cc.director ??¯ä??ä¸ªå??ä¾?ï¼?ä½?ä¸????è¦?è°???¨ä»»ä½?????????½æ?°æ?????å»ºå?½æ?°ï??<br/>
+	    ä½¿ç?¨å?????????????¹æ????¯é??è¿?è°???¨ï??<br/>
 	      - cc.director.methodName();
 	    <br/>
-	    å®ƒåˆ›å»ºå’Œå¤„ç†ä¸»çª—å£å¹¶ä¸”ç®¡ç†ä»€ä¹ˆæ—¶å€™æ‰§è¡Œåœºæ™¯ã€‚<br/>
+	    å®????å»ºå??å¤????ä¸»ç?????å¹¶ä??ç®¡ç??ä»?ä¹???¶å????§è????ºæ?¯ã??<br/>
 	    <br/>
-	    cc.director è¿˜è´Ÿè´£ï¼š<br/>
-	     - åˆå§‹åŒ– OpenGL ç¯å¢ƒã€‚<br/>
-	     - è®¾ç½®OpenGLåƒç´ æ ¼å¼ã€‚(é»˜è®¤æ˜¯ RGB565)<br/>
-	     - è®¾ç½®OpenGLç¼“å†²åŒºæ·±åº¦ (é»˜è®¤æ˜¯ 0-bit)<br/>
-	     - è®¾ç½®ç©ºç™½åœºæ™¯çš„é¢œè‰² (é»˜è®¤æ˜¯ é»‘è‰²)<br/>
-	     - è®¾ç½®æŠ•å½± (é»˜è®¤æ˜¯ 3D)<br/>
-	     - è®¾ç½®æ–¹å‘ (é»˜è®¤æ˜¯ Portrait)<br/>
+	    cc.director è¿?è´?è´?ï¼?<br/>
+	     - ???å§???? OpenGL ??¯å?????<br/>
+	     - è®¾ç½®OpenGL???ç´???¼å?????(é»?è®¤æ?? RGB565)<br/>
+	     - è®¾ç½®OpenGLç¼???²å?ºæ·±åº? (é»?è®¤æ?? 0-bit)<br/>
+	     - è®¾ç½®ç©ºç?½å?ºæ?¯ç??é¢???? (é»?è®¤æ?? é»????)<br/>
+	     - è®¾ç½®???å½? (é»?è®¤æ?? 3D)<br/>
+	     - è®¾ç½®??¹å?? (é»?è®¤æ?? Portrait)<br/>
 	   <br/>
-	   cc.director è®¾ç½®äº† OpenGL é»˜è®¤ç¯å¢ƒ <br/>
-	     - GL_TEXTURE_2D   å¯ç”¨ã€‚<br/>
-	     - GL_VERTEX_ARRAY å¯ç”¨ã€‚<br/>
-	     - GL_COLOR_ARRAY  å¯ç”¨ã€‚<br/>
-	     - GL_TEXTURE_COORD_ARRAY å¯ç”¨ã€‚<br/>
+	   cc.director è®¾ç½®äº? OpenGL é»?è®¤ç?¯å?? <br/>
+	     - GL_TEXTURE_2D   ??¯ç?¨ã??<br/>
+	     - GL_VERTEX_ARRAY ??¯ç?¨ã??<br/>
+	     - GL_COLOR_ARRAY  ??¯ç?¨ã??<br/>
+	     - GL_TEXTURE_COORD_ARRAY ??¯ç?¨ã??<br/>
 	</p>
 	<p>
-	  cc.director ä¹ŸåŒæ­¥å®šæ—¶å™¨ä¸æ˜¾ç¤ºå™¨çš„åˆ·æ–°é€Ÿç‡ã€‚
+	  cc.director ä¹????æ­¥å????¶å?¨ä????¾ç¤º??¨ç????·æ?°é????????
 	  <br/>
-	  ç‰¹ç‚¹å’Œå±€é™æ€§: <br/>
-	     - å°†è®¡æ—¶å™¨ & æ¸²æŸ“ä¸æ˜¾ç¤ºå™¨çš„åˆ·æ–°é¢‘ç‡åŒæ­¥ã€‚<br/>
-	     - åªæ”¯æŒåŠ¨ç”»çš„é—´éš” 1/60 1/30 & 1/15ã€‚<br/>
+	  ??¹ç?¹å??å±???????: <br/>
+	     - å°?è®¡æ?¶å?? & æ¸²æ??ä¸???¾ç¤º??¨ç????·æ?°é????????æ­¥ã??<br/>
+	     - ??ªæ?¯æ????¨ç?»ç????´é?? 1/60 1/30 & 1/15???<br/>
 	</p> */
 	export class Director extends EventTarget {		
 		/**
@@ -3028,7 +3028,7 @@ declare namespace cc {
 		Converts a view coordinate to an WebGL coordinate<br/>
 		Useful to convert (multi) touches coordinates to the current layout (portrait or landscape)<br/>
 		Implementation can be found in CCDirectorWebGL.
-		!#zh å°†è§¦æ‘¸ç‚¹çš„å±å¹•åæ ‡è½¬æ¢ä¸º WebGL View ä¸‹çš„åæ ‡ã€‚
+		!#zh å°?è§¦æ?¸ç?¹ç??å±?å¹???????è½¬æ?¢ä¸º WebGL View ä¸?????????????
 		@param uiPoint uiPoint 
 		*/
 		convertToGL(uiPoint: Vec2): Vec2;		
@@ -3037,7 +3037,7 @@ declare namespace cc {
 		Converts an OpenGL coordinate to a view coordinate<br/>
 		Useful to convert node points to window points for calls such as glScissor<br/>
 		Implementation can be found in CCDirectorWebGL.
-		!#zh å°†è§¦æ‘¸ç‚¹çš„ WebGL View åæ ‡è½¬æ¢ä¸ºå±å¹•åæ ‡ã€‚
+		!#zh å°?è§¦æ?¸ç?¹ç?? WebGL View ??????è½¬æ?¢ä¸ºå±?å¹??????????
 		@param glPoint glPoint 
 		*/
 		convertToUI(glPoint: Vec2): Vec2;		
@@ -3049,7 +3049,7 @@ declare namespace cc {
 		!#en
 		Returns the size of the WebGL view in points.<br/>
 		It takes into account any possible rotation (device orientation) of the window.
-		!#zh è·å–è§†å›¾çš„å¤§å°ï¼Œä»¥ç‚¹ä¸ºå•ä½ã€‚ 
+		!#zh ??·å??è§???¾ç??å¤§å??ï¼?ä»¥ç?¹ä¸º???ä½???? 
 		*/
 		getWinSize(): Size;		
 		/**
@@ -3059,8 +3059,8 @@ declare namespace cc {
 		On Mac winSize and winSizeInPixels return the same value.
 		(The pixel here refers to the resource resolution. If you want to get the physics resolution of device, you need to use cc.view.getFrameSize())
 		!#zh
-		è·å–è§†å›¾å¤§å°ï¼Œä»¥åƒç´ ä¸ºå•ä½ï¼ˆè¿™é‡Œçš„åƒç´ æŒ‡çš„æ˜¯èµ„æºåˆ†è¾¨ç‡ã€‚
-		å¦‚æœè¦è·å–å±å¹•ç‰©ç†åˆ†è¾¨ç‡ï¼Œéœ€è¦ç”¨ cc.view.getFrameSize()ï¼‰ 
+		??·å??è§???¾å¤§å°?ï¼?ä»¥å??ç´?ä¸ºå??ä½?ï¼?è¿??????????ç´?????????¯è??æº????è¾¨ç?????
+		å¦????è¦???·å??å±?å¹???©ç?????è¾¨ç??ï¼????è¦???? cc.view.getFrameSize()ï¼? 
 		*/
 		getWinSizeInPixels(): Size;		
 		/**
@@ -3068,15 +3068,15 @@ declare namespace cc {
 		It won't pause the rendering process nor the event manager.
 		If you want to pause the entier game including rendering, audio and event,
 		please use {{#crossLink "Game.pause"}}cc.game.pause{{/crossLink}}
-		!#zh æš‚åœæ­£åœ¨è¿è¡Œçš„åœºæ™¯ï¼Œè¯¥æš‚åœåªä¼šåœæ­¢æ¸¸æˆé€»è¾‘æ‰§è¡Œï¼Œä½†æ˜¯ä¸ä¼šåœæ­¢æ¸²æŸ“å’Œ UI å“åº”ã€‚
-		å¦‚æœæƒ³è¦æ›´å½»åº•å¾—æš‚åœæ¸¸æˆï¼ŒåŒ…å«æ¸²æŸ“ï¼ŒéŸ³é¢‘å’Œäº‹ä»¶ï¼Œè¯·ä½¿ç”¨ {{#crossLink "Game.pause"}}cc.game.pause{{/crossLink}}ã€‚ 
+		!#zh ??????æ­???¨è??è¡??????ºæ?¯ï??è¯¥æ???????ªä?????æ­¢æ¸¸?????»è????§è??ï¼?ä½???¯ä??ä¼????æ­¢æ¸²?????? UI ???åº????
+		å¦??????³è????´å½»åº?å¾???????æ¸¸æ??ï¼??????«æ¸²???ï¼???³é?????äº?ä»¶ï??è¯·ä½¿??? {{#crossLink "Game.pause"}}cc.game.pause{{/crossLink}}??? 
 		*/
 		pause(): void;		
 		/**
 		!#en
 		Run a scene. Replaces the running scene with a new one or enter the first scene.<br/>
 		The new scene will be launched immediately.
-		!#zh ç«‹åˆ»åˆ‡æ¢æŒ‡å®šåœºæ™¯ã€‚
+		!#zh ç«???»å????¢æ??å®???ºæ?¯ã??
 		@param scene The need run scene.
 		@param onBeforeLoadScene The function invoked at the scene before loading.
 		@param onLaunched The function invoked at the scene after launch. 
@@ -3086,7 +3086,7 @@ declare namespace cc {
 		!#en
 		Run a scene. Replaces the running scene with a new one or enter the first scene.
 		The new scene will be launched at the end of the current frame.
-		!#zh è¿è¡ŒæŒ‡å®šåœºæ™¯ã€‚
+		!#zh è¿?è¡????å®???ºæ?¯ã??
 		@param scene The need run scene.
 		@param onBeforeLoadScene The function invoked at the scene before loading.
 		@param onLaunched The function invoked at the scene after launch. 
@@ -3094,7 +3094,7 @@ declare namespace cc {
 		runScene(scene: Scene|SceneAsset, onBeforeLoadScene?: Function, onLaunched?: Function): void;		
 		/**
 		!#en Loads the scene by its name.
-		!#zh é€šè¿‡åœºæ™¯åç§°è¿›è¡ŒåŠ è½½åœºæ™¯ã€‚
+		!#zh ???è¿???ºæ?¯å??ç§°è??è¡????è½½å?ºæ?¯ã??
 		@param sceneName The name of the scene to load.
 		@param onLaunched callback, will be called after scene launched. 
 		*/
@@ -3105,9 +3105,9 @@ declare namespace cc {
 		After calling this method, you still need to launch the scene by `cc.director.loadScene`.
 		It will be totally fine to call `cc.director.loadScene` at any time even if the preloading is not
 		yet finished, the scene will be launched after loaded automatically.
-		!#zh é¢„åŠ è½½åœºæ™¯ï¼Œä½ å¯ä»¥åœ¨ä»»ä½•æ—¶å€™è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚
-		è°ƒç”¨å®Œåï¼Œä½ ä»ç„¶éœ€è¦é€šè¿‡ `cc.director.loadScene` æ¥å¯åŠ¨åœºæ™¯ï¼Œå› ä¸ºè¿™ä¸ªæ–¹æ³•ä¸ä¼šæ‰§è¡Œåœºæ™¯åŠ è½½æ“ä½œã€‚
-		å°±ç®—é¢„åŠ è½½è¿˜æ²¡å®Œæˆï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥è°ƒç”¨ `cc.director.loadScene`ï¼ŒåŠ è½½å®Œæˆååœºæ™¯å°±ä¼šå¯åŠ¨ã€‚
+		!#zh é¢????è½½å?ºæ?¯ï??ä½???¯ä»¥??¨ä»»ä½???¶å??è°???¨è??ä¸ªæ?¹æ?????
+		è°???¨å?????ï¼?ä½?ä»???¶é??è¦????è¿? `cc.director.loadScene` ??¥å?¯å?¨å?ºæ?¯ï?????ä¸ºè??ä¸ªæ?¹æ??ä¸?ä¼???§è????ºæ?¯å??è½½æ??ä½????
+		å°±ç??é¢????è½½è??æ²¡å?????ï¼?ä½?ä¹???¯ä»¥??´æ?¥è????? `cc.director.loadScene`ï¼????è½½å??????????ºæ?¯å°±ä¼???¯å?¨ã??
 		@param sceneName The name of the scene to preload.
 		@param onProgress callback, will be called when the load progression change.
 		@param onLoaded callback, will be called after scene loaded. 
@@ -3115,14 +3115,14 @@ declare namespace cc {
 		preloadScene(sceneName: string, onProgress?: (completedCount: number, totalCount: number, item: any) => void, onLoaded?: (error: Error) => void): void;		
 		/**
 		!#en Resume game logic execution after pause, if the current scene is not paused, nothing will happen.
-		!#zh æ¢å¤æš‚åœåœºæ™¯çš„æ¸¸æˆé€»è¾‘ï¼Œå¦‚æœå½“å‰åœºæ™¯æ²¡æœ‰æš‚åœå°†æ²¡ä»»ä½•äº‹æƒ…å‘ç”Ÿã€‚ 
+		!#zh ??¢å??????????ºæ?¯ç??æ¸¸æ????»è??ï¼?å¦????å½??????ºæ?¯æ²¡?????????å°?æ²¡ä»»ä½?äº????????????? 
 		*/
 		resume(): void;		
 		/**
 		!#en
 		Enables or disables WebGL depth test.<br/>
 		Implementation can be found in CCDirectorCanvas.js/CCDirectorWebGL.js
-		!#zh å¯ç”¨/ç¦ç”¨æ·±åº¦æµ‹è¯•ï¼ˆåœ¨ Canvas æ¸²æŸ“æ¨¡å¼ä¸‹ä¸ä¼šç”Ÿæ•ˆï¼‰ã€‚
+		!#zh ??¯ç??/ç¦???¨æ·±åº¦æ??è¯?ï¼???? Canvas æ¸²æ??æ¨¡å??ä¸?ä¸?ä¼???????ï¼????
 		@param on on 
 		*/
 		setDepthTest(on: boolean): void;		
@@ -3131,14 +3131,14 @@ declare namespace cc {
 		Set color for clear screen.<br/>
 		(Implementation can be found in CCDirectorCanvas.js/CCDirectorWebGL.js)
 		!#zh
-		è®¾ç½®åœºæ™¯çš„é»˜è®¤æ“¦é™¤é¢œè‰²ã€‚<br/>
-		æ”¯æŒå…¨é€æ˜ï¼Œä½†ä¸æ”¯æŒé€æ˜åº¦ä¸ºä¸­é—´å€¼ã€‚è¦æ”¯æŒå…¨é€æ˜éœ€æ‰‹å·¥å¼€å¯ cc.macro.ENABLE_TRANSPARENT_CANVASã€‚
+		è®¾ç½®??ºæ?¯ç??é»?è®¤æ?¦é?¤é????²ã??<br/>
+		??¯æ????¨é?????ï¼?ä½?ä¸???¯æ????????åº¦ä¸ºä¸­é?´å?¼ã??è¦???¯æ????¨é???????????å·¥å????? cc.macro.ENABLE_TRANSPARENT_CANVAS???
 		@param clearColor clearColor 
 		*/
 		setClearColor(clearColor: Color): void;		
 		/**
 		!#en Returns current logic Scene.
-		!#zh è·å–å½“å‰é€»è¾‘åœºæ™¯ã€‚
+		!#zh ??·å??å½??????»è????ºæ?¯ã??
 		
 		@example 
 		```js
@@ -3149,7 +3149,7 @@ declare namespace cc {
 		getScene(): Scene;		
 		/**
 		!#en Returns the FPS value. Please use {{#crossLink "Game.setFrameRate"}}cc.game.setFrameRate{{/crossLink}} to control animation interval.
-		!#zh è·å–å•ä½å¸§æ‰§è¡Œæ—¶é—´ã€‚è¯·ä½¿ç”¨ {{#crossLink "Game.setFrameRate"}}cc.game.setFrameRate{{/crossLink}} æ¥æ§åˆ¶æ¸¸æˆå¸§ç‡ã€‚ 
+		!#zh ??·å?????ä½?å¸§æ?§è????¶é?´ã??è¯·ä½¿??? {{#crossLink "Game.setFrameRate"}}cc.game.setFrameRate{{/crossLink}} ??¥æ?§å?¶æ¸¸???å¸§ç????? 
 		*/
 		getAnimationInterval(): number;		
 		/**
@@ -3160,90 +3160,90 @@ declare namespace cc {
 		setAnimationInterval(value: number): void;		
 		/**
 		!#en Returns the delta time since last frame.
-		!#zh è·å–ä¸Šä¸€å¸§çš„å¢é‡æ—¶é—´ã€‚ 
+		!#zh ??·å??ä¸?ä¸?å¸§ç??å¢??????¶é?´ã?? 
 		*/
 		getDeltaTime(): number;		
 		/**
 		!#en Returns the total passed time since game start, unit: ms
-		!#zh è·å–ä»æ¸¸æˆå¼€å§‹åˆ°ç°åœ¨æ€»å…±ç»è¿‡çš„æ—¶é—´ï¼Œå•ä½ä¸º ms 
+		!#zh ??·å??ä»?æ¸¸æ??å¼?å§???°ç?°å?¨æ?»å?±ç??è¿??????¶é?´ï?????ä½?ä¸? ms 
 		*/
 		getTotalTime(): number;		
 		/**
 		!#en Returns how many frames were called since the director started.
-		!#zh è·å– director å¯åŠ¨ä»¥æ¥æ¸¸æˆè¿è¡Œçš„æ€»å¸§æ•°ã€‚ 
+		!#zh ??·å?? director ??¯å?¨ä»¥??¥æ¸¸???è¿?è¡??????»å¸§??°ã?? 
 		*/
 		getTotalFrames(): number;		
 		/**
 		!#en Returns whether or not the Director is paused.
-		!#zh æ˜¯å¦å¤„äºæš‚åœçŠ¶æ€ã€‚ 
+		!#zh ??¯å?¦å??äº?????????¶æ????? 
 		*/
 		isPaused(): boolean;		
 		/**
 		!#en Returns the cc.Scheduler associated with this director.
-		!#zh è·å–å’Œ director ç›¸å…³è”çš„ cc.Schedulerã€‚ 
+		!#zh ??·å????? director ??¸å?³è????? cc.Scheduler??? 
 		*/
 		getScheduler(): Scheduler;		
 		/**
 		!#en Sets the cc.Scheduler associated with this director.
-		!#zh è®¾ç½®å’Œ director ç›¸å…³è”çš„ cc.Schedulerã€‚
+		!#zh è®¾ç½®??? director ??¸å?³è????? cc.Scheduler???
 		@param scheduler scheduler 
 		*/
 		setScheduler(scheduler: Scheduler): void;		
 		/**
 		!#en Returns the cc.ActionManager associated with this director.
-		!#zh è·å–å’Œ director ç›¸å…³è”çš„ cc.ActionManagerï¼ˆåŠ¨ä½œç®¡ç†å™¨ï¼‰ã€‚ 
+		!#zh ??·å????? director ??¸å?³è????? cc.ActionManagerï¼???¨ä??ç®¡ç????¨ï????? 
 		*/
 		getActionManager(): ActionManager;		
 		/**
 		!#en Sets the cc.ActionManager associated with this director.
-		!#zh è®¾ç½®å’Œ director ç›¸å…³è”çš„ cc.ActionManagerï¼ˆåŠ¨ä½œç®¡ç†å™¨ï¼‰ã€‚
+		!#zh è®¾ç½®??? director ??¸å?³è????? cc.ActionManagerï¼???¨ä??ç®¡ç????¨ï?????
 		@param actionManager actionManager 
 		*/
 		setActionManager(actionManager: ActionManager): void;		
 		/**
 		!#en Returns the cc.CollisionManager associated with this director.
-		!#zh è·å–å’Œ director ç›¸å…³è”çš„ cc.CollisionManager ï¼ˆç¢°æ’ç®¡ç†å™¨ï¼‰ã€‚ 
+		!#zh ??·å????? director ??¸å?³è????? cc.CollisionManager ï¼?ç¢°æ??ç®¡ç????¨ï????? 
 		*/
 		getCollisionManager(): CollisionManager;		
 		/**
 		!#en Returns the cc.PhysicsManager associated with this director.
-		!#zh è¿”å›ä¸ director ç›¸å…³è”çš„ cc.PhysicsManager ï¼ˆç‰©ç†ç®¡ç†å™¨ï¼‰ã€‚ 
+		!#zh è¿????ä¸? director ??¸å?³è????? cc.PhysicsManager ï¼???©ç??ç®¡ç????¨ï????? 
 		*/
 		getPhysicsManager(): PhysicsManager;		
 		/**
 		!#en Returns the cc.Physics3DManager associated with this director.
-		!#zh è¿”å›ä¸ director ç›¸å…³è”çš„ cc.Physics3DManager ï¼ˆç‰©ç†ç®¡ç†å™¨ï¼‰ã€‚ 
+		!#zh è¿????ä¸? director ??¸å?³è????? cc.Physics3DManager ï¼???©ç??ç®¡ç????¨ï????? 
 		*/
 		getPhysics3DManager(): Physics3DManager;		
 		/** !#en The event projection changed of cc.Director. This event will not get triggered since v2.0
-		!#zh cc.Director æŠ•å½±å˜åŒ–çš„äº‹ä»¶ã€‚ä» v2.0 å¼€å§‹è¿™ä¸ªäº‹ä»¶ä¸ä¼šå†è¢«è§¦å‘ */
+		!#zh cc.Director ???å½±å????????äº?ä»¶ã??ä»? v2.0 å¼?å§?è¿?ä¸ªä??ä»¶ä??ä¼????è¢«è§¦??? */
 		static EVENT_PROJECTION_CHANGED: string;		
 		/** !#en The event which will be triggered before loading a new scene.
-		!#zh åŠ è½½æ–°åœºæ™¯ä¹‹å‰æ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh ???è½½æ?°å?ºæ?¯ä????????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_BEFORE_SCENE_LOADING: string;		
 		/** !#en The event which will be triggered before launching a new scene.
-		!#zh è¿è¡Œæ–°åœºæ™¯ä¹‹å‰æ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh è¿?è¡???°å?ºæ?¯ä????????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_BEFORE_SCENE_LAUNCH: string;		
 		/** !#en The event which will be triggered after launching a new scene.
-		!#zh è¿è¡Œæ–°åœºæ™¯ä¹‹åæ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh è¿?è¡???°å?ºæ?¯ä????????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_AFTER_SCENE_LAUNCH: string;		
 		/** !#en The event which will be triggered at the beginning of every frame.
-		!#zh æ¯ä¸ªå¸§çš„å¼€å§‹æ—¶æ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh æ¯?ä¸ªå¸§???å¼?å§???¶æ??è§¦å?????äº?ä»¶ã?? */
 		static EVENT_BEFORE_UPDATE: string;		
 		/** !#en The event which will be triggered after engine and components update logic.
-		!#zh å°†åœ¨å¼•æ“å’Œç»„ä»¶ â€œupdateâ€ é€»è¾‘ä¹‹åæ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh å°???¨å????????ç»?ä»? ???update??? ??»è??ä¹???????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_AFTER_UPDATE: string;		
 		/** !#en The event is deprecated since v2.0, please use cc.Director.EVENT_BEFORE_DRAW instead
-		!#zh è¿™ä¸ªäº‹ä»¶ä» v2.0 å¼€å§‹è¢«åºŸå¼ƒï¼Œè¯·ç›´æ¥ä½¿ç”¨ cc.Director.EVENT_BEFORE_DRAW */
+		!#zh è¿?ä¸ªä??ä»¶ä?? v2.0 å¼?å§?è¢«å??å¼?ï¼?è¯·ç?´æ?¥ä½¿??? cc.Director.EVENT_BEFORE_DRAW */
 		static EVENT_BEFORE_VISIT: string;		
 		/** !#en The event is deprecated since v2.0, please use cc.Director.EVENT_BEFORE_DRAW instead
-		!#zh è¿™ä¸ªäº‹ä»¶ä» v2.0 å¼€å§‹è¢«åºŸå¼ƒï¼Œè¯·ç›´æ¥ä½¿ç”¨ cc.Director.EVENT_BEFORE_DRAW */
+		!#zh è¿?ä¸ªä??ä»¶ä?? v2.0 å¼?å§?è¢«å??å¼?ï¼?è¯·ç?´æ?¥ä½¿??? cc.Director.EVENT_BEFORE_DRAW */
 		static EVENT_AFTER_VISIT: string;		
 		/** !#en The event which will be triggered before the rendering process.
-		!#zh æ¸²æŸ“è¿‡ç¨‹ä¹‹å‰æ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh æ¸²æ??è¿?ç¨?ä¹???????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_BEFORE_DRAW: string;		
 		/** !#en The event which will be triggered after the rendering process.
-		!#zh æ¸²æŸ“è¿‡ç¨‹ä¹‹åæ‰€è§¦å‘çš„äº‹ä»¶ã€‚ */
+		!#zh æ¸²æ??è¿?ç¨?ä¹???????è§¦å?????äº?ä»¶ã?? */
 		static EVENT_AFTER_DRAW: string;		
 		/** Constant for 2D projection (orthogonal projection) */
 		static PROJECTION_2D: number;		
@@ -3255,24 +3255,24 @@ declare namespace cc {
 		static PROJECTION_DEFAULT: number;	
 	}	
 	/** !#en An object to boot the game.
-	!#zh åŒ…å«æ¸¸æˆä¸»ä½“ä¿¡æ¯å¹¶è´Ÿè´£é©±åŠ¨æ¸¸æˆçš„æ¸¸æˆå¯¹è±¡ã€‚ */
+	!#zh ?????«æ¸¸???ä¸»ä??ä¿¡æ?¯å¹¶è´?è´?é©±å?¨æ¸¸??????æ¸¸æ??å¯¹è±¡??? */
 	export class Game extends EventTarget {		
 		/** !#en Event triggered when game hide to background.
 		Please note that this event is not 100% guaranteed to be fired on Web platform,
 		on native platforms, it corresponds to enter background event, os status bar or notification center may not trigger this event.
-		!#zh æ¸¸æˆè¿›å…¥åå°æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-		è¯·æ³¨æ„ï¼Œåœ¨ WEB å¹³å°ï¼Œè¿™ä¸ªäº‹ä»¶ä¸ä¸€å®šä¼š 100% è§¦å‘ï¼Œè¿™å®Œå…¨å–å†³äºæµè§ˆå™¨çš„å›è°ƒè¡Œä¸ºã€‚
-		åœ¨åŸç”Ÿå¹³å°ï¼Œå®ƒå¯¹åº”çš„æ˜¯åº”ç”¨è¢«åˆ‡æ¢åˆ°åå°äº‹ä»¶ï¼Œä¸‹æ‹‰èœå•å’Œä¸Šæ‹‰çŠ¶æ€æ ç­‰ä¸ä¸€å®šä¼šè§¦å‘è¿™ä¸ªäº‹ä»¶ï¼Œè¿™å–å†³äºç³»ç»Ÿè¡Œä¸ºã€‚ */
+		!#zh æ¸¸æ??è¿???¥å????°æ?¶è§¦??????äº?ä»¶ã??
+		è¯·æ³¨???ï¼???? WEB å¹³å?°ï??è¿?ä¸ªä??ä»¶ä??ä¸?å®?ä¼? 100% è§¦å??ï¼?è¿?å®???¨å????³ä??æµ?è§???¨ç?????è°?è¡?ä¸ºã??
+		??¨å?????å¹³å?°ï??å®?å¯¹å???????¯å????¨è¢«?????¢å?°å????°ä??ä»¶ï??ä¸?????????????ä¸??????¶æ?????ç­?ä¸?ä¸?å®?ä¼?è§¦å??è¿?ä¸ªä??ä»¶ï??è¿??????³ä??ç³»ç??è¡?ä¸ºã?? */
 		EVENT_HIDE: string;		
 		/** !#en Event triggered when game back to foreground
 		Please note that this event is not 100% guaranteed to be fired on Web platform,
 		on native platforms, it corresponds to enter foreground event.
-		!#zh æ¸¸æˆè¿›å…¥å‰å°è¿è¡Œæ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-		è¯·æ³¨æ„ï¼Œåœ¨ WEB å¹³å°ï¼Œè¿™ä¸ªäº‹ä»¶ä¸ä¸€å®šä¼š 100% è§¦å‘ï¼Œè¿™å®Œå…¨å–å†³äºæµè§ˆå™¨çš„å›è°ƒè¡Œä¸ºã€‚
-		åœ¨åŸç”Ÿå¹³å°ï¼Œå®ƒå¯¹åº”çš„æ˜¯åº”ç”¨è¢«åˆ‡æ¢åˆ°å‰å°äº‹ä»¶ã€‚ */
+		!#zh æ¸¸æ??è¿???¥å????°è??è¡???¶è§¦??????äº?ä»¶ã??
+		è¯·æ³¨???ï¼???? WEB å¹³å?°ï??è¿?ä¸ªä??ä»¶ä??ä¸?å®?ä¼? 100% è§¦å??ï¼?è¿?å®???¨å????³ä??æµ?è§???¨ç?????è°?è¡?ä¸ºã??
+		??¨å?????å¹³å?°ï??å®?å¯¹å???????¯å????¨è¢«?????¢å?°å????°ä??ä»¶ã?? */
 		EVENT_SHOW: string;		
 		/** !#en Event triggered when game restart
-		!#zh è°ƒç”¨restartåï¼Œè§¦å‘äº‹ä»¶ã€‚ */
+		!#zh è°???¨restart???ï¼?è§¦å??äº?ä»¶ã?? */
 		EVENT_RESTART: string;		
 		/** Event triggered after game inited, at this point all engine objects and game scripts are loaded */
 		EVENT_GAME_INITED: string;		
@@ -3286,16 +3286,16 @@ declare namespace cc {
 		/** OpenGL API as renderer backend */
 		RENDER_TYPE_OPENGL: number;		
 		/** !#en The outer frame of the game canvas, parent of game container.
-		!#zh æ¸¸æˆç”»å¸ƒçš„å¤–æ¡†ï¼Œcontainer çš„çˆ¶å®¹å™¨ã€‚ */
+		!#zh æ¸¸æ????»å?????å¤?æ¡?ï¼?container ?????¶å®¹??¨ã?? */
 		frame: any;		
 		/** !#en The container of game canvas.
-		!#zh æ¸¸æˆç”»å¸ƒçš„å®¹å™¨ã€‚ */
+		!#zh æ¸¸æ????»å?????å®¹å?¨ã?? */
 		container: HTMLDivElement;		
 		/** !#en The canvas of the game.
-		!#zh æ¸¸æˆçš„ç”»å¸ƒã€‚ */
+		!#zh æ¸¸æ???????»å????? */
 		canvas: HTMLCanvasElement;		
 		/** !#en The renderer backend of the game.
-		!#zh æ¸¸æˆçš„æ¸²æŸ“å™¨ç±»å‹ã€‚ */
+		!#zh æ¸¸æ?????æ¸²æ????¨ç±»?????? */
 		renderType: number;		
 		/** !#en
 		The current game configuration, including:<br/>
@@ -3324,79 +3324,79 @@ declare namespace cc {
 		<br/>
 		Please DO NOT modify this object directly, it won't have any effect.<br/>
 		!#zh
-		å½“å‰çš„æ¸¸æˆé…ç½®ï¼ŒåŒ…æ‹¬ï¼š                                                                  <br/>
-		1. debugModeï¼ˆdebug æ¨¡å¼ï¼Œä½†æ˜¯åœ¨æµè§ˆå™¨ä¸­è¿™ä¸ªé€‰é¡¹ä¼šè¢«å¿½ç•¥ï¼‰                                <br/>
-		     "debugMode" å„ç§è®¾ç½®é€‰é¡¹çš„æ„ä¹‰ã€‚                                                   <br/>
-		         0 - æ²¡æœ‰æ¶ˆæ¯è¢«æ‰“å°å‡ºæ¥ã€‚                                                       <br/>
-		         1 - cc.errorï¼Œcc.assertï¼Œcc.warnï¼Œcc.log å°†æ‰“å°åœ¨ console ä¸­ã€‚                  <br/>
-		         2 - cc.errorï¼Œcc.assertï¼Œcc.warn å°†æ‰“å°åœ¨ console ä¸­ã€‚                          <br/>
-		         3 - cc.errorï¼Œcc.assert å°†æ‰“å°åœ¨ console ä¸­ã€‚                                   <br/>
-		         4 - cc.errorï¼Œcc.assertï¼Œcc.warnï¼Œcc.log å°†æ‰“å°åœ¨ canvas ä¸­ï¼ˆä»…é€‚ç”¨äº web ç«¯ï¼‰ã€‚ <br/>
-		         5 - cc.errorï¼Œcc.assertï¼Œcc.warn å°†æ‰“å°åœ¨ canvas ä¸­ï¼ˆä»…é€‚ç”¨äº web ç«¯ï¼‰ã€‚         <br/>
-		         6 - cc.errorï¼Œcc.assert å°†æ‰“å°åœ¨ canvas ä¸­ï¼ˆä»…é€‚ç”¨äº web ç«¯ï¼‰ã€‚                  <br/>
-		2. showFPSï¼ˆæ˜¾ç¤º FPSï¼‰                                                            <br/>
-		     å½“ showFPS ä¸º true çš„æ—¶å€™ç•Œé¢çš„å·¦ä¸‹è§’å°†æ˜¾ç¤º fps çš„ä¿¡æ¯ï¼Œå¦åˆ™è¢«éšè—ã€‚              <br/>
+		å½???????æ¸¸æ?????ç½®ï???????¬ï??                                                                  <br/>
+		1. debugModeï¼?debug æ¨¡å??ï¼?ä½???¯å?¨æ??è§???¨ä¸­è¿?ä¸ªé??é¡¹ä??è¢«å¿½??¥ï??                                <br/>
+		     "debugMode" ???ç§?è®¾ç½®???é¡¹ç?????ä¹????                                                   <br/>
+		         0 - æ²¡æ??æ¶???¯è¢«?????°å?ºæ?¥ã??                                                       <br/>
+		         1 - cc.errorï¼?cc.assertï¼?cc.warnï¼?cc.log å°??????°å?? console ä¸­ã??                  <br/>
+		         2 - cc.errorï¼?cc.assertï¼?cc.warn å°??????°å?? console ä¸­ã??                          <br/>
+		         3 - cc.errorï¼?cc.assert å°??????°å?? console ä¸­ã??                                   <br/>
+		         4 - cc.errorï¼?cc.assertï¼?cc.warnï¼?cc.log å°??????°å?? canvas ä¸­ï??ä»??????¨ä?? web ç«¯ï????? <br/>
+		         5 - cc.errorï¼?cc.assertï¼?cc.warn å°??????°å?? canvas ä¸­ï??ä»??????¨ä?? web ç«¯ï?????         <br/>
+		         6 - cc.errorï¼?cc.assert å°??????°å?? canvas ä¸­ï??ä»??????¨ä?? web ç«¯ï?????                  <br/>
+		2. showFPSï¼???¾ç¤º FPSï¼?                                                            <br/>
+		     å½? showFPS ä¸? true ?????¶å???????¢ç??å·¦ä??è§?å°???¾ç¤º fps ???ä¿¡æ?¯ï????¦å??è¢«é????????              <br/>
 		3. exposeClassName                                                           <br/>
-		     æš´éœ²ç±»åè®© Chrome DevTools å¯ä»¥è¯†åˆ«ï¼Œå¦‚æœå¼€å¯ä¼šç¨ç¨é™ä½ç±»çš„åˆ›å»ºè¿‡ç¨‹çš„æ€§èƒ½ï¼Œä½†å¯¹å¯¹è±¡æ„é€ æ²¡æœ‰å½±å“ã€‚ <br/>
-		4. frameRate (å¸§ç‡)                                                              <br/>
-		     â€œframeRateâ€ è®¾ç½®æƒ³è¦çš„å¸§ç‡ä½ çš„æ¸¸æˆï¼Œä½†çœŸæ­£çš„FPSå–å†³äºä½ çš„æ¸¸æˆå®ç°å’Œè¿è¡Œç¯å¢ƒã€‚      <br/>
+		     ??´é?²ç±»???è®? Chrome DevTools ??¯ä»¥è¯???«ï??å¦????å¼???¯ä??ç¨?ç¨????ä½?ç±»ç?????å»ºè??ç¨??????§è?½ï??ä½?å¯¹å¯¹è±¡æ?????æ²¡æ??å½±å????? <br/>
+		4. frameRate (å¸§ç??)                                                              <br/>
+		     ???frameRate??? è®¾ç½®??³è?????å¸§ç??ä½????æ¸¸æ??ï¼?ä½????æ­????FPS?????³ä??ä½????æ¸¸æ??å®???°å??è¿?è¡???¯å?????      <br/>
 		5. id                                                                            <br/>
-		     "gameCanvas" Web é¡µé¢ä¸Šçš„ Canvas Element IDï¼Œä»…é€‚ç”¨äº web ç«¯ã€‚                         <br/>
-		6. renderModeï¼ˆæ¸²æŸ“æ¨¡å¼ï¼‰                                                         <br/>
-		     â€œrenderModeâ€ è®¾ç½®æ¸²æŸ“å™¨ç±»å‹ï¼Œä»…é€‚ç”¨äº web ç«¯ï¼š                              <br/>
-		         0 - é€šè¿‡å¼•æ“è‡ªåŠ¨é€‰æ‹©ã€‚                                                     <br/>
-		         1 - å¼ºåˆ¶ä½¿ç”¨ canvas æ¸²æŸ“ã€‚
-		         2 - å¼ºåˆ¶ä½¿ç”¨ WebGL æ¸²æŸ“ï¼Œä½†æ˜¯åœ¨éƒ¨åˆ† Android æµè§ˆå™¨ä¸­è¿™ä¸ªé€‰é¡¹ä¼šè¢«å¿½ç•¥ã€‚     <br/>
+		     "gameCanvas" Web é¡µé?¢ä????? Canvas Element IDï¼?ä»??????¨ä?? web ç«¯ã??                         <br/>
+		6. renderModeï¼?æ¸²æ??æ¨¡å??ï¼?                                                         <br/>
+		     ???renderMode??? è®¾ç½®æ¸²æ????¨ç±»???ï¼?ä»??????¨ä?? web ç«¯ï??                              <br/>
+		         0 - ???è¿?å¼??????ªå?¨é????©ã??                                                     <br/>
+		         1 - å¼ºå?¶ä½¿??? canvas æ¸²æ?????
+		         2 - å¼ºå?¶ä½¿??? WebGL æ¸²æ??ï¼?ä½???¯å?¨é?¨å?? Android æµ?è§???¨ä¸­è¿?ä¸ªé??é¡¹ä??è¢«å¿½??¥ã??     <br/>
 		<br/>
-		æ³¨æ„ï¼šè¯·ä¸è¦ç›´æ¥ä¿®æ”¹è¿™ä¸ªå¯¹è±¡ï¼Œå®ƒä¸ä¼šæœ‰ä»»ä½•æ•ˆæœã€‚ */
+		æ³¨æ??ï¼?è¯·ä??è¦???´æ?¥ä¿®??¹è??ä¸ªå¯¹è±¡ï??å®?ä¸?ä¼????ä»»ä??????????? */
 		config: any;		
 		/**
 		!#en Callback when the scripts of engine have been load.
-		!#zh å½“å¼•æ“å®Œæˆå¯åŠ¨åçš„å›è°ƒå‡½æ•°ã€‚ 
+		!#zh å½?å¼????å®??????¯å?¨å????????è°???½æ?°ã?? 
 		*/
 		onStart(): void;		
 		/**
 		!#en Set frame rate of game.
-		!#zh è®¾ç½®æ¸¸æˆå¸§ç‡ã€‚
+		!#zh è®¾ç½®æ¸¸æ??å¸§ç?????
 		@param frameRate frameRate 
 		*/
 		setFrameRate(frameRate: number): void;		
 		/**
 		!#en Get frame rate set for the game, it doesn't represent the real frame rate.
-		!#zh è·å–è®¾ç½®çš„æ¸¸æˆå¸§ç‡ï¼ˆä¸ç­‰åŒäºå®é™…å¸§ç‡ï¼‰ã€‚ 
+		!#zh ??·å??è®¾ç½®???æ¸¸æ??å¸§ç??ï¼?ä¸?ç­????äº?å®????å¸§ç??ï¼???? 
 		*/
 		getFrameRate(): number;		
 		/**
 		!#en Run the game frame by frame.
-		!#zh æ‰§è¡Œä¸€å¸§æ¸¸æˆå¾ªç¯ã€‚ 
+		!#zh ??§è??ä¸?å¸§æ¸¸???å¾ªç?¯ã?? 
 		*/
 		step(): void;		
 		/**
 		!#en Pause the game main loop. This will pause:
 		game logic execution, rendering process, event manager, background music and all audio effects.
 		This is different with cc.director.pause which only pause the game logic execution.
-		!#zh æš‚åœæ¸¸æˆä¸»å¾ªç¯ã€‚åŒ…å«ï¼šæ¸¸æˆé€»è¾‘ï¼Œæ¸²æŸ“ï¼Œäº‹ä»¶å¤„ç†ï¼ŒèƒŒæ™¯éŸ³ä¹å’Œæ‰€æœ‰éŸ³æ•ˆã€‚è¿™ç‚¹å’Œåªæš‚åœæ¸¸æˆé€»è¾‘çš„ cc.director.pause ä¸åŒã€‚ 
+		!#zh ??????æ¸¸æ??ä¸»å¾ª??¯ã???????«ï??æ¸¸æ????»è??ï¼?æ¸²æ??ï¼?äº?ä»¶å?????ï¼??????¯é?³ä?????????????³æ?????è¿???¹å????ªæ?????æ¸¸æ????»è????? cc.director.pause ä¸??????? 
 		*/
 		pause(): void;		
 		/**
 		!#en Resume the game from pause. This will resume:
 		game logic execution, rendering process, event manager, background music and all audio effects.
-		!#zh æ¢å¤æ¸¸æˆä¸»å¾ªç¯ã€‚åŒ…å«ï¼šæ¸¸æˆé€»è¾‘ï¼Œæ¸²æŸ“ï¼Œäº‹ä»¶å¤„ç†ï¼ŒèƒŒæ™¯éŸ³ä¹å’Œæ‰€æœ‰éŸ³æ•ˆã€‚ 
+		!#zh ??¢å??æ¸¸æ??ä¸»å¾ª??¯ã???????«ï??æ¸¸æ????»è??ï¼?æ¸²æ??ï¼?äº?ä»¶å?????ï¼??????¯é?³ä?????????????³æ????? 
 		*/
 		resume(): void;		
 		/**
 		!#en Check whether the game is paused.
-		!#zh åˆ¤æ–­æ¸¸æˆæ˜¯å¦æš‚åœã€‚ 
+		!#zh ??¤æ?­æ¸¸?????¯å?¦æ???????? 
 		*/
 		isPaused(): boolean;		
 		/**
 		!#en Restart game.
-		!#zh é‡æ–°å¼€å§‹æ¸¸æˆ 
+		!#zh ?????°å??å§?æ¸¸æ?? 
 		*/
 		restart(): void;		
 		/**
 		!#en End game, it will close the game window
-		!#zh é€€å‡ºæ¸¸æˆ 
+		!#zh ?????ºæ¸¸??? 
 		*/
 		end(): void;		
 		/**
@@ -3404,7 +3404,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the game object.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œ game çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å?? game ?????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -3416,7 +3416,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the game object,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œ game çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å?? game ?????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -3425,13 +3425,13 @@ declare namespace cc {
 		once(type: string, callback: (arg1?: any, arg2?: any, arg3?: any, arg4?: any, arg5?: any) => void, target?: any): void;		
 		/**
 		!#en Prepare game.
-		!#zh å‡†å¤‡å¼•æ“ï¼Œè¯·ä¸è¦ç›´æ¥è°ƒç”¨è¿™ä¸ªå‡½æ•°ã€‚
+		!#zh ???å¤?å¼????ï¼?è¯·ä??è¦???´æ?¥è????¨è??ä¸ªå?½æ?°ã??
 		@param cb cb 
 		*/
 		prepare(cb: Function): void;		
 		/**
 		!#en Run game with configuration object and onStart function.
-		!#zh è¿è¡Œæ¸¸æˆï¼Œå¹¶ä¸”æŒ‡å®šå¼•æ“é…ç½®å’Œ onStart çš„å›è°ƒã€‚
+		!#zh è¿?è¡?æ¸¸æ??ï¼?å¹¶ä?????å®?å¼???????ç½®å?? onStart ??????è°????
 		@param config Pass configuration object or onStart function
 		@param onStart function to be executed after game initialized 
 		*/
@@ -3441,20 +3441,20 @@ declare namespace cc {
 		Add a persistent root node to the game, the persistent node won't be destroyed during scene transition.<br/>
 		The target node must be placed in the root level of hierarchy, otherwise this API won't have any effect.
 		!#zh
-		å£°æ˜å¸¸é©»æ ¹èŠ‚ç‚¹ï¼Œè¯¥èŠ‚ç‚¹ä¸ä¼šè¢«åœ¨åœºæ™¯åˆ‡æ¢ä¸­è¢«é”€æ¯ã€‚<br/>
-		ç›®æ ‡èŠ‚ç‚¹å¿…é¡»ä½äºä¸ºå±‚çº§çš„æ ¹èŠ‚ç‚¹ï¼Œå¦åˆ™æ— æ•ˆã€‚
+		å£°æ??å¸¸é©»??¹è????¹ï??è¯¥è????¹ä??ä¼?è¢«å?¨å?ºæ?¯å????¢ä¸­è¢«é??æ¯????<br/>
+		??®æ???????¹å??é¡»ä??äº?ä¸ºå??çº§ç????¹è????¹ï????¦å???????????
 		@param node The node to be made persistent 
 		*/
 		addPersistRootNode(node: Node): void;		
 		/**
 		!#en Remove a persistent root node.
-		!#zh å–æ¶ˆå¸¸é©»æ ¹èŠ‚ç‚¹ã€‚
+		!#zh ???æ¶?å¸¸é©»??¹è????¹ã??
 		@param node The node to be removed from persistent node list 
 		*/
 		removePersistRootNode(node: Node): void;		
 		/**
 		!#en Check whether the node is a persistent root node.
-		!#zh æ£€æŸ¥èŠ‚ç‚¹æ˜¯å¦æ˜¯å¸¸é©»æ ¹èŠ‚ç‚¹ã€‚
+		!#zh æ£???¥è????¹æ?¯å?¦æ?¯å¸¸é©»æ?¹è????¹ã??
 		@param node The node to be checked 
 		*/
 		isPersistRootNode(node: Node): boolean;	
@@ -3463,87 +3463,87 @@ declare namespace cc {
 	Class of all entities in Cocos Creator scenes.<br/>
 	For events supported by Node, please refer to {{#crossLink "Node.EventType"}}{{/crossLink}}
 	!#zh
-	Cocos Creator åœºæ™¯ä¸­çš„æ‰€æœ‰èŠ‚ç‚¹ç±»ã€‚<br/>
-	æ”¯æŒçš„èŠ‚ç‚¹äº‹ä»¶ï¼Œè¯·å‚é˜… {{#crossLink "Node.EventType"}}{{/crossLink}}ã€‚ */
+	Cocos Creator ??ºæ?¯ä¸­??????????????¹ç±»???<br/>
+	??¯æ??????????¹ä??ä»¶ï??è¯·å????? {{#crossLink "Node.EventType"}}{{/crossLink}}??? */
 	export class Node extends _BaseNode {		
 		/** !#en
 		Group index of node.<br/>
 		Which Group this node belongs to will resolve that this node's collision components can collide with which other collision componentns.<br/>
 		!#zh
-		èŠ‚ç‚¹çš„åˆ†ç»„ç´¢å¼•ã€‚<br/>
-		èŠ‚ç‚¹çš„åˆ†ç»„å°†å…³ç³»åˆ°èŠ‚ç‚¹çš„ç¢°æ’ç»„ä»¶å¯ä»¥ä¸å“ªäº›ç¢°æ’ç»„ä»¶ç›¸ç¢°æ’ã€‚<br/> */
+		?????¹ç?????ç»?ç´¢å?????<br/>
+		?????¹ç?????ç»?å°???³ç³»??°è????¹ç??ç¢°æ??ç»?ä»¶å?¯ä»¥ä¸???ªä??ç¢°æ??ç»?ä»¶ç?¸ç¢°??????<br/> */
 		groupIndex: number;		
 		/** !#en
 		Group of node.<br/>
 		Which Group this node belongs to will resolve that this node's collision components can collide with which other collision componentns.<br/>
 		!#zh
-		èŠ‚ç‚¹çš„åˆ†ç»„ã€‚<br/>
-		èŠ‚ç‚¹çš„åˆ†ç»„å°†å…³ç³»åˆ°èŠ‚ç‚¹çš„ç¢°æ’ç»„ä»¶å¯ä»¥ä¸å“ªäº›ç¢°æ’ç»„ä»¶ç›¸ç¢°æ’ã€‚<br/> */
+		?????¹ç?????ç»????<br/>
+		?????¹ç?????ç»?å°???³ç³»??°è????¹ç??ç¢°æ??ç»?ä»¶å?¯ä»¥ä¸???ªä??ç¢°æ??ç»?ä»¶ç?¸ç¢°??????<br/> */
 		group: string;		
 		/** !#en The position (x, y) of the node in its parent's coordinates.
-		!#zh èŠ‚ç‚¹åœ¨çˆ¶èŠ‚ç‚¹åæ ‡ç³»ä¸­çš„ä½ç½®ï¼ˆx, yï¼‰ã€‚ */
+		!#zh ?????¹å?¨ç?¶è????¹å?????ç³»ä¸­???ä½?ç½®ï??x, yï¼???? */
 		position: Vec3;		
 		/** !#en x axis position of node.
-		!#zh èŠ‚ç‚¹ X è½´åæ ‡ã€‚ */
+		!#zh ?????? X è½´å???????? */
 		x: number;		
 		/** !#en y axis position of node.
-		!#zh èŠ‚ç‚¹ Y è½´åæ ‡ã€‚ */
+		!#zh ?????? Y è½´å???????? */
 		y: number;		
 		/** !#en z axis position of node.
-		!#zh èŠ‚ç‚¹ Z è½´åæ ‡ã€‚ */
+		!#zh ?????? Z è½´å???????? */
 		z: number;		
 		/** !#en Rotation of node.
-		!#zh è¯¥èŠ‚ç‚¹æ—‹è½¬è§’åº¦ã€‚ */
+		!#zh è¯¥è????¹æ??è½¬è??åº¦ã?? */
 		rotation: number;		
 		/** !#en
 		Angle of node, the positive value is anti-clockwise direction.
 		!#zh
-		è¯¥èŠ‚ç‚¹çš„æ—‹è½¬è§’åº¦ï¼Œæ­£å€¼ä¸ºé€†æ—¶é’ˆæ–¹å‘ã€‚ */
+		è¯¥è????¹ç?????è½¬è??åº¦ï??æ­???¼ä¸º?????¶é????¹å????? */
 		angle: number;		
 		/** !#en The rotation as Euler angles in degrees, used in 3D node.
-		!#zh è¯¥èŠ‚ç‚¹çš„æ¬§æ‹‰è§’åº¦ï¼Œç”¨äº 3D èŠ‚ç‚¹ã€‚ */
+		!#zh è¯¥è????¹ç??æ¬§æ??è§?åº¦ï????¨ä?? 3D ?????¹ã?? */
 		eulerAngles: Vec3;		
 		/** !#en Rotation on x axis.
-		!#zh è¯¥èŠ‚ç‚¹ X è½´æ—‹è½¬è§’åº¦ã€‚ */
+		!#zh è¯¥è????? X è½´æ??è½¬è??åº¦ã?? */
 		rotationX: number;		
 		/** !#en Rotation on y axis.
-		!#zh è¯¥èŠ‚ç‚¹ Y è½´æ—‹è½¬è§’åº¦ã€‚ */
+		!#zh è¯¥è????? Y è½´æ??è½¬è??åº¦ã?? */
 		rotationY: number;		
 		/** !#en The local scale relative to the parent.
-		!#zh èŠ‚ç‚¹ç›¸å¯¹çˆ¶èŠ‚ç‚¹çš„ç¼©æ”¾ã€‚ */
+		!#zh ?????¹ç?¸å¯¹??¶è????¹ç??ç¼©æ?¾ã?? */
 		scale: number;		
 		/** !#en Scale on x axis.
-		!#zh èŠ‚ç‚¹ X è½´ç¼©æ”¾ã€‚ */
+		!#zh ?????? X è½´ç¼©??¾ã?? */
 		scaleX: number;		
 		/** !#en Scale on y axis.
-		!#zh èŠ‚ç‚¹ Y è½´ç¼©æ”¾ã€‚ */
+		!#zh ?????? Y è½´ç¼©??¾ã?? */
 		scaleY: number;		
 		/** !#en Scale on z axis.
-		!#zh èŠ‚ç‚¹ Z è½´ç¼©æ”¾ã€‚ */
+		!#zh ?????? Z è½´ç¼©??¾ã?? */
 		scaleZ: number;		
 		/** !#en Skew x
-		!#zh è¯¥èŠ‚ç‚¹ X è½´å€¾æ–œè§’åº¦ã€‚ */
+		!#zh è¯¥è????? X è½´å?¾æ??è§?åº¦ã?? */
 		skewX: number;		
 		/** !#en Skew y
-		!#zh è¯¥èŠ‚ç‚¹ Y è½´å€¾æ–œè§’åº¦ã€‚ */
+		!#zh è¯¥è????? Y è½´å?¾æ??è§?åº¦ã?? */
 		skewY: number;		
 		/** !#en Opacity of node, default value is 255.
-		!#zh èŠ‚ç‚¹é€æ˜åº¦ï¼Œé»˜è®¤å€¼ä¸º 255ã€‚ */
+		!#zh ?????¹é?????åº¦ï??é»?è®¤å?¼ä¸º 255??? */
 		opacity: number;		
 		/** !#en Color of node, default value is white: (255, 255, 255).
-		!#zh èŠ‚ç‚¹é¢œè‰²ã€‚é»˜è®¤ä¸ºç™½è‰²ï¼Œæ•°å€¼ä¸ºï¼šï¼ˆ255ï¼Œ255ï¼Œ255ï¼‰ã€‚ */
+		!#zh ?????¹é????²ã??é»?è®¤ä¸º??½è?²ï????°å?¼ä¸ºï¼?ï¼?255ï¼?255ï¼?255ï¼???? */
 		color: Color;		
 		/** !#en Anchor point's position on x axis.
-		!#zh èŠ‚ç‚¹ X è½´é”šç‚¹ä½ç½®ã€‚ */
+		!#zh ?????? X è½´é????¹ä??ç½®ã?? */
 		anchorX: number;		
 		/** !#en Anchor point's position on y axis.
-		!#zh èŠ‚ç‚¹ Y è½´é”šç‚¹ä½ç½®ã€‚ */
+		!#zh ?????? Y è½´é????¹ä??ç½®ã?? */
 		anchorY: number;		
 		/** !#en Width of node.
-		!#zh èŠ‚ç‚¹å®½åº¦ã€‚ */
+		!#zh ?????¹å®½åº¦ã?? */
 		width: number;		
 		/** !#en Height of node.
-		!#zh èŠ‚ç‚¹é«˜åº¦ã€‚ */
+		!#zh ?????¹é??åº¦ã?? */
 		height: number;		
 		/** !#en zIndex is the 'key' used to sort the node relative to its siblings.<br/>
 		The value of zIndex should be in the range between cc.macro.MIN_ZINDEX and cc.macro.MAX_ZINDEX.<br/>
@@ -3551,24 +3551,24 @@ declare namespace cc {
 		Nodes with greater zIndex will be sorted after nodes with smaller zIndex.<br/>
 		If two nodes have the same zIndex, then the node that was added first to the children's array will be in front of the other node in the array.<br/>
 		Node's order in children list will affect its rendering order. Parent is always rendering before all children.
-		!#zh zIndex æ˜¯ç”¨æ¥å¯¹èŠ‚ç‚¹è¿›è¡Œæ’åºçš„å…³é”®å±æ€§ï¼Œå®ƒå†³å®šä¸€ä¸ªèŠ‚ç‚¹åœ¨å…„å¼ŸèŠ‚ç‚¹ä¹‹é—´çš„ä½ç½®ã€‚<br/>
-		zIndex çš„å–å€¼åº”è¯¥ä»‹äº cc.macro.MIN_ZINDEX å’Œ cc.macro.MAX_ZINDEX ä¹‹é—´
-		çˆ¶èŠ‚ç‚¹ä¸»è¦æ ¹æ®èŠ‚ç‚¹çš„ zIndex å’Œæ·»åŠ æ¬¡åºæ¥æ’åºï¼Œæ‹¥æœ‰æ›´é«˜ zIndex çš„èŠ‚ç‚¹å°†è¢«æ’åœ¨åé¢ï¼Œå¦‚æœä¸¤ä¸ªèŠ‚ç‚¹çš„ zIndex ä¸€è‡´ï¼Œå…ˆæ·»åŠ çš„èŠ‚ç‚¹ä¼šç¨³å®šæ’åœ¨å¦ä¸€ä¸ªèŠ‚ç‚¹ä¹‹å‰ã€‚<br/>
-		èŠ‚ç‚¹åœ¨ children ä¸­çš„é¡ºåºå†³å®šäº†å…¶æ¸²æŸ“é¡ºåºã€‚çˆ¶èŠ‚ç‚¹æ°¸è¿œåœ¨æ‰€æœ‰å­èŠ‚ç‚¹ä¹‹å‰è¢«æ¸²æŸ“ */
+		!#zh zIndex ??¯ç?¨æ?¥å¯¹?????¹è??è¡????åº??????³é?®å????§ï??å®???³å??ä¸?ä¸ªè????¹å?¨å??å¼??????¹ä????´ç??ä½?ç½®ã??<br/>
+		zIndex ????????¼å??è¯¥ä??äº? cc.macro.MIN_ZINDEX ??? cc.macro.MAX_ZINDEX ä¹????
+		??¶è????¹ä¸»è¦???¹æ?®è????¹ç?? zIndex ???æ·»å??æ¬¡å????¥æ??åº?ï¼???¥æ????´é?? zIndex ????????¹å??è¢«æ????¨å????¢ï??å¦????ä¸¤ä¸ª?????¹ç?? zIndex ä¸???´ï?????æ·»å??????????¹ä??ç¨³å???????¨å?¦ä??ä¸ªè????¹ä????????<br/>
+		?????¹å?? children ä¸­ç??é¡ºå????³å??äº???¶æ¸²???é¡ºå???????¶è????¹æ°¸è¿???¨æ?????å­??????¹ä?????è¢«æ¸²??? */
 		zIndex: number;		
 		/** !#en
 		Switch 2D/3D node. The 2D nodes will run faster.
 		!#zh
-		åˆ‡æ¢ 2D/3D èŠ‚ç‚¹ï¼Œ2D èŠ‚ç‚¹ä¼šæœ‰æ›´é«˜çš„è¿è¡Œæ•ˆç‡ */
+		?????? 2D/3D ?????¹ï??2D ?????¹ä???????´é?????è¿?è¡??????? */
 		is3DNode: boolean;		
 		/** !#en Returns a normalized vector representing the up direction (Y axis) of the node in world space.
-		!#zh è·å–èŠ‚ç‚¹æ­£ä¸Šæ–¹ï¼ˆy è½´ï¼‰é¢å¯¹çš„æ–¹å‘ï¼Œè¿”å›å€¼ä¸ºä¸–ç•Œåæ ‡ç³»ä¸‹çš„å½’ä¸€åŒ–å‘é‡ */
+		!#zh ??·å???????¹æ­£ä¸???¹ï??y è½´ï????¢å¯¹?????¹å??ï¼?è¿??????¼ä¸ºä¸??????????ç³»ä?????å½?ä¸?????????? */
 		up: Vec3;		
 		/** !#en Returns a normalized vector representing the right direction (X axis) of the node in world space.
-		!#zh è·å–èŠ‚ç‚¹æ­£å³æ–¹ï¼ˆx è½´ï¼‰é¢å¯¹çš„æ–¹å‘ï¼Œè¿”å›å€¼ä¸ºä¸–ç•Œåæ ‡ç³»ä¸‹çš„å½’ä¸€åŒ–å‘é‡ */
+		!#zh ??·å???????¹æ­£??³æ?¹ï??x è½´ï????¢å¯¹?????¹å??ï¼?è¿??????¼ä¸ºä¸??????????ç³»ä?????å½?ä¸?????????? */
 		right: Vec3;		
 		/** !#en Returns a normalized vector representing the forward direction (Z axis) of the node in world space.
-		!#zh è·å–èŠ‚ç‚¹æ­£å‰æ–¹ï¼ˆz è½´ï¼‰é¢å¯¹çš„æ–¹å‘ï¼Œè¿”å›å€¼ä¸ºä¸–ç•Œåæ ‡ç³»ä¸‹çš„å½’ä¸€åŒ–å‘é‡ */
+		!#zh ??·å???????¹æ­£?????¹ï??z è½´ï????¢å¯¹?????¹å??ï¼?è¿??????¼ä¸ºä¸??????????ç³»ä?????å½?ä¸?????????? */
 		forward: Vec3;		
 		/**
 		
@@ -3590,15 +3590,15 @@ declare namespace cc {
 		For such events, there won't be capturing and bubbling phase, your event will be dispatched directly to its listeners registered on the same node.<br/>
 		You can also pass event callback parameters with `emit` by passing parameters after `type`.
 		!#zh
-		åœ¨èŠ‚ç‚¹ä¸Šæ³¨å†ŒæŒ‡å®šç±»å‹çš„å›è°ƒå‡½æ•°ï¼Œä¹Ÿå¯ä»¥è®¾ç½® target ç”¨äºç»‘å®šå“åº”å‡½æ•°çš„ this å¯¹è±¡ã€‚<br/>
-		é¼ æ ‡æˆ–è§¦æ‘¸äº‹ä»¶ä¼šè¢«ç³»ç»Ÿè°ƒç”¨ dispatchEvent æ–¹æ³•è§¦å‘ï¼Œè§¦å‘çš„è¿‡ç¨‹åŒ…å«ä¸‰ä¸ªé˜¶æ®µï¼š<br/>
-		1. æ•è·é˜¶æ®µï¼šæ´¾å‘äº‹ä»¶ç»™æ•è·ç›®æ ‡ï¼ˆé€šè¿‡ `_getCapturingTargets` è·å–ï¼‰ï¼Œæ¯”å¦‚ï¼ŒèŠ‚ç‚¹æ ‘ä¸­æ³¨å†Œäº†æ•è·é˜¶æ®µçš„çˆ¶èŠ‚ç‚¹ï¼Œä»æ ¹èŠ‚ç‚¹å¼€å§‹æ´¾å‘ç›´åˆ°ç›®æ ‡èŠ‚ç‚¹ã€‚<br/>
-		2. ç›®æ ‡é˜¶æ®µï¼šæ´¾å‘ç»™ç›®æ ‡èŠ‚ç‚¹çš„ç›‘å¬å™¨ã€‚<br/>
-		3. å†’æ³¡é˜¶æ®µï¼šæ´¾å‘äº‹ä»¶ç»™å†’æ³¡ç›®æ ‡ï¼ˆé€šè¿‡ `_getBubblingTargets` è·å–ï¼‰ï¼Œæ¯”å¦‚ï¼ŒèŠ‚ç‚¹æ ‘ä¸­æ³¨å†Œäº†å†’æ³¡é˜¶æ®µçš„çˆ¶èŠ‚ç‚¹ï¼Œä»ç›®æ ‡èŠ‚ç‚¹å¼€å§‹æ´¾å‘ç›´åˆ°æ ¹èŠ‚ç‚¹ã€‚<br/>
-		åŒæ—¶æ‚¨å¯ä»¥å°†äº‹ä»¶æ´¾å‘åˆ°çˆ¶èŠ‚ç‚¹æˆ–è€…é€šè¿‡è°ƒç”¨ stopPropagation æ‹¦æˆªå®ƒã€‚<br/>
-		æ¨èä½¿ç”¨è¿™ç§æ–¹å¼æ¥ç›‘å¬èŠ‚ç‚¹ä¸Šçš„è§¦æ‘¸æˆ–é¼ æ ‡äº‹ä»¶ï¼Œè¯·ä¸è¦åœ¨èŠ‚ç‚¹ä¸Šç›´æ¥ä½¿ç”¨ cc.eventManagerã€‚<br/>
-		ä½ ä¹Ÿå¯ä»¥æ³¨å†Œè‡ªå®šä¹‰äº‹ä»¶åˆ°èŠ‚ç‚¹ä¸Šï¼Œå¹¶é€šè¿‡ emit æ–¹æ³•è§¦å‘æ­¤ç±»äº‹ä»¶ï¼Œå¯¹äºè¿™ç±»äº‹ä»¶ï¼Œä¸ä¼šå‘ç”Ÿæ•è·å†’æ³¡é˜¶æ®µï¼Œåªä¼šç›´æ¥æ´¾å‘ç»™æ³¨å†Œåœ¨è¯¥èŠ‚ç‚¹ä¸Šçš„ç›‘å¬å™¨<br/>
-		ä½ å¯ä»¥é€šè¿‡åœ¨ emit æ–¹æ³•è°ƒç”¨æ—¶åœ¨ type ä¹‹åä¼ é€’é¢å¤–çš„å‚æ•°ä½œä¸ºäº‹ä»¶å›è°ƒçš„å‚æ•°åˆ—è¡¨
+		??¨è????¹ä??æ³¨å?????å®?ç±»å????????è°???½æ?°ï??ä¹???¯ä»¥è®¾ç½® target ??¨ä??ç»?å®????åº???½æ?°ç?? this å¯¹è±¡???<br/>
+		é¼???????è§¦æ?¸ä??ä»¶ä??è¢«ç³»ç»?è°???? dispatchEvent ??¹æ??è§¦å??ï¼?è§¦å?????è¿?ç¨??????«ä??ä¸ªé?¶æ®µï¼?<br/>
+		1. ?????·é?¶æ®µï¼?æ´¾å??äº?ä»¶ç???????·ç?®æ??ï¼????è¿? `_getCapturingTargets` ??·å??ï¼?ï¼?æ¯?å¦?ï¼??????¹æ??ä¸­æ³¨???äº??????·é?¶æ®µ?????¶è????¹ï??ä»???¹è????¹å??å§?æ´¾å????´å?°ç?®æ???????¹ã??<br/>
+		2. ??®æ????¶æ®µï¼?æ´¾å??ç»???®æ???????¹ç???????¬å?¨ã??<br/>
+		3. ???æ³¡é?¶æ®µï¼?æ´¾å??äº?ä»¶ç?????æ³¡ç?®æ??ï¼????è¿? `_getBubblingTargets` ??·å??ï¼?ï¼?æ¯?å¦?ï¼??????¹æ??ä¸­æ³¨???äº????æ³¡é?¶æ®µ?????¶è????¹ï??ä»???®æ???????¹å??å§?æ´¾å????´å?°æ?¹è????¹ã??<br/>
+		?????¶æ?¨å?¯ä»¥å°?äº?ä»¶æ´¾?????°ç?¶è????¹æ????????è¿?è°???? stopPropagation ??¦æ?ªå?????<br/>
+		??¨è??ä½¿ç?¨è??ç§???¹å????¥ç????¬è????¹ä?????è§¦æ?¸æ??é¼????äº?ä»¶ï??è¯·ä??è¦???¨è????¹ä????´æ?¥ä½¿??? cc.eventManager???<br/>
+		ä½?ä¹???¯ä»¥æ³¨å????ªå??ä¹?äº?ä»¶å?°è????¹ä??ï¼?å¹¶é??è¿? emit ??¹æ??è§¦å??æ­¤ç±»äº?ä»¶ï??å¯¹ä??è¿?ç±»ä??ä»¶ï??ä¸?ä¼????????????·å??æ³¡é?¶æ®µï¼???ªä????´æ?¥æ´¾???ç»?æ³¨å????¨è¯¥?????¹ä??????????¬å??<br/>
+		ä½???¯ä»¥???è¿???? emit ??¹æ??è°???¨æ?¶å?? type ä¹????ä¼????é¢?å¤?????????°ä??ä¸ºä??ä»¶å??è°?????????°å??è¡?
 		@param type A string representing the event type to listen for.<br>See {{#crossLink "Node/EventTyupe/POSITION_CHANGED"}}Node Events{{/crossLink}} for all builtin events.
 		@param callback The callback that will be invoked when the event is dispatched. The callback is ignored if it is a duplicate (the callbacks are unique).
 		@param target The target (this object) to invoke the callback, can be null
@@ -3621,7 +3621,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the Node,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†ŒèŠ‚ç‚¹çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å???????¹ç????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -3637,7 +3637,7 @@ declare namespace cc {
 		!#en
 		Removes the callback previously registered with the same type, callback, target and or useCapture.
 		This method is merely an alias to removeEventListener.
-		!#zh åˆ é™¤ä¹‹å‰ä¸åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh ?????¤ä?????ä¸????ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å????????è°????
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -3653,7 +3653,7 @@ declare namespace cc {
 		off(type: string, callback?: Function, target?: any, useCapture?: boolean): void;		
 		/**
 		!#en Removes all callbacks previously registered with the same target.
-		!#zh ç§»é™¤ç›®æ ‡ä¸Šçš„æ‰€æœ‰æ³¨å†Œäº‹ä»¶ã€‚
+		!#zh ç§»é?¤ç?®æ??ä¸??????????æ³¨å??äº?ä»¶ã??
 		@param target The target to be searched for all related callbacks
 		
 		@example 
@@ -3664,7 +3664,7 @@ declare namespace cc {
 		targetOff(target: any): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -3672,7 +3672,7 @@ declare namespace cc {
 		!#en
 		Trigger an event directly with the event name and necessary arguments.
 		!#zh
-		é€šè¿‡äº‹ä»¶åå‘é€è‡ªå®šä¹‰äº‹ä»¶
+		???è¿?äº?ä»¶å??????????ªå??ä¹?äº?ä»?
 		@param type event type
 		@param arg1 First argument in callback
 		@param arg2 Second argument in callback
@@ -3691,7 +3691,7 @@ declare namespace cc {
 		!#en
 		Dispatches an event into the event flow.
 		The event target is the EventTarget object upon which the dispatchEvent() method is called.
-		!#zh åˆ†å‘äº‹ä»¶åˆ°äº‹ä»¶æµä¸­ã€‚
+		!#zh ??????äº?ä»¶å?°ä??ä»¶æ??ä¸­ã??
 		@param event The Event object that is dispatched into the event flow 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -3699,9 +3699,9 @@ declare namespace cc {
 		!#en Pause node related system events registered with the current Node. Node system events includes touch and mouse events.
 		If recursive is set to true, then this API will pause the node system events for the node and all nodes in its sub node tree.
 		Reference: http://docs.cocos2d-x.org/editors_and_tools/creator-chapters/scripting/internal-events/
-		!#zh æš‚åœå½“å‰èŠ‚ç‚¹ä¸Šæ³¨å†Œçš„æ‰€æœ‰èŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶ï¼ŒèŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶åŒ…å«è§¦æ‘¸å’Œé¼ æ ‡äº‹ä»¶ã€‚
-		å¦‚æœä¼ é€’ recursive ä¸º trueï¼Œé‚£ä¹ˆè¿™ä¸ª API å°†æš‚åœæœ¬èŠ‚ç‚¹å’Œå®ƒçš„å­æ ‘ä¸Šæ‰€æœ‰èŠ‚ç‚¹çš„èŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶ã€‚
-		å‚è€ƒï¼šhttps://www.cocos.com/docs/creator/scripting/internal-events.html
+		!#zh ??????å½?????????¹ä??æ³¨å????????????????¹ç³»ç»?äº?ä»¶ï???????¹ç³»ç»?äº?ä»¶å????«è§¦??¸å??é¼????äº?ä»¶ã??
+		å¦????ä¼???? recursive ä¸? trueï¼????ä¹?è¿?ä¸? API å°?????????¬è????¹å??å®????å­????ä¸????????????¹ç???????¹ç³»ç»?äº?ä»¶ã??
+		??????ï¼?https://www.cocos.com/docs/creator/scripting/internal-events.html
 		@param recursive Whether to pause node system events on the sub node tree.
 		
 		@example 
@@ -3714,9 +3714,9 @@ declare namespace cc {
 		!#en Resume node related system events registered with the current Node. Node system events includes touch and mouse events.
 		If recursive is set to true, then this API will resume the node system events for the node and all nodes in its sub node tree.
 		Reference: http://docs.cocos2d-x.org/editors_and_tools/creator-chapters/scripting/internal-events/
-		!#zh æ¢å¤å½“å‰èŠ‚ç‚¹ä¸Šæ³¨å†Œçš„æ‰€æœ‰èŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶ï¼ŒèŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶åŒ…å«è§¦æ‘¸å’Œé¼ æ ‡äº‹ä»¶ã€‚
-		å¦‚æœä¼ é€’ recursive ä¸º trueï¼Œé‚£ä¹ˆè¿™ä¸ª API å°†æ¢å¤æœ¬èŠ‚ç‚¹å’Œå®ƒçš„å­æ ‘ä¸Šæ‰€æœ‰èŠ‚ç‚¹çš„èŠ‚ç‚¹ç³»ç»Ÿäº‹ä»¶ã€‚
-		å‚è€ƒï¼šhttps://www.cocos.com/docs/creator/scripting/internal-events.html
+		!#zh ??¢å??å½?????????¹ä??æ³¨å????????????????¹ç³»ç»?äº?ä»¶ï???????¹ç³»ç»?äº?ä»¶å????«è§¦??¸å??é¼????äº?ä»¶ã??
+		å¦????ä¼???? recursive ä¸? trueï¼????ä¹?è¿?ä¸? API å°???¢å????¬è????¹å??å®????å­????ä¸????????????¹ç???????¹ç³»ç»?äº?ä»¶ã??
+		??????ï¼?https://www.cocos.com/docs/creator/scripting/internal-events.html
 		@param recursive Whether to resume node system events on the sub node tree.
 		
 		@example 
@@ -3730,12 +3730,12 @@ declare namespace cc {
 		Executes an action, and returns the action that is executed.<br/>
 		The node becomes the action's target. Refer to cc.Action's getTarget() <br/>
 		Calling runAction while the node is not active won't have any effect. <br/>
-		Noteï¼šYou shouldn't modify the action after runAction, that won't take any effect.<br/>
+		Noteï¼?You shouldn't modify the action after runAction, that won't take any effect.<br/>
 		if you want to modify, when you define action plus.
 		!#zh
-		æ‰§è¡Œå¹¶è¿”å›è¯¥æ‰§è¡Œçš„åŠ¨ä½œã€‚è¯¥èŠ‚ç‚¹å°†ä¼šå˜æˆåŠ¨ä½œçš„ç›®æ ‡ã€‚<br/>
-		è°ƒç”¨ runAction æ—¶ï¼ŒèŠ‚ç‚¹è‡ªèº«å¤„äºä¸æ¿€æ´»çŠ¶æ€å°†ä¸ä¼šæœ‰ä»»ä½•æ•ˆæœã€‚<br/>
-		æ³¨æ„ï¼šä½ ä¸åº”è¯¥ä¿®æ”¹ runAction åçš„åŠ¨ä½œï¼Œå°†æ— æ³•å‘æŒ¥ä½œç”¨ï¼Œå¦‚æœæƒ³è¿›è¡Œä¿®æ”¹ï¼Œè¯·åœ¨å®šä¹‰ action æ—¶åŠ å…¥ã€‚
+		??§è??å¹¶è?????è¯¥æ?§è???????¨ä?????è¯¥è????¹å??ä¼?????????¨ä???????®æ?????<br/>
+		è°???? runAction ??¶ï???????¹è?ªèº«å¤?äº?ä¸?æ¿?æ´»ç?¶æ??å°?ä¸?ä¼????ä»»ä???????????<br/>
+		æ³¨æ??ï¼?ä½?ä¸?åº?è¯¥ä¿®??? runAction ????????¨ä??ï¼?å°????æ³??????¥ä????¨ï??å¦??????³è??è¡?ä¿®æ?¹ï??è¯·å?¨å??ä¹? action ??¶å????¥ã??
 		@param action action
 		
 		@example 
@@ -3749,7 +3749,7 @@ declare namespace cc {
 		runAction(action: Action): Action;		
 		/**
 		!#en Pause all actions running on the current node. Equals to `cc.director.getActionManager().pauseTarget(node)`.
-		!#zh æš‚åœæœ¬èŠ‚ç‚¹ä¸Šæ‰€æœ‰æ­£åœ¨è¿è¡Œçš„åŠ¨ä½œã€‚å’Œ `cc.director.getActionManager().pauseTarget(node);` ç­‰ä»·ã€‚
+		!#zh ????????¬è????¹ä????????æ­???¨è??è¡??????¨ä???????? `cc.director.getActionManager().pauseTarget(node);` ç­?ä»·ã??
 		
 		@example 
 		```js
@@ -3759,7 +3759,7 @@ declare namespace cc {
 		pauseAllActions(): void;		
 		/**
 		!#en Resume all paused actions on the current node. Equals to `cc.director.getActionManager().resumeTarget(node)`.
-		!#zh æ¢å¤è¿è¡Œæœ¬èŠ‚ç‚¹ä¸Šæ‰€æœ‰æš‚åœçš„åŠ¨ä½œã€‚å’Œ `cc.director.getActionManager().resumeTarget(node);` ç­‰ä»·ã€‚
+		!#zh ??¢å??è¿?è¡???¬è????¹ä???????????????????¨ä???????? `cc.director.getActionManager().resumeTarget(node);` ç­?ä»·ã??
 		
 		@example 
 		```js
@@ -3769,7 +3769,7 @@ declare namespace cc {
 		resumeAllActions(): void;		
 		/**
 		!#en Stops and removes all actions from the running action list .
-		!#zh åœæ­¢å¹¶ä¸”ç§»é™¤æ‰€æœ‰æ­£åœ¨è¿è¡Œçš„åŠ¨ä½œåˆ—è¡¨ã€‚
+		!#zh ???æ­¢å¹¶ä¸?ç§»é?¤æ?????æ­???¨è??è¡??????¨ä?????è¡¨ã??
 		
 		@example 
 		```js
@@ -3779,7 +3779,7 @@ declare namespace cc {
 		stopAllActions(): void;		
 		/**
 		!#en Stops and removes an action from the running action list.
-		!#zh åœæ­¢å¹¶ç§»é™¤æŒ‡å®šçš„åŠ¨ä½œã€‚
+		!#zh ???æ­¢å¹¶ç§»é?¤æ??å®??????¨ä?????
 		@param action An action object to be removed.
 		
 		@example 
@@ -3791,7 +3791,7 @@ declare namespace cc {
 		stopAction(action: Action): void;		
 		/**
 		!#en Removes an action from the running action list by its tag.
-		!#zh åœæ­¢å¹¶ä¸”ç§»é™¤æŒ‡å®šæ ‡ç­¾çš„åŠ¨ä½œã€‚
+		!#zh ???æ­¢å¹¶ä¸?ç§»é?¤æ??å®????ç­¾ç????¨ä?????
 		@param tag A tag that indicates the action to be removed.
 		
 		@example 
@@ -3802,7 +3802,7 @@ declare namespace cc {
 		stopActionByTag(tag: number): void;		
 		/**
 		!#en Returns an action from the running action list by its tag.
-		!#zh é€šè¿‡æ ‡ç­¾è·å–æŒ‡å®šåŠ¨ä½œã€‚
+		!#zh ???è¿????ç­¾è?·å?????å®???¨ä?????
 		@param tag tag
 		
 		@example 
@@ -3818,10 +3818,10 @@ declare namespace cc {
 		   If you are running 1 Sequence of 7 actions, it will return 1. <br/>
 		   If you are running 7 Sequences of 2 actions, it will return 7.</p>
 		!#zh
-		è·å–è¿è¡Œç€çš„åŠ¨ä½œåŠ ä¸Šæ­£åœ¨è°ƒåº¦è¿è¡Œçš„åŠ¨ä½œçš„æ€»æ•°ã€‚<br/>
-		ä¾‹å¦‚ï¼š<br/>
-		- å¦‚æœä½ æ­£åœ¨è¿è¡Œ 7 ä¸ªåŠ¨ä½œä¸­çš„ 1 ä¸ª Sequenceï¼Œå®ƒå°†è¿”å› 1ã€‚<br/>
-		- å¦‚æœä½ æ­£åœ¨è¿è¡Œ 2 ä¸ªåŠ¨ä½œä¸­çš„ 7 ä¸ª Sequenceï¼Œå®ƒå°†è¿”å› 7ã€‚<br/>
+		??·å??è¿?è¡?????????¨ä?????ä¸?æ­???¨è??åº¦è??è¡??????¨ä???????»æ?°ã??<br/>
+		ä¾?å¦?ï¼?<br/>
+		- å¦????ä½?æ­???¨è??è¡? 7 ä¸ªå?¨ä??ä¸­ç?? 1 ä¸? Sequenceï¼?å®?å°?è¿???? 1???<br/>
+		- å¦????ä½?æ­???¨è??è¡? 2 ä¸ªå?¨ä??ä¸­ç?? 7 ä¸? Sequenceï¼?å®?å°?è¿???? 7???<br/>
 		
 		@example 
 		```js
@@ -3835,8 +3835,8 @@ declare namespace cc {
 		Returns a copy of the position (x, y, z) of the node in its parent's coordinates.
 		You can pass a cc.Vec2 or cc.Vec3 as the argument to receive the return values.
 		!#zh
-		è·å–èŠ‚ç‚¹åœ¨çˆ¶èŠ‚ç‚¹åæ ‡ç³»ä¸­çš„ä½ç½®ï¼ˆx, y, zï¼‰ã€‚
-		ä½ å¯ä»¥ä¼ ä¸€ä¸ª cc.Vec2 æˆ–è€… cc.Vec3 ä½œä¸ºå‚æ•°æ¥æ¥æ”¶è¿”å›å€¼ã€‚
+		??·å???????¹å?¨ç?¶è????¹å?????ç³»ä¸­???ä½?ç½®ï??x, y, zï¼????
+		ä½???¯ä»¥ä¼?ä¸?ä¸? cc.Vec2 ?????? cc.Vec3 ä½?ä¸ºå????°æ?¥æ?¥æ?¶è???????¼ã??
 		@param out The return value to receive position
 		
 		@example 
@@ -3853,12 +3853,12 @@ declare namespace cc {
 		For 3D node we can use cc.v3(x, y, z) to compose cc.Vec3 object,<br/>
 		and passing three numbers (x, y, z) is more efficient than passing cc.Vec3 object.
 		!#zh
-		è®¾ç½®èŠ‚ç‚¹åœ¨çˆ¶èŠ‚ç‚¹åæ ‡ç³»ä¸­çš„ä½ç½®ã€‚<br/>
-		å¯ä»¥é€šè¿‡ä¸‹é¢çš„æ–¹å¼è®¾ç½®åæ ‡ç‚¹ï¼š<br/>
-		1. ä¼ å…¥ 2 ä¸ªæ•°å€¼ x, y (æ­¤æ—¶ä¸ä¼šæ”¹å˜ position.z çš„å€¼)ã€‚<br/>
-		2. ä¼ å…¥ cc.v2(x, y) ç±»å‹ä¸º cc.Vec2 çš„å¯¹è±¡ (æ­¤æ—¶ position.z çš„å€¼å°†è¢«è®¾ç½®ä¸º0)ã€‚
-		3. å¯¹äº 3D èŠ‚ç‚¹å¯ä»¥ä¼ å…¥ 3 ä¸ªæ•°å€¼ x, y, zã€‚<br/>
-		4. å¯¹äº 3D èŠ‚ç‚¹å¯ä»¥ä¼ å…¥ cc.v3(x, y, z) ç±»å‹ä¸º cc.Vec3 çš„å¯¹è±¡ã€‚
+		è®¾ç½®?????¹å?¨ç?¶è????¹å?????ç³»ä¸­???ä½?ç½®ã??<br/>
+		??¯ä»¥???è¿?ä¸???¢ç????¹å??è®¾ç½®????????¹ï??<br/>
+		1. ä¼???? 2 ä¸ªæ?°å?? x, y (æ­¤æ?¶ä??ä¼???¹å?? position.z ??????)???<br/>
+		2. ä¼???? cc.v2(x, y) ç±»å??ä¸? cc.Vec2 ???å¯¹è±¡ (æ­¤æ?? position.z ?????¼å??è¢«è®¾ç½®ä¸º0)???
+		3. å¯¹ä?? 3D ?????¹å?¯ä»¥ä¼???? 3 ä¸ªæ?°å?? x, y, z???<br/>
+		4. å¯¹ä?? 3D ?????¹å?¯ä»¥ä¼???? cc.v3(x, y, z) ç±»å??ä¸? cc.Vec3 ???å¯¹è±¡???
 		@param x X coordinate for position or the position object
 		@param y Y coordinate for position
 		@param z Z coordinate for position 
@@ -3868,7 +3868,7 @@ declare namespace cc {
 		!#en
 		Returns the scale factor of the node.
 		Need pass a cc.Vec2 or cc.Vec3 as the argument to receive the return values.
-		!#zh è·å–èŠ‚ç‚¹çš„ç¼©æ”¾ï¼Œéœ€è¦ä¼ ä¸€ä¸ª cc.Vec2 æˆ–è€… cc.Vec3 ä½œä¸ºå‚æ•°æ¥æ¥æ”¶è¿”å›å€¼ã€‚
+		!#zh ??·å???????¹ç??ç¼©æ?¾ï?????è¦?ä¼?ä¸?ä¸? cc.Vec2 ?????? cc.Vec3 ä½?ä¸ºå????°æ?¥æ?¥æ?¶è???????¼ã??
 		@param out out
 		
 		@example 
@@ -3884,10 +3884,10 @@ declare namespace cc {
 		When only (x, y) is passed, the value of scale.z will not be changed.
 		When a Vec2 is passed in, the value of scale.z will be set to 0.
 		!#zh
-		è®¾ç½®èŠ‚ç‚¹åœ¨æœ¬åœ°åæ ‡ç³»ä¸­åæ ‡è½´ä¸Šçš„ç¼©æ”¾æ¯”ä¾‹ã€‚
-		2D èŠ‚ç‚¹å¯ä»¥æ“ä½œä¸¤ä¸ªåæ ‡è½´ï¼Œè€Œ 3D èŠ‚ç‚¹å¯ä»¥æ“ä½œä¸‰ä¸ªåæ ‡è½´ã€‚
-		å½“åªä¼ å…¥ (x, y) æ—¶ï¼Œscale.z çš„å€¼ä¸ä¼šè¢«æ”¹å˜ã€‚
-		å½“åªä¼ å…¥ Vec2 å¯¹è±¡æ—¶ï¼Œscale.z çš„å€¼å°†è¢«è®¾ç½®ä¸º0ã€‚
+		è®¾ç½®?????¹å?¨æ?¬å?°å?????ç³»ä¸­??????è½´ä?????ç¼©æ?¾æ??ä¾????
+		2D ?????¹å?¯ä»¥???ä½?ä¸¤ä¸ª??????è½´ï????? 3D ?????¹å?¯ä»¥???ä½?ä¸?ä¸ªå?????è½´ã??
+		å½???ªä????? (x, y) ??¶ï??scale.z ?????¼ä??ä¼?è¢«æ?¹å?????
+		å½???ªä????? Vec2 å¯¹è±¡??¶ï??scale.z ?????¼å??è¢«è®¾ç½®ä¸º0???
 		@param x scaleX or scale object
 		@param y y
 		@param z z
@@ -3905,13 +3905,13 @@ declare namespace cc {
 		Get rotation of node (in quaternion).
 		Need pass a cc.Quat as the argument to receive the return values.
 		!#zh
-		è·å–è¯¥èŠ‚ç‚¹çš„ quaternion æ—‹è½¬è§’åº¦ï¼Œéœ€è¦ä¼ ä¸€ä¸ª cc.Quat ä½œä¸ºå‚æ•°æ¥æ¥æ”¶è¿”å›å€¼ã€‚
+		??·å??è¯¥è????¹ç?? quaternion ???è½¬è??åº¦ï?????è¦?ä¼?ä¸?ä¸? cc.Quat ä½?ä¸ºå????°æ?¥æ?¥æ?¶è???????¼ã??
 		@param out out 
 		*/
 		getRotation(out: Quat): Quat;		
 		/**
 		!#en Set rotation of node (in quaternion).
-		!#zh è®¾ç½®è¯¥èŠ‚ç‚¹çš„ quaternion æ—‹è½¬è§’åº¦ã€‚
+		!#zh è®¾ç½®è¯¥è????¹ç?? quaternion ???è½¬è??åº¦ã??
 		@param quat Quaternion object represents the rotation or the x value of quaternion
 		@param y y value of quternion
 		@param z z value of quternion
@@ -3923,7 +3923,7 @@ declare namespace cc {
 		Returns a copy the untransformed size of the node. <br/>
 		The contentSize remains the same no matter the node is scaled or rotated.<br/>
 		All nodes has a size. Layer and Scene has the same size of the screen by default. <br/>
-		!#zh è·å–èŠ‚ç‚¹è‡ªèº«å¤§å°ï¼Œä¸å—è¯¥èŠ‚ç‚¹æ˜¯å¦è¢«ç¼©æ”¾æˆ–è€…æ—‹è½¬çš„å½±å“ã€‚
+		!#zh ??·å???????¹è?ªèº«å¤§å??ï¼?ä¸????è¯¥è????¹æ?¯å?¦è¢«ç¼©æ?¾æ????????è½¬ç??å½±å?????
 		
 		@example 
 		```js
@@ -3936,7 +3936,7 @@ declare namespace cc {
 		Sets the untransformed size of the node.<br/>
 		The contentSize remains the same no matter the node is scaled or rotated.<br/>
 		All nodes has a size. Layer and Scene has the same size of the screen.
-		!#zh è®¾ç½®èŠ‚ç‚¹åŸå§‹å¤§å°ï¼Œä¸å—è¯¥èŠ‚ç‚¹æ˜¯å¦è¢«ç¼©æ”¾æˆ–è€…æ—‹è½¬çš„å½±å“ã€‚
+		!#zh è®¾ç½®?????¹å??å§?å¤§å??ï¼?ä¸????è¯¥è????¹æ?¯å?¦è¢«ç¼©æ?¾æ????????è½¬ç??å½±å?????
 		@param size The untransformed size of the node or The untransformed size's width of the node.
 		@param height The untransformed size's height of the node.
 		
@@ -3956,12 +3956,12 @@ declare namespace cc {
 		But you can use values higher than (1,1) and lower than (0,0) too.  <br/>
 		The default anchor point is (0.5,0.5), so it starts at the center of the node.
 		!#zh
-		è·å–èŠ‚ç‚¹é”šç‚¹ï¼Œç”¨ç™¾åˆ†æ¯”è¡¨ç¤ºã€‚<br/>
-		é”šç‚¹åº”ç”¨äºæ‰€æœ‰å˜æ¢å’Œåæ ‡ç‚¹çš„æ“ä½œï¼Œå®ƒå°±åƒåœ¨èŠ‚ç‚¹ä¸Šè¿æ¥å…¶çˆ¶èŠ‚ç‚¹çš„å¤§å¤´é’ˆã€‚<br/>
-		é”šç‚¹æ˜¯æ ‡å‡†åŒ–çš„ï¼Œå°±åƒç™¾åˆ†æ¯”ä¸€æ ·ã€‚(0ï¼Œ0) è¡¨ç¤ºå·¦ä¸‹è§’ï¼Œ(1ï¼Œ1) è¡¨ç¤ºå³ä¸Šè§’ã€‚<br/>
-		ä½†æ˜¯ä½ å¯ä»¥ä½¿ç”¨æ¯”ï¼ˆ1ï¼Œ1ï¼‰æ›´é«˜çš„å€¼æˆ–è€…æ¯”ï¼ˆ0ï¼Œ0ï¼‰æ›´ä½çš„å€¼ã€‚<br/>
-		é»˜è®¤çš„é”šç‚¹æ˜¯ï¼ˆ0.5ï¼Œ0.5ï¼‰ï¼Œå› æ­¤å®ƒå¼€å§‹äºèŠ‚ç‚¹çš„ä¸­å¿ƒä½ç½®ã€‚<br/>
-		æ³¨æ„ï¼šCreator ä¸­çš„é”šç‚¹ä»…ç”¨äºå®šä½æ‰€åœ¨çš„èŠ‚ç‚¹ï¼Œå­èŠ‚ç‚¹çš„å®šä½ä¸å—å½±å“ã€‚
+		??·å???????¹é????¹ï????¨ç?¾å??æ¯?è¡¨ç¤º???<br/>
+		?????¹å????¨ä?????????????¢å??????????¹ç?????ä½?ï¼?å®?å°±å????¨è????¹ä??è¿???¥å?¶ç?¶è????¹ç??å¤§å¤´??????<br/>
+		?????¹æ?¯æ???????????ï¼?å°±å????¾å??æ¯?ä¸???·ã??(0ï¼?0) è¡¨ç¤ºå·¦ä??è§?ï¼?(1ï¼?1) è¡¨ç¤º??³ä??è§????<br/>
+		ä½???¯ä????¯ä»¥ä½¿ç?¨æ??ï¼?1ï¼?1ï¼???´é???????¼æ?????æ¯?ï¼?0ï¼?0ï¼???´ä???????¼ã??<br/>
+		é»?è®¤ç???????¹æ?¯ï??0.5ï¼?0.5ï¼?ï¼????æ­¤å??å¼?å§?äº??????¹ç??ä¸­å??ä½?ç½®ã??<br/>
+		æ³¨æ??ï¼?Creator ä¸­ç???????¹ä????¨ä??å®?ä½??????¨ç???????¹ï??å­??????¹ç??å®?ä½?ä¸????å½±å?????
 		
 		@example 
 		```js
@@ -3978,12 +3978,12 @@ declare namespace cc {
 		But you can use values higher than (1,1) and lower than (0,0) too.<br/>
 		The default anchor point is (0.5,0.5), so it starts at the center of the node.
 		!#zh
-		è®¾ç½®é”šç‚¹çš„ç™¾åˆ†æ¯”ã€‚<br/>
-		é”šç‚¹åº”ç”¨äºæ‰€æœ‰å˜æ¢å’Œåæ ‡ç‚¹çš„æ“ä½œï¼Œå®ƒå°±åƒåœ¨èŠ‚ç‚¹ä¸Šè¿æ¥å…¶çˆ¶èŠ‚ç‚¹çš„å¤§å¤´é’ˆã€‚<br/>
-		é”šç‚¹æ˜¯æ ‡å‡†åŒ–çš„ï¼Œå°±åƒç™¾åˆ†æ¯”ä¸€æ ·ã€‚(0ï¼Œ0) è¡¨ç¤ºå·¦ä¸‹è§’ï¼Œ(1ï¼Œ1) è¡¨ç¤ºå³ä¸Šè§’ã€‚<br/>
-		ä½†æ˜¯ä½ å¯ä»¥ä½¿ç”¨æ¯”ï¼ˆ1ï¼Œ1ï¼‰æ›´é«˜çš„å€¼æˆ–è€…æ¯”ï¼ˆ0ï¼Œ0ï¼‰æ›´ä½çš„å€¼ã€‚<br/>
-		é»˜è®¤çš„é”šç‚¹æ˜¯ï¼ˆ0.5ï¼Œ0.5ï¼‰ï¼Œå› æ­¤å®ƒå¼€å§‹äºèŠ‚ç‚¹çš„ä¸­å¿ƒä½ç½®ã€‚<br/>
-		æ³¨æ„ï¼šCreator ä¸­çš„é”šç‚¹ä»…ç”¨äºå®šä½æ‰€åœ¨çš„èŠ‚ç‚¹ï¼Œå­èŠ‚ç‚¹çš„å®šä½ä¸å—å½±å“ã€‚
+		è®¾ç½®?????¹ç????¾å??æ¯????<br/>
+		?????¹å????¨ä?????????????¢å??????????¹ç?????ä½?ï¼?å®?å°±å????¨è????¹ä??è¿???¥å?¶ç?¶è????¹ç??å¤§å¤´??????<br/>
+		?????¹æ?¯æ???????????ï¼?å°±å????¾å??æ¯?ä¸???·ã??(0ï¼?0) è¡¨ç¤ºå·¦ä??è§?ï¼?(1ï¼?1) è¡¨ç¤º??³ä??è§????<br/>
+		ä½???¯ä????¯ä»¥ä½¿ç?¨æ??ï¼?1ï¼?1ï¼???´é???????¼æ?????æ¯?ï¼?0ï¼?0ï¼???´ä???????¼ã??<br/>
+		é»?è®¤ç???????¹æ?¯ï??0.5ï¼?0.5ï¼?ï¼????æ­¤å??å¼?å§?äº??????¹ç??ä¸­å??ä½?ç½®ã??<br/>
+		æ³¨æ??ï¼?Creator ä¸­ç???????¹ä????¨ä??å®?ä½??????¨ç???????¹ï??å­??????¹ç??å®?ä½?ä¸????å½±å?????
 		@param point The anchor point of node or The x axis anchor of node.
 		@param y The y axis anchor of node.
 		
@@ -3996,7 +3996,7 @@ declare namespace cc {
 		setAnchorPoint(point: Vec2|number, y?: number): void;		
 		/**
 		!#en Set rotation by lookAt target point, normally used by Camera Node
-		!#zh é€šè¿‡è§‚å¯Ÿç›®æ ‡æ¥è®¾ç½® rotationï¼Œä¸€èˆ¬ç”¨äº Camera Node ä¸Š
+		!#zh ???è¿?è§?å¯???®æ????¥è®¾ç½? rotationï¼?ä¸???¬ç?¨ä?? Camera Node ä¸?
 		@param pos pos
 		@param up default is (0,1,0) 
 		*/
@@ -4004,7 +4004,7 @@ declare namespace cc {
 		/**
 		!#en
 		Get the local transform matrix (4x4), based on parent node coordinates
-		!#zh è¿”å›å±€éƒ¨ç©ºé—´åæ ‡ç³»çš„çŸ©é˜µï¼ŒåŸºäºçˆ¶èŠ‚ç‚¹åæ ‡ç³»ã€‚
+		!#zh è¿????å±???¨ç©º??´å?????ç³»ç????©é?µï????ºä????¶è????¹å?????ç³»ã??
 		@param out The matrix object to be filled with data
 		
 		@example 
@@ -4017,7 +4017,7 @@ declare namespace cc {
 		/**
 		!#en
 		Get the world transform matrix (4x4)
-		!#zh è¿”å›ä¸–ç•Œç©ºé—´åæ ‡ç³»çš„çŸ©é˜µã€‚
+		!#zh è¿????ä¸????ç©ºé?´å?????ç³»ç????©é?µã??
 		@param out The matrix object to be filled with data
 		
 		@example 
@@ -4031,7 +4031,7 @@ declare namespace cc {
 		!#en
 		Converts a Point to node (local) space coordinates.
 		!#zh
-		å°†ä¸€ä¸ªç‚¹è½¬æ¢åˆ°èŠ‚ç‚¹ (å±€éƒ¨) ç©ºé—´åæ ‡ç³»ã€‚
+		å°?ä¸?ä¸ªç?¹è½¬??¢å?°è????? (å±????) ç©ºé?´å?????ç³»ã??
 		@param worldPoint worldPoint
 		@param out out
 		
@@ -4046,7 +4046,7 @@ declare namespace cc {
 		!#en
 		Converts a Point in node coordinates to world space coordinates.
 		!#zh
-		å°†èŠ‚ç‚¹åæ ‡ç³»ä¸‹çš„ä¸€ä¸ªç‚¹è½¬æ¢åˆ°ä¸–ç•Œç©ºé—´åæ ‡ç³»ã€‚
+		å°??????¹å?????ç³»ä?????ä¸?ä¸ªç?¹è½¬??¢å?°ä?????ç©ºé?´å?????ç³»ã??
 		@param nodePoint nodePoint
 		@param out out
 		
@@ -4061,9 +4061,9 @@ declare namespace cc {
 		!#en Converts a Point to node (local) space coordinates then add the anchor point position.
 		So the return position will be related to the left bottom corner of the node's bounding box.
 		This equals to the API behavior of cocos2d-x, you probably want to use convertToNodeSpaceAR instead
-		!#zh å°†ä¸€ä¸ªç‚¹è½¬æ¢åˆ°èŠ‚ç‚¹ (å±€éƒ¨) åæ ‡ç³»ï¼Œå¹¶åŠ ä¸Šé”šç‚¹çš„åæ ‡ã€‚<br/>
-		ä¹Ÿå°±æ˜¯è¯´è¿”å›çš„åæ ‡æ˜¯ç›¸å¯¹äºèŠ‚ç‚¹åŒ…å›´ç›’å·¦ä¸‹è§’çš„åæ ‡ã€‚<br/>
-		è¿™ä¸ª API çš„è®¾è®¡æ˜¯ä¸ºäº†å’Œ cocos2d-x ä¸­è¡Œä¸ºä¸€è‡´ï¼Œæ›´å¤šæƒ…å†µä¸‹ä½ å¯èƒ½éœ€è¦ä½¿ç”¨ convertToNodeSpaceARã€‚
+		!#zh å°?ä¸?ä¸ªç?¹è½¬??¢å?°è????? (å±????) ??????ç³»ï??å¹¶å??ä¸??????¹ç???????????<br/>
+		ä¹?å°±æ?¯è¯´è¿???????????????¯ç?¸å¯¹äº??????¹å????´ç??å·¦ä??è§?????????????<br/>
+		è¿?ä¸? API ???è®¾è®¡??¯ä¸ºäº???? cocos2d-x ä¸­è??ä¸ºä????´ï????´å???????µä??ä½???¯è?½é??è¦?ä½¿ç?? convertToNodeSpaceAR???
 		@param worldPoint worldPoint
 		
 		@example 
@@ -4075,8 +4075,8 @@ declare namespace cc {
 		/**
 		!#en Converts a Point related to the left bottom corner of the node's bounding box to world space coordinates.
 		This equals to the API behavior of cocos2d-x, you probably want to use convertToWorldSpaceAR instead
-		!#zh å°†ä¸€ä¸ªç›¸å¯¹äºèŠ‚ç‚¹å·¦ä¸‹è§’çš„åæ ‡ä½ç½®è½¬æ¢åˆ°ä¸–ç•Œç©ºé—´åæ ‡ç³»ã€‚
-		è¿™ä¸ª API çš„è®¾è®¡æ˜¯ä¸ºäº†å’Œ cocos2d-x ä¸­è¡Œä¸ºä¸€è‡´ï¼Œæ›´å¤šæƒ…å†µä¸‹ä½ å¯èƒ½éœ€è¦ä½¿ç”¨ convertToWorldSpaceAR
+		!#zh å°?ä¸?ä¸ªç?¸å¯¹äº??????¹å·¦ä¸?è§??????????ä½?ç½®è½¬??¢å?°ä?????ç©ºé?´å?????ç³»ã??
+		è¿?ä¸? API ???è®¾è®¡??¯ä¸ºäº???? cocos2d-x ä¸­è??ä¸ºä????´ï????´å???????µä??ä½???¯è?½é??è¦?ä½¿ç?? convertToWorldSpaceAR
 		@param nodePoint nodePoint
 		
 		@example 
@@ -4089,7 +4089,7 @@ declare namespace cc {
 		!#en
 		Returns the matrix that transform the node's (local) space coordinates into the parent's space coordinates.<br/>
 		The matrix is in Pixels.
-		!#zh è¿”å›è¿™ä¸ªå°†èŠ‚ç‚¹ï¼ˆå±€éƒ¨ï¼‰çš„ç©ºé—´åæ ‡ç³»è½¬æ¢æˆçˆ¶èŠ‚ç‚¹çš„ç©ºé—´åæ ‡ç³»çš„çŸ©é˜µã€‚è¿™ä¸ªçŸ©é˜µä»¥åƒç´ ä¸ºå•ä½ã€‚
+		!#zh è¿????è¿?ä¸ªå???????¹ï??å±???¨ï?????ç©ºé?´å?????ç³»è½¬??¢æ????¶è????¹ç??ç©ºé?´å?????ç³»ç????©é?µã??è¿?ä¸ªç?©é?µä»¥???ç´?ä¸ºå??ä½????
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4105,9 +4105,9 @@ declare namespace cc {
 		The matrix is in Pixels.<br/>
 		This method is AR (Anchor Relative).
 		!#zh
-		è¿”å›è¿™ä¸ªå°†èŠ‚ç‚¹ï¼ˆå±€éƒ¨ï¼‰çš„ç©ºé—´åæ ‡ç³»è½¬æ¢æˆçˆ¶èŠ‚ç‚¹çš„ç©ºé—´åæ ‡ç³»çš„çŸ©é˜µã€‚<br/>
-		è¿™ä¸ªçŸ©é˜µä»¥åƒç´ ä¸ºå•ä½ã€‚<br/>
-		è¯¥æ–¹æ³•åŸºäºèŠ‚ç‚¹åæ ‡ã€‚
+		è¿????è¿?ä¸ªå???????¹ï??å±???¨ï?????ç©ºé?´å?????ç³»è½¬??¢æ????¶è????¹ç??ç©ºé?´å?????ç³»ç????©é?µã??<br/>
+		è¿?ä¸ªç?©é?µä»¥???ç´?ä¸ºå??ä½????<br/>
+		è¯¥æ?¹æ????ºä???????¹å????????
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4119,7 +4119,7 @@ declare namespace cc {
 		getNodeToParentTransformAR(out?: AffineTransform): AffineTransform;		
 		/**
 		!#en Returns the world affine transform matrix. The matrix is in Pixels.
-		!#zh è¿”å›èŠ‚ç‚¹åˆ°ä¸–ç•Œåæ ‡ç³»çš„ä»¿å°„å˜æ¢çŸ©é˜µã€‚çŸ©é˜µå•ä½æ˜¯åƒç´ ã€‚
+		!#zh è¿?????????¹å?°ä???????????ç³»ç??ä»¿å???????¢ç?©é?µã????©é?µå??ä½???¯å??ç´????
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4134,8 +4134,8 @@ declare namespace cc {
 		Returns the world affine transform matrix. The matrix is in Pixels.<br/>
 		This method is AR (Anchor Relative).
 		!#zh
-		è¿”å›èŠ‚ç‚¹åˆ°ä¸–ç•Œåæ ‡ä»¿å°„å˜æ¢çŸ©é˜µã€‚çŸ©é˜µå•ä½æ˜¯åƒç´ ã€‚<br/>
-		è¯¥æ–¹æ³•åŸºäºèŠ‚ç‚¹åæ ‡ã€‚
+		è¿?????????¹å?°ä???????????ä»¿å???????¢ç?©é?µã????©é?µå??ä½???¯å??ç´????<br/>
+		è¯¥æ?¹æ????ºä???????¹å????????
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4150,8 +4150,8 @@ declare namespace cc {
 		Returns the matrix that transform parent's space coordinates to the node's (local) space coordinates.<br/>
 		The matrix is in Pixels. The returned transform is readonly and cannot be changed.
 		!#zh
-		è¿”å›å°†çˆ¶èŠ‚ç‚¹çš„åæ ‡ç³»è½¬æ¢æˆèŠ‚ç‚¹ï¼ˆå±€éƒ¨ï¼‰çš„ç©ºé—´åæ ‡ç³»çš„çŸ©é˜µã€‚<br/>
-		è¯¥çŸ©é˜µä»¥åƒç´ ä¸ºå•ä½ã€‚è¿”å›çš„çŸ©é˜µæ˜¯åªè¯»çš„ï¼Œä¸èƒ½æ›´æ”¹ã€‚
+		è¿????å°???¶è????¹ç????????ç³»è½¬??¢æ???????¹ï??å±???¨ï?????ç©ºé?´å?????ç³»ç????©é?µã??<br/>
+		è¯¥ç?©é?µä»¥???ç´?ä¸ºå??ä½????è¿?????????©é?µæ?¯å?ªè¯»???ï¼?ä¸???½æ?´æ?¹ã??
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4163,7 +4163,7 @@ declare namespace cc {
 		getParentToNodeTransform(out?: AffineTransform): AffineTransform;		
 		/**
 		!#en Returns the inverse world affine transform matrix. The matrix is in Pixels.
-		!#en è¿”å›ä¸–ç•Œåæ ‡ç³»åˆ°èŠ‚ç‚¹åæ ‡ç³»çš„é€†çŸ©é˜µã€‚
+		!#en è¿????ä¸??????????ç³»å?°è????¹å?????ç³»ç???????©é?µã??
 		@param out The affine transform object to be filled with data
 		
 		@example 
@@ -4175,7 +4175,7 @@ declare namespace cc {
 		getWorldToNodeTransform(out?: AffineTransform): AffineTransform;		
 		/**
 		!#en convenience methods which take a cc.Touch instead of cc.Vec2.
-		!#zh å°†è§¦æ‘¸ç‚¹è½¬æ¢æˆæœ¬åœ°åæ ‡ç³»ä¸­ä½ç½®ã€‚
+		!#zh å°?è§¦æ?¸ç?¹è½¬??¢æ????¬å?°å?????ç³»ä¸­ä½?ç½®ã??
 		@param touch The touch object
 		
 		@example 
@@ -4186,7 +4186,7 @@ declare namespace cc {
 		convertTouchToNodeSpace(touch: Touch): Vec2;		
 		/**
 		!#en converts a cc.Touch (world coordinates) into a local coordinate. This method is AR (Anchor Relative).
-		!#zh è½¬æ¢ä¸€ä¸ª cc.Touchï¼ˆä¸–ç•Œåæ ‡ï¼‰åˆ°ä¸€ä¸ªå±€éƒ¨åæ ‡ï¼Œè¯¥æ–¹æ³•åŸºäºèŠ‚ç‚¹åæ ‡ã€‚
+		!#zh è½¬æ?¢ä??ä¸? cc.Touchï¼?ä¸??????????ï¼???°ä??ä¸ªå????¨å?????ï¼?è¯¥æ?¹æ????ºä???????¹å????????
 		@param touch The touch object
 		
 		@example 
@@ -4199,7 +4199,7 @@ declare namespace cc {
 		!#en
 		Returns a "local" axis aligned bounding box of the node. <br/>
 		The returned box is relative only to its parent.
-		!#zh è¿”å›çˆ¶èŠ‚åæ ‡ç³»ä¸‹çš„è½´å‘å¯¹é½çš„åŒ…å›´ç›’ã€‚
+		!#zh è¿??????¶è????????ç³»ä?????è½´å??å¯¹é??????????´ç?????
 		
 		@example 
 		```js
@@ -4212,8 +4212,8 @@ declare namespace cc {
 		Returns a "world" axis aligned bounding box of the node.<br/>
 		The bounding box contains self and active children's world bounding box.
 		!#zh
-		è¿”å›èŠ‚ç‚¹åœ¨ä¸–ç•Œåæ ‡ç³»ä¸‹çš„å¯¹é½è½´å‘çš„åŒ…å›´ç›’ï¼ˆAABBï¼‰ã€‚<br/>
-		è¯¥è¾¹æ¡†åŒ…å«è‡ªèº«å’Œå·²æ¿€æ´»çš„å­èŠ‚ç‚¹çš„ä¸–ç•Œè¾¹æ¡†ã€‚
+		è¿?????????¹å?¨ä???????????ç³»ä?????å¯¹é??è½´å??????????´ç??ï¼?AABBï¼????<br/>
+		è¯¥è¾¹æ¡??????«è?ªèº«???å·²æ??æ´»ç??å­??????¹ç??ä¸????è¾¹æ?????
 		
 		@example 
 		```js
@@ -4225,7 +4225,7 @@ declare namespace cc {
 		!#en
 		Adds a child to the node with z order and name.
 		!#zh
-		æ·»åŠ å­èŠ‚ç‚¹ï¼Œå¹¶ä¸”å¯ä»¥ä¿®æ”¹è¯¥èŠ‚ç‚¹çš„ å±€éƒ¨ Z é¡ºåºå’Œåå­—ã€‚
+		æ·»å??å­??????¹ï??å¹¶ä????¯ä»¥ä¿®æ?¹è¯¥?????¹ç?? å±???? Z é¡ºå????????å­????
 		@param child A child node
 		@param zIndex Z order for drawing priority. Please refer to zIndex property
 		@param name A name to identify the node easily. Please refer to name property
@@ -4238,7 +4238,7 @@ declare namespace cc {
 		addChild(child: Node, zIndex?: number, name?: string): void;		
 		/**
 		!#en Stops all running actions and schedulers.
-		!#zh åœæ­¢æ‰€æœ‰æ­£åœ¨æ’­æ”¾çš„åŠ¨ä½œå’Œè®¡æ—¶å™¨ã€‚
+		!#zh ???æ­¢æ?????æ­???¨æ?­æ?¾ç????¨ä?????è®¡æ?¶å?¨ã??
 		
 		@example 
 		```js
@@ -4249,7 +4249,7 @@ declare namespace cc {
 		/**
 		!#en Sorts the children array depends on children's zIndex and arrivalOrder,
 		normally you won't need to invoke this function.
-		!#zh æ ¹æ®å­èŠ‚ç‚¹çš„ zIndex å’Œ arrivalOrder è¿›è¡Œæ’åºï¼Œæ­£å¸¸æƒ…å†µä¸‹å¼€å‘è€…ä¸éœ€è¦æ‰‹åŠ¨è°ƒç”¨è¿™ä¸ªå‡½æ•°ã€‚ 
+		!#zh ??¹æ?®å???????¹ç?? zIndex ??? arrivalOrder è¿?è¡????åº?ï¼?æ­?å¸¸æ????µä??å¼???????ä¸????è¦??????¨è????¨è??ä¸ªå?½æ?°ã?? 
 		*/
 		sortAllChildren(): void;		
 		/**
@@ -4257,9 +4257,9 @@ declare namespace cc {
 		Returns the displayed opacity of Node,
 		the difference between displayed opacity and opacity is that displayed opacity is calculated based on opacity and parent node's opacity when cascade opacity enabled.
 		!#zh
-		è·å–èŠ‚ç‚¹æ˜¾ç¤ºé€æ˜åº¦ï¼Œ
-		æ˜¾ç¤ºé€æ˜åº¦å’Œé€æ˜åº¦ä¹‹é—´çš„ä¸åŒä¹‹å¤„åœ¨äºå½“å¯ç”¨çº§è¿é€æ˜åº¦æ—¶ï¼Œ
-		æ˜¾ç¤ºé€æ˜åº¦æ˜¯åŸºäºè‡ªèº«é€æ˜åº¦å’Œçˆ¶èŠ‚ç‚¹é€æ˜åº¦è®¡ç®—çš„ã€‚ 
+		??·å???????¹æ?¾ç¤º??????åº¦ï??
+		??¾ç¤º??????åº¦å????????åº¦ä????´ç??ä¸????ä¹?å¤???¨ä??å½???¯ç?¨çº§è¿???????åº¦æ?¶ï??
+		??¾ç¤º??????åº¦æ?¯å?ºä????ªèº«??????åº¦å????¶è????¹é?????åº¦è®¡ç®??????? 
 		*/
 		getDisplayedOpacity(): number;		
 		/**
@@ -4267,28 +4267,28 @@ declare namespace cc {
 		Returns the displayed color of Node,
 		the difference between displayed color and color is that displayed color is calculated based on color and parent node's color when cascade color enabled.
 		!#zh
-		è·å–èŠ‚ç‚¹çš„æ˜¾ç¤ºé¢œè‰²ï¼Œ
-		æ˜¾ç¤ºé¢œè‰²å’Œé¢œè‰²ä¹‹é—´çš„ä¸åŒä¹‹å¤„åœ¨äºå½“å¯ç”¨çº§è¿é¢œè‰²æ—¶ï¼Œ
-		æ˜¾ç¤ºé¢œè‰²æ˜¯åŸºäºè‡ªèº«é¢œè‰²å’Œçˆ¶èŠ‚ç‚¹é¢œè‰²è®¡ç®—çš„ã€‚ 
+		??·å???????¹ç????¾ç¤ºé¢???²ï??
+		??¾ç¤ºé¢???²å??é¢???²ä????´ç??ä¸????ä¹?å¤???¨ä??å½???¯ç?¨çº§è¿?é¢???²æ?¶ï??
+		??¾ç¤ºé¢???²æ?¯å?ºä????ªèº«é¢???²å????¶è????¹é????²è®¡ç®??????? 
 		*/
 		getDisplayedColor(): Color;		
 		/** !#en Cascade opacity is removed from v2.0
 		Indicate whether node's opacity value affect its child nodes, default value is true.
-		!#zh é€æ˜åº¦çº§è”åŠŸèƒ½ä» v2.0 å¼€å§‹å·²ç§»é™¤
-		èŠ‚ç‚¹çš„ä¸é€æ˜åº¦å€¼æ˜¯å¦å½±å“å…¶å­èŠ‚ç‚¹ï¼Œé»˜è®¤å€¼ä¸º trueã€‚ */
+		!#zh ??????åº¦çº§????????½ä?? v2.0 å¼?å§?å·²ç§»???
+		?????¹ç??ä¸???????åº¦å?¼æ?¯å?¦å½±?????¶å???????¹ï??é»?è®¤å?¼ä¸º true??? */
 		cascadeOpacity: boolean;		
 		/**
 		!#en Cascade opacity is removed from v2.0
 		Returns whether node's opacity value affect its child nodes.
-		!#zh é€æ˜åº¦çº§è”åŠŸèƒ½ä» v2.0 å¼€å§‹å·²ç§»é™¤
-		è¿”å›èŠ‚ç‚¹çš„ä¸é€æ˜åº¦å€¼æ˜¯å¦å½±å“å…¶å­èŠ‚ç‚¹ã€‚ 
+		!#zh ??????åº¦çº§????????½ä?? v2.0 å¼?å§?å·²ç§»???
+		è¿?????????¹ç??ä¸???????åº¦å?¼æ?¯å?¦å½±?????¶å???????¹ã?? 
 		*/
 		isCascadeOpacityEnabled(): boolean;		
 		/**
 		!#en Cascade opacity is removed from v2.0
 		Enable or disable cascade opacity, if cascade enabled, child nodes' opacity will be the multiplication of parent opacity and its own opacity.
-		!#zh é€æ˜åº¦çº§è”åŠŸèƒ½ä» v2.0 å¼€å§‹å·²ç§»é™¤
-		å¯ç”¨æˆ–ç¦ç”¨çº§è¿ä¸é€æ˜åº¦ï¼Œå¦‚æœçº§è¿å¯ç”¨ï¼Œå­èŠ‚ç‚¹çš„ä¸é€æ˜åº¦å°†æ˜¯çˆ¶ä¸é€æ˜åº¦ä¹˜ä¸Šå®ƒè‡ªå·±çš„ä¸é€æ˜åº¦ã€‚
+		!#zh ??????åº¦çº§????????½ä?? v2.0 å¼?å§?å·²ç§»???
+		??¯ç?¨æ??ç¦???¨çº§è¿?ä¸???????åº¦ï??å¦????çº§è????¯ç?¨ï??å­??????¹ç??ä¸???????åº¦å????¯ç?¶ä????????åº¦ä??ä¸?å®???ªå·±???ä¸???????åº¦ã??
 		@param cascadeOpacityEnabled cascadeOpacityEnabled 
 		*/
 		setCascadeOpacityEnabled(cascadeOpacityEnabled: boolean): void;		
@@ -4296,16 +4296,16 @@ declare namespace cc {
 		!#en Opacity modify RGB have been removed since v2.0
 		Set whether color should be changed with the opacity value,
 		useless in ccsg.Node, but this function is override in some class to have such behavior.
-		!#zh é€æ˜åº¦å½±å“é¢œè‰²é…ç½®å·²ç»è¢«åºŸå¼ƒ
-		è®¾ç½®æ›´æ”¹é€æ˜åº¦æ—¶æ˜¯å¦ä¿®æ”¹RGBå€¼ï¼Œ
+		!#zh ??????åº¦å½±???é¢???²é??ç½®å·²ç»?è¢«å??å¼?
+		è®¾ç½®??´æ?¹é?????åº¦æ?¶æ?¯å?¦ä¿®??¹RGB??¼ï??
 		@param opacityValue opacityValue 
 		*/
 		setOpacityModifyRGB(opacityValue: boolean): void;		
 		/**
 		!#en Opacity modify RGB have been removed since v2.0
 		Get whether color should be changed with the opacity value.
-		!#zh é€æ˜åº¦å½±å“é¢œè‰²é…ç½®å·²ç»è¢«åºŸå¼ƒ
-		è·å–æ›´æ”¹é€æ˜åº¦æ—¶æ˜¯å¦ä¿®æ”¹RGBå€¼ã€‚ 
+		!#zh ??????åº¦å½±???é¢???²é??ç½®å·²ç»?è¢«å??å¼?
+		??·å????´æ?¹é?????åº¦æ?¶æ?¯å?¦ä¿®??¹RGB??¼ã?? 
 		*/
 		isOpacityModifyRGB(): boolean;	
 	}	
@@ -4320,13 +4320,13 @@ declare namespace cc {
 	   In this way, they can be easily kept inside the bounding box.<br/>
 	Currently, it's used by RichText component and TileMap component.
 	!#zh
-	Cocos Creator åœºæ™¯ä¸­çš„ç§æœ‰èŠ‚ç‚¹ç±»ã€‚<br/>
-	ç§æœ‰èŠ‚ç‚¹åœ¨ç¼–è¾‘å™¨ä¸­ä¸å¯è§ï¼Œå¯¹ç”¨æˆ·é€æ˜ã€‚<br/>
-	é€šå¸¸ç§æœ‰èŠ‚ç‚¹æ˜¯è¢«ä¸€äº›ç‰¹æ®Šçš„ç»„ä»¶åˆ›å»ºå‡ºæ¥ä½œä¸ºçˆ¶èŠ‚ç‚¹çš„ä¸€éƒ¨åˆ†è€Œå­˜åœ¨çš„ï¼Œç†è®ºä¸Šæ¥è¯´ï¼Œå®ƒä»¬ä¸æ˜¯å­èŠ‚ç‚¹ï¼Œè€Œæ˜¯çˆ¶èŠ‚ç‚¹çš„ç»„æˆéƒ¨åˆ†ã€‚<br/>
-	ç§æœ‰èŠ‚ç‚¹æœ‰ä¸¤ä¸ªéå¸¸é‡è¦çš„ç‰¹æ€§ï¼š<br/>
-	1. å®ƒæœ‰ç€æœ€å°çš„æ¸²æŸ“æ’åºçš„ Z è½´æ·±åº¦ï¼Œå¹¶ä¸”æ— æ³•è¢«æ›´æ”¹ï¼Œå› ä¸ºå®ƒä»¬ä¸èƒ½è¢«æ˜¾ç¤ºåœ¨å…¶ä»–æ­£å¸¸å­èŠ‚ç‚¹ä¹‹ä¸Šã€‚<br/>
-	2. å®ƒçš„å®šä½ä¹Ÿæ˜¯ç‰¹æ®Šçš„ï¼Œå¯¹äºç§æœ‰èŠ‚ç‚¹æ¥è¯´ï¼Œçˆ¶èŠ‚ç‚¹åŒ…å›´ç›’çš„å·¦ä¸‹è§’æ˜¯å®ƒçš„å±€éƒ¨åæ ‡ç³»åŸç‚¹ï¼Œè¿™ä¸ªåŸç‚¹ç›¸å½“äºçˆ¶èŠ‚ç‚¹çš„ä½ç½®å‡å»å®ƒé”šç‚¹çš„åç§»ã€‚è¿™æ ·ç§æœ‰èŠ‚ç‚¹å¯ä»¥æ¯”è¾ƒå®¹æ˜“è¢«æ§åˆ¶åœ¨åŒ…å›´ç›’ä¹‹ä¸­ã€‚<br/>
-	ç›®å‰åœ¨å¼•æ“ä¸­ï¼ŒRichText å’Œ TileMap éƒ½æœ‰å¯èƒ½ç”Ÿæˆç§æœ‰èŠ‚ç‚¹ã€‚ */
+	Cocos Creator ??ºæ?¯ä¸­???ç§?????????¹ç±»???<br/>
+	ç§?????????¹å?¨ç??è¾???¨ä¸­ä¸???¯è??ï¼?å¯¹ç?¨æ?·é????????<br/>
+	???å¸¸ç??????????¹æ?¯è¢«ä¸?äº???¹æ?????ç»?ä»¶å??å»ºå?ºæ?¥ä??ä¸ºç?¶è????¹ç??ä¸???¨å?????å­???¨ç??ï¼????è®ºä????¥è¯´ï¼?å®?ä»¬ä????¯å???????¹ï???????¯ç?¶è????¹ç??ç»??????¨å?????<br/>
+	ç§?????????¹æ??ä¸¤ä¸ª???å¸¸é??è¦??????¹æ?§ï??<br/>
+	1. å®??????????å°????æ¸²æ?????åº???? Z è½´æ·±åº¦ï??å¹¶ä?????æ³?è¢«æ?´æ?¹ï?????ä¸ºå??ä»¬ä????½è¢«??¾ç¤º??¨å?¶ä??æ­?å¸¸å???????¹ä??ä¸????<br/>
+	2. å®????å®?ä½?ä¹???¯ç?¹æ?????ï¼?å¯¹ä??ç§?????????¹æ?¥è¯´ï¼???¶è????¹å????´ç?????å·¦ä??è§???¯å?????å±???¨å?????ç³»å????¹ï??è¿?ä¸ªå????¹ç?¸å??äº???¶è????¹ç??ä½?ç½®å????»å???????¹ç?????ç§»ã??è¿???·ç??????????¹å?¯ä»¥æ¯?è¾?å®¹æ??è¢«æ?§å?¶å?¨å????´ç??ä¹?ä¸­ã??<br/>
+	??®å????¨å?????ä¸­ï??RichText ??? TileMap ??½æ????¯è?½ç?????ç§?????????¹ã?? */
 	export class PrivateNode extends Node {		
 		/**
 		
@@ -4338,11 +4338,11 @@ declare namespace cc {
 	cc.Scene is a subclass of cc.Node that is used only as an abstract concept.<br/>
 	cc.Scene and cc.Node are almost identical with the difference that users can not modify cc.Scene manually.
 	!#zh
-	cc.Scene æ˜¯ cc.Node çš„å­ç±»ï¼Œä»…ä½œä¸ºä¸€ä¸ªæŠ½è±¡çš„æ¦‚å¿µã€‚<br/>
-	cc.Scene å’Œ cc.Node æœ‰ç‚¹ä¸åŒï¼Œç”¨æˆ·ä¸åº”ç›´æ¥ä¿®æ”¹ cc.Sceneã€‚ */
+	cc.Scene ??? cc.Node ???å­?ç±»ï??ä»?ä½?ä¸ºä??ä¸ªæ?½è±¡???æ¦?å¿µã??<br/>
+	cc.Scene ??? cc.Node ?????¹ä?????ï¼???¨æ?·ä??åº???´æ?¥ä¿®??? cc.Scene??? */
 	export class Scene extends Node {		
 		/** !#en Indicates whether all (directly or indirectly) static referenced assets of this scene are releasable by default after scene unloading.
-		!#zh æŒ‡ç¤ºè¯¥åœºæ™¯ä¸­ç›´æ¥æˆ–é—´æ¥é™æ€å¼•ç”¨åˆ°çš„æ‰€æœ‰èµ„æºæ˜¯å¦é»˜è®¤åœ¨åœºæ™¯åˆ‡æ¢åè‡ªåŠ¨é‡Šæ”¾ã€‚ */
+		!#zh ???ç¤ºè¯¥??ºæ?¯ä¸­??´æ?¥æ????´æ?¥é?????å¼???¨å?°ç????????èµ?æº???¯å?¦é??è®¤å?¨å?ºæ?¯å????¢å????ªå?¨é????¾ã?? */
 		autoReleaseAssets: boolean;	
 	}	
 	/** !#en
@@ -4356,18 +4356,18 @@ declare namespace cc {
 	The 'custom selectors' should be avoided when possible. It is faster,
 	and consumes less memory to use the 'update callback'. *
 	!#zh
-	Scheduler æ˜¯è´Ÿè´£è§¦å‘å›è°ƒå‡½æ•°çš„ç±»ã€‚<br/>
-	é€šå¸¸æƒ…å†µä¸‹ï¼Œå»ºè®®ä½¿ç”¨ cc.director.getScheduler() æ¥è·å–ç³»ç»Ÿå®šæ—¶å™¨ã€‚<br/>
-	æœ‰ä¸¤ç§ä¸åŒç±»å‹çš„å®šæ—¶å™¨ï¼š<br/>
-	    - update å®šæ—¶å™¨ï¼šæ¯ä¸€å¸§éƒ½ä¼šè§¦å‘ã€‚æ‚¨å¯ä»¥è‡ªå®šä¹‰ä¼˜å…ˆçº§ã€‚<br/>
-	    - è‡ªå®šä¹‰å®šæ—¶å™¨ï¼šè‡ªå®šä¹‰å®šæ—¶å™¨å¯ä»¥æ¯ä¸€å¸§æˆ–è€…è‡ªå®šä¹‰çš„æ—¶é—´é—´éš”è§¦å‘ã€‚<br/>
-	å¦‚æœå¸Œæœ›æ¯å¸§éƒ½è§¦å‘ï¼Œåº”è¯¥ä½¿ç”¨ update å®šæ—¶å™¨ï¼Œä½¿ç”¨ update å®šæ—¶å™¨æ›´å¿«ï¼Œè€Œä¸”æ¶ˆè€—æ›´å°‘çš„å†…å­˜ã€‚ */
+	Scheduler ??¯è??è´?è§¦å?????è°???½æ?°ç??ç±»ã??<br/>
+	???å¸¸æ????µä??ï¼?å»ºè®®ä½¿ç?? cc.director.getScheduler() ??¥è?·å??ç³»ç??å®???¶å?¨ã??<br/>
+	???ä¸¤ç??ä¸????ç±»å?????å®???¶å?¨ï??<br/>
+	    - update å®???¶å?¨ï??æ¯?ä¸?å¸§é?½ä??è§¦å???????¨å?¯ä»¥??ªå??ä¹?ä¼????çº§ã??<br/>
+	    - ??ªå??ä¹?å®???¶å?¨ï????ªå??ä¹?å®???¶å?¨å?¯ä»¥æ¯?ä¸?å¸§æ???????ªå??ä¹??????¶é?´é?´é??è§¦å?????<br/>
+	å¦????å¸????æ¯?å¸§é?½è§¦???ï¼?åº?è¯¥ä½¿??? update å®???¶å?¨ï??ä½¿ç?? update å®???¶å?¨æ?´å¿«ï¼????ä¸?æ¶??????´å????????å­???? */
 	export class Scheduler {		
 		/**
 		!#en This method should be called for any target which needs to schedule tasks, and this method should be called before any scheduler API usage.
 		This method will add a `_id` property if it doesn't exist.
-		!#zh ä»»ä½•éœ€è¦ç”¨ Scheduler ç®¡ç†ä»»åŠ¡çš„å¯¹è±¡ä¸»ä½“éƒ½åº”è¯¥è°ƒç”¨è¿™ä¸ªæ–¹æ³•ï¼Œå¹¶ä¸”åº”è¯¥åœ¨è°ƒç”¨ä»»ä½• Scheduler API ä¹‹å‰è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚
-		è¿™ä¸ªæ–¹æ³•ä¼šç»™å¯¹è±¡æ·»åŠ ä¸€ä¸ª `_id` å±æ€§ï¼Œå¦‚æœè¿™ä¸ªå±æ€§ä¸å­˜åœ¨çš„è¯ã€‚
+		!#zh ä»»ä?????è¦???? Scheduler ç®¡ç??ä»»å?¡ç??å¯¹è±¡ä¸»ä????½å??è¯¥è????¨è??ä¸ªæ?¹æ??ï¼?å¹¶ä??åº?è¯¥å?¨è????¨ä»»ä½? Scheduler API ä¹????è°???¨è??ä¸ªæ?¹æ?????
+		è¿?ä¸ªæ?¹æ??ä¼?ç»?å¯¹è±¡æ·»å??ä¸?ä¸? `_id` å±???§ï??å¦????è¿?ä¸ªå????§ä??å­???¨ç??è¯????
 		@param target target 
 		*/
 		enableForTarget(target: any): void;		
@@ -4377,24 +4377,24 @@ declare namespace cc {
 		You can use this property to create a 'slow motion' or 'fast forward' effect.<br/>
 		Default is 1.0. To create a 'slow motion' effect, use values below 1.0.<br/>
 		To create a 'fast forward' effect, use values higher than 1.0.<br/>
-		Noteï¼šIt will affect EVERY scheduled selector / action.
+		Noteï¼?It will affect EVERY scheduled selector / action.
 		!#zh
-		è®¾ç½®æ—¶é—´é—´éš”çš„ç¼©æ”¾æ¯”ä¾‹ã€‚<br/>
-		æ‚¨å¯ä»¥ä½¿ç”¨è¿™ä¸ªæ–¹æ³•æ¥åˆ›å»ºä¸€ä¸ª â€œslow motionï¼ˆæ…¢åŠ¨ä½œï¼‰â€ æˆ– â€œfast forwardï¼ˆå¿«è¿›ï¼‰â€ çš„æ•ˆæœã€‚<br/>
-		é»˜è®¤æ˜¯ 1.0ã€‚è¦åˆ›å»ºä¸€ä¸ª â€œslow motionï¼ˆæ…¢åŠ¨ä½œï¼‰â€ æ•ˆæœ,ä½¿ç”¨å€¼ä½äº 1.0ã€‚<br/>
-		è¦ä½¿ç”¨ â€œfast forwardï¼ˆå¿«è¿›ï¼‰â€ æ•ˆæœï¼Œä½¿ç”¨å€¼å¤§äº 1.0ã€‚<br/>
-		æ³¨æ„ï¼šå®ƒå½±å“è¯¥ Scheduler ä¸‹ç®¡ç†çš„æ‰€æœ‰å®šæ—¶å™¨ã€‚
+		è®¾ç½®??¶é?´é?´é?????ç¼©æ?¾æ??ä¾????<br/>
+		??¨å?¯ä»¥ä½¿ç?¨è??ä¸ªæ?¹æ????¥å??å»ºä??ä¸? ???slow motionï¼???¢å?¨ä??ï¼???? ??? ???fast forwardï¼?å¿«è??ï¼???? ????????????<br/>
+		é»?è®¤æ?? 1.0???è¦????å»ºä??ä¸? ???slow motionï¼???¢å?¨ä??ï¼???? ??????,ä½¿ç?¨å?¼ä??äº? 1.0???<br/>
+		è¦?ä½¿ç?? ???fast forwardï¼?å¿«è??ï¼???? ??????ï¼?ä½¿ç?¨å?¼å¤§äº? 1.0???<br/>
+		æ³¨æ??ï¼?å®?å½±å??è¯? Scheduler ä¸?ç®¡ç???????????å®???¶å?¨ã??
 		@param timeScale timeScale 
 		*/
 		setTimeScale(timeScale: number): void;		
 		/**
 		!#en Returns time scale of scheduler.
-		!#zh è·å–æ—¶é—´é—´éš”çš„ç¼©æ”¾æ¯”ä¾‹ã€‚ 
+		!#zh ??·å????¶é?´é?´é?????ç¼©æ?¾æ??ä¾???? 
 		*/
 		getTimeScale(): number;		
 		/**
 		!#en 'update' the scheduler. (You should NEVER call this method, unless you know what you are doing.)
-		!#zh update è°ƒåº¦å‡½æ•°ã€‚(ä¸åº”è¯¥ç›´æ¥è°ƒç”¨è¿™ä¸ªæ–¹æ³•ï¼Œé™¤éå®Œå…¨äº†è§£è¿™ä¹ˆåšçš„ç»“æœ)
+		!#zh update è°?åº¦å?½æ?°ã??(ä¸?åº?è¯¥ç?´æ?¥è????¨è??ä¸ªæ?¹æ??ï¼???¤é??å®???¨ä??è§?è¿?ä¹???????ç»????)
 		@param dt delta time 
 		*/
 		update(dt: number): void;		
@@ -4409,15 +4409,15 @@ declare namespace cc {
 		  delay is the amount of time the action will wait before it'll start<br/>
 		</p>
 		!#zh
-		æŒ‡å®šå›è°ƒå‡½æ•°ï¼Œè°ƒç”¨å¯¹è±¡ç­‰ä¿¡æ¯æ¥æ·»åŠ ä¸€ä¸ªæ–°çš„å®šæ—¶å™¨ã€‚<br/>
-		å¦‚æœ paused å€¼ä¸º trueï¼Œé‚£ä¹ˆç›´åˆ° resume è¢«è°ƒç”¨æ‰å¼€å§‹è®¡æ—¶ã€‚<br/>
-		å½“æ—¶é—´é—´éš”è¾¾åˆ°æŒ‡å®šå€¼æ—¶ï¼Œè®¾ç½®çš„å›è°ƒå‡½æ•°å°†ä¼šè¢«è°ƒç”¨ã€‚<br/>
-		å¦‚æœ interval å€¼ä¸º 0ï¼Œé‚£ä¹ˆå›è°ƒå‡½æ•°æ¯ä¸€å¸§éƒ½ä¼šè¢«è°ƒç”¨ï¼Œä½†å¦‚æœæ˜¯è¿™æ ·ï¼Œ
-		å»ºè®®ä½¿ç”¨ scheduleUpdateForTarget ä»£æ›¿ã€‚<br/>
-		å¦‚æœå›è°ƒå‡½æ•°å·²ç»è¢«å®šæ—¶å™¨ä½¿ç”¨ï¼Œé‚£ä¹ˆåªä¼šæ›´æ–°ä¹‹å‰å®šæ—¶å™¨çš„æ—¶é—´é—´éš”å‚æ•°ï¼Œä¸ä¼šè®¾ç½®æ–°çš„å®šæ—¶å™¨ã€‚<br/>
-		repeat å€¼å¯ä»¥è®©å®šæ—¶å™¨è§¦å‘ repeat + 1 æ¬¡ï¼Œä½¿ç”¨ cc.macro.REPEAT_FOREVER
-		å¯ä»¥è®©å®šæ—¶å™¨ä¸€ç›´å¾ªç¯è§¦å‘ã€‚<br/>
-		delay å€¼æŒ‡å®šå»¶è¿Ÿæ—¶é—´ï¼Œå®šæ—¶å™¨ä¼šåœ¨å»¶è¿ŸæŒ‡å®šçš„æ—¶é—´ä¹‹åå¼€å§‹è®¡æ—¶ã€‚
+		???å®????è°???½æ?°ï??è°???¨å¯¹è±¡ç??ä¿¡æ?¯æ?¥æ·»???ä¸?ä¸ªæ?°ç??å®???¶å?¨ã??<br/>
+		å¦???? paused ??¼ä¸º trueï¼????ä¹???´å?? resume è¢«è????¨æ??å¼?å§?è®¡æ?¶ã??<br/>
+		å½???¶é?´é?´é??è¾¾å?°æ??å®???¼æ?¶ï??è®¾ç½®??????è°???½æ?°å??ä¼?è¢«è????¨ã??<br/>
+		å¦???? interval ??¼ä¸º 0ï¼????ä¹????è°???½æ?°æ??ä¸?å¸§é?½ä??è¢«è????¨ï??ä½?å¦??????¯è????·ï??
+		å»ºè®®ä½¿ç?? scheduleUpdateForTarget ä»???¿ã??<br/>
+		å¦???????è°???½æ?°å·²ç»?è¢«å????¶å?¨ä½¿??¨ï?????ä¹???ªä????´æ?°ä?????å®???¶å?¨ç????¶é?´é?´é???????°ï??ä¸?ä¼?è®¾ç½®??°ç??å®???¶å?¨ã??<br/>
+		repeat ??¼å?¯ä»¥è®©å????¶å?¨è§¦??? repeat + 1 æ¬¡ï??ä½¿ç?? cc.macro.REPEAT_FOREVER
+		??¯ä»¥è®©å????¶å?¨ä????´å¾ª??¯è§¦??????<br/>
+		delay ??¼æ??å®?å»¶è????¶é?´ï??å®???¶å?¨ä????¨å»¶è¿????å®??????¶é?´ä?????å¼?å§?è®¡æ?¶ã??
 		@param callback callback
 		@param target target
 		@param interval interval
@@ -4439,9 +4439,9 @@ declare namespace cc {
 		Schedules the update callback for a given target,
 		During every frame after schedule started, the "update" function of target will be invoked.
 		!#zh
-		ä½¿ç”¨æŒ‡å®šçš„ä¼˜å…ˆçº§ä¸ºæŒ‡å®šçš„å¯¹è±¡è®¾ç½® update å®šæ—¶å™¨ã€‚
-		update å®šæ—¶å™¨æ¯ä¸€å¸§éƒ½ä¼šè¢«è§¦å‘ï¼Œè§¦å‘æ—¶è‡ªåŠ¨è°ƒç”¨æŒ‡å®šå¯¹è±¡çš„ "update" å‡½æ•°ã€‚
-		ä¼˜å…ˆçº§çš„å€¼è¶Šä½ï¼Œå®šæ—¶å™¨è¢«è§¦å‘çš„è¶Šæ—©ã€‚
+		ä½¿ç?¨æ??å®????ä¼????çº§ä¸º???å®????å¯¹è±¡è®¾ç½® update å®???¶å?¨ã??
+		update å®???¶å?¨æ??ä¸?å¸§é?½ä??è¢«è§¦???ï¼?è§¦å????¶è?ªå?¨è????¨æ??å®?å¯¹è±¡??? "update" ??½æ?°ã??
+		ä¼????çº§ç????¼è??ä½?ï¼?å®???¶å?¨è¢«è§¦å?????è¶???©ã??
 		@param target target
 		@param priority priority
 		@param paused paused 
@@ -4452,15 +4452,15 @@ declare namespace cc {
 		Unschedules a callback for a callback and a given target.
 		If you want to unschedule the "update", use `unscheduleUpdate()`
 		!#zh
-		å–æ¶ˆæŒ‡å®šå¯¹è±¡å®šæ—¶å™¨ã€‚
-		å¦‚æœéœ€è¦å–æ¶ˆ update å®šæ—¶å™¨ï¼Œè¯·ä½¿ç”¨ unscheduleUpdate()ã€‚
+		???æ¶????å®?å¯¹è±¡å®???¶å?¨ã??
+		å¦???????è¦????æ¶? update å®???¶å?¨ï??è¯·ä½¿??? unscheduleUpdate()???
 		@param callback The callback to be unscheduled
 		@param target The target bound to the callback. 
 		*/
 		unschedule(callback: Function, target: any): void;		
 		/**
 		!#en Unschedules the update callback for a given target.
-		!#zh å–æ¶ˆæŒ‡å®šå¯¹è±¡çš„ update å®šæ—¶å™¨ã€‚
+		!#zh ???æ¶????å®?å¯¹è±¡??? update å®???¶å?¨ã??
 		@param target The target to be unscheduled. 
 		*/
 		unscheduleUpdate(target: any): void;		
@@ -4468,7 +4468,7 @@ declare namespace cc {
 		!#en
 		Unschedules all scheduled callbacks for a given target.
 		This also includes the "update" callback.
-		!#zh å–æ¶ˆæŒ‡å®šå¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨ï¼ŒåŒ…æ‹¬ update å®šæ—¶å™¨ã€‚
+		!#zh ???æ¶????å®?å¯¹è±¡?????????å®???¶å?¨ï???????? update å®???¶å?¨ã??
 		@param target The target to be unscheduled. 
 		*/
 		unscheduleAllForTarget(target: any): void;		
@@ -4477,8 +4477,8 @@ declare namespace cc {
 		Unschedules all scheduled callbacks from all targets including the system callbacks.<br/>
 		You should NEVER call this method, unless you know what you are doing.
 		!#zh
-		å–æ¶ˆæ‰€æœ‰å¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨ï¼ŒåŒ…æ‹¬ç³»ç»Ÿå®šæ—¶å™¨ã€‚<br/>
-		ä¸è¦è°ƒç”¨æ­¤å‡½æ•°ï¼Œé™¤éä½ ç¡®å®šä½ åœ¨åšä»€ä¹ˆã€‚ 
+		???æ¶???????å¯¹è±¡?????????å®???¶å?¨ï???????¬ç³»ç»?å®???¶å?¨ã??<br/>
+		ä¸?è¦?è°???¨æ­¤??½æ?°ï????¤é??ä½?ç¡®å??ä½???¨å??ä»?ä¹???? 
 		*/
 		unscheduleAll(): void;		
 		/**
@@ -4486,15 +4486,15 @@ declare namespace cc {
 		Unschedules all callbacks from all targets with a minimum priority.<br/>
 		You should only call this with `PRIORITY_NON_SYSTEM_MIN` or higher.
 		!#zh
-		å–æ¶ˆæ‰€æœ‰ä¼˜å…ˆçº§çš„å€¼å¤§äºæŒ‡å®šä¼˜å…ˆçº§çš„å®šæ—¶å™¨ã€‚<br/>
-		ä½ åº”è¯¥åªå–æ¶ˆä¼˜å…ˆçº§çš„å€¼å¤§äº PRIORITY_NON_SYSTEM_MIN çš„å®šæ—¶å™¨ã€‚
+		???æ¶???????ä¼????çº§ç????¼å¤§äº????å®?ä¼????çº§ç??å®???¶å?¨ã??<br/>
+		ä½?åº?è¯¥å?ªå??æ¶?ä¼????çº§ç????¼å¤§äº? PRIORITY_NON_SYSTEM_MIN ???å®???¶å?¨ã??
 		@param minPriority The minimum priority of selector to be unscheduled. Which means, all selectors which
 		       priority is higher than minPriority will be unscheduled. 
 		*/
 		unscheduleAllWithMinPriority(minPriority: number): void;		
 		/**
 		!#en Checks whether a callback for a given target is scheduled.
-		!#zh æ£€æŸ¥æŒ‡å®šçš„å›è°ƒå‡½æ•°å’Œå›è°ƒå¯¹è±¡ç»„åˆæ˜¯å¦å­˜åœ¨å®šæ—¶å™¨ã€‚
+		!#zh æ£???¥æ??å®???????è°???½æ?°å?????è°?å¯¹è±¡ç»??????¯å?¦å????¨å????¶å?¨ã??
 		@param callback The callback to check.
 		@param target The target of the callback. 
 		*/
@@ -4504,8 +4504,8 @@ declare namespace cc {
 		Pause all selectors from all targets.<br/>
 		You should NEVER call this method, unless you know what you are doing.
 		!#zh
-		æš‚åœæ‰€æœ‰å¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨ã€‚<br/>
-		ä¸è¦è°ƒç”¨è¿™ä¸ªæ–¹æ³•ï¼Œé™¤éä½ çŸ¥é“ä½ æ­£åœ¨åšä»€ä¹ˆã€‚ 
+		????????????å¯¹è±¡?????????å®???¶å?¨ã??<br/>
+		ä¸?è¦?è°???¨è??ä¸ªæ?¹æ??ï¼???¤é??ä½???¥é??ä½?æ­???¨å??ä»?ä¹???? 
 		*/
 		pauseAllTargets(): void;		
 		/**
@@ -4513,8 +4513,8 @@ declare namespace cc {
 		Pause all selectors from all targets with a minimum priority. <br/>
 		You should only call this with kCCPriorityNonSystemMin or higher.
 		!#zh
-		æš‚åœæ‰€æœ‰ä¼˜å…ˆçº§çš„å€¼å¤§äºæŒ‡å®šä¼˜å…ˆçº§çš„å®šæ—¶å™¨ã€‚<br/>
-		ä½ åº”è¯¥åªæš‚åœä¼˜å…ˆçº§çš„å€¼å¤§äº PRIORITY_NON_SYSTEM_MIN çš„å®šæ—¶å™¨ã€‚
+		????????????ä¼????çº§ç????¼å¤§äº????å®?ä¼????çº§ç??å®???¶å?¨ã??<br/>
+		ä½?åº?è¯¥å?ªæ?????ä¼????çº§ç????¼å¤§äº? PRIORITY_NON_SYSTEM_MIN ???å®???¶å?¨ã??
 		@param minPriority minPriority 
 		*/
 		pauseAllTargetsWithMinPriority(minPriority: number): void;		
@@ -4523,8 +4523,8 @@ declare namespace cc {
 		Resume selectors on a set of targets.<br/>
 		This can be useful for undoing a call to pauseAllCallbacks.
 		!#zh
-		æ¢å¤æŒ‡å®šæ•°ç»„ä¸­æ‰€æœ‰å¯¹è±¡çš„å®šæ—¶å™¨ã€‚<br/>
-		è¿™ä¸ªå‡½æ•°æ˜¯ pauseAllCallbacks çš„é€†æ“ä½œã€‚
+		??¢å?????å®???°ç??ä¸­æ?????å¯¹è±¡???å®???¶å?¨ã??<br/>
+		è¿?ä¸ªå?½æ?°æ?? pauseAllCallbacks ?????????ä½????
 		@param targetsToResume targetsToResume 
 		*/
 		resumeTargets(targetsToResume: any[]): void;		
@@ -4534,9 +4534,9 @@ declare namespace cc {
 		All scheduled selectors/update for a given target won't be 'ticked' until the target is resumed.<br/>
 		If the target is not present, nothing happens.
 		!#zh
-		æš‚åœæŒ‡å®šå¯¹è±¡çš„å®šæ—¶å™¨ã€‚<br/>
-		æŒ‡å®šå¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨éƒ½ä¼šè¢«æš‚åœã€‚<br/>
-		å¦‚æœæŒ‡å®šçš„å¯¹è±¡æ²¡æœ‰å®šæ—¶å™¨ï¼Œä»€ä¹ˆä¹Ÿä¸ä¼šå‘ç”Ÿã€‚
+		?????????å®?å¯¹è±¡???å®???¶å?¨ã??<br/>
+		???å®?å¯¹è±¡?????????å®???¶å?¨é?½ä??è¢«æ????????<br/>
+		å¦???????å®????å¯¹è±¡æ²¡æ??å®???¶å?¨ï??ä»?ä¹?ä¹?ä¸?ä¼??????????
 		@param target target 
 		*/
 		pauseTarget(target: any): void;		
@@ -4546,86 +4546,86 @@ declare namespace cc {
 		The 'target' will be unpaused, so all schedule selectors/update will be 'ticked' again.<br/>
 		If the target is not present, nothing happens.
 		!#zh
-		æ¢å¤æŒ‡å®šå¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨ã€‚<br/>
-		æŒ‡å®šå¯¹è±¡çš„æ‰€æœ‰å®šæ—¶å™¨å°†ç»§ç»­å·¥ä½œã€‚<br/>
-		å¦‚æœæŒ‡å®šçš„å¯¹è±¡æ²¡æœ‰å®šæ—¶å™¨ï¼Œä»€ä¹ˆä¹Ÿä¸ä¼šå‘ç”Ÿã€‚
+		??¢å?????å®?å¯¹è±¡?????????å®???¶å?¨ã??<br/>
+		???å®?å¯¹è±¡?????????å®???¶å?¨å??ç»§ç»­å·¥ä?????<br/>
+		å¦???????å®????å¯¹è±¡æ²¡æ??å®???¶å?¨ï??ä»?ä¹?ä¹?ä¸?ä¼??????????
 		@param target target 
 		*/
 		resumeTarget(target: any): void;		
 		/**
 		!#en Returns whether or not the target is paused.
-		!#zh è¿”å›æŒ‡å®šå¯¹è±¡çš„å®šæ—¶å™¨æ˜¯å¦æš‚åœäº†ã€‚
+		!#zh è¿???????å®?å¯¹è±¡???å®???¶å?¨æ?¯å?¦æ?????äº????
 		@param target target 
 		*/
 		isTargetPaused(target: any): boolean;		
 		/** !#en Priority level reserved for system services.
-		!#zh ç³»ç»ŸæœåŠ¡çš„ä¼˜å…ˆçº§ã€‚ */
+		!#zh ç³»ç???????¡ç??ä¼????çº§ã?? */
 		static PRIORITY_SYSTEM: number;		
 		/** !#en Minimum priority level for user scheduling.
-		!#zh ç”¨æˆ·è°ƒåº¦æœ€ä½ä¼˜å…ˆçº§ã€‚ */
+		!#zh ??¨æ?·è??åº¦æ??ä½?ä¼????çº§ã?? */
 		static PRIORITY_NON_SYSTEM: number;	
 	}	
 	/** !#en cc.VideoPlayer is a component for playing videos, you can use it for showing videos in your game. Because different platforms have different authorization, API and control methods for VideoPlayer component. And have not yet formed a unified standard, only Web, iOS, and Android platforms are currently supported.
-	!#zh Video ç»„ä»¶ï¼Œç”¨äºåœ¨æ¸¸æˆä¸­æ’­æ”¾è§†é¢‘ã€‚ç”±äºä¸åŒå¹³å°å¯¹äº VideoPlayer ç»„ä»¶çš„æˆæƒã€APIã€æ§åˆ¶æ–¹å¼éƒ½ä¸åŒï¼Œè¿˜æ²¡æœ‰å½¢æˆç»Ÿä¸€çš„æ ‡å‡†ï¼Œæ‰€ä»¥ç›®å‰åªæ”¯æŒ Webã€iOS å’Œ Android å¹³å°ã€‚ */
+	!#zh Video ç»?ä»¶ï????¨ä????¨æ¸¸???ä¸­æ?­æ?¾è??é¢??????±ä??ä¸????å¹³å?°å¯¹äº? VideoPlayer ç»?ä»¶ç???????????API?????§å?¶æ?¹å????½ä?????ï¼?è¿?æ²¡æ??å½¢æ??ç»?ä¸??????????ï¼????ä»¥ç?®å????ªæ?¯æ?? Web???iOS ??? Android å¹³å?°ã?? */
 	export class VideoPlayer extends Component {		
 		/** !#en The resource type of videoplayer, REMOTE for remote url and LOCAL for local file path.
-		!#zh è§†é¢‘æ¥æºï¼šREMOTE è¡¨ç¤ºè¿œç¨‹è§†é¢‘ URLï¼ŒLOCAL è¡¨ç¤ºæœ¬åœ°è§†é¢‘åœ°å€ã€‚ */
+		!#zh è§?é¢???¥æ??ï¼?REMOTE è¡¨ç¤ºè¿?ç¨?è§?é¢? URLï¼?LOCAL è¡¨ç¤º??¬å?°è??é¢???°å????? */
 		resourceType: VideoPlayer.ResourceType;		
 		/** !#en The remote URL of video.
-		!#zh è¿œç¨‹è§†é¢‘çš„ URL */
+		!#zh è¿?ç¨?è§?é¢???? URL */
 		remoteURL: string;		
 		/** !#en The local video full path.
-		!#zh æœ¬åœ°è§†é¢‘çš„ URL */
+		!#zh ??¬å?°è??é¢???? URL */
 		clip: string;		
 		/** !#en The current playback time of the now playing item in seconds, you could also change the start playback time.
-		!#zh æŒ‡å®šè§†é¢‘ä»ä»€ä¹ˆæ—¶é—´ç‚¹å¼€å§‹æ’­æ”¾ï¼Œå•ä½æ˜¯ç§’ï¼Œä¹Ÿå¯ä»¥ç”¨æ¥è·å–å½“å‰è§†é¢‘æ’­æ”¾çš„æ—¶é—´è¿›åº¦ã€‚ */
+		!#zh ???å®?è§?é¢?ä»?ä»?ä¹???¶é?´ç?¹å??å§???­æ?¾ï?????ä½???¯ç??ï¼?ä¹???¯ä»¥??¨æ?¥è?·å??å½????è§?é¢???­æ?¾ç????¶é?´è??åº¦ã?? */
 		currentTime: number;		
 		/** !#en The volume of the video.
-		!#zh è§†é¢‘çš„éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ */
+		!#zh è§?é¢??????³é??ï¼?0.0 ~ 1.0ï¼? */
 		volume: number;		
 		/** !#en Mutes the VideoPlayer. Mute sets the volume=0, Un-Mute restore the original volume.
-		!#zh æ˜¯å¦é™éŸ³è§†é¢‘ã€‚é™éŸ³æ—¶è®¾ç½®éŸ³é‡ä¸º 0ï¼Œå–æ¶ˆé™éŸ³æ˜¯æ¢å¤åŸæ¥çš„éŸ³é‡ã€‚ */
+		!#zh ??¯å?¦é????³è??é¢?????????³æ?¶è®¾ç½®é?³é??ä¸? 0ï¼????æ¶??????³æ?¯æ?¢å???????¥ç????³é????? */
 		mute: boolean;		
 		/** !#en Whether keep the aspect ration of the original video.
-		!#zh æ˜¯å¦ä¿æŒè§†é¢‘åŸæ¥çš„å®½é«˜æ¯” */
+		!#zh ??¯å?¦ä?????è§?é¢??????¥ç??å®½é??æ¯? */
 		keepAspectRatio: boolean;		
 		/** !#en Whether play video in fullscreen mode.
-		!#zh æ˜¯å¦å…¨å±æ’­æ”¾è§†é¢‘ */
+		!#zh ??¯å?¦å?¨å????­æ?¾è??é¢? */
 		isFullscreen: boolean;		
 		/** !#en Always below the game view (only useful on Web. Note: The specific effects are not guaranteed to be consistent, depending on whether each browser supports or restricts).
-		!#zh æ°¸è¿œåœ¨æ¸¸æˆè§†å›¾æœ€åº•å±‚ï¼ˆè¿™ä¸ªå±æ€§åªæœ‰åœ¨ Web å¹³å°ä¸Šæœ‰æ•ˆæœã€‚æ³¨æ„ï¼šå…·ä½“æ•ˆæœæ— æ³•ä¿è¯ä¸€è‡´ï¼Œè·Ÿå„ä¸ªæµè§ˆå™¨æ˜¯å¦æ”¯æŒä¸é™åˆ¶æœ‰å…³ï¼‰ */
+		!#zh æ°¸è????¨æ¸¸???è§???¾æ??åº?å±?ï¼?è¿?ä¸ªå????§å?ªæ????? Web å¹³å?°ä??????????????æ³¨æ??ï¼???·ä???????????æ³?ä¿?è¯?ä¸???´ï??è·????ä¸ªæ??è§???¨æ?¯å?¦æ?¯æ??ä¸??????¶æ????³ï?? */
 		stayOnBottom: boolean;		
 		/** !#en the video player's callback, it will be triggered when certain event occurs, like: playing, paused, stopped and completed.
-		!#zh è§†é¢‘æ’­æ”¾å›è°ƒå‡½æ•°ï¼Œè¯¥å›è°ƒå‡½æ•°ä¼šåœ¨ç‰¹å®šæƒ…å†µè¢«è§¦å‘ï¼Œæ¯”å¦‚æ’­æ”¾ä¸­ï¼Œæš‚æ—¶ï¼Œåœæ­¢å’Œå®Œæˆæ’­æ”¾ã€‚ */
+		!#zh è§?é¢???­æ?¾å??è°???½æ?°ï??è¯¥å??è°???½æ?°ä????¨ç?¹å???????µè¢«è§¦å??ï¼?æ¯?å¦???­æ?¾ä¸­ï¼??????¶ï?????æ­¢å??å®??????­æ?¾ã?? */
 		videoPlayerEvent: Component.EventHandler[];		
 		/**
 		!#en If a video is paused, call this method could resume playing. If a video is stopped, call this method to play from scratch.
-		!#zh å¦‚æœè§†é¢‘è¢«æš‚åœæ’­æ”¾äº†ï¼Œè°ƒç”¨è¿™ä¸ªæ¥å£å¯ä»¥ç»§ç»­æ’­æ”¾ã€‚å¦‚æœè§†é¢‘è¢«åœæ­¢æ’­æ”¾äº†ï¼Œè°ƒç”¨è¿™ä¸ªæ¥å£å¯ä»¥ä»å¤´å¼€å§‹æ’­æ”¾ã€‚ 
+		!#zh å¦????è§?é¢?è¢«æ???????­æ?¾ä??ï¼?è°???¨è??ä¸ªæ?¥å????¯ä»¥ç»§ç»­??­æ?¾ã??å¦????è§?é¢?è¢«å??æ­¢æ?­æ?¾ä??ï¼?è°???¨è??ä¸ªæ?¥å????¯ä»¥ä»?å¤´å??å§???­æ?¾ã?? 
 		*/
 		play(): void;		
 		/**
 		!#en If a video is paused, call this method to resume playing.
-		!#zh å¦‚æœä¸€ä¸ªè§†é¢‘æ’­æ”¾è¢«æš‚åœæ’­æ”¾äº†ï¼Œè°ƒç”¨è¿™ä¸ªæ¥å£å¯ä»¥ç»§ç»­æ’­æ”¾ã€‚ 
+		!#zh å¦????ä¸?ä¸ªè??é¢???­æ?¾è¢«????????­æ?¾ä??ï¼?è°???¨è??ä¸ªæ?¥å????¯ä»¥ç»§ç»­??­æ?¾ã?? 
 		*/
 		resume(): void;		
 		/**
 		!#en If a video is playing, call this method to pause playing.
-		!#zh å¦‚æœä¸€ä¸ªè§†é¢‘æ­£åœ¨æ’­æ”¾ï¼Œè°ƒç”¨è¿™ä¸ªæ¥å£å¯ä»¥æš‚åœæ’­æ”¾ã€‚ 
+		!#zh å¦????ä¸?ä¸ªè??é¢?æ­???¨æ?­æ?¾ï??è°???¨è??ä¸ªæ?¥å????¯ä»¥????????­æ?¾ã?? 
 		*/
 		pause(): void;		
 		/**
 		!#en If a video is playing, call this method to stop playing immediately.
-		!#zh å¦‚æœä¸€ä¸ªè§†é¢‘æ­£åœ¨æ’­æ”¾ï¼Œè°ƒç”¨è¿™ä¸ªæ¥å£å¯ä»¥ç«‹é©¬åœæ­¢æ’­æ”¾ã€‚ 
+		!#zh å¦????ä¸?ä¸ªè??é¢?æ­???¨æ?­æ?¾ï??è°???¨è??ä¸ªæ?¥å????¯ä»¥ç«?é©¬å??æ­¢æ?­æ?¾ã?? 
 		*/
 		stop(): void;		
 		/**
 		!#en Gets the duration of the video
-		!#zh è·å–è§†é¢‘æ–‡ä»¶çš„æ’­æ”¾æ€»æ—¶é•¿ 
+		!#zh ??·å??è§?é¢????ä»¶ç????­æ?¾æ?»æ?¶é?? 
 		*/
 		getDuration(): number;		
 		/**
 		!#en Determine whether video is playing or not.
-		!#zh åˆ¤æ–­å½“å‰è§†é¢‘æ˜¯å¦å¤„äºæ’­æ”¾çŠ¶æ€ 
+		!#zh ??¤æ?­å?????è§?é¢???¯å?¦å??äº???­æ?¾ç?¶æ?? 
 		*/
 		isPlaying(): boolean;		
 		/**
@@ -4633,8 +4633,8 @@ declare namespace cc {
 		call the destroy method on this component or the associated node explicitly.
 		Otherwise, the created DOM element won't be removed from web page.
 		!#zh
-		å¦‚æœä½ ä¸å†ä½¿ç”¨ VideoPlayerï¼Œå¹¶ä¸”ç»„ä»¶æœªæ·»åŠ åˆ°åœºæ™¯ä¸­ï¼Œé‚£ä¹ˆä½ å¿…é¡»æ‰‹åŠ¨å¯¹ç»„ä»¶æˆ–æ‰€åœ¨èŠ‚ç‚¹è°ƒç”¨ destroyã€‚
-		è¿™æ ·æ‰èƒ½ç§»é™¤ç½‘é¡µä¸Šçš„ DOM èŠ‚ç‚¹ï¼Œé¿å… Web å¹³å°å†…å­˜æ³„éœ²ã€‚
+		å¦????ä½?ä¸????ä½¿ç?? VideoPlayerï¼?å¹¶ä??ç»?ä»¶æ?ªæ·»?????°å?ºæ?¯ä¸­ï¼????ä¹?ä½?å¿?é¡»æ????¨å¯¹ç»?ä»¶æ???????¨è????¹è????? destroy???
+		è¿???·æ????½ç§»??¤ç??é¡µä????? DOM ?????¹ï????¿å?? Web å¹³å?°å??å­?æ³???²ã??
 		
 		@example 
 		```js
@@ -4684,159 +4684,159 @@ declare namespace cc {
 	It is possible to customize any of the above mentioned properties in runtime. Example:   <br/> */
 	export class ParticleSystem extends RenderComponent implements BlendFunc {		
 		/** !#en Play particle in edit mode.
-		!#zh åœ¨ç¼–è¾‘å™¨æ¨¡å¼ä¸‹é¢„è§ˆç²’å­ï¼Œå¯ç”¨åé€‰ä¸­ç²’å­æ—¶ï¼Œç²’å­å°†è‡ªåŠ¨æ’­æ”¾ã€‚ */
+		!#zh ??¨ç??è¾???¨æ¨¡å¼?ä¸?é¢?è§?ç²?å­?ï¼???¯ç?¨å?????ä¸­ç??å­???¶ï??ç²?å­?å°???ªå?¨æ?­æ?¾ã?? */
 		preview: boolean;		
 		/** !#en
 		If set custom to true, then use custom properties insteadof read particle file.
-		!#zh æ˜¯å¦è‡ªå®šä¹‰ç²’å­å±æ€§ã€‚ */
+		!#zh ??¯å?¦è?ªå??ä¹?ç²?å­?å±???§ã?? */
 		custom: boolean;		
 		/** !#en The plist file.
-		!#zh plist æ ¼å¼çš„ç²’å­é…ç½®æ–‡ä»¶ã€‚ */
+		!#zh plist ??¼å?????ç²?å­????ç½®æ??ä»¶ã?? */
 		file: ParticleAsset;		
 		/** !#en SpriteFrame used for particles display
-		!#zh ç”¨äºç²’å­å‘ˆç°çš„ SpriteFrame */
+		!#zh ??¨ä??ç²?å­??????°ç?? SpriteFrame */
 		spriteFrame: SpriteFrame;		
-		/** !#en Texture of Particle System, readonly, please use spriteFrame to setup new textureã€‚
-		!#zh ç²’å­è´´å›¾ï¼Œåªè¯»å±æ€§ï¼Œè¯·ä½¿ç”¨ spriteFrame å±æ€§æ¥æ›¿æ¢è´´å›¾ã€‚ */
+		/** !#en Texture of Particle System, readonly, please use spriteFrame to setup new texture???
+		!#zh ç²?å­?è´´å?¾ï????ªè¯»å±???§ï??è¯·ä½¿??? spriteFrame å±???§æ?¥æ?¿æ?¢è´´??¾ã?? */
 		texture: string;		
 		/** !#en Current quantity of particles that are being simulated.
-		!#zh å½“å‰æ’­æ”¾çš„ç²’å­æ•°é‡ã€‚ */
+		!#zh å½??????­æ?¾ç??ç²?å­???°é????? */
 		particleCount: number;		
 		/** !#en Indicate whether the system simulation have stopped.
-		!#zh æŒ‡ç¤ºç²’å­æ’­æ”¾æ˜¯å¦å®Œæ¯•ã€‚ */
+		!#zh ???ç¤ºç??å­???­æ?¾æ?¯å?¦å??æ¯???? */
 		stopped: boolean;		
 		/** !#en If set to true, the particle system will automatically start playing on onLoad.
-		!#zh å¦‚æœè®¾ç½®ä¸º true è¿è¡Œæ—¶ä¼šè‡ªåŠ¨å‘å°„ç²’å­ã€‚ */
+		!#zh å¦????è®¾ç½®ä¸? true è¿?è¡???¶ä????ªå?¨å??å°?ç²?å­???? */
 		playOnLoad: boolean;		
 		/** !#en Indicate whether the owner node will be auto-removed when it has no particles left.
-		!#zh ç²’å­æ’­æ”¾å®Œæ¯•åè‡ªåŠ¨é”€æ¯æ‰€åœ¨çš„èŠ‚ç‚¹ã€‚ */
+		!#zh ç²?å­???­æ?¾å??æ¯??????ªå?¨é??æ¯??????¨ç???????¹ã?? */
 		autoRemoveOnFinish: boolean;		
 		/** !#en Indicate whether the particle system is activated.
-		!#zh æ˜¯å¦æ¿€æ´»ç²’å­ã€‚ */
+		!#zh ??¯å?¦æ??æ´»ç??å­???? */
 		active: boolean;		
 		/** !#en Maximum particles of the system.
-		!#zh ç²’å­æœ€å¤§æ•°é‡ã€‚ */
+		!#zh ç²?å­????å¤§æ?°é????? */
 		totalParticles: number;		
 		/** !#en How many seconds the emitter wil run. -1 means 'forever'.
-		!#zh å‘å°„å™¨ç”Ÿå­˜æ—¶é—´ï¼Œå•ä½ç§’ï¼Œ-1è¡¨ç¤ºæŒç»­å‘å°„ã€‚ */
+		!#zh ???å°???¨ç??å­???¶é?´ï?????ä½?ç§?ï¼?-1è¡¨ç¤º???ç»­å??å°???? */
 		duration: number;		
 		/** !#en Emission rate of the particles.
-		!#zh æ¯ç§’å‘å°„çš„ç²’å­æ•°ç›®ã€‚ */
+		!#zh æ¯?ç§????å°????ç²?å­???°ç?®ã?? */
 		emissionRate: number;		
 		/** !#en Life of each particle setter.
-		!#zh ç²’å­çš„è¿è¡Œæ—¶é—´ã€‚ */
+		!#zh ç²?å­????è¿?è¡???¶é?´ã?? */
 		life: number;		
 		/** !#en Variation of life.
-		!#zh ç²’å­çš„è¿è¡Œæ—¶é—´å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­????è¿?è¡???¶é?´å??????????´ã?? */
 		lifeVar: number;		
 		/** !#en Start color of each particle.
-		!#zh ç²’å­åˆå§‹é¢œè‰²ã€‚ */
+		!#zh ç²?å­????å§?é¢???²ã?? */
 		startColor: Color;		
 		/** !#en Variation of the start color.
-		!#zh ç²’å­åˆå§‹é¢œè‰²å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­????å§?é¢???²å??????????´ã?? */
 		startColorVar: Color;		
 		/** !#en Ending color of each particle.
-		!#zh ç²’å­ç»“æŸé¢œè‰²ã€‚ */
+		!#zh ç²?å­?ç»????é¢???²ã?? */
 		endColor: Color;		
 		/** !#en Variation of the end color.
-		!#zh ç²’å­ç»“æŸé¢œè‰²å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?ç»????é¢???²å??????????´ã?? */
 		endColorVar: Color;		
 		/** !#en Angle of each particle setter.
-		!#zh ç²’å­è§’åº¦ã€‚ */
+		!#zh ç²?å­?è§?åº¦ã?? */
 		angle: number;		
 		/** !#en Variation of angle of each particle setter.
-		!#zh ç²’å­è§’åº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?è§?åº¦å??????????´ã?? */
 		angleVar: number;		
 		/** !#en Start size in pixels of each particle.
-		!#zh ç²’å­çš„åˆå§‹å¤§å°ã€‚ */
+		!#zh ç²?å­???????å§?å¤§å????? */
 		startSize: number;		
 		/** !#en Variation of start size in pixels.
-		!#zh ç²’å­åˆå§‹å¤§å°çš„å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­????å§?å¤§å????????????????´ã?? */
 		startSizeVar: number;		
 		/** !#en End size in pixels of each particle.
-		!#zh ç²’å­ç»“æŸæ—¶çš„å¤§å°ã€‚ */
+		!#zh ç²?å­?ç»??????¶ç??å¤§å????? */
 		endSize: number;		
 		/** !#en Variation of end size in pixels.
-		!#zh ç²’å­ç»“æŸå¤§å°çš„å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?ç»????å¤§å????????????????´ã?? */
 		endSizeVar: number;		
 		/** !#en Start angle of each particle.
-		!#zh ç²’å­å¼€å§‹è‡ªæ—‹è§’åº¦ã€‚ */
+		!#zh ç²?å­?å¼?å§???ªæ??è§?åº¦ã?? */
 		startSpin: number;		
 		/** !#en Variation of start angle.
-		!#zh ç²’å­å¼€å§‹è‡ªæ—‹è§’åº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?å¼?å§???ªæ??è§?åº¦å??????????´ã?? */
 		startSpinVar: number;		
 		/** !#en End angle of each particle.
-		!#zh ç²’å­ç»“æŸè‡ªæ—‹è§’åº¦ã€‚ */
+		!#zh ç²?å­?ç»??????ªæ??è§?åº¦ã?? */
 		endSpin: number;		
 		/** !#en Variation of end angle.
-		!#zh ç²’å­ç»“æŸè‡ªæ—‹è§’åº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?ç»??????ªæ??è§?åº¦å??????????´ã?? */
 		endSpinVar: number;		
 		/** !#en Source position of the emitter.
-		!#zh å‘å°„å™¨ä½ç½®ã€‚ */
+		!#zh ???å°???¨ä??ç½®ã?? */
 		sourcePos: Vec2;		
 		/** !#en Variation of source position.
-		!#zh å‘å°„å™¨ä½ç½®çš„å˜åŒ–èŒƒå›´ã€‚ï¼ˆæ¨ªå‘å’Œçºµå‘ï¼‰ */
+		!#zh ???å°???¨ä??ç½®ç?????????????´ã??ï¼?æ¨ªå?????çºµå??ï¼? */
 		posVar: Vec2;		
 		/** !#en Particles movement type.
-		!#zh ç²’å­ä½ç½®ç±»å‹ã€‚ */
+		!#zh ç²?å­?ä½?ç½®ç±»?????? */
 		positionType: ParticleSystem.PositionType;		
 		/** !#en Particles emitter modes.
-		!#zh å‘å°„å™¨ç±»å‹ã€‚ */
+		!#zh ???å°???¨ç±»?????? */
 		emitterMode: ParticleSystem.EmitterMode;		
 		/** !#en Gravity of the emitter.
-		!#zh é‡åŠ›ã€‚ */
+		!#zh ????????? */
 		gravity: Vec2;		
 		/** !#en Speed of the emitter.
-		!#zh é€Ÿåº¦ã€‚ */
+		!#zh ???åº¦ã?? */
 		speed: number;		
 		/** !#en Variation of the speed.
-		!#zh é€Ÿåº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ???åº¦å??????????´ã?? */
 		speedVar: number;		
 		/** !#en Tangential acceleration of each particle. Only available in 'Gravity' mode.
-		!#zh æ¯ä¸ªç²’å­çš„åˆ‡å‘åŠ é€Ÿåº¦ï¼Œå³å‚ç›´äºé‡åŠ›æ–¹å‘çš„åŠ é€Ÿåº¦ï¼Œåªæœ‰åœ¨é‡åŠ›æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh æ¯?ä¸ªç??å­????????????????åº¦ï????³å????´ä??????????¹å???????????åº¦ï????ªæ????¨é?????æ¨¡å??ä¸???¯ç?¨ã?? */
 		tangentialAccel: number;		
 		/** !#en Variation of the tangential acceleration.
-		!#zh æ¯ä¸ªç²’å­çš„åˆ‡å‘åŠ é€Ÿåº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh æ¯?ä¸ªç??å­????????????????åº¦å??????????´ã?? */
 		tangentialAccelVar: number;		
 		/** !#en Acceleration of each particle. Only available in 'Gravity' mode.
-		!#zh ç²’å­å¾„å‘åŠ é€Ÿåº¦ï¼Œå³å¹³è¡Œäºé‡åŠ›æ–¹å‘çš„åŠ é€Ÿåº¦ï¼Œåªæœ‰åœ¨é‡åŠ›æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh ç²?å­?å¾??????????åº¦ï????³å¹³è¡?äº?????????¹å???????????åº¦ï????ªæ????¨é?????æ¨¡å??ä¸???¯ç?¨ã?? */
 		radialAccel: number;		
 		/** !#en Variation of the radial acceleration.
-		!#zh ç²’å­å¾„å‘åŠ é€Ÿåº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?å¾??????????åº¦å??????????´ã?? */
 		radialAccelVar: number;		
 		/** !#en Indicate whether the rotation of each particle equals to its direction. Only available in 'Gravity' mode.
-		!#zh æ¯ä¸ªç²’å­çš„æ—‹è½¬æ˜¯å¦ç­‰äºå…¶æ–¹å‘ï¼Œåªæœ‰åœ¨é‡åŠ›æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh æ¯?ä¸ªç??å­???????è½¬æ?¯å?¦ç??äº???¶æ?¹å??ï¼???ªæ????¨é?????æ¨¡å??ä¸???¯ç?¨ã?? */
 		rotationIsDir: boolean;		
 		/** !#en Starting radius of the particles. Only available in 'Radius' mode.
-		!#zh åˆå§‹åŠå¾„ï¼Œè¡¨ç¤ºç²’å­å‡ºç”Ÿæ—¶ç›¸å¯¹å‘å°„å™¨çš„è·ç¦»ï¼Œåªæœ‰åœ¨åŠå¾„æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh ???å§????å¾?ï¼?è¡¨ç¤ºç²?å­???ºç????¶ç?¸å¯¹???å°???¨ç??è·?ç¦»ï????ªæ????¨å??å¾?æ¨¡å??ä¸???¯ç?¨ã?? */
 		startRadius: number;		
 		/** !#en Variation of the starting radius.
-		!#zh åˆå§‹åŠå¾„å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ???å§????å¾????????????´ã?? */
 		startRadiusVar: number;		
 		/** !#en Ending radius of the particles. Only available in 'Radius' mode.
-		!#zh ç»“æŸåŠå¾„ï¼Œåªæœ‰åœ¨åŠå¾„æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh ç»???????å¾?ï¼???ªæ????¨å??å¾?æ¨¡å??ä¸???¯ç?¨ã?? */
 		endRadius: number;		
 		/** !#en Variation of the ending radius.
-		!#zh ç»“æŸåŠå¾„å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç»???????å¾????????????´ã?? */
 		endRadiusVar: number;		
 		/** !#en Number of degress to rotate a particle around the source pos per second. Only available in 'Radius' mode.
-		!#zh ç²’å­æ¯ç§’å›´ç»•èµ·å§‹ç‚¹çš„æ—‹è½¬è§’åº¦ï¼Œåªæœ‰åœ¨åŠå¾„æ¨¡å¼ä¸‹å¯ç”¨ã€‚ */
+		!#zh ç²?å­?æ¯?ç§???´ç??èµ·å????¹ç?????è½¬è??åº¦ï????ªæ????¨å??å¾?æ¨¡å??ä¸???¯ç?¨ã?? */
 		rotatePerS: number;		
 		/** !#en Variation of the degress to rotate a particle around the source pos per second.
-		!#zh ç²’å­æ¯ç§’å›´ç»•èµ·å§‹ç‚¹çš„æ—‹è½¬è§’åº¦å˜åŒ–èŒƒå›´ã€‚ */
+		!#zh ç²?å­?æ¯?ç§???´ç??èµ·å????¹ç?????è½¬è??åº¦å??????????´ã?? */
 		rotatePerSVar: number;		
 		/** !#en The Particle emitter lives forever.
-		!#zh è¡¨ç¤ºå‘å°„å™¨æ°¸ä¹…å­˜åœ¨ */
+		!#zh è¡¨ç¤º???å°???¨æ°¸ä¹?å­???? */
 		static DURATION_INFINITY: number;		
 		/** !#en The starting size of the particle is equal to the ending size.
-		!#zh è¡¨ç¤ºç²’å­çš„èµ·å§‹å¤§å°ç­‰äºç»“æŸå¤§å°ã€‚ */
+		!#zh è¡¨ç¤ºç²?å­????èµ·å??å¤§å??ç­?äº?ç»????å¤§å????? */
 		static START_SIZE_EQUAL_TO_END_SIZE: number;		
 		/** !#en The starting radius of the particle is equal to the ending radius.
-		!#zh è¡¨ç¤ºç²’å­çš„èµ·å§‹åŠå¾„ç­‰äºç»“æŸåŠå¾„ã€‚ */
+		!#zh è¡¨ç¤ºç²?å­????èµ·å?????å¾?ç­?äº?ç»???????å¾???? */
 		static START_RADIUS_EQUAL_TO_END_RADIUS: number;		
 		/**
 		!#en Stop emitting particles. Running particles will continue to run until they die.
-		!#zh åœæ­¢å‘å°„å™¨å‘å°„ç²’å­ï¼Œå‘å°„å‡ºå»çš„ç²’å­å°†ç»§ç»­è¿è¡Œï¼Œç›´è‡³ç²’å­ç”Ÿå‘½ç»“æŸã€‚
+		!#zh ???æ­¢å??å°???¨å??å°?ç²?å­?ï¼????å°???ºå?»ç??ç²?å­?å°?ç»§ç»­è¿?è¡?ï¼???´è?³ç??å­??????½ç????????
 		
 		@example 
 		```js
@@ -4847,7 +4847,7 @@ declare namespace cc {
 		stopSystem(): void;		
 		/**
 		!#en Kill all living particles.
-		!#zh æ€æ­»æ‰€æœ‰å­˜åœ¨çš„ç²’å­ï¼Œç„¶åé‡æ–°å¯åŠ¨ç²’å­å‘å°„å™¨ã€‚
+		!#zh ???æ­»æ?????å­???¨ç??ç²?å­?ï¼???¶å???????°å?¯å?¨ç??å­????å°???¨ã??
 		
 		@example 
 		```js
@@ -4858,23 +4858,23 @@ declare namespace cc {
 		resetSystem(): void;		
 		/**
 		!#en Whether or not the system is full.
-		!#zh å‘å°„å™¨ä¸­ç²’å­æ˜¯å¦å¤§äºç­‰äºè®¾ç½®çš„æ€»ç²’å­æ•°é‡ã€‚ 
+		!#zh ???å°???¨ä¸­ç²?å­???¯å?¦å¤§äº?ç­?äº?è®¾ç½®?????»ç??å­???°é????? 
 		*/
 		isFull(): boolean;		
 		/**
 		!#en Sets a new texture with a rect. The rect is in texture position and size.
 		Please use spriteFrame property instead, this function is deprecated since v1.9
-		!#zh è®¾ç½®ä¸€å¼ æ–°è´´å›¾å’Œå…³è”çš„çŸ©å½¢ã€‚
-		è¯·ç›´æ¥è®¾ç½® spriteFrame å±æ€§ï¼Œè¿™ä¸ªå‡½æ•°ä» v1.9 ç‰ˆæœ¬å¼€å§‹å·²ç»è¢«åºŸå¼ƒ
+		!#zh è®¾ç½®ä¸?å¼???°è´´??¾å????³è???????©å½¢???
+		è¯·ç?´æ?¥è®¾ç½? spriteFrame å±???§ï??è¿?ä¸ªå?½æ?°ä?? v1.9 ?????¬å??å§?å·²ç??è¢«å??å¼?
 		@param texture texture
 		@param rect rect 
 		*/
 		setTextureWithRect(texture: Texture2D, rect: Rect): void;		
 		/** !#en specify the source Blend Factor, this will generate a custom material object, please pay attention to the memory cost.
-		!#zh æŒ‡å®šåŸå›¾çš„æ··åˆæ¨¡å¼ï¼Œè¿™ä¼šå…‹éš†ä¸€ä¸ªæ–°çš„æè´¨å¯¹è±¡ï¼Œæ³¨æ„è¿™å¸¦æ¥çš„å¼€é”€ */
+		!#zh ???å®??????¾ç??æ··å??æ¨¡å??ï¼?è¿?ä¼???????ä¸?ä¸ªæ?°ç?????è´¨å¯¹è±¡ï??æ³¨æ??è¿?å¸¦æ?¥ç??å¼???? */
 		srcBlendFactor: macro.BlendFactor;		
 		/** !#en specify the destination Blend Factor.
-		!#zh æŒ‡å®šç›®æ ‡çš„æ··åˆæ¨¡å¼ */
+		!#zh ???å®???®æ?????æ··å??æ¨¡å?? */
 		dstBlendFactor: macro.BlendFactor;	
 	}	
 	/** cc.TMXLayerInfo contains the information about the layers like:
@@ -4965,35 +4965,35 @@ declare namespace cc {
 		static ATTRIB_ZLIB: number;	
 	}	
 	/** !#en Render the TMX layer.
-	!#zh æ¸²æŸ“ TMX layerã€‚ */
+	!#zh æ¸²æ?? TMX layer??? */
 	export class TiledLayer extends Component {		
 		/**
 		!#en enable or disable culling
-		!#zh å¼€å¯æˆ–å…³é—­è£å‰ªã€‚
+		!#zh å¼???¯æ????³é?­è????ªã??
 		@param value value 
 		*/
 		enableCulling(value: any): void;		
 		/**
 		!#en Adds user's node into layer.
-		!#zh æ·»åŠ ç”¨æˆ·èŠ‚ç‚¹ã€‚
+		!#zh æ·»å????¨æ?·è????¹ã??
 		@param node node 
 		*/
 		addUserNode(node: Node): boolean;		
 		/**
 		!#en Removes user's node.
-		!#zh ç§»é™¤ç”¨æˆ·èŠ‚ç‚¹ã€‚
+		!#zh ç§»é?¤ç?¨æ?·è????¹ã??
 		@param node node 
 		*/
 		removeUserNode(node: Node): boolean;		
 		/**
 		!#en Destroy user's node.
-		!#zh é”€æ¯ç”¨æˆ·èŠ‚ç‚¹ã€‚
+		!#zh ???æ¯???¨æ?·è????¹ã??
 		@param node node 
 		*/
 		destroyUserNode(node: Node): void;		
 		/**
 		!#en Gets the layer name.
-		!#zh è·å–å±‚çš„åç§°ã€‚
+		!#zh ??·å??å±???????ç§°ã??
 		
 		@example 
 		```js
@@ -5004,7 +5004,7 @@ declare namespace cc {
 		getLayerName(): string;		
 		/**
 		!#en Set the layer name.
-		!#zh è®¾ç½®å±‚çš„åç§°
+		!#zh è®¾ç½®å±???????ç§?
 		@param layerName layerName
 		
 		@example 
@@ -5015,7 +5015,7 @@ declare namespace cc {
 		SetLayerName(layerName: string): void;		
 		/**
 		!#en Return the value for the specific property name.
-		!#zh è·å–æŒ‡å®šå±æ€§åçš„å€¼ã€‚
+		!#zh ??·å?????å®?å±???§å???????¼ã??
 		@param propertyName propertyName
 		
 		@example 
@@ -5027,7 +5027,7 @@ declare namespace cc {
 		getProperty(propertyName: string): any;		
 		/**
 		!#en Returns the position in pixels of a given tile coordinate.
-		!#zh è·å–æŒ‡å®š tile çš„åƒç´ åæ ‡ã€‚
+		!#zh ??·å?????å®? tile ??????ç´??????????
 		@param pos position or x
 		@param y y
 		
@@ -5044,7 +5044,7 @@ declare namespace cc {
 		!#en
 		Sets the tiles gid (gid = tile global id) at a given tiles rect.
 		!#zh
-		è®¾ç½®ç»™å®šåŒºåŸŸçš„ tile çš„ gid (gid = tile å…¨å±€ id)ï¼Œ
+		è®¾ç½®ç»?å®???ºå????? tile ??? gid (gid = tile ??¨å?? id)ï¼?
 		@param gids an array contains gid
 		@param beginCol begin col number
 		@param beginRow begin row number
@@ -5062,9 +5062,9 @@ declare namespace cc {
 		The Tile GID can be obtained by using the method "tileGIDAt" or by using the TMX editor . Tileset Mgr +1.<br />
 		If a tile is already placed at that position, then it will be removed.
 		!#zh
-		è®¾ç½®ç»™å®šåæ ‡çš„ tile çš„ gid (gid = tile å…¨å±€ id)ï¼Œ
-		tile çš„ GID å¯ä»¥ä½¿ç”¨æ–¹æ³• â€œtileGIDAtâ€ æ¥è·å¾—ã€‚<br />
-		å¦‚æœä¸€ä¸ª tile å·²ç»æ”¾åœ¨é‚£ä¸ªä½ç½®ï¼Œé‚£ä¹ˆå®ƒå°†è¢«åˆ é™¤ã€‚
+		è®¾ç½®ç»?å®?????????? tile ??? gid (gid = tile ??¨å?? id)ï¼?
+		tile ??? GID ??¯ä»¥ä½¿ç?¨æ?¹æ?? ???tileGIDAt??? ??¥è?·å?????<br />
+		å¦????ä¸?ä¸? tile å·²ç????¾å?¨é??ä¸ªä??ç½®ï?????ä¹?å®?å°?è¢«å????¤ã??
 		@param gid gid
 		@param posOrX position or x
 		@param flagsOrY flags or y
@@ -5080,7 +5080,7 @@ declare namespace cc {
 		!#en
 		Returns the tiles data.An array fill with GIDs. <br />
 		!#zh
-		è¿”å› tiles æ•°æ®. ç”±GIDæ„æˆçš„ä¸€ä¸ªæ•°ç»„. <br /> 
+		è¿???? tiles ??°æ??. ??±GID?????????ä¸?ä¸ªæ?°ç??. <br /> 
 		*/
 		getTiles(): number[];		
 		/**
@@ -5088,8 +5088,8 @@ declare namespace cc {
 		Returns the tile gid at a given tile coordinate. <br />
 		if it returns 0, it means that the tile is empty. <br />
 		!#zh
-		é€šè¿‡ç»™å®šçš„ tile åæ ‡ã€flagsï¼ˆå¯é€‰ï¼‰è¿”å› tile çš„ GID. <br />
-		å¦‚æœå®ƒè¿”å› 0ï¼Œåˆ™è¡¨ç¤ºè¯¥ tile ä¸ºç©ºã€‚<br />
+		???è¿?ç»?å®???? tile ?????????flagsï¼???¯é??ï¼?è¿???? tile ??? GID. <br />
+		å¦????å®?è¿???? 0ï¼????è¡¨ç¤ºè¯? tile ä¸ºç©º???<br />
 		@param pos or x
 		@param y y
 		
@@ -5101,7 +5101,7 @@ declare namespace cc {
 		getTileGIDAt(pos: Vec2|number, y?: number): number;		
 		/**
 		!#en Layer orientation, which is the same as the map orientation.
-		!#zh è·å– Layer æ–¹å‘(åŒåœ°å›¾æ–¹å‘)ã€‚
+		!#zh ??·å?? Layer ??¹å??(?????°å?¾æ?¹å??)???
 		
 		@example 
 		```js
@@ -5112,7 +5112,7 @@ declare namespace cc {
 		getLayerOrientation(): number;		
 		/**
 		!#en properties from the layer. They can be added using Tiled.
-		!#zh è·å– layer çš„å±æ€§ï¼Œå¯ä»¥ä½¿ç”¨ Tiled ç¼–è¾‘å™¨æ·»åŠ å±æ€§ã€‚
+		!#zh ??·å?? layer ???å±???§ï????¯ä»¥ä½¿ç?? Tiled ç¼?è¾???¨æ·»???å±???§ã??
 		
 		@example 
 		```js
@@ -5128,9 +5128,9 @@ declare namespace cc {
 		then will create a new TiledTile at the coordinate.
 		The renderer will render the tile with the rotation, scale, position and color property of the TiledTile.
 		!#zh
-		é€šè¿‡æŒ‡å®šçš„ tile åæ ‡è·å–å¯¹åº”çš„ TiledTileã€‚ <br/>
-		å¦‚æœæŒ‡å®šçš„åæ ‡æ²¡æœ‰ tileï¼Œå¹¶ä¸”è®¾ç½®äº† forceCreate é‚£ä¹ˆå°†ä¼šåœ¨æŒ‡å®šçš„åæ ‡åˆ›å»ºä¸€ä¸ªæ–°çš„ TiledTile ã€‚<br/>
-		åœ¨æ¸²æŸ“è¿™ä¸ª tile çš„æ—¶å€™ï¼Œå°†ä¼šä½¿ç”¨ TiledTile çš„èŠ‚ç‚¹çš„æ—‹è½¬ã€ç¼©æ”¾ã€ä½ç§»ã€é¢œè‰²å±æ€§ã€‚<br/>
+		???è¿????å®???? tile ????????·å??å¯¹å????? TiledTile??? <br/>
+		å¦???????å®??????????æ²¡æ?? tileï¼?å¹¶ä??è®¾ç½®äº? forceCreate ???ä¹?å°?ä¼???¨æ??å®?????????????å»ºä??ä¸ªæ?°ç?? TiledTile ???<br/>
+		??¨æ¸²???è¿?ä¸? tile ?????¶å??ï¼?å°?ä¼?ä½¿ç?? TiledTile ????????¹ç?????è½¬ã??ç¼©æ?¾ã??ä½?ç§»ã??é¢???²å????§ã??<br/>
 		@param x x
 		@param y y
 		@param forceCreate forceCreate
@@ -5146,7 +5146,7 @@ declare namespace cc {
 		!#en
 		Change tile to TiledTile at the specified coordinate.
 		!#zh
-		å°†æŒ‡å®šçš„ tile åæ ‡æ›¿æ¢ä¸ºæŒ‡å®šçš„ TiledTileã€‚
+		å°????å®???? tile ????????¿æ?¢ä¸º???å®???? TiledTile???
 		@param x x
 		@param y y
 		@param tiledTile tiledTile 
@@ -5154,30 +5154,30 @@ declare namespace cc {
 		setTiledTileAt(x: number, y: number, tiledTile: TiledTile): TiledTile;		
 		/**
 		!#en Return texture.
-		!#zh è·å–çº¹ç†ã€‚
+		!#zh ??·å??çº¹ç?????
 		@param index The index of textures 
 		*/
 		getTexture(index: any): Texture2D;		
 		/**
 		!#en Return texture.
-		!#zh è·å–çº¹ç†ã€‚ 
+		!#zh ??·å??çº¹ç????? 
 		*/
 		getTextures(): Texture2D;		
 		/**
 		!#en Set the texture.
-		!#zh è®¾ç½®çº¹ç†ã€‚
+		!#zh è®¾ç½®çº¹ç?????
 		@param texture texture 
 		*/
 		setTexture(texture: Texture2D): void;		
 		/**
 		!#en Set the texture.
-		!#zh è®¾ç½®çº¹ç†ã€‚
+		!#zh è®¾ç½®çº¹ç?????
 		@param textures textures 
 		*/
 		setTexture(textures: Texture2D): void;		
 		/**
 		!#en Gets layer size.
-		!#zh è·å¾—å±‚å¤§å°ã€‚
+		!#zh ??·å??å±?å¤§å?????
 		
 		@example 
 		```js
@@ -5188,7 +5188,7 @@ declare namespace cc {
 		getLayerSize(): Size;		
 		/**
 		!#en Size of the map's tile (could be different from the tile's size).
-		!#zh è·å– tile çš„å¤§å°( tile çš„å¤§å°å¯èƒ½ä¼šæœ‰æ‰€ä¸åŒ)ã€‚
+		!#zh ??·å?? tile ???å¤§å??( tile ???å¤§å????¯è?½ä????????ä¸????)???
 		
 		@example 
 		```js
@@ -5199,37 +5199,37 @@ declare namespace cc {
 		getMapTileSize(): Size;		
 		/**
 		!#en Gets Tile set first information for the layer.
-		!#zh è·å– layer ç´¢å¼•ä½ç½®ä¸º0çš„ Tileset ä¿¡æ¯ã€‚
+		!#zh ??·å?? layer ç´¢å??ä½?ç½®ä¸º0??? Tileset ä¿¡æ?¯ã??
 		@param index The index of tilesets 
 		*/
 		getTileSet(index: any): TMXTilesetInfo;		
 		/**
 		!#en Gets tile set all information for the layer.
-		!#zh è·å– layer æ‰€æœ‰çš„ Tileset ä¿¡æ¯ã€‚ 
+		!#zh ??·å?? layer ????????? Tileset ä¿¡æ?¯ã?? 
 		*/
 		getTileSet(): TMXTilesetInfo;		
 		/**
 		!#en Sets tile set information for the layer.
-		!#zh è®¾ç½® layer çš„ tileset ä¿¡æ¯ã€‚
+		!#zh è®¾ç½® layer ??? tileset ä¿¡æ?¯ã??
 		@param tileset tileset 
 		*/
 		setTileSet(tileset: TMXTilesetInfo): void;		
 		/**
 		!#en Sets Tile set information for the layer.
-		!#zh è®¾ç½® layer çš„ Tileset ä¿¡æ¯ã€‚
+		!#zh è®¾ç½® layer ??? Tileset ä¿¡æ?¯ã??
 		@param tilesets tilesets 
 		*/
 		setTileSets(tilesets: TMXTilesetInfo): void;	
 	}	
 	/** !#en Renders a TMX Tile Map in the scene.
-	!#zh åœ¨åœºæ™¯ä¸­æ¸²æŸ“ä¸€ä¸ª tmx æ ¼å¼çš„ Tile Mapã€‚ */
+	!#zh ??¨å?ºæ?¯ä¸­æ¸²æ??ä¸?ä¸? tmx ??¼å????? Tile Map??? */
 	export class TiledMap extends Component {		
 		/** !#en The TiledMap Asset.
-		!#zh TiledMap èµ„æºã€‚ */
+		!#zh TiledMap èµ?æº???? */
 		tmxAsset: TiledMapAsset;		
 		/**
 		!#en Gets the map size.
-		!#zh è·å–åœ°å›¾å¤§å°ã€‚
+		!#zh ??·å????°å?¾å¤§å°????
 		
 		@example 
 		```js
@@ -5240,7 +5240,7 @@ declare namespace cc {
 		getMapSize(): Size;		
 		/**
 		!#en Gets the tile size.
-		!#zh è·å–åœ°å›¾èƒŒæ™¯ä¸­ tile å…ƒç´ çš„å¤§å°ã€‚
+		!#zh ??·å????°å?¾è????¯ä¸­ tile ???ç´????å¤§å?????
 		
 		@example 
 		```js
@@ -5251,7 +5251,7 @@ declare namespace cc {
 		getTileSize(): Size;		
 		/**
 		!#en map orientation.
-		!#zh è·å–åœ°å›¾æ–¹å‘ã€‚
+		!#zh ??·å????°å?¾æ?¹å?????
 		
 		@example 
 		```js
@@ -5262,7 +5262,7 @@ declare namespace cc {
 		getMapOrientation(): number;		
 		/**
 		!#en object groups.
-		!#zh è·å–æ‰€æœ‰çš„å¯¹è±¡å±‚ã€‚
+		!#zh ??·å???????????å¯¹è±¡å±????
 		
 		@example 
 		```js
@@ -5275,7 +5275,7 @@ declare namespace cc {
 		getObjectGroups(): TiledObjectGroup[];		
 		/**
 		!#en Return the TMXObjectGroup for the specific group.
-		!#zh è·å–æŒ‡å®šçš„ TMXObjectGroupã€‚
+		!#zh ??·å?????å®???? TMXObjectGroup???
 		@param groupName groupName
 		
 		@example 
@@ -5287,13 +5287,13 @@ declare namespace cc {
 		getObjectGroup(groupName: string): TiledObjectGroup;		
 		/**
 		!#en enable or disable culling
-		!#zh å¼€å¯æˆ–å…³é—­è£å‰ªã€‚
+		!#zh å¼???¯æ????³é?­è????ªã??
 		@param value value 
 		*/
 		enableCulling(value: any): void;		
 		/**
 		!#en Gets the map properties.
-		!#zh è·å–åœ°å›¾çš„å±æ€§ã€‚
+		!#zh ??·å????°å?¾ç??å±???§ã??
 		
 		@example 
 		```js
@@ -5306,7 +5306,7 @@ declare namespace cc {
 		getProperties(): any[];		
 		/**
 		!#en Return All layers array.
-		!#zh è¿”å›åŒ…å«æ‰€æœ‰ layer çš„æ•°ç»„ã€‚
+		!#zh è¿?????????«æ????? layer ?????°ç?????
 		
 		@example 
 		```js
@@ -5319,7 +5319,7 @@ declare namespace cc {
 		getLayers(): TiledLayer[];		
 		/**
 		!#en return the cc.TiledLayer for the specific layer.
-		!#zh è·å–æŒ‡å®šåç§°çš„ layerã€‚
+		!#zh ??·å?????å®????ç§°ç?? layer???
 		@param layerName layerName
 		
 		@example 
@@ -5331,7 +5331,7 @@ declare namespace cc {
 		getLayer(layerName: string): TiledLayer;		
 		/**
 		!#en Return the value for the specific property name.
-		!#zh é€šè¿‡å±æ€§åç§°ï¼Œè·å–æŒ‡å®šçš„å±æ€§ã€‚
+		!#zh ???è¿?å±???§å??ç§°ï????·å?????å®????å±???§ã??
 		@param propertyName propertyName
 		
 		@example 
@@ -5343,7 +5343,7 @@ declare namespace cc {
 		getProperty(propertyName: string): string;		
 		/**
 		!#en Return properties dictionary for tile GID.
-		!#zh é€šè¿‡ GID ï¼Œè·å–æŒ‡å®šçš„å±æ€§ã€‚
+		!#zh ???è¿? GID ï¼???·å?????å®????å±???§ã??
 		@param GID GID
 		
 		@example 
@@ -5363,11 +5363,11 @@ declare namespace cc {
 		imageLayerTextureNames: string[];	
 	}	
 	/** !#en Renders the TMX object group.
-	!#zh æ¸²æŸ“ tmx object groupã€‚ */
+	!#zh æ¸²æ?? tmx object group??? */
 	export class TiledObjectGroup extends Component {		
 		/**
 		!#en Offset position of child objects.
-		!#zh è·å–å­å¯¹è±¡çš„åç§»ä½ç½®ã€‚
+		!#zh ??·å??å­?å¯¹è±¡??????ç§»ä??ç½®ã??
 		
 		@example 
 		```js
@@ -5377,7 +5377,7 @@ declare namespace cc {
 		getPositionOffset(): Vec2;		
 		/**
 		!#en List of properties stored in a dictionary.
-		!#zh ä»¥æ˜ å°„çš„å½¢å¼è·å–å±æ€§åˆ—è¡¨ã€‚
+		!#zh ä»¥æ??å°????å½¢å????·å??å±???§å??è¡¨ã??
 		
 		@example 
 		```js
@@ -5387,7 +5387,7 @@ declare namespace cc {
 		getProperties(): any;		
 		/**
 		!#en Gets the Group name.
-		!#zh è·å–ç»„åç§°ã€‚
+		!#zh ??·å??ç»????ç§°ã??
 		
 		@example 
 		```js
@@ -5399,7 +5399,7 @@ declare namespace cc {
 		!#en
 		Return the object for the specific object name. <br />
 		It will return the 1st object found on the array for the given name.
-		!#zh è·å–æŒ‡å®šçš„å¯¹è±¡ã€‚
+		!#zh ??·å?????å®????å¯¹è±¡???
 		@param objectName objectName
 		
 		@example 
@@ -5410,7 +5410,7 @@ declare namespace cc {
 		getObject(objectName: string): any;		
 		/**
 		!#en Gets the objects.
-		!#zh è·å–å¯¹è±¡æ•°ç»„ã€‚
+		!#zh ??·å??å¯¹è±¡??°ç?????
 		
 		@example 
 		```js
@@ -5422,27 +5422,27 @@ declare namespace cc {
 	/** !#en TiledTile can control the specified map tile.
 	It will apply the node rotation, scale, translate to the map tile.
 	You can change the TiledTile's gid to change the map tile's style.
-	!#zh TiledTile å¯ä»¥å•ç‹¬å¯¹æŸä¸€ä¸ªåœ°å›¾å—è¿›è¡Œæ“ä½œã€‚
-	ä»–ä¼šå°†èŠ‚ç‚¹çš„æ—‹è½¬ï¼Œç¼©æ”¾ï¼Œå¹³ç§»æ“ä½œåº”ç”¨åœ¨è¿™ä¸ªåœ°å›¾å—ä¸Šï¼Œå¹¶å¯ä»¥é€šè¿‡æ›´æ¢å½“å‰åœ°å›¾å—çš„ gid æ¥æ›´æ¢åœ°å›¾å—çš„æ˜¾ç¤ºæ ·å¼ã€‚ */
+	!#zh TiledTile ??¯ä»¥?????¬å¯¹???ä¸?ä¸ªå?°å?¾å??è¿?è¡????ä½????
+	ä»?ä¼?å°??????¹ç?????è½¬ï??ç¼©æ?¾ï??å¹³ç§»???ä½?åº???¨å?¨è??ä¸ªå?°å?¾å??ä¸?ï¼?å¹¶å?¯ä»¥???è¿???´æ?¢å???????°å?¾å????? gid ??¥æ?´æ?¢å?°å?¾å???????¾ç¤º??·å????? */
 	export class TiledTile extends Component {		
-		/** !#en Specify the TiledTile horizontal coordinateï¼Œuse map tile as the unit.
-		!#zh æŒ‡å®š TiledTile çš„æ¨ªå‘åæ ‡ï¼Œä»¥åœ°å›¾å—ä¸ºå•ä½ */
+		/** !#en Specify the TiledTile horizontal coordinateï¼?use map tile as the unit.
+		!#zh ???å®? TiledTile ???æ¨ªå????????ï¼?ä»¥å?°å?¾å??ä¸ºå??ä½? */
 		x: number;		
-		/** !#en Specify the TiledTile vertical coordinateï¼Œuse map tile as the unit.
-		!#zh æŒ‡å®š TiledTile çš„çºµå‘åæ ‡ï¼Œä»¥åœ°å›¾å—ä¸ºå•ä½ */
+		/** !#en Specify the TiledTile vertical coordinateï¼?use map tile as the unit.
+		!#zh ???å®? TiledTile ???çºµå????????ï¼?ä»¥å?°å?¾å??ä¸ºå??ä½? */
 		y: number;		
 		/** !#en Specify the TiledTile gid.
-		!#zh æŒ‡å®š TiledTile çš„ gid å€¼ */
+		!#zh ???å®? TiledTile ??? gid ??? */
 		gid: number;	
 	}	
 	/** !#en cc.WebView is a component for display web pages in the game. Because different platforms have different authorization, API and control methods for WebView component. And have not yet formed a unified standard, only Web, iOS, and Android platforms are currently supported.
-	!#zh WebView ç»„ä»¶ï¼Œç”¨äºåœ¨æ¸¸æˆä¸­æ˜¾ç¤ºç½‘é¡µã€‚ç”±äºä¸åŒå¹³å°å¯¹äº WebView ç»„ä»¶çš„æˆæƒã€APIã€æ§åˆ¶æ–¹å¼éƒ½ä¸åŒï¼Œè¿˜æ²¡æœ‰å½¢æˆç»Ÿä¸€çš„æ ‡å‡†ï¼Œæ‰€ä»¥ç›®å‰åªæ”¯æŒ Webã€iOS å’Œ Android å¹³å°ã€‚ */
+	!#zh WebView ç»?ä»¶ï????¨ä????¨æ¸¸???ä¸­æ?¾ç¤ºç½?é¡µã????±ä??ä¸????å¹³å?°å¯¹äº? WebView ç»?ä»¶ç???????????API?????§å?¶æ?¹å????½ä?????ï¼?è¿?æ²¡æ??å½¢æ??ç»?ä¸??????????ï¼????ä»¥ç?®å????ªæ?¯æ?? Web???iOS ??? Android å¹³å?°ã?? */
 	export class WebView extends Component {		
 		/** !#en A given URL to be loaded by the WebView, it should have a http or https prefix.
-		!#zh æŒ‡å®š WebView åŠ è½½çš„ç½‘å€ï¼Œå®ƒåº”è¯¥æ˜¯ä¸€ä¸ª http æˆ–è€… https å¼€å¤´çš„å­—ç¬¦ä¸² */
+		!#zh ???å®? WebView ???è½½ç??ç½????ï¼?å®?åº?è¯¥æ?¯ä??ä¸? http ?????? https å¼?å¤´ç??å­?ç¬¦ä¸² */
 		url: string;		
 		/** !#en The webview's event callback , it will be triggered when certain webview event occurs.
-		!#zh WebView çš„å›è°ƒäº‹ä»¶ï¼Œå½“ç½‘é¡µåŠ è½½è¿‡ç¨‹ä¸­ï¼ŒåŠ è½½å®Œæˆåæˆ–è€…åŠ è½½å‡ºé”™æ—¶éƒ½ä¼šå›è°ƒæ­¤å‡½æ•° */
+		!#zh WebView ??????è°?äº?ä»¶ï??å½?ç½?é¡µå??è½½è??ç¨?ä¸­ï?????è½½å?????????????????è½½å?ºé????¶é?½ä?????è°?æ­¤å?½æ?? */
 		webviewLoadedEvents: Component.EventHandler[];		
 		/**
 		!#en
@@ -5450,9 +5450,9 @@ declare namespace cc {
 		Note: Supports only on the Android and iOS. For HTML5, please refer to the official documentation.<br/>
 		Please refer to the official documentation for more details.
 		!#zh
-		è®¾ç½® JavaScript æ¥å£æ–¹æ¡ˆï¼ˆä¸ 'setOnJSCallback' é…å¥—ä½¿ç”¨ï¼‰ã€‚<br/>
-		æ³¨æ„ï¼šåªæ”¯æŒ Android å’Œ iOS ï¼ŒWeb ç«¯ç”¨æ³•è¯·å‰å¾€å®˜æ–¹æ–‡æ¡£æŸ¥çœ‹ã€‚<br/>
-		è¯¦æƒ…è¯·å‚é˜…å®˜æ–¹æ–‡æ¡£
+		è®¾ç½® JavaScript ??¥å????¹æ??ï¼?ä¸? 'setOnJSCallback' ???å¥?ä½¿ç?¨ï?????<br/>
+		æ³¨æ??ï¼???ªæ?¯æ?? Android ??? iOS ï¼?Web ç«¯ç?¨æ??è¯·å??å¾?å®???¹æ??æ¡???¥ç?????<br/>
+		è¯¦æ??è¯·å?????å®???¹æ??æ¡?
 		@param scheme scheme 
 		*/
 		setJavascriptInterfaceScheme(scheme: string): void;		
@@ -5463,9 +5463,9 @@ declare namespace cc {
 		Note: Supports only on the Android and iOS. For HTML5, please refer to the official documentation.<br/>
 		Please refer to the official documentation for more details.
 		!#zh
-		å½“åŠ è½½ URL ä»¥ JavaScript æ¥å£æ–¹æ¡ˆå¼€å§‹æ—¶è°ƒç”¨è¿™ä¸ªå›è°ƒå‡½æ•°ã€‚<br/>
-		æ³¨æ„ï¼šåªæ”¯æŒ Android å’Œ iOSï¼ŒWeb ç«¯ç”¨æ³•è¯·å‰å¾€å®˜æ–¹æ–‡æ¡£æŸ¥çœ‹ã€‚
-		è¯¦æƒ…è¯·å‚é˜…å®˜æ–¹æ–‡æ¡£
+		å½????è½? URL ä»? JavaScript ??¥å????¹æ??å¼?å§???¶è????¨è??ä¸ªå??è°???½æ?°ã??<br/>
+		æ³¨æ??ï¼???ªæ?¯æ?? Android ??? iOSï¼?Web ç«¯ç?¨æ??è¯·å??å¾?å®???¹æ??æ¡???¥ç?????
+		è¯¦æ??è¯·å?????å®???¹æ??æ¡?
 		@param callback callback 
 		*/
 		setOnJSCallback(callback: Function): void;		
@@ -5475,8 +5475,8 @@ declare namespace cc {
 		Please refer to the official document for more details <br/>
 		Note: Cross domain issues need to be resolved by yourself <br/>
 		!#zh
-		æ‰§è¡Œ WebView å†…éƒ¨é¡µé¢è„šæœ¬ï¼ˆè¯¦æƒ…è¯·å‚é˜…å®˜æ–¹æ–‡æ¡£ï¼‰ <br/>
-		æ³¨æ„ï¼šéœ€è¦è‡ªè¡Œè§£å†³è·¨åŸŸé—®é¢˜
+		??§è?? WebView ?????¨é¡µ??¢è????¬ï??è¯¦æ??è¯·å?????å®???¹æ??æ¡?ï¼? <br/>
+		æ³¨æ??ï¼????è¦???ªè??è§???³è·¨?????®é??
 		@param str str 
 		*/
 		evaluateJS(str: string): void;		
@@ -5485,8 +5485,8 @@ declare namespace cc {
 		call the destroy method on this component or the associated node explicitly.
 		Otherwise, the created DOM element won't be removed from web page.
 		!#zh
-		å¦‚æœä½ ä¸å†ä½¿ç”¨ WebViewï¼Œå¹¶ä¸”ç»„ä»¶æœªæ·»åŠ åˆ°åœºæ™¯ä¸­ï¼Œé‚£ä¹ˆä½ å¿…é¡»æ‰‹åŠ¨å¯¹ç»„ä»¶æˆ–æ‰€åœ¨èŠ‚ç‚¹è°ƒç”¨ destroyã€‚
-		è¿™æ ·æ‰èƒ½ç§»é™¤ç½‘é¡µä¸Šçš„ DOM èŠ‚ç‚¹ï¼Œé¿å… Web å¹³å°å†…å­˜æ³„éœ²ã€‚
+		å¦????ä½?ä¸????ä½¿ç?? WebViewï¼?å¹¶ä??ç»?ä»¶æ?ªæ·»?????°å?ºæ?¯ä¸­ï¼????ä¹?ä½?å¿?é¡»æ????¨å¯¹ç»?ä»¶æ???????¨è????¹è????? destroy???
+		è¿???·æ????½ç§»??¤ç??é¡µä????? DOM ?????¹ï????¿å?? Web å¹³å?°å??å­?æ³???²ã??
 		
 		@example 
 		```js
@@ -5510,24 +5510,24 @@ declare namespace cc {
 	     2. Blocks in candy crash (massive creation and recreation)<br/>
 	     etc...
 	!#zh
-	cc.NodePool æ˜¯ç”¨äºç®¡ç†èŠ‚ç‚¹å¯¹è±¡çš„å¯¹è±¡ç¼“å­˜æ± ã€‚<br/>
-	å®ƒå¯ä»¥å¸®åŠ©æ‚¨æé«˜æ¸¸æˆæ€§èƒ½ï¼Œé€‚ç”¨äºä¼˜åŒ–å¯¹è±¡çš„åå¤åˆ›å»ºå’Œé”€æ¯<br/>
-	ä»¥å‰ cocos2d-x ä¸­çš„ cc.pool å’Œæ–°çš„èŠ‚ç‚¹äº‹ä»¶æ³¨å†Œç³»ç»Ÿä¸å…¼å®¹ï¼Œå› æ­¤è¯·ä½¿ç”¨ cc.NodePool æ¥ä»£æ›¿ã€‚
+	cc.NodePool ??¯ç?¨ä??ç®¡ç???????¹å¯¹è±¡ç??å¯¹è±¡ç¼?å­?æ±????<br/>
+	å®???¯ä»¥å¸®å?©æ?¨æ??é«?æ¸¸æ????§è?½ï???????¨ä??ä¼????å¯¹è±¡??????å¤????å»ºå?????æ¯?<br/>
+	ä»¥å?? cocos2d-x ä¸­ç?? cc.pool ?????°ç???????¹ä??ä»¶æ³¨???ç³»ç??ä¸???¼å®¹ï¼????æ­¤è¯·ä½¿ç?? cc.NodePool ??¥ä»£??¿ã??
 	
-	æ–°çš„ NodePool éœ€è¦å®ä¾‹åŒ–ä¹‹åæ‰èƒ½ä½¿ç”¨ï¼Œæ¯ç§ä¸åŒçš„èŠ‚ç‚¹å¯¹è±¡æ± éœ€è¦ä¸€ä¸ªä¸åŒçš„å¯¹è±¡æ± å®ä¾‹ï¼Œè¿™é‡Œçš„ç§ç±»å¯¹åº”äºæ¸¸æˆä¸­çš„èŠ‚ç‚¹è®¾è®¡ï¼Œä¸€ä¸ª prefab ç›¸å½“äºä¸€ä¸ªç§ç±»çš„èŠ‚ç‚¹ã€‚<br/>
-	åœ¨åˆ›å»ºç¼“å†²æ± æ—¶ï¼Œå¯ä»¥ä¼ å…¥ä¸€ä¸ªåŒ…å« unuse, reuse å‡½æ•°çš„ç»„ä»¶ç±»å‹ç”¨äºèŠ‚ç‚¹çš„å›æ”¶å’Œå¤ç”¨é€»è¾‘ã€‚<br/>
+	??°ç?? NodePool ???è¦?å®?ä¾????ä¹?????????½ä½¿??¨ï??æ¯?ç§?ä¸????????????¹å¯¹è±¡æ?????è¦?ä¸?ä¸ªä????????å¯¹è±¡æ±?å®?ä¾?ï¼?è¿???????ç§?ç±»å¯¹åº?äº?æ¸¸æ??ä¸­ç???????¹è®¾è®¡ï??ä¸?ä¸? prefab ??¸å??äº?ä¸?ä¸ªç??ç±»ç???????¹ã??<br/>
+	??¨å??å»ºç????²æ????¶ï????¯ä»¥ä¼???¥ä??ä¸ªå????? unuse, reuse ??½æ?°ç??ç»?ä»¶ç±»?????¨ä???????¹ç???????¶å??å¤???¨é?»è?????<br/>
 	
-	ä¸€äº›å¸¸è§çš„ç”¨ä¾‹æ˜¯ï¼š<br/>
-	     1.åœ¨æ¸¸æˆä¸­çš„å­å¼¹ï¼ˆæ­»äº¡å¾ˆå¿«ï¼Œé¢‘ç¹åˆ›å»ºï¼Œå¯¹å…¶ä»–å¯¹è±¡æ— å‰¯ä½œç”¨ï¼‰<br/>
-	     2.ç³–æœç²‰ç¢ä¼ å¥‡ä¸­çš„æœ¨å—ï¼ˆé¢‘ç¹åˆ›å»ºï¼‰ã€‚
-	     ç­‰ç­‰.... */
+	ä¸?äº?å¸¸è???????¨ä????¯ï??<br/>
+	     1.??¨æ¸¸???ä¸­ç??å­?å¼¹ï??æ­»äº¡å¾?å¿«ï??é¢?ç¹????å»ºï??å¯¹å?¶ä??å¯¹è±¡?????¯ä????¨ï??<br/>
+	     2.ç³????ç²?ç¢?ä¼?å¥?ä¸­ç????¨å??ï¼?é¢?ç¹????å»ºï?????
+	     ç­?ç­?.... */
 	export class NodePool {		
 		/**
 		!#en
 		Constructor for creating a pool for a specific node template (usually a prefab). You can pass a component (type or name) argument for handling event for reusing and recycling node.
 		!#zh
-		ä½¿ç”¨æ„é€ å‡½æ•°æ¥åˆ›å»ºä¸€ä¸ªèŠ‚ç‚¹ä¸“ç”¨çš„å¯¹è±¡æ± ï¼Œæ‚¨å¯ä»¥ä¼ é€’ä¸€ä¸ªç»„ä»¶ç±»å‹æˆ–åç§°ï¼Œç”¨äºå¤„ç†èŠ‚ç‚¹å›æ”¶å’Œå¤ç”¨æ—¶çš„äº‹ä»¶é€»è¾‘ã€‚
-		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse logic. !#zh å¤„ç†èŠ‚ç‚¹å›æ”¶å’Œå¤ç”¨äº‹ä»¶é€»è¾‘çš„ç»„ä»¶ç±»å‹æˆ–åç§°ã€‚
+		ä½¿ç?¨æ???????½æ?°æ?¥å??å»ºä??ä¸ªè????¹ä????¨ç??å¯¹è±¡æ±?ï¼???¨å?¯ä»¥ä¼????ä¸?ä¸ªç??ä»¶ç±»?????????ç§°ï????¨ä??å¤?????????¹å????¶å??å¤???¨æ?¶ç??äº?ä»¶é?»è?????
+		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse logic. !#zh å¤?????????¹å????¶å??å¤???¨ä??ä»¶é?»è?????ç»?ä»¶ç±»?????????ç§°ã??
 		
 		@example 
 		```js
@@ -5542,25 +5542,25 @@ declare namespace cc {
 		*/
 		constructor(poolHandlerComp?: {prototype: Component}|string);		
 		/** !#en The pool handler component, it could be the class name or the constructor.
-		!#zh ç¼“å†²æ± å¤„ç†ç»„ä»¶ï¼Œç”¨äºèŠ‚ç‚¹çš„å›æ”¶å’Œå¤ç”¨é€»è¾‘ï¼Œè¿™ä¸ªå±æ€§å¯ä»¥æ˜¯ç»„ä»¶ç±»åæˆ–ç»„ä»¶çš„æ„é€ å‡½æ•°ã€‚ */
+		!#zh ç¼???²æ??å¤????ç»?ä»¶ï????¨ä???????¹ç???????¶å??å¤???¨é?»è??ï¼?è¿?ä¸ªå????§å?¯ä»¥??¯ç??ä»¶ç±»??????ç»?ä»¶ç??????????½æ?°ã?? */
 		poolHandlerComp: Function|string;		
 		/**
 		!#en The current available size in the pool
-		!#zh è·å–å½“å‰ç¼“å†²æ± çš„å¯ç”¨å¯¹è±¡æ•°é‡ 
+		!#zh ??·å??å½????ç¼???²æ???????¯ç?¨å¯¹è±¡æ?°é?? 
 		*/
 		size(): number;		
 		/**
 		!#en Destroy all cached nodes in the pool
-		!#zh é”€æ¯å¯¹è±¡æ± ä¸­ç¼“å­˜çš„æ‰€æœ‰èŠ‚ç‚¹ 
+		!#zh ???æ¯?å¯¹è±¡æ±?ä¸­ç??å­???????????????? 
 		*/
 		clear(): void;		
 		/**
 		!#en Put a new Node into the pool.
 		It will automatically remove the node from its parent without cleanup.
 		It will also invoke unuse method of the poolHandlerComp if exist.
-		!#zh å‘ç¼“å†²æ± ä¸­å­˜å…¥ä¸€ä¸ªä¸å†éœ€è¦çš„èŠ‚ç‚¹å¯¹è±¡ã€‚
-		è¿™ä¸ªå‡½æ•°ä¼šè‡ªåŠ¨å°†ç›®æ ‡èŠ‚ç‚¹ä»çˆ¶èŠ‚ç‚¹ä¸Šç§»é™¤ï¼Œä½†æ˜¯ä¸ä¼šè¿›è¡Œ cleanup æ“ä½œã€‚
-		è¿™ä¸ªå‡½æ•°ä¼šè°ƒç”¨ poolHandlerComp çš„ unuse å‡½æ•°ï¼Œå¦‚æœç»„ä»¶å’Œå‡½æ•°éƒ½å­˜åœ¨çš„è¯ã€‚
+		!#zh ???ç¼???²æ??ä¸­å????¥ä??ä¸ªä????????è¦?????????¹å¯¹è±¡ã??
+		è¿?ä¸ªå?½æ?°ä????ªå?¨å????®æ???????¹ä????¶è????¹ä??ç§»é?¤ï??ä½???¯ä??ä¼?è¿?è¡? cleanup ???ä½????
+		è¿?ä¸ªå?½æ?°ä??è°???? poolHandlerComp ??? unuse ??½æ?°ï??å¦????ç»?ä»¶å????½æ?°é?½å????¨ç??è¯????
 		@param obj obj
 		
 		@example 
@@ -5573,9 +5573,9 @@ declare namespace cc {
 		/**
 		!#en Get a obj from pool, if no available object in pool, null will be returned.
 		This function will invoke the reuse function of poolHandlerComp if exist.
-		!#zh è·å–å¯¹è±¡æ± ä¸­çš„å¯¹è±¡ï¼Œå¦‚æœå¯¹è±¡æ± æ²¡æœ‰å¯ç”¨å¯¹è±¡ï¼Œåˆ™è¿”å›ç©ºã€‚
-		è¿™ä¸ªå‡½æ•°ä¼šè°ƒç”¨ poolHandlerComp çš„ reuse å‡½æ•°ï¼Œå¦‚æœç»„ä»¶å’Œå‡½æ•°éƒ½å­˜åœ¨çš„è¯ã€‚
-		@param params !#en Params to pass to 'reuse' method in poolHandlerComp !#zh å‘ poolHandlerComp ä¸­çš„ 'reuse' å‡½æ•°ä¼ é€’çš„å‚æ•°
+		!#zh ??·å??å¯¹è±¡æ±?ä¸­ç??å¯¹è±¡ï¼?å¦????å¯¹è±¡æ±?æ²¡æ????¯ç?¨å¯¹è±¡ï?????è¿????ç©ºã??
+		è¿?ä¸ªå?½æ?°ä??è°???? poolHandlerComp ??? reuse ??½æ?°ï??å¦????ç»?ä»¶å????½æ?°é?½å????¨ç??è¯????
+		@param params !#en Params to pass to 'reuse' method in poolHandlerComp !#zh ??? poolHandlerComp ä¸­ç?? 'reuse' ??½æ?°ä??????????????
 		
 		@example 
 		```js
@@ -5589,93 +5589,93 @@ declare namespace cc {
 	Using camera will be more efficient than moving node to scroll screen.
 	Camera
 	!#zh
-	æ‘„åƒæœºåœ¨åˆ¶ä½œå·è½´æˆ–æ˜¯å…¶ä»–éœ€è¦ç§»åŠ¨å±å¹•çš„æ¸¸æˆæ—¶æ¯”è¾ƒæœ‰ç”¨ï¼Œä½¿ç”¨æ‘„åƒæœºå°†ä¼šæ¯”ç§»åŠ¨èŠ‚ç‚¹æ¥ç§»åŠ¨å±å¹•æ›´åŠ é«˜æ•ˆã€‚ */
+	????????ºå?¨å?¶ä????·è½´?????¯å?¶ä?????è¦?ç§»å?¨å??å¹????æ¸¸æ????¶æ??è¾??????¨ï??ä½¿ç?¨æ???????ºå??ä¼?æ¯?ç§»å?¨è????¹æ?¥ç§»??¨å??å¹???´å??é«??????? */
 	export class Camera extends Component {		
 		/** !#en
 		The camera zoom ratio, only support 2D camera.
 		!#zh
-		æ‘„åƒæœºç¼©æ”¾æ¯”ç‡, åªæ”¯æŒ 2D cameraã€‚ */
+		????????ºç¼©??¾æ?????, ??ªæ?¯æ?? 2D camera??? */
 		zoomRatio: number;		
 		/** !#en
-		Field of view. The width of the Cameraâ€™s view angle, measured in degrees along the local Y axis.
+		Field of view. The width of the Camera???s view angle, measured in degrees along the local Y axis.
 		!#zh
-		å†³å®šæ‘„åƒæœºè§†è§’çš„å®½åº¦ï¼Œå½“æ‘„åƒæœºå¤„äºé€è§†æŠ•å½±æ¨¡å¼ä¸‹è¿™ä¸ªå±æ€§æ‰ä¼šç”Ÿæ•ˆã€‚ */
+		??³å??????????ºè??è§????å®½åº¦ï¼?å½?????????ºå??äº????è§????å½±æ¨¡å¼?ä¸?è¿?ä¸ªå????§æ??ä¼?????????? */
 		fov: number;		
 		/** !#en
 		The viewport size of the Camera when set to orthographic projection.
 		!#zh
-		æ‘„åƒæœºåœ¨æ­£äº¤æŠ•å½±æ¨¡å¼ä¸‹çš„è§†çª—å¤§å°ã€‚ */
+		????????ºå?¨æ­£äº¤æ??å½±æ¨¡å¼?ä¸????è§?çª?å¤§å????? */
 		orthoSize: number;		
 		/** !#en
 		The near clipping plane.
 		!#zh
-		æ‘„åƒæœºçš„è¿‘å‰ªè£é¢ã€‚ */
+		????????ºç??è¿???ªè????¢ã?? */
 		nearClip: number;		
 		/** !#en
 		The far clipping plane.
 		!#zh
-		æ‘„åƒæœºçš„è¿œå‰ªè£é¢ã€‚ */
+		????????ºç??è¿???ªè????¢ã?? */
 		farClip: number;		
 		/** !#en
 		Is the camera orthographic (true) or perspective (false)?
 		!#zh
-		è®¾ç½®æ‘„åƒæœºçš„æŠ•å½±æ¨¡å¼æ˜¯æ­£äº¤è¿˜æ˜¯é€è§†æ¨¡å¼ã€‚ */
+		è®¾ç½®????????ºç?????å½±æ¨¡å¼???¯æ­£äº¤è????¯é??è§?æ¨¡å????? */
 		ortho: boolean;		
 		/** !#en
 		Four values (0 ~ 1) that indicate where on the screen this camera view will be drawn.
 		!#zh
-		å†³å®šæ‘„åƒæœºç»˜åˆ¶åœ¨å±å¹•ä¸Šå“ªä¸ªä½ç½®ï¼Œå€¼ä¸ºï¼ˆ0 ~ 1ï¼‰ã€‚ */
+		??³å??????????ºç????¶å?¨å??å¹?ä¸???ªä¸ªä½?ç½®ï????¼ä¸ºï¼?0 ~ 1ï¼???? */
 		rect: Rect;		
 		/** !#en
 		This is used to render parts of the scene selectively.
 		!#zh
-		å†³å®šæ‘„åƒæœºä¼šæ¸²æŸ“åœºæ™¯çš„å“ªä¸€éƒ¨åˆ†ã€‚ */
+		??³å??????????ºä??æ¸²æ????ºæ?¯ç????ªä????¨å????? */
 		cullingMask: number;		
 		/** !#en
 		Determining what to clear when camera rendering.
 		!#zh
-		å†³å®šæ‘„åƒæœºæ¸²æŸ“æ—¶ä¼šæ¸…é™¤å“ªäº›çŠ¶æ€ã€‚ */
+		??³å??????????ºæ¸²?????¶ä??æ¸???¤å?ªä????¶æ????? */
 		clearFlags: Camera.ClearFlags;		
 		/** !#en
 		The color with which the screen will be cleared.
 		!#zh
-		æ‘„åƒæœºç”¨äºæ¸…é™¤å±å¹•çš„èƒŒæ™¯è‰²ã€‚ */
+		????????ºç?¨ä??æ¸???¤å??å¹?????????¯è?²ã?? */
 		backgroundColor: Color;		
 		/** !#en
 		Camera's depth in the camera rendering order. Cameras with higher depth are rendered after cameras with lower depth.
 		!#zh
-		æ‘„åƒæœºæ·±åº¦ã€‚ç”¨äºå†³å®šæ‘„åƒæœºçš„æ¸²æŸ“é¡ºåºï¼Œå€¼è¶Šå¤§æ¸²æŸ“åœ¨è¶Šä¸Šå±‚ã€‚ */
+		????????ºæ·±åº¦ã????¨ä????³å??????????ºç??æ¸²æ??é¡ºå??ï¼???¼è??å¤§æ¸²?????¨è??ä¸?å±???? */
 		depth: number;		
 		/** !#en
 		Destination render texture.
 		Usually cameras render directly to screen, but for some effects it is useful to make a camera render into a texture.
 		!#zh
-		æ‘„åƒæœºæ¸²æŸ“çš„ç›®æ ‡ RenderTextureã€‚
-		ä¸€èˆ¬æ‘„åƒæœºä¼šç›´æ¥æ¸²æŸ“åˆ°å±å¹•ä¸Šï¼Œä½†æ˜¯æœ‰ä¸€äº›æ•ˆæœå¯ä»¥ä½¿ç”¨æ‘„åƒæœºæ¸²æŸ“åˆ° RenderTexture ä¸Šå†å¯¹ RenderTexture è¿›è¡Œå¤„ç†æ¥å®ç°ã€‚ */
+		????????ºæ¸²????????®æ?? RenderTexture???
+		ä¸???¬æ???????ºä????´æ?¥æ¸²?????°å??å¹?ä¸?ï¼?ä½???¯æ??ä¸?äº?????????¯ä»¥ä½¿ç?¨æ???????ºæ¸²?????? RenderTexture ä¸????å¯? RenderTexture è¿?è¡?å¤??????¥å????°ã?? */
 		targetTexture: RenderTexture;		
 		/** !#en
 		Sets the camera's render stages.
 		!#zh
-		è®¾ç½®æ‘„åƒæœºæ¸²æŸ“çš„é˜¶æ®µ */
+		è®¾ç½®????????ºæ¸²????????¶æ®µ */
 		renderStages: number;		
 		/** !#en Whether auto align camera viewport to screen
-		!#zh æ˜¯å¦è‡ªåŠ¨å°†æ‘„åƒæœºçš„è§†å£å¯¹å‡†å±å¹• */
+		!#zh ??¯å?¦è?ªå?¨å??????????ºç??è§????å¯¹å??å±?å¹? */
 		alignWithScreen: boolean;		
 		/** !#en
 		The primary camera in the scene. Returns the rear most rendered camera, which is the camera with the lowest depth.
 		!#zh
-		å½“å‰åœºæ™¯ä¸­æ¿€æ´»çš„ä¸»æ‘„åƒæœºã€‚å°†ä¼šè¿”å›æ¸²æŸ“åœ¨å±å¹•æœ€åº•å±‚ï¼Œä¹Ÿå°±æ˜¯ depth æœ€å°çš„æ‘„åƒæœºã€‚ */
+		å½??????ºæ?¯ä¸­æ¿?æ´»ç??ä¸»æ???????ºã??å°?ä¼?è¿????æ¸²æ????¨å??å¹????åº?å±?ï¼?ä¹?å°±æ?? depth ???å°????????????ºã?? */
 		static main: Camera;		
 		/** !#en
 		All enabled cameras.
 		!#zh
-		å½“å‰æ¿€æ´»çš„æ‰€æœ‰æ‘„åƒæœºã€‚ */
+		å½????æ¿?æ´»ç????????????????ºã?? */
 		static cameras: Camera[];		
 		/**
 		!#en
 		Get the first camera which the node belong to.
 		!#zh
-		è·å–èŠ‚ç‚¹æ‰€åœ¨çš„ç¬¬ä¸€ä¸ªæ‘„åƒæœºã€‚
+		??·å???????¹æ????¨ç??ç¬¬ä??ä¸ªæ???????ºã??
 		@param node node 
 		*/
 		static findCamera(node: Node): Camera;		
@@ -5683,7 +5683,7 @@ declare namespace cc {
 		!#en
 		Get the screen to world matrix, only support 2D camera which alignWithScreen is true.
 		!#zh
-		è·å–å±å¹•åæ ‡ç³»åˆ°ä¸–ç•Œåæ ‡ç³»çš„çŸ©é˜µï¼Œåªé€‚ç”¨äº alignWithScreen ä¸º true çš„ 2D æ‘„åƒæœºã€‚
+		??·å??å±?å¹???????ç³»å?°ä???????????ç³»ç????©é?µï????ªé????¨ä?? alignWithScreen ä¸? true ??? 2D ????????ºã??
 		@param out the matrix to receive the result 
 		*/
 		getScreenToWorldMatrix2D(out: Mat4): Mat4;		
@@ -5691,7 +5691,7 @@ declare namespace cc {
 		!#en
 		Get the world to camera matrix, only support 2D camera which alignWithScreen is true.
 		!#zh
-		è·å–ä¸–ç•Œåæ ‡ç³»åˆ°æ‘„åƒæœºåæ ‡ç³»çš„çŸ©é˜µï¼Œåªé€‚ç”¨äº alignWithScreen ä¸º true çš„ 2D æ‘„åƒæœºã€‚
+		??·å??ä¸??????????ç³»å?°æ???????ºå?????ç³»ç????©é?µï????ªé????¨ä?? alignWithScreen ä¸? true ??? 2D ????????ºã??
 		@param out the matrix to receive the result 
 		*/
 		getWorldToScreenMatrix2D(out: Mat4): Mat4;		
@@ -5699,7 +5699,7 @@ declare namespace cc {
 		!#en
 		Convert point from screen to world.
 		!#zh
-		å°†åæ ‡ä»å±å¹•åæ ‡ç³»è½¬æ¢åˆ°ä¸–ç•Œåæ ‡ç³»ã€‚
+		å°???????ä»?å±?å¹???????ç³»è½¬??¢å?°ä???????????ç³»ã??
 		@param screenPosition screenPosition
 		@param out out 
 		*/
@@ -5708,7 +5708,7 @@ declare namespace cc {
 		!#en
 		Convert point from world to screen.
 		!#zh
-		å°†åæ ‡ä»ä¸–ç•Œåæ ‡ç³»è½¬åŒ–åˆ°å±å¹•åæ ‡ç³»ã€‚
+		å°???????ä»?ä¸??????????ç³»è½¬?????°å??å¹???????ç³»ã??
 		@param worldPosition worldPosition
 		@param out out 
 		*/
@@ -5717,7 +5717,7 @@ declare namespace cc {
 		!#en
 		Get a ray from screen position
 		!#zh
-		ä»å±å¹•åæ ‡è·å–ä¸€æ¡å°„çº¿
+		ä»?å±?å¹?????????·å??ä¸???¡å??çº?
 		@param screenPos screenPos 
 		*/
 		getRay(screenPos: Vec2): geomUtils.Ray;		
@@ -5725,7 +5725,7 @@ declare namespace cc {
 		!#en
 		Check whether the node is in the camera.
 		!#zh
-		æ£€æµ‹èŠ‚ç‚¹æ˜¯å¦è¢«æ­¤æ‘„åƒæœºå½±å“
+		æ£?æµ??????¹æ?¯å?¦è¢«æ­¤æ???????ºå½±???
 		@param node the node which need to check 
 		*/
 		containsNode(node: Node): boolean;		
@@ -5733,7 +5733,7 @@ declare namespace cc {
 		!#en
 		Render the camera manually.
 		!#zh
-		æ‰‹åŠ¨æ¸²æŸ“æ‘„åƒæœºã€‚
+		?????¨æ¸²???????????ºã??
 		@param rootNode rootNode 
 		*/
 		render(rootNode?: Node): void;		
@@ -5741,7 +5741,7 @@ declare namespace cc {
 		!#en
 		Returns the matrix that transform the node's (local) space coordinates into the camera's space coordinates.
 		!#zh
-		è¿”å›ä¸€ä¸ªå°†èŠ‚ç‚¹åæ ‡ç³»è½¬æ¢åˆ°æ‘„åƒæœºåæ ‡ç³»ä¸‹çš„çŸ©é˜µ
+		è¿????ä¸?ä¸ªå???????¹å?????ç³»è½¬??¢å?°æ???????ºå?????ç³»ä???????©é??
 		@param node the node which should transform 
 		*/
 		getNodeToCameraTransform(node: Node): AffineTransform;		
@@ -5749,7 +5749,7 @@ declare namespace cc {
 		!#en
 		Conver a camera coordinates point to world coordinates.
 		!#zh
-		å°†ä¸€ä¸ªæ‘„åƒæœºåæ ‡ç³»ä¸‹çš„ç‚¹è½¬æ¢åˆ°ä¸–ç•Œåæ ‡ç³»ä¸‹ã€‚
+		å°?ä¸?ä¸ªæ???????ºå?????ç³»ä???????¹è½¬??¢å?°ä???????????ç³»ä?????
 		@param point the point which should transform
 		@param out the point to receive the result 
 		*/
@@ -5758,7 +5758,7 @@ declare namespace cc {
 		!#en
 		Conver a world coordinates point to camera coordinates.
 		!#zh
-		å°†ä¸€ä¸ªä¸–ç•Œåæ ‡ç³»ä¸‹çš„ç‚¹è½¬æ¢åˆ°æ‘„åƒæœºåæ ‡ç³»ä¸‹ã€‚
+		å°?ä¸?ä¸ªä???????????ç³»ä???????¹è½¬??¢å?°æ???????ºå?????ç³»ä?????
 		@param point point
 		@param out the point to receive the result 
 		*/
@@ -5767,7 +5767,7 @@ declare namespace cc {
 		!#en
 		Get the camera to world matrix
 		!#zh
-		è·å–æ‘„åƒæœºåæ ‡ç³»åˆ°ä¸–ç•Œåæ ‡ç³»çš„çŸ©é˜µ
+		??·å??????????ºå?????ç³»å?°ä???????????ç³»ç????©é??
 		@param out the matrix to receive the result 
 		*/
 		getCameraToWorldMatrix(out: Mat4): Mat4;		
@@ -5775,14 +5775,14 @@ declare namespace cc {
 		!#en
 		Get the world to camera matrix
 		!#zh
-		è·å–ä¸–ç•Œåæ ‡ç³»åˆ°æ‘„åƒæœºåæ ‡ç³»çš„çŸ©é˜µ
+		??·å??ä¸??????????ç³»å?°æ???????ºå?????ç³»ç????©é??
 		@param out the matrix to receive the result 
 		*/
 		getWorldToCameraMatrix(out: Mat4): Mat4;	
 	}	
 	/** !#en The Light Component
 	
-	!#zh å…‰æºç»„ä»¶ */
+	!#zh ???æº?ç»?ä»? */
 	export class Light extends Component {	
 	}	
 	/** !#en
@@ -5790,122 +5790,122 @@ declare namespace cc {
 	All member can be accessed with `cc.assetManager`.
 	
 	!#zh
-	æ­¤æ¨¡å—ç®¡ç†èµ„æºçš„è¡Œä¸ºå’Œä¿¡æ¯ï¼ŒåŒ…æ‹¬åŠ è½½ï¼Œé‡Šæ”¾ç­‰ï¼Œè¿™æ˜¯ä¸€ä¸ªå•ä¾‹ï¼Œæ‰€æœ‰æˆå‘˜èƒ½å¤Ÿé€šè¿‡ `cc.assetManager` è°ƒç”¨ */
+	æ­¤æ¨¡???ç®¡ç??èµ?æº????è¡?ä¸ºå??ä¿¡æ?¯ï???????¬å??è½½ï???????¾ç??ï¼?è¿???¯ä??ä¸ªå??ä¾?ï¼???????????????½å?????è¿? `cc.assetManager` è°???? */
 	export class AssetManager {		
 		/** !#en
 		Normal loading pipeline
 		
 		!#zh
-		æ­£å¸¸åŠ è½½ç®¡çº¿ */
+		æ­?å¸¸å??è½½ç®¡çº? */
 		pipeline: cc.AssetManager.Pipeline;		
 		/** !#en
 		Fetching pipeline
 		
 		!#zh
-		ä¸‹è½½ç®¡çº¿ */
+		ä¸?è½½ç®¡çº? */
 		fetchPipeline: cc.AssetManager.Pipeline;		
 		/** !#en
 		Url transformer
 		
 		!#zh
-		Url è½¬æ¢å™¨ */
+		Url è½¬æ?¢å?? */
 		transformPipeline: cc.AssetManager.Pipeline;		
 		/** !#en
 		The collection of bundle which is already loaded, you can remove cache with {{#crossLink "AssetManager/removeBundle:method"}}{{/crossLink}}
 		
 		!#zh
-		å·²åŠ è½½ bundle çš„é›†åˆï¼Œ ä½ èƒ½é€šè¿‡ {{#crossLink "AssetManager/removeBundle:method"}}{{/crossLink}} æ¥ç§»é™¤ç¼“å­˜ */
+		å·²å??è½? bundle ?????????ï¼? ä½???½é??è¿? {{#crossLink "AssetManager/removeBundle:method"}}{{/crossLink}} ??¥ç§»??¤ç??å­? */
 		bundles: AssetManager.Cache<AssetManager.Bundle>;		
 		/** !#en
 		The collection of asset which is already loaded, you can remove cache with {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}}
 		
 		!#zh
-		å·²åŠ è½½èµ„æºçš„é›†åˆï¼Œ ä½ èƒ½é€šè¿‡ {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} æ¥ç§»é™¤ç¼“å­˜ */
+		å·²å??è½½è??æº??????????ï¼? ä½???½é??è¿? {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} ??¥ç§»??¤ç??å­? */
 		assets: AssetManager.Cache<cc.Asset>;		
 		/** !#en
 		Manage relationship between asset and its dependencies
 		
 		!#zh
-		ç®¡ç†èµ„æºä¾èµ–å…³ç³» */
+		ç®¡ç??èµ?æº?ä¾?èµ???³ç³» */
 		dependUtil: cc.AssetManager.DependUtil;		
 		/** !#en
 		Whether or not cache the loaded asset
 		
 		!#zh
-		æ˜¯å¦ç¼“å­˜å·²åŠ è½½çš„èµ„æº */
+		??¯å?¦ç??å­?å·²å??è½½ç??èµ?æº? */
 		cacheAsset: boolean;		
 		/** !#en
 		Whether or not load asset forcely, if it is true, asset will be loaded regardless of error
 		
 		!#zh
-		æ˜¯å¦å¼ºåˆ¶åŠ è½½èµ„æº, å¦‚æœä¸º true ï¼ŒåŠ è½½èµ„æºå°†ä¼šå¿½ç•¥æŠ¥é”™ */
+		??¯å?¦å¼º??¶å??è½½è??æº?, å¦????ä¸? true ï¼????è½½è??æº?å°?ä¼?å¿½ç?¥æ?¥é?? */
 		force: boolean;		
 		/** !#en
 		Some useful function
 		
 		!#zh
-		ä¸€äº›æœ‰ç”¨çš„æ–¹æ³• */
+		ä¸?äº??????¨ç????¹æ?? */
 		utils: cc.AssetManager.Helper;		
 		/** !#en
 		Manage all downloading task
 		
 		!#zh
-		ç®¡ç†æ‰€æœ‰ä¸‹è½½ä»»åŠ¡ */
+		ç®¡ç????????ä¸?è½½ä»»??? */
 		downloader: cc.AssetManager.Downloader;		
 		/** !#en
 		Manage all parsing task
 		
 		!#zh
-		ç®¡ç†æ‰€æœ‰è§£æä»»åŠ¡ */
+		ç®¡ç????????è§????ä»»å?? */
 		parser: cc.AssetManager.Parser;		
 		/** !#en
 		Manage internal asset
 		
 		!#zh
-		ç®¡ç†å†…ç½®èµ„æº */
+		ç®¡ç?????ç½®è??æº? */
 		builtins: cc.AssetManager.Builtins;		
 		/** !#en
 		Manage all packed asset
 		
 		!#zh
-		ç®¡ç†æ‰€æœ‰åˆå¹¶åçš„èµ„æº */
+		ç®¡ç???????????å¹¶å?????èµ?æº? */
 		packManager: cc.AssetManager.PackManager;		
 		/** !#en
 		Cache manager is a module which controls all caches downloaded from server in non-web platform.
 		
 		!#zh
-		ç¼“å­˜ç®¡ç†å™¨æ˜¯ä¸€ä¸ªæ¨¡å—ï¼Œåœ¨é WEB å¹³å°ä¸Šï¼Œç”¨äºç®¡ç†æ‰€æœ‰ä»æœåŠ¡å™¨ä¸Šä¸‹è½½ä¸‹æ¥çš„ç¼“å­˜ */
+		ç¼?å­?ç®¡ç????¨æ?¯ä??ä¸ªæ¨¡???ï¼???¨é?? WEB å¹³å?°ä??ï¼???¨ä??ç®¡ç????????ä»??????¡å?¨ä??ä¸?è½½ä????¥ç??ç¼?å­? */
 		cacheManager: cc.AssetManager.CacheManager|null;		
 		/** !#en
 		The preset of options
 		
 		!#zh
-		å¯é€‰å‚æ•°çš„é¢„è®¾é›† */
+		??¯é???????°ç??é¢?è®¾é?? */
 		presets: Record<string, Record<string, any>>;		
 		/** !#en
 		The builtin 'main' bundle
 		
 		!#zh
-		å†…ç½® main åŒ… */
+		???ç½? main ??? */
 		main: cc.AssetManager.Bundle;		
 		/** !#en
 		The builtin 'resources' bundle
 		
 		!#zh
-		å†…ç½® resources åŒ… */
+		???ç½? resources ??? */
 		resources: cc.AssetManager.Bundle;		
 		/** !#en
 		The builtin 'internal' bundle
 		
 		!#zh
-		å†…ç½® internal åŒ… */
+		???ç½? internal ??? */
 		internal: cc.AssetManager.Bundle;		
 		/**
 		!#en
 		Initialize assetManager with options
 		
 		!#zh
-		åˆå§‹åŒ–èµ„æºç®¡ç†å™¨
+		???å§????èµ?æº?ç®¡ç?????
 		@param options options 
 		*/
 		init(options: Record<string, any>): void;		
@@ -5914,7 +5914,7 @@ declare namespace cc {
 		Get the bundle which has been loaded
 		
 		!#zh
-		è·å–å·²åŠ è½½çš„åˆ†åŒ…
+		??·å??å·²å??è½½ç????????
 		@param name The name of bundle
 		
 		@example 
@@ -5931,7 +5931,7 @@ declare namespace cc {
 		Remove this bundle. NOTE: The asset whthin this bundle will not be released automatically, you can call {{#crossLink "Bundle/releaseAll:method"}}{{/crossLink}} manually before remove it if you need
 		
 		!#zh
-		ç§»é™¤æ­¤åŒ…, æ³¨æ„ï¼šè¿™ä¸ªåŒ…å†…çš„èµ„æºä¸ä¼šè‡ªåŠ¨é‡Šæ”¾, å¦‚æœéœ€è¦çš„è¯ä½ å¯ä»¥åœ¨æ‘§æ¯ä¹‹å‰æ‰‹åŠ¨è°ƒç”¨ {{#crossLink "Bundle/releaseAll:method"}}{{/crossLink}} è¿›è¡Œé‡Šæ”¾
+		ç§»é?¤æ­¤???, æ³¨æ??ï¼?è¿?ä¸ªå????????èµ?æº?ä¸?ä¼???ªå?¨é?????, å¦???????è¦????è¯?ä½???¯ä»¥??¨æ?§æ??ä¹?????????¨è????? {{#crossLink "Bundle/releaseAll:method"}}{{/crossLink}} è¿?è¡???????
 		@param bundle The bundle to be removed 
 		*/
 		removeBundle(bundle: cc.AssetManager.Bundle): void;		
@@ -5948,14 +5948,14 @@ declare namespace cc {
 		Please DO NOT use these words as custom options!
 		
 		!#zh
-		é€šç”¨åŠ è½½èµ„æºæ¥å£ï¼Œå¯ä¼ å…¥è¿›åº¦å›è°ƒä»¥åŠå®Œæˆå›è°ƒï¼Œé€šè¿‡ç»„åˆ `request` å’Œ `options` å‚æ•°ï¼Œå‡ ä¹å¯ä»¥å®ç°å’Œæ‰©å±•æ‰€æœ‰æƒ³è¦çš„åŠ è½½æ•ˆæœã€‚éå¸¸å»ºè®®ä½ ä½¿ç”¨æ›´ç®€å•çš„APIï¼Œä¾‹å¦‚ `load`ã€`loadDir` ç­‰ã€‚
-		`options` ä¸­çš„è‡ªå®šä¹‰å‚æ•°å°†ä¼šåˆ†å‘åˆ° `requests` çš„æ¯ä¸€é¡¹ä¸­ï¼Œå¦‚æœrequestä¸­å·²å­˜åœ¨åŒåçš„å‚æ•°åˆ™ä»¥ `requests` ä¸­ä¸ºå‡†ï¼ŒåŒæ—¶å¦‚æœæœ‰å…¶ä»–
-		ä¾èµ–èµ„æºï¼Œåˆ™ `options` ä¸­çš„å‚æ•°ä¼šç»§ç»­å‘ä¾èµ–é¡¹ä¸­åˆ†å‘ã€‚requestä¸­çš„è‡ªå®šä¹‰å‚æ•°éƒ½ä¼šä»¥ `options` å½¢å¼ä¼ å…¥åŠ è½½æµç¨‹ä¸­çš„ `downloader`, `parser` çš„æ–¹æ³•ä¸­, ä½ å¯ä»¥
-		æ‰©å±• `downloader`, `parser` æ”¶é›†å‚æ•°å®Œæˆæƒ³å®ç°çš„æ•ˆæœã€‚
+		?????¨å??è½½è??æº???¥å??ï¼???¯ä????¥è??åº¦å??è°?ä»¥å??å®???????è°?ï¼????è¿?ç»???? `request` ??? `options` ?????°ï?????ä¹???¯ä»¥å®???°å????©å??????????³è????????è½½æ???????????å¸¸å»ºè®®ä??ä½¿ç?¨æ?´ç????????APIï¼?ä¾?å¦? `load`???`loadDir` ç­????
+		`options` ä¸­ç????ªå??ä¹??????°å??ä¼?????????? `requests` ???æ¯?ä¸?é¡¹ä¸­ï¼?å¦????requestä¸­å·²å­???¨å?????????????°å??ä»? `requests` ä¸­ä¸º???ï¼??????¶å??????????¶ä??
+		ä¾?èµ?èµ?æº?ï¼???? `options` ä¸­ç???????°ä??ç»§ç»­???ä¾?èµ?é¡¹ä¸­?????????requestä¸­ç????ªå??ä¹??????°é?½ä??ä»? `options` å½¢å??ä¼???¥å??è½½æ??ç¨?ä¸­ç?? `downloader`, `parser` ?????¹æ??ä¸?, ä½???¯ä»¥
+		??©å?? `downloader`, `parser` ??¶é???????°å???????³å????°ç???????????
 		
-		ä¿ç•™å…³é”®å­—: `uuid`, `url`, `path`, `dir`, `scene`, `type`, `priority`, `preset`, `audioLoadMode`, `ext`, `bundle`, `onFileProgress`, `maxConcurrency`, `maxRequestsPerFrame`
+		ä¿??????³é?®å??: `uuid`, `url`, `path`, `dir`, `scene`, `type`, `priority`, `preset`, `audioLoadMode`, `ext`, `bundle`, `onFileProgress`, `maxConcurrency`, `maxRequestsPerFrame`
 		`maxRetryCount`, `version`, `responseType`, `withCredentials`, `mimeType`, `timeout`, `header`, `reload`, `cacheAsset`, `cacheEnabled`,
-		è¯·ä¸è¦ä½¿ç”¨è¿™äº›å­—æ®µä¸ºè‡ªå®šä¹‰å‚æ•°!
+		è¯·ä??è¦?ä½¿ç?¨è??äº?å­?æ®µä¸º??ªå??ä¹???????!
 		@param requests The request you want to load
 		@param options Optional parameters
 		@param onProgress Callback invoked when progression change
@@ -5992,8 +5992,8 @@ declare namespace cc {
 		to finish loading asset
 		
 		!#zh
-		é€šç”¨é¢„åŠ è½½èµ„æºæ¥å£ï¼Œå¯ä¼ å…¥è¿›åº¦å›è°ƒä»¥åŠå®Œæˆå›è°ƒï¼Œéå¸¸å»ºè®®ä½ ä½¿ç”¨æ›´ç®€å•çš„ API ï¼Œä¾‹å¦‚ `preloadRes`, `preloadResDir` ç­‰ã€‚`preloadAny` å’Œ `loadAny` å‡ ä¹ä¸€æ ·ï¼ŒåŒºåˆ«åœ¨äº `preloadAny` åªä¼šä¸‹è½½èµ„æºï¼Œä¸ä¼šå»è§£æèµ„æºï¼Œä½ éœ€è¦è°ƒç”¨ `cc.assetManager.loadAny(preloadTask)`
-		æ¥å®Œæˆèµ„æºåŠ è½½ã€‚
+		?????¨é?????è½½è??æº???¥å??ï¼???¯ä????¥è??åº¦å??è°?ä»¥å??å®???????è°?ï¼????å¸¸å»ºè®®ä??ä½¿ç?¨æ?´ç???????? API ï¼?ä¾?å¦? `preloadRes`, `preloadResDir` ç­????`preloadAny` ??? `loadAny` ???ä¹?ä¸???·ï????ºå?«å?¨ä?? `preloadAny` ??ªä??ä¸?è½½è??æº?ï¼?ä¸?ä¼???»è§£???èµ?æº?ï¼?ä½????è¦?è°???? `cc.assetManager.loadAny(preloadTask)`
+		??¥å?????èµ?æº????è½½ã??
 		@param requests The request you want to preload
 		@param options Optional parameters
 		@param onProgress Callback invoked when progression change
@@ -6015,7 +6015,7 @@ declare namespace cc {
 		Load native file of asset, if you check the option 'Async Load Assets', you may need to load native file with this before you use the asset
 		
 		!#zh
-		åŠ è½½èµ„æºçš„åŸç”Ÿæ–‡ä»¶ï¼Œå¦‚æœä½ å‹¾é€‰äº†'å»¶è¿ŸåŠ è½½èµ„æº'é€‰é¡¹ï¼Œä½ å¯èƒ½éœ€è¦åœ¨ä½¿ç”¨èµ„æºä¹‹å‰è°ƒç”¨æ­¤æ–¹æ³•æ¥åŠ è½½åŸç”Ÿæ–‡ä»¶
+		???è½½è??æº?????????????ä»¶ï??å¦????ä½???¾é??äº?'å»¶è?????è½½è??æº?'???é¡¹ï??ä½???¯è?½é??è¦???¨ä½¿??¨è??æº?ä¹????è°???¨æ­¤??¹æ????¥å??è½½å????????ä»?
 		@param asset The asset
 		@param options Some optional parameters
 		@param onComplete Callback invoked when finish loading
@@ -6034,7 +6034,7 @@ declare namespace cc {
 		Load remote asset with url, such as audio, image, text and so on.
 		
 		!#zh
-		ä½¿ç”¨ url åŠ è½½è¿œç¨‹èµ„æºï¼Œä¾‹å¦‚éŸ³é¢‘ï¼Œå›¾ç‰‡ï¼Œæ–‡æœ¬ç­‰ç­‰ã€‚
+		ä½¿ç?? url ???è½½è??ç¨?èµ?æº?ï¼?ä¾?å¦???³é??ï¼???¾ç??ï¼??????¬ç??ç­????
 		@param url The url of asset
 		@param options Some optional parameters
 		@param onComplete Callback invoked when finish loading
@@ -6055,7 +6055,7 @@ declare namespace cc {
 		Load script
 		
 		!#zh
-		åŠ è½½è„šæœ¬
+		???è½½è?????
 		@param url Url of the script
 		@param options Some optional paramters
 		@param onComplete Callback when script loaded or failed
@@ -6074,7 +6074,7 @@ declare namespace cc {
 		load bundle
 		
 		!#zh
-		åŠ è½½èµ„æºåŒ…
+		???è½½è??æº????
 		@param nameOrUrl The name or root path of bundle
 		@param options Some optional paramter, same like downloader.downloadFile
 		@param onComplete Callback when bundle loaded or failed
@@ -6096,9 +6096,9 @@ declare namespace cc {
 		Notice, this method may cause the texture to be unusable, if there are still other nodes use the same texture, they may turn to black and report gl errors.
 		
 		!#zh
-		é‡Šæ”¾èµ„æºä»¥åŠå…¶ä¾èµ–èµ„æº, è¿™ä¸ªæ–¹æ³•ä¸ä»…ä¼šä» assetManager ä¸­åˆ é™¤èµ„æºçš„ç¼“å­˜å¼•ç”¨ï¼Œè¿˜ä¼šæ¸…ç†å®ƒçš„èµ„æºå†…å®¹ã€‚
-		æ¯”å¦‚è¯´ï¼Œå½“ä½ é‡Šæ”¾ä¸€ä¸ª texture èµ„æºï¼Œè¿™ä¸ª texture å’Œå®ƒçš„ gl è´´å›¾æ•°æ®éƒ½ä¼šè¢«é‡Šæ”¾ã€‚
-		æ³¨æ„ï¼Œè¿™ä¸ªå‡½æ•°å¯èƒ½ä¼šå¯¼è‡´èµ„æºè´´å›¾æˆ–èµ„æºæ‰€ä¾èµ–çš„è´´å›¾ä¸å¯ç”¨ï¼Œå¦‚æœåœºæ™¯ä¸­å­˜åœ¨èŠ‚ç‚¹ä»ç„¶ä¾èµ–åŒæ ·çš„è´´å›¾ï¼Œå®ƒä»¬å¯èƒ½ä¼šå˜é»‘å¹¶æŠ¥ GL é”™è¯¯ã€‚
+		?????¾è??æº?ä»¥å????¶ä??èµ?èµ?æº?, è¿?ä¸ªæ?¹æ??ä¸?ä»?ä¼?ä»? assetManager ä¸­å????¤è??æº????ç¼?å­?å¼???¨ï??è¿?ä¼?æ¸????å®????èµ?æº????å®¹ã??
+		æ¯?å¦?è¯´ï??å½?ä½??????¾ä??ä¸? texture èµ?æº?ï¼?è¿?ä¸? texture ???å®???? gl è´´å?¾æ?°æ?®é?½ä??è¢«é????¾ã??
+		æ³¨æ??ï¼?è¿?ä¸ªå?½æ?°å?¯è?½ä??å¯¼è?´è??æº?è´´å?¾æ??èµ?æº????ä¾?èµ????è´´å?¾ä????¯ç?¨ï??å¦??????ºæ?¯ä¸­å­???¨è????¹ä????¶ä??èµ??????·ç??è´´å?¾ï??å®?ä»¬å?¯è?½ä?????é»?å¹¶æ?? GL ???è¯¯ã??
 		@param asset The asset to be released
 		
 		@example 
@@ -6113,7 +6113,7 @@ declare namespace cc {
 		Release all assets. Refer to {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} for detailed informations.
 		
 		!#zh
-		é‡Šæ”¾æ‰€æœ‰èµ„æºã€‚è¯¦ç»†ä¿¡æ¯è¯·å‚è€ƒ {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} 
+		?????¾æ?????èµ?æº????è¯¦ç??ä¿¡æ?¯è¯·?????? {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} 
 		*/
 		releaseAll(): void;	
 	}	
@@ -6277,11 +6277,11 @@ declare namespace cc {
 	- cc.Object._serialize<br/>
 	- cc.Object._deserialize<br/>
 	!#zh
-	Creator ä¸­çš„èµ„æºåŸºç±»ã€‚<br/>
+	Creator ä¸­ç??èµ?æº???ºç±»???<br/>
 	
-	æ‚¨å¯èƒ½éœ€è¦é‡å†™ï¼š<br/>
+	??¨å?¯è?½é??è¦???????ï¼?<br/>
 	- createNode <br/>
-	- _nativeAsset çš„ getset æ–¹æ³•<br/>
+	- _nativeAsset ??? getset ??¹æ??<br/>
 	- cc.Object._serialize<br/>
 	- cc.Object._deserialize<br/> */
 	export class Asset extends Object {		
@@ -6290,24 +6290,24 @@ declare namespace cc {
 		/** !#en
 		Whether the asset is loaded or not.
 		!#zh
-		è¯¥èµ„æºæ˜¯å¦å·²ç»æˆåŠŸåŠ è½½ã€‚ */
+		è¯¥è??æº???¯å?¦å·²ç»??????????è½½ã?? */
 		loaded: boolean;		
 		/** !#en
 		Returns the url of this asset's native object, if none it will returns an empty string.
 		!#zh
-		è¿”å›è¯¥èµ„æºå¯¹åº”çš„ç›®æ ‡å¹³å°èµ„æºçš„ URLï¼Œå¦‚æœæ²¡æœ‰å°†è¿”å›ä¸€ä¸ªç©ºå­—ç¬¦ä¸²ã€‚ */
+		è¿????è¯¥è??æº?å¯¹å???????®æ??å¹³å?°è??æº???? URLï¼?å¦????æ²¡æ??å°?è¿????ä¸?ä¸ªç©ºå­?ç¬¦ä¸²??? */
 		nativeUrl: string;		
 		/** !#en
 		The number of reference
 		
 		!#zh
-		å¼•ç”¨çš„æ•°é‡ */
+		å¼???¨ç????°é?? */
 		refCount: number;		
 		/** !#en Indicates whether its dependent raw assets can support deferred load if the owner scene (or prefab) is marked as `asyncLoadAssets`.
-		!#zh å½“åœºæ™¯æˆ– Prefab è¢«æ ‡è®°ä¸º `asyncLoadAssets`ï¼Œç¦æ­¢å»¶è¿ŸåŠ è½½è¯¥èµ„æºæ‰€ä¾èµ–çš„å…¶å®ƒåŸå§‹èµ„æºã€‚ */
+		!#zh å½???ºæ?¯æ?? Prefab è¢«æ??è®°ä¸º `asyncLoadAssets`ï¼?ç¦?æ­¢å»¶è¿????è½½è¯¥èµ?æº????ä¾?èµ??????¶å?????å§?èµ?æº???? */
 		static preventDeferredLoadDependents: boolean;		
 		/** !#en Indicates whether its native object should be preloaded from native url.
-		!#zh ç¦æ­¢é¢„åŠ è½½åŸç”Ÿå¯¹è±¡ã€‚ */
+		!#zh ç¦?æ­¢é?????è½½å?????å¯¹è±¡??? */
 		static preventPreloadNativeObject: boolean;		
 		/**
 		!#en
@@ -6317,11 +6317,11 @@ declare namespace cc {
 		For `Asset` objects, the `toString()` method returns a string representation of the object.
 		JavaScript calls the `toString()` method automatically when an asset is to be represented as a text value or when a texture is referred to in a string concatenation.
 		!#zh
-		è¿”å›èµ„æºçš„ URLã€‚
+		è¿????èµ?æº???? URL???
 		
-		Asset å¯¹è±¡å°†ä¼šé‡å†™ Object å¯¹è±¡çš„ `toString()` æ–¹æ³•ã€‚
-		å¯¹äº Asset å¯¹è±¡ï¼Œ`toString()` æ–¹æ³•è¿”å›è¯¥å¯¹è±¡çš„å­—ç¬¦ä¸²è¡¨ç¤ºå½¢å¼ã€‚
-		å½“èµ„æºè¦è¡¨ç¤ºä¸ºæ–‡æœ¬å€¼æ—¶æˆ–åœ¨å­—ç¬¦ä¸²è¿æ¥æ—¶å¼•ç”¨æ—¶ï¼ŒJavaScript ä¼šè‡ªåŠ¨è°ƒç”¨ `toString()` æ–¹æ³•ã€‚ 
+		Asset å¯¹è±¡å°?ä¼??????? Object å¯¹è±¡??? `toString()` ??¹æ?????
+		å¯¹ä?? Asset å¯¹è±¡ï¼?`toString()` ??¹æ??è¿????è¯¥å¯¹è±¡ç??å­?ç¬¦ä¸²è¡¨ç¤ºå½¢å?????
+		å½?èµ?æº?è¦?è¡¨ç¤ºä¸ºæ????¬å?¼æ?¶æ????¨å??ç¬¦ä¸²è¿???¥æ?¶å????¨æ?¶ï??JavaScript ä¼???ªå?¨è????? `toString()` ??¹æ????? 
 		*/
 		toString(): string;		
 		/**
@@ -6329,8 +6329,8 @@ declare namespace cc {
 		Create a new node using this asset in the scene.<br/>
 		If this type of asset dont have its corresponding node type, this method should be null.
 		!#zh
-		ä½¿ç”¨è¯¥èµ„æºåœ¨åœºæ™¯ä¸­åˆ›å»ºä¸€ä¸ªæ–°èŠ‚ç‚¹ã€‚<br/>
-		å¦‚æœè¿™ç±»èµ„æºæ²¡æœ‰ç›¸åº”çš„èŠ‚ç‚¹ç±»å‹ï¼Œè¯¥æ–¹æ³•åº”è¯¥æ˜¯ç©ºçš„ã€‚
+		ä½¿ç?¨è¯¥èµ?æº???¨å?ºæ?¯ä¸­???å»ºä??ä¸ªæ?°è????¹ã??<br/>
+		å¦????è¿?ç±»è??æº?æ²¡æ????¸å??????????¹ç±»???ï¼?è¯¥æ?¹æ??åº?è¯¥æ?¯ç©º??????
 		@param callback callback 
 		*/
 		createNode(callback: (error: string, node: any) => void): void;		
@@ -6339,7 +6339,7 @@ declare namespace cc {
 		Add references of asset
 		
 		!#zh
-		å¢åŠ èµ„æºçš„å¼•ç”¨ 
+		å¢????èµ?æº????å¼???? 
 		*/
 		addRef(): cc.Asset;		
 		/**
@@ -6347,7 +6347,7 @@ declare namespace cc {
 		Reduce references of asset and it will be auto released when refCount equals 0.
 		
 		!#zh
-		å‡å°‘èµ„æºçš„å¼•ç”¨å¹¶å°è¯•è¿›è¡Œè‡ªåŠ¨é‡Šæ”¾ã€‚ 
+		???å°?èµ?æº????å¼???¨å¹¶å°?è¯?è¿?è¡???ªå?¨é????¾ã?? 
 		*/
 		decRef(): cc.Asset;	
 	}	
@@ -6420,23 +6420,23 @@ declare namespace cc {
 		Though it might remove a real touch if it's just not moving for the last 5 seconds which is not easy with the sensibility of mobile touch screen.
 		You can modify this value to have a better behavior if you find it's not enough.
 		!#zh
-		ç”¨äºç”„åˆ«ä¸€ä¸ªè§¦ç‚¹å¯¹è±¡æ˜¯å¦å·²ç»å¤±æ•ˆå¹¶ä¸”å¯ä»¥è¢«ç§»é™¤çš„å»¶æ—¶æ—¶é•¿
-		æ·»åŠ è¿™ä¸ªæ—¶é•¿çš„åŸå› æ˜¯ X5 å†…æ ¸åœ¨å¾®ä¿¡æµè§ˆå™¨ä¸­å‡ºç°çš„ä¸€ä¸ª bugã€‚
-		åœ¨è¿™ä¸ªç¯å¢ƒä¸‹ï¼Œå¦‚æœç”¨æˆ·å°†ä¸€ä¸ªè§¦ç‚¹ä»åº•å‘ä¸Šç§»å‡ºé¡µé¢åŒºåŸŸï¼Œå°†ä¸ä¼šè§¦å‘ä»»ä½• touch cancel æˆ– touch end äº‹ä»¶ï¼Œè€Œè¿™ä¸ªè§¦ç‚¹ä¼šè¢«æ°¸è¿œå½“ä½œåœç•™åœ¨é¡µé¢ä¸Šçš„æœ‰æ•ˆè§¦ç‚¹ã€‚
-		é‡å¤è¿™æ ·æ“ä½œå‡ æ¬¡ä¹‹åï¼Œå±å¹•ä¸Šçš„è§¦ç‚¹æ•°é‡å°†è¾¾åˆ°æˆ‘ä»¬çš„äº‹ä»¶ç³»ç»Ÿæ‰€æ”¯æŒçš„æœ€é«˜è§¦ç‚¹æ•°é‡ï¼Œä¹‹åæ‰€æœ‰çš„è§¦æ‘¸äº‹ä»¶éƒ½å°†è¢«å¿½ç•¥ã€‚
-		æ‰€ä»¥è¿™ä¸ªæ–°çš„æœºåˆ¶å¯ä»¥åœ¨è§¦ç‚¹åœ¨ä¸€å®šæ—¶é—´å†…æ²¡æœ‰ä»»ä½•æ›´æ–°çš„æƒ…å†µä¸‹è§†ä¸ºå¤±æ•ˆè§¦ç‚¹å¹¶ä»äº‹ä»¶ç³»ç»Ÿä¸­ç§»é™¤ã€‚
-		å½“ç„¶ï¼Œè¿™ä¹Ÿå¯èƒ½ç§»é™¤ä¸€ä¸ªçœŸå®çš„è§¦ç‚¹ï¼Œå¦‚æœç”¨æˆ·çš„è§¦ç‚¹çœŸçš„åœ¨ä¸€å®šæ—¶é—´æ®µå†…å®Œå…¨æ²¡æœ‰ç§»åŠ¨ï¼ˆè¿™åœ¨å½“å‰æ‰‹æœºå±å¹•çš„çµæ•åº¦ä¸‹ä¼šå¾ˆéš¾ï¼‰ã€‚
-		ä½ å¯ä»¥ä¿®æ”¹è¿™ä¸ªå€¼æ¥è·å¾—ä½ éœ€è¦çš„æ•ˆæœï¼Œé»˜è®¤å€¼æ˜¯ 5000 æ¯«ç§’ã€‚ */
+		??¨ä???????«ä??ä¸ªè§¦??¹å¯¹è±¡æ?¯å?¦å·²ç»?å¤±æ??å¹¶ä????¯ä»¥è¢«ç§»??¤ç??å»¶æ?¶æ?¶é??
+		æ·»å??è¿?ä¸ªæ?¶é?¿ç??????????? X5 ?????¸å?¨å¾®ä¿¡æ??è§???¨ä¸­??ºç?°ç??ä¸?ä¸? bug???
+		??¨è??ä¸ªç?¯å??ä¸?ï¼?å¦??????¨æ?·å??ä¸?ä¸ªè§¦??¹ä??åº????ä¸?ç§»å?ºé¡µ??¢å?ºå??ï¼?å°?ä¸?ä¼?è§¦å??ä»»ä?? touch cancel ??? touch end äº?ä»¶ï?????è¿?ä¸ªè§¦??¹ä??è¢«æ°¸è¿?å½?ä½?????????¨é¡µ??¢ä???????????è§¦ç?¹ã??
+		???å¤?è¿???·æ??ä½????æ¬¡ä?????ï¼?å±?å¹?ä¸????è§¦ç?¹æ?°é??å°?è¾¾å?°æ??ä»¬ç??äº?ä»¶ç³»ç»??????¯æ????????é«?è§¦ç?¹æ?°é??ï¼?ä¹?????????????è§¦æ?¸ä??ä»¶é?½å??è¢«å¿½??¥ã??
+		???ä»¥è??ä¸ªæ?°ç????ºå?¶å?¯ä»¥??¨è§¦??¹å?¨ä??å®???¶é?´å??æ²¡æ??ä»»ä????´æ?°ç???????µä??è§?ä¸ºå¤±???è§¦ç?¹å¹¶ä»?äº?ä»¶ç³»ç»?ä¸­ç§»??¤ã??
+		å½???¶ï??è¿?ä¹???¯è?½ç§»??¤ä??ä¸ªç??å®????è§¦ç?¹ï??å¦??????¨æ?·ç??è§¦ç?¹ç???????¨ä??å®???¶é?´æ®µ???å®???¨æ²¡???ç§»å?¨ï??è¿???¨å??????????ºå??å¹??????µæ??åº¦ä??ä¼?å¾???¾ï?????
+		ä½???¯ä»¥ä¿®æ?¹è??ä¸ªå?¼æ?¥è?·å??ä½????è¦??????????ï¼?é»?è®¤å?¼æ?? 5000 æ¯«ç????? */
 		static TOUCH_TIMEOUT: number;		
 		/** !#en
 		The maximum vertex count for a single batched draw call.
 		!#zh
-		æœ€å¤§å¯ä»¥è¢«å•æ¬¡æ‰¹å¤„ç†æ¸²æŸ“çš„é¡¶ç‚¹æ•°é‡ã€‚ */
+		???å¤§å?¯ä»¥è¢«å??æ¬¡æ?¹å?????æ¸²æ?????é¡¶ç?¹æ?°é????? */
 		static BATCH_VERTEX_COUNT: number;		
 		/** !#en
 		Whether or not enabled tiled map auto culling. If you set the TiledMap skew or rotation, then need to manually disable this, otherwise, the rendering will be wrong.
 		!#zh
-		æ˜¯å¦å¼€å¯ç“¦ç‰‡åœ°å›¾çš„è‡ªåŠ¨è£å‡åŠŸèƒ½ã€‚ç“¦ç‰‡åœ°å›¾å¦‚æœè®¾ç½®äº† skew, rotation æˆ–è€…é‡‡ç”¨äº†æ‘„åƒæœºçš„è¯ï¼Œéœ€è¦æ‰‹åŠ¨å…³é—­ï¼Œå¦åˆ™æ¸²æŸ“ä¼šå‡ºé”™ã€‚ */
+		??¯å?¦å????¯ç?¦ç????°å?¾ç????ªå?¨è??????????½ã????¦ç????°å?¾å?????è®¾ç½®äº? skew, rotation ???????????¨ä??????????ºç??è¯?ï¼????è¦??????¨å?³é?­ï????¦å??æ¸²æ??ä¼???ºé????? */
 		static ENABLE_TILEDMAP_CULLING: boolean;		
 		/** !#en
 		Boolean that indicates if the canvas contains an alpha channel, default sets to false for better performance.
@@ -6444,9 +6444,9 @@ declare namespace cc {
 		you can set it to true before `cc.game.run`.
 		Web only.
 		!#zh
-		ç”¨äºè®¾ç½® Canvas èƒŒæ™¯æ˜¯å¦æ”¯æŒ alpha é€šé“ï¼Œé»˜è®¤ä¸º falseï¼Œè¿™æ ·å¯ä»¥æœ‰æ›´é«˜çš„æ€§èƒ½è¡¨ç°ã€‚
-		å¦‚æœä½ å¸Œæœ› Canvas èƒŒæ™¯æ˜¯é€æ˜çš„ï¼Œå¹¶æ˜¾ç¤ºèƒŒåçš„å…¶ä»– DOM å…ƒç´ ï¼Œä½ å¯ä»¥åœ¨ `cc.game.run` ä¹‹å‰å°†è¿™ä¸ªå€¼è®¾ä¸º trueã€‚
-		ä»…æ”¯æŒ Web */
+		??¨ä??è®¾ç½® Canvas ?????¯æ?¯å?¦æ?¯æ?? alpha ??????ï¼?é»?è®¤ä¸º falseï¼?è¿???·å?¯ä»¥?????´é???????§è?½è¡¨??°ã??
+		å¦????ä½?å¸???? Canvas ?????¯æ?¯é????????ï¼?å¹¶æ?¾ç¤º???????????¶ä?? DOM ???ç´?ï¼?ä½???¯ä»¥??? `cc.game.run` ä¹????å°?è¿?ä¸ªå?¼è®¾ä¸? true???
+		ä»???¯æ?? Web */
 		static ENABLE_TRANSPARENT_CANVAS: boolean;		
 		/** !#en
 		Boolean that indicates if the WebGL context is created with `antialias` option turned on, default value is false.
@@ -6458,12 +6458,12 @@ declare namespace cc {
 		You can set it to true before `cc.game.run`.
 		Web only.
 		!#zh
-		ç”¨äºè®¾ç½®åœ¨åˆ›å»º WebGL Context æ—¶æ˜¯å¦å¼€å¯æŠ—é”¯é½¿é€‰é¡¹ï¼Œé»˜è®¤å€¼æ˜¯ falseã€‚
-		å°†è¿™ä¸ªé€‰é¡¹è®¾ç½®ä¸º true ä¼šè®©ä½ çš„æ¸¸æˆç”»é¢ç¨ç¨å¹³æ»‘ä¸€äº›ï¼Œæ¯”å¦‚æ—‹è½¬ç¡¬è¾¹è´´å›¾æ—¶çš„é”¯é½¿ã€‚æ˜¯å¦å¼€å¯è¿™ä¸ªé€‰é¡¹å¾ˆå¤§ç¨‹åº¦ä¸Šå–å†³äºä½ çš„æ¸¸æˆå’Œé¢å‘çš„å¹³å°ã€‚
-		åœ¨å¤§å¤šæ•°æ‹¥æœ‰ retina çº§åˆ«å±å¹•çš„è®¾å¤‡ä¸Šç”¨æˆ·å¾€å¾€æ— æ³•åŒºåˆ†è¿™ä¸ªé€‰é¡¹å¸¦æ¥çš„å˜åŒ–ï¼›å¦‚æœä½ çš„æ¸¸æˆé€‰æ‹©åƒç´ è‰ºæœ¯é£æ ¼ï¼Œä½ ä¹Ÿå¤šåŠä¸ä¼šæƒ³å¼€å¯è¿™ä¸ªé€‰é¡¹ã€‚
-		åŒæ—¶ï¼Œåœ¨å°‘éƒ¨åˆ†ä½¿ç”¨è½¯ä»¶çº§åˆ«æŠ—é”¯é½¿ç®—æ³•çš„è®¾å¤‡æˆ–æµè§ˆå™¨ä¸Šï¼Œè¿™ä¸ªé€‰é¡¹ä¼šå¯¹æ€§èƒ½äº§ç”Ÿæ¯”è¾ƒå¤§çš„å½±å“ã€‚
-		ä½ å¯ä»¥åœ¨ `cc.game.run` ä¹‹å‰è®¾ç½®è¿™ä¸ªå€¼ï¼Œå¦åˆ™å®ƒä¸ä¼šç”Ÿæ•ˆã€‚
-		ä»…æ”¯æŒ Web */
+		??¨ä??è®¾ç½®??¨å??å»? WebGL Context ??¶æ?¯å?¦å????¯æ????¯é½¿???é¡¹ï??é»?è®¤å?¼æ?? false???
+		å°?è¿?ä¸ªé??é¡¹è®¾ç½®ä¸º true ä¼?è®©ä?????æ¸¸æ????»é?¢ç??ç¨?å¹³æ??ä¸?äº?ï¼?æ¯?å¦????è½¬ç¡¬è¾¹è´´??¾æ?¶ç????¯é½¿?????¯å?¦å????¯è??ä¸ªé??é¡¹å??å¤§ç??åº¦ä???????³ä??ä½????æ¸¸æ???????¢å?????å¹³å?°ã??
+		??¨å¤§å¤???°æ?¥æ?? retina çº§å?«å??å¹????è®¾å??ä¸???¨æ?·å??å¾????æ³???ºå??è¿?ä¸ªé??é¡¹å¸¦??¥ç????????ï¼?å¦????ä½????æ¸¸æ???????©å??ç´???ºæ?¯é????¼ï??ä½?ä¹?å¤????ä¸?ä¼???³å????¯è??ä¸ªé??é¡¹ã??
+		?????¶ï????¨å????¨å??ä½¿ç?¨è½¯ä»¶çº§??«æ????¯é½¿ç®?æ³????è®¾å?????æµ?è§???¨ä??ï¼?è¿?ä¸ªé??é¡¹ä??å¯¹æ?§è?½äº§???æ¯?è¾?å¤§ç??å½±å?????
+		ä½???¯ä»¥??? `cc.game.run` ä¹????è®¾ç½®è¿?ä¸ªå?¼ï????¦å??å®?ä¸?ä¼??????????
+		ä»???¯æ?? Web */
 		static ENABLE_WEBGL_ANTIALIAS: boolean;		
 		/** !#en
 		Whether or not enable auto culling.
@@ -6472,10 +6472,10 @@ declare namespace cc {
 		If your game have more dynamic objects, we suggest to disable auto culling.
 		If your game have more static objects, we suggest to enable auto culling.
 		!#zh
-		æ˜¯å¦å¼€å¯è‡ªåŠ¨è£å‡åŠŸèƒ½ï¼Œå¼€å¯è£å‡åŠŸèƒ½å°†ä¼šæŠŠåœ¨å±å¹•å¤–çš„ç‰©ä½“ä»æ¸²æŸ“é˜Ÿåˆ—ä¸­å»é™¤æ‰ã€‚
-		è¿™ä¸ªåŠŸèƒ½åœ¨ v2.0 çš„æ–°æ¸²æŸ“å™¨ä¸­è¢«ç§»é™¤äº†ï¼Œå› ä¸ºå®ƒåœ¨å¤§å¤šæ•°æ¸¸æˆä¸­æ‰€å¸¦æ¥çš„æŸè€—è¦é«˜äºæ€§èƒ½çš„æå‡ï¼Œç›®å‰æˆ‘ä»¬æ²¡æœ‰è®¡åˆ’é‡æ–°æ”¯æŒè‡ªåŠ¨è£å‰ªã€‚
-		å¦‚æœæ¸¸æˆä¸­çš„åŠ¨æ€ç‰©ä½“æ¯”è¾ƒå¤šçš„è¯ï¼Œå»ºè®®å°†æ­¤é€‰é¡¹å…³é—­ã€‚
-		å¦‚æœæ¸¸æˆä¸­çš„é™æ€ç‰©ä½“æ¯”è¾ƒå¤šçš„è¯ï¼Œå»ºè®®å°†æ­¤é€‰é¡¹æ‰“å¼€ã€‚ */
+		??¯å?¦å????¯è?ªå?¨è??????????½ï??å¼???¯è??????????½å??ä¼??????¨å??å¹?å¤??????©ä??ä»?æ¸²æ????????ä¸­å?»é?¤æ?????
+		è¿?ä¸ªå????½å?? v2.0 ?????°æ¸²?????¨ä¸­è¢«ç§»??¤ä??ï¼????ä¸ºå????¨å¤§å¤???°æ¸¸???ä¸­æ??å¸¦æ?¥ç????????è¦?é«?äº???§è?½ç????????ï¼???®å?????ä»¬æ²¡???è®¡å???????°æ?¯æ????ªå?¨è????ªã??
+		å¦????æ¸¸æ??ä¸­ç????¨æ????©ä??æ¯?è¾?å¤????è¯?ï¼?å»ºè®®å°?æ­¤é??é¡¹å?³é?­ã??
+		å¦????æ¸¸æ??ä¸­ç??????????©ä??æ¯?è¾?å¤????è¯?ï¼?å»ºè®®å°?æ­¤é??é¡¹æ??å¼???? */
 		static ENABLE_CULLING: boolean;		
 		/** !#en
 		Whether to clear the original image cache after uploaded a texture to GPU. If cleared, [Dynamic Atlas](https://docs.cocos.com/creator/manual/en/advanced-topics/dynamic-atlas.html) will not be supported.
@@ -6483,25 +6483,25 @@ declare namespace cc {
 		But on WeChat Game platform, the current version cache decoded data in Image object, which has high memory usage.
 		So we enabled this option by default on WeChat, so that we can release Image cache immediately after uploaded to GPU.
 		!#zh
-		æ˜¯å¦åœ¨å°†è´´å›¾ä¸Šä¼ è‡³ GPU ä¹‹ååˆ é™¤åŸå§‹å›¾ç‰‡ç¼“å­˜ï¼Œåˆ é™¤ä¹‹åå›¾ç‰‡å°†æ— æ³•è¿›è¡Œ [åŠ¨æ€åˆå›¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)ã€‚
-		åœ¨ Web å¹³å°ï¼Œä½ é€šå¸¸ä¸éœ€è¦å¼€å¯è¿™ä¸ªé€‰é¡¹ï¼Œå› ä¸ºåœ¨ Web å¹³å° Image å¯¹è±¡æ‰€å ç”¨çš„å†…å­˜å¾ˆå°ã€‚
-		ä½†æ˜¯åœ¨å¾®ä¿¡å°æ¸¸æˆå¹³å°çš„å½“å‰ç‰ˆæœ¬ï¼ŒImage å¯¹è±¡ä¼šç¼“å­˜è§£ç åçš„å›¾ç‰‡æ•°æ®ï¼Œå®ƒæ‰€å ç”¨çš„å†…å­˜ç©ºé—´å¾ˆå¤§ã€‚
-		æ‰€ä»¥æˆ‘ä»¬åœ¨å¾®ä¿¡å¹³å°é»˜è®¤å¼€å¯äº†è¿™ä¸ªé€‰é¡¹ï¼Œè¿™æ ·æˆ‘ä»¬å°±å¯ä»¥åœ¨ä¸Šä¼  GL è´´å›¾ä¹‹åç«‹å³é‡Šæ”¾ Image å¯¹è±¡çš„å†…å­˜ï¼Œé¿å…è¿‡é«˜çš„å†…å­˜å ç”¨ã€‚ */
+		??¯å?¦å?¨å??è´´å?¾ä??ä¼???? GPU ä¹?????????¤å??å§???¾ç??ç¼?å­?ï¼??????¤ä???????¾ç??å°????æ³?è¿?è¡? [??¨æ???????¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)???
+		??? Web å¹³å?°ï??ä½????å¸¸ä?????è¦?å¼???¯è??ä¸ªé??é¡¹ï?????ä¸ºå?? Web å¹³å?? Image å¯¹è±¡????????¨ç?????å­?å¾?å°????
+		ä½???¯å?¨å¾®ä¿¡å??æ¸¸æ??å¹³å?°ç??å½?????????¬ï??Image å¯¹è±¡ä¼?ç¼?å­?è§????????????¾ç????°æ?®ï??å®?????????¨ç?????å­?ç©ºé?´å??å¤§ã??
+		???ä»¥æ??ä»¬å?¨å¾®ä¿¡å¹³??°é??è®¤å????¯ä??è¿?ä¸ªé??é¡¹ï??è¿???·æ??ä»¬å°±??¯ä»¥??¨ä??ä¼? GL è´´å?¾ä?????ç«???³é????? Image å¯¹è±¡??????å­?ï¼???¿å??è¿?é«???????å­??????¨ã?? */
 		static CLEANUP_IMAGE_CACHE: boolean;		
 		/** !#en
 		Whether or not show mesh wire frame.
 		!#zh
-		æ˜¯å¦æ˜¾ç¤ºç½‘æ ¼çš„çº¿æ¡†ã€‚ */
+		??¯å?¦æ?¾ç¤ºç½???¼ç??çº¿æ????? */
 		static SHOW_MESH_WIREFRAME: boolean;		
 		/** !#en
 		Whether or not show mesh normal.
 		!#zh
-		æ˜¯å¦æ˜¾ç¤ºç½‘æ ¼çš„æ³•çº¿ã€‚ */
+		??¯å?¦æ?¾ç¤ºç½???¼ç??æ³?çº¿ã?? */
 		static SHOW_MESH_NORMAL: boolean;		
 		/** !#en
 		Whether to enable multi-touch.
 		!#zh
-		æ˜¯å¦å¼€å¯å¤šç‚¹è§¦æ‘¸ */
+		??¯å?¦å????¯å????¹è§¦??? */
 		static ENABLE_MULTI_TOUCH: boolean;		
 		/** References:
 		https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap
@@ -6511,31 +6511,31 @@ declare namespace cc {
 		Whether to use image bitmap first. If enabled, memory usage will increase.
 		
 		!#zh
-		æ˜¯å¦ä¼˜å…ˆä½¿ç”¨ image bitmapï¼Œå¯ç”¨ä¹‹åï¼Œå†…å­˜å ç”¨ä¼šå˜é«˜ */
+		??¯å?¦ä?????ä½¿ç?? image bitmapï¼???¯ç?¨ä?????ï¼????å­??????¨ä?????é«? */
 		static ALLOW_IMAGE_BITMAP: boolean;		
 		/** !#en
 		Whether to use native TTF renderer which is faster but layout slightly different.
 		
 		!#zh
-		æ˜¯å¦ä½¿ç”¨åŸç”Ÿçš„æ–‡æœ¬æ¸²æŸ“æœºåˆ¶, å¸ƒå±€å’Œç¼–è¾‘å™¨æœ‰å·®å¼‚. */
+		??¯å?¦ä½¿??¨å?????????????¬æ¸²?????ºå??, å¸?å±????ç¼?è¾???¨æ??å·®å??. */
 		static ENABLE_NATIVE_TTF_RENDERER: boolean;		
 		/** !#en
 		The image format supported by the engine defaults, and the supported formats may differ in different build platforms and device types.
-		Currently all platform and device support ['.webp', '.jpg', '.jpeg', '.bmp', '.png'], The iOS mobile platform also supports the PVR formatã€‚
+		Currently all platform and device support ['.webp', '.jpg', '.jpeg', '.bmp', '.png'], The iOS mobile platform also supports the PVR format???
 		!#zh
-		å¼•æ“é»˜è®¤æ”¯æŒçš„å›¾ç‰‡æ ¼å¼ï¼Œæ”¯æŒçš„æ ¼å¼å¯èƒ½åœ¨ä¸åŒçš„æ„å»ºå¹³å°å’Œè®¾å¤‡ç±»å‹ä¸Šæœ‰æ‰€å·®åˆ«ã€‚
-		ç›®å‰æ‰€æœ‰å¹³å°å’Œè®¾å¤‡æ”¯æŒçš„æ ¼å¼æœ‰ ['.webp', '.jpg', '.jpeg', '.bmp', '.png']. å¦å¤– Ios æ‰‹æœºå¹³å°è¿˜é¢å¤–æ”¯æŒäº† PVR æ ¼å¼ã€‚ */
+		å¼????é»?è®¤æ?¯æ???????¾ç????¼å??ï¼???¯æ???????¼å????¯è?½å?¨ä???????????å»ºå¹³??°å??è®¾å??ç±»å??ä¸???????å·®å?«ã??
+		??®å????????å¹³å?°å??è®¾å????¯æ???????¼å????? ['.webp', '.jpg', '.jpeg', '.bmp', '.png']. ??¦å?? Ios ?????ºå¹³??°è??é¢?å¤???¯æ??äº? PVR ??¼å????? */
 		static SUPPORT_TEXTURE_FORMATS: string[];	
 	}	
 	/** !#en Class for audio data handling.
-	!#zh éŸ³é¢‘èµ„æºç±»ã€‚ */
+	!#zh ??³é??èµ?æº?ç±»ã?? */
 	export class AudioClip extends Asset implements EventTarget {		
 		/** !#en Get the audio clip duration
-		!#zh è·å–éŸ³é¢‘å‰ªè¾‘çš„é•¿åº¦ */
+		!#zh ??·å????³é????ªè???????¿åº¦ */
 		duration: number;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -6544,7 +6544,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -6563,7 +6563,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -6586,9 +6586,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -6597,7 +6597,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -6615,7 +6615,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -6623,19 +6623,19 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Class for BitmapFont handling.
-	!#zh ä½å›¾å­—ä½“èµ„æºç±»ã€‚ */
+	!#zh ä½???¾å??ä½?èµ?æº?ç±»ã?? */
 	export class BitmapFont extends Font {	
 	}	
 	/** undefined */
 	export class BufferAsset extends Asset {	
 	}	
 	/** !#en Class for Font handling.
-	!#zh å­—ä½“èµ„æºç±»ã€‚ */
+	!#zh å­?ä½?èµ?æº?ç±»ã?? */
 	export class Font extends Asset {	
 	}	
 	/** !#en
@@ -6645,29 +6645,29 @@ declare namespace cc {
 	so that it is loaded as a `TextAsset` instead of a `JsonAsset`.
 	
 	!#zh
-	JSON èµ„æºç±»ã€‚JSON æ–‡ä»¶åŠ è½½åï¼Œå°†ä¼šè¿”å›è¯¥å¯¹è±¡ã€‚å¯ä»¥é€šè¿‡å…¶ä¸­çš„ `json` å±æ€§è®¿é—®è§£æåçš„ JSON å¯¹è±¡ã€‚<br>
-	å¦‚æœä½ æƒ³è¦è·å¾— JSON çš„åŸå§‹æ–‡æœ¬ï¼Œé‚£ä¹ˆåº”è¯¥ä¿®æ”¹æºæ–‡ä»¶çš„åç¼€ä¸º `.txt`ï¼Œè¿™æ ·å°±ä¼šåŠ è½½ä¸ºä¸€ä¸ª `TextAsset` è€Œä¸æ˜¯ `JsonAsset`ã€‚ */
+	JSON èµ?æº?ç±»ã??JSON ???ä»¶å??è½½å??ï¼?å°?ä¼?è¿????è¯¥å¯¹è±¡ã????¯ä»¥???è¿???¶ä¸­??? `json` å±???§è®¿??®è§£????????? JSON å¯¹è±¡???<br>
+	å¦????ä½???³è????·å?? JSON ??????å§??????¬ï?????ä¹?åº?è¯¥ä¿®??¹æ?????ä»¶ç?????ç¼?ä¸? `.txt`ï¼?è¿???·å°±ä¼????è½½ä¸ºä¸?ä¸? `TextAsset` ???ä¸???? `JsonAsset`??? */
 	export class JsonAsset extends Asset {		
 		/** The loaded JSON object. */
 		json: any;	
 	}	
 	/** !#en Class for LabelAtlas handling.
-	!#zh è‰ºæœ¯æ•°å­—å­—ä½“èµ„æºç±»ã€‚ */
+	!#zh ??ºæ?¯æ?°å??å­?ä½?èµ?æº?ç±»ã?? */
 	export class LabelAtlas extends BitmapFont {	
 	}	
 	/** !#en Class for prefab handling.
-	!#zh é¢„åˆ¶èµ„æºç±»ã€‚ */
+	!#zh é¢???¶è??æº?ç±»ã?? */
 	export class Prefab extends Asset {		
 		/** the main cc.Node in the prefab */
 		data: Node;		
 		/** !#zh
-		è®¾ç½®å®ä¾‹åŒ–è¿™ä¸ª prefab æ—¶æ‰€ç”¨çš„ä¼˜åŒ–ç­–ç•¥ã€‚æ ¹æ®ä½¿ç”¨æƒ…å†µè®¾ç½®ä¸ºåˆé€‚çš„å€¼ï¼Œèƒ½ä¼˜åŒ–è¯¥ prefab å®ä¾‹åŒ–æ‰€ç”¨çš„æ—¶é—´ã€‚
+		è®¾ç½®å®?ä¾????è¿?ä¸? prefab ??¶æ????¨ç??ä¼????ç­???¥ã????¹æ?®ä½¿??¨æ????µè®¾ç½®ä¸º???????????¼ï????½ä?????è¯? prefab å®?ä¾?????????¨ç????¶é?´ã??
 		!#en
 		Indicates the optimization policy for instantiating this prefab.
 		Set to a suitable value based on usage, can optimize the time it takes to instantiate this prefab. */
 		optimizationPolicy: Prefab.OptimizationPolicy;		
 		/** !#en Indicates the raw assets of this prefab can be load after prefab loaded.
-		!#zh æŒ‡ç¤ºè¯¥ Prefab ä¾èµ–çš„èµ„æºå¯å¦åœ¨ Prefab åŠ è½½åå†å»¶è¿ŸåŠ è½½ã€‚ */
+		!#zh ???ç¤ºè¯¥ Prefab ä¾?èµ????èµ?æº???¯å?¦å?? Prefab ???è½½å?????å»¶è?????è½½ã?? */
 		asyncLoadAssets: boolean;		
 		readonly: boolean;		
 		/**
@@ -6683,7 +6683,7 @@ declare namespace cc {
 		!#en
 		Init the render texture with size.
 		!#zh
-		åˆå§‹åŒ– render texture
+		???å§???? render texture
 		@param width width
 		@param height height
 		@param depthStencilFormat depthStencilFormat 
@@ -6692,13 +6692,13 @@ declare namespace cc {
 		/**
 		!#en
 		Get pixels from render texture, the pixels data stores in a RGBA Uint8Array.
-		It will return a new (width * height * 4) length Uint8Array by defaultã€‚
+		It will return a new (width * height * 4) length Uint8Array by default???
 		You can specify a data to store the pixels to reuse the data,
 		you and can specify other params to specify the texture region to read.
 		!#zh
-		ä» render texture è¯»å–åƒç´ æ•°æ®ï¼Œæ•°æ®ç±»å‹ä¸º RGBA æ ¼å¼çš„ Uint8Array æ•°ç»„ã€‚
-		é»˜è®¤æ¯æ¬¡è°ƒç”¨æ­¤å‡½æ•°ä¼šç”Ÿæˆä¸€ä¸ªå¤§å°ä¸º ï¼ˆé•¿ x é«˜ x 4ï¼‰ çš„ Uint8Arrayã€‚
-		ä½ å¯ä»¥é€šè¿‡ä¼ å…¥ data æ¥æ¥æ”¶åƒç´ æ•°æ®ï¼Œä¹Ÿå¯ä»¥é€šè¿‡ä¼ å‚æ¥æŒ‡å®šéœ€è¦è¯»å–çš„åŒºåŸŸçš„åƒç´ ã€‚
+		ä»? render texture è¯»å?????ç´???°æ?®ï????°æ?®ç±»???ä¸? RGBA ??¼å????? Uint8Array ??°ç?????
+		é»?è®¤æ??æ¬¡è????¨æ­¤??½æ?°ä????????ä¸?ä¸ªå¤§å°?ä¸? ï¼???? x é«? x 4ï¼? ??? Uint8Array???
+		ä½???¯ä»¥???è¿?ä¼???? data ??¥æ?¥æ?¶å??ç´???°æ?®ï??ä¹???¯ä»¥???è¿?ä¼??????¥æ??å®????è¦?è¯»å???????ºå????????ç´????
 		@param data data
 		@param x x
 		@param y y
@@ -6708,27 +6708,27 @@ declare namespace cc {
 		readPixels(data?: Uint8Array, x?: number, y?: number, w?: number, h?: number): Uint8Array;	
 	}	
 	/** !#en Class for scene handling.
-	!#zh åœºæ™¯èµ„æºç±»ã€‚ */
+	!#zh ??ºæ?¯è??æº?ç±»ã?? */
 	export class SceneAsset extends Asset {		
 		scene: Scene;		
 		/** !#en Indicates the raw assets of this scene can be load after scene launched.
-		!#zh æŒ‡ç¤ºè¯¥åœºæ™¯ä¾èµ–çš„èµ„æºå¯å¦åœ¨åœºæ™¯åˆ‡æ¢åå†å»¶è¿ŸåŠ è½½ã€‚ */
+		!#zh ???ç¤ºè¯¥??ºæ?¯ä??èµ????èµ?æº???¯å?¦å?¨å?ºæ?¯å????¢å?????å»¶è?????è½½ã?? */
 		asyncLoadAssets: boolean;	
 	}	
 	/** !#en Class for script handling.
-	!#zh Script èµ„æºç±»ã€‚ */
+	!#zh Script èµ?æº?ç±»ã?? */
 	export class _Script extends Asset {	
 	}	
 	/** !#en Class for JavaScript handling.
-	!#zh JavaScript èµ„æºç±»ã€‚ */
+	!#zh JavaScript èµ?æº?ç±»ã?? */
 	export class _JavaScript extends Asset {	
 	}	
 	/** !#en Class for TypeScript handling.
-	!#zh TypeScript èµ„æºç±»ã€‚ */
+	!#zh TypeScript èµ?æº?ç±»ã?? */
 	export class TypeScript extends Asset {	
 	}	
 	/** !#en Class for sprite atlas handling.
-	!#zh ç²¾çµå›¾é›†èµ„æºç±»ã€‚ */
+	!#zh ç²¾ç?µå?¾é??èµ?æº?ç±»ã?? */
 	export class SpriteAtlas extends Asset {		
 		/**
 		Returns the texture of the sprite atlas 
@@ -6750,27 +6750,27 @@ declare namespace cc {
 	 - rectangle: A rectangle of the texture
 	
 	!#zh
-	ä¸€ä¸ª SpriteFrame åŒ…å«ï¼š<br/>
-	 - çº¹ç†ï¼šä¼šè¢«æ¸²æŸ“ç»„ä»¶ä½¿ç”¨çš„ Texture2D å¯¹è±¡ã€‚<br/>
-	 - çŸ©å½¢ï¼šåœ¨çº¹ç†ä¸­çš„çŸ©å½¢åŒºåŸŸã€‚ */
+	ä¸?ä¸? SpriteFrame ?????«ï??<br/>
+	 - çº¹ç??ï¼?ä¼?è¢«æ¸²???ç»?ä»¶ä½¿??¨ç?? Texture2D å¯¹è±¡???<br/>
+	 - ??©å½¢ï¼???¨çº¹???ä¸­ç????©å½¢??ºå????? */
 	export class SpriteFrame extends Asset implements EventTarget {		
 		/** !#en Top border of the sprite
-		!#zh sprite çš„é¡¶éƒ¨è¾¹æ¡† */
+		!#zh sprite ???é¡¶é?¨è¾¹æ¡? */
 		insetTop: number;		
 		/** !#en Bottom border of the sprite
-		!#zh sprite çš„åº•éƒ¨è¾¹æ¡† */
+		!#zh sprite ???åº???¨è¾¹æ¡? */
 		insetBottom: number;		
 		/** !#en Left border of the sprite
-		!#zh sprite çš„å·¦è¾¹è¾¹æ¡† */
+		!#zh sprite ???å·¦è¾¹è¾¹æ?? */
 		insetLeft: number;		
 		/** !#en Right border of the sprite
-		!#zh sprite çš„å·¦è¾¹è¾¹æ¡† */
+		!#zh sprite ???å·¦è¾¹è¾¹æ?? */
 		insetRight: number;		
 		/**
 		!#en
 		Constructor of SpriteFrame class.
 		!#zh
-		SpriteFrame ç±»çš„æ„é€ å‡½æ•°ã€‚
+		SpriteFrame ç±»ç??????????½æ?°ã??
 		@param filename filename
 		@param rect rect
 		@param rotated Whether the frame is rotated in the texture
@@ -6780,88 +6780,88 @@ declare namespace cc {
 		constructor(filename?: string|Texture2D, rect?: Rect, rotated?: boolean, offset?: Vec2, originalSize?: Size);		
 		/**
 		!#en Returns whether the texture have been loaded
-		!#zh è¿”å›æ˜¯å¦å·²åŠ è½½çº¹ç† 
+		!#zh è¿??????¯å?¦å·²???è½½çº¹??? 
 		*/
 		textureLoaded(): boolean;		
 		/**
 		!#en Returns whether the sprite frame is rotated in the texture.
-		!#zh è·å– SpriteFrame æ˜¯å¦æ—‹è½¬ 
+		!#zh ??·å?? SpriteFrame ??¯å?¦æ??è½? 
 		*/
 		isRotated(): boolean;		
 		/**
 		!#en Set whether the sprite frame is rotated in the texture.
-		!#zh è®¾ç½® SpriteFrame æ˜¯å¦æ—‹è½¬
+		!#zh è®¾ç½® SpriteFrame ??¯å?¦æ??è½?
 		@param bRotated bRotated 
 		*/
 		setRotated(bRotated: boolean): void;		
 		/**
 		!#en Returns whether the sprite frame is flip x axis in the texture.
-		!#zh è·å– SpriteFrame æ˜¯å¦åè½¬ x è½´ 
+		!#zh ??·å?? SpriteFrame ??¯å?¦å??è½? x è½? 
 		*/
 		isFlipX(): boolean;		
 		/**
 		!#en Returns whether the sprite frame is flip y axis in the texture.
-		!#zh è·å– SpriteFrame æ˜¯å¦åè½¬ y è½´ 
+		!#zh ??·å?? SpriteFrame ??¯å?¦å??è½? y è½? 
 		*/
 		isFlipY(): boolean;		
 		/**
 		!#en Set whether the sprite frame is flip x axis in the texture.
-		!#zh è®¾ç½® SpriteFrame æ˜¯å¦ç¿»è½¬ x è½´
+		!#zh è®¾ç½® SpriteFrame ??¯å?¦ç¿»è½? x è½?
 		@param flipX flipX 
 		*/
 		setFlipX(flipX: boolean): void;		
 		/**
 		!#en Set whether the sprite frame is flip y axis in the texture.
-		!#zh è®¾ç½® SpriteFrame æ˜¯å¦ç¿»è½¬ y è½´
+		!#zh è®¾ç½® SpriteFrame ??¯å?¦ç¿»è½? y è½?
 		@param flipY flipY 
 		*/
 		setFlipY(flipY: boolean): void;		
 		/**
 		!#en Returns the rect of the sprite frame in the texture.
-		!#zh è·å– SpriteFrame çš„çº¹ç†çŸ©å½¢åŒºåŸŸ 
+		!#zh ??·å?? SpriteFrame ???çº¹ç????©å½¢??ºå?? 
 		*/
 		getRect(): Rect;		
 		/**
 		!#en Sets the rect of the sprite frame in the texture.
-		!#zh è®¾ç½® SpriteFrame çš„çº¹ç†çŸ©å½¢åŒºåŸŸ
+		!#zh è®¾ç½® SpriteFrame ???çº¹ç????©å½¢??ºå??
 		@param rect rect 
 		*/
 		setRect(rect: Rect): void;		
 		/**
 		!#en Returns the original size of the trimmed image.
-		!#zh è·å–ä¿®å‰ªå‰çš„åŸå§‹å¤§å° 
+		!#zh ??·å??ä¿®å?ªå????????å§?å¤§å?? 
 		*/
 		getOriginalSize(): Size;		
 		/**
 		!#en Sets the original size of the trimmed image.
-		!#zh è®¾ç½®ä¿®å‰ªå‰çš„åŸå§‹å¤§å°
+		!#zh è®¾ç½®ä¿®å?ªå????????å§?å¤§å??
 		@param size size 
 		*/
 		setOriginalSize(size: Size): void;		
 		/**
 		!#en Returns the texture of the frame.
-		!#zh è·å–ä½¿ç”¨çš„çº¹ç†å®ä¾‹ 
+		!#zh ??·å??ä½¿ç?¨ç??çº¹ç??å®?ä¾? 
 		*/
 		getTexture(): Texture2D;		
 		/**
 		!#en Returns the offset of the frame in the texture.
-		!#zh è·å–åç§»é‡ 
+		!#zh ??·å?????ç§»é?? 
 		*/
 		getOffset(): Vec2;		
 		/**
 		!#en Sets the offset of the frame in the texture.
-		!#zh è®¾ç½®åç§»é‡
+		!#zh è®¾ç½®???ç§»é??
 		@param offsets offsets 
 		*/
 		setOffset(offsets: Vec2): void;		
 		/**
 		!#en Clone the sprite frame.
-		!#zh å…‹éš† SpriteFrame 
+		!#zh ?????? SpriteFrame 
 		*/
 		clone(): SpriteFrame;		
 		/**
 		!#en Set SpriteFrame with Texture, rect, rotated, offset and originalSize.<br/>
-		!#zh é€šè¿‡ Textureï¼Œrectï¼Œrotatedï¼Œoffset å’Œ originalSize è®¾ç½® SpriteFrameã€‚
+		!#zh ???è¿? Textureï¼?rectï¼?rotatedï¼?offset ??? originalSize è®¾ç½® SpriteFrame???
 		@param texture texture
 		@param rect rect
 		@param rotated rotated
@@ -6874,8 +6874,8 @@ declare namespace cc {
 		associated by user's custom Components in the scene, will not preload automatically.
 		These textures will be load when Sprite component is going to render the SpriteFrames.
 		You can call this method if you want to load the texture early.
-		!#zh å½“åŠ è½½ä¸­çš„åœºæ™¯æˆ– Prefab è¢«æ ‡è®°ä¸º `asyncLoadAssets` æ—¶ï¼Œç”¨æˆ·åœ¨åœºæ™¯ä¸­ç”±è‡ªå®šä¹‰ç»„ä»¶å…³è”åˆ°çš„æ‰€æœ‰ SpriteFrame çš„è´´å›¾éƒ½ä¸ä¼šè¢«æå‰åŠ è½½ã€‚
-		åªæœ‰å½“ Sprite ç»„ä»¶è¦æ¸²æŸ“è¿™äº› SpriteFrame æ—¶ï¼Œæ‰ä¼šæ£€æŸ¥è´´å›¾æ˜¯å¦åŠ è½½ã€‚å¦‚æœä½ å¸Œæœ›åŠ è½½è¿‡ç¨‹æå‰ï¼Œä½ å¯ä»¥æ‰‹å·¥è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚
+		!#zh å½????è½½ä¸­?????ºæ?¯æ?? Prefab è¢«æ??è®°ä¸º `asyncLoadAssets` ??¶ï????¨æ?·å?¨å?ºæ?¯ä¸­??±è?ªå??ä¹?ç»?ä»¶å?³è????°ç???????? SpriteFrame ???è´´å?¾é?½ä??ä¼?è¢«æ????????è½½ã??
+		??ªæ??å½? Sprite ç»?ä»¶è??æ¸²æ??è¿?äº? SpriteFrame ??¶ï?????ä¼?æ£???¥è´´??¾æ?¯å?¦å??è½½ã??å¦????ä½?å¸???????è½½è??ç¨???????ï¼?ä½???¯ä»¥???å·¥è????¨è??ä¸ªæ?¹æ?????
 		
 		@example 
 		```js
@@ -6893,12 +6893,12 @@ declare namespace cc {
 		!#en
 		If you do not need to use the SpriteFrame temporarily, you can call this method so that its texture could be garbage collected. Then when you need to render the SpriteFrame, you should call `ensureLoadTexture` manually to reload texture.
 		!#zh
-		å½“ä½ æš‚æ—¶ä¸å†ä½¿ç”¨è¿™ä¸ª SpriteFrame æ—¶ï¼Œå¯ä»¥è°ƒç”¨è¿™ä¸ªæ–¹æ³•æ¥ä¿è¯å¼•ç”¨çš„è´´å›¾å¯¹è±¡èƒ½è¢« GCã€‚ç„¶åå½“ä½ è¦æ¸²æŸ“ SpriteFrame æ—¶ï¼Œä½ éœ€è¦æ‰‹åŠ¨è°ƒç”¨ `ensureLoadTexture` æ¥é‡æ–°åŠ è½½è´´å›¾ã€‚ 
+		å½?ä½??????¶ä?????ä½¿ç?¨è??ä¸? SpriteFrame ??¶ï????¯ä»¥è°???¨è??ä¸ªæ?¹æ????¥ä??è¯?å¼???¨ç??è´´å?¾å¯¹è±¡è?½è¢« GC?????¶å??å½?ä½?è¦?æ¸²æ?? SpriteFrame ??¶ï??ä½????è¦??????¨è????? `ensureLoadTexture` ??¥é????°å??è½½è´´??¾ã?? 
 		*/
 		clearTexture(): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -6907,7 +6907,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -6926,7 +6926,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -6949,9 +6949,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -6960,7 +6960,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -6978,7 +6978,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -6986,16 +6986,16 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Class for TTFFont handling.
-	!#zh TTF å­—ä½“èµ„æºç±»ã€‚ */
+	!#zh TTF å­?ä½?èµ?æº?ç±»ã?? */
 	export class TTFFont extends Font {	
 	}	
 	/** !#en Class for text file.
-	!#zh æ–‡æœ¬èµ„æºç±»ã€‚ */
+	!#zh ?????¬è??æº?ç±»ã?? */
 	export class TextAsset extends Asset {		
 		/** The text contents of the resource. */
 		text: string;	
@@ -7003,35 +7003,35 @@ declare namespace cc {
 	/** This class allows to easily create OpenGL or Canvas 2D textures from images or raw data. */
 	export class Texture2D extends Asset implements EventTarget {		
 		/** !#en Sets whether generate mipmaps for the texture
-		!#zh æ˜¯å¦ä¸ºçº¹ç†è®¾ç½®ç”Ÿæˆ mipmapsã€‚ */
+		!#zh ??¯å?¦ä¸ºçº¹ç??è®¾ç½®?????? mipmaps??? */
 		genMipmaps: boolean;		
 		/** !#en
 		Sets whether texture can be packed into texture atlas.
 		If need use texture uv in custom Effect, please sets packable to false.
 		!#zh
-		è®¾ç½®çº¹ç†æ˜¯å¦å…è®¸å‚ä¸åˆå›¾ã€‚
-		å¦‚æœéœ€è¦åœ¨è‡ªå®šä¹‰ Effect ä¸­ä½¿ç”¨çº¹ç† UVï¼Œéœ€è¦ç¦æ­¢è¯¥é€‰é¡¹ã€‚ */
+		è®¾ç½®çº¹ç????¯å?¦å??è®¸å??ä¸??????¾ã??
+		å¦???????è¦???¨è?ªå??ä¹? Effect ä¸­ä½¿??¨çº¹??? UVï¼????è¦?ç¦?æ­¢è¯¥???é¡¹ã?? */
 		packable: boolean;		
 		/** !#en
 		Whether the texture is loaded or not
 		!#zh
-		è´´å›¾æ˜¯å¦å·²ç»æˆåŠŸåŠ è½½ */
+		è´´å?¾æ?¯å?¦å·²ç»??????????è½? */
 		loaded: boolean;		
 		/** !#en
 		Texture width in pixel
 		!#zh
-		è´´å›¾åƒç´ å®½åº¦ */
+		è´´å?¾å??ç´?å®½åº¦ */
 		width: number;		
 		/** !#en
 		Texture height in pixel
 		!#zh
-		è´´å›¾åƒç´ é«˜åº¦ */
+		è´´å?¾å??ç´?é«?åº? */
 		height: number;		
 		/**
 		!#en
 		Get renderer texture implementation object
 		extended from render.Texture2D
-		!#zh  è¿”å›æ¸²æŸ“å™¨å†…éƒ¨è´´å›¾å¯¹è±¡ 
+		!#zh  è¿????æ¸²æ????¨å????¨è´´??¾å¯¹è±? 
 		*/
 		getImpl(): void;		
 		/**
@@ -7043,7 +7043,7 @@ declare namespace cc {
 		/**
 		!#en
 		Init with HTML element.
-		!#zh ç”¨ HTML Image æˆ– Canvas å¯¹è±¡åˆå§‹åŒ–è´´å›¾ã€‚
+		!#zh ??? HTML Image ??? Canvas å¯¹è±¡???å§????è´´å?¾ã??
 		@param element element
 		
 		@example 
@@ -7057,7 +7057,7 @@ declare namespace cc {
 		/**
 		!#en
 		Intializes with texture data in ArrayBufferView.
-		!#zh ä½¿ç”¨ä¸€ä¸ªå­˜å‚¨åœ¨ ArrayBufferView ä¸­çš„å›¾åƒæ•°æ®ï¼ˆraw dataï¼‰åˆå§‹åŒ–æ•°æ®ã€‚
+		!#zh ä½¿ç?¨ä??ä¸ªå????¨å?? ArrayBufferView ä¸­ç????¾å????°æ?®ï??raw dataï¼????å§??????°æ?®ã??
 		@param data data
 		@param pixelFormat pixelFormat
 		@param pixelsWidth pixelsWidth
@@ -7069,9 +7069,9 @@ declare namespace cc {
 		HTMLElement Object getter, available only on web.<br/>
 		Note: texture is packed into texture atlas by default<br/>
 		you should set texture.packable as false before getting Html element object.
-		!#zh è·å–å½“å‰è´´å›¾å¯¹åº”çš„ HTML Image æˆ– Canvas å¯¹è±¡ï¼Œåªåœ¨ Web å¹³å°ä¸‹æœ‰æ•ˆã€‚<br/>
-		æ³¨æ„ï¼š<br/>
-		texture é»˜è®¤å‚ä¸åŠ¨æ€åˆå›¾ï¼Œå¦‚æœéœ€è¦è·å–åˆ°æ­£ç¡®çš„ Html å…ƒç´ å¯¹è±¡ï¼Œéœ€è¦å…ˆè®¾ç½® texture.packable ä¸º false 
+		!#zh ??·å??å½????è´´å?¾å¯¹åº???? HTML Image ??? Canvas å¯¹è±¡ï¼???ªå?? Web å¹³å?°ä???????????<br/>
+		æ³¨æ??ï¼?<br/>
+		texture é»?è®¤å??ä¸???¨æ???????¾ï??å¦???????è¦???·å????°æ­£ç¡®ç?? Html ???ç´?å¯¹è±¡ï¼????è¦????è®¾ç½® texture.packable ä¸? false 
 		*/
 		getHtmlElementObj(): HTMLImageElement;		
 		/**
@@ -7080,54 +7080,54 @@ declare namespace cc {
 		After destroy, this object is not usable anymore.
 		You can use cc.isValid(obj) to check whether the object is destroyed before accessing it.
 		!#zh
-		é”€æ¯è¯¥è´´å›¾ï¼Œå¹¶ç«‹å³é‡Šæ”¾å®ƒå¯¹åº”çš„æ˜¾å­˜ã€‚ï¼ˆç»§æ‰¿è‡ª cc.Object.destroyï¼‰<br/>
-		é”€æ¯åï¼Œè¯¥å¯¹è±¡ä¸å†å¯ç”¨ã€‚æ‚¨å¯ä»¥åœ¨è®¿é—®å¯¹è±¡ä¹‹å‰ä½¿ç”¨ cc.isValid(obj) æ¥æ£€æŸ¥å¯¹è±¡æ˜¯å¦å·²è¢«é”€æ¯ã€‚ 
+		???æ¯?è¯¥è´´??¾ï??å¹¶ç????³é????¾å??å¯¹å???????¾å?????ï¼?ç»§æ?¿è?? cc.Object.destroyï¼?<br/>
+		???æ¯????ï¼?è¯¥å¯¹è±¡ä???????¯ç?¨ã????¨å?¯ä»¥??¨è®¿??®å¯¹è±¡ä?????ä½¿ç?? cc.isValid(obj) ??¥æ????¥å¯¹è±¡æ?¯å?¦å·²è¢«é??æ¯???? 
 		*/
 		destroy(): boolean;		
 		/**
 		!#en
 		Pixel format of the texture.
-		!#zh è·å–çº¹ç†çš„åƒç´ æ ¼å¼ã€‚ 
+		!#zh ??·å??çº¹ç????????ç´???¼å????? 
 		*/
 		getPixelFormat(): number;		
 		/**
 		!#en
 		Whether or not the texture has their Alpha premultiplied.
-		!#zh æ£€æŸ¥çº¹ç†åœ¨ä¸Šä¼  GPU æ—¶é¢„ä¹˜é€‰é¡¹æ˜¯å¦å¼€å¯ã€‚ 
+		!#zh æ£???¥çº¹?????¨ä??ä¼? GPU ??¶é??ä¹????é¡¹æ?¯å?¦å????¯ã?? 
 		*/
 		hasPremultipliedAlpha(): boolean;		
 		/**
 		!#en
 		Handler of texture loaded event.
 		Since v2.0, you don't need to invoke this function, it will be invoked automatically after texture loaded.
-		!#zh è´´å›¾åŠ è½½äº‹ä»¶å¤„ç†å™¨ã€‚v2.0 ä¹‹åä½ å°†ä¸åœ¨éœ€è¦æ‰‹åŠ¨æ‰§è¡Œè¿™ä¸ªå‡½æ•°ï¼Œå®ƒä¼šåœ¨è´´å›¾åŠ è½½æˆåŠŸä¹‹åè‡ªåŠ¨æ‰§è¡Œã€‚
+		!#zh è´´å?¾å??è½½ä??ä»¶å???????¨ã??v2.0 ä¹????ä½?å°?ä¸???¨é??è¦??????¨æ?§è??è¿?ä¸ªå?½æ?°ï??å®?ä¼???¨è´´??¾å??è½½æ?????ä¹??????ªå?¨æ?§è?????
 		@param premultiplied premultiplied 
 		*/
 		handleLoadedTexture(premultiplied?: boolean): void;		
 		/**
 		!#en
 		Description of cc.Texture2D.
-		!#zh cc.Texture2D æè¿°ã€‚ 
+		!#zh cc.Texture2D ???è¿°ã?? 
 		*/
 		description(): string;		
 		/**
 		!#en
 		Release texture, please use destroy instead.
-		!#zh é‡Šæ”¾çº¹ç†ï¼Œè¯·ä½¿ç”¨ destroy æ›¿ä»£ã€‚ 
+		!#zh ?????¾çº¹???ï¼?è¯·ä½¿??? destroy ??¿ä»£??? 
 		*/
 		releaseTexture(): void;		
 		/**
 		!#en Sets the wrap s and wrap t options. <br/>
 		If the texture size is NPOT (non power of 2), then in can only use gl.CLAMP_TO_EDGE in gl.TEXTURE_WRAP_{S,T}.
-		!#zh è®¾ç½®çº¹ç†åŒ…è£…æ¨¡å¼ã€‚
-		è‹¥çº¹ç†è´´å›¾å°ºå¯¸æ˜¯ NPOTï¼ˆnon power of 2ï¼‰ï¼Œåˆ™åªèƒ½ä½¿ç”¨ Texture2D.WrapMode.CLAMP_TO_EDGEã€‚
+		!#zh è®¾ç½®çº¹ç?????è£?æ¨¡å?????
+		??¥çº¹???è´´å?¾å°ºå¯¸æ?? NPOTï¼?non power of 2ï¼?ï¼??????ªè?½ä½¿??? Texture2D.WrapMode.CLAMP_TO_EDGE???
 		@param wrapS wrapS
 		@param wrapT wrapT 
 		*/
 		setWrapMode(wrapS: Texture2D.WrapMode, wrapT: Texture2D.WrapMode): void;		
 		/**
 		!#en Sets the minFilter and magFilter options
-		!#zh è®¾ç½®çº¹ç†è´´å›¾ç¼©å°å’Œæ”¾å¤§è¿‡æ»¤å™¨ç®—æ³•é€‰é¡¹ã€‚
+		!#zh è®¾ç½®çº¹ç??è´´å?¾ç¼©å°??????¾å¤§è¿?æ»¤å?¨ç??æ³????é¡¹ã??
 		@param minFilter minFilter
 		@param magFilter magFilter 
 		*/
@@ -7135,20 +7135,20 @@ declare namespace cc {
 		/**
 		!#en
 		Sets the flipY options
-		!#zh è®¾ç½®è´´å›¾çš„çºµå‘ç¿»è½¬é€‰é¡¹ã€‚
+		!#zh è®¾ç½®è´´å?¾ç??çºµå??ç¿»è½¬???é¡¹ã??
 		@param flipY flipY 
 		*/
 		setFlipY(flipY: boolean): void;		
 		/**
 		!#en
 		Sets the premultiply alpha options
-		!#zh è®¾ç½®è´´å›¾çš„é¢„ä¹˜é€‰é¡¹ã€‚
+		!#zh è®¾ç½®è´´å?¾ç??é¢?ä¹????é¡¹ã??
 		@param premultiply premultiply 
 		*/
 		setPremultiplyAlpha(premultiply: boolean): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -7157,7 +7157,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7176,7 +7176,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -7199,9 +7199,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -7210,7 +7210,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7228,7 +7228,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -7236,104 +7236,104 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Box Collider.
-	!#zh åŒ…å›´ç›’ç¢°æ’ç»„ä»¶ */
+	!#zh ?????´ç??ç¢°æ??ç»?ä»? */
 	export class BoxCollider extends Collider implements Collider.Box {		
 		/** !#en
 		Collider info in world coordinate.
 		!#zh
-		ç¢°æ’ä½“çš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ä¿¡æ¯ã€‚ */
+		ç¢°æ??ä½????ä¸??????????ç³»ä?????ä¿¡æ?¯ã?? */
 		world: ColliderInfo;		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Box size
-		!#zh åŒ…å›´ç›’å¤§å° */
+		!#zh ?????´ç??å¤§å?? */
 		size: Size;	
 	}	
 	/** !#en Circle Collider.
-	!#zh åœ†å½¢ç¢°æ’ç»„ä»¶ */
+	!#zh ???å½¢ç¢°???ç»?ä»? */
 	export class CircleCollider extends Collider implements Collider.Circle {		
 		/** !#en
 		Collider info in world coordinate.
 		!#zh
-		ç¢°æ’ä½“çš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ä¿¡æ¯ã€‚ */
+		ç¢°æ??ä½????ä¸??????????ç³»ä?????ä¿¡æ?¯ã?? */
 		world: ColliderInfo;		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Circle radius
-		!#zh åœ†å½¢åŠå¾„ */
+		!#zh ???å½¢å??å¾? */
 		radius: number;	
 	}	
 	/** !#en Collider component base class.
-	!#zh ç¢°æ’ç»„ä»¶åŸºç±» */
+	!#zh ç¢°æ??ç»?ä»¶å?ºç±» */
 	export class Collider extends Component {		
 		/** !#en Tag. If a node has several collider components, you can judge which type of collider is collided according to the tag.
-		!#zh æ ‡ç­¾ã€‚å½“ä¸€ä¸ªèŠ‚ç‚¹ä¸Šæœ‰å¤šä¸ªç¢°æ’ç»„ä»¶æ—¶ï¼Œåœ¨å‘ç”Ÿç¢°æ’åï¼Œå¯ä»¥ä½¿ç”¨æ­¤æ ‡ç­¾æ¥åˆ¤æ–­æ˜¯èŠ‚ç‚¹ä¸Šçš„å“ªä¸ªç¢°æ’ç»„ä»¶è¢«ç¢°æ’äº†ã€‚ */
+		!#zh ???ç­¾ã??å½?ä¸?ä¸ªè????¹ä?????å¤?ä¸ªç¢°???ç»?ä»¶æ?¶ï????¨å?????ç¢°æ?????ï¼???¯ä»¥ä½¿ç?¨æ­¤???ç­¾æ?¥å?¤æ?­æ?¯è????¹ä???????ªä¸ªç¢°æ??ç»?ä»¶è¢«ç¢°æ??äº???? */
 		tag: number;	
 	}	
 	/** !#en
 	Collider Info.
 	!#zh
-	ç¢°æ’ä½“ä¿¡æ¯ã€‚ */
+	ç¢°æ??ä½?ä¿¡æ?¯ã?? */
 	export class ColliderInfo {		
 		/** !#en
 		Collider aabb information of last frame
 		!#zh
-		ç¢°æ’ä½“ä¸Šä¸€å¸§çš„ aabb ä¿¡æ¯ */
+		ç¢°æ??ä½?ä¸?ä¸?å¸§ç?? aabb ä¿¡æ?? */
 		preAabb: Rect;		
 		/** !#en
 		Collider aabb information of current frame
 		!#zh
-		ç¢°æ’ä½“å½“å‰å¸§çš„ aabb ä¿¡æ¯ */
+		ç¢°æ??ä½?å½????å¸§ç?? aabb ä¿¡æ?? */
 		aabb: Rect;		
 		/** !#en
 		Collider matrix
 		!#zh
-		ç¢°æ’ä½“çš„çŸ©é˜µä¿¡æ¯ */
+		ç¢°æ??ä½??????©é?µä¿¡??? */
 		matrix: Mat4;		
 		/** !#en
 		Collider radius (for CircleCollider)
 		!#zh
-		ç¢°æ’ä½“çš„åŠå¾„ï¼ˆåªå¯¹ CircleCollider æœ‰æ•ˆï¼‰ */
+		ç¢°æ??ä½???????å¾?ï¼???ªå¯¹ CircleCollider ??????ï¼? */
 		radius: number;		
 		/** !#en
 		Collider position (for CircleCollider)
 		!#zh
-		ç¢°æ’ä½“çš„ä½ç½®ï¼ˆåªå¯¹ CircleCollider æœ‰æ•ˆï¼‰ */
+		ç¢°æ??ä½????ä½?ç½®ï????ªå¯¹ CircleCollider ??????ï¼? */
 		position: Vec2;		
 		/** !#en
 		Collider points (for BoxCollider and PolygonCollider)
 		!#zh
-		ç¢°æ’ä½“çš„é¡¶ç‚¹ä¿¡æ¯ï¼ˆåªå¯¹ BoxCollider å’Œ PolygonCollider æœ‰æ•ˆï¼‰ */
+		ç¢°æ??ä½????é¡¶ç?¹ä¿¡??¯ï????ªå¯¹ BoxCollider ??? PolygonCollider ??????ï¼? */
 		points: Vec2[];	
 	}	
 	/** !#en
 	A simple collision manager class.
 	It will calculate whether the collider collides other colliders, if collides then call the callbacks.
 	!#zh
-	ä¸€ä¸ªç®€å•çš„ç¢°æ’ç»„ä»¶ç®¡ç†ç±»ï¼Œç”¨äºå¤„ç†èŠ‚ç‚¹ä¹‹é—´çš„ç¢°æ’ç»„ä»¶æ˜¯å¦äº§ç”Ÿäº†ç¢°æ’ï¼Œå¹¶è°ƒç”¨ç›¸åº”å›è°ƒå‡½æ•°ã€‚ */
+	ä¸?ä¸ªç????????ç¢°æ??ç»?ä»¶ç®¡???ç±»ï????¨ä??å¤?????????¹ä????´ç??ç¢°æ??ç»?ä»¶æ?¯å?¦äº§???äº?ç¢°æ??ï¼?å¹¶è????¨ç?¸å?????è°???½æ?°ã?? */
 	export class CollisionManager implements EventTarget {		
 		/** !#en
 		!#zh
-		æ˜¯å¦å¼€å¯ç¢°æ’ç®¡ç†ï¼Œé»˜è®¤ä¸ºä¸å¼€å¯ */
+		??¯å?¦å????¯ç¢°???ç®¡ç??ï¼?é»?è®¤ä¸ºä¸?å¼???? */
 		enabled: boolean;		
 		/** !#en
 		!#zh
-		æ˜¯å¦ç»˜åˆ¶ç¢°æ’ç»„ä»¶çš„åŒ…å›´ç›’ï¼Œé»˜è®¤ä¸ºä¸ç»˜åˆ¶ */
+		??¯å?¦ç????¶ç¢°???ç»?ä»¶ç???????´ç??ï¼?é»?è®¤ä¸ºä¸?ç»???? */
 		enabledDrawBoundingBox: boolean;		
 		/** !#en
 		!#zh
-		æ˜¯å¦ç»˜åˆ¶ç¢°æ’ç»„ä»¶çš„å½¢çŠ¶ï¼Œé»˜è®¤ä¸ºä¸ç»˜åˆ¶ */
+		??¯å?¦ç????¶ç¢°???ç»?ä»¶ç??å½¢ç?¶ï??é»?è®¤ä¸ºä¸?ç»???? */
 		enabledDebugDraw: boolean;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -7342,7 +7342,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7361,7 +7361,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -7384,9 +7384,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -7395,7 +7395,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7413,7 +7413,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -7421,16 +7421,16 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Intersection helper class
-	!#zh è¾…åŠ©ç±»ï¼Œç”¨äºæµ‹è¯•å½¢çŠ¶ä¸å½¢çŠ¶æ˜¯å¦ç›¸äº¤ */
+	!#zh è¾???©ç±»ï¼???¨ä??æµ?è¯?å½¢ç?¶ä??å½¢ç?¶æ?¯å?¦ç?¸äº¤ */
 	export class Intersection {		
 		/**
 		!#en Test line and line
-		!#zh æµ‹è¯•çº¿æ®µä¸çº¿æ®µæ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯?çº¿æ®µä¸?çº¿æ®µ??¯å?¦ç?¸äº¤
 		@param a1 The start point of the first line
 		@param a2 The end point of the first line
 		@param b1 The start point of the second line
@@ -7439,7 +7439,7 @@ declare namespace cc {
 		static lineLine(a1: Vec2, a2: Vec2, b1: Vec2, b2: Vec2): boolean;		
 		/**
 		!#en Test line and rect
-		!#zh æµ‹è¯•çº¿æ®µä¸çŸ©å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯?çº¿æ®µä¸???©å½¢??¯å?¦ç?¸äº¤
 		@param a1 The start point of the line
 		@param a2 The end point of the line
 		@param b The rect 
@@ -7447,7 +7447,7 @@ declare namespace cc {
 		static lineRect(a1: Vec2, a2: Vec2, b: Rect): boolean;		
 		/**
 		!#en Test line and polygon
-		!#zh æµ‹è¯•çº¿æ®µä¸å¤šè¾¹å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯?çº¿æ®µä¸?å¤?è¾¹å½¢??¯å?¦ç?¸äº¤
 		@param a1 The start point of the line
 		@param a2 The end point of the line
 		@param b The polygon, a set of points 
@@ -7455,49 +7455,49 @@ declare namespace cc {
 		static linePolygon(a1: Vec2, a2: Vec2, b: Vec2[]): boolean;		
 		/**
 		!#en Test rect and rect
-		!#zh æµ‹è¯•çŸ©å½¢ä¸çŸ©å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯???©å½¢ä¸???©å½¢??¯å?¦ç?¸äº¤
 		@param a The first rect
 		@param b The second rect 
 		*/
 		static rectRect(a: Rect, b: Rect): boolean;		
 		/**
 		!#en Test rect and polygon
-		!#zh æµ‹è¯•çŸ©å½¢ä¸å¤šè¾¹å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯???©å½¢ä¸?å¤?è¾¹å½¢??¯å?¦ç?¸äº¤
 		@param a The rect
 		@param b The polygon, a set of points 
 		*/
 		static rectPolygon(a: Rect, b: Vec2[]): boolean;		
 		/**
 		!#en Test polygon and polygon
-		!#zh æµ‹è¯•å¤šè¾¹å½¢ä¸å¤šè¾¹å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯?å¤?è¾¹å½¢ä¸?å¤?è¾¹å½¢??¯å?¦ç?¸äº¤
 		@param a The first polygon, a set of points
 		@param b The second polygon, a set of points 
 		*/
 		static polygonPolygon(a: Vec2[], b: Vec2[]): boolean;		
 		/**
 		!#en Test circle and circle
-		!#zh æµ‹è¯•åœ†å½¢ä¸åœ†å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯????å½¢ä?????å½¢æ?¯å?¦ç?¸äº¤
 		@param a Object contains position and radius
 		@param b Object contains position and radius 
 		*/
 		static circleCircle(a: {position: Vec2, radius: number}, b: {position: Vec2, radius: number}): boolean;		
 		/**
 		!#en Test polygon and circle
-		!#zh æµ‹è¯•çŸ©å½¢ä¸åœ†å½¢æ˜¯å¦ç›¸äº¤
+		!#zh æµ?è¯???©å½¢ä¸????å½¢æ?¯å?¦ç?¸äº¤
 		@param polygon The Polygon, a set of points
 		@param circle Object contains position and radius 
 		*/
 		static polygonCircle(polygon: Vec2[], circle: {position: Vec2, radius: number}): boolean;		
 		/**
 		!#en Test whether the point is in the polygon
-		!#zh æµ‹è¯•ä¸€ä¸ªç‚¹æ˜¯å¦åœ¨ä¸€ä¸ªå¤šè¾¹å½¢ä¸­
+		!#zh æµ?è¯?ä¸?ä¸ªç?¹æ?¯å?¦å?¨ä??ä¸ªå??è¾¹å½¢ä¸?
 		@param point The point
 		@param polygon The polygon, a set of points 
 		*/
 		static pointInPolygon(point: Vec2, polygon: Vec2[]): boolean;		
 		/**
 		!#en Calculate the distance of point to line.
-		!#zh è®¡ç®—ç‚¹åˆ°ç›´çº¿çš„è·ç¦»ã€‚å¦‚æœè¿™æ˜¯ä¸€æ¡çº¿æ®µå¹¶ä¸”å‚è¶³ä¸åœ¨çº¿æ®µå†…ï¼Œåˆ™ä¼šè®¡ç®—ç‚¹åˆ°çº¿æ®µç«¯ç‚¹çš„è·ç¦»ã€‚
+		!#zh è®¡ç????¹å?°ç?´çº¿???è·?ç¦»ã??å¦????è¿???¯ä????¡çº¿æ®µå¹¶ä¸????è¶³ä????¨çº¿æ®µå??ï¼????ä¼?è®¡ç????¹å?°çº¿æ®µç«¯??¹ç??è·?ç¦»ã??
 		@param point The point
 		@param start The start point of line
 		@param end The end point of line
@@ -7506,76 +7506,76 @@ declare namespace cc {
 		static pointLineDistance(point: Vec2, start: Vec2, end: Vec2, isSegment: boolean): number;	
 	}	
 	/** !#en Polygon Collider.
-	!#zh å¤šè¾¹å½¢ç¢°æ’ç»„ä»¶ */
+	!#zh å¤?è¾¹å½¢ç¢°æ??ç»?ä»? */
 	export class PolygonCollider extends Collider implements Collider.Polygon {		
 		/** !#en
 		Collider info in world coordinate.
 		!#zh
-		ç¢°æ’ä½“çš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ä¿¡æ¯ã€‚ */
+		ç¢°æ??ä½????ä¸??????????ç³»ä?????ä¿¡æ?¯ã?? */
 		world: ColliderInfo;		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Polygon points
-		!#zh å¤šè¾¹å½¢é¡¶ç‚¹æ•°ç»„ */
+		!#zh å¤?è¾¹å½¢é¡¶ç?¹æ?°ç?? */
 		points: Vec2[];	
 	}	
 	/** !#en The touch event class
-	!#zh å°è£…äº†è§¦æ‘¸ç›¸å…³çš„ä¿¡æ¯ã€‚ */
+	!#zh å°?è£?äº?è§¦æ?¸ç?¸å?³ç??ä¿¡æ?¯ã?? */
 	export class Touch {		
 		/**
-		!#en Returns the current touch location in OpenGL coordinates.ã€
-		!#zh è·å–å½“å‰è§¦ç‚¹ä½ç½®ã€‚ 
+		!#en Returns the current touch location in OpenGL coordinates.???
+		!#zh ??·å??å½????è§¦ç?¹ä??ç½®ã?? 
 		*/
 		getLocation(): Vec2;		
 		/**
 		!#en Returns X axis location value.
-		!#zh è·å–å½“å‰è§¦ç‚¹ X è½´ä½ç½®ã€‚ 
+		!#zh ??·å??å½????è§¦ç?? X è½´ä??ç½®ã?? 
 		*/
 		getLocationX(): number;		
 		/**
 		!#en Returns Y axis location value.
-		!#zh è·å–å½“å‰è§¦ç‚¹ Y è½´ä½ç½®ã€‚ 
+		!#zh ??·å??å½????è§¦ç?? Y è½´ä??ç½®ã?? 
 		*/
 		getLocationY(): number;		
 		/**
 		!#en Returns the previous touch location in OpenGL coordinates.
-		!#zh è·å–è§¦ç‚¹åœ¨ä¸Šä¸€æ¬¡äº‹ä»¶æ—¶çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??è§¦ç?¹å?¨ä??ä¸?æ¬¡ä??ä»¶æ?¶ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getPreviousLocation(): Vec2;		
 		/**
 		!#en Returns the start touch location in OpenGL coordinates.
-		!#zh è·å–è§¦ç‚¹è½ä¸‹æ—¶çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??è§¦ç?¹è?½ä????¶ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getStartLocation(): Vec2;		
 		/**
 		!#en Returns the delta distance from the previous touche to the current one in screen coordinates.
-		!#zh è·å–è§¦ç‚¹è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„è·ç¦»å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??è§¦ç?¹è??ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç??è·?ç¦»å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getDelta(): Vec2;		
 		/**
 		!#en Returns the current touch location in screen coordinates.
-		!#zh è·å–å½“å‰äº‹ä»¶åœ¨æ¸¸æˆçª—å£å†…çš„åæ ‡ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??å½????äº?ä»¶å?¨æ¸¸???çª????????????????ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getLocationInView(): Vec2;		
 		/**
 		!#en Returns the previous touch location in screen coordinates.
-		!#zh è·å–è§¦ç‚¹åœ¨ä¸Šä¸€æ¬¡äº‹ä»¶æ—¶åœ¨æ¸¸æˆçª—å£ä¸­çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??è§¦ç?¹å?¨ä??ä¸?æ¬¡ä??ä»¶æ?¶å?¨æ¸¸???çª????ä¸­ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getPreviousLocationInView(): Vec2;		
 		/**
 		!#en Returns the start touch location in screen coordinates.
-		!#zh è·å–è§¦ç‚¹è½ä¸‹æ—¶åœ¨æ¸¸æˆçª—å£ä¸­çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+		!#zh ??·å??è§¦ç?¹è?½ä????¶å?¨æ¸¸???çª????ä¸­ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 		*/
 		getStartLocationInView(): Vec2;		
 		/**
 		!#en Returns the id of cc.Touch.
-		!#zh è§¦ç‚¹çš„æ ‡è¯† IDï¼Œå¯ä»¥ç”¨æ¥åœ¨å¤šç‚¹è§¦æ‘¸ä¸­è·Ÿè¸ªè§¦ç‚¹ã€‚ 
+		!#zh è§¦ç?¹ç?????è¯? IDï¼???¯ä»¥??¨æ?¥å?¨å????¹è§¦??¸ä¸­è·?è¸ªè§¦??¹ã?? 
 		*/
 		getID(): number;		
 		/**
 		!#en Sets information to touch.
-		!#zh è®¾ç½®è§¦æ‘¸ç›¸å…³çš„ä¿¡æ¯ã€‚ç”¨äºç›‘æ§è§¦æ‘¸äº‹ä»¶ã€‚
+		!#zh è®¾ç½®è§¦æ?¸ç?¸å?³ç??ä¿¡æ?¯ã????¨ä???????§è§¦??¸ä??ä»¶ã??
 		@param id id
 		@param x x
 		@param y y 
@@ -7602,12 +7602,12 @@ declare namespace cc {
 	 - _getBubblingTargets
 	
 	!#zh
-	äº‹ä»¶ç›®æ ‡æ˜¯äº‹ä»¶è§¦å‘æ—¶ï¼Œåˆ†æ´¾çš„äº‹ä»¶å¯¹è±¡ï¼ŒNode æ˜¯æœ€å¸¸è§çš„äº‹ä»¶ç›®æ ‡ï¼Œ
-	ä½†æ˜¯å…¶ä»–å¯¹è±¡ä¹Ÿå¯ä»¥æ˜¯äº‹ä»¶ç›®æ ‡ã€‚<br/> */
+	äº?ä»¶ç?®æ????¯ä??ä»¶è§¦?????¶ï?????æ´¾ç??äº?ä»¶å¯¹è±¡ï??Node ??¯æ??å¸¸è?????äº?ä»¶ç?®æ??ï¼?
+	ä½???¯å?¶ä??å¯¹è±¡ä¹???¯ä»¥??¯ä??ä»¶ç?®æ?????<br/> */
 	export class EventTarget extends CallbacksInvoker {		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -7616,7 +7616,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7635,7 +7635,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -7658,9 +7658,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -7669,7 +7669,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7687,7 +7687,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -7695,12 +7695,12 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Base class of all kinds of events.
-	!#zh åŒ…å«äº‹ä»¶ç›¸å…³ä¿¡æ¯çš„å¯¹è±¡ã€‚ */
+	!#zh ?????«ä??ä»¶ç?¸å?³ä¿¡??¯ç??å¯¹è±¡??? */
 	export class Event {		
 		/**
 		
@@ -7709,16 +7709,16 @@ declare namespace cc {
 		*/
 		constructor(type: string, bubbles: boolean);		
 		/** !#en The name of the event (case-sensitive), e.g. "click", "fire", or "submit".
-		!#zh äº‹ä»¶ç±»å‹ã€‚ */
+		!#zh äº?ä»¶ç±»?????? */
 		type: string;		
 		/** !#en Indicate whether the event bubbles up through the tree or not.
-		!#zh è¡¨ç¤ºè¯¥äº‹ä»¶æ˜¯å¦è¿›è¡Œå†’æ³¡ã€‚ */
+		!#zh è¡¨ç¤ºè¯¥ä??ä»¶æ?¯å?¦è??è¡????æ³¡ã?? */
 		bubbles: boolean;		
 		/** !#en A reference to the target to which the event was originally dispatched.
-		!#zh æœ€åˆäº‹ä»¶è§¦å‘çš„ç›®æ ‡ */
+		!#zh ??????äº?ä»¶è§¦????????®æ?? */
 		target: any;		
 		/** !#en A reference to the currently registered target for the event.
-		!#zh å½“å‰ç›®æ ‡ */
+		!#zh å½??????®æ?? */
 		currentTarget: any;		
 		/** !#en
 		Indicates which phase of the event flow is currently being evaluated.
@@ -7729,32 +7729,32 @@ declare namespace cc {
 		 - Event.BUBBLING_PHASE = 3
 		The phases are explained in the [section 3.1, Event dispatch and DOM event flow]
 		(http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
-		!#zh äº‹ä»¶é˜¶æ®µ */
+		!#zh äº?ä»¶é?¶æ®µ */
 		eventPhase: number;		
 		/**
 		!#en Reset the event for being stored in the object pool.
-		!#zh é‡ç½®å¯¹è±¡æ± ä¸­å­˜å‚¨çš„äº‹ä»¶ã€‚ 
+		!#zh ???ç½®å¯¹è±¡æ??ä¸­å????¨ç??äº?ä»¶ã?? 
 		*/
 		unuse(): string;		
 		/**
 		!#en Reuse the event for being used again by the object pool.
-		!#zh ç”¨äºå¯¹è±¡æ± å†æ¬¡ä½¿ç”¨çš„äº‹ä»¶ã€‚ 
+		!#zh ??¨ä??å¯¹è±¡æ±????æ¬¡ä½¿??¨ç??äº?ä»¶ã?? 
 		*/
 		reuse(): string;		
 		/**
 		!#en Stops propagation for current event.
-		!#zh åœæ­¢ä¼ é€’å½“å‰äº‹ä»¶ã€‚ 
+		!#zh ???æ­¢ä?????å½????äº?ä»¶ã?? 
 		*/
 		stopPropagation(): void;		
 		/**
 		!#en Stops propagation for current event immediately,
 		the event won't even be dispatched to the listeners attached in the current target.
-		!#zh ç«‹å³åœæ­¢å½“å‰äº‹ä»¶çš„ä¼ é€’ï¼Œäº‹ä»¶ç”šè‡³ä¸ä¼šè¢«åˆ†æ´¾åˆ°æ‰€è¿æ¥çš„å½“å‰ç›®æ ‡ã€‚ 
+		!#zh ç«???³å??æ­¢å?????äº?ä»¶ç??ä¼????ï¼?äº?ä»¶ç????³ä??ä¼?è¢«å??æ´¾å?°æ??è¿???¥ç??å½??????®æ????? 
 		*/
 		stopPropagationImmediate(): void;		
 		/**
 		!#en Checks whether the event has been stopped.
-		!#zh æ£€æŸ¥è¯¥äº‹ä»¶æ˜¯å¦å·²ç»åœæ­¢ä¼ é€’. 
+		!#zh æ£???¥è¯¥äº?ä»¶æ?¯å?¦å·²ç»????æ­¢ä?????. 
 		*/
 		isStopped(): boolean;		
 		/**
@@ -7764,71 +7764,71 @@ declare namespace cc {
 		    note: It only be available when the event listener is associated with node.                <br/>
 		         It returns 0 when the listener is associated with fixed priority.
 		</p>
-		!#zh è·å–å½“å‰ç›®æ ‡èŠ‚ç‚¹ 
+		!#zh ??·å??å½??????®æ???????? 
 		*/
 		getCurrentTarget(): Node;		
 		/**
 		!#en Gets the event type.
-		!#zh è·å–äº‹ä»¶ç±»å‹ 
+		!#zh ??·å??äº?ä»¶ç±»??? 
 		*/
 		getType(): string;		
 		/** !#en Code for event without type.
-		!#zh æ²¡æœ‰ç±»å‹çš„äº‹ä»¶ */
+		!#zh æ²¡æ??ç±»å?????äº?ä»? */
 		static NO_TYPE: string;		
 		/** !#en The type code of Touch event.
-		!#zh è§¦æ‘¸äº‹ä»¶ç±»å‹ */
+		!#zh è§¦æ?¸ä??ä»¶ç±»??? */
 		static TOUCH: string;		
 		/** !#en The type code of Mouse event.
-		!#zh é¼ æ ‡äº‹ä»¶ç±»å‹ */
+		!#zh é¼????äº?ä»¶ç±»??? */
 		static MOUSE: string;		
 		/** !#en The type code of Keyboard event.
-		!#zh é”®ç›˜äº‹ä»¶ç±»å‹ */
+		!#zh ??®ç??äº?ä»¶ç±»??? */
 		static KEYBOARD: string;		
 		/** !#en The type code of Acceleration event.
-		!#zh åŠ é€Ÿå™¨äº‹ä»¶ç±»å‹ */
+		!#zh ????????¨ä??ä»¶ç±»??? */
 		static ACCELERATION: string;		
 		/** !#en Events not currently dispatched are in this phase
-		!#zh å°šæœªæ´¾å‘äº‹ä»¶é˜¶æ®µ */
+		!#zh å°???ªæ´¾???äº?ä»¶é?¶æ®µ */
 		static NONE: number;		
 		/** !#en
 		The capturing phase comprises the journey from the root to the last node before the event target's node
 		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh æ•è·é˜¶æ®µï¼ŒåŒ…æ‹¬äº‹ä»¶ç›®æ ‡èŠ‚ç‚¹ä¹‹å‰ä»æ ¹èŠ‚ç‚¹åˆ°æœ€åä¸€ä¸ªèŠ‚ç‚¹çš„è¿‡ç¨‹ã€‚ */
+		!#zh ?????·é?¶æ®µï¼??????¬ä??ä»¶ç?®æ???????¹ä?????ä»???¹è????¹å?°æ?????ä¸?ä¸ªè????¹ç??è¿?ç¨???? */
 		static CAPTURING_PHASE: number;		
 		/** !#en
 		The target phase comprises only the event target node
 		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh ç›®æ ‡é˜¶æ®µä»…åŒ…æ‹¬äº‹ä»¶ç›®æ ‡èŠ‚ç‚¹ã€‚ */
+		!#zh ??®æ????¶æ®µä»??????¬ä??ä»¶ç?®æ???????¹ã?? */
 		static AT_TARGET: number;		
 		/** !#en
 		The bubbling phase comprises any subsequent nodes encountered on the return trip to the root of the hierarchy
 		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh å†’æ³¡é˜¶æ®µï¼Œ åŒ…æ‹¬å›ç¨‹é‡åˆ°åˆ°å±‚æ¬¡æ ¹èŠ‚ç‚¹çš„ä»»ä½•åç»­èŠ‚ç‚¹ã€‚ */
+		!#zh ???æ³¡é?¶æ®µï¼? ?????¬å??ç¨??????°å?°å??æ¬¡æ?¹è????¹ç??ä»»ä?????ç»­è????¹ã?? */
 		static BUBBLING_PHASE: number;	
 	}	
 	/** !#en
 	The System event, it currently supports keyboard events and accelerometer events.<br>
 	You can get the SystemEvent instance with cc.systemEvent.<br>
 	!#zh
-	ç³»ç»Ÿäº‹ä»¶ï¼Œå®ƒç›®å‰æ”¯æŒæŒ‰é”®äº‹ä»¶å’Œé‡åŠ›æ„Ÿåº”äº‹ä»¶ã€‚<br>
-	ä½ å¯ä»¥é€šè¿‡ cc.systemEvent è·å–åˆ° SystemEvent çš„å®ä¾‹ã€‚<br> */
+	ç³»ç??äº?ä»¶ï??å®???®å????¯æ???????®ä??ä»¶å???????????åº?äº?ä»¶ã??<br>
+	ä½???¯ä»¥???è¿? cc.systemEvent ??·å????? SystemEvent ???å®?ä¾????<br> */
 	export class SystemEvent extends EventTarget {		
 		/**
 		!#en whether enable accelerometer event
-		!#zh æ˜¯å¦å¯ç”¨åŠ é€Ÿåº¦è®¡äº‹ä»¶
+		!#zh ??¯å?¦å?¯ç?¨å?????åº¦è®¡äº?ä»?
 		@param isEnable isEnable 
 		*/
 		setAccelerometerEnabled(isEnable: boolean): void;		
 		/**
 		!#en set accelerometer interval value
-		!#zh è®¾ç½®åŠ é€Ÿåº¦è®¡é—´éš”å€¼
+		!#zh è®¾ç½®??????åº¦è®¡??´é?????
 		@param interval interval 
 		*/
 		setAccelerometerInterval(interval: number): void;	
 	}	
 	/** !#en The animation component is used to play back animations.
 	
-	Animation provide several events to registerï¼š
+	Animation provide several events to registerï¼?
 	 - play : Emit when begin playing animation
 	 - stop : Emit when stop playing animation
 	 - pause : Emit when pause animation
@@ -7836,33 +7836,33 @@ declare namespace cc {
 	 - lastframe : If animation repeat count is larger than 1, emit when animation play to the last frame
 	 - finished : Emit when finish playing animation
 	
-	!#zh Animation ç»„ä»¶ç”¨äºæ’­æ”¾åŠ¨ç”»ã€‚
+	!#zh Animation ç»?ä»¶ç?¨ä????­æ?¾å?¨ç?»ã??
 	
-	Animation æä¾›äº†ä¸€ç³»åˆ—å¯æ³¨å†Œçš„äº‹ä»¶ï¼š
-	 - play : å¼€å§‹æ’­æ”¾æ—¶
-	 - stop : åœæ­¢æ’­æ”¾æ—¶
-	 - pause : æš‚åœæ’­æ”¾æ—¶
-	 - resume : æ¢å¤æ’­æ”¾æ—¶
-	 - lastframe : å‡å¦‚åŠ¨ç”»å¾ªç¯æ¬¡æ•°å¤§äº 1ï¼Œå½“åŠ¨ç”»æ’­æ”¾åˆ°æœ€åä¸€å¸§æ—¶
-	 - finished : åŠ¨ç”»æ’­æ”¾å®Œæˆæ—¶ */
+	Animation ???ä¾?äº?ä¸?ç³»å????¯æ³¨??????äº?ä»¶ï??
+	 - play : å¼?å§???­æ?¾æ??
+	 - stop : ???æ­¢æ?­æ?¾æ??
+	 - pause : ????????­æ?¾æ??
+	 - resume : ??¢å????­æ?¾æ??
+	 - lastframe : ???å¦???¨ç?»å¾ª??¯æ¬¡??°å¤§äº? 1ï¼?å½???¨ç?»æ?­æ?¾å?°æ?????ä¸?å¸§æ??
+	 - finished : ??¨ç?»æ?­æ?¾å???????? */
 	export class Animation extends Component implements EventTarget {		
 		/** !#en Animation will play the default clip when start game.
-		!#zh åœ¨å‹¾é€‰è‡ªåŠ¨æ’­æ”¾æˆ–è°ƒç”¨ play() æ—¶é»˜è®¤æ’­æ”¾çš„åŠ¨ç”»å‰ªè¾‘ã€‚ */
+		!#zh ??¨å?¾é????ªå?¨æ?­æ?¾æ??è°???? play() ??¶é??è®¤æ?­æ?¾ç????¨ç?»å?ªè????? */
 		defaultClip: AnimationClip;		
 		/** !#en Current played clip.
-		!#zh å½“å‰æ’­æ”¾çš„åŠ¨ç”»å‰ªè¾‘ã€‚ */
+		!#zh å½??????­æ?¾ç????¨ç?»å?ªè????? */
 		currentClip: AnimationClip;		
 		/** !#en Whether the animation should auto play the default clip when start game.
-		!#zh æ˜¯å¦åœ¨è¿è¡Œæ¸¸æˆåè‡ªåŠ¨æ’­æ”¾é»˜è®¤åŠ¨ç”»å‰ªè¾‘ã€‚ */
+		!#zh ??¯å?¦å?¨è??è¡?æ¸¸æ???????ªå?¨æ?­æ?¾é??è®¤å?¨ç?»å?ªè????? */
 		playOnLoad: boolean;		
 		/**
 		!#en Get all the clips used in this animation.
-		!#zh è·å–åŠ¨ç”»ç»„ä»¶ä¸Šçš„æ‰€æœ‰åŠ¨ç”»å‰ªè¾‘ã€‚ 
+		!#zh ??·å????¨ç?»ç??ä»¶ä?????????????¨ç?»å?ªè????? 
 		*/
 		getClips(): AnimationClip[];		
 		/**
 		!#en Plays an animation and stop other animations.
-		!#zh æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ï¼Œå¹¶ä¸”åœæ­¢å½“å‰æ­£åœ¨æ’­æ”¾åŠ¨ç”»ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®šåŠ¨ç”»ï¼Œåˆ™æ’­æ”¾é»˜è®¤åŠ¨ç”»ã€‚
+		!#zh ??­æ?¾æ??å®??????¨ç?»ï??å¹¶ä?????æ­¢å?????æ­???¨æ?­æ?¾å?¨ç?»ã??å¦????æ²¡æ?????å®???¨ç?»ï???????­æ?¾é??è®¤å?¨ç?»ã??
 		@param name The name of animation to play. If no name is supplied then the default animation will be played.
 		@param startTime play an animation from startTime
 		
@@ -7877,7 +7877,7 @@ declare namespace cc {
 		!#en
 		Plays an additive animation, it will not stop other animations.
 		If there are other animations playing, then will play several animations at the same time.
-		!#zh æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ï¼ˆå°†ä¸ä¼šåœæ­¢å½“å‰æ’­æ”¾çš„åŠ¨ç”»ï¼‰ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®šåŠ¨ç”»ï¼Œåˆ™æ’­æ”¾é»˜è®¤åŠ¨ç”»ã€‚
+		!#zh ??­æ?¾æ??å®??????¨ç?»ï??å°?ä¸?ä¼????æ­¢å???????­æ?¾ç????¨ç?»ï?????å¦????æ²¡æ?????å®???¨ç?»ï???????­æ?¾é??è®¤å?¨ç?»ã??
 		@param name The name of animation to play. If no name is supplied then the default animation will be played.
 		@param startTime play an animation from startTime
 		
@@ -7893,38 +7893,38 @@ declare namespace cc {
 		/**
 		!#en Stops an animation named name. If no name is supplied then stops all playing animations that were started with this Animation. <br/>
 		Stopping an animation also Rewinds it to the Start.
-		!#zh åœæ­¢æŒ‡å®šçš„åŠ¨ç”»ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®šåå­—ï¼Œåˆ™åœæ­¢å½“å‰æ­£åœ¨æ’­æ”¾çš„åŠ¨ç”»ã€‚
+		!#zh ???æ­¢æ??å®??????¨ç?»ã??å¦????æ²¡æ?????å®????å­?ï¼???????æ­¢å?????æ­???¨æ?­æ?¾ç????¨ç?»ã??
 		@param name The animation to stop, if not supplied then stops all playing animations. 
 		*/
 		stop(name?: string): void;		
 		/**
 		!#en Pauses an animation named name. If no name is supplied then pauses all playing animations that were started with this Animation.
-		!#zh æš‚åœå½“å‰æˆ–è€…æŒ‡å®šçš„åŠ¨ç”»ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®šåå­—ï¼Œåˆ™æš‚åœå½“å‰æ­£åœ¨æ’­æ”¾çš„åŠ¨ç”»ã€‚
+		!#zh ??????å½?????????????å®??????¨ç?»ã??å¦????æ²¡æ?????å®????å­?ï¼??????????å½????æ­???¨æ?­æ?¾ç????¨ç?»ã??
 		@param name The animation to pauses, if not supplied then pauses all playing animations. 
 		*/
 		pause(name?: string): void;		
 		/**
 		!#en Resumes an animation named name. If no name is supplied then resumes all paused animations that were started with this Animation.
-		!#zh é‡æ–°æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ï¼Œå¦‚æœæ²¡æœ‰æŒ‡å®šåå­—ï¼Œåˆ™é‡æ–°æ’­æ”¾å½“å‰æ­£åœ¨æ’­æ”¾çš„åŠ¨ç”»ã€‚
+		!#zh ?????°æ?­æ?¾æ??å®??????¨ç?»ï??å¦????æ²¡æ?????å®????å­?ï¼?????????°æ?­æ?¾å?????æ­???¨æ?­æ?¾ç????¨ç?»ã??
 		@param name The animation to resumes, if not supplied then resumes all paused animations. 
 		*/
 		resume(name?: string): void;		
 		/**
 		!#en Make an animation named name go to the specified time. If no name is supplied then make all animations go to the specified time.
-		!#zh è®¾ç½®æŒ‡å®šåŠ¨ç”»çš„æ’­æ”¾æ—¶é—´ã€‚å¦‚æœæ²¡æœ‰æŒ‡å®šåå­—ï¼Œåˆ™è®¾ç½®å½“å‰æ’­æ”¾åŠ¨ç”»çš„æ’­æ”¾æ—¶é—´ã€‚
+		!#zh è®¾ç½®???å®???¨ç?»ç????­æ?¾æ?¶é?´ã??å¦????æ²¡æ?????å®????å­?ï¼????è®¾ç½®å½??????­æ?¾å?¨ç?»ç????­æ?¾æ?¶é?´ã??
 		@param time The time to go to
 		@param name Specified animation name, if not supplied then make all animations go to the time. 
 		*/
 		setCurrentTime(time?: number, name?: string): void;		
 		/**
 		!#en Returns the animation state named name. If no animation with the specified name, the function will return null.
-		!#zh è·å–å½“å‰æˆ–è€…æŒ‡å®šçš„åŠ¨ç”»çŠ¶æ€ï¼Œå¦‚æœæœªæ‰¾åˆ°æŒ‡å®šåŠ¨ç”»å‰ªè¾‘åˆ™è¿”å› nullã€‚
+		!#zh ??·å??å½?????????????å®??????¨ç?»ç?¶æ??ï¼?å¦??????ªæ?¾å?°æ??å®???¨ç?»å?ªè?????è¿???? null???
 		@param name name 
 		*/
 		getAnimationState(name: string): AnimationState;		
 		/**
 		!#en Adds a clip to the animation with name newName. If a clip with that name already exists it will be replaced with the new clip.
-		!#zh æ·»åŠ åŠ¨ç”»å‰ªè¾‘ï¼Œå¹¶ä¸”å¯ä»¥é‡æ–°è®¾ç½®è¯¥åŠ¨ç”»å‰ªè¾‘çš„åç§°ã€‚
+		!#zh æ·»å????¨ç?»å?ªè??ï¼?å¹¶ä????¯ä»¥?????°è®¾ç½®è¯¥??¨ç?»å?ªè????????ç§°ã??
 		@param clip the clip to add
 		@param newName newName 
 		*/
@@ -7935,9 +7935,9 @@ declare namespace cc {
 		If there are animation states depand on the clip are playing or clip is defaultClip, it will not delete the clip.
 		But if force is true, then will always remove the clip and any animation states based on it. If clip is defaultClip, defaultClip will be reset to null
 		!#zh
-		ä»åŠ¨ç”»åˆ—è¡¨ä¸­ç§»é™¤æŒ‡å®šçš„åŠ¨ç”»å‰ªè¾‘ï¼Œ<br/>
-		å¦‚æœä¾èµ–äº clip çš„ AnimationState æ­£åœ¨æ’­æ”¾æˆ–è€… clip æ˜¯ defaultClip çš„è¯ï¼Œé»˜è®¤æ˜¯ä¸ä¼šåˆ é™¤ clip çš„ã€‚
-		ä½†æ˜¯å¦‚æœ force å‚æ•°ä¸º trueï¼Œåˆ™ä¼šå¼ºåˆ¶åœæ­¢è¯¥åŠ¨ç”»ï¼Œç„¶åç§»é™¤è¯¥åŠ¨ç”»å‰ªè¾‘å’Œç›¸å…³çš„åŠ¨ç”»ã€‚è¿™æ—¶å€™å¦‚æœ clip æ˜¯ defaultClipï¼ŒdefaultClip å°†ä¼šè¢«é‡ç½®ä¸º nullã€‚
+		ä»???¨ç?»å??è¡¨ä¸­ç§»é?¤æ??å®??????¨ç?»å?ªè??ï¼?<br/>
+		å¦????ä¾?èµ?äº? clip ??? AnimationState æ­???¨æ?­æ?¾æ????? clip ??? defaultClip ???è¯?ï¼?é»?è®¤æ?¯ä??ä¼??????? clip ??????
+		ä½???¯å????? force ?????°ä¸º trueï¼????ä¼?å¼ºå?¶å??æ­¢è¯¥??¨ç?»ï????¶å??ç§»é?¤è¯¥??¨ç?»å?ªè???????¸å?³ç????¨ç?»ã??è¿???¶å??å¦???? clip ??? defaultClipï¼?defaultClip å°?ä¼?è¢«é??ç½®ä¸º null???
 		@param clip clip
 		@param force If force is true, then will always remove the clip and any animation states based on it. 
 		*/
@@ -7946,7 +7946,7 @@ declare namespace cc {
 		!#en
 		Samples animations at the current state.<br/>
 		This is useful when you explicitly want to set up some animation state, and sample it once.
-		!#zh å¯¹æŒ‡å®šæˆ–å½“å‰åŠ¨ç”»è¿›è¡Œé‡‡æ ·ã€‚ä½ å¯ä»¥æ‰‹åŠ¨å°†åŠ¨ç”»è®¾ç½®åˆ°æŸä¸€ä¸ªçŠ¶æ€ï¼Œç„¶åé‡‡æ ·ä¸€æ¬¡ã€‚
+		!#zh å¯¹æ??å®????å½??????¨ç?»è??è¡??????·ã??ä½???¯ä»¥?????¨å????¨ç?»è®¾ç½®å?°æ??ä¸?ä¸ªç?¶æ??ï¼???¶å???????·ä??æ¬¡ã??
 		@param name name 
 		*/
 		sample(name: string): void;		
@@ -7956,9 +7956,9 @@ declare namespace cc {
 		The event arguments will provide the AnimationState which emit the event.
 		When play an animation, will auto register the event callback to the AnimationState, and unregister the event callback from the AnimationState when animation stopped.
 		!#zh
-		æ³¨å†ŒåŠ¨ç”»äº‹ä»¶å›è°ƒã€‚
-		å›è°ƒçš„äº‹ä»¶é‡Œå°†ä¼šé™„ä¸Šå‘é€äº‹ä»¶çš„ AnimationStateã€‚
-		å½“æ’­æ”¾ä¸€ä¸ªåŠ¨ç”»æ—¶ï¼Œä¼šè‡ªåŠ¨å°†äº‹ä»¶æ³¨å†Œåˆ°å¯¹åº”çš„ AnimationState ä¸Šï¼Œåœæ­¢æ’­æ”¾æ—¶ä¼šå°†äº‹ä»¶ä»è¿™ä¸ª AnimationState ä¸Šå–æ¶ˆæ³¨å†Œã€‚
+		æ³¨å????¨ç?»ä??ä»¶å??è°????
+		???è°????äº?ä»¶é??å°?ä¼????ä¸???????äº?ä»¶ç?? AnimationState???
+		å½???­æ?¾ä??ä¸ªå?¨ç?»æ?¶ï??ä¼???ªå?¨å??äº?ä»¶æ³¨?????°å¯¹åº???? AnimationState ä¸?ï¼????æ­¢æ?­æ?¾æ?¶ä??å°?äº?ä»¶ä??è¿?ä¸? AnimationState ä¸????æ¶?æ³¨å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -7986,7 +7986,7 @@ declare namespace cc {
 		!#en
 		Unregister animation event callback.
 		!#zh
-		å–æ¶ˆæ³¨å†ŒåŠ¨ç”»äº‹ä»¶å›è°ƒã€‚
+		???æ¶?æ³¨å????¨ç?»ä??ä»¶å??è°????
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -8004,7 +8004,7 @@ declare namespace cc {
 		off(type: string, callback?: Function, target?: any, useCapture?: boolean): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -8013,9 +8013,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -8024,7 +8024,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -8042,7 +8042,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -8050,77 +8050,77 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en Audio Source.
-	!#zh éŸ³é¢‘æºç»„ä»¶ï¼Œèƒ½å¯¹éŸ³é¢‘å‰ªè¾‘ã€‚ */
+	!#zh ??³é??æº?ç»?ä»¶ï????½å¯¹??³é????ªè????? */
 	export class AudioSource extends Component {		
 		/** !#en
 		Is the audio source playing (Read Only). <br/>
 		Note: isPlaying is not supported for Native platforms.
 		!#zh
-		è¯¥éŸ³é¢‘å‰ªè¾‘æ˜¯å¦æ­£æ’­æ”¾ï¼ˆåªè¯»ï¼‰ã€‚<br/>
-		æ³¨æ„ï¼šNative å¹³å°æš‚æ—¶ä¸æ”¯æŒ isPlayingã€‚ */
+		è¯¥é?³é????ªè????¯å?¦æ­£??­æ?¾ï????ªè¯»ï¼????<br/>
+		æ³¨æ??ï¼?Native å¹³å?°æ????¶ä????¯æ?? isPlaying??? */
 		isPlaying: boolean;		
 		/** !#en The clip of the audio source to play.
-		!#zh è¦æ’­æ”¾çš„éŸ³é¢‘å‰ªè¾‘ã€‚ */
+		!#zh è¦???­æ?¾ç????³é????ªè????? */
 		clip: AudioClip;		
 		/** !#en The volume of the audio source.
-		!#zh éŸ³é¢‘æºçš„éŸ³é‡ï¼ˆ0.0 ~ 1.0ï¼‰ã€‚ */
+		!#zh ??³é??æº??????³é??ï¼?0.0 ~ 1.0ï¼???? */
 		volume: number;		
 		/** !#en Is the audio source mute?
-		!#zh æ˜¯å¦é™éŸ³éŸ³é¢‘æºã€‚Mute æ˜¯è®¾ç½®éŸ³é‡ä¸º 0ï¼Œå–æ¶ˆé™éŸ³æ˜¯æ¢å¤åŸæ¥çš„éŸ³é‡ã€‚ */
+		!#zh ??¯å?¦é????³é?³é??æº????Mute ??¯è®¾ç½®é?³é??ä¸? 0ï¼????æ¶??????³æ?¯æ?¢å???????¥ç????³é????? */
 		mute: boolean;		
 		/** !#en Is the audio source looping?
-		!#zh éŸ³é¢‘æºæ˜¯å¦å¾ªç¯æ’­æ”¾ï¼Ÿ */
+		!#zh ??³é??æº???¯å?¦å¾ª??¯æ?­æ?¾ï?? */
 		loop: boolean;		
 		/** !#en If set to true, the audio source will automatically start playing on onEnable.
-		!#zh å¦‚æœè®¾ç½®ä¸º trueï¼ŒéŸ³é¢‘æºå°†åœ¨ onEnable æ—¶è‡ªåŠ¨æ’­æ”¾ã€‚ */
+		!#zh å¦????è®¾ç½®ä¸? trueï¼???³é??æº?å°???? onEnable ??¶è?ªå?¨æ?­æ?¾ã?? */
 		playOnLoad: boolean;		
 		/** !#en If set to true and AudioClip is a deferred load resource, the component will preload AudioClip in the onLoad phase.
-		!#zh å¦‚æœè®¾ç½®ä¸º true ä¸” AudioClip ä¸ºå»¶è¿ŸåŠ è½½èµ„æºï¼Œç»„ä»¶å°†åœ¨ onLoad é˜¶æ®µé¢„åŠ è½½ AudioClipã€‚ */
+		!#zh å¦????è®¾ç½®ä¸? true ä¸? AudioClip ä¸ºå»¶è¿????è½½è??æº?ï¼?ç»?ä»¶å????? onLoad ??¶æ®µé¢????è½? AudioClip??? */
 		preload: boolean;		
 		/**
 		!#en Plays the clip.
-		!#zh æ’­æ”¾éŸ³é¢‘å‰ªè¾‘ã€‚ 
+		!#zh ??­æ?¾é?³é????ªè????? 
 		*/
 		play(): void;		
 		/**
 		!#en Stops the clip.
-		!#zh åœæ­¢å½“å‰éŸ³é¢‘å‰ªè¾‘ã€‚ 
+		!#zh ???æ­¢å???????³é????ªè????? 
 		*/
 		stop(): void;		
 		/**
 		!#en Pause the clip.
-		!#zh æš‚åœå½“å‰éŸ³é¢‘å‰ªè¾‘ã€‚ 
+		!#zh ??????å½??????³é????ªè????? 
 		*/
 		pause(): void;		
 		/**
 		!#en Resume the clip.
-		!#zh æ¢å¤æ’­æ”¾ã€‚ 
+		!#zh ??¢å????­æ?¾ã?? 
 		*/
 		resume(): void;		
 		/**
 		!#en Rewind playing music.
-		!#zh ä»å¤´å¼€å§‹æ’­æ”¾ã€‚ 
+		!#zh ä»?å¤´å??å§???­æ?¾ã?? 
 		*/
 		rewind(): void;		
 		/**
 		!#en Get current time
-		!#zh è·å–å½“å‰çš„æ’­æ”¾æ—¶é—´ 
+		!#zh ??·å??å½?????????­æ?¾æ?¶é?? 
 		*/
 		getCurrentTime(): number;		
 		/**
 		!#en Set current time
-		!#zh è®¾ç½®å½“å‰çš„æ’­æ”¾æ—¶é—´
+		!#zh è®¾ç½®å½?????????­æ?¾æ?¶é??
 		@param time time 
 		*/
 		setCurrentTime(time: number): number;		
 		/**
 		!#en Get audio duration
-		!#zh è·å–å½“å‰éŸ³é¢‘çš„é•¿åº¦ 
+		!#zh ??·å??å½??????³é???????¿åº¦ 
 		*/
 		getDuration(): number;	
 	}	
@@ -8128,8 +8128,8 @@ declare namespace cc {
 	This component will block all input events (mouse and touch) within the bounding box of the node, preventing the input from penetrating into the underlying node, typically for the background of the top UI.<br>
 	This component does not have any API interface and can be added directly to the scene to take effect.
 	!#zh
-	è¯¥ç»„ä»¶å°†æ‹¦æˆªæ‰€å±èŠ‚ç‚¹ bounding box å†…çš„æ‰€æœ‰è¾“å…¥äº‹ä»¶ï¼ˆé¼ æ ‡å’Œè§¦æ‘¸ï¼‰ï¼Œé˜²æ­¢è¾“å…¥ç©¿é€åˆ°ä¸‹å±‚èŠ‚ç‚¹ï¼Œä¸€èˆ¬ç”¨äºä¸Šå±‚ UI çš„èƒŒæ™¯ã€‚<br>
-	è¯¥ç»„ä»¶æ²¡æœ‰ä»»ä½• API æ¥å£ï¼Œç›´æ¥æ·»åŠ åˆ°åœºæ™¯å³å¯ç”Ÿæ•ˆã€‚ */
+	è¯¥ç??ä»¶å????¦æ?ªæ??å±??????? bounding box ????????????è¾???¥ä??ä»¶ï??é¼???????è§¦æ?¸ï??ï¼???²æ­¢è¾???¥ç©¿?????°ä??å±??????¹ï??ä¸???¬ç?¨ä??ä¸?å±? UI ????????¯ã??<br>
+	è¯¥ç??ä»¶æ²¡???ä»»ä?? API ??¥å??ï¼???´æ?¥æ·»?????°å?ºæ?¯å?³å?¯ç???????? */
 	export class BlockInputEvents extends Component {	
 	}	
 	/** !#en
@@ -8160,76 +8160,76 @@ declare namespace cc {
 	User can get the current clicked node with 'event.target' from event object which is passed as parameter in the callback function of click event.
 	
 	!#zh
-	æŒ‰é’®ç»„ä»¶ã€‚å¯ä»¥è¢«æŒ‰ä¸‹ï¼Œæˆ–è€…ç‚¹å‡»ã€‚
+	?????®ç??ä»¶ã????¯ä»¥è¢«æ??ä¸?ï¼?????????¹å?»ã??
 	
-	æŒ‰é’®å¯ä»¥é€šè¿‡ä¿®æ”¹ Transition æ¥è®¾ç½®æŒ‰é’®çŠ¶æ€è¿‡æ¸¡çš„æ–¹å¼ï¼š
+	?????®å?¯ä»¥???è¿?ä¿®æ?? Transition ??¥è®¾ç½®æ????®ç?¶æ??è¿?æ¸¡ç????¹å??ï¼?
 	
-	  - Button.Transition.NONE   // ä¸åšä»»ä½•è¿‡æ¸¡
-	  - Button.Transition.COLOR  // è¿›è¡Œé¢œè‰²ä¹‹é—´è¿‡æ¸¡
-	  - Button.Transition.SPRITE // è¿›è¡Œç²¾çµä¹‹é—´è¿‡æ¸¡
-	  - Button.Transition.SCALE // è¿›è¡Œç¼©æ”¾è¿‡æ¸¡
+	  - Button.Transition.NONE   // ä¸????ä»»ä??è¿?æ¸?
+	  - Button.Transition.COLOR  // è¿?è¡?é¢???²ä????´è??æ¸?
+	  - Button.Transition.SPRITE // è¿?è¡?ç²¾ç?µä????´è??æ¸?
+	  - Button.Transition.SCALE // è¿?è¡?ç¼©æ?¾è??æ¸?
 	
-	æŒ‰é’®å¯ä»¥ç»‘å®šäº‹ä»¶ï¼ˆä½†æ˜¯å¿…é¡»è¦åœ¨æŒ‰é’®çš„ Node ä¸Šæ‰èƒ½ç»‘å®šäº‹ä»¶ï¼‰ï¼š<br/>
-	ä»¥ä¸‹äº‹ä»¶å¯ä»¥åœ¨å…¨å¹³å°ä¸Šéƒ½è§¦å‘ï¼š
+	?????®å?¯ä»¥ç»?å®?äº?ä»¶ï??ä½???¯å??é¡»è????¨æ????®ç?? Node ä¸??????½ç??å®?äº?ä»¶ï??ï¼?<br/>
+	ä»¥ä??äº?ä»¶å?¯ä»¥??¨å?¨å¹³??°ä????½è§¦???ï¼?
 	
-	  - cc.Node.EventType.TOUCH_START  // æŒ‰ä¸‹æ—¶äº‹ä»¶
-	  - cc.Node.EventType.TOUCH_MOVE   // æŒ‰ä½ç§»åŠ¨åäº‹ä»¶
-	  - cc.Node.EventType.TOUCH_END    // æŒ‰ä¸‹åæ¾å¼€åäº‹ä»¶
-	  - cc.Node.EventType.TOUCH_CANCEL // æŒ‰ä¸‹å–æ¶ˆäº‹ä»¶
+	  - cc.Node.EventType.TOUCH_START  // ???ä¸???¶ä??ä»?
+	  - cc.Node.EventType.TOUCH_MOVE   // ???ä½?ç§»å?¨å??äº?ä»?
+	  - cc.Node.EventType.TOUCH_END    // ???ä¸??????¾å?????äº?ä»?
+	  - cc.Node.EventType.TOUCH_CANCEL // ???ä¸????æ¶?äº?ä»?
 	
-	ä»¥ä¸‹äº‹ä»¶åªåœ¨ PC å¹³å°ä¸Šè§¦å‘ï¼š
+	ä»¥ä??äº?ä»¶å?ªå?? PC å¹³å?°ä??è§¦å??ï¼?
 	
-	  - cc.Node.EventType.MOUSE_DOWN  // é¼ æ ‡æŒ‰ä¸‹æ—¶äº‹ä»¶
-	  - cc.Node.EventType.MOUSE_MOVE  // é¼ æ ‡æŒ‰ä½ç§»åŠ¨åäº‹ä»¶
-	  - cc.Node.EventType.MOUSE_ENTER // é¼ æ ‡è¿›å…¥ç›®æ ‡äº‹ä»¶
-	  - cc.Node.EventType.MOUSE_LEAVE // é¼ æ ‡ç¦»å¼€ç›®æ ‡äº‹ä»¶
-	  - cc.Node.EventType.MOUSE_UP    // é¼ æ ‡æ¾å¼€äº‹ä»¶
-	  - cc.Node.EventType.MOUSE_WHEEL // é¼ æ ‡æ»šè½®äº‹ä»¶
+	  - cc.Node.EventType.MOUSE_DOWN  // é¼???????ä¸???¶ä??ä»?
+	  - cc.Node.EventType.MOUSE_MOVE  // é¼???????ä½?ç§»å?¨å??äº?ä»?
+	  - cc.Node.EventType.MOUSE_ENTER // é¼????è¿???¥ç?®æ??äº?ä»?
+	  - cc.Node.EventType.MOUSE_LEAVE // é¼????ç¦»å????®æ??äº?ä»?
+	  - cc.Node.EventType.MOUSE_UP    // é¼??????¾å??äº?ä»?
+	  - cc.Node.EventType.MOUSE_WHEEL // é¼????æ»?è½®ä??ä»?
 	
-	ç”¨æˆ·å¯ä»¥é€šè¿‡è·å– __ç‚¹å‡»äº‹ä»¶__ å›è°ƒå‡½æ•°çš„å‚æ•° event çš„ target å±æ€§è·å–å½“å‰ç‚¹å‡»å¯¹è±¡ã€‚ */
+	??¨æ?·å?¯ä»¥???è¿???·å?? __??¹å?»ä??ä»¶__ ???è°???½æ?°ç???????? event ??? target å±???§è?·å??å½??????¹å?»å¯¹è±¡ã?? */
 	export class Button extends Component implements GraySpriteState {		
 		/** !#en
 		Whether the Button is disabled.
 		If true, the Button will trigger event and do transition.
 		!#zh
-		æŒ‰é’®äº‹ä»¶æ˜¯å¦è¢«å“åº”ï¼Œå¦‚æœä¸º falseï¼Œåˆ™æŒ‰é’®å°†è¢«ç¦ç”¨ã€‚ */
+		?????®ä??ä»¶æ?¯å?¦è¢«???åº?ï¼?å¦????ä¸? falseï¼?????????®å??è¢«ç????¨ã?? */
 		interactable: boolean;		
 		/** !#en When this flag is true, Button target sprite will turn gray when interactable is false.
-		!#zh å¦‚æœè¿™ä¸ªæ ‡è®°ä¸º trueï¼Œå½“ button çš„ interactable å±æ€§ä¸º false çš„æ—¶å€™ï¼Œä¼šä½¿ç”¨å†…ç½® shader è®© button çš„ target èŠ‚ç‚¹çš„ sprite ç»„ä»¶å˜ç° */
+		!#zh å¦????è¿?ä¸ªæ??è®°ä¸º trueï¼?å½? button ??? interactable å±???§ä¸º false ?????¶å??ï¼?ä¼?ä½¿ç?¨å??ç½? shader è®? button ??? target ?????¹ç?? sprite ç»?ä»¶å????? */
 		enableAutoGrayEffect: boolean;		
 		/** !#en Transition type
-		!#zh æŒ‰é’®çŠ¶æ€æ”¹å˜æ—¶è¿‡æ¸¡æ–¹å¼ã€‚ */
+		!#zh ?????®ç?¶æ????¹å????¶è??æ¸¡æ?¹å????? */
 		transition: Button.Transition;		
 		/** !#en Normal state color.
-		!#zh æ™®é€šçŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„é¢œè‰²ã€‚ */
+		!#zh ??®é????¶æ??ä¸??????®æ????¾ç¤º???é¢???²ã?? */
 		normalColor: Color;		
 		/** !#en Pressed state color
-		!#zh æŒ‰ä¸‹çŠ¶æ€æ—¶æŒ‰é’®æ‰€æ˜¾ç¤ºçš„é¢œè‰²ã€‚ */
+		!#zh ???ä¸???¶æ????¶æ????®æ????¾ç¤º???é¢???²ã?? */
 		pressedColor: Color;		
 		/** !#en Hover state color
-		!#zh æ‚¬åœçŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„é¢œè‰²ã€‚ */
+		!#zh ??¬å????¶æ??ä¸??????®æ????¾ç¤º???é¢???²ã?? */
 		hoverColor: Color;		
 		/** !#en Disabled state color
-		!#zh ç¦ç”¨çŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„é¢œè‰²ã€‚ */
+		!#zh ç¦???¨ç?¶æ??ä¸??????®æ????¾ç¤º???é¢???²ã?? */
 		disabledColor: Color;		
 		/** !#en Color and Scale transition duration
-		!#zh é¢œè‰²è¿‡æ¸¡å’Œç¼©æ”¾è¿‡æ¸¡æ—¶æ‰€éœ€æ—¶é—´ */
+		!#zh é¢???²è??æ¸¡å??ç¼©æ?¾è??æ¸¡æ?¶æ???????¶é?? */
 		duration: number;		
 		/** !#en  When user press the button, the button will zoom to a scale.
 		The final scale of the button  equals (button original scale * zoomScale)
-		!#zh å½“ç”¨æˆ·ç‚¹å‡»æŒ‰é’®åï¼ŒæŒ‰é’®ä¼šç¼©æ”¾åˆ°ä¸€ä¸ªå€¼ï¼Œè¿™ä¸ªå€¼ç­‰äº Button åŸå§‹ scale * zoomScale */
+		!#zh å½???¨æ?·ç?¹å?»æ????®å??ï¼??????®ä??ç¼©æ?¾å?°ä??ä¸ªå?¼ï??è¿?ä¸ªå?¼ç??äº? Button ???å§? scale * zoomScale */
 		zoomScale: number;		
 		/** !#en Normal state sprite
-		!#zh æ™®é€šçŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„ Sprite ã€‚ */
+		!#zh ??®é????¶æ??ä¸??????®æ????¾ç¤º??? Sprite ??? */
 		normalSprite: SpriteFrame;		
 		/** !#en Pressed state sprite
-		!#zh æŒ‰ä¸‹çŠ¶æ€æ—¶æŒ‰é’®æ‰€æ˜¾ç¤ºçš„ Sprite ã€‚ */
+		!#zh ???ä¸???¶æ????¶æ????®æ????¾ç¤º??? Sprite ??? */
 		pressedSprite: SpriteFrame;		
 		/** !#en Hover state sprite
-		!#zh æ‚¬åœçŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„ Sprite ã€‚ */
+		!#zh ??¬å????¶æ??ä¸??????®æ????¾ç¤º??? Sprite ??? */
 		hoverSprite: SpriteFrame;		
 		/** !#en Disabled state sprite
-		!#zh ç¦ç”¨çŠ¶æ€ä¸‹æŒ‰é’®æ‰€æ˜¾ç¤ºçš„ Sprite ã€‚ */
+		!#zh ç¦???¨ç?¶æ??ä¸??????®æ????¾ç¤º??? Sprite ??? */
 		disabledSprite: SpriteFrame;		
 		/** !#en
 		Transition target.
@@ -8238,36 +8238,36 @@ declare namespace cc {
 		 If Transition type is Button.Transition.COLOR, Button will change target's color
 		 If Transition type is Button.Transition.SPRITE, Button will change target Sprite's sprite
 		!#zh
-		éœ€è¦è¿‡æ¸¡çš„ç›®æ ‡ã€‚
-		å½“å‰æŒ‰é’®çŠ¶æ€æ”¹å˜è§„åˆ™ï¼š
-		-å¦‚æœ Transition type é€‰æ‹© Button.Transition.NONEï¼ŒæŒ‰é’®ä¸åšä»»ä½•è¿‡æ¸¡ã€‚
-		-å¦‚æœ Transition type é€‰æ‹© Button.Transition.COLORï¼ŒæŒ‰é’®ä¼šå¯¹ç›®æ ‡é¢œè‰²è¿›è¡Œé¢œè‰²ä¹‹é—´çš„è¿‡æ¸¡ã€‚
-		-å¦‚æœ Transition type é€‰æ‹© Button.Transition.Spriteï¼ŒæŒ‰é’®ä¼šå¯¹ç›®æ ‡ Sprite è¿›è¡Œ Sprite ä¹‹é—´çš„è¿‡æ¸¡ã€‚ */
+		???è¦?è¿?æ¸¡ç????®æ?????
+		å½?????????®ç?¶æ????¹å??è§????ï¼?
+		-å¦???? Transition type ?????? Button.Transition.NONEï¼??????®ä?????ä»»ä??è¿?æ¸¡ã??
+		-å¦???? Transition type ?????? Button.Transition.COLORï¼??????®ä??å¯¹ç?®æ??é¢???²è??è¡?é¢???²ä????´ç??è¿?æ¸¡ã??
+		-å¦???? Transition type ?????? Button.Transition.Spriteï¼??????®ä??å¯¹ç?®æ?? Sprite è¿?è¡? Sprite ä¹???´ç??è¿?æ¸¡ã?? */
 		target: Node;		
 		/** !#en If Button is clicked, it will trigger event's handler
-		!#zh æŒ‰é’®çš„ç‚¹å‡»äº‹ä»¶åˆ—è¡¨ã€‚ */
+		!#zh ?????®ç????¹å?»ä??ä»¶å??è¡¨ã?? */
 		clickEvents: Component.EventHandler[];		
 		/** !#en The normal material.
-		!#zh æ­£å¸¸çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh æ­?å¸¸ç?¶æ????????è´¨ã?? */
 		normalMaterial: Material;		
 		/** !#en The gray material.
-		!#zh ç½®ç°çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh ç½®ç?°ç?¶æ????????è´¨ã?? */
 		grayMaterial: Material;	
 	}	
-	/** !#zh ä½œä¸º UI æ ¹èŠ‚ç‚¹ï¼Œä¸ºæ‰€æœ‰å­èŠ‚ç‚¹æä¾›è§†çª—å››è¾¹çš„ä½ç½®ä¿¡æ¯ä»¥ä¾›å¯¹é½ï¼Œå¦å¤–æä¾›å±å¹•é€‚é…ç­–ç•¥æ¥å£ï¼Œæ–¹ä¾¿ä»ç¼–è¾‘å™¨è®¾ç½®ã€‚<br>
-	æ³¨ï¼šç”±äºæœ¬èŠ‚ç‚¹çš„å°ºå¯¸ä¼šè·Ÿéšå±å¹•æ‹‰ä¼¸ï¼Œæ‰€ä»¥ anchorPoint åªæ”¯æŒ (0.5, 0.5)ï¼Œå¦åˆ™é€‚é…ä¸åŒå±å¹•æ—¶åæ ‡ä¼šæœ‰åå·®ã€‚ */
+	/** !#zh ä½?ä¸? UI ??¹è????¹ï??ä¸ºæ?????å­??????¹æ??ä¾?è§?çª????è¾¹ç??ä½?ç½®ä¿¡??¯ä»¥ä¾?å¯¹é??ï¼???¦å?????ä¾?å±?å¹???????ç­???¥æ?¥å??ï¼???¹ä¾¿ä»?ç¼?è¾???¨è®¾ç½®ã??<br>
+	æ³¨ï????±ä????¬è????¹ç??å°ºå¯¸ä¼?è·????å±?å¹????ä¼¸ï?????ä»? anchorPoint ??ªæ?¯æ?? (0.5, 0.5)ï¼???¦å????????ä¸????å±?å¹???¶å?????ä¼???????å·®ã?? */
 	export class Canvas extends Component {		
 		/** !#en Current active canvas, the scene should only have one active canvas at the same time.
-		!#zh å½“å‰æ¿€æ´»çš„ç”»å¸ƒç»„ä»¶ï¼Œåœºæ™¯åŒä¸€æ—¶é—´åªèƒ½æœ‰ä¸€ä¸ªæ¿€æ´»çš„ç”»å¸ƒã€‚ */
+		!#zh å½????æ¿?æ´»ç????»å??ç»?ä»¶ï????ºæ?¯å??ä¸???¶é?´å?ªè?½æ??ä¸?ä¸ªæ??æ´»ç????»å????? */
 		static instance: Canvas;		
 		/** !#en The desigin resolution for current scene.
-		!#zh å½“å‰åœºæ™¯è®¾è®¡åˆ†è¾¨ç‡ã€‚ */
+		!#zh å½??????ºæ?¯è®¾è®¡å??è¾¨ç????? */
 		designResolution: Size;		
 		/** !#en TODO
-		!#zh: æ˜¯å¦ä¼˜å…ˆå°†è®¾è®¡åˆ†è¾¨ç‡é«˜åº¦æ’‘æ»¡è§†å›¾é«˜åº¦ã€‚ */
+		!#zh: ??¯å?¦ä?????å°?è®¾è®¡???è¾¨ç??é«?åº¦æ??æ»¡è????¾é??åº¦ã?? */
 		fitHeight: boolean;		
 		/** !#en TODO
-		!#zh: æ˜¯å¦ä¼˜å…ˆå°†è®¾è®¡åˆ†è¾¨ç‡å®½åº¦æ’‘æ»¡è§†å›¾å®½åº¦ã€‚ */
+		!#zh: ??¯å?¦ä?????å°?è®¾è®¡???è¾¨ç??å®½åº¦???æ»¡è????¾å®½åº¦ã?? */
 		fitWidth: boolean;	
 	}	
 	/** !#en
@@ -8276,38 +8276,38 @@ declare namespace cc {
 	NOTE: Not allowed to use construction parameters for Component's subclasses,
 	because Component is created by the engine.
 	!#zh
-	æ‰€æœ‰é™„åŠ åˆ°èŠ‚ç‚¹çš„åŸºç±»ã€‚<br/>
+	??????????????°è????¹ç????ºç±»???<br/>
 	<br/>
-	æ³¨æ„ï¼šä¸å…è®¸ä½¿ç”¨ç»„ä»¶çš„å­ç±»æ„é€ å‚æ•°ï¼Œå› ä¸ºç»„ä»¶æ˜¯ç”±å¼•æ“åˆ›å»ºçš„ã€‚ */
+	æ³¨æ??ï¼?ä¸????è®¸ä½¿??¨ç??ä»¶ç??å­?ç±»æ??????????°ï?????ä¸ºç??ä»¶æ?¯ç?±å????????å»ºç????? */
 	export class Component extends Object {		
 		/** !#en The node this component is attached to. A component is always attached to a node.
-		!#zh è¯¥ç»„ä»¶è¢«é™„åŠ åˆ°çš„èŠ‚ç‚¹ã€‚ç»„ä»¶æ€»ä¼šé™„åŠ åˆ°ä¸€ä¸ªèŠ‚ç‚¹ã€‚ */
+		!#zh è¯¥ç??ä»¶è¢«????????°ç???????¹ã??ç»?ä»¶æ?»ä??????????°ä??ä¸ªè????¹ã?? */
 		node: Node;		
 		/** !#en The uuid for editor.
-		!#zh ç»„ä»¶çš„ uuidï¼Œç”¨äºç¼–è¾‘å™¨ã€‚ */
+		!#zh ç»?ä»¶ç?? uuidï¼???¨ä??ç¼?è¾???¨ã?? */
 		uuid: string;		
 		/** !#en indicates whether this component is enabled or not.
-		!#zh è¡¨ç¤ºè¯¥ç»„ä»¶è‡ªèº«æ˜¯å¦å¯ç”¨ã€‚ */
+		!#zh è¡¨ç¤ºè¯¥ç??ä»¶è?ªèº«??¯å?¦å?¯ç?¨ã?? */
 		enabled: boolean;		
 		/** !#en indicates whether this component is enabled and its node is also active in the hierarchy.
-		!#zh è¡¨ç¤ºè¯¥ç»„ä»¶æ˜¯å¦è¢«å¯ç”¨å¹¶ä¸”æ‰€åœ¨çš„èŠ‚ç‚¹ä¹Ÿå¤„äºæ¿€æ´»çŠ¶æ€ã€‚ */
+		!#zh è¡¨ç¤ºè¯¥ç??ä»¶æ?¯å?¦è¢«??¯ç?¨å¹¶ä¸??????¨ç???????¹ä??å¤?äº?æ¿?æ´»ç?¶æ????? */
 		enabledInHierarchy: boolean;		
 		/** !#en Returns a value which used to indicate the onLoad get called or not.
-		!#zh è¿”å›ä¸€ä¸ªå€¼ç”¨æ¥åˆ¤æ–­ onLoad æ˜¯å¦è¢«è°ƒç”¨è¿‡ï¼Œä¸ç­‰äº 0 æ—¶è°ƒç”¨è¿‡ï¼Œç­‰äº 0 æ—¶æœªè°ƒç”¨ã€‚ */
+		!#zh è¿????ä¸?ä¸ªå?¼ç?¨æ?¥å?¤æ?? onLoad ??¯å?¦è¢«è°???¨è??ï¼?ä¸?ç­?äº? 0 ??¶è????¨è??ï¼?ç­?äº? 0 ??¶æ?ªè????¨ã?? */
 		_isOnLoadCalled: number;		
 		/**
 		!#en Update is called every frame, if the Component is enabled.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
-		!#zh å¦‚æœè¯¥ç»„ä»¶å¯ç”¨ï¼Œåˆ™æ¯å¸§è°ƒç”¨ updateã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚
+		!#zh å¦????è¯¥ç??ä»¶å?¯ç?¨ï?????æ¯?å¸§è????? update???<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ?????
 		@param dt the delta time in seconds it took to complete the last frame 
 		*/
 		protected update(dt: number): void;		
 		/**
 		!#en LateUpdate is called every frame, if the Component is enabled.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
-		!#zh å¦‚æœè¯¥ç»„ä»¶å¯ç”¨ï¼Œåˆ™æ¯å¸§è°ƒç”¨ LateUpdateã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚
+		!#zh å¦????è¯¥ç??ä»¶å?¯ç?¨ï?????æ¯?å¸§è????? LateUpdate???<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ?????
 		@param dt the delta time in seconds it took to complete the last frame 
 		*/
 		protected lateUpdate(dt: number): void;		
@@ -8317,8 +8317,8 @@ declare namespace cc {
 		onLoad is always called before any start functions, this allows you to order initialization of scripts.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
 		!#zh
-		å½“é™„åŠ åˆ°ä¸€ä¸ªæ¿€æ´»çš„èŠ‚ç‚¹ä¸Šæˆ–è€…å…¶èŠ‚ç‚¹ç¬¬ä¸€æ¬¡æ¿€æ´»æ—¶å€™è°ƒç”¨ã€‚onLoad æ€»æ˜¯ä¼šåœ¨ä»»ä½• start æ–¹æ³•è°ƒç”¨å‰æ‰§è¡Œï¼Œè¿™èƒ½ç”¨äºå®‰æ’è„šæœ¬çš„åˆå§‹åŒ–é¡ºåºã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚ 
+		å½?????????°ä??ä¸ªæ??æ´»ç???????¹ä??????????¶è????¹ç¬¬ä¸?æ¬¡æ??æ´»æ?¶å??è°???¨ã??onLoad ??»æ?¯ä????¨ä»»ä½? start ??¹æ??è°???¨å????§è??ï¼?è¿???½ç?¨ä??å®?????????¬ç?????å§????é¡ºå?????<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ????? 
 		*/
 		protected onLoad(): void;		
 		/**
@@ -8327,41 +8327,41 @@ declare namespace cc {
 		Usually used to initialize some logic which need to be called after all components' `onload` methods called.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
 		!#zh
-		å¦‚æœè¯¥ç»„ä»¶ç¬¬ä¸€æ¬¡å¯ç”¨ï¼Œåˆ™åœ¨æ‰€æœ‰ç»„ä»¶çš„ update ä¹‹å‰è°ƒç”¨ã€‚é€šå¸¸ç”¨äºéœ€è¦åœ¨æ‰€æœ‰ç»„ä»¶çš„ onLoad åˆå§‹åŒ–å®Œæ¯•åæ‰§è¡Œçš„é€»è¾‘ã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚ 
+		å¦????è¯¥ç??ä»¶ç¬¬ä¸?æ¬¡å?¯ç?¨ï???????¨æ?????ç»?ä»¶ç?? update ä¹????è°???¨ã?????å¸¸ç?¨ä?????è¦???¨æ?????ç»?ä»¶ç?? onLoad ???å§????å®?æ¯??????§è???????»è?????<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ????? 
 		*/
 		protected start(): void;		
 		/**
 		!#en Called when this component becomes enabled and its node is active.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
-		!#zh å½“è¯¥ç»„ä»¶è¢«å¯ç”¨ï¼Œå¹¶ä¸”å®ƒçš„èŠ‚ç‚¹ä¹Ÿæ¿€æ´»æ—¶ã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚ 
+		!#zh å½?è¯¥ç??ä»¶è¢«??¯ç?¨ï??å¹¶ä??å®?????????¹ä??æ¿?æ´»æ?¶ã??<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ????? 
 		*/
 		protected onEnable(): void;		
 		/**
 		!#en Called when this component becomes disabled or its node becomes inactive.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
-		!#zh å½“è¯¥ç»„ä»¶è¢«ç¦ç”¨æˆ–èŠ‚ç‚¹å˜ä¸ºæ— æ•ˆæ—¶è°ƒç”¨ã€‚<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚ 
+		!#zh å½?è¯¥ç??ä»¶è¢«ç¦???¨æ???????¹å??ä¸ºæ???????¶è????¨ã??<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ????? 
 		*/
 		protected onDisable(): void;		
 		/**
 		!#en Called when this component will be destroyed.<br/>
 		This is a lifecycle method. It may not be implemented in the super class. You can only call its super class method inside it. It should not be called manually elsewhere.
-		!#zh å½“è¯¥ç»„ä»¶è¢«é”€æ¯æ—¶è°ƒç”¨<br/>
-		è¯¥æ–¹æ³•ä¸ºç”Ÿå‘½å‘¨æœŸæ–¹æ³•ï¼Œçˆ¶ç±»æœªå¿…ä¼šæœ‰å®ç°ã€‚å¹¶ä¸”ä½ åªèƒ½åœ¨è¯¥æ–¹æ³•å†…éƒ¨è°ƒç”¨çˆ¶ç±»çš„å®ç°ï¼Œä¸å¯åœ¨å…¶å®ƒåœ°æ–¹ç›´æ¥è°ƒç”¨è¯¥æ–¹æ³•ã€‚ 
+		!#zh å½?è¯¥ç??ä»¶è¢«???æ¯???¶è?????<br/>
+		è¯¥æ?¹æ??ä¸ºç????½å?¨æ????¹æ??ï¼???¶ç±»??ªå??ä¼????å®???°ã??å¹¶ä??ä½???ªè?½å?¨è¯¥??¹æ???????¨è????¨ç?¶ç±»???å®???°ï??ä¸???¯å?¨å?¶å????°æ?¹ç?´æ?¥è????¨è¯¥??¹æ????? 
 		*/
 		protected onDestroy(): void;		
 		protected onFocusInEditor(): void;		
 		protected onLostFocusInEditor(): void;		
 		/**
-		!#en Called to initialize the component or nodeâ€™s properties when adding the component the first time or when the Reset command is used. This function is only called in editor.
-		!#zh ç”¨æ¥åˆå§‹åŒ–ç»„ä»¶æˆ–èŠ‚ç‚¹çš„ä¸€äº›å±æ€§ï¼Œå½“è¯¥ç»„ä»¶è¢«ç¬¬ä¸€æ¬¡æ·»åŠ åˆ°èŠ‚ç‚¹ä¸Šæˆ–ç”¨æˆ·ç‚¹å‡»äº†å®ƒçš„ Reset èœå•æ—¶è°ƒç”¨ã€‚è¿™ä¸ªå›è°ƒåªä¼šåœ¨ç¼–è¾‘å™¨ä¸‹è°ƒç”¨ã€‚ 
+		!#en Called to initialize the component or node???s properties when adding the component the first time or when the Reset command is used. This function is only called in editor.
+		!#zh ??¨æ?¥å??å§????ç»?ä»¶æ???????¹ç??ä¸?äº?å±???§ï??å½?è¯¥ç??ä»¶è¢«ç¬¬ä??æ¬¡æ·»?????°è????¹ä???????¨æ?·ç?¹å?»ä??å®???? Reset ????????¶è????¨ã??è¿?ä¸ªå??è°???ªä????¨ç??è¾???¨ä??è°???¨ã?? 
 		*/
 		protected resetInEditor(): void;		
 		/**
 		!#en Adds a component class to the node. You can also add component to node by passing in the name of the script.
-		!#zh å‘èŠ‚ç‚¹æ·»åŠ ä¸€ä¸ªç»„ä»¶ç±»ï¼Œä½ è¿˜å¯ä»¥é€šè¿‡ä¼ å…¥è„šæœ¬çš„åç§°æ¥æ·»åŠ ç»„ä»¶ã€‚
+		!#zh ????????¹æ·»???ä¸?ä¸ªç??ä»¶ç±»ï¼?ä½?è¿???¯ä»¥???è¿?ä¼???¥è????¬ç?????ç§°æ?¥æ·»???ç»?ä»¶ã??
 		@param typeOrClassName the constructor or the class name of the component to add
 		
 		@example 
@@ -8377,8 +8377,8 @@ declare namespace cc {
 		Returns the component of supplied type if the node has one attached, null if it doesn't.<br/>
 		You can also get component in the node by passing in the name of the script.
 		!#zh
-		è·å–èŠ‚ç‚¹ä¸ŠæŒ‡å®šç±»å‹çš„ç»„ä»¶ï¼Œå¦‚æœèŠ‚ç‚¹æœ‰é™„åŠ æŒ‡å®šç±»å‹çš„ç»„ä»¶ï¼Œåˆ™è¿”å›ï¼Œå¦‚æœæ²¡æœ‰åˆ™ä¸ºç©ºã€‚<br/>
-		ä¼ å…¥å‚æ•°ä¹Ÿå¯ä»¥æ˜¯è„šæœ¬çš„åç§°ã€‚
+		??·å???????¹ä?????å®?ç±»å?????ç»?ä»¶ï??å¦?????????¹æ???????????å®?ç±»å?????ç»?ä»¶ï?????è¿????ï¼?å¦????æ²¡æ?????ä¸ºç©º???<br/>
+		ä¼???¥å????°ä????¯ä»¥??¯è????¬ç?????ç§°ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -8393,7 +8393,7 @@ declare namespace cc {
 		getComponent(className: string): any;		
 		/**
 		!#en Returns all components of supplied Type in the node.
-		!#zh è¿”å›èŠ‚ç‚¹ä¸ŠæŒ‡å®šç±»å‹çš„æ‰€æœ‰ç»„ä»¶ã€‚
+		!#zh è¿?????????¹ä?????å®?ç±»å???????????ç»?ä»¶ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -8406,7 +8406,7 @@ declare namespace cc {
 		getComponents(className: string): any[];		
 		/**
 		!#en Returns the component of supplied type in any of its children using depth first search.
-		!#zh é€’å½’æŸ¥æ‰¾æ‰€æœ‰å­èŠ‚ç‚¹ä¸­ç¬¬ä¸€ä¸ªåŒ¹é…æŒ‡å®šç±»å‹çš„ç»„ä»¶ã€‚
+		!#zh ???å½???¥æ?¾æ?????å­??????¹ä¸­ç¬¬ä??ä¸ªå?¹é?????å®?ç±»å?????ç»?ä»¶ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -8419,7 +8419,7 @@ declare namespace cc {
 		getComponentInChildren(className: string): any;		
 		/**
 		!#en Returns the components of supplied type in self or any of its children using depth first search.
-		!#zh é€’å½’æŸ¥æ‰¾è‡ªèº«æˆ–æ‰€æœ‰å­èŠ‚ç‚¹ä¸­æŒ‡å®šç±»å‹çš„ç»„ä»¶
+		!#zh ???å½???¥æ?¾è?ªèº«?????????å­??????¹ä¸­???å®?ç±»å?????ç»?ä»?
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -8435,8 +8435,8 @@ declare namespace cc {
 		If the component's bounding box is different from the node's, you can implement this method to supply
 		a custom axis aligned bounding box (AABB), so the editor's scene view can perform hit test properly.
 		!#zh
-		å¦‚æœç»„ä»¶çš„åŒ…å›´ç›’ä¸èŠ‚ç‚¹ä¸åŒï¼Œæ‚¨å¯ä»¥å®ç°è¯¥æ–¹æ³•ä»¥æä¾›è‡ªå®šä¹‰çš„è½´å‘å¯¹é½çš„åŒ…å›´ç›’ï¼ˆAABBï¼‰ï¼Œ
-		ä»¥ä¾¿ç¼–è¾‘å™¨çš„åœºæ™¯è§†å›¾å¯ä»¥æ­£ç¡®åœ°æ‰§è¡Œç‚¹é€‰æµ‹è¯•ã€‚
+		å¦????ç»?ä»¶ç???????´ç??ä¸??????¹ä?????ï¼???¨å?¯ä»¥å®???°è¯¥??¹æ??ä»¥æ??ä¾???ªå??ä¹????è½´å??å¯¹é??????????´ç??ï¼?AABBï¼?ï¼?
+		ä»¥ä¾¿ç¼?è¾???¨ç????ºæ?¯è????¾å?¯ä»¥æ­?ç¡®å?°æ?§è????¹é??æµ?è¯????
 		@param out_rect the Rect to receive the bounding box 
 		*/
 		_getLocalBounds(out_rect: Rect): void;		
@@ -8463,16 +8463,16 @@ declare namespace cc {
 		
 		This function is only called in editor mode.
 		!#zh
-		onRestore æ˜¯ç”¨æˆ·åœ¨æ£€æŸ¥å™¨èœå•ç‚¹å‡» Reset æ—¶ï¼Œå¯¹æ­¤ç»„ä»¶æ‰§è¡Œæ’¤æ¶ˆæ“ä½œåè°ƒç”¨çš„ã€‚<br/>
+		onRestore ??¯ç?¨æ?·å?¨æ????¥å?¨è???????¹å?? Reset ??¶ï??å¯¹æ­¤ç»?ä»¶æ?§è????¤æ?????ä½????è°???¨ç?????<br/>
 		<br/>
-		å¦‚æœç»„ä»¶åŒ…å«äº†â€œå†…éƒ¨çŠ¶æ€â€ï¼ˆä¸åœ¨ CCClass å±æ€§ä¸­å®šä¹‰çš„ä¸´æ—¶æˆå‘˜å˜é‡ï¼‰ï¼Œé‚£ä¹ˆä½ å¯èƒ½éœ€è¦å®ç°è¯¥æ–¹æ³•ã€‚<br/>
+		å¦????ç»?ä»¶å????«ä??????????¨ç?¶æ?????ï¼?ä¸???? CCClass å±???§ä¸­å®?ä¹????ä¸´æ?¶æ???????????ï¼?ï¼????ä¹?ä½???¯è?½é??è¦?å®???°è¯¥??¹æ?????<br/>
 		<br/>
-		ç¼–è¾‘å™¨æ‰§è¡Œæ’¤é”€/é‡åšæ“ä½œæ—¶ï¼Œå°†è°ƒç”¨ç»„ä»¶çš„ get set æ¥å½•åˆ¶å’Œè¿˜åŸç»„ä»¶çš„çŠ¶æ€ã€‚ç„¶è€Œï¼Œåœ¨æç«¯çš„æƒ…å†µä¸‹ï¼Œå®ƒå¯èƒ½æ— æ³•è‰¯å¥½è¿ä½œã€‚<br/>
-		é‚£ä¹ˆä½ å°±åº”è¯¥å®ç°è¿™ä¸ªæ–¹æ³•ï¼Œæ‰‹åŠ¨æ ¹æ®ç»„ä»¶çš„å±æ€§åŒæ­¥â€œå†…éƒ¨çŠ¶æ€â€ã€‚ä¸€æ—¦ä½ å®ç°è¿™ä¸ªæ–¹æ³•ï¼Œå½“ç”¨æˆ·æ’¤é”€æˆ–é‡åšæ—¶ï¼Œç»„ä»¶çš„æ‰€æœ‰ get set éƒ½ä¸ä¼šå†è¢«è°ƒç”¨ã€‚è¿™æ„å‘³ç€ä»…ä»…æŒ‡å®šäº†é»˜è®¤å€¼çš„å±æ€§å°†è¢«ç¼–è¾‘å™¨è®°å½•å’Œè¿˜åŸã€‚<br/>
+		ç¼?è¾???¨æ?§è????¤é??/?????????ä½???¶ï??å°?è°???¨ç??ä»¶ç?? get set ??¥å????¶å??è¿????ç»?ä»¶ç????¶æ???????¶è??ï¼???¨æ??ç«¯ç???????µä??ï¼?å®???¯è?½æ??æ³???¯å¥½è¿?ä½????<br/>
+		???ä¹?ä½?å°±å??è¯¥å????°è??ä¸ªæ?¹æ??ï¼??????¨æ?¹æ?®ç??ä»¶ç??å±???§å??æ­¥â???????¨ç?¶æ????????ä¸???¦ä??å®???°è??ä¸ªæ?¹æ??ï¼?å½???¨æ?·æ?¤é?????????????¶ï??ç»?ä»¶ç???????? get set ??½ä??ä¼????è¢«è????¨ã??è¿??????³ç??ä»?ä»????å®?äº?é»?è®¤å?¼ç??å±???§å??è¢«ç??è¾???¨è®°å½????è¿???????<br/>
 		<br/>
-		åŒæ ·çš„ï¼Œç¼–è¾‘å¯èƒ½æ— æ³•åœ¨æç«¯æƒ…å†µä¸‹æ­£ç¡®åœ°é‡ç½®æ‚¨çš„ç»„ä»¶ã€‚å¦‚æœä½ éœ€è¦æ”¯æŒç»„ä»¶é‡ç½®èœå•ï¼Œåˆ™éœ€è¦åœ¨è¯¥æ–¹æ³•ä¸­æ‰‹å·¥åŒæ­¥ç»„ä»¶å±æ€§åˆ°â€œå†…éƒ¨çŠ¶æ€â€ã€‚ä¸€æ—¦ä½ å®ç°è¿™ä¸ªæ–¹æ³•ï¼Œç»„ä»¶çš„æ‰€æœ‰ get set éƒ½ä¸ä¼šåœ¨é‡ç½®æ“ä½œæ—¶è¢«è°ƒç”¨ã€‚è¿™æ„å‘³ç€ä»…ä»…æŒ‡å®šäº†é»˜è®¤å€¼çš„å±æ€§å°†è¢«ç¼–è¾‘å™¨é‡ç½®ã€‚
+		?????·ç??ï¼?ç¼?è¾???¯è?½æ??æ³???¨æ??ç«¯æ????µä??æ­?ç¡®å?°é??ç½®æ?¨ç??ç»?ä»¶ã??å¦????ä½????è¦???¯æ??ç»?ä»¶é??ç½®è?????ï¼???????è¦???¨è¯¥??¹æ??ä¸­æ??å·¥å??æ­¥ç??ä»¶å????§å?°â???????¨ç?¶æ????????ä¸???¦ä??å®???°è??ä¸ªæ?¹æ??ï¼?ç»?ä»¶ç???????? get set ??½ä??ä¼???¨é??ç½®æ??ä½???¶è¢«è°???¨ã??è¿??????³ç??ä»?ä»????å®?äº?é»?è®¤å?¼ç??å±???§å??è¢«ç??è¾???¨é??ç½®ã??
 		<br/>
-		æ­¤æ–¹æ³•ä»…åœ¨ç¼–è¾‘å™¨ä¸‹ä¼šè¢«è°ƒç”¨ã€‚ 
+		æ­¤æ?¹æ??ä»???¨ç??è¾???¨ä??ä¼?è¢«è????¨ã?? 
 		*/
 		onRestore(): void;		
 		/**
@@ -8480,8 +8480,8 @@ declare namespace cc {
 		Schedules a custom selector.<br/>
 		If the selector is already scheduled, then the interval parameter will be updated without scheduling it again.
 		!#zh
-		è°ƒåº¦ä¸€ä¸ªè‡ªå®šä¹‰çš„å›è°ƒå‡½æ•°ã€‚<br/>
-		å¦‚æœå›è°ƒå‡½æ•°å·²è°ƒåº¦ï¼Œé‚£ä¹ˆå°†ä¸ä¼šé‡å¤è°ƒåº¦å®ƒï¼Œåªä¼šæ›´æ–°æ—¶é—´é—´éš”å‚æ•°ã€‚
+		è°?åº¦ä??ä¸ªè?ªå??ä¹???????è°???½æ?°ã??<br/>
+		å¦???????è°???½æ?°å·²è°?åº¦ï?????ä¹?å°?ä¸?ä¼????å¤?è°?åº¦å??ï¼???ªä????´æ?°æ?¶é?´é?´é???????°ã??
 		@param callback The callback function
 		@param interval Tick interval in seconds. 0 means tick every frame.
 		@param repeat The selector will be executed (repeat + 1) times, you can use cc.macro.REPEAT_FOREVER for tick infinitely.
@@ -8498,7 +8498,7 @@ declare namespace cc {
 		schedule(callback: Function, interval?: number, repeat?: number, delay?: number): void;		
 		/**
 		!#en Schedules a callback function that runs only once, with a delay of 0 or larger.
-		!#zh è°ƒåº¦ä¸€ä¸ªåªè¿è¡Œä¸€æ¬¡çš„å›è°ƒå‡½æ•°ï¼Œå¯ä»¥æŒ‡å®š 0 è®©å›è°ƒå‡½æ•°åœ¨ä¸‹ä¸€å¸§ç«‹å³æ‰§è¡Œæˆ–è€…åœ¨ä¸€å®šçš„å»¶æ—¶ä¹‹åæ‰§è¡Œã€‚
+		!#zh è°?åº¦ä??ä¸ªå?ªè??è¡?ä¸?æ¬¡ç?????è°???½æ?°ï????¯ä»¥???å®? 0 è®©å??è°???½æ?°å?¨ä??ä¸?å¸§ç????³æ?§è??????????¨ä??å®????å»¶æ?¶ä???????§è?????
 		@param callback A function wrapped as a selector
 		@param delay The amount of time that the first tick will wait before execution. Unit: s
 		
@@ -8513,7 +8513,7 @@ declare namespace cc {
 		scheduleOnce(callback: Function, delay?: number): void;		
 		/**
 		!#en Unschedules a custom callback function.
-		!#zh å–æ¶ˆè°ƒåº¦ä¸€ä¸ªè‡ªå®šä¹‰çš„å›è°ƒå‡½æ•°ã€‚
+		!#zh ???æ¶?è°?åº¦ä??ä¸ªè?ªå??ä¹???????è°???½æ?°ã??
 		@param callback_fn A function wrapped as a selector
 		
 		@example 
@@ -8526,7 +8526,7 @@ declare namespace cc {
 		!#en
 		unschedule all scheduled callback functions: custom callback functions, and the 'update' callback function.<br/>
 		Actions are not affected by this method.
-		!#zh å–æ¶ˆè°ƒåº¦æ‰€æœ‰å·²è°ƒåº¦çš„å›è°ƒå‡½æ•°ï¼šå®šåˆ¶çš„å›è°ƒå‡½æ•°ä»¥åŠ `update` å›è°ƒå‡½æ•°ã€‚åŠ¨ä½œä¸å—æ­¤æ–¹æ³•å½±å“ã€‚
+		!#zh ???æ¶?è°?åº¦æ?????å·²è??åº¦ç?????è°???½æ?°ï??å®???¶ç?????è°???½æ?°ä»¥??? `update` ???è°???½æ?°ã????¨ä??ä¸????æ­¤æ?¹æ??å½±å?????
 		
 		@example 
 		```js
@@ -8536,150 +8536,150 @@ declare namespace cc {
 		unscheduleAllCallbacks(): void;	
 	}	
 	/** !#en The Label Component.
-	!#zh æ–‡å­—æ ‡ç­¾ç»„ä»¶ */
+	!#zh ???å­????ç­¾ç??ä»? */
 	export class Label extends RenderComponent {		
 		/** !#en Content string of label.
-		!#zh æ ‡ç­¾æ˜¾ç¤ºçš„æ–‡æœ¬å†…å®¹ã€‚ */
+		!#zh ???ç­¾æ?¾ç¤º????????¬å??å®¹ã?? */
 		string: string;		
 		/** !#en Horizontal Alignment of label.
-		!#zh æ–‡æœ¬å†…å®¹çš„æ°´å¹³å¯¹é½æ–¹å¼ã€‚ */
+		!#zh ?????¬å??å®¹ç??æ°´å¹³å¯¹é????¹å????? */
 		horizontalAlign: Label.HorizontalAlign;		
 		/** !#en Vertical Alignment of label.
-		!#zh æ–‡æœ¬å†…å®¹çš„å‚ç›´å¯¹é½æ–¹å¼ã€‚ */
+		!#zh ?????¬å??å®¹ç???????´å¯¹é½???¹å????? */
 		verticalAlign: Label.VerticalAlign;		
 		/** !#en The actual rendering font size in shrink mode
-		!#zh SHRINK æ¨¡å¼ä¸‹é¢æ–‡æœ¬å®é™…æ¸²æŸ“çš„å­—ä½“å¤§å° */
+		!#zh SHRINK æ¨¡å??ä¸???¢æ????¬å?????æ¸²æ?????å­?ä½?å¤§å?? */
 		actualFontSize: number;		
 		/** !#en Font size of label.
-		!#zh æ–‡æœ¬å­—ä½“å¤§å°ã€‚ */
+		!#zh ?????¬å??ä½?å¤§å????? */
 		fontSize: number;		
 		/** !#en Font family of label, only take effect when useSystemFont property is true.
-		!#zh æ–‡æœ¬å­—ä½“åç§°, åªåœ¨ useSystemFont å±æ€§ä¸º true çš„æ—¶å€™ç”Ÿæ•ˆã€‚ */
+		!#zh ?????¬å??ä½????ç§?, ??ªå?? useSystemFont å±???§ä¸º true ?????¶å??????????? */
 		fontFamily: string;		
 		/** !#en Line Height of label.
-		!#zh æ–‡æœ¬è¡Œé«˜ã€‚ */
+		!#zh ?????¬è??é«???? */
 		lineHeight: number;		
 		/** !#en Overflow of label.
-		!#zh æ–‡å­—æ˜¾ç¤ºè¶…å‡ºèŒƒå›´æ—¶çš„å¤„ç†æ–¹å¼ã€‚ */
+		!#zh ???å­???¾ç¤ºè¶???ºè????´æ?¶ç??å¤??????¹å????? */
 		overflow: Label.Overflow;		
 		/** !#en Whether auto wrap label when string width is large than label width.
-		!#zh æ˜¯å¦è‡ªåŠ¨æ¢è¡Œã€‚ */
+		!#zh ??¯å?¦è?ªå?¨æ?¢è????? */
 		enableWrapText: boolean;		
 		/** !#en The font of label.
-		!#zh æ–‡æœ¬å­—ä½“ã€‚ */
+		!#zh ?????¬å??ä½???? */
 		font: Font;		
 		/** !#en Whether use system font name or not.
-		!#zh æ˜¯å¦ä½¿ç”¨ç³»ç»Ÿå­—ä½“ã€‚ */
+		!#zh ??¯å?¦ä½¿??¨ç³»ç»?å­?ä½???? */
 		useSystemFont: boolean;		
 		/** !#en The spacing of the x axis between characters, only take Effect when using bitmap fonts.
-		!#zh æ–‡å­—ä¹‹é—´ x è½´çš„é—´è·ï¼Œä»…åœ¨ä½¿ç”¨ä½å›¾å­—ä½“æ—¶ç”Ÿæ•ˆã€‚ */
+		!#zh ???å­?ä¹???? x è½´ç????´è??ï¼?ä»???¨ä½¿??¨ä????¾å??ä½???¶ç???????? */
 		spacingX: number;		
 		/** !#en The cache mode of label. This mode only supports system fonts.
-		!#zh æ–‡æœ¬ç¼“å­˜æ¨¡å¼, è¯¥æ¨¡å¼åªæ”¯æŒç³»ç»Ÿå­—ä½“ã€‚ */
+		!#zh ?????¬ç??å­?æ¨¡å??, è¯¥æ¨¡å¼???ªæ?¯æ??ç³»ç??å­?ä½???? */
 		cacheMode: Label.CacheMode;		
 		/** !#en Whether enable bold.
-		!#zh æ˜¯å¦å¯ç”¨é»‘ä½“ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨é??ä½???? */
 		enableBold: boolean;		
 		/** !#en Whether enable italic.
-		!#zh æ˜¯å¦å¯ç”¨æ–œä½“ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨æ??ä½???? */
 		enableItalic: boolean;		
 		/** !#en Whether enable underline.
-		!#zh æ˜¯å¦å¯ç”¨ä¸‹åˆ’çº¿ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨ä?????çº¿ã?? */
 		enableUnderline: boolean;		
 		/** !#en The height of underline.
-		!#zh ä¸‹åˆ’çº¿é«˜åº¦ã€‚ */
+		!#zh ä¸????çº¿é??åº¦ã?? */
 		underlineHeight: number;		
 		/**
-		!#zh éœ€è¦ä¿è¯å½“å‰åœºæ™¯ä¸­æ²¡æœ‰ä½¿ç”¨CHARç¼“å­˜çš„Labelæ‰å¯ä»¥æ¸…é™¤ï¼Œå¦åˆ™å·²æ¸²æŸ“çš„æ–‡å­—æ²¡æœ‰é‡æ–°ç»˜åˆ¶ä¼šä¸æ˜¾ç¤º
+		!#zh ???è¦?ä¿?è¯?å½??????ºæ?¯ä¸­æ²¡æ??ä½¿ç?¨CHARç¼?å­????Label?????¯ä»¥æ¸???¤ï????¦å??å·²æ¸²?????????å­?æ²¡æ???????°ç????¶ä??ä¸???¾ç¤º
 		!#en It can be cleared that need to ensure there is not use the CHAR cache in the current scene. Otherwise, the rendered text will not be displayed without repainting. 
 		*/
 		static clearCharCache(): void;	
 	}	
 	/** !#en Outline effect used to change the display, only for system fonts or TTF fonts
-	!#zh æè¾¹æ•ˆæœç»„ä»¶,ç”¨äºå­—ä½“æè¾¹,åªèƒ½ç”¨äºç³»ç»Ÿå­—ä½“ */
+	!#zh ???è¾¹æ?????ç»?ä»?,??¨ä??å­?ä½????è¾?,??ªè?½ç?¨ä??ç³»ç??å­?ä½? */
 	export class LabelOutline extends Component {		
 		/** !#en outline color
-		!#zh æ”¹å˜æè¾¹çš„é¢œè‰² */
+		!#zh ??¹å?????è¾¹ç??é¢???? */
 		color: Color;		
 		/** !#en Change the outline width
-		!#zh æ”¹å˜æè¾¹çš„å®½åº¦ */
+		!#zh ??¹å?????è¾¹ç??å®½åº¦ */
 		width: number;	
 	}	
 	/** !#en Shadow effect for Label component, only for system fonts or TTF fonts
-	!#zh ç”¨äºç»™ Label ç»„ä»¶æ·»åŠ é˜´å½±æ•ˆæœï¼Œåªèƒ½ç”¨äºç³»ç»Ÿå­—ä½“æˆ– ttf å­—ä½“ */
+	!#zh ??¨ä??ç»? Label ç»?ä»¶æ·»?????´å½±??????ï¼???ªè?½ç?¨ä??ç³»ç??å­?ä½???? ttf å­?ä½? */
 	export class LabelShadow extends Component {		
 		/** !#en The shadow color
-		!#zh é˜´å½±çš„é¢œè‰² */
+		!#zh ??´å½±???é¢???? */
 		color: Color;		
 		/** !#en Offset between font and shadow
-		!#zh å­—ä½“ä¸é˜´å½±çš„åç§» */
+		!#zh å­?ä½?ä¸???´å½±??????ç§? */
 		offset: Vec2;		
 		/** !#en A non-negative float specifying the level of shadow blur
-		!#zh é˜´å½±çš„æ¨¡ç³Šç¨‹åº¦ */
+		!#zh ??´å½±???æ¨¡ç??ç¨?åº? */
 		blur: number;	
 	}	
 	/** !#en
 	The Layout is a container component, use it to arrange child elements easily.<br>
-	Noteï¼š<br>
+	Noteï¼?<br>
 	1.Scaling and rotation of child nodes are not considered.<br>
 	2.After setting the Layout, the results need to be updated until the next frame,
-	unless you manually call {{#crossLink "Layout/updateLayout:method"}}{{/crossLink}}ã€‚
+	unless you manually call {{#crossLink "Layout/updateLayout:method"}}{{/crossLink}}???
 	!#zh
-	Layout ç»„ä»¶ç›¸å½“äºä¸€ä¸ªå®¹å™¨ï¼Œèƒ½è‡ªåŠ¨å¯¹å®ƒçš„æ‰€æœ‰å­èŠ‚ç‚¹è¿›è¡Œç»Ÿä¸€æ’ç‰ˆã€‚<br>
-	æ³¨æ„ï¼š<br>
-	1.ä¸ä¼šè€ƒè™‘å­èŠ‚ç‚¹çš„ç¼©æ”¾å’Œæ—‹è½¬ã€‚<br>
-	2.å¯¹ Layout è®¾ç½®åç»“æœéœ€è¦åˆ°ä¸‹ä¸€å¸§æ‰ä¼šæ›´æ–°ï¼Œé™¤éä½ è®¾ç½®å®Œä»¥åæ‰‹åŠ¨è°ƒç”¨ {{#crossLink "Layout/updateLayout:method"}}{{/crossLink}}ã€‚ */
+	Layout ç»?ä»¶ç?¸å??äº?ä¸?ä¸ªå®¹??¨ï????½è?ªå?¨å¯¹å®??????????å­??????¹è??è¡?ç»?ä¸??????????<br>
+	æ³¨æ??ï¼?<br>
+	1.ä¸?ä¼???????å­??????¹ç??ç¼©æ?¾å?????è½¬ã??<br>
+	2.å¯? Layout è®¾ç½®???ç»???????è¦???°ä??ä¸?å¸§æ??ä¼???´æ?°ï????¤é??ä½?è®¾ç½®å®?ä»¥å???????¨è????? {{#crossLink "Layout/updateLayout:method"}}{{/crossLink}}??? */
 	export class Layout extends Component {		
 		/** !#en The layout type.
-		!#zh å¸ƒå±€ç±»å‹ */
+		!#zh å¸?å±?ç±»å?? */
 		type: Layout.Type;		
 		/** !#en
 		The are three resize modes for Layout.
 		None, resize Container and resize children.
-		!#zh ç¼©æ”¾æ¨¡å¼ */
+		!#zh ç¼©æ?¾æ¨¡å¼? */
 		resizeMode: Layout.ResizeMode;		
 		/** !#en The cell size for grid layout.
-		!#zh æ¯ä¸ªæ ¼å­çš„å¤§å°ï¼Œåªæœ‰å¸ƒå±€ç±»å‹ä¸º GRID çš„æ—¶å€™æ‰æœ‰æ•ˆã€‚ */
+		!#zh æ¯?ä¸ªæ?¼å?????å¤§å??ï¼???ªæ??å¸?å±?ç±»å??ä¸? GRID ?????¶å?????????????? */
 		cellSize: Size;		
 		/** !#en
 		The start axis for grid layout. If you choose horizontal, then children will layout horizontally at first,
 		and then break line on demand. Choose vertical if you want to layout vertically at first .
-		!#zh èµ·å§‹è½´æ–¹å‘ç±»å‹ï¼Œå¯è¿›è¡Œæ°´å¹³å’Œå‚ç›´å¸ƒå±€æ’åˆ—ï¼Œåªæœ‰å¸ƒå±€ç±»å‹ä¸º GRID çš„æ—¶å€™æ‰æœ‰æ•ˆã€‚ */
+		!#zh èµ·å??è½´æ?¹å??ç±»å??ï¼???¯è??è¡?æ°´å¹³????????´å??å±???????ï¼???ªæ??å¸?å±?ç±»å??ä¸? GRID ?????¶å?????????????? */
 		startAxis: Layout.AxisDirection;		
 		/** !#en The left padding of layout, it only effect the layout in one direction.
-		!#zh å®¹å™¨å†…å·¦è¾¹è·ï¼Œåªä¼šåœ¨ä¸€ä¸ªå¸ƒå±€æ–¹å‘ä¸Šç”Ÿæ•ˆã€‚ */
+		!#zh å®¹å?¨å??å·¦è¾¹è·?ï¼???ªä????¨ä??ä¸ªå??å±???¹å??ä¸?????????? */
 		paddingLeft: number;		
 		/** !#en The right padding of layout, it only effect the layout in one direction.
-		!#zh å®¹å™¨å†…å³è¾¹è·ï¼Œåªä¼šåœ¨ä¸€ä¸ªå¸ƒå±€æ–¹å‘ä¸Šç”Ÿæ•ˆã€‚ */
+		!#zh å®¹å?¨å????³è¾¹è·?ï¼???ªä????¨ä??ä¸ªå??å±???¹å??ä¸?????????? */
 		paddingRight: number;		
 		/** !#en The top padding of layout, it only effect the layout in one direction.
-		!#zh å®¹å™¨å†…ä¸Šè¾¹è·ï¼Œåªä¼šåœ¨ä¸€ä¸ªå¸ƒå±€æ–¹å‘ä¸Šç”Ÿæ•ˆã€‚ */
+		!#zh å®¹å?¨å??ä¸?è¾¹è??ï¼???ªä????¨ä??ä¸ªå??å±???¹å??ä¸?????????? */
 		paddingTop: number;		
 		/** !#en The bottom padding of layout, it only effect the layout in one direction.
-		!#zh å®¹å™¨å†…ä¸‹è¾¹è·ï¼Œåªä¼šåœ¨ä¸€ä¸ªå¸ƒå±€æ–¹å‘ä¸Šç”Ÿæ•ˆã€‚ */
+		!#zh å®¹å?¨å??ä¸?è¾¹è??ï¼???ªä????¨ä??ä¸ªå??å±???¹å??ä¸?????????? */
 		paddingBottom: number;		
 		/** !#en The distance in x-axis between each element in layout.
-		!#zh å­èŠ‚ç‚¹ä¹‹é—´çš„æ°´å¹³é—´è·ã€‚ */
+		!#zh å­??????¹ä????´ç??æ°´å¹³??´è????? */
 		spacingX: number;		
 		/** !#en The distance in y-axis between each element in layout.
-		!#zh å­èŠ‚ç‚¹ä¹‹é—´çš„å‚ç›´é—´è·ã€‚ */
+		!#zh å­??????¹ä????´ç???????´é?´è????? */
 		spacingY: number;		
 		/** !#en
 		Only take effect in Vertical layout mode.
 		This option changes the start element's positioning.
-		!#zh å‚ç›´æ’åˆ—å­èŠ‚ç‚¹çš„æ–¹å‘ã€‚ */
+		!#zh ?????´æ?????å­??????¹ç????¹å????? */
 		verticalDirection: Layout.VerticalDirection;		
 		/** !#en
 		Only take effect in Horizontal layout mode.
 		This option changes the start element's positioning.
-		!#zh æ°´å¹³æ’åˆ—å­èŠ‚ç‚¹çš„æ–¹å‘ã€‚ */
+		!#zh æ°´å¹³??????å­??????¹ç????¹å????? */
 		horizontalDirection: Layout.HorizontalDirection;		
 		/** !#en Adjust the layout if the children scaled.
-		!#zh å­èŠ‚ç‚¹ç¼©æ”¾æ¯”ä¾‹æ˜¯å¦å½±å“å¸ƒå±€ã€‚ */
+		!#zh å­??????¹ç¼©??¾æ??ä¾???¯å?¦å½±???å¸?å±???? */
 		affectedByScale: boolean;		
 		/**
 		!#en Perform the layout update
-		!#zh ç«‹å³æ‰§è¡Œæ›´æ–°å¸ƒå±€
+		!#zh ç«???³æ?§è????´æ?°å??å±?
 		
 		@example 
 		```js
@@ -8693,13 +8693,13 @@ declare namespace cc {
 		updateLayout(): void;	
 	}	
 	/** !#en The Mask Component
-	!#zh é®ç½©ç»„ä»¶ */
+	!#zh ??®ç½©ç»?ä»? */
 	export class Mask extends RenderComponent {		
 		/** !#en The mask type.
-		!#zh é®ç½©ç±»å‹ */
+		!#zh ??®ç½©ç±»å?? */
 		type: Mask.Type;		
 		/** !#en The mask image
-		!#zh é®ç½©æ‰€éœ€è¦çš„è´´å›¾ */
+		!#zh ??®ç½©??????è¦????è´´å?? */
 		spriteFrame: SpriteFrame;		
 		/** !#en
 		The alpha threshold.(Not supported Canvas Mode) <br/>
@@ -8708,17 +8708,17 @@ declare namespace cc {
 		This default to 0.1.
 		When it's set to 1, the stencil will discard all pixels, nothing will be shown.
 		!#zh
-		Alpha é˜ˆå€¼ï¼ˆä¸æ”¯æŒ Canvas æ¨¡å¼ï¼‰<br/>
-		åªæœ‰å½“æ¨¡æ¿çš„åƒç´ çš„ alpha å¤§äºç­‰äº alphaThreshold æ—¶ï¼Œæ‰ä¼šç»˜åˆ¶å†…å®¹ã€‚<br/>
-		è¯¥æ•°å€¼ 0 ~ 1 ä¹‹é—´çš„æµ®ç‚¹æ•°ï¼Œé»˜è®¤å€¼ä¸º 0.1
-		å½“è¢«è®¾ç½®ä¸º 1 æ—¶ï¼Œä¼šä¸¢å¼ƒæ‰€æœ‰è’™ç‰ˆåƒç´ ï¼Œæ‰€ä»¥ä¸ä¼šæ˜¾ç¤ºä»»ä½•å†…å®¹ */
+		Alpha ?????¼ï??ä¸???¯æ?? Canvas æ¨¡å??ï¼?<br/>
+		??ªæ??å½?æ¨¡æ?¿ç?????ç´???? alpha å¤§ä??ç­?äº? alphaThreshold ??¶ï?????ä¼?ç»???¶å??å®¹ã??<br/>
+		è¯¥æ?°å?? 0 ~ 1 ä¹???´ç??æµ®ç?¹æ?°ï??é»?è®¤å?¼ä¸º 0.1
+		å½?è¢«è®¾ç½®ä¸º 1 ??¶ï??ä¼?ä¸¢å?????????????????ç´?ï¼????ä»¥ä??ä¼???¾ç¤ºä»»ä?????å®? */
 		alphaThreshold: number;		
 		/** !#en Reverse mask (Not supported Canvas Mode)
-		!#zh åå‘é®ç½©ï¼ˆä¸æ”¯æŒ Canvas æ¨¡å¼ï¼‰ */
+		!#zh ????????®ç½©ï¼?ä¸???¯æ?? Canvas æ¨¡å??ï¼? */
 		inverted: boolean;		
 		/** TODO: remove segments, not supported by graphics
 		!#en The segements for ellipse mask.
-		!#zh æ¤­åœ†é®ç½©çš„æ›²çº¿ç»†åˆ†æ•° */
+		!#zh æ¤­å????®ç½©?????²çº¿ç»??????? */
 		segements: number;	
 	}	
 	/** !#en
@@ -8729,32 +8729,32 @@ declare namespace cc {
 	streak will move before adding a new ribbon segment, and the texture                     <br/>
 	length is the how many pixels the texture is stretched across. The texture               <br/>
 	is vertically aligned along the streak segment.
-	!#zh è¿åŠ¨è½¨è¿¹ï¼Œç”¨äºæ¸¸æˆå¯¹è±¡çš„è¿åŠ¨è½¨è¿¹ä¸Šå®ç°æ‹–å°¾æ¸éšæ•ˆæœã€‚ */
+	!#zh è¿???¨è½¨è¿¹ï????¨ä??æ¸¸æ??å¯¹è±¡???è¿???¨è½¨è¿¹ä??å®???°æ??å°¾æ?????????????? */
 	export class MotionStreak extends Component implements BlendFunc {		
 		/** !#en
-		!#zh åœ¨ç¼–è¾‘å™¨æ¨¡å¼ä¸‹é¢„è§ˆæ‹–å°¾æ•ˆæœã€‚ */
+		!#zh ??¨ç??è¾???¨æ¨¡å¼?ä¸?é¢?è§????å°¾æ???????? */
 		preview: boolean;		
 		/** !#en The fade time to fade.
-		!#zh æ‹–å°¾çš„æ¸éšæ—¶é—´ï¼Œä»¥ç§’ä¸ºå•ä½ã€‚ */
+		!#zh ???å°¾ç??æ¸??????¶é?´ï??ä»¥ç??ä¸ºå??ä½???? */
 		fadeTime: number;		
 		/** !#en The minimum segment size.
-		!#zh æ‹–å°¾ä¹‹é—´æœ€å°è·ç¦»ã€‚ */
+		!#zh ???å°¾ä????´æ??å°?è·?ç¦»ã?? */
 		minSeg: number;		
 		/** !#en The stroke's width.
-		!#zh æ‹–å°¾çš„å®½åº¦ã€‚ */
+		!#zh ???å°¾ç??å®½åº¦??? */
 		stroke: number;		
 		/** !#en The texture of the MotionStreak.
-		!#zh æ‹–å°¾çš„è´´å›¾ã€‚ */
+		!#zh ???å°¾ç??è´´å?¾ã?? */
 		texture: Texture2D;		
 		/** !#en The color of the MotionStreak.
-		!#zh æ‹–å°¾çš„é¢œè‰² */
+		!#zh ???å°¾ç??é¢???? */
 		color: Color;		
 		/** !#en The fast Mode.
-		!#zh æ˜¯å¦å¯ç”¨äº†å¿«é€Ÿæ¨¡å¼ã€‚å½“å¯ç”¨å¿«é€Ÿæ¨¡å¼ï¼Œæ–°çš„ç‚¹ä¼šè¢«æ›´å¿«åœ°æ·»åŠ ï¼Œä½†ç²¾åº¦è¾ƒä½ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨ä??å¿«é??æ¨¡å?????å½???¯ç?¨å¿«???æ¨¡å??ï¼???°ç????¹ä??è¢«æ?´å¿«??°æ·»???ï¼?ä½?ç²¾åº¦è¾?ä½???? */
 		fastMode: boolean;		
 		/**
 		!#en Remove all living segments of the ribbon.
-		!#zh åˆ é™¤å½“å‰æ‰€æœ‰çš„æ‹–å°¾ç‰‡æ®µã€‚
+		!#zh ?????¤å?????????????????å°¾ç??æ®µã??
 		
 		@example 
 		```js
@@ -8764,119 +8764,119 @@ declare namespace cc {
 		*/
 		reset(): void;		
 		/** !#en specify the source Blend Factor, this will generate a custom material object, please pay attention to the memory cost.
-		!#zh æŒ‡å®šåŸå›¾çš„æ··åˆæ¨¡å¼ï¼Œè¿™ä¼šå…‹éš†ä¸€ä¸ªæ–°çš„æè´¨å¯¹è±¡ï¼Œæ³¨æ„è¿™å¸¦æ¥çš„å¼€é”€ */
+		!#zh ???å®??????¾ç??æ··å??æ¨¡å??ï¼?è¿?ä¼???????ä¸?ä¸ªæ?°ç?????è´¨å¯¹è±¡ï??æ³¨æ??è¿?å¸¦æ?¥ç??å¼???? */
 		srcBlendFactor: macro.BlendFactor;		
 		/** !#en specify the destination Blend Factor.
-		!#zh æŒ‡å®šç›®æ ‡çš„æ··åˆæ¨¡å¼ */
+		!#zh ???å®???®æ?????æ··å??æ¨¡å?? */
 		dstBlendFactor: macro.BlendFactor;	
 	}	
 	/** !#en The PageView control
-	!#zh é¡µé¢è§†å›¾ç»„ä»¶ */
+	!#zh é¡µé?¢è????¾ç??ä»? */
 	export class PageView extends ScrollView {		
 		/** !#en Specify the size type of each page in PageView.
-		!#zh é¡µé¢è§†å›¾ä¸­æ¯ä¸ªé¡µé¢å¤§å°ç±»å‹ */
+		!#zh é¡µé?¢è????¾ä¸­æ¯?ä¸ªé¡µ??¢å¤§å°?ç±»å?? */
 		sizeMode: PageView.SizeMode;		
 		/** !#en The page view direction
-		!#zh é¡µé¢è§†å›¾æ»šåŠ¨ç±»å‹ */
+		!#zh é¡µé?¢è????¾æ????¨ç±»??? */
 		direction: PageView.Direction;		
 		/** !#en
 		The scroll threshold value, when drag exceeds this value,
 		release the next page will automatically scroll, less than the restore
-		!#zh æ»šåŠ¨ä¸´ç•Œå€¼ï¼Œé»˜è®¤å•ä½ç™¾åˆ†æ¯”ï¼Œå½“æ‹–æ‹½è¶…å‡ºè¯¥æ•°å€¼æ—¶ï¼Œæ¾å¼€ä¼šè‡ªåŠ¨æ»šåŠ¨ä¸‹ä¸€é¡µï¼Œå°äºæ—¶åˆ™è¿˜åŸã€‚ */
+		!#zh æ»???¨ä¸´?????¼ï??é»?è®¤å??ä½???¾å??æ¯?ï¼?å½??????½è????ºè¯¥??°å?¼æ?¶ï????¾å??ä¼???ªå?¨æ????¨ä??ä¸?é¡µï??å°?äº???¶å??è¿??????? */
 		scrollThreshold: number;		
 		/** !#en
 		Auto page turning velocity threshold. When users swipe the PageView quickly,
 		it will calculate a velocity based on the scroll distance and time,
 		if the calculated velocity is larger than the threshold, then it will trigger page turning.
 		!#zh
-		å¿«é€Ÿæ»‘åŠ¨ç¿»é¡µä¸´ç•Œå€¼ã€‚
-		å½“ç”¨æˆ·å¿«é€Ÿæ»‘åŠ¨æ—¶ï¼Œä¼šæ ¹æ®æ»‘åŠ¨å¼€å§‹å’Œç»“æŸçš„è·ç¦»ä¸æ—¶é—´è®¡ç®—å‡ºä¸€ä¸ªé€Ÿåº¦å€¼ï¼Œ
-		è¯¥å€¼ä¸æ­¤ä¸´ç•Œå€¼ç›¸æ¯”è¾ƒï¼Œå¦‚æœå¤§äºä¸´ç•Œå€¼ï¼Œåˆ™è¿›è¡Œè‡ªåŠ¨ç¿»é¡µã€‚ */
+		å¿«é??æ»???¨ç¿»é¡µä¸´?????¼ã??
+		å½???¨æ?·å¿«???æ»???¨æ?¶ï??ä¼???¹æ?®æ????¨å??å§????ç»???????è·?ç¦»ä????¶é?´è®¡ç®???ºä??ä¸ªé??åº¦å?¼ï??
+		è¯¥å?¼ä??æ­¤ä¸´?????¼ç?¸æ??è¾?ï¼?å¦????å¤§ä??ä¸´ç????¼ï?????è¿?è¡???ªå?¨ç¿»é¡µã?? */
 		autoPageTurningThreshold: number;		
 		/** !#en Change the PageTurning event timing of PageView.
-		!#zh è®¾ç½® PageView PageTurning äº‹ä»¶çš„å‘é€æ—¶æœºã€‚ */
+		!#zh è®¾ç½® PageView PageTurning äº?ä»¶ç??????????¶æ?ºã?? */
 		pageTurningEventTiming: number;		
 		/** !#en The Page View Indicator
-		!#zh é¡µé¢è§†å›¾æŒ‡ç¤ºå™¨ç»„ä»¶ */
+		!#zh é¡µé?¢è????¾æ??ç¤ºå?¨ç??ä»? */
 		indicator: PageViewIndicator;		
 		/** !#en The time required to turn over a page. unit: second
-		!#zh æ¯ä¸ªé¡µé¢ç¿»é¡µæ—¶æ‰€éœ€æ—¶é—´ã€‚å•ä½ï¼šç§’ */
+		!#zh æ¯?ä¸ªé¡µ??¢ç¿»é¡µæ?¶æ???????¶é?´ã?????ä½?ï¼?ç§? */
 		pageTurningSpeed: number;		
 		/** !#en PageView events callback
-		!#zh æ»šåŠ¨è§†å›¾çš„äº‹ä»¶å›è°ƒå‡½æ•° */
+		!#zh æ»???¨è????¾ç??äº?ä»¶å??è°???½æ?? */
 		pageEvents: Component.EventHandler[];		
 		/**
 		!#en Returns current page index
-		!#zh è¿”å›å½“å‰é¡µé¢ç´¢å¼• 
+		!#zh è¿????å½????é¡µé?¢ç´¢å¼? 
 		*/
 		getCurrentPageIndex(): number;		
 		/**
 		!#en Set current page index
-		!#zh è®¾ç½®å½“å‰é¡µé¢ç´¢å¼•
+		!#zh è®¾ç½®å½????é¡µé?¢ç´¢å¼?
 		@param index index 
 		*/
 		setCurrentPageIndex(index: number): void;		
 		/**
 		!#en Returns all pages of pageview
-		!#zh è¿”å›è§†å›¾ä¸­çš„æ‰€æœ‰é¡µé¢ 
+		!#zh è¿????è§???¾ä¸­?????????é¡µé?? 
 		*/
 		getPages(): Node[];		
 		/**
 		!#en At the end of the current page view to insert a new view
-		!#zh åœ¨å½“å‰é¡µé¢è§†å›¾çš„å°¾éƒ¨æ’å…¥ä¸€ä¸ªæ–°è§†å›¾
+		!#zh ??¨å?????é¡µé?¢è????¾ç??å°¾é?¨æ????¥ä??ä¸ªæ?°è?????
 		@param page page 
 		*/
 		addPage(page: Node): void;		
 		/**
 		!#en Inserts a page in the specified location
-		!#zh å°†é¡µé¢æ’å…¥æŒ‡å®šä½ç½®ä¸­
+		!#zh å°?é¡µé?¢æ????¥æ??å®?ä½?ç½®ä¸­
 		@param page page
 		@param index index 
 		*/
 		insertPage(page: Node, index: number): void;		
 		/**
 		!#en Removes a page from PageView.
-		!#zh ç§»é™¤æŒ‡å®šé¡µé¢
+		!#zh ç§»é?¤æ??å®?é¡µé??
 		@param page page 
 		*/
 		removePage(page: Node): void;		
 		/**
 		!#en Removes a page at index of PageView.
-		!#zh ç§»é™¤æŒ‡å®šä¸‹æ ‡çš„é¡µé¢
+		!#zh ç§»é?¤æ??å®?ä¸???????é¡µé??
 		@param index index 
 		*/
 		removePageAtIndex(index: number): void;		
 		/**
 		!#en Removes all pages from PageView
-		!#zh ç§»é™¤æ‰€æœ‰é¡µé¢ 
+		!#zh ç§»é?¤æ?????é¡µé?? 
 		*/
 		removeAllPages(): void;		
 		/**
 		!#en Scroll PageView to index.
-		!#zh æ»šåŠ¨åˆ°æŒ‡å®šé¡µé¢
+		!#zh æ»???¨å?°æ??å®?é¡µé??
 		@param idx index of page.
 		@param timeInSecond scrolling time 
 		*/
 		scrollToPage(idx: number, timeInSecond: number): void;	
 	}	
 	/** !#en The Page View Indicator Component
-	!#zh é¡µé¢è§†å›¾æ¯é¡µæ ‡è®°ç»„ä»¶ */
+	!#zh é¡µé?¢è????¾æ??é¡µæ??è®°ç??ä»? */
 	export class PageViewIndicator extends Component {		
 		/** !#en The spriteFrame for each element.
-		!#zh æ¯ä¸ªé¡µé¢æ ‡è®°æ˜¾ç¤ºçš„å›¾ç‰‡ */
+		!#zh æ¯?ä¸ªé¡µ??¢æ??è®°æ?¾ç¤º?????¾ç?? */
 		spriteFrame: SpriteFrame;		
 		/** !#en The location direction of PageViewIndicator.
-		!#zh é¡µé¢æ ‡è®°æ‘†æ”¾æ–¹å‘ */
+		!#zh é¡µé?¢æ??è®°æ????¾æ?¹å?? */
 		direction: PageViewIndicator.Direction;		
 		/** !#en The cellSize for each element.
-		!#zh æ¯ä¸ªé¡µé¢æ ‡è®°çš„å¤§å° */
+		!#zh æ¯?ä¸ªé¡µ??¢æ??è®°ç??å¤§å?? */
 		cellSize: Size;		
 		/** !#en The distance between each element.
-		!#zh æ¯ä¸ªé¡µé¢æ ‡è®°ä¹‹é—´çš„è¾¹è· */
+		!#zh æ¯?ä¸ªé¡µ??¢æ??è®°ä????´ç??è¾¹è?? */
 		spacing: number;		
 		/**
 		!#en Set Page View
-		!#zh è®¾ç½®é¡µé¢è§†å›¾
+		!#zh è®¾ç½®é¡µé?¢è?????
 		@param target target 
 		*/
 		setPageView(target: PageView): void;	
@@ -8885,89 +8885,89 @@ declare namespace cc {
 	Visual indicator of progress in some operation.
 	Displays a bar to the user representing how far the operation has progressed.
 	!#zh
-	è¿›åº¦æ¡ç»„ä»¶ï¼Œå¯ç”¨äºæ˜¾ç¤ºåŠ è½½èµ„æºæ—¶çš„è¿›åº¦ã€‚ */
+	è¿?åº¦æ?¡ç??ä»¶ï????¯ç?¨ä????¾ç¤º???è½½è??æº???¶ç??è¿?åº¦ã?? */
 	export class ProgressBar extends Component {		
 		/** !#en The targeted Sprite which will be changed progressively.
-		!#zh ç”¨æ¥æ˜¾ç¤ºè¿›åº¦æ¡æ¯”ä¾‹çš„ Sprite å¯¹è±¡ã€‚ */
+		!#zh ??¨æ?¥æ?¾ç¤ºè¿?åº¦æ?¡æ??ä¾???? Sprite å¯¹è±¡??? */
 		barSprite: Sprite;		
 		/** !#en The progress mode, there are two modes supported now: horizontal and vertical.
-		!#zh è¿›åº¦æ¡çš„æ¨¡å¼ */
+		!#zh è¿?åº¦æ?¡ç??æ¨¡å?? */
 		mode: ProgressBar.Mode;		
 		/** !#en The total width or height of the bar sprite.
-		!#zh è¿›åº¦æ¡å®é™…çš„æ€»é•¿åº¦ */
+		!#zh è¿?åº¦æ?¡å??????????»é?¿åº¦ */
 		totalLength: number;		
 		/** !#en The current progress of the bar sprite. The valid value is between 0-1.
-		!#zh å½“å‰è¿›åº¦å€¼ï¼Œè¯¥æ•°å€¼çš„åŒºé—´æ˜¯ 0-1 ä¹‹é—´ã€‚ */
+		!#zh å½????è¿?åº¦å?¼ï??è¯¥æ?°å?¼ç????ºé?´æ?? 0-1 ä¹???´ã?? */
 		progress: number;		
 		/** !#en Whether reverse the progress direction of the bar sprite.
-		!#zh è¿›åº¦æ¡æ˜¯å¦è¿›è¡Œåæ–¹å‘å˜åŒ–ã€‚ */
+		!#zh è¿?åº¦æ?¡æ?¯å?¦è??è¡??????¹å??????????? */
 		reverse: boolean;	
 	}	
 	/** !#en
 	Base class for components which supports rendering features.
 	!#zh
-	æ‰€æœ‰æ”¯æŒæ¸²æŸ“çš„ç»„ä»¶çš„åŸºç±» */
+	????????¯æ??æ¸²æ?????ç»?ä»¶ç????ºç±» */
 	export class RenderComponent extends Component {		
 		/** !#en The materials used by this render component.
-		!#zh æ¸²æŸ“ç»„ä»¶ä½¿ç”¨çš„æè´¨ã€‚ */
+		!#zh æ¸²æ??ç»?ä»¶ä½¿??¨ç?????è´¨ã?? */
 		sharedMaterials: Material[];		
 		/**
 		!#en Get the material by index.
-		!#zh æ ¹æ®æŒ‡å®šç´¢å¼•è·å–æè´¨
+		!#zh ??¹æ?®æ??å®?ç´¢å????·å?????è´?
 		@param index index 
 		*/
 		getMaterial(index: number): MaterialVariant;		
 		/**
 		!#en Gets all the materials.
-		!#zh è·å–æ‰€æœ‰æè´¨ã€‚ 
+		!#zh ??·å???????????è´¨ã?? 
 		*/
 		getMaterials(): MaterialVariant[];		
 		/**
 		!#en Set the material by index.
-		!#zh æ ¹æ®æŒ‡å®šç´¢å¼•è®¾ç½®æè´¨
+		!#zh ??¹æ?®æ??å®?ç´¢å??è®¾ç½®???è´?
 		@param index index
 		@param material material 
 		*/
 		setMaterial(index: number, material: Material): Material;	
 	}	
 	/** !#en The RichText Component.
-	!#zh å¯Œæ–‡æœ¬ç»„ä»¶ */
+	!#zh å¯??????¬ç??ä»? */
 	export class RichText extends Component {		
 		/** !#en Content string of RichText.
-		!#zh å¯Œæ–‡æœ¬æ˜¾ç¤ºçš„æ–‡æœ¬å†…å®¹ã€‚ */
+		!#zh å¯??????¬æ?¾ç¤º????????¬å??å®¹ã?? */
 		string: string;		
 		/** !#en Horizontal Alignment of each line in RichText.
-		!#zh æ–‡æœ¬å†…å®¹çš„æ°´å¹³å¯¹é½æ–¹å¼ã€‚ */
+		!#zh ?????¬å??å®¹ç??æ°´å¹³å¯¹é????¹å????? */
 		horizontalAlign: macro.TextAlignment;		
 		/** !#en Font size of RichText.
-		!#zh å¯Œæ–‡æœ¬å­—ä½“å¤§å°ã€‚ */
+		!#zh å¯??????¬å??ä½?å¤§å????? */
 		fontSize: number;		
 		/** !#en Custom System font of RichText
-		!#zh å¯Œæ–‡æœ¬å®šåˆ¶ç³»ç»Ÿå­—ä½“ */
+		!#zh å¯??????¬å????¶ç³»ç»?å­?ä½? */
 		fontFamily: string;		
 		/** !#en Custom TTF font of RichText
-		!#zh  å¯Œæ–‡æœ¬å®šåˆ¶å­—ä½“ */
+		!#zh  å¯??????¬å????¶å??ä½? */
 		font: TTFFont;		
 		/** !#en Whether use system font name or not.
-		!#zh æ˜¯å¦ä½¿ç”¨ç³»ç»Ÿå­—ä½“ã€‚ */
+		!#zh ??¯å?¦ä½¿??¨ç³»ç»?å­?ä½???? */
 		useSystemFont: boolean;		
 		/** !#en The cache mode of label. This mode only supports system fonts.
-		!#zh æ–‡æœ¬ç¼“å­˜æ¨¡å¼, è¯¥æ¨¡å¼åªæ”¯æŒç³»ç»Ÿå­—ä½“ã€‚ */
+		!#zh ?????¬ç??å­?æ¨¡å??, è¯¥æ¨¡å¼???ªæ?¯æ??ç³»ç??å­?ä½???? */
 		cacheMode: Label.CacheMode;		
 		/** !#en The maximize width of the RichText
-		!#zh å¯Œæ–‡æœ¬çš„æœ€å¤§å®½åº¦ */
+		!#zh å¯??????¬ç?????å¤§å®½åº? */
 		maxWidth: number;		
 		/** !#en Line Height of RichText.
-		!#zh å¯Œæ–‡æœ¬è¡Œé«˜ã€‚ */
+		!#zh å¯??????¬è??é«???? */
 		lineHeight: number;		
 		/** !#en The image atlas for the img tag. For each src value in the img tag, there should be a valid spriteFrame in the image atlas.
-		!#zh å¯¹äº img æ ‡ç­¾é‡Œé¢çš„ src å±æ€§åç§°ï¼Œéƒ½éœ€è¦åœ¨ imageAtlas é‡Œé¢æ‰¾åˆ°ä¸€ä¸ªæœ‰æ•ˆçš„ spriteFrameï¼Œå¦åˆ™ img tag ä¼šåˆ¤å®šä¸ºæ— æ•ˆã€‚ */
+		!#zh å¯¹ä?? img ???ç­¾é????¢ç?? src å±???§å??ç§°ï????½é??è¦???? imageAtlas ?????¢æ?¾å?°ä??ä¸ªæ???????? spriteFrameï¼???¦å?? img tag ä¼???¤å??ä¸ºæ???????? */
 		imageAtlas: SpriteAtlas;		
 		/** !#en
 		Once checked, the RichText will block all input events (mouse and touch) within
 		the bounding box of the node, preventing the input from penetrating into the underlying node.
 		!#zh
-		é€‰ä¸­æ­¤é€‰é¡¹åï¼ŒRichText å°†é˜»æ­¢èŠ‚ç‚¹è¾¹ç•Œæ¡†ä¸­çš„æ‰€æœ‰è¾“å…¥äº‹ä»¶ï¼ˆé¼ æ ‡å’Œè§¦æ‘¸ï¼‰ï¼Œä»è€Œé˜²æ­¢è¾“å…¥äº‹ä»¶ç©¿é€åˆ°åº•å±‚èŠ‚ç‚¹ã€‚ */
+		???ä¸­æ­¤???é¡¹å??ï¼?RichText å°???»æ­¢?????¹è¾¹???æ¡?ä¸­ç????????è¾???¥ä??ä»¶ï??é¼???????è§¦æ?¸ï??ï¼?ä»??????²æ­¢è¾???¥ä??ä»¶ç©¿?????°å??å±??????¹ã?? */
 		handleTouchEvent: boolean;	
 	}	
 	/** !#en
@@ -8981,13 +8981,13 @@ declare namespace cc {
 	and implements the adaptation by using the Widget component and set anchor.
 	
 	!#zh
-	è¯¥ç»„ä»¶ä¼šå°†æ‰€åœ¨èŠ‚ç‚¹çš„å¸ƒå±€é€‚é…åˆ° iPhone X ç­‰å¼‚å½¢å±æ‰‹æœºçš„å®‰å…¨åŒºåŸŸå†…ï¼Œé€šå¸¸ç”¨äº UI äº¤äº’åŒºåŸŸçš„é¡¶å±‚èŠ‚ç‚¹ï¼Œå…·ä½“ç”¨æ³•å¯å‚è€ƒå®˜æ–¹èŒƒä¾‹ [example-cases/02_ui/16_safeArea/SafeArea.fire](https://github.com/cocos-creator/example-cases)ã€‚
+	è¯¥ç??ä»¶ä??å°??????¨è????¹ç??å¸?å±?????????? iPhone X ç­?å¼?å½¢å???????ºç??å®???¨å?ºå?????ï¼????å¸¸ç?¨ä?? UI äº¤ä????ºå?????é¡¶å???????¹ï????·ä????¨æ????¯å?????å®???¹è??ä¾? [example-cases/02_ui/16_safeArea/SafeArea.fire](https://github.com/cocos-creator/example-cases)???
 	
-	è¯¥ç»„ä»¶å†…éƒ¨é€šè¿‡ API `cc.sys.getSafeAreaRect();` è·å–åˆ°å½“å‰ iOS æˆ– Android è®¾å¤‡çš„å®‰å…¨åŒºåŸŸï¼Œå¹¶é€šè¿‡ Widget ç»„ä»¶å®ç°é€‚é…ã€‚ */
+	è¯¥ç??ä»¶å????¨é??è¿? API `cc.sys.getSafeAreaRect();` ??·å????°å????? iOS ??? Android è®¾å?????å®???¨å?ºå??ï¼?å¹¶é??è¿? Widget ç»?ä»¶å????°é???????? */
 	export class SafeArea extends Component {		
 		/**
 		!#en Adapt to safe area
-		!#zh ç«‹å³é€‚é…å®‰å…¨åŒºåŸŸ
+		!#zh ç«???³é?????å®???¨å?ºå??
 		
 		@example 
 		```js
@@ -8999,23 +8999,23 @@ declare namespace cc {
 	}	
 	/** !#en
 	The Scrollbar control allows the user to scroll an image or other view that is too large to see completely
-	!#zh æ»šåŠ¨æ¡ç»„ä»¶ */
+	!#zh æ»???¨æ?¡ç??ä»? */
 	export class Scrollbar extends Component {		
 		/** !#en The "handle" part of the scrollbar.
-		!#zh ä½œä¸ºå½“å‰æ»šåŠ¨åŒºåŸŸä½ç½®æ˜¾ç¤ºçš„æ»‘å— Spriteã€‚ */
+		!#zh ä½?ä¸ºå?????æ»???¨å?ºå??ä½?ç½®æ?¾ç¤º???æ»???? Sprite??? */
 		handle: Sprite;		
 		/** !#en The direction of scrollbar.
-		!#zh ScrollBar çš„æ»šåŠ¨æ–¹å‘ã€‚ */
+		!#zh ScrollBar ???æ»???¨æ?¹å????? */
 		direction: Scrollbar.Direction;		
 		/** !#en Whether enable auto hide or not.
-		!#zh æ˜¯å¦åœ¨æ²¡æœ‰æ»šåŠ¨åŠ¨ä½œæ—¶è‡ªåŠ¨éšè— ScrollBarã€‚ */
+		!#zh ??¯å?¦å?¨æ²¡???æ»???¨å?¨ä????¶è?ªå?¨é????? ScrollBar??? */
 		enableAutoHide: boolean;		
 		/** !#en
 		The time to hide scrollbar when scroll finished.
 		Note: This value is only useful when enableAutoHide is true.
 		!#zh
-		æ²¡æœ‰æ»šåŠ¨åŠ¨ä½œåç»è¿‡å¤šä¹…ä¼šè‡ªåŠ¨éšè—ã€‚
-		æ³¨æ„ï¼šåªè¦å½“ â€œenableAutoHideâ€ ä¸º true æ—¶ï¼Œæ‰æœ‰æ•ˆã€‚ */
+		æ²¡æ??æ»???¨å?¨ä?????ç»?è¿?å¤?ä¹?ä¼???ªå?¨é????????
+		æ³¨æ??ï¼???ªè??å½? ???enableAutoHide??? ä¸? true ??¶ï?????????????? */
 		autoHideTime: number;	
 	}	
 	/** !#en
@@ -9023,49 +9023,49 @@ declare namespace cc {
 	allowing it to be larger than the physical display.
 	
 	!#zh
-	æ»šåŠ¨è§†å›¾ç»„ä»¶ */
+	æ»???¨è????¾ç??ä»? */
 	export class ScrollView extends Component {		
 		/** !#en This is a reference to the UI element to be scrolled.
-		!#zh å¯æ»šåŠ¨å±•ç¤ºå†…å®¹çš„èŠ‚ç‚¹ã€‚ */
+		!#zh ??¯æ????¨å??ç¤ºå??å®¹ç???????¹ã?? */
 		content: Node;		
 		/** !#en Enable horizontal scroll.
-		!#zh æ˜¯å¦å¼€å¯æ°´å¹³æ»šåŠ¨ã€‚ */
+		!#zh ??¯å?¦å????¯æ°´å¹³æ????¨ã?? */
 		horizontal: boolean;		
 		/** !#en Enable vertical scroll.
-		!#zh æ˜¯å¦å¼€å¯å‚ç›´æ»šåŠ¨ã€‚ */
+		!#zh ??¯å?¦å????¯å????´æ????¨ã?? */
 		vertical: boolean;		
 		/** !#en When inertia is set, the content will continue to move when touch ended.
-		!#zh æ˜¯å¦å¼€å¯æ»šåŠ¨æƒ¯æ€§ã€‚ */
+		!#zh ??¯å?¦å????¯æ????¨æ?¯æ?§ã?? */
 		inertia: boolean;		
 		/** !#en
 		It determines how quickly the content stop moving. A value of 1 will stop the movement immediately.
 		A value of 0 will never stop the movement until it reaches to the boundary of scrollview.
 		!#zh
-		å¼€å¯æƒ¯æ€§åï¼Œåœ¨ç”¨æˆ·åœæ­¢è§¦æ‘¸åæ»šåŠ¨å¤šå¿«åœæ­¢ï¼Œ0è¡¨ç¤ºæ°¸ä¸åœæ­¢ï¼Œ1è¡¨ç¤ºç«‹åˆ»åœæ­¢ã€‚ */
+		å¼???¯æ?¯æ?§å??ï¼???¨ç?¨æ?·å??æ­¢è§¦??¸å??æ»???¨å??å¿«å??æ­¢ï??0è¡¨ç¤ºæ°¸ä?????æ­¢ï??1è¡¨ç¤ºç«???»å??æ­¢ã?? */
 		brake: number;		
 		/** !#en When elastic is set, the content will be bounce back when move out of boundary.
-		!#zh æ˜¯å¦å…è®¸æ»šåŠ¨å†…å®¹è¶…è¿‡è¾¹ç•Œï¼Œå¹¶åœ¨åœæ­¢è§¦æ‘¸åå›å¼¹ã€‚ */
+		!#zh ??¯å?¦å??è®¸æ????¨å??å®¹è??è¿?è¾¹ç??ï¼?å¹¶å?¨å??æ­¢è§¦??¸å?????å¼¹ã?? */
 		elastic: boolean;		
 		/** !#en The elapse time of bouncing back. A value of 0 will bounce back immediately.
-		!#zh å›å¼¹æŒç»­çš„æ—¶é—´ï¼Œ0 è¡¨ç¤ºå°†ç«‹å³åå¼¹ã€‚ */
+		!#zh ???å¼¹æ??ç»­ç????¶é?´ï??0 è¡¨ç¤ºå°?ç«???³å??å¼¹ã?? */
 		bounceDuration: number;		
 		/** !#en The horizontal scrollbar reference.
-		!#zh æ°´å¹³æ»šåŠ¨çš„ ScrollBarã€‚ */
+		!#zh æ°´å¹³æ»???¨ç?? ScrollBar??? */
 		horizontalScrollBar: Scrollbar;		
 		/** !#en The vertical scrollbar reference.
-		!#zh å‚ç›´æ»šåŠ¨çš„ ScrollBarã€‚ */
+		!#zh ?????´æ????¨ç?? ScrollBar??? */
 		verticalScrollBar: Scrollbar;		
 		/** !#en Scrollview events callback
-		!#zh æ»šåŠ¨è§†å›¾çš„äº‹ä»¶å›è°ƒå‡½æ•° */
+		!#zh æ»???¨è????¾ç??äº?ä»¶å??è°???½æ?? */
 		scrollEvents: Component.EventHandler[];		
 		/** !#en If cancelInnerEvents is set to true, the scroll behavior will cancel touch events on inner content nodes
 		It's set to true by default.
-		!#zh å¦‚æœè¿™ä¸ªå±æ€§è¢«è®¾ç½®ä¸º trueï¼Œé‚£ä¹ˆæ»šåŠ¨è¡Œä¸ºä¼šå–æ¶ˆå­èŠ‚ç‚¹ä¸Šæ³¨å†Œçš„è§¦æ‘¸äº‹ä»¶ï¼Œé»˜è®¤è¢«è®¾ç½®ä¸º trueã€‚
-		æ³¨æ„ï¼Œå­èŠ‚ç‚¹ä¸Šçš„ touchstart äº‹ä»¶ä»ç„¶ä¼šè§¦å‘ï¼Œè§¦ç‚¹ç§»åŠ¨è·ç¦»éå¸¸çŸ­çš„æƒ…å†µä¸‹ touchmove å’Œ touchend ä¹Ÿä¸ä¼šå—å½±å“ã€‚ */
+		!#zh å¦????è¿?ä¸ªå????§è¢«è®¾ç½®ä¸? trueï¼????ä¹?æ»???¨è??ä¸ºä?????æ¶?å­??????¹ä??æ³¨å?????è§¦æ?¸ä??ä»¶ï??é»?è®¤è¢«è®¾ç½®ä¸? true???
+		æ³¨æ??ï¼?å­??????¹ä????? touchstart äº?ä»¶ä????¶ä??è§¦å??ï¼?è§¦ç?¹ç§»??¨è??ç¦»é??å¸¸ç?­ç???????µä?? touchmove ??? touchend ä¹?ä¸?ä¼????å½±å????? */
 		cancelInnerEvents: boolean;		
 		/**
 		!#en Scroll the content to the bottom boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾åº•éƒ¨ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å????¨ã??
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the bottom boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9079,7 +9079,7 @@ declare namespace cc {
 		scrollToBottom(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the top boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾é¡¶éƒ¨ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾é¡¶??¨ã??
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the top boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9093,7 +9093,7 @@ declare namespace cc {
 		scrollToTop(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the left boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å·¦è¾¹ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å·¦è¾¹ã??
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the left boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9107,7 +9107,7 @@ declare namespace cc {
 		scrollToLeft(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the right boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å³è¾¹ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å?³è¾¹???
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the right boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9121,7 +9121,7 @@ declare namespace cc {
 		scrollToRight(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the top left boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å·¦ä¸Šè§’ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å·¦ä¸?è§????
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the top left boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9135,7 +9135,7 @@ declare namespace cc {
 		scrollToTopLeft(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the top right boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å³ä¸Šè§’ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å?³ä??è§????
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the top right boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9149,7 +9149,7 @@ declare namespace cc {
 		scrollToTopRight(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the bottom left boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å·¦ä¸‹è§’ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å·¦ä¸?è§????
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the bottom left boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9163,7 +9163,7 @@ declare namespace cc {
 		scrollToBottomLeft(timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the bottom right boundary of ScrollView.
-		!#zh è§†å›¾å†…å®¹å°†åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ°è§†å›¾å³ä¸‹è§’ã€‚
+		!#zh è§???¾å??å®¹å????¨è??å®???¶é?´å??æ»???¨å?°è????¾å?³ä??è§????
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the bottom right boundary immediately.
 		@param attenuated Whether the scroll acceleration attenuated, default is true.
@@ -9178,7 +9178,7 @@ declare namespace cc {
 		/**
 		!#en Scroll with an offset related to the ScrollView's top left origin, if timeInSecond is omitted, then it will jump to the
 		      specific offset immediately.
-		!#zh è§†å›¾å†…å®¹åœ¨è§„å®šæ—¶é—´å†…å°†æ»šåŠ¨åˆ° ScrollView ç›¸å¯¹å·¦ä¸Šè§’åŸç‚¹çš„åç§»ä½ç½®, å¦‚æœ timeInSecondå‚æ•°ä¸ä¼ ï¼Œåˆ™ç«‹å³æ»šåŠ¨åˆ°æŒ‡å®šåç§»ä½ç½®ã€‚
+		!#zh è§???¾å??å®¹å?¨è??å®???¶é?´å??å°?æ»???¨å?? ScrollView ??¸å¯¹å·¦ä??è§??????¹ç?????ç§»ä??ç½?, å¦???? timeInSecond?????°ä??ä¼?ï¼????ç«???³æ????¨å?°æ??å®????ç§»ä??ç½®ã??
 		@param offset A Vec2, the value of which each axis between 0 and maxScrollOffset
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the specific offset of ScrollView immediately.
@@ -9194,17 +9194,17 @@ declare namespace cc {
 		scrollToOffset(offset: Vec2, timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en  Get the positive offset value corresponds to the content's top left boundary.
-		!#zh  è·å–æ»šåŠ¨è§†å›¾ç›¸å¯¹äºå·¦ä¸Šè§’åŸç‚¹çš„å½“å‰æ»šåŠ¨åç§» 
+		!#zh  ??·å??æ»???¨è????¾ç?¸å¯¹äº?å·¦ä??è§??????¹ç??å½????æ»???¨å??ç§? 
 		*/
 		getScrollOffset(): Vec2;		
 		/**
 		!#en Get the maximize available  scroll offset
-		!#zh è·å–æ»šåŠ¨è§†å›¾æœ€å¤§å¯ä»¥æ»šåŠ¨çš„åç§»é‡ 
+		!#zh ??·å??æ»???¨è????¾æ??å¤§å?¯ä»¥æ»???¨ç?????ç§»é?? 
 		*/
 		getMaxScrollOffset(): Vec2;		
 		/**
 		!#en Scroll the content to the horizontal percent position of ScrollView.
-		!#zh è§†å›¾å†…å®¹åœ¨è§„å®šæ—¶é—´å†…å°†æ»šåŠ¨åˆ° ScrollView æ°´å¹³æ–¹å‘çš„ç™¾åˆ†æ¯”ä½ç½®ä¸Šã€‚
+		!#zh è§???¾å??å®¹å?¨è??å®???¶é?´å??å°?æ»???¨å?? ScrollView æ°´å¹³??¹å???????¾å??æ¯?ä½?ç½®ä?????
 		@param percent A value between 0 and 1.
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the horizontal percent position of ScrollView immediately.
@@ -9219,7 +9219,7 @@ declare namespace cc {
 		scrollToPercentHorizontal(percent: number, timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the percent position of ScrollView in any direction.
-		!#zh è§†å›¾å†…å®¹åœ¨è§„å®šæ—¶é—´å†…è¿›è¡Œå‚ç›´æ–¹å‘å’Œæ°´å¹³æ–¹å‘çš„æ»šåŠ¨ï¼Œå¹¶ä¸”æ»šåŠ¨åˆ°æŒ‡å®šç™¾åˆ†æ¯”ä½ç½®ä¸Šã€‚
+		!#zh è§???¾å??å®¹å?¨è??å®???¶é?´å??è¿?è¡??????´æ?¹å?????æ°´å¹³??¹å?????æ»???¨ï??å¹¶ä??æ»???¨å?°æ??å®???¾å??æ¯?ä½?ç½®ä?????
 		@param anchor A point which will be clamp between cc.v2(0,0) and cc.v2(1,1).
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the percent position of ScrollView immediately.
@@ -9237,7 +9237,7 @@ declare namespace cc {
 		scrollTo(anchor: Vec2, timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en Scroll the content to the vertical percent position of ScrollView.
-		!#zh è§†å›¾å†…å®¹åœ¨è§„å®šæ—¶é—´å†…æ»šåŠ¨åˆ° ScrollView å‚ç›´æ–¹å‘çš„ç™¾åˆ†æ¯”ä½ç½®ä¸Šã€‚
+		!#zh è§???¾å??å®¹å?¨è??å®???¶é?´å??æ»???¨å?? ScrollView ?????´æ?¹å???????¾å??æ¯?ä½?ç½®ä?????
 		@param percent A value between 0 and 1.
 		@param timeInSecond Scroll time in second, if you don't pass timeInSecond,
 		the content will jump to the vertical percent position of ScrollView immediately.
@@ -9248,81 +9248,81 @@ declare namespace cc {
 		scrollToPercentVertical(percent: number, timeInSecond?: number, attenuated?: boolean): void;		
 		/**
 		!#en  Stop auto scroll immediately
-		!#zh  åœæ­¢è‡ªåŠ¨æ»šåŠ¨, è°ƒç”¨æ­¤ API å¯ä»¥è®© Scrollview ç«‹å³åœæ­¢æ»šåŠ¨ 
+		!#zh  ???æ­¢è?ªå?¨æ?????, è°???¨æ­¤ API ??¯ä»¥è®? Scrollview ç«???³å??æ­¢æ????? 
 		*/
 		stopAutoScroll(): void;		
 		/**
 		!#en Modify the content position.
-		!#zh è®¾ç½®å½“å‰è§†å›¾å†…å®¹çš„åæ ‡ç‚¹ã€‚
+		!#zh è®¾ç½®å½????è§???¾å??å®¹ç??????????¹ã??
 		@param position The position in content's parent space. 
 		*/
 		setContentPosition(position: Vec2): void;		
 		/**
 		!#en Query the content's position in its parent space.
-		!#zh è·å–å½“å‰è§†å›¾å†…å®¹çš„åæ ‡ç‚¹ã€‚ 
+		!#zh ??·å??å½????è§???¾å??å®¹ç??????????¹ã?? 
 		*/
 		getContentPosition(): Vec2;		
 		/**
 		!#en Query whether the user is currently dragging the ScrollView to scroll it
-		!#zh ç”¨æˆ·æ˜¯å¦åœ¨æ‹–æ‹½å½“å‰æ»šåŠ¨è§†å›¾ 
+		!#zh ??¨æ?·æ?¯å?¦å?¨æ????½å?????æ»???¨è????? 
 		*/
 		isScrolling(): boolean;		
 		/**
 		!#en Query whether the ScrollView is currently scrolling because of a bounceback or inertia slowdown.
-		!#zh å½“å‰æ»šåŠ¨è§†å›¾æ˜¯å¦åœ¨æƒ¯æ€§æ»šåŠ¨ 
+		!#zh å½????æ»???¨è????¾æ?¯å?¦å?¨æ?¯æ?§æ????? 
 		*/
 		isAutoScrolling(): boolean;	
 	}	
 	/** !#en The Slider Control
-	!#zh æ»‘åŠ¨å™¨ç»„ä»¶ */
+	!#zh æ»???¨å?¨ç??ä»? */
 	export class Slider extends Component {		
 		/** !#en The "handle" part of the slider
-		!#zh æ»‘åŠ¨å™¨æ»‘å—æŒ‰é’®éƒ¨ä»¶ */
+		!#zh æ»???¨å?¨æ??????????®é?¨ä»¶ */
 		handle: Button;		
 		/** !#en The slider direction
-		!#zh æ»‘åŠ¨å™¨æ–¹å‘ */
+		!#zh æ»???¨å?¨æ?¹å?? */
 		direction: Slider.Direction;		
 		/** !#en The current progress of the slider. The valid value is between 0-1
-		!#zh å½“å‰è¿›åº¦å€¼ï¼Œè¯¥æ•°å€¼çš„åŒºé—´æ˜¯ 0-1 ä¹‹é—´ */
+		!#zh å½????è¿?åº¦å?¼ï??è¯¥æ?°å?¼ç????ºé?´æ?? 0-1 ä¹???? */
 		progress: number;		
 		/** !#en The slider slide events' callback array
-		!#zh æ»‘åŠ¨å™¨ç»„ä»¶æ»‘åŠ¨äº‹ä»¶å›è°ƒå‡½æ•°æ•°ç»„ */
+		!#zh æ»???¨å?¨ç??ä»¶æ????¨ä??ä»¶å??è°???½æ?°æ?°ç?? */
 		slideEvents: Component.EventHandler[];	
 	}	
 	/** !#en Renders a sprite in the scene.
-	!#zh è¯¥ç»„ä»¶ç”¨äºåœ¨åœºæ™¯ä¸­æ¸²æŸ“ç²¾çµã€‚ */
+	!#zh è¯¥ç??ä»¶ç?¨ä????¨å?ºæ?¯ä¸­æ¸²æ??ç²¾ç?µã?? */
 	export class Sprite extends RenderComponent implements BlendFunc {		
 		/** !#en The sprite frame of the sprite.
-		!#zh ç²¾çµçš„ç²¾çµå¸§ */
+		!#zh ç²¾ç?µç??ç²¾ç?µå¸§ */
 		spriteFrame: SpriteFrame;		
 		/** !#en The sprite render type.
-		!#zh ç²¾çµæ¸²æŸ“ç±»å‹ */
+		!#zh ç²¾ç?µæ¸²???ç±»å?? */
 		type: Sprite.Type;		
 		/** !#en
-		The fill type, This will only have any effect if the "type" is set to â€œcc.Sprite.Type.FILLEDâ€.
+		The fill type, This will only have any effect if the "type" is set to ???cc.Sprite.Type.FILLED???.
 		!#zh
-		ç²¾çµå¡«å……ç±»å‹ï¼Œä»…æ¸²æŸ“ç±»å‹è®¾ç½®ä¸º cc.Sprite.Type.FILLED æ—¶æœ‰æ•ˆã€‚ */
+		ç²¾ç?µå¡«???ç±»å??ï¼?ä»?æ¸²æ??ç±»å??è®¾ç½®ä¸? cc.Sprite.Type.FILLED ??¶æ???????? */
 		fillType: Sprite.FillType;		
 		/** !#en
-		The fill Center, This will only have any effect if the "type" is set to â€œcc.Sprite.Type.FILLEDâ€.
+		The fill Center, This will only have any effect if the "type" is set to ???cc.Sprite.Type.FILLED???.
 		!#zh
-		å¡«å……ä¸­å¿ƒç‚¹ï¼Œä»…æ¸²æŸ“ç±»å‹è®¾ç½®ä¸º cc.Sprite.Type.FILLED æ—¶æœ‰æ•ˆã€‚ */
+		å¡«å??ä¸­å????¹ï??ä»?æ¸²æ??ç±»å??è®¾ç½®ä¸? cc.Sprite.Type.FILLED ??¶æ???????? */
 		fillCenter: Vec2;		
 		/** !#en
-		The fill Start, This will only have any effect if the "type" is set to â€œcc.Sprite.Type.FILLEDâ€.
+		The fill Start, This will only have any effect if the "type" is set to ???cc.Sprite.Type.FILLED???.
 		!#zh
-		å¡«å……èµ·å§‹ç‚¹ï¼Œä»…æ¸²æŸ“ç±»å‹è®¾ç½®ä¸º cc.Sprite.Type.FILLED æ—¶æœ‰æ•ˆã€‚ */
+		å¡«å??èµ·å????¹ï??ä»?æ¸²æ??ç±»å??è®¾ç½®ä¸? cc.Sprite.Type.FILLED ??¶æ???????? */
 		fillStart: number;		
 		/** !#en
-		The fill Range, This will only have any effect if the "type" is set to â€œcc.Sprite.Type.FILLEDâ€.
+		The fill Range, This will only have any effect if the "type" is set to ???cc.Sprite.Type.FILLED???.
 		!#zh
-		å¡«å……èŒƒå›´ï¼Œä»…æ¸²æŸ“ç±»å‹è®¾ç½®ä¸º cc.Sprite.Type.FILLED æ—¶æœ‰æ•ˆã€‚ */
+		å¡«å???????´ï??ä»?æ¸²æ??ç±»å??è®¾ç½®ä¸? cc.Sprite.Type.FILLED ??¶æ???????? */
 		fillRange: number;		
 		/** !#en specify the frame is trimmed or not.
-		!#zh æ˜¯å¦ä½¿ç”¨è£å‰ªæ¨¡å¼ */
+		!#zh ??¯å?¦ä½¿??¨è????ªæ¨¡å¼? */
 		trim: boolean;		
 		/** !#en specify the size tracing mode.
-		!#zh ç²¾çµå°ºå¯¸è°ƒæ•´æ¨¡å¼ */
+		!#zh ç²¾ç?µå°ºå¯¸è????´æ¨¡å¼? */
 		sizeMode: Sprite.SizeMode;		
 		/**
 		Change the state of sprite.
@@ -9334,79 +9334,79 @@ declare namespace cc {
 		*/
 		getState(): Sprite.State;		
 		/** !#en specify the source Blend Factor, this will generate a custom material object, please pay attention to the memory cost.
-		!#zh æŒ‡å®šåŸå›¾çš„æ··åˆæ¨¡å¼ï¼Œè¿™ä¼šå…‹éš†ä¸€ä¸ªæ–°çš„æè´¨å¯¹è±¡ï¼Œæ³¨æ„è¿™å¸¦æ¥çš„å¼€é”€ */
+		!#zh ???å®??????¾ç??æ··å??æ¨¡å??ï¼?è¿?ä¼???????ä¸?ä¸ªæ?°ç?????è´¨å¯¹è±¡ï??æ³¨æ??è¿?å¸¦æ?¥ç??å¼???? */
 		srcBlendFactor: macro.BlendFactor;		
 		/** !#en specify the destination Blend Factor.
-		!#zh æŒ‡å®šç›®æ ‡çš„æ··åˆæ¨¡å¼ */
+		!#zh ???å®???®æ?????æ··å??æ¨¡å?? */
 		dstBlendFactor: macro.BlendFactor;	
 	}	
 	/** !#en The toggle component is a CheckBox, when it used together with a ToggleGroup, it
 	could be treated as a RadioButton.
-	!#zh Toggle æ˜¯ä¸€ä¸ª CheckBoxï¼Œå½“å®ƒå’Œ ToggleGroup ä¸€èµ·ä½¿ç”¨çš„æ—¶å€™ï¼Œå¯ä»¥å˜æˆ RadioButtonã€‚ */
+	!#zh Toggle ??¯ä??ä¸? CheckBoxï¼?å½?å®???? ToggleGroup ä¸?èµ·ä½¿??¨ç????¶å??ï¼???¯ä»¥?????? RadioButton??? */
 	export class Toggle extends Button implements GraySpriteState {		
 		/** !#en When this value is true, the check mark component will be enabled, otherwise
 		the check mark component will be disabled.
-		!#zh å¦‚æœè¿™ä¸ªè®¾ç½®ä¸º trueï¼Œåˆ™ check mark ç»„ä»¶ä¼šå¤„äº enabled çŠ¶æ€ï¼Œå¦åˆ™å¤„äº disabled çŠ¶æ€ã€‚ */
+		!#zh å¦????è¿?ä¸ªè®¾ç½®ä¸º trueï¼???? check mark ç»?ä»¶ä??å¤?äº? enabled ??¶æ??ï¼???¦å??å¤?äº? disabled ??¶æ????? */
 		isChecked: boolean;		
 		/** !#en The toggle group which the toggle belongs to, when it is null, the toggle is a CheckBox.
 		Otherwise, the toggle is a RadioButton.
-		!#zh Toggle æ‰€å±çš„ ToggleGroupï¼Œè¿™ä¸ªå±æ€§æ˜¯å¯é€‰çš„ã€‚å¦‚æœè¿™ä¸ªå±æ€§ä¸º nullï¼Œåˆ™ Toggle æ˜¯ä¸€ä¸ª CheckBoxï¼Œ
-		å¦åˆ™ï¼ŒToggle æ˜¯ä¸€ä¸ª RadioButtonã€‚ */
+		!#zh Toggle ???å±???? ToggleGroupï¼?è¿?ä¸ªå????§æ?¯å?¯é????????å¦????è¿?ä¸ªå????§ä¸º nullï¼???? Toggle ??¯ä??ä¸? CheckBoxï¼?
+		??¦å??ï¼?Toggle ??¯ä??ä¸? RadioButton??? */
 		toggleGroup: ToggleGroup;		
 		/** !#en The image used for the checkmark.
-		!#zh Toggle å¤„äºé€‰ä¸­çŠ¶æ€æ—¶æ˜¾ç¤ºçš„å›¾ç‰‡ */
+		!#zh Toggle å¤?äº????ä¸­ç?¶æ????¶æ?¾ç¤º?????¾ç?? */
 		checkMark: Sprite;		
 		/** !#en If Toggle is clicked, it will trigger event's handler
-		!#zh Toggle æŒ‰é’®çš„ç‚¹å‡»äº‹ä»¶åˆ—è¡¨ã€‚ */
+		!#zh Toggle ?????®ç????¹å?»ä??ä»¶å??è¡¨ã?? */
 		checkEvents: Component.EventHandler[];		
 		/**
 		!#en Make the toggle button checked.
-		!#zh ä½¿ toggle æŒ‰é’®å¤„äºé€‰ä¸­çŠ¶æ€ 
+		!#zh ä½? toggle ?????®å??äº????ä¸­ç?¶æ?? 
 		*/
 		check(): void;		
 		/**
 		!#en Make the toggle button unchecked.
-		!#zh ä½¿ toggle æŒ‰é’®å¤„äºæœªé€‰ä¸­çŠ¶æ€ 
+		!#zh ä½? toggle ?????®å??äº???ªé??ä¸­ç?¶æ?? 
 		*/
 		uncheck(): void;		
 		/** !#en The normal material.
-		!#zh æ­£å¸¸çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh æ­?å¸¸ç?¶æ????????è´¨ã?? */
 		normalMaterial: Material;		
 		/** !#en The gray material.
-		!#zh ç½®ç°çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh ç½®ç?°ç?¶æ????????è´¨ã?? */
 		grayMaterial: Material;	
 	}	
 	/** !#en ToggleContainer is not a visiable UI component but a way to modify the behavior of a set of Toggles. <br/>
 	Toggles that belong to the same group could only have one of them to be switched on at a time.<br/>
 	Note: All the first layer child node containing the toggle component will auto be added to the container
-	!#zh ToggleContainer ä¸æ˜¯ä¸€ä¸ªå¯è§çš„ UI ç»„ä»¶ï¼Œå®ƒå¯ä»¥ç”¨æ¥ä¿®æ”¹ä¸€ç»„ Toggle ç»„ä»¶çš„è¡Œä¸ºã€‚<br/>
-	å½“ä¸€ç»„ Toggle å±äºåŒä¸€ä¸ª ToggleContainer çš„æ—¶å€™ï¼Œä»»ä½•æ—¶å€™åªèƒ½æœ‰ä¸€ä¸ª Toggle å¤„äºé€‰ä¸­çŠ¶æ€ã€‚<br/>
-	æ³¨æ„ï¼šæ‰€æœ‰åŒ…å« Toggle ç»„ä»¶çš„ä¸€çº§å­èŠ‚ç‚¹éƒ½ä¼šè‡ªåŠ¨è¢«æ·»åŠ åˆ°è¯¥å®¹å™¨ä¸­ */
+	!#zh ToggleContainer ä¸???¯ä??ä¸ªå?¯è????? UI ç»?ä»¶ï??å®???¯ä»¥??¨æ?¥ä¿®??¹ä??ç»? Toggle ç»?ä»¶ç??è¡?ä¸ºã??<br/>
+	å½?ä¸?ç»? Toggle å±?äº????ä¸?ä¸? ToggleContainer ?????¶å??ï¼?ä»»ä????¶å????ªè?½æ??ä¸?ä¸? Toggle å¤?äº????ä¸­ç?¶æ?????<br/>
+	æ³¨æ??ï¼????????????? Toggle ç»?ä»¶ç??ä¸?çº§å???????¹é?½ä????ªå?¨è¢«æ·»å????°è¯¥å®¹å?¨ä¸­ */
 	export class ToggleContainer extends Component {		
 		/** !#en If this setting is true, a toggle could be switched off and on when pressed.
 		If it is false, it will make sure there is always only one toggle could be switched on
 		and the already switched on toggle can't be switched off.
-		!#zh å¦‚æœè¿™ä¸ªè®¾ç½®ä¸º trueï¼Œ é‚£ä¹ˆ toggle æŒ‰é’®åœ¨è¢«ç‚¹å‡»çš„æ—¶å€™å¯ä»¥åå¤åœ°è¢«é€‰ä¸­å’Œæœªé€‰ä¸­ã€‚ */
+		!#zh å¦????è¿?ä¸ªè®¾ç½®ä¸º trueï¼? ???ä¹? toggle ?????®å?¨è¢«??¹å?»ç????¶å????¯ä»¥???å¤???°è¢«???ä¸­å????ªé??ä¸­ã?? */
 		allowSwitchOff: boolean;		
 		/** !#en If Toggle is clicked, it will trigger event's handler
-		!#zh Toggle æŒ‰é’®çš„ç‚¹å‡»äº‹ä»¶åˆ—è¡¨ã€‚ */
+		!#zh Toggle ?????®ç????¹å?»ä??ä»¶å??è¡¨ã?? */
 		checkEvents: Component.EventHandler[];		
 		/** !#en Read only property, return the toggle items array reference managed by ToggleContainer.
-		!#zh åªè¯»å±æ€§ï¼Œè¿”å› ToggleContainer ç®¡ç†çš„ toggle æ•°ç»„å¼•ç”¨ */
+		!#zh ??ªè¯»å±???§ï??è¿???? ToggleContainer ç®¡ç????? toggle ??°ç??å¼???? */
 		toggleItems: Toggle[];	
 	}	
 	/** !#en ToggleGroup is not a visiable UI component but a way to modify the behavior of a set of Toggles.
 	Toggles that belong to the same group could only have one of them to be switched on at a time.
-	!#zh ToggleGroup ä¸æ˜¯ä¸€ä¸ªå¯è§çš„ UI ç»„ä»¶ï¼Œå®ƒå¯ä»¥ç”¨æ¥ä¿®æ”¹ä¸€ç»„ Toggle  ç»„ä»¶çš„è¡Œä¸ºã€‚å½“ä¸€ç»„ Toggle å±äºåŒä¸€ä¸ª ToggleGroup çš„æ—¶å€™ï¼Œ
-	ä»»ä½•æ—¶å€™åªèƒ½æœ‰ä¸€ä¸ª Toggle å¤„äºé€‰ä¸­çŠ¶æ€ã€‚ */
+	!#zh ToggleGroup ä¸???¯ä??ä¸ªå?¯è????? UI ç»?ä»¶ï??å®???¯ä»¥??¨æ?¥ä¿®??¹ä??ç»? Toggle  ç»?ä»¶ç??è¡?ä¸ºã??å½?ä¸?ç»? Toggle å±?äº????ä¸?ä¸? ToggleGroup ?????¶å??ï¼?
+	ä»»ä????¶å????ªè?½æ??ä¸?ä¸? Toggle å¤?äº????ä¸­ç?¶æ????? */
 	export class ToggleGroup extends Component {		
 		/** !#en If this setting is true, a toggle could be switched off and on when pressed.
 		If it is false, it will make sure there is always only one toggle could be switched on
 		and the already switched on toggle can't be switched off.
-		!#zh å¦‚æœè¿™ä¸ªè®¾ç½®ä¸º trueï¼Œ é‚£ä¹ˆ toggle æŒ‰é’®åœ¨è¢«ç‚¹å‡»çš„æ—¶å€™å¯ä»¥åå¤åœ°è¢«é€‰ä¸­å’Œæœªé€‰ä¸­ã€‚ */
+		!#zh å¦????è¿?ä¸ªè®¾ç½®ä¸º trueï¼? ???ä¹? toggle ?????®å?¨è¢«??¹å?»ç????¶å????¯ä»¥???å¤???°è¢«???ä¸­å????ªé??ä¸­ã?? */
 		allowSwitchOff: boolean;		
 		/** !#en Read only property, return the toggle items array reference managed by toggleGroup.
-		!#zh åªè¯»å±æ€§ï¼Œè¿”å› toggleGroup ç®¡ç†çš„ toggle æ•°ç»„å¼•ç”¨ */
+		!#zh ??ªè¯»å±???§ï??è¿???? toggleGroup ç®¡ç????? toggle ??°ç??å¼???? */
 		toggleItems: any[];	
 	}	
 	/** !#en
@@ -9417,9 +9417,9 @@ declare namespace cc {
 	Please refer to Scrollview for more  information.
 	
 	!#zh
-	ViewGroupçš„äº‹ä»¶å¤„ç†æ¯”è¾ƒç‰¹æ®Šï¼Œå› ä¸º ViewGroup é‡Œé¢çš„å­èŠ‚ç‚¹å…³å¿ƒçš„äº‹ä»¶è·Ÿ ViewGroup æœ¬èº«å¯èƒ½ä¸ä¸€æ ·ã€‚
-	ä¸ºäº†è®©å­èŠ‚ç‚¹èƒ½å¤Ÿæ­£ç¡®åœ°å¤„ç†äº‹ä»¶ï¼ŒViewGroup éœ€è¦æ³¨å†Œ capture é˜¶æ®µçš„äº‹ä»¶ï¼Œå¹¶ä¸”åˆç†åœ°å¤„ç† ViewGroup ä¹‹é—´çš„äº‹ä»¶ä¼ é€’ã€‚
-	è¯·å‚è€ƒ ScrollView çš„å®ç°æ¥è·å–æ›´å¤šä¿¡æ¯ã€‚ */
+	ViewGroup???äº?ä»¶å?????æ¯?è¾???¹æ??ï¼????ä¸? ViewGroup ?????¢ç??å­??????¹å?³å?????äº?ä»¶è?? ViewGroup ??¬èº«??¯è?½ä??ä¸???·ã??
+	ä¸ºä??è®©å???????¹è?½å??æ­?ç¡®å?°å?????äº?ä»¶ï??ViewGroup ???è¦?æ³¨å?? capture ??¶æ®µ???äº?ä»¶ï??å¹¶ä??????????°å????? ViewGroup ä¹???´ç??äº?ä»¶ä????????
+	è¯·å????? ScrollView ???å®???°æ?¥è?·å????´å??ä¿¡æ?¯ã?? */
 	export class ViewGroup extends Component {	
 	}	
 	/** !#en
@@ -9427,117 +9427,117 @@ declare namespace cc {
 	Widget are used for GUI but can also be used for other things.
 	Widget will adjust current node's position and size automatically, but the results after adjustment can not be obtained until the next frame unless you call {{#crossLink "Widget/updateAlignment:method"}}{{/crossLink}} manually.
 	!#zh
-	Widget ç»„ä»¶ï¼Œç”¨äºè®¾ç½®å’Œé€‚é…å…¶ç›¸å¯¹äºçˆ¶èŠ‚ç‚¹çš„è¾¹è·ï¼ŒWidget é€šå¸¸è¢«ç”¨äº UI ç•Œé¢ï¼Œä¹Ÿå¯ä»¥ç”¨äºå…¶ä»–åœ°æ–¹ã€‚
-	Widget ä¼šè‡ªåŠ¨è°ƒæ•´å½“å‰èŠ‚ç‚¹çš„åæ ‡å’Œå®½é«˜ï¼Œä¸è¿‡ç›®å‰è°ƒæ•´åçš„ç»“æœè¦åˆ°ä¸‹ä¸€å¸§æ‰èƒ½åœ¨è„šæœ¬é‡Œè·å–åˆ°ï¼Œé™¤éä½ å…ˆæ‰‹åŠ¨è°ƒç”¨ {{#crossLink "Widget/updateAlignment:method"}}{{/crossLink}}ã€‚ */
+	Widget ç»?ä»¶ï????¨ä??è®¾ç½®???????????¶ç?¸å¯¹äº???¶è????¹ç??è¾¹è??ï¼?Widget ???å¸¸è¢«??¨ä?? UI ?????¢ï??ä¹???¯ä»¥??¨ä????¶ä????°æ?¹ã??
+	Widget ä¼???ªå?¨è????´å??????????¹ç???????????å®½é??ï¼?ä¸?è¿???®å??è°???´å?????ç»????è¦???°ä??ä¸?å¸§æ????½å?¨è????¬é????·å????°ï????¤é??ä½?????????¨è????? {{#crossLink "Widget/updateAlignment:method"}}{{/crossLink}}??? */
 	export class Widget extends Component {		
 		/** !#en Specifies an alignment target that can only be one of the parent nodes of the current node.
 		The default value is null, and when null, indicates the current parent.
-		!#zh æŒ‡å®šä¸€ä¸ªå¯¹é½ç›®æ ‡ï¼Œåªèƒ½æ˜¯å½“å‰èŠ‚ç‚¹çš„å…¶ä¸­ä¸€ä¸ªçˆ¶èŠ‚ç‚¹ï¼Œé»˜è®¤ä¸ºç©ºï¼Œä¸ºç©ºæ—¶è¡¨ç¤ºå½“å‰çˆ¶èŠ‚ç‚¹ã€‚ */
+		!#zh ???å®?ä¸?ä¸ªå¯¹é½???®æ??ï¼???ªè?½æ?¯å??????????¹ç????¶ä¸­ä¸?ä¸ªç?¶è????¹ï??é»?è®¤ä¸ºç©ºï??ä¸ºç©º??¶è¡¨ç¤ºå???????¶è????¹ã?? */
 		target: Node;		
 		/** !#en Whether to align the top.
-		!#zh æ˜¯å¦å¯¹é½ä¸Šè¾¹ã€‚ */
+		!#zh ??¯å?¦å¯¹é½?ä¸?è¾¹ã?? */
 		isAlignTop: boolean;		
 		/** !#en
 		Vertically aligns the midpoint, This will open the other vertical alignment options cancel.
 		!#zh
-		æ˜¯å¦å‚ç›´æ–¹å‘å¯¹é½ä¸­ç‚¹ï¼Œå¼€å¯æ­¤é¡¹ä¼šå°†å‚ç›´æ–¹å‘å…¶ä»–å¯¹é½é€‰é¡¹å–æ¶ˆã€‚ */
+		??¯å?¦å????´æ?¹å??å¯¹é??ä¸­ç?¹ï??å¼???¯æ­¤é¡¹ä??å°??????´æ?¹å????¶ä??å¯¹é?????é¡¹å??æ¶???? */
 		isAlignVerticalCenter: boolean;		
 		/** !#en Whether to align the bottom.
-		!#zh æ˜¯å¦å¯¹é½ä¸‹è¾¹ã€‚ */
+		!#zh ??¯å?¦å¯¹é½?ä¸?è¾¹ã?? */
 		isAlignBottom: boolean;		
 		/** !#en Whether to align the left.
-		!#zh æ˜¯å¦å¯¹é½å·¦è¾¹ */
+		!#zh ??¯å?¦å¯¹é½?å·¦è¾¹ */
 		isAlignLeft: boolean;		
 		/** !#en
 		Horizontal aligns the midpoint. This will open the other horizontal alignment options canceled.
 		!#zh
-		æ˜¯å¦æ°´å¹³æ–¹å‘å¯¹é½ä¸­ç‚¹ï¼Œå¼€å¯æ­¤é€‰é¡¹ä¼šå°†æ°´å¹³æ–¹å‘å…¶ä»–å¯¹é½é€‰é¡¹å–æ¶ˆã€‚ */
+		??¯å?¦æ°´å¹³æ?¹å??å¯¹é??ä¸­ç?¹ï??å¼???¯æ­¤???é¡¹ä??å°?æ°´å¹³??¹å????¶ä??å¯¹é?????é¡¹å??æ¶???? */
 		isAlignHorizontalCenter: boolean;		
 		/** !#en Whether to align the right.
-		!#zh æ˜¯å¦å¯¹é½å³è¾¹ã€‚ */
+		!#zh ??¯å?¦å¯¹é½???³è¾¹??? */
 		isAlignRight: boolean;		
 		/** !#en
 		Whether the stretched horizontally, when enable the left and right alignment will be stretched horizontally,
 		the width setting is invalid (read only).
 		!#zh
-		å½“å‰æ˜¯å¦æ°´å¹³æ‹‰ä¼¸ã€‚å½“åŒæ—¶å¯ç”¨å·¦å³å¯¹é½æ—¶ï¼ŒèŠ‚ç‚¹å°†ä¼šè¢«æ°´å¹³æ‹‰ä¼¸ï¼Œæ­¤æ—¶èŠ‚ç‚¹çš„å®½åº¦åªè¯»ã€‚ */
+		å½??????¯å?¦æ°´å¹³æ??ä¼¸ã??å½??????¶å?¯ç?¨å·¦??³å¯¹é½???¶ï???????¹å??ä¼?è¢«æ°´å¹³æ??ä¼¸ï??æ­¤æ?¶è????¹ç??å®½åº¦??ªè¯»??? */
 		isStretchWidth: boolean;		
 		/** !#en
 		Whether the stretched vertically, when enable the left and right alignment will be stretched vertically,
 		then height setting is invalid (read only)
 		!#zh
-		å½“å‰æ˜¯å¦å‚ç›´æ‹‰ä¼¸ã€‚å½“åŒæ—¶å¯ç”¨ä¸Šä¸‹å¯¹é½æ—¶ï¼ŒèŠ‚ç‚¹å°†ä¼šè¢«å‚ç›´æ‹‰ä¼¸ï¼Œæ­¤æ—¶èŠ‚ç‚¹çš„é«˜åº¦åªè¯»ã€‚ */
+		å½??????¯å?¦å????´æ??ä¼¸ã??å½??????¶å?¯ç?¨ä??ä¸?å¯¹é????¶ï???????¹å??ä¼?è¢«å????´æ??ä¼¸ï??æ­¤æ?¶è????¹ç??é«?åº¦å?ªè¯»??? */
 		isStretchHeight: boolean;		
 		/** !#en
 		The margins between the top of this node and the top of parent node,
 		the value can be negative, Only available in 'isAlignTop' open.
 		!#zh
-		æœ¬èŠ‚ç‚¹é¡¶è¾¹å’Œçˆ¶èŠ‚ç‚¹é¡¶è¾¹çš„è·ç¦»ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignTop å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		??¬è????¹é¡¶è¾¹å????¶è????¹é¡¶è¾¹ç??è·?ç¦»ï????¯å¡«???è´???¼ï????ªæ????? isAlignTop å¼???¯æ?¶æ?????ä½???¨ã?? */
 		top: number;		
 		/** !#en
 		The margins between the bottom of this node and the bottom of parent node,
 		the value can be negative, Only available in 'isAlignBottom' open.
 		!#zh
-		æœ¬èŠ‚ç‚¹åº•è¾¹å’Œçˆ¶èŠ‚ç‚¹åº•è¾¹çš„è·ç¦»ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignBottom å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		??¬è????¹å??è¾¹å????¶è????¹å??è¾¹ç??è·?ç¦»ï????¯å¡«???è´???¼ï????ªæ????? isAlignBottom å¼???¯æ?¶æ?????ä½???¨ã?? */
 		bottom: number;		
 		/** !#en
 		The margins between the left of this node and the left of parent node,
 		the value can be negative, Only available in 'isAlignLeft' open.
 		!#zh
-		æœ¬èŠ‚ç‚¹å·¦è¾¹å’Œçˆ¶èŠ‚ç‚¹å·¦è¾¹çš„è·ç¦»ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignLeft å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		??¬è????¹å·¦è¾¹å????¶è????¹å·¦è¾¹ç??è·?ç¦»ï????¯å¡«???è´???¼ï????ªæ????? isAlignLeft å¼???¯æ?¶æ?????ä½???¨ã?? */
 		left: number;		
 		/** !#en
 		The margins between the right of this node and the right of parent node,
 		the value can be negative, Only available in 'isAlignRight' open.
 		!#zh
-		æœ¬èŠ‚ç‚¹å³è¾¹å’Œçˆ¶èŠ‚ç‚¹å³è¾¹çš„è·ç¦»ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignRight å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		??¬è????¹å?³è¾¹?????¶è????¹å?³è¾¹???è·?ç¦»ï????¯å¡«???è´???¼ï????ªæ????? isAlignRight å¼???¯æ?¶æ?????ä½???¨ã?? */
 		right: number;		
 		/** !#en
 		Horizontal aligns the midpoint offset value,
 		the value can be negative, Only available in 'isAlignHorizontalCenter' open.
-		!#zh æ°´å¹³å±…ä¸­çš„åç§»å€¼ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignHorizontalCenter å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		!#zh æ°´å¹³å±?ä¸­ç?????ç§»å?¼ï????¯å¡«???è´???¼ï????ªæ????? isAlignHorizontalCenter å¼???¯æ?¶æ?????ä½???¨ã?? */
 		horizontalCenter: number;		
 		/** !#en
 		Vertical aligns the midpoint offset value,
 		the value can be negative, Only available in 'isAlignVerticalCenter' open.
-		!#zh å‚ç›´å±…ä¸­çš„åç§»å€¼ï¼Œå¯å¡«å†™è´Ÿå€¼ï¼Œåªæœ‰åœ¨ isAlignVerticalCenter å¼€å¯æ—¶æ‰æœ‰ä½œç”¨ã€‚ */
+		!#zh ?????´å??ä¸­ç?????ç§»å?¼ï????¯å¡«???è´???¼ï????ªæ????? isAlignVerticalCenter å¼???¯æ?¶æ?????ä½???¨ã?? */
 		verticalCenter: number;		
 		/** !#en If true, horizontalCenter is pixel margin, otherwise is percentage (0 - 1) margin.
-		!#zh å¦‚æœä¸º trueï¼Œ"horizontalCenter" å°†ä¼šä»¥åƒç´ ä½œä¸ºåç§»å€¼ï¼Œåä¹‹ä¸ºç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ã€‚ */
+		!#zh å¦????ä¸? trueï¼?"horizontalCenter" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºå??ç§»å?¼ï?????ä¹?ä¸ºç?¾å??æ¯?ï¼?0 ??? 1ï¼???? */
 		isAbsoluteHorizontalCenter: boolean;		
 		/** !#en If true, verticalCenter is pixel margin, otherwise is percentage (0 - 1) margin.
-		!#zh å¦‚æœä¸º trueï¼Œ"verticalCenter" å°†ä¼šä»¥åƒç´ ä½œä¸ºåç§»å€¼ï¼Œåä¹‹ä¸ºç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ã€‚ */
+		!#zh å¦????ä¸? trueï¼?"verticalCenter" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºå??ç§»å?¼ï?????ä¹?ä¸ºç?¾å??æ¯?ï¼?0 ??? 1ï¼???? */
 		isAbsoluteVerticalCenter: boolean;		
 		/** !#en
 		If true, top is pixel margin, otherwise is percentage (0 - 1) margin relative to the parent's height.
 		!#zh
-		å¦‚æœä¸º trueï¼Œ"top" å°†ä¼šä»¥åƒç´ ä½œä¸ºè¾¹è·ï¼Œå¦åˆ™å°†ä¼šä»¥ç›¸å¯¹çˆ¶ç‰©ä½“é«˜åº¦çš„ç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ä½œä¸ºè¾¹è·ã€‚ */
+		å¦????ä¸? trueï¼?"top" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºè¾¹è·?ï¼???¦å??å°?ä¼?ä»¥ç?¸å¯¹??¶ç?©ä??é«?åº¦ç????¾å??æ¯?ï¼?0 ??? 1ï¼?ä½?ä¸ºè¾¹è·???? */
 		isAbsoluteTop: boolean;		
 		/** !#en
 		If true, bottom is pixel margin, otherwise is percentage (0 - 1) margin relative to the parent's height.
 		!#zh
-		å¦‚æœä¸º trueï¼Œ"bottom" å°†ä¼šä»¥åƒç´ ä½œä¸ºè¾¹è·ï¼Œå¦åˆ™å°†ä¼šä»¥ç›¸å¯¹çˆ¶ç‰©ä½“é«˜åº¦çš„ç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ä½œä¸ºè¾¹è·ã€‚ */
+		å¦????ä¸? trueï¼?"bottom" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºè¾¹è·?ï¼???¦å??å°?ä¼?ä»¥ç?¸å¯¹??¶ç?©ä??é«?åº¦ç????¾å??æ¯?ï¼?0 ??? 1ï¼?ä½?ä¸ºè¾¹è·???? */
 		isAbsoluteBottom: boolean;		
 		/** !#en
 		If true, left is pixel margin, otherwise is percentage (0 - 1) margin relative to the parent's width.
 		!#zh
-		å¦‚æœä¸º trueï¼Œ"left" å°†ä¼šä»¥åƒç´ ä½œä¸ºè¾¹è·ï¼Œå¦åˆ™å°†ä¼šä»¥ç›¸å¯¹çˆ¶ç‰©ä½“å®½åº¦çš„ç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ä½œä¸ºè¾¹è·ã€‚ */
+		å¦????ä¸? trueï¼?"left" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºè¾¹è·?ï¼???¦å??å°?ä¼?ä»¥ç?¸å¯¹??¶ç?©ä??å®½åº¦?????¾å??æ¯?ï¼?0 ??? 1ï¼?ä½?ä¸ºè¾¹è·???? */
 		isAbsoluteLeft: boolean;		
 		/** !#en
 		If true, right is pixel margin, otherwise is percentage (0 - 1) margin relative to the parent's width.
 		!#zh
-		å¦‚æœä¸º trueï¼Œ"right" å°†ä¼šä»¥åƒç´ ä½œä¸ºè¾¹è·ï¼Œå¦åˆ™å°†ä¼šä»¥ç›¸å¯¹çˆ¶ç‰©ä½“å®½åº¦çš„ç™¾åˆ†æ¯”ï¼ˆ0 åˆ° 1ï¼‰ä½œä¸ºè¾¹è·ã€‚ */
+		å¦????ä¸? trueï¼?"right" å°?ä¼?ä»¥å??ç´?ä½?ä¸ºè¾¹è·?ï¼???¦å??å°?ä¼?ä»¥ç?¸å¯¹??¶ç?©ä??å®½åº¦?????¾å??æ¯?ï¼?0 ??? 1ï¼?ä½?ä¸ºè¾¹è·???? */
 		isAbsoluteRight: boolean;		
 		/** !#en Specifies the alignment mode of the Widget, which determines when the widget should refresh.
-		!#zh æŒ‡å®š Widget çš„å¯¹é½æ¨¡å¼ï¼Œç”¨äºå†³å®š Widget åº”è¯¥ä½•æ—¶åˆ·æ–°ã€‚ */
+		!#zh ???å®? Widget ???å¯¹é??æ¨¡å??ï¼???¨ä????³å?? Widget åº?è¯¥ä????¶å?·æ?°ã?? */
 		alignMode: Widget.AlignMode;		
 		/**
 		!#en
 		Immediately perform the widget alignment. You need to manually call this method only if
 		you need to get the latest results after the alignment before the end of current frame.
 		!#zh
-		ç«‹åˆ»æ‰§è¡Œ widget å¯¹é½æ“ä½œã€‚è¿™ä¸ªæ¥å£ä¸€èˆ¬ä¸éœ€è¦æ‰‹å·¥è°ƒç”¨ã€‚
-		åªæœ‰å½“ä½ éœ€è¦åœ¨å½“å‰å¸§ç»“æŸå‰è·å¾— widget å¯¹é½åçš„æœ€æ–°ç»“æœæ—¶æ‰éœ€è¦æ‰‹åŠ¨è°ƒç”¨è¿™ä¸ªæ–¹æ³•ã€‚
+		ç«???»æ?§è?? widget å¯¹é?????ä½????è¿?ä¸ªæ?¥å??ä¸???¬ä?????è¦????å·¥è????¨ã??
+		??ªæ??å½?ä½????è¦???¨å?????å¸§ç??????????·å?? widget å¯¹é?????????????°ç???????¶æ?????è¦??????¨è????¨è??ä¸ªæ?¹æ?????
 		
 		@example 
 		```js
@@ -9554,9 +9554,9 @@ declare namespace cc {
 		This will allow the script or animation to continue controlling the current node.
 		Note: It will still be aligned at the frame when onEnable is called.
 		!#zh
-		å¼€å¯åä»…ä¼šåœ¨ onEnable çš„å½“å¸§ç»“æŸæ—¶å¯¹é½ä¸€æ¬¡ï¼Œç„¶åç«‹åˆ»ç¦ç”¨å½“å‰ç»„ä»¶ã€‚
-		è¿™æ ·ä¾¿äºè„šæœ¬æˆ–åŠ¨ç”»ç»§ç»­æ§åˆ¶å½“å‰èŠ‚ç‚¹ã€‚
-		æ³¨æ„ï¼šonEnable æ—¶æ‰€åœ¨çš„é‚£ä¸€å¸§ä»ç„¶ä¼šè¿›è¡Œå¯¹é½ã€‚ */
+		å¼???¯å??ä»?ä¼???? onEnable ???å½?å¸§ç???????¶å¯¹é½?ä¸?æ¬¡ï????¶å??ç«???»ç????¨å?????ç»?ä»¶ã??
+		è¿???·ä¾¿äº??????¬æ????¨ç?»ç»§ç»­æ?§å?¶å??????????¹ã??
+		æ³¨æ??ï¼?onEnable ??¶æ????¨ç?????ä¸?å¸§ä????¶ä??è¿?è¡?å¯¹é????? */
 		isAlignOnce: boolean;	
 	}	
 	/** !#en SubContextView is a view component which controls open data context viewport in minigame platform.<br/>
@@ -9569,45 +9569,45 @@ declare namespace cc {
 	4. User touch input is transformed to the correct viewport.<br/>
 	5. Texture update is handled by this component. User don't need to worry.<br/>
 	One important thing to be noted, whenever the node's bounding box change,
-	!#zh SubContextView å¯ä»¥ç”¨æ¥æ§åˆ¶å°æ¸¸æˆå¹³å°å¼€æ”¾æ•°æ®åŸŸåœ¨ä¸»åŸŸä¸­çš„è§†çª—çš„ä½ç½®ã€‚<br/>
-	è¿™ä¸ªç»„ä»¶çš„èŠ‚ç‚¹å°ºå¯¸å†³å®šäº†å¼€æ”¾æ•°æ®åŸŸå†…å®¹åœ¨ä¸»åŸŸä¸­çš„å°ºå¯¸ï¼Œæ•´ä¸ªå¼€æ”¾æ•°æ®åŸŸä¼šè¢«ç¼©æ”¾åˆ°èŠ‚ç‚¹çš„åŒ…å›´ç›’èŒƒå›´å†…ã€‚<br/>
-	åœ¨è¿™ä¸ªç»„ä»¶çš„æ§åˆ¶ä¸‹ï¼Œç”¨æˆ·å¯ä»¥æ›´è‡ªç”±å¾—æ§åˆ¶å¼€æ”¾æ•°æ®åŸŸï¼š<br/>
-	1. å­åŸŸä¸­å¯ä»¥ä½¿ç”¨ç‹¬ç«‹çš„è®¾è®¡åˆ†è¾¨ç‡å’Œé€‚é…æ¨¡å¼<br/>
-	2. å­åŸŸåŒºåŸŸå°ºå¯¸å¯ä»¥ç¼©å°åˆ°åªå®¹çº³å†…å®¹å³å¯<br/>
-	3. å­åŸŸçš„åˆ†è¾¨ç‡ä¹Ÿå¯ä»¥è¢«æ”¾å¤§ï¼Œä»¥ä¾¿è·å¾—æ›´æ¸…æ™°çš„æ˜¾ç¤ºæ•ˆæœ<br/>
-	4. ç”¨æˆ·è¾“å…¥åæ ‡ä¼šè¢«è‡ªåŠ¨è½¬æ¢åˆ°æ­£ç¡®çš„å­åŸŸè§†çª—ä¸­<br/>
-	5. å­åŸŸå†…å®¹è´´å›¾çš„æ›´æ–°ç”±ç»„ä»¶è´Ÿè´£ï¼Œç”¨æˆ·ä¸éœ€è¦å¤„ç†<br/> */
+	!#zh SubContextView ??¯ä»¥??¨æ?¥æ?§å?¶å??æ¸¸æ??å¹³å?°å????¾æ?°æ?®å????¨ä¸»???ä¸­ç??è§?çª????ä½?ç½®ã??<br/>
+	è¿?ä¸ªç??ä»¶ç???????¹å°ºå¯¸å?³å??äº?å¼???¾æ?°æ?®å?????å®¹å?¨ä¸»???ä¸­ç??å°ºå¯¸ï¼???´ä¸ªå¼???¾æ?°æ?®å??ä¼?è¢«ç¼©??¾å?°è????¹ç???????´ç???????´å?????<br/>
+	??¨è??ä¸ªç??ä»¶ç????§å?¶ä??ï¼???¨æ?·å?¯ä»¥??´è?ªç?±å????§å?¶å????¾æ?°æ?®å??ï¼?<br/>
+	1. å­????ä¸­å?¯ä»¥ä½¿ç?¨ç?¬ç?????è®¾è®¡???è¾¨ç???????????æ¨¡å??<br/>
+	2. å­??????ºå??å°ºå¯¸??¯ä»¥ç¼©å????°å?ªå®¹çº³å??å®¹å?³å??<br/>
+	3. å­??????????è¾¨ç??ä¹???¯ä»¥è¢«æ?¾å¤§ï¼?ä»¥ä¾¿??·å????´æ????°ç????¾ç¤º??????<br/>
+	4. ??¨æ?·è????¥å?????ä¼?è¢«è?ªå?¨è½¬??¢å?°æ­£ç¡®ç??å­????è§?çª?ä¸?<br/>
+	5. å­???????å®¹è´´??¾ç????´æ?°ç?±ç??ä»¶è??è´?ï¼???¨æ?·ä?????è¦?å¤????<br/> */
 	export class SubContextView extends Component {		
 		/**
 		!#en Reset open data context size and viewport
-		!#zh é‡ç½®å¼€æ”¾æ•°æ®åŸŸçš„å°ºå¯¸å’Œè§†çª— 
+		!#zh ???ç½®å????¾æ?°æ?®å?????å°ºå¯¸???è§?çª? 
 		*/
 		reset(): void;		
 		/**
 		!#en Update the sub context viewport manually, it should be called whenever the node's bounding box changes.
-		!#zh æ›´æ–°å¼€æ”¾æ•°æ®åŸŸç›¸å¯¹äºä¸»åŸŸçš„ viewportï¼Œè¿™ä¸ªå‡½æ•°åº”è¯¥åœ¨èŠ‚ç‚¹åŒ…å›´ç›’æ”¹å˜æ—¶æ‰‹åŠ¨è°ƒç”¨ã€‚ 
+		!#zh ??´æ?°å????¾æ?°æ?®å????¸å¯¹äº?ä¸»å????? viewportï¼?è¿?ä¸ªå?½æ?°å??è¯¥å?¨è????¹å????´ç????¹å????¶æ????¨è????¨ã?? 
 		*/
 		updateSubContextViewport(): void;	
 	}	
 	/** !#en WXSubContextView is deprecated since v2.4.1, please use SubContextView instead.
-	!#zh è‡ª v2.4.1 èµ·ï¼ŒWXSubContextView å·²ç»åºŸå¼ƒï¼Œè¯·ä½¿ç”¨ SubContextView */
+	!#zh ??? v2.4.1 èµ·ï??WXSubContextView å·²ç??åº?å¼?ï¼?è¯·ä½¿??? SubContextView */
 	export class WXSubContextView extends Component {	
 	}	
 	/** !#en SwanSubContextView is deprecated since v2.4.1, please use SubContextView instead.
-	!#zh è‡ª v2.4.1 èµ·ï¼ŒSwanSubContextView å·²ç»åºŸå¼ƒï¼Œè¯·ä½¿ç”¨ SubContextView */
+	!#zh ??? v2.4.1 èµ·ï??SwanSubContextView å·²ç??åº?å¼?ï¼?è¯·ä½¿??? SubContextView */
 	export class SwanSubContextView extends Component {	
 	}	
 	/** !#en Mesh Asset.
-	!#zh ç½‘æ ¼èµ„æºã€‚ */
+	!#zh ç½???¼è??æº???? */
 	export class Mesh extends Asset implements EventTarget {		
 		/** !#en Get ir set the sub meshes.
-		!#zh è®¾ç½®æˆ–è€…è·å–å­ç½‘æ ¼ã€‚ */
+		!#zh è®¾ç½®????????·å??å­?ç½???¼ã?? */
 		subMeshes: InputAssembler[];		
 		/**
 		!#en
 		Init vertex buffer according to the vertex format.
 		!#zh
-		æ ¹æ®é¡¶ç‚¹æ ¼å¼åˆå§‹åŒ–é¡¶ç‚¹å†…å­˜ã€‚
+		??¹æ?®é¡¶??¹æ?¼å?????å§????é¡¶ç?¹å??å­????
 		@param vertexFormat vertex format
 		@param vertexCount how much vertex should be create in this buffer.
 		@param dynamic whether or not to use dynamic buffer.
@@ -9618,7 +9618,7 @@ declare namespace cc {
 		!#en
 		Set the vertex values.
 		!#zh
-		è®¾ç½®é¡¶ç‚¹æ•°æ®
+		è®¾ç½®é¡¶ç?¹æ?°æ??
 		@param name the attribute name, e.g. gfx.ATTR_POSITION
 		@param values the vertex values 
 		*/
@@ -9627,7 +9627,7 @@ declare namespace cc {
 		!#en
 		Set the sub mesh indices.
 		!#zh
-		è®¾ç½®å­ç½‘æ ¼ç´¢å¼•ã€‚
+		è®¾ç½®å­?ç½???¼ç´¢å¼????
 		@param indices the sub mesh indices.
 		@param index sub mesh index.
 		@param dynamic whether or not to use dynamic buffer. 
@@ -9637,7 +9637,7 @@ declare namespace cc {
 		!#en
 		Set the sub mesh primitive type.
 		!#zh
-		è®¾ç½®å­ç½‘æ ¼ç»˜åˆ¶çº¿æ¡çš„æ–¹å¼ã€‚
+		è®¾ç½®å­?ç½???¼ç????¶çº¿??¡ç????¹å?????
 		@param type type
 		@param index index 
 		*/
@@ -9646,19 +9646,19 @@ declare namespace cc {
 		!#en
 		Clear the buffer data.
 		!#zh
-		æ¸…é™¤ç½‘æ ¼åˆ›å»ºçš„å†…å­˜æ•°æ®ã€‚ 
+		æ¸???¤ç????¼å??å»ºç?????å­???°æ?®ã?? 
 		*/
 		clear(): void;		
 		/**
 		!#en Set mesh bounding box
-		!#zh è®¾ç½®ç½‘æ ¼çš„åŒ…å›´ç›’
+		!#zh è®¾ç½®ç½???¼ç???????´ç??
 		@param min min
 		@param max max 
 		*/
 		setBoundingBox(min: Vec3, max: Vec3): void;		
 		/**
 		!#en Read the specified attributes of the subgrid into the target buffer.
-		!#zh è¯»å–å­ç½‘æ ¼çš„æŒ‡å®šå±æ€§åˆ°ç›®æ ‡ç¼“å†²åŒºä¸­ã€‚
+		!#zh è¯»å??å­?ç½???¼ç?????å®?å±???§å?°ç?®æ??ç¼???²å?ºä¸­???
 		@param primitiveIndex The subgrid index.
 		@param attributeName attribute name.
 		@param buffer The target buffer.
@@ -9668,14 +9668,14 @@ declare namespace cc {
 		copyAttribute(primitiveIndex: number, attributeName: string, buffer: ArrayBuffer, stride: number, offset: number): boolean;		
 		/**
 		!#en Read the index data of the subgrid into the target array.
-		!#zh è¯»å–å­ç½‘æ ¼çš„ç´¢å¼•æ•°æ®åˆ°ç›®æ ‡æ•°ç»„ä¸­ã€‚
+		!#zh è¯»å??å­?ç½???¼ç??ç´¢å????°æ?®å?°ç?®æ????°ç??ä¸­ã??
 		@param primitiveIndex The subgrid index.
 		@param outputArray The target array. 
 		*/
 		copyIndices(primitiveIndex: number, outputArray: DataView): boolean;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -9684,7 +9684,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -9703,7 +9703,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -9726,9 +9726,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -9737,7 +9737,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -9755,7 +9755,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;	
@@ -9763,27 +9763,27 @@ declare namespace cc {
 	/** !#en
 	Mesh Renderer Component
 	!#zh
-	ç½‘æ ¼æ¸²æŸ“ç»„ä»¶ */
+	ç½???¼æ¸²???ç»?ä»? */
 	export class MeshRenderer extends RenderComponent {		
 		/** !#en
 		The mesh which the renderer uses.
 		!#zh
-		è®¾ç½®ä½¿ç”¨çš„ç½‘æ ¼ */
+		è®¾ç½®ä½¿ç?¨ç??ç½???? */
 		mesh: Mesh;		
 		/** !#en
 		Whether the mesh should receive shadows.
 		!#zh
-		ç½‘æ ¼æ˜¯å¦æ¥å—å…‰æºæŠ•å°„çš„é˜´å½± */
+		ç½???¼æ?¯å?¦æ?¥å?????æº????å°??????´å½± */
 		receiveShadows: boolean;		
 		/** !#en
 		Shadow Casting Mode
 		!#zh
-		ç½‘æ ¼æŠ•å°„é˜´å½±çš„æ¨¡å¼ */
+		ç½???¼æ??å°???´å½±???æ¨¡å?? */
 		shadowCastingMode: MeshRenderer.ShadowCastingMode;		
 		/** !#en
 		Enable auto merge mesh, only support when mesh's VertexFormat, PrimitiveType, materials are all the same
 		!#zh
-		å¼€å¯è‡ªåŠ¨åˆå¹¶ mesh åŠŸèƒ½ï¼Œåªæœ‰åœ¨ç½‘æ ¼çš„ é¡¶ç‚¹æ ¼å¼ï¼ŒPrimitiveType, ä½¿ç”¨çš„æè´¨ éƒ½ä¸€è‡´çš„æƒ…å†µä¸‹æ‰ä¼šæœ‰æ•ˆ */
+		å¼???¯è?ªå?¨å??å¹? mesh ?????½ï????ªæ????¨ç????¼ç?? é¡¶ç?¹æ?¼å??ï¼?PrimitiveType, ä½¿ç?¨ç?????è´? ??½ä????´ç???????µä?????ä¼??????? */
 		enableAutoBatch: boolean;	
 	}	
 	/** The class BufferRange denotes a range of the buffer. */
@@ -9815,50 +9815,50 @@ declare namespace cc {
 		/** !#en
 		Current line width.
 		!#zh
-		å½“å‰çº¿æ¡å®½åº¦ */
+		å½????çº¿æ?¡å®½åº? */
 		lineWidth: number;		
 		/** !#en
 		lineJoin determines how two connecting segments (of lines, arcs or curves) with non-zero lengths in a shape are joined together.
 		!#zh
-		lineJoin ç”¨æ¥è®¾ç½®2ä¸ªé•¿åº¦ä¸ä¸º0çš„ç›¸è¿éƒ¨åˆ†ï¼ˆçº¿æ®µï¼Œåœ†å¼§ï¼Œæ›²çº¿ï¼‰å¦‚ä½•è¿æ¥åœ¨ä¸€èµ·çš„å±æ€§ã€‚ */
+		lineJoin ??¨æ?¥è®¾ç½?2ä¸ªé?¿åº¦ä¸?ä¸?0?????¸è????¨å??ï¼?çº¿æ®µï¼????å¼§ï????²çº¿ï¼?å¦?ä½?è¿???¥å?¨ä??èµ·ç??å±???§ã?? */
 		lineJoin: Graphics.LineJoin;		
 		/** !#en
 		lineCap determines how the end points of every line are drawn.
 		!#zh
-		lineCap æŒ‡å®šå¦‚ä½•ç»˜åˆ¶æ¯ä¸€æ¡çº¿æ®µæœ«ç«¯ã€‚ */
+		lineCap ???å®?å¦?ä½?ç»???¶æ??ä¸???¡çº¿æ®µæ?«ç«¯??? */
 		lineCap: Graphics.LineCap;		
 		/** !#en
 		stroke color
 		!#zh
-		çº¿æ®µé¢œè‰² */
+		çº¿æ®µé¢???? */
 		strokeColor: Color;		
 		/** !#en
 		fill color
 		!#zh
-		å¡«å……é¢œè‰² */
+		å¡«å??é¢???? */
 		fillColor: Color;		
 		/** !#en
 		Sets the miter limit ratio
 		!#zh
-		è®¾ç½®æ–œæ¥é¢é™åˆ¶æ¯”ä¾‹ */
+		è®¾ç½®?????¥é?¢é????¶æ??ä¾? */
 		miterLimit: number;		
 		/**
 		!#en Move path start point to (x,y).
-		!#zh ç§»åŠ¨è·¯å¾„èµ·ç‚¹åˆ°åæ ‡(x, y)
+		!#zh ç§»å?¨è·¯å¾?èµ·ç?¹å?°å?????(x, y)
 		@param x The x axis of the coordinate for the end point.
 		@param y The y axis of the coordinate for the end point. 
 		*/
 		moveTo(x?: number, y?: number): void;		
 		/**
 		!#en Adds a straight line to the path
-		!#zh ç»˜åˆ¶ç›´çº¿è·¯å¾„
+		!#zh ç»???¶ç?´çº¿è·¯å??
 		@param x The x axis of the coordinate for the end point.
 		@param y The y axis of the coordinate for the end point. 
 		*/
 		lineTo(x?: number, y?: number): void;		
 		/**
 		!#en Adds a cubic BÃ©zier curve to the path
-		!#zh ç»˜åˆ¶ä¸‰æ¬¡è´èµ›å°”æ›²çº¿è·¯å¾„
+		!#zh ç»???¶ä??æ¬¡è??èµ?å°???²çº¿è·¯å??
 		@param c1x The x axis of the coordinate for the first control point.
 		@param c1y The y axis of the coordinate for first control point.
 		@param c2x The x axis of the coordinate for the second control point.
@@ -9869,7 +9869,7 @@ declare namespace cc {
 		bezierCurveTo(c1x?: number, c1y?: number, c2x?: number, c2y?: number, x?: number, y?: number): void;		
 		/**
 		!#en Adds a quadratic BÃ©zier curve to the path
-		!#zh ç»˜åˆ¶äºŒæ¬¡è´èµ›å°”æ›²çº¿è·¯å¾„
+		!#zh ç»???¶ä??æ¬¡è??èµ?å°???²çº¿è·¯å??
 		@param cx The x axis of the coordinate for the control point.
 		@param cy The y axis of the coordinate for the control point.
 		@param x The x axis of the coordinate for the end point.
@@ -9878,7 +9878,7 @@ declare namespace cc {
 		quadraticCurveTo(cx?: number, cy?: number, x?: number, y?: number): void;		
 		/**
 		!#en Adds an arc to the path which is centered at (cx, cy) position with radius r starting at startAngle and ending at endAngle going in the given direction by counterclockwise (defaulting to false).
-		!#zh ç»˜åˆ¶åœ†å¼§è·¯å¾„ã€‚åœ†å¼§è·¯å¾„çš„åœ†å¿ƒåœ¨ (cx, cy) ä½ç½®ï¼ŒåŠå¾„ä¸º r ï¼Œæ ¹æ® counterclockwise ï¼ˆé»˜è®¤ä¸ºfalseï¼‰æŒ‡å®šçš„æ–¹å‘ä» startAngle å¼€å§‹ç»˜åˆ¶ï¼Œåˆ° endAngle ç»“æŸã€‚
+		!#zh ç»???¶å??å¼§è·¯å¾???????å¼§è·¯å¾???????å¿???? (cx, cy) ä½?ç½®ï?????å¾?ä¸? r ï¼???¹æ?? counterclockwise ï¼?é»?è®¤ä¸ºfalseï¼????å®??????¹å??ä»? startAngle å¼?å§?ç»???¶ï????? endAngle ç»???????
 		@param cx The x axis of the coordinate for the center point.
 		@param cy The y axis of the coordinate for the center point.
 		@param r The arc's radius.
@@ -9889,7 +9889,7 @@ declare namespace cc {
 		arc(cx?: number, cy?: number, r?: number, startAngle?: number, endAngle?: number, counterclockwise?: boolean): void;		
 		/**
 		!#en Adds an ellipse to the path.
-		!#zh ç»˜åˆ¶æ¤­åœ†è·¯å¾„ã€‚
+		!#zh ç»???¶æ¤­???è·¯å?????
 		@param cx The x axis of the coordinate for the center point.
 		@param cy The y axis of the coordinate for the center point.
 		@param rx The ellipse's x-axis radius.
@@ -9898,7 +9898,7 @@ declare namespace cc {
 		ellipse(cx?: number, cy?: number, rx?: number, ry?: number): void;		
 		/**
 		!#en Adds an circle to the path.
-		!#zh ç»˜åˆ¶åœ†å½¢è·¯å¾„ã€‚
+		!#zh ç»???¶å??å½¢è·¯å¾????
 		@param cx The x axis of the coordinate for the center point.
 		@param cy The y axis of the coordinate for the center point.
 		@param r The circle's radius. 
@@ -9906,7 +9906,7 @@ declare namespace cc {
 		circle(cx?: number, cy?: number, r?: number): void;		
 		/**
 		!#en Adds an rectangle to the path.
-		!#zh ç»˜åˆ¶çŸ©å½¢è·¯å¾„ã€‚
+		!#zh ç»???¶ç?©å½¢è·¯å?????
 		@param x The x axis of the coordinate for the rectangle starting point.
 		@param y The y axis of the coordinate for the rectangle starting point.
 		@param w The rectangle's width.
@@ -9915,7 +9915,7 @@ declare namespace cc {
 		rect(x?: number, y?: number, w?: number, h?: number): void;		
 		/**
 		!#en Adds an round corner rectangle to the path.
-		!#zh ç»˜åˆ¶åœ†è§’çŸ©å½¢è·¯å¾„ã€‚
+		!#zh ç»???¶å??è§???©å½¢è·¯å?????
 		@param x The x axis of the coordinate for the rectangle starting point.
 		@param y The y axis of the coordinate for the rectangle starting point.
 		@param w The rectangles width.
@@ -9925,7 +9925,7 @@ declare namespace cc {
 		roundRect(x?: number, y?: number, w?: number, h?: number, r?: number): void;		
 		/**
 		!#en Draws a filled rectangle.
-		!#zh ç»˜åˆ¶å¡«å……çŸ©å½¢ã€‚
+		!#zh ç»???¶å¡«?????©å½¢???
 		@param x The x axis of the coordinate for the rectangle starting point.
 		@param y The y axis of the coordinate for the rectangle starting point.
 		@param w The rectangle's width.
@@ -9934,32 +9934,32 @@ declare namespace cc {
 		fillRect(x?: number, y?: number, w?: number, h?: number): void;		
 		/**
 		!#en Erasing any previously drawn content.
-		!#zh æ“¦é™¤ä¹‹å‰ç»˜åˆ¶çš„æ‰€æœ‰å†…å®¹çš„æ–¹æ³•ã€‚
+		!#zh ??¦é?¤ä?????ç»???¶ç???????????å®¹ç????¹æ?????
 		@param clean Whether to clean the graphics inner cache. 
 		*/
 		clear(clean?: boolean): void;		
 		/**
 		!#en Causes the point of the pen to move back to the start of the current path. It tries to add a straight line from the current point to the start.
-		!#zh å°†ç¬”ç‚¹è¿”å›åˆ°å½“å‰è·¯å¾„èµ·å§‹ç‚¹çš„ã€‚å®ƒå°è¯•ä»å½“å‰ç‚¹åˆ°èµ·å§‹ç‚¹ç»˜åˆ¶ä¸€æ¡ç›´çº¿ã€‚ 
+		!#zh å°?ç¬???¹è???????°å?????è·¯å??èµ·å????¹ç?????å®?å°?è¯?ä»?å½??????¹å?°èµ·å§???¹ç????¶ä????¡ç?´çº¿??? 
 		*/
 		close(): void;		
 		/**
 		!#en Strokes the current or given path with the current stroke style.
-		!#zh æ ¹æ®å½“å‰çš„ç”»çº¿æ ·å¼ï¼Œç»˜åˆ¶å½“å‰æˆ–å·²ç»å­˜åœ¨çš„è·¯å¾„ã€‚ 
+		!#zh ??¹æ?®å??????????»çº¿??·å??ï¼?ç»???¶å????????å·²ç??å­???¨ç??è·¯å????? 
 		*/
 		stroke(): void;		
 		/**
 		!#en Fills the current or given path with the current fill style.
-		!#zh æ ¹æ®å½“å‰çš„ç”»çº¿æ ·å¼ï¼Œå¡«å……å½“å‰æˆ–å·²ç»å­˜åœ¨çš„è·¯å¾„ã€‚ 
+		!#zh ??¹æ?®å??????????»çº¿??·å??ï¼?å¡«å??å½???????å·²ç??å­???¨ç??è·¯å????? 
 		*/
 		fill(): void;	
 	}	
 	/** !#en The module provides utilities for working with file and directory paths
-	!#zh ç”¨äºå¤„ç†æ–‡ä»¶ä¸ç›®å½•çš„è·¯å¾„çš„æ¨¡å— */
+	!#zh ??¨ä??å¤???????ä»¶ä????®å?????è·¯å?????æ¨¡å?? */
 	export class path {		
 		/**
 		!#en Join strings to be a path.
-		!#zh æ‹¼æ¥å­—ç¬¦ä¸²ä¸º Path
+		!#zh ??¼æ?¥å??ç¬¦ä¸²ä¸? Path
 		
 		@example 
 		```js
@@ -9975,7 +9975,7 @@ declare namespace cc {
 		static join(): string;		
 		/**
 		!#en Get the ext name of a path including '.', like '.png'.
-		!#zh è¿”å› Path çš„æ‰©å±•åï¼ŒåŒ…æ‹¬ '.'ï¼Œä¾‹å¦‚ '.png'ã€‚
+		!#zh è¿???? Path ?????©å?????ï¼??????? '.'ï¼?ä¾?å¦? '.png'???
 		@param pathStr pathStr
 		
 		@example 
@@ -9991,13 +9991,13 @@ declare namespace cc {
 		static extname(pathStr: string): any;		
 		/**
 		!#en Get the main name of a file name
-		!#zh è·å–æ–‡ä»¶åçš„ä¸»åç§°
+		!#zh ??·å?????ä»¶å?????ä¸»å??ç§?
 		@param fileName fileName 
 		*/
 		static mainFileName(fileName: string): string;		
 		/**
 		!#en Get the file name of a file path.
-		!#zh è·å–æ–‡ä»¶è·¯å¾„çš„æ–‡ä»¶åã€‚
+		!#zh ??·å?????ä»¶è·¯å¾???????ä»¶å?????
 		@param pathStr pathStr
 		@param extname extname
 		
@@ -10015,7 +10015,7 @@ declare namespace cc {
 		static basename(pathStr: string, extname?: string): any;		
 		/**
 		!#en Get dirname of a file path.
-		!#zh è·å–æ–‡ä»¶è·¯å¾„çš„ç›®å½•åã€‚
+		!#zh ??·å?????ä»¶è·¯å¾??????®å????????
 		@param pathStr pathStr
 		
 		@example 
@@ -10035,7 +10035,7 @@ declare namespace cc {
 		static dirname(pathStr: string): any;		
 		/**
 		!#en Change extname of a file path.
-		!#zh æ›´æ”¹æ–‡ä»¶è·¯å¾„çš„æ‰©å±•åã€‚
+		!#zh ??´æ?¹æ??ä»¶è·¯å¾??????©å????????
 		@param pathStr pathStr
 		@param extname extname
 		
@@ -10052,11 +10052,11 @@ declare namespace cc {
 	/** !#en
 	AffineTransform class represent an affine transform matrix. It's composed basically by translation, rotation, scale transformations.<br/>
 	!#zh
-	AffineTransform ç±»ä»£è¡¨ä¸€ä¸ªä»¿å°„å˜æ¢çŸ©é˜µã€‚å®ƒåŸºæœ¬ä¸Šæ˜¯ç”±å¹³ç§»æ—‹è½¬ï¼Œç¼©æ”¾è½¬å˜æ‰€ç»„æˆã€‚<br/> */
+	AffineTransform ç±»ä»£è¡¨ä??ä¸ªä»¿å°??????¢ç?©é?µã??å®???ºæ?¬ä????¯ç?±å¹³ç§»æ??è½¬ï??ç¼©æ?¾è½¬??????ç»???????<br/> */
 	export class AffineTransform {		
 		/**
 		!#en Create a AffineTransform object with all contents in the matrix.
-		!#zh ç”¨åœ¨çŸ©é˜µä¸­çš„æ‰€æœ‰å†…å®¹åˆ›å»ºä¸€ä¸ª AffineTransform å¯¹è±¡ã€‚
+		!#zh ??¨å?¨ç?©é?µä¸­????????????å®¹å??å»ºä??ä¸? AffineTransform å¯¹è±¡???
 		@param a a
 		@param b b
 		@param c c
@@ -10071,14 +10071,14 @@ declare namespace cc {
 		[ 1, 0, 0, <br/>
 		  0, 1, 0 ]
 		!#zh
-		å•ä½çŸ©é˜µï¼š<br/>
+		???ä½???©é?µï??<br/>
 		[ 1, 0, 0, <br/>
 		  0, 1, 0 ] 
 		*/
 		static identity(): AffineTransform;		
 		/**
 		!#en Clone a AffineTransform object from the specified transform.
-		!#zh å…‹éš†æŒ‡å®šçš„ AffineTransform å¯¹è±¡ã€‚
+		!#zh ?????????å®???? AffineTransform å¯¹è±¡???
 		@param t t 
 		*/
 		static clone(t: AffineTransform): AffineTransform;		
@@ -10089,7 +10089,7 @@ declare namespace cc {
 		out = t1 * t2
 		This function is memory free, you should create the output affine transform by yourself and manage its memory.
 		!#zh
-		æ‹¼æ¥ä¸¤ä¸ªçŸ©é˜µï¼Œå°†ç»“æœä¿å­˜åˆ° out çŸ©é˜µã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»º AffineTransform å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		??¼æ?¥ä¸¤ä¸ªç?©é?µï??å°?ç»????ä¿?å­???? out ??©é?µã??è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»? AffineTransform å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		out = t1 * t2
 		@param out Out object to store the concat result
 		@param t1 The first transform object.
@@ -10099,7 +10099,7 @@ declare namespace cc {
 		/**
 		!#en Get the invert transform of an AffineTransform object.
 		This function is memory free, you should create the output affine transform by yourself and manage its memory.
-		!#zh æ±‚é€†çŸ©é˜µã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»º AffineTransform å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh æ±??????©é?µã??è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»? AffineTransform å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out out
 		@param t t 
 		*/
@@ -10107,7 +10107,7 @@ declare namespace cc {
 		/**
 		!#en Get an AffineTransform object from a given matrix 4x4.
 		This function is memory free, you should create the output affine transform by yourself and manage its memory.
-		!#zh ä»ä¸€ä¸ª 4x4 Matrix è·å– AffineTransform å¯¹è±¡ã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»º AffineTransform å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh ä»?ä¸?ä¸? 4x4 Matrix ??·å?? AffineTransform å¯¹è±¡???è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»? AffineTransform å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out out
 		@param mat mat 
 		*/
@@ -10115,7 +10115,7 @@ declare namespace cc {
 		/**
 		!#en Apply the affine transformation on a point.
 		This function is memory free, you should create the output Vec2 by yourself and manage its memory.
-		!#zh å¯¹ä¸€ä¸ªç‚¹åº”ç”¨çŸ©é˜µå˜æ¢ã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»ºä¸€ä¸ª Vec2 å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh å¯¹ä??ä¸ªç?¹å????¨ç?©é?µå????¢ã??è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»ºä??ä¸? Vec2 å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out The output point to store the result
 		@param point Point to apply transform or x.
 		@param transOrY transform matrix or y.
@@ -10125,7 +10125,7 @@ declare namespace cc {
 		/**
 		!#en Apply the affine transformation on a size.
 		This function is memory free, you should create the output Size by yourself and manage its memory.
-		!#zh åº”ç”¨ä»¿å°„å˜æ¢çŸ©é˜µåˆ° Size ä¸Šã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»ºä¸€ä¸ª Size å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh åº???¨ä»¿å°??????¢ç?©é?µå?? Size ä¸????è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»ºä??ä¸? Size å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out The output point to store the result
 		@param size size
 		@param t t 
@@ -10134,7 +10134,7 @@ declare namespace cc {
 		/**
 		!#en Apply the affine transformation on a rect.
 		This function is memory free, you should create the output Rect by yourself and manage its memory.
-		!#zh åº”ç”¨ä»¿å°„å˜æ¢çŸ©é˜µåˆ° Rect ä¸Šã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»ºä¸€ä¸ª Rect å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh åº???¨ä»¿å°??????¢ç?©é?µå?? Rect ä¸????è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»ºä??ä¸? Rect å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºç¬¬ä¸?ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out out
 		@param rect rect
 		@param anAffineTransform anAffineTransform 
@@ -10143,7 +10143,7 @@ declare namespace cc {
 		/**
 		!#en Apply the affine transformation on a rect, and truns to an Oriented Bounding Box.
 		This function is memory free, you should create the output vectors by yourself and manage their memory.
-		!#zh åº”ç”¨ä»¿å°„å˜æ¢çŸ©é˜µåˆ° Rect ä¸Š, å¹¶è½¬æ¢ä¸ºæœ‰å‘åŒ…å›´ç›’ã€‚è¿™ä¸ªå‡½æ•°ä¸åˆ›å»ºä»»ä½•å†…å­˜ï¼Œä½ éœ€è¦å…ˆåˆ›å»ºåŒ…å›´ç›’çš„å››ä¸ª Vector å¯¹è±¡ç”¨æ¥å­˜å‚¨ç»“æœï¼Œå¹¶ä½œä¸ºå‰å››ä¸ªå‚æ•°ä¼ å…¥å‡½æ•°ã€‚
+		!#zh åº???¨ä»¿å°??????¢ç?©é?µå?? Rect ä¸?, å¹¶è½¬??¢ä¸º???????????´ç?????è¿?ä¸ªå?½æ?°ä?????å»ºä»»ä½????å­?ï¼?ä½????è¦???????å»ºå????´ç????????ä¸? Vector å¯¹è±¡??¨æ?¥å????¨ç?????ï¼?å¹¶ä??ä¸ºå?????ä¸ªå????°ä????¥å?½æ?°ã??
 		@param out_bl out_bl
 		@param out_tl out_tl
 		@param out_tr out_tr
@@ -10161,28 +10161,28 @@ declare namespace cc {
 	- define prefab and serialize functions */
 	export class _BaseNode extends Object implements EventTarget {		
 		/** !#en Name of node.
-		!#zh è¯¥èŠ‚ç‚¹åç§°ã€‚ */
+		!#zh è¯¥è????¹å??ç§°ã?? */
 		name: string;		
 		/** !#en The uuid for editor, will be stripped before building project.
-		!#zh ä¸»è¦ç”¨äºç¼–è¾‘å™¨çš„ uuidï¼Œåœ¨ç¼–è¾‘å™¨ä¸‹å¯ç”¨äºæŒä¹…åŒ–å­˜å‚¨ï¼Œåœ¨é¡¹ç›®æ„å»ºä¹‹åå°†å˜æˆè‡ªå¢çš„ idã€‚ */
+		!#zh ä¸»è????¨ä??ç¼?è¾???¨ç?? uuidï¼???¨ç??è¾???¨ä????¯ç?¨ä?????ä¹????å­???¨ï????¨é¡¹??®æ??å»ºä?????å°?????????ªå????? id??? */
 		uuid: string;		
 		/** !#en All children nodes.
-		!#zh èŠ‚ç‚¹çš„æ‰€æœ‰å­èŠ‚ç‚¹ã€‚ */
+		!#zh ?????¹ç????????å­??????¹ã?? */
 		children: Node[];		
 		/** !#en All children nodes.
-		!#zh èŠ‚ç‚¹çš„å­èŠ‚ç‚¹æ•°é‡ã€‚ */
+		!#zh ?????¹ç??å­??????¹æ?°é????? */
 		childrenCount: number;		
 		/** !#en
 		The local active state of this node.<br/>
 		Note that a Node may be inactive because a parent is not active, even if this returns true.<br/>
 		Use {{#crossLink "Node/activeInHierarchy:property"}}{{/crossLink}} if you want to check if the Node is actually treated as active in the scene.
 		!#zh
-		å½“å‰èŠ‚ç‚¹çš„è‡ªèº«æ¿€æ´»çŠ¶æ€ã€‚<br/>
-		å€¼å¾—æ³¨æ„çš„æ˜¯ï¼Œä¸€ä¸ªèŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹å¦‚æœä¸è¢«æ¿€æ´»ï¼Œé‚£ä¹ˆå³ä½¿å®ƒè‡ªèº«è®¾ä¸ºæ¿€æ´»ï¼Œå®ƒä»ç„¶æ— æ³•æ¿€æ´»ã€‚<br/>
-		å¦‚æœä½ æƒ³æ£€æŸ¥èŠ‚ç‚¹åœ¨åœºæ™¯ä¸­å®é™…çš„æ¿€æ´»çŠ¶æ€å¯ä»¥ä½¿ç”¨ {{#crossLink "Node/activeInHierarchy:property"}}{{/crossLink}}ã€‚ */
+		å½?????????¹ç????ªèº«æ¿?æ´»ç?¶æ?????<br/>
+		??¼å??æ³¨æ???????¯ï??ä¸?ä¸ªè????¹ç????¶è????¹å?????ä¸?è¢«æ??æ´»ï?????ä¹???³ä½¿å®???ªèº«è®¾ä¸ºæ¿?æ´»ï??å®?ä»???¶æ??æ³?æ¿?æ´»ã??<br/>
+		å¦????ä½???³æ????¥è????¹å?¨å?ºæ?¯ä¸­å®???????æ¿?æ´»ç?¶æ????¯ä»¥ä½¿ç?? {{#crossLink "Node/activeInHierarchy:property"}}{{/crossLink}}??? */
 		active: boolean;		
 		/** !#en Indicates whether this node is active in the scene.
-		!#zh è¡¨ç¤ºæ­¤èŠ‚ç‚¹æ˜¯å¦åœ¨åœºæ™¯ä¸­æ¿€æ´»ã€‚ */
+		!#zh è¡¨ç¤ºæ­¤è????¹æ?¯å?¦å?¨å?ºæ?¯ä¸­æ¿?æ´»ã?? */
 		activeInHierarchy: boolean;		
 		/**
 		
@@ -10190,11 +10190,11 @@ declare namespace cc {
 		*/
 		constructor(name?: string);		
 		/** !#en The parent of the node.
-		!#zh è¯¥èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹ã€‚ */
+		!#zh è¯¥è????¹ç????¶è????¹ã?? */
 		parent: Node;		
 		/**
 		!#en Get parent of the node.
-		!#zh è·å–è¯¥èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹ã€‚
+		!#zh ??·å??è¯¥è????¹ç????¶è????¹ã??
 		
 		@example 
 		```js
@@ -10204,7 +10204,7 @@ declare namespace cc {
 		getParent(): Node;		
 		/**
 		!#en Set parent of the node.
-		!#zh è®¾ç½®è¯¥èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹ã€‚
+		!#zh è®¾ç½®è¯¥è????¹ç????¶è????¹ã??
 		@param value value
 		
 		@example 
@@ -10219,7 +10219,7 @@ declare namespace cc {
 		All properties in attrs will be set to the node, <br/>
 		when the setter of the node is available, <br/>
 		the property will be set via setter function.<br/>
-		!#zh å±æ€§é…ç½®å‡½æ•°ã€‚åœ¨ attrs çš„æ‰€æœ‰å±æ€§å°†è¢«è®¾ç½®ä¸ºèŠ‚ç‚¹å±æ€§ã€‚
+		!#zh å±???§é??ç½®å?½æ?°ã????? attrs ?????????å±???§å??è¢«è®¾ç½®ä¸º?????¹å????§ã??
 		@param attrs Properties to be set to node
 		
 		@example 
@@ -10231,7 +10231,7 @@ declare namespace cc {
 		attr(attrs: any): void;		
 		/**
 		!#en Returns a child from the container given its uuid.
-		!#zh é€šè¿‡ uuid è·å–èŠ‚ç‚¹çš„å­èŠ‚ç‚¹ã€‚
+		!#zh ???è¿? uuid ??·å???????¹ç??å­??????¹ã??
 		@param uuid The uuid to find the child node.
 		
 		@example 
@@ -10242,7 +10242,7 @@ declare namespace cc {
 		getChildByUuid(uuid: string): Node;		
 		/**
 		!#en Returns a child from the container given its name.
-		!#zh é€šè¿‡åç§°è·å–èŠ‚ç‚¹çš„å­èŠ‚ç‚¹ã€‚
+		!#zh ???è¿????ç§°è?·å???????¹ç??å­??????¹ã??
 		@param name A name to find the child node.
 		
 		@example 
@@ -10255,7 +10255,7 @@ declare namespace cc {
 		!#en
 		Inserts a child to the node at a specified index.
 		!#zh
-		æ’å…¥å­èŠ‚ç‚¹åˆ°æŒ‡å®šä½ç½®
+		?????¥å???????¹å?°æ??å®?ä½?ç½?
 		@param child the child node to be inserted
 		@param siblingIndex the sibling index to place the child in
 		
@@ -10267,7 +10267,7 @@ declare namespace cc {
 		insertChild(child: Node, siblingIndex: number): void;		
 		/**
 		!#en Get the sibling index.
-		!#zh è·å–åŒçº§ç´¢å¼•ã€‚
+		!#zh ??·å?????çº§ç´¢å¼????
 		
 		@example 
 		```js
@@ -10277,7 +10277,7 @@ declare namespace cc {
 		getSiblingIndex(): number;		
 		/**
 		!#en Set the sibling index of this node.
-		!#zh è®¾ç½®èŠ‚ç‚¹åŒçº§ç´¢å¼•ã€‚
+		!#zh è®¾ç½®?????¹å??çº§ç´¢å¼????
 		@param index index
 		
 		@example 
@@ -10291,10 +10291,10 @@ declare namespace cc {
 		Each node, including the current node, in the sub tree will be visited two times, before all children and after all children.
 		This function call is not recursive, it's based on stack.
 		Please don't walk any other node inside the walk process.
-		!#zh éå†è¯¥èŠ‚ç‚¹çš„å­æ ‘é‡Œçš„æ‰€æœ‰èŠ‚ç‚¹å¹¶æŒ‰è§„åˆ™æ‰§è¡Œå›è°ƒå‡½æ•°ã€‚
-		å¯¹å­æ ‘ä¸­çš„æ‰€æœ‰èŠ‚ç‚¹ï¼ŒåŒ…å«å½“å‰èŠ‚ç‚¹ï¼Œä¼šæ‰§è¡Œä¸¤æ¬¡å›è°ƒï¼Œprefunc ä¼šåœ¨è®¿é—®å®ƒçš„å­èŠ‚ç‚¹ä¹‹å‰è°ƒç”¨ï¼Œpostfunc ä¼šåœ¨è®¿é—®æ‰€æœ‰å­èŠ‚ç‚¹ä¹‹åè°ƒç”¨ã€‚
-		è¿™ä¸ªå‡½æ•°çš„å®ç°ä¸æ˜¯åŸºäºé€’å½’çš„ï¼Œè€Œæ˜¯åŸºäºæ ˆå±•å¼€é€’å½’çš„æ–¹å¼ã€‚
-		è¯·ä¸è¦åœ¨ walk è¿‡ç¨‹ä¸­å¯¹ä»»ä½•å…¶ä»–çš„èŠ‚ç‚¹åµŒå¥—æ‰§è¡Œ walkã€‚
+		!#zh ??????è¯¥è????¹ç??å­?????????????????????¹å¹¶???è§??????§è?????è°???½æ?°ã??
+		å¯¹å?????ä¸­ç?????????????¹ï???????«å??????????¹ï??ä¼???§è??ä¸¤æ¬¡???è°?ï¼?prefunc ä¼???¨è®¿??®å?????å­??????¹ä?????è°???¨ï??postfunc ä¼???¨è®¿??®æ?????å­??????¹ä?????è°???¨ã??
+		è¿?ä¸ªå?½æ?°ç??å®???°ä????¯å?ºä?????å½????ï¼??????¯å?ºä?????å±?å¼????å½??????¹å?????
+		è¯·ä??è¦???? walk è¿?ç¨?ä¸­å¯¹ä»»ä????¶ä??????????¹å??å¥???§è?? walk???
 		@param prefunc The callback to process node when reach the node for the first time
 		@param postfunc The callback to process node when re-visit the node after walked all children in its sub tree
 		
@@ -10314,9 +10314,9 @@ declare namespace cc {
 		If the cleanup parameter is not passed, it will force a cleanup, so it is recommended that you always pass in the `false` parameter when calling this API.<br/>
 		If the node orphan, then nothing happens.
 		!#zh
-		ä»çˆ¶èŠ‚ç‚¹ä¸­åˆ é™¤è¯¥èŠ‚ç‚¹ã€‚å¦‚æœä¸ä¼ å…¥ cleanup å‚æ•°æˆ–è€…ä¼ å…¥ `true`ï¼Œé‚£ä¹ˆè¿™ä¸ªèŠ‚ç‚¹ä¸Šæ‰€æœ‰ç»‘å®šçš„äº‹ä»¶ã€action éƒ½ä¼šè¢«åˆ é™¤ã€‚<br/>
-		å› æ­¤å»ºè®®è°ƒç”¨è¿™ä¸ª API æ—¶æ€»æ˜¯ä¼ å…¥ `false` å‚æ•°ã€‚<br/>
-		å¦‚æœè¿™ä¸ªèŠ‚ç‚¹æ˜¯ä¸€ä¸ªå­¤èŠ‚ç‚¹ï¼Œé‚£ä¹ˆä»€ä¹ˆéƒ½ä¸ä¼šå‘ç”Ÿã€‚
+		ä»???¶è????¹ä¸­?????¤è¯¥?????¹ã??å¦????ä¸?ä¼???? cleanup ?????°æ?????ä¼???? `true`ï¼????ä¹?è¿?ä¸ªè????¹ä????????ç»?å®????äº?ä»¶ã??action ??½ä??è¢«å????¤ã??<br/>
+		???æ­¤å»ºè®®è????¨è??ä¸? API ??¶æ?»æ?¯ä????? `false` ?????°ã??<br/>
+		å¦????è¿?ä¸ªè????¹æ?¯ä??ä¸ªå­¤?????¹ï?????ä¹?ä»?ä¹???½ä??ä¼??????????
 		@param cleanup true if all actions and callbacks on this node should be removed, false otherwise.
 		
 		@example 
@@ -10334,8 +10334,8 @@ declare namespace cc {
 		If a class wants to extend the 'removeChild' behavior it only needs <br/>
 		to override this method.
 		!#zh
-		ç§»é™¤èŠ‚ç‚¹ä¸­æŒ‡å®šçš„å­èŠ‚ç‚¹ï¼Œæ˜¯å¦éœ€è¦æ¸…ç†æ‰€æœ‰æ­£åœ¨è¿è¡Œçš„è¡Œä¸ºå–å†³äº cleanup å‚æ•°ã€‚<br/>
-		å¦‚æœ cleanup å‚æ•°ä¸ä¼ å…¥ï¼Œé»˜è®¤ä¸º true è¡¨ç¤ºæ¸…ç†ã€‚<br/>
+		ç§»é?¤è????¹ä¸­???å®????å­??????¹ï????¯å?¦é??è¦?æ¸??????????æ­???¨è??è¡????è¡?ä¸ºå????³ä?? cleanup ?????°ã??<br/>
+		å¦???? cleanup ?????°ä??ä¼???¥ï??é»?è®¤ä¸º true è¡¨ç¤ºæ¸???????<br/>
 		@param child The child node which will be removed.
 		@param cleanup true if all running actions and callbacks on the child node will be cleanup, false otherwise.
 		
@@ -10351,8 +10351,8 @@ declare namespace cc {
 		Removes all children from the container and do a cleanup all running actions depending on the cleanup parameter. <br/>
 		If the cleanup parameter is not passed, it will force a cleanup.
 		!#zh
-		ç§»é™¤èŠ‚ç‚¹æ‰€æœ‰çš„å­èŠ‚ç‚¹ï¼Œæ˜¯å¦éœ€è¦æ¸…ç†æ‰€æœ‰æ­£åœ¨è¿è¡Œçš„è¡Œä¸ºå–å†³äº cleanup å‚æ•°ã€‚<br/>
-		å¦‚æœ cleanup å‚æ•°ä¸ä¼ å…¥ï¼Œé»˜è®¤ä¸º true è¡¨ç¤ºæ¸…ç†ã€‚
+		ç§»é?¤è????¹æ????????å­??????¹ï????¯å?¦é??è¦?æ¸??????????æ­???¨è??è¡????è¡?ä¸ºå????³ä?? cleanup ?????°ã??<br/>
+		å¦???? cleanup ?????°ä??ä¼???¥ï??é»?è®¤ä¸º true è¡¨ç¤ºæ¸???????
 		@param cleanup true if all running actions on all children nodes should be cleanup, false otherwise.
 		
 		@example 
@@ -10364,7 +10364,7 @@ declare namespace cc {
 		removeAllChildren(cleanup?: boolean): void;		
 		/**
 		!#en Is this node a child of the given node?
-		!#zh æ˜¯å¦æ˜¯æŒ‡å®šèŠ‚ç‚¹çš„å­èŠ‚ç‚¹ï¼Ÿ
+		!#zh ??¯å?¦æ?¯æ??å®??????¹ç??å­??????¹ï??
 		@param parent parent
 		
 		@example 
@@ -10378,8 +10378,8 @@ declare namespace cc {
 		Returns the component of supplied type if the node has one attached, null if it doesn't.<br/>
 		You can also get component in the node by passing in the name of the script.
 		!#zh
-		è·å–èŠ‚ç‚¹ä¸ŠæŒ‡å®šç±»å‹çš„ç»„ä»¶ï¼Œå¦‚æœèŠ‚ç‚¹æœ‰é™„åŠ æŒ‡å®šç±»å‹çš„ç»„ä»¶ï¼Œåˆ™è¿”å›ï¼Œå¦‚æœæ²¡æœ‰åˆ™ä¸ºç©ºã€‚<br/>
-		ä¼ å…¥å‚æ•°ä¹Ÿå¯ä»¥æ˜¯è„šæœ¬çš„åç§°ã€‚
+		??·å???????¹ä?????å®?ç±»å?????ç»?ä»¶ï??å¦?????????¹æ???????????å®?ç±»å?????ç»?ä»¶ï?????è¿????ï¼?å¦????æ²¡æ?????ä¸ºç©º???<br/>
+		ä¼???¥å????°ä????¯ä»¥??¯è????¬ç?????ç§°ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -10394,7 +10394,7 @@ declare namespace cc {
 		getComponent(className: string): any;		
 		/**
 		!#en Returns all components of supplied type in the node.
-		!#zh è¿”å›èŠ‚ç‚¹ä¸ŠæŒ‡å®šç±»å‹çš„æ‰€æœ‰ç»„ä»¶ã€‚
+		!#zh è¿?????????¹ä?????å®?ç±»å???????????ç»?ä»¶ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -10407,7 +10407,7 @@ declare namespace cc {
 		getComponents(className: string): any[];		
 		/**
 		!#en Returns the component of supplied type in any of its children using depth first search.
-		!#zh é€’å½’æŸ¥æ‰¾æ‰€æœ‰å­èŠ‚ç‚¹ä¸­ç¬¬ä¸€ä¸ªåŒ¹é…æŒ‡å®šç±»å‹çš„ç»„ä»¶ã€‚
+		!#zh ???å½???¥æ?¾æ?????å­??????¹ä¸­ç¬¬ä??ä¸ªå?¹é?????å®?ç±»å?????ç»?ä»¶ã??
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -10420,7 +10420,7 @@ declare namespace cc {
 		getComponentInChildren(className: string): any;		
 		/**
 		!#en Returns all components of supplied type in self or any of its children.
-		!#zh é€’å½’æŸ¥æ‰¾è‡ªèº«æˆ–æ‰€æœ‰å­èŠ‚ç‚¹ä¸­æŒ‡å®šç±»å‹çš„ç»„ä»¶
+		!#zh ???å½???¥æ?¾è?ªèº«?????????å­??????¹ä¸­???å®?ç±»å?????ç»?ä»?
 		@param typeOrClassName typeOrClassName
 		
 		@example 
@@ -10433,7 +10433,7 @@ declare namespace cc {
 		getComponentsInChildren(className: string): any[];		
 		/**
 		!#en Adds a component class to the node. You can also add component to node by passing in the name of the script.
-		!#zh å‘èŠ‚ç‚¹æ·»åŠ ä¸€ä¸ªæŒ‡å®šç±»å‹çš„ç»„ä»¶ç±»ï¼Œä½ è¿˜å¯ä»¥é€šè¿‡ä¼ å…¥è„šæœ¬çš„åç§°æ¥æ·»åŠ ç»„ä»¶ã€‚
+		!#zh ????????¹æ·»???ä¸?ä¸ªæ??å®?ç±»å?????ç»?ä»¶ç±»ï¼?ä½?è¿???¯ä»¥???è¿?ä¼???¥è????¬ç?????ç§°æ?¥æ·»???ç»?ä»¶ã??
 		@param typeOrClassName The constructor or the class name of the component to add
 		
 		@example 
@@ -10449,8 +10449,8 @@ declare namespace cc {
 		Removes a component identified by the given name or removes the component object given.
 		You can also use component.destroy() if you already have the reference.
 		!#zh
-		åˆ é™¤èŠ‚ç‚¹ä¸Šçš„æŒ‡å®šç»„ä»¶ï¼Œä¼ å…¥å‚æ•°å¯ä»¥æ˜¯ä¸€ä¸ªç»„ä»¶æ„é€ å‡½æ•°æˆ–ç»„ä»¶åï¼Œä¹Ÿå¯ä»¥æ˜¯å·²ç»è·å¾—çš„ç»„ä»¶å¼•ç”¨ã€‚
-		å¦‚æœä½ å·²ç»è·å¾—ç»„ä»¶å¼•ç”¨ï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥è°ƒç”¨ component.destroy()
+		?????¤è????¹ä????????å®?ç»?ä»¶ï??ä¼???¥å????°å?¯ä»¥??¯ä??ä¸ªç??ä»¶æ???????½æ?°æ??ç»?ä»¶å??ï¼?ä¹???¯ä»¥??¯å·²ç»???·å?????ç»?ä»¶å????¨ã??
+		å¦????ä½?å·²ç????·å??ç»?ä»¶å????¨ï??ä½?ä¹???¯ä»¥??´æ?¥è????? component.destroy()
 		@param component The need remove component.
 		
 		@example 
@@ -10466,8 +10466,8 @@ declare namespace cc {
 		Destroy all children from the node, and release all their own references to other objects.<br/>
 		Actual destruct operation will delayed until before rendering.
 		!#zh
-		é”€æ¯æ‰€æœ‰å­èŠ‚ç‚¹ï¼Œå¹¶é‡Šæ”¾æ‰€æœ‰å®ƒä»¬å¯¹å…¶å®ƒå¯¹è±¡çš„å¼•ç”¨ã€‚<br/>
-		å®é™…é”€æ¯æ“ä½œä¼šå»¶è¿Ÿåˆ°å½“å‰å¸§æ¸²æŸ“å‰æ‰§è¡Œã€‚
+		???æ¯???????å­??????¹ï??å¹¶é????¾æ?????å®?ä»¬å¯¹??¶å??å¯¹è±¡???å¼???¨ã??<br/>
+		å®???????æ¯????ä½?ä¼?å»¶è????°å?????å¸§æ¸²????????§è?????
 		
 		@example 
 		```js
@@ -10477,7 +10477,7 @@ declare namespace cc {
 		destroyAllChildren(): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -10486,7 +10486,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -10505,7 +10505,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -10528,9 +10528,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -10539,7 +10539,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -10557,7 +10557,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -10565,29 +10565,29 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en
 	Helper class for setting material blend function.
 	!#zh
-	è®¾ç½®æè´¨æ··åˆæ¨¡å¼çš„è¾…åŠ©ç±»ã€‚ */
+	è®¾ç½®???è´¨æ··???æ¨¡å?????è¾???©ç±»??? */
 	export class BlendFunc {		
 		/** !#en specify the source Blend Factor, this will generate a custom material object, please pay attention to the memory cost.
-		!#zh æŒ‡å®šåŸå›¾çš„æ··åˆæ¨¡å¼ï¼Œè¿™ä¼šå…‹éš†ä¸€ä¸ªæ–°çš„æè´¨å¯¹è±¡ï¼Œæ³¨æ„è¿™å¸¦æ¥çš„å¼€é”€ */
+		!#zh ???å®??????¾ç??æ··å??æ¨¡å??ï¼?è¿?ä¼???????ä¸?ä¸ªæ?°ç?????è´¨å¯¹è±¡ï??æ³¨æ??è¿?å¸¦æ?¥ç??å¼???? */
 		srcBlendFactor: macro.BlendFactor;		
 		/** !#en specify the destination Blend Factor.
-		!#zh æŒ‡å®šç›®æ ‡çš„æ··åˆæ¨¡å¼ */
+		!#zh ???å®???®æ?????æ··å??æ¨¡å?? */
 		dstBlendFactor: macro.BlendFactor;	
 	}	
 	/** An internal helper class for switching render component's material between normal sprite material and gray sprite material. */
 	export class GraySpriteState {		
 		/** !#en The normal material.
-		!#zh æ­£å¸¸çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh æ­?å¸¸ç?¶æ????????è´¨ã?? */
 		normalMaterial: Material;		
 		/** !#en The gray material.
-		!#zh ç½®ç°çŠ¶æ€çš„æè´¨ã€‚ */
+		!#zh ç½®ç?°ç?¶æ????????è´¨ã?? */
 		grayMaterial: Material;	
 	}	
 	/** misc utilities */
@@ -10595,10 +10595,10 @@ declare namespace cc {
 		/**
 		!#en Clamp a value between from and to.
 		!#zh
-		é™å®šæµ®ç‚¹æ•°çš„æœ€å¤§æœ€å°å€¼ã€‚<br/>
-		æ•°å€¼å¤§äº max_inclusive åˆ™è¿”å› max_inclusiveã€‚<br/>
-		æ•°å€¼å°äº min_inclusive åˆ™è¿”å› min_inclusiveã€‚<br/>
-		å¦åˆ™è¿”å›è‡ªèº«ã€‚
+		???å®?æµ®ç?¹æ?°ç?????å¤§æ??å°???¼ã??<br/>
+		??°å?¼å¤§äº? max_inclusive ???è¿???? max_inclusive???<br/>
+		??°å?¼å??äº? min_inclusive ???è¿???? min_inclusive???<br/>
+		??¦å??è¿??????ªèº«???
 		@param value value
 		@param min_inclusive min_inclusive
 		@param max_inclusive max_inclusive
@@ -10613,7 +10613,7 @@ declare namespace cc {
 		static clampf(value: number, min_inclusive: number, max_inclusive: number): number;		
 		/**
 		!#en Clamp a value between 0 and 1.
-		!#zh é™å®šæµ®ç‚¹æ•°çš„å–å€¼èŒƒå›´ä¸º 0 ~ 1 ä¹‹é—´ã€‚
+		!#zh ???å®?æµ®ç?¹æ?°ç???????¼è????´ä¸º 0 ~ 1 ä¹???´ã??
 		@param value value
 		
 		@example 
@@ -10653,20 +10653,20 @@ declare namespace cc {
 	}	
 	/** !#en The renderer object which provide access to render system APIs,
 	detailed APIs will be available progressively.
-	!#zh æä¾›åŸºç¡€æ¸²æŸ“æ¥å£çš„æ¸²æŸ“å™¨å¯¹è±¡ï¼Œæ¸²æŸ“å±‚çš„åŸºç¡€æ¥å£å°†é€æ­¥å¼€æ”¾ç»™ç”¨æˆ· */
+	!#zh ???ä¾???ºç??æ¸²æ????¥å?????æ¸²æ????¨å¯¹è±¡ï??æ¸²æ??å±??????ºç????¥å??å°????æ­¥å????¾ç????¨æ?? */
 	export class renderer {		
 		/** !#en The render engine is available only after cc.game.EVENT_ENGINE_INITED event.<br/>
 		Normally it will be inited as the webgl render engine, but in wechat open context domain,
 		it will be inited as the canvas render engine. Canvas render engine is no longer available for other use case since v2.0.
-		!#zh åŸºç¡€æ¸²æŸ“å¼•æ“å¯¹è±¡åªåœ¨ cc.game.EVENT_ENGINE_INITED äº‹ä»¶è§¦å‘åæ‰å¯è·å–ã€‚<br/>
-		å¤§å¤šæ•°æƒ…å†µä¸‹ï¼Œå®ƒéƒ½ä¼šæ˜¯ WebGL æ¸²æŸ“å¼•æ“å®ä¾‹ï¼Œä½†æ˜¯åœ¨å¾®ä¿¡å¼€æ”¾æ•°æ®åŸŸå½“ä¸­ï¼Œå®ƒä¼šæ˜¯ Canvas æ¸²æŸ“å¼•æ“å®ä¾‹ã€‚è¯·æ³¨æ„ï¼Œä» 2.0 å¼€å§‹ï¼Œæˆ‘ä»¬åœ¨å…¶ä»–å¹³å°å’Œç¯å¢ƒä¸‹éƒ½åºŸå¼ƒäº† Canvas æ¸²æŸ“å™¨ã€‚ */
+		!#zh ??ºç??æ¸²æ??å¼????å¯¹è±¡??ªå?? cc.game.EVENT_ENGINE_INITED äº?ä»¶è§¦???????????¯è?·å?????<br/>
+		å¤§å????°æ????µä??ï¼?å®???½ä????? WebGL æ¸²æ??å¼????å®?ä¾?ï¼?ä½???¯å?¨å¾®ä¿¡å????¾æ?°æ?®å??å½?ä¸­ï??å®?ä¼???? Canvas æ¸²æ??å¼????å®?ä¾????è¯·æ³¨???ï¼?ä»? 2.0 å¼?å§?ï¼????ä»¬å?¨å?¶ä??å¹³å?°å????¯å??ä¸???½å??å¼?äº? Canvas æ¸²æ????¨ã?? */
 		static renderEngine: any;		
 		/** !#en The total draw call count in last rendered frame.
-		!#zh ä¸Šä¸€æ¬¡æ¸²æŸ“å¸§æ‰€æäº¤çš„æ¸²æŸ“æ‰¹æ¬¡æ€»æ•°ã€‚ */
+		!#zh ä¸?ä¸?æ¬¡æ¸²???å¸§æ?????äº¤ç??æ¸²æ????¹æ¬¡??»æ?°ã?? */
 		static drawCalls: number;	
 	}	
 	/** !#en the device accelerometer reports values for each axis in units of g-force.
-	!#zh è®¾å¤‡é‡åŠ›ä¼ æ„Ÿå™¨ä¼ é€’çš„å„ä¸ªè½´çš„æ•°æ®ã€‚ */
+	!#zh è®¾å????????ä¼??????¨ä???????????ä¸ªè½´?????°æ?®ã?? */
 	export class constructor {		
 		/**
 		whether enable accelerometer event
@@ -10688,7 +10688,7 @@ declare namespace cc {
 	/** The base class of most of all the objects in Fireball. */
 	export class Object {		
 		/** !#en The name of the object.
-		!#zh è¯¥å¯¹è±¡çš„åç§°ã€‚ */
+		!#zh è¯¥å¯¹è±¡ç?????ç§°ã?? */
 		name: string;		
 		/** !#en
 		Indicates whether the object is not yet destroyed. (It will not be available after being destroyed)<br>
@@ -10698,8 +10698,8 @@ declare namespace cc {
 		but this is often caused by a particular logical requirements, which is not normally required.
 		
 		!#zh
-		è¡¨ç¤ºè¯¥å¯¹è±¡æ˜¯å¦å¯ç”¨ï¼ˆè¢« destroy åå°†ä¸å¯ç”¨ï¼‰ã€‚<br>
-		å½“ä¸€ä¸ªå¯¹è±¡çš„ `destroy` è°ƒç”¨ä»¥åï¼Œä¼šåœ¨è¿™ä¸€å¸§ç»“æŸåæ‰çœŸæ­£é”€æ¯ã€‚å› æ­¤ä»ä¸‹ä¸€å¸§å¼€å§‹ `isValid` å°±ä¼šè¿”å› falseï¼Œè€Œå½“å‰å¸§å†… `isValid` ä»ç„¶ä¼šæ˜¯ trueã€‚å¦‚æœå¸Œæœ›åˆ¤æ–­å½“å‰å¸§æ˜¯å¦è°ƒç”¨è¿‡ `destroy`ï¼Œè¯·ä½¿ç”¨ `cc.isValid(obj, true)`ï¼Œä¸è¿‡è¿™å¾€å¾€æ˜¯ç‰¹æ®Šçš„ä¸šåŠ¡éœ€æ±‚å¼•èµ·çš„ï¼Œé€šå¸¸æƒ…å†µä¸‹ä¸éœ€è¦è¿™æ ·ã€‚ */
+		è¡¨ç¤ºè¯¥å¯¹è±¡æ?¯å?¦å?¯ç?¨ï??è¢? destroy ???å°?ä¸???¯ç?¨ï?????<br>
+		å½?ä¸?ä¸ªå¯¹è±¡ç?? `destroy` è°???¨ä»¥???ï¼?ä¼???¨è??ä¸?å¸§ç??????????????æ­????æ¯???????æ­¤ä??ä¸?ä¸?å¸§å??å§? `isValid` å°±ä??è¿???? falseï¼????å½????å¸§å?? `isValid` ä»???¶ä????? true???å¦????å¸??????¤æ?­å?????å¸§æ?¯å?¦è????¨è?? `destroy`ï¼?è¯·ä½¿??? `cc.isValid(obj, true)`ï¼?ä¸?è¿?è¿?å¾?å¾???¯ç?¹æ?????ä¸???¡é??æ±?å¼?èµ·ç??ï¼????å¸¸æ????µä??ä¸????è¦?è¿???·ã?? */
 		isValid: boolean;		
 		/**
 		!#en
@@ -10708,9 +10708,9 @@ declare namespace cc {
 		From the next frame, this object is not usable anymore.
 		You can use `cc.isValid(obj)` to check whether the object is destroyed before accessing it.
 		!#zh
-		é”€æ¯è¯¥å¯¹è±¡ï¼Œå¹¶é‡Šæ”¾æ‰€æœ‰å®ƒå¯¹å…¶å®ƒå¯¹è±¡çš„å¼•ç”¨ã€‚<br/>
-		å®é™…é”€æ¯æ“ä½œä¼šå»¶è¿Ÿåˆ°å½“å‰å¸§æ¸²æŸ“å‰æ‰§è¡Œã€‚ä»ä¸‹ä¸€å¸§å¼€å§‹ï¼Œè¯¥å¯¹è±¡å°†ä¸å†å¯ç”¨ã€‚
-		æ‚¨å¯ä»¥åœ¨è®¿é—®å¯¹è±¡ä¹‹å‰ä½¿ç”¨ `cc.isValid(obj)` æ¥æ£€æŸ¥å¯¹è±¡æ˜¯å¦å·²è¢«é”€æ¯ã€‚
+		???æ¯?è¯¥å¯¹è±¡ï??å¹¶é????¾æ?????å®?å¯¹å?¶å??å¯¹è±¡???å¼???¨ã??<br/>
+		å®???????æ¯????ä½?ä¼?å»¶è????°å?????å¸§æ¸²????????§è?????ä»?ä¸?ä¸?å¸§å??å§?ï¼?è¯¥å¯¹è±¡å??ä¸??????¯ç?¨ã??
+		??¨å?¯ä»¥??¨è®¿??®å¯¹è±¡ä?????ä½¿ç?? `cc.isValid(obj)` ??¥æ????¥å¯¹è±¡æ?¯å?¦å·²è¢«é??æ¯????
 		
 		@example 
 		```js
@@ -10856,7 +10856,7 @@ declare namespace cc {
 		Returns the safe area of the screen (in design resolution). If the screen is not notched, the visibleRect will be returned by default.
 		Currently supports Android, iOS and WeChat Mini Game platform.
 		!#zh
-		è¿”å›æ‰‹æœºå±å¹•å®‰å…¨åŒºåŸŸï¼ˆè®¾è®¡åˆ†è¾¨ç‡ä¸ºå•ä½ï¼‰ï¼Œå¦‚æœä¸æ˜¯å¼‚å½¢å±å°†é»˜è®¤è¿”å› visibleRectã€‚ç›®å‰æ”¯æŒå®‰å“ã€iOS åŸç”Ÿå¹³å°å’Œå¾®ä¿¡å°æ¸¸æˆå¹³å°ã€‚ 
+		è¿?????????ºå??å¹?å®???¨å?ºå??ï¼?è®¾è®¡???è¾¨ç??ä¸ºå??ä½?ï¼?ï¼?å¦????ä¸???¯å??å½¢å??å°?é»?è®¤è????? visibleRect?????®å????¯æ??å®???????iOS ??????å¹³å?°å??å¾®ä¿¡å°?æ¸¸æ??å¹³å?°ã?? 
 		*/
 		static getSafeAreaRect(): Rect;		
 		/** Indicate whether system is mobile system */
@@ -10889,14 +10889,14 @@ declare namespace cc {
 		!#en
 		Get the network type of current device, return cc.sys.NetworkType.LAN if failure.
 		!#zh
-		è·å–å½“å‰è®¾å¤‡çš„ç½‘ç»œç±»å‹, å¦‚æœç½‘ç»œç±»å‹æ— æ³•è·å–ï¼Œé»˜è®¤å°†è¿”å› cc.sys.NetworkType.LAN 
+		??·å??å½????è®¾å?????ç½?ç»?ç±»å??, å¦????ç½?ç»?ç±»å?????æ³???·å??ï¼?é»?è®¤å??è¿???? cc.sys.NetworkType.LAN 
 		*/
 		static getNetworkType(): sys.NetworkType;		
 		/**
 		!#en
 		Get the battery level of current device, return 1.0 if failure.
 		!#zh
-		è·å–å½“å‰è®¾å¤‡çš„ç”µæ± ç”µé‡ï¼Œå¦‚æœç”µé‡æ— æ³•è·å–ï¼Œé»˜è®¤å°†è¿”å› 1 
+		??·å??å½????è®¾å???????µæ????µé??ï¼?å¦??????µé?????æ³???·å??ï¼?é»?è®¤å??è¿???? 1 
 		*/
 		static getBatteryLevel(): number;		
 		/**
@@ -10976,22 +10976,22 @@ declare namespace cc {
 		  3. cc.macro.DENSITYDPI_MEDIUM, value is "medium-dpi" (browser's default value)            <br/>
 		  4. cc.macro.DENSITYDPI_LOW, value is "low-dpi"                                            <br/>
 		  5. Custom value, e.g: "480"                                                         <br/>
-		!#zh è®¾ç½®ç›®æ ‡å†…å®¹çš„æ¯è‹±å¯¸åƒç´ ç‚¹å¯†åº¦ã€‚
+		!#zh è®¾ç½®??®æ?????å®¹ç??æ¯???±å¯¸???ç´???¹å??åº¦ã??
 		@param densityDPI densityDPI 
 		*/
 		setTargetDensityDPI(densityDPI: string): void;		
 		/**
 		!#en
 		Returns the current target-densitydpi value of cc.view.
-		!#zh è·å–ç›®æ ‡å†…å®¹çš„æ¯è‹±å¯¸åƒç´ ç‚¹å¯†åº¦ã€‚ 
+		!#zh ??·å????®æ?????å®¹ç??æ¯???±å¯¸???ç´???¹å??åº¦ã?? 
 		*/
 		getTargetDensityDPI(): string;		
 		/**
 		!#en
 		Sets whether resize canvas automatically when browser's size changed.<br/>
 		Useful only on web.
-		!#zh è®¾ç½®å½“å‘ç°æµè§ˆå™¨çš„å°ºå¯¸æ”¹å˜æ—¶ï¼Œæ˜¯å¦è‡ªåŠ¨è°ƒæ•´ canvas å°ºå¯¸å¤§å°ã€‚
-		ä»…åœ¨ Web æ¨¡å¼ä¸‹æœ‰æ•ˆã€‚
+		!#zh è®¾ç½®å½??????°æ??è§???¨ç??å°ºå¯¸??¹å????¶ï????¯å?¦è?ªå?¨è????? canvas å°ºå¯¸å¤§å?????
+		ä»???? Web æ¨¡å??ä¸??????????
 		@param enabled Whether enable automatic resize with browser's resize event 
 		*/
 		resizeWithBrowserSize(enabled: boolean): void;		
@@ -11001,10 +11001,10 @@ declare namespace cc {
 		this callback will be invoked before applying resolution policy, <br/>
 		so you can do any additional modifications within the callback.<br/>
 		Useful only on web.
-		!#zh è®¾ç½® cc.view è°ƒæ•´è§†çª—å°ºå¯¸è¡Œä¸ºçš„å›è°ƒå‡½æ•°ï¼Œ
-		è¿™ä¸ªå›è°ƒå‡½æ•°ä¼šåœ¨åº”ç”¨é€‚é…æ¨¡å¼ä¹‹å‰è¢«è°ƒç”¨ï¼Œ
-		å› æ­¤ä½ å¯ä»¥åœ¨è¿™ä¸ªå›è°ƒå‡½æ•°å†…æ·»åŠ ä»»æ„é™„åŠ æ”¹å˜ï¼Œ
-		ä»…åœ¨ Web å¹³å°ä¸‹æœ‰æ•ˆã€‚
+		!#zh è®¾ç½® cc.view è°???´è??çª?å°ºå¯¸è¡?ä¸ºç?????è°???½æ?°ï??
+		è¿?ä¸ªå??è°???½æ?°ä????¨å????¨é?????æ¨¡å??ä¹????è¢«è????¨ï??
+		???æ­¤ä????¯ä»¥??¨è??ä¸ªå??è°???½æ?°å??æ·»å??ä»»æ??????????¹å??ï¼?
+		ä»???? Web å¹³å?°ä???????????
 		@param callback The callback function 
 		*/
 		setResizeCallback(callback: Function|void): void;		
@@ -11015,10 +11015,10 @@ declare namespace cc {
 		cc.view will automatically rotate the game canvas using CSS.
 		Note that this function doesn't have any effect in native,
 		in native, you need to set the application orientation in native project settings
-		!#zh è®¾ç½®æ¸¸æˆå±å¹•æœå‘ï¼Œå®ƒèƒ½å¤Ÿæ˜¯æ¨ªç‰ˆï¼Œç«–ç‰ˆæˆ–è‡ªåŠ¨ã€‚
-		å½“è®¾ç½®ä¸ºæ¨ªç‰ˆæˆ–ç«–ç‰ˆï¼Œå¹¶ä¸”å±å¹•çš„å®½é«˜æ¯”ä¾‹ä¸åŒ¹é…æ—¶ï¼Œ
-		cc.view ä¼šè‡ªåŠ¨ç”¨ CSS æ—‹è½¬æ¸¸æˆåœºæ™¯çš„ canvasï¼Œ
-		è¿™ä¸ªæ–¹æ³•ä¸ä¼šå¯¹ native éƒ¨åˆ†äº§ç”Ÿä»»ä½•å½±å“ï¼Œå¯¹äº native è€Œè¨€ï¼Œä½ éœ€è¦åœ¨åº”ç”¨è®¾ç½®ä¸­çš„è®¾ç½®æ’ç‰ˆã€‚
+		!#zh è®¾ç½®æ¸¸æ??å±?å¹???????ï¼?å®???½å????¯æ¨ª???ï¼?ç«?????????ªå?¨ã??
+		å½?è®¾ç½®ä¸ºæ¨ª??????ç«????ï¼?å¹¶ä??å±?å¹????å®½é??æ¯?ä¾?ä¸???¹é????¶ï??
+		cc.view ä¼???ªå?¨ç?? CSS ???è½¬æ¸¸?????ºæ?¯ç?? canvasï¼?
+		è¿?ä¸ªæ?¹æ??ä¸?ä¼?å¯? native ??¨å??äº§ç??ä»»ä??å½±å??ï¼?å¯¹ä?? native ???è¨?ï¼?ä½????è¦???¨å????¨è®¾ç½®ä¸­???è®¾ç½®?????????
 		@param orientation Possible values: cc.macro.ORIENTATION_LANDSCAPE | cc.macro.ORIENTATION_PORTRAIT | cc.macro.ORIENTATION_AUTO 
 		*/
 		setOrientation(orientation: number): void;		
@@ -11028,10 +11028,10 @@ declare namespace cc {
 		It's enabled by default, we strongly suggest you not to disable it.<br/>
 		And even when it's enabled, you can still set your own "viewport" meta, it won't be overridden<br/>
 		Only useful on web
-		!#zh è®¾ç½®å¼•æ“æ˜¯å¦è°ƒæ•´ viewport meta æ¥é…åˆå±å¹•é€‚é…ã€‚
-		é»˜è®¤è®¾ç½®ä¸ºå¯åŠ¨ï¼Œæˆ‘ä»¬å¼ºçƒˆå»ºè®®ä½ ä¸è¦å°†å®ƒè®¾ç½®ä¸ºå…³é—­ã€‚
-		å³ä½¿å½“å®ƒå¯åŠ¨æ—¶ï¼Œä½ ä»ç„¶èƒ½å¤Ÿè®¾ç½®ä½ çš„ viewport metaï¼Œå®ƒä¸ä¼šè¢«è¦†ç›–ã€‚
-		ä»…åœ¨ Web æ¨¡å¼ä¸‹æœ‰æ•ˆ
+		!#zh è®¾ç½®å¼??????¯å?¦è????? viewport meta ??¥é?????å±?å¹??????????
+		é»?è®¤è®¾ç½®ä¸º??¯å?¨ï?????ä»¬å¼º???å»ºè®®ä½?ä¸?è¦?å°?å®?è®¾ç½®ä¸ºå?³é?­ã??
+		??³ä½¿å½?å®???¯å?¨æ?¶ï??ä½?ä»???¶è?½å??è®¾ç½®ä½???? viewport metaï¼?å®?ä¸?ä¼?è¢«è????????
+		ä»???? Web æ¨¡å??ä¸???????
 		@param enabled Enable automatic modification to "viewport" meta 
 		*/
 		adjustViewportMeta(enabled: boolean): void;		
@@ -11040,9 +11040,9 @@ declare namespace cc {
 		Retina support is enabled by default for Apple device but disabled for other devices,<br/>
 		it takes effect only when you called setDesignResolutionPolicy<br/>
 		Only useful on web
-		!#zh å¯¹äº Apple è¿™ç§æ”¯æŒ Retina æ˜¾ç¤ºçš„è®¾å¤‡ä¸Šé»˜è®¤è¿›è¡Œä¼˜åŒ–è€Œå…¶ä»–ç±»å‹è®¾å¤‡é»˜è®¤ä¸è¿›è¡Œä¼˜åŒ–ï¼Œ
-		å®ƒä»…ä¼šåœ¨ä½ è°ƒç”¨ setDesignResolutionPolicy æ–¹æ³•æ—¶æœ‰å½±å“ã€‚
-		ä»…åœ¨ Web æ¨¡å¼ä¸‹æœ‰æ•ˆã€‚
+		!#zh å¯¹ä?? Apple è¿?ç§???¯æ?? Retina ??¾ç¤º???è®¾å??ä¸?é»?è®¤è??è¡?ä¼?????????¶ä??ç±»å??è®¾å??é»?è®¤ä??è¿?è¡?ä¼????ï¼?
+		å®?ä»?ä¼???¨ä??è°???? setDesignResolutionPolicy ??¹æ????¶æ??å½±å?????
+		ä»???? Web æ¨¡å??ä¸??????????
 		@param enabled Enable or disable retina display 
 		*/
 		enableRetina(enabled: boolean): void;		
@@ -11050,19 +11050,19 @@ declare namespace cc {
 		!#en
 		Check whether retina display is enabled.<br/>
 		Only useful on web
-		!#zh æ£€æŸ¥æ˜¯å¦å¯¹ Retina æ˜¾ç¤ºè®¾å¤‡è¿›è¡Œä¼˜åŒ–ã€‚
-		ä»…åœ¨ Web æ¨¡å¼ä¸‹æœ‰æ•ˆã€‚ 
+		!#zh æ£???¥æ?¯å?¦å¯¹ Retina ??¾ç¤ºè®¾å??è¿?è¡?ä¼???????
+		ä»???? Web æ¨¡å??ä¸?????????? 
 		*/
 		isRetinaEnabled(): boolean;		
 		/**
 		!#en Whether to Enable on anti-alias
-		!#zh æ§åˆ¶æŠ—é”¯é½¿æ˜¯å¦å¼€å¯
+		!#zh ??§å?¶æ????¯é½¿??¯å?¦å?????
 		@param enabled Enable or not anti-alias 
 		*/
 		enableAntiAlias(enabled: boolean): void;		
 		/**
 		!#en Returns whether the current enable on anti-alias
-		!#zh è¿”å›å½“å‰æ˜¯å¦æŠ—é”¯é½¿ 
+		!#zh è¿????å½??????¯å?¦æ????¯é½¿ 
 		*/
 		isAntiAliasEnabled(): boolean;		
 		/**
@@ -11070,8 +11070,8 @@ declare namespace cc {
 		If enabled, the application will try automatically to enter full screen mode on mobile devices<br/>
 		You can pass true as parameter to enable it and disable it by passing false.<br/>
 		Only useful on web
-		!#zh å¯åŠ¨æ—¶ï¼Œç§»åŠ¨ç«¯æ¸¸æˆä¼šåœ¨ç§»åŠ¨ç«¯è‡ªåŠ¨å°è¯•è¿›å…¥å…¨å±æ¨¡å¼ã€‚
-		ä½ èƒ½å¤Ÿä¼ å…¥ true ä¸ºå‚æ•°å»å¯åŠ¨å®ƒï¼Œç”¨ false å‚æ•°æ¥å…³é—­å®ƒã€‚
+		!#zh ??¯å?¨æ?¶ï??ç§»å?¨ç«¯æ¸¸æ??ä¼???¨ç§»??¨ç«¯??ªå?¨å??è¯?è¿???¥å?¨å??æ¨¡å?????
+		ä½???½å??ä¼???? true ä¸ºå????°å?»å?¯å?¨å??ï¼???? false ?????°æ?¥å?³é?­å?????
 		@param enabled Enable or disable auto full screen on mobile devices 
 		*/
 		enableAutoFullScreen(enabled: boolean): void;		
@@ -11079,8 +11079,8 @@ declare namespace cc {
 		!#en
 		Check whether auto full screen is enabled.<br/>
 		Only useful on web
-		!#zh æ£€æŸ¥è‡ªåŠ¨è¿›å…¥å…¨å±æ¨¡å¼æ˜¯å¦å¯åŠ¨ã€‚
-		ä»…åœ¨ Web æ¨¡å¼ä¸‹æœ‰æ•ˆã€‚ 
+		!#zh æ£???¥è?ªå?¨è????¥å?¨å??æ¨¡å????¯å?¦å?¯å?¨ã??
+		ä»???? Web æ¨¡å??ä¸?????????? 
 		*/
 		isAutoFullScreenEnabled(): boolean;		
 		/**
@@ -11088,9 +11088,9 @@ declare namespace cc {
 		Returns the canvas size of the view.<br/>
 		On native platforms, it returns the screen size since the view is a fullscreen view.<br/>
 		On web, it returns the size of the canvas element.
-		!#zh è¿”å›è§†å›¾ä¸­ canvas çš„å°ºå¯¸ã€‚
-		åœ¨ native å¹³å°ä¸‹ï¼Œå®ƒè¿”å›å…¨å±è§†å›¾ä¸‹å±å¹•çš„å°ºå¯¸ã€‚
-		åœ¨ Web å¹³å°ä¸‹ï¼Œå®ƒè¿”å› canvas å…ƒç´ å°ºå¯¸ã€‚ 
+		!#zh è¿????è§???¾ä¸­ canvas ???å°ºå¯¸???
+		??? native å¹³å?°ä??ï¼?å®?è¿??????¨å??è§???¾ä??å±?å¹????å°ºå¯¸???
+		??? Web å¹³å?°ä??ï¼?å®?è¿???? canvas ???ç´?å°ºå¯¸??? 
 		*/
 		getCanvasSize(): Size;		
 		/**
@@ -11098,17 +11098,17 @@ declare namespace cc {
 		Returns the frame size of the view.<br/>
 		On native platforms, it returns the screen size since the view is a fullscreen view.<br/>
 		On web, it returns the size of the canvas's outer DOM element.
-		!#zh è¿”å›è§†å›¾ä¸­è¾¹æ¡†å°ºå¯¸ã€‚
-		åœ¨ native å¹³å°ä¸‹ï¼Œå®ƒè¿”å›å…¨å±è§†å›¾ä¸‹å±å¹•çš„å°ºå¯¸ã€‚
-		åœ¨ web å¹³å°ä¸‹ï¼Œå®ƒè¿”å› canvas å…ƒç´ çš„å¤–å±‚ DOM å…ƒç´ å°ºå¯¸ã€‚ 
+		!#zh è¿????è§???¾ä¸­è¾¹æ??å°ºå¯¸???
+		??? native å¹³å?°ä??ï¼?å®?è¿??????¨å??è§???¾ä??å±?å¹????å°ºå¯¸???
+		??? web å¹³å?°ä??ï¼?å®?è¿???? canvas ???ç´????å¤?å±? DOM ???ç´?å°ºå¯¸??? 
 		*/
 		getFrameSize(): Size;		
 		/**
 		!#en
 		On native, it sets the frame size of view.<br/>
 		On web, it sets the size of the canvas's outer DOM element.
-		!#zh åœ¨ native å¹³å°ä¸‹ï¼Œè®¾ç½®è§†å›¾æ¡†æ¶å°ºå¯¸ã€‚
-		åœ¨ web å¹³å°ä¸‹ï¼Œè®¾ç½® canvas å¤–å±‚ DOM å…ƒç´ å°ºå¯¸ã€‚
+		!#zh ??? native å¹³å?°ä??ï¼?è®¾ç½®è§???¾æ????¶å°ºå¯¸ã??
+		??? web å¹³å?°ä??ï¼?è®¾ç½® canvas å¤?å±? DOM ???ç´?å°ºå¯¸???
 		@param width width
 		@param height height 
 		*/
@@ -11116,37 +11116,37 @@ declare namespace cc {
 		/**
 		!#en
 		Returns the visible area size of the view port.
-		!#zh è¿”å›è§†å›¾çª—å£å¯è§åŒºåŸŸå°ºå¯¸ã€‚ 
+		!#zh è¿????è§???¾ç???????¯è????ºå??å°ºå¯¸??? 
 		*/
 		getVisibleSize(): Size;		
 		/**
 		!#en
 		Returns the visible area size of the view port.
-		!#zh è¿”å›è§†å›¾çª—å£å¯è§åŒºåŸŸåƒç´ å°ºå¯¸ã€‚ 
+		!#zh è¿????è§???¾ç???????¯è????ºå?????ç´?å°ºå¯¸??? 
 		*/
 		getVisibleSizeInPixel(): Size;		
 		/**
 		!#en
 		Returns the visible origin of the view port.
-		!#zh è¿”å›è§†å›¾çª—å£å¯è§åŒºåŸŸåŸç‚¹ã€‚ 
+		!#zh è¿????è§???¾ç???????¯è????ºå???????¹ã?? 
 		*/
 		getVisibleOrigin(): Vec2;		
 		/**
 		!#en
 		Returns the visible origin of the view port.
-		!#zh è¿”å›è§†å›¾çª—å£å¯è§åŒºåŸŸåƒç´ åŸç‚¹ã€‚ 
+		!#zh è¿????è§???¾ç???????¯è????ºå?????ç´??????¹ã?? 
 		*/
 		getVisibleOriginInPixel(): Vec2;		
 		/**
 		!#en
 		Returns the current resolution policy
-		!#zh è¿”å›å½“å‰åˆ†è¾¨ç‡æ–¹æ¡ˆ 
+		!#zh è¿????å½???????è¾¨ç????¹æ?? 
 		*/
 		getResolutionPolicy(): ResolutionPolicy;		
 		/**
 		!#en
 		Sets the current resolution policy
-		!#zh è®¾ç½®å½“å‰åˆ†è¾¨ç‡æ¨¡å¼
+		!#zh è®¾ç½®å½???????è¾¨ç??æ¨¡å??
 		@param resolutionPolicy resolutionPolicy 
 		*/
 		setResolutionPolicy(resolutionPolicy: ResolutionPolicy|number): void;		
@@ -11160,7 +11160,7 @@ declare namespace cc {
 		[4] ResolutionFixedHeight    Scale the content's height to screen's height and proportionally scale its width<br/>
 		[5] ResolutionFixedWidth     Scale the content's width to screen's width and proportionally scale its height<br/>
 		[cc.ResolutionPolicy]        [Web only feature] Custom resolution policy, constructed by cc.ResolutionPolicy<br/>
-		!#zh é€šè¿‡è®¾ç½®è®¾è®¡åˆ†è¾¨ç‡å’ŒåŒ¹é…æ¨¡å¼æ¥è¿›è¡Œæ¸¸æˆç”»é¢çš„å±å¹•é€‚é…ã€‚
+		!#zh ???è¿?è®¾ç½®è®¾è®¡???è¾¨ç???????¹é??æ¨¡å????¥è??è¡?æ¸¸æ????»é?¢ç??å±?å¹??????????
 		@param width Design resolution width.
 		@param height Design resolution height.
 		@param resolutionPolicy The resolution policy desired 
@@ -11170,8 +11170,8 @@ declare namespace cc {
 		!#en
 		Returns the designed size for the view.
 		Default resolution size is the same as 'getFrameSize'.
-		!#zh è¿”å›è§†å›¾çš„è®¾è®¡åˆ†è¾¨ç‡ã€‚
-		é»˜è®¤ä¸‹åˆ†è¾¨ç‡å°ºå¯¸åŒ `getFrameSize` æ–¹æ³•ç›¸åŒ 
+		!#zh è¿????è§???¾ç??è®¾è®¡???è¾¨ç?????
+		é»?è®¤ä?????è¾¨ç??å°ºå¯¸??? `getFrameSize` ??¹æ????¸å?? 
 		*/
 		getDesignResolutionSize(): Size;		
 		/**
@@ -11185,7 +11185,7 @@ declare namespace cc {
 		    1. Set viewport's width to the desired width in pixel
 		    2. Set body width to the exact pixel resolution
 		    3. The resolution policy will be reset with designed view size in points.
-		!#zh è®¾ç½®å®¹å™¨ï¼ˆcontainerï¼‰éœ€è¦çš„åƒç´ åˆ†è¾¨ç‡å¹¶ä¸”é€‚é…ç›¸åº”åˆ†è¾¨ç‡çš„æ¸¸æˆå†…å®¹ã€‚
+		!#zh è®¾ç½®å®¹å?¨ï??containerï¼????è¦???????ç´????è¾¨ç??å¹¶ä??????????¸å?????è¾¨ç?????æ¸¸æ?????å®¹ã??
 		@param width Design resolution width.
 		@param height Design resolution height.
 		@param resolutionPolicy The resolution policy desired 
@@ -11194,7 +11194,7 @@ declare namespace cc {
 		/**
 		!#en
 		Sets view port rectangle with points.
-		!#zh ç”¨è®¾è®¡åˆ†è¾¨ç‡ä¸‹çš„ç‚¹å°ºå¯¸æ¥è®¾ç½®è§†çª—ã€‚
+		!#zh ??¨è®¾è®¡å??è¾¨ç??ä¸??????¹å°ºå¯¸æ?¥è®¾ç½®è??çª????
 		@param x x
 		@param y y
 		@param w width
@@ -11204,7 +11204,7 @@ declare namespace cc {
 		/**
 		!#en
 		Sets Scissor rectangle with points.
-		!#zh ç”¨è®¾è®¡åˆ†è¾¨ç‡ä¸‹çš„ç‚¹çš„å°ºå¯¸æ¥è®¾ç½® scissor å‰ªè£åŒºåŸŸã€‚
+		!#zh ??¨è®¾è®¡å??è¾¨ç??ä¸??????¹ç??å°ºå¯¸??¥è®¾ç½? scissor ??ªè????ºå?????
 		@param x x
 		@param y y
 		@param w w
@@ -11214,43 +11214,43 @@ declare namespace cc {
 		/**
 		!#en
 		Returns whether GL_SCISSOR_TEST is enable
-		!#zh æ£€æŸ¥ scissor æ˜¯å¦ç”Ÿæ•ˆã€‚ 
+		!#zh æ£???? scissor ??¯å?¦ç???????? 
 		*/
 		isScissorEnabled(): boolean;		
 		/**
 		!#en
 		Returns the current scissor rectangle
-		!#zh è¿”å›å½“å‰çš„ scissor å‰ªè£åŒºåŸŸã€‚ 
+		!#zh è¿????å½??????? scissor ??ªè????ºå????? 
 		*/
 		getScissorRect(): Rect;		
 		/**
 		!#en
 		Returns the view port rectangle.
-		!#zh è¿”å›è§†çª—å‰ªè£åŒºåŸŸã€‚ 
+		!#zh è¿????è§?çª???ªè????ºå????? 
 		*/
 		getViewportRect(): Rect;		
 		/**
 		!#en
 		Returns scale factor of the horizontal direction (X axis).
-		!#zh è¿”å›æ¨ªè½´çš„ç¼©æ”¾æ¯”ï¼Œè¿™ä¸ªç¼©æ”¾æ¯”æ˜¯å°†ç”»å¸ƒåƒç´ åˆ†è¾¨ç‡æ”¾åˆ°è®¾è®¡åˆ†è¾¨ç‡çš„æ¯”ä¾‹ã€‚ 
+		!#zh è¿????æ¨ªè½´???ç¼©æ?¾æ??ï¼?è¿?ä¸ªç¼©??¾æ????¯å????»å?????ç´????è¾¨ç????¾å?°è®¾è®¡å??è¾¨ç?????æ¯?ä¾???? 
 		*/
 		getScaleX(): number;		
 		/**
 		!#en
 		Returns scale factor of the vertical direction (Y axis).
-		!#zh è¿”å›çºµè½´çš„ç¼©æ”¾æ¯”ï¼Œè¿™ä¸ªç¼©æ”¾æ¯”æ˜¯å°†ç”»å¸ƒåƒç´ åˆ†è¾¨ç‡ç¼©æ”¾åˆ°è®¾è®¡åˆ†è¾¨ç‡çš„æ¯”ä¾‹ã€‚ 
+		!#zh è¿????çºµè½´???ç¼©æ?¾æ??ï¼?è¿?ä¸ªç¼©??¾æ????¯å????»å?????ç´????è¾¨ç??ç¼©æ?¾å?°è®¾è®¡å??è¾¨ç?????æ¯?ä¾???? 
 		*/
 		getScaleY(): number;		
 		/**
 		!#en
 		Returns device pixel ratio for retina display.
-		!#zh è¿”å›è®¾å¤‡æˆ–æµè§ˆå™¨åƒç´ æ¯”ä¾‹ã€‚ 
+		!#zh è¿????è®¾å?????æµ?è§???¨å??ç´?æ¯?ä¾???? 
 		*/
 		getDevicePixelRatio(): number;		
 		/**
 		!#en
 		Returns the real location in view for a translation based on a related position
-		!#zh å°†å±å¹•åæ ‡è½¬æ¢ä¸ºæ¸¸æˆè§†å›¾ä¸‹çš„åæ ‡ã€‚
+		!#zh å°?å±?å¹???????è½¬æ?¢ä¸ºæ¸¸æ??è§???¾ä??????????????
 		@param tx The X axis translation
 		@param ty The Y axis translation
 		@param relatedPos The related position object including "left", "top", "width", "height" informations 
@@ -11263,14 +11263,14 @@ declare namespace cc {
 		/**
 		!#en
 		Manipulation before appling the strategy
-		!#zh åœ¨åº”ç”¨ç­–ç•¥ä¹‹å‰çš„æ“ä½œ
+		!#zh ??¨å????¨ç????¥ä???????????ä½?
 		@param view The target view 
 		*/
 		preApply(view: View): void;		
 		/**
 		!#en
 		Function to apply this strategy
-		!#zh ç­–ç•¥åº”ç”¨æ–¹æ³•
+		!#zh ç­???¥å????¨æ?¹æ??
 		@param view view
 		@param designedResolution designedResolution 
 		*/
@@ -11278,7 +11278,7 @@ declare namespace cc {
 		/**
 		!#en
 		Manipulation after applying the strategy
-		!#zh ç­–ç•¥è°ƒç”¨ä¹‹åçš„æ“ä½œ
+		!#zh ç­???¥è????¨ä???????????ä½?
 		@param view The target view 
 		*/
 		postApply(view: View): void;	
@@ -11289,7 +11289,7 @@ declare namespace cc {
 		/**
 		!#en
 		Manipulation before applying the strategy
-		!#zh ç­–ç•¥åº”ç”¨å‰çš„æ“ä½œ
+		!#zh ç­???¥å????¨å????????ä½?
 		@param view The target view 
 		*/
 		preApply(view: View): void;		
@@ -11297,7 +11297,7 @@ declare namespace cc {
 		!#en Function to apply this strategy
 		The return value is {scale: [scaleX, scaleY], viewport: {cc.Rect}},
 		The target view can then apply these value to itself, it's preferred not to modify directly its private variables
-		!#zh è°ƒç”¨ç­–ç•¥æ–¹æ³•
+		!#zh è°???¨ç????¥æ?¹æ??
 		@param view view
 		@param designedResolution designedResolution 
 		*/
@@ -11305,7 +11305,7 @@ declare namespace cc {
 		/**
 		!#en
 		Manipulation after applying the strategy
-		!#zh ç­–ç•¥è°ƒç”¨ä¹‹åçš„æ“ä½œ
+		!#zh ç­???¥è????¨ä???????????ä½?
 		@param view The target view 
 		*/
 		postApply(view: View): void;	
@@ -11336,7 +11336,7 @@ declare namespace cc {
 		constructor(containerStg: ContainerStrategy, contentStg: ContentStrategy);		
 		/**
 		!#en Manipulation before applying the resolution policy
-		!#zh ç­–ç•¥åº”ç”¨å‰çš„æ“ä½œ
+		!#zh ç­???¥å????¨å????????ä½?
 		@param view The target view 
 		*/
 		preApply(view: View): void;		
@@ -11344,28 +11344,28 @@ declare namespace cc {
 		!#en Function to apply this resolution policy
 		The return value is {scale: [scaleX, scaleY], viewport: {cc.Rect}},
 		The target view can then apply these value to itself, it's preferred not to modify directly its private variables
-		!#zh è°ƒç”¨ç­–ç•¥æ–¹æ³•
+		!#zh è°???¨ç????¥æ?¹æ??
 		@param view The target view
 		@param designedResolution The user defined design resolution 
 		*/
 		apply(view: View, designedResolution: Size): any;		
 		/**
 		!#en Manipulation after appyling the strategy
-		!#zh ç­–ç•¥åº”ç”¨ä¹‹åçš„æ“ä½œ
+		!#zh ç­???¥å????¨ä???????????ä½?
 		@param view The target view 
 		*/
 		postApply(view: View): void;		
 		/**
 		!#en
 		Setup the container's scale strategy
-		!#zh è®¾ç½®å®¹å™¨çš„é€‚é…ç­–ç•¥
+		!#zh è®¾ç½®å®¹å?¨ç????????ç­????
 		@param containerStg containerStg 
 		*/
 		setContainerStrategy(containerStg: ContainerStrategy): void;		
 		/**
 		!#en
 		Setup the content's scale strategy
-		!#zh è®¾ç½®å†…å®¹çš„é€‚é…ç­–ç•¥
+		!#zh è®¾ç½®???å®¹ç????????ç­????
 		@param contentStg contentStg 
 		*/
 		setContentStrategy(contentStg: ContentStrategy): void;		
@@ -11423,11 +11423,11 @@ declare namespace cc {
 		static height: number;	
 	}	
 	/** !#en The callbacks invoker to handle and invoke callbacks by key.
-	!#zh CallbacksInvoker ç”¨æ¥æ ¹æ® Key ç®¡ç†å¹¶è°ƒç”¨å›è°ƒæ–¹æ³•ã€‚ */
+	!#zh CallbacksInvoker ??¨æ?¥æ?¹æ?? Key ç®¡ç??å¹¶è????¨å??è°???¹æ????? */
 	export class CallbacksInvoker {		
 		/**
 		!#zh
-		 æ£€æŸ¥æŒ‡å®šäº‹ä»¶æ˜¯å¦å·²æ³¨å†Œå›è°ƒã€‚
+		 æ£???¥æ??å®?äº?ä»¶æ?¯å?¦å·²æ³¨å?????è°????
 		!#en
 		 Check if the specified key has any registered callback. If a callback is also specified,
 		 it will only return true if the callback is registered.
@@ -11438,7 +11438,7 @@ declare namespace cc {
 		hasEventListener(key: string, callback?: Function, target?: any): boolean;		
 		/**
 		!#zh
-		ç§»é™¤åœ¨ç‰¹å®šäº‹ä»¶ç±»å‹ä¸­æ³¨å†Œçš„æ‰€æœ‰å›è°ƒæˆ–åœ¨æŸä¸ªç›®æ ‡ä¸­æ³¨å†Œçš„æ‰€æœ‰å›è°ƒã€‚
+		ç§»é?¤å?¨ç?¹å??äº?ä»¶ç±»???ä¸­æ³¨???????????????è°??????¨æ??ä¸ªç?®æ??ä¸­æ³¨???????????????è°????
 		
 		!#en
 		Removes all callbacks registered in a certain event type or all callbacks registered with a certain target
@@ -11447,7 +11447,7 @@ declare namespace cc {
 		removeAll(keyOrTarget: string|any): void;		
 		/**
 		!#zh
-		åˆ é™¤ä¹‹å‰ä¸åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æ³¨å†Œçš„å›è°ƒã€‚
+		?????¤ä?????ä¸????ç±»å??ï¼????è°?ï¼???®æ??æ³¨å????????è°????
 		@param key key
 		@param callback callback
 		@param target target 
@@ -11457,7 +11457,7 @@ declare namespace cc {
 		!#en
 		Trigger an event directly with the event name and necessary arguments.
 		!#zh
-		é€šè¿‡äº‹ä»¶åå‘é€è‡ªå®šä¹‰äº‹ä»¶
+		???è¿?äº?ä»¶å??????????ªå??ä¹?äº?ä»?
 		@param key event type
 		@param arg1 First argument
 		@param arg2 Second argument
@@ -11474,7 +11474,7 @@ declare namespace cc {
 		emit(key: string, arg1?: any, arg2?: any, arg3?: any, arg4?: any, arg5?: any): void;	
 	}	
 	/** !#en Contains information collected during deserialization
-	!#zh åŒ…å«ååºåˆ—åŒ–æ—¶çš„ä¸€äº›ä¿¡æ¯ */
+	!#zh ?????«å??åº?????????¶ç??ä¸?äº?ä¿¡æ?? */
 	export class Details {		
 		/** the obj list whose field needs to load asset by uuid */
 		uuidObjList: any[];		
@@ -11515,12 +11515,12 @@ declare namespace cc {
 		/** !#en
 		world contact point (point of intersection)
 		!#zh
-		ç¢°æ’ç‚¹é›†åˆ */
+		ç¢°æ????¹é????? */
 		points: Vec2[];		
 		/** !#en
 		world vector pointing from A to B
 		!#zh
-		ä¸–ç•Œåæ ‡ç³»ä¸‹ç”± A æŒ‡å‘ B çš„å‘é‡ */
+		ä¸??????????ç³»ä????? A ?????? B ????????? */
 		normal: Vec2;	
 	}	
 	/** !#en
@@ -11529,8 +11529,8 @@ declare namespace cc {
 	Note: the impulses are used for internal caching and may not
 	provide reliable contact forces, especially for high speed collisions.
 	!#zh
-	ManifoldPoint æ˜¯æ¥è§¦ä¿¡æ¯ä¸­çš„æ¥è§¦ç‚¹ä¿¡æ¯ã€‚å®ƒæ‹¥æœ‰å…³äºå‡ ä½•å’Œæ¥è§¦ç‚¹çš„è¯¦ç»†ä¿¡æ¯ã€‚
-	æ³¨æ„ï¼šä¿¡æ¯ä¸­çš„å†²é‡ç”¨äºç³»ç»Ÿå†…éƒ¨ç¼“å­˜ï¼Œæä¾›çš„æ¥è§¦åŠ›å¯èƒ½ä¸æ˜¯å¾ˆå‡†ç¡®ï¼Œç‰¹åˆ«æ˜¯é«˜é€Ÿç§»åŠ¨ä¸­çš„ç¢°æ’ä¿¡æ¯ã€‚ */
+	ManifoldPoint ??¯æ?¥è§¦ä¿¡æ?¯ä¸­?????¥è§¦??¹ä¿¡??¯ã??å®???¥æ????³ä?????ä½??????¥è§¦??¹ç??è¯¦ç??ä¿¡æ?¯ã??
+	æ³¨æ??ï¼?ä¿¡æ?¯ä¸­?????²é????¨ä??ç³»ç???????¨ç??å­?ï¼????ä¾??????¥è§¦?????¯è?½ä????¯å?????ç¡®ï????¹å?«æ?¯é?????ç§»å?¨ä¸­???ç¢°æ??ä¿¡æ?¯ã?? */
 	export class ManifoldPoint {		
 		/** !#en
 		The local point usage depends on the manifold type:
@@ -11538,20 +11538,20 @@ declare namespace cc {
 		-e_faceA: the local center of circleB or the clip point of polygonB
 		-e_faceB: the clip point of polygonA
 		!#zh
-		æœ¬åœ°åæ ‡ç‚¹çš„ç”¨é€”å–å†³äº manifold çš„ç±»å‹
-		- e_circles: circleB çš„æœ¬åœ°ä¸­å¿ƒç‚¹
-		- e_faceA: circleB çš„æœ¬åœ°ä¸­å¿ƒç‚¹ æˆ–è€…æ˜¯ polygonB çš„æˆªå–ç‚¹
-		- e_faceB: polygonB çš„æˆªå–ç‚¹ */
+		??¬å?°å???????¹ç????¨é???????³ä?? manifold ???ç±»å??
+		- e_circles: circleB ?????¬å?°ä¸­å¿????
+		- e_faceA: circleB ?????¬å?°ä¸­å¿???? ????????? polygonB ?????ªå?????
+		- e_faceB: polygonB ?????ªå????? */
 		localPoint: Vec2;		
 		/** !#en
 		Normal impulse.
 		!#zh
-		æ³•çº¿å†²é‡ã€‚ */
+		æ³?çº¿å?²é????? */
 		normalImpulse: number;		
 		/** !#en
 		Tangent impulse.
 		!#zh
-		åˆ‡çº¿å†²é‡ã€‚ */
+		???çº¿å?²é????? */
 		tangentImpulse: number;	
 	}	
 	/** undefined */
@@ -11559,7 +11559,7 @@ declare namespace cc {
 		/** !#en
 		Manifold type :  0: e_circles, 1: e_faceA, 2: e_faceB
 		!#zh
-		Manifold ç±»å‹ :  0: e_circles, 1: e_faceA, 2: e_faceB */
+		Manifold ç±»å?? :  0: e_circles, 1: e_faceA, 2: e_faceB */
 		type: number;		
 		/** !#en
 		The local point usage depends on the manifold type:
@@ -11567,61 +11567,61 @@ declare namespace cc {
 		-e_faceA: the center of faceA
 		-e_faceB: the center of faceB
 		!#zh
-		ç”¨é€”å–å†³äº manifold ç±»å‹
-		-e_circles: circleA çš„æœ¬åœ°ä¸­å¿ƒç‚¹
-		-e_faceA: faceA çš„æœ¬åœ°ä¸­å¿ƒç‚¹
-		-e_faceB: faceB çš„æœ¬åœ°ä¸­å¿ƒç‚¹ */
+		??¨é???????³ä?? manifold ç±»å??
+		-e_circles: circleA ?????¬å?°ä¸­å¿????
+		-e_faceA: faceA ?????¬å?°ä¸­å¿????
+		-e_faceB: faceB ?????¬å?°ä¸­å¿???? */
 		localPoint: Vec2;		
 		/** !#en
 		-e_circles: not used
 		-e_faceA: the normal on polygonA
 		-e_faceB: the normal on polygonB
 		!#zh
-		-e_circles: æ²¡è¢«ä½¿ç”¨åˆ°
-		-e_faceA: polygonA çš„æ³•å‘é‡
-		-e_faceB: polygonB çš„æ³•å‘é‡ */
+		-e_circles: æ²¡è¢«ä½¿ç?¨å??
+		-e_faceA: polygonA ???æ³???????
+		-e_faceB: polygonB ???æ³??????? */
 		localNormal: Vec2;		
 		/** !#en
 		the points of contact.
 		!#zh
-		æ¥è§¦ç‚¹ä¿¡æ¯ã€‚ */
+		??¥è§¦??¹ä¿¡??¯ã?? */
 		points: ManifoldPoint[];	
 	}	
 	/** !#en
 	Contact impulses for reporting.
 	!#zh
-	ç”¨äºè¿”å›ç»™å›è°ƒçš„æ¥è§¦å†²é‡ã€‚ */
+	??¨ä??è¿????ç»????è°??????¥è§¦??²é????? */
 	export class PhysicsImpulse {		
 		/** !#en
 		Normal impulses.
 		!#zh
-		æ³•çº¿æ–¹å‘çš„å†²é‡ */
+		æ³?çº¿æ?¹å???????²é?? */
 		normalImpulses: any;		
 		/** !#en
 		Tangent impulses
 		!#zh
-		åˆ‡çº¿æ–¹å‘çš„å†²é‡ */
+		???çº¿æ?¹å???????²é?? */
 		tangentImpulses: any;	
 	}	
 	/** !#en
 	PhysicsContact will be generated during begin and end collision as a parameter of the collision callback.
 	Note that contacts will be reused for speed up cpu time, so do not cache anything in the contact.
 	!#zh
-	ç‰©ç†æ¥è§¦ä¼šåœ¨å¼€å§‹å’Œç»“æŸç¢°æ’ä¹‹é—´ç”Ÿæˆï¼Œå¹¶ä½œä¸ºå‚æ•°ä¼ å…¥åˆ°ç¢°æ’å›è°ƒå‡½æ•°ä¸­ã€‚
-	æ³¨æ„ï¼šä¼ å…¥çš„ç‰©ç†æ¥è§¦ä¼šè¢«ç³»ç»Ÿè¿›è¡Œé‡ç”¨ï¼Œæ‰€ä»¥ä¸è¦åœ¨ä½¿ç”¨ä¸­ç¼“å­˜é‡Œé¢çš„ä»»ä½•ä¿¡æ¯ã€‚ */
+	??©ç????¥è§¦ä¼???¨å??å§????ç»????ç¢°æ??ä¹???´ç?????ï¼?å¹¶ä??ä¸ºå????°ä????¥å?°ç¢°??????è°???½æ?°ä¸­???
+	æ³¨æ??ï¼?ä¼???¥ç????©ç????¥è§¦ä¼?è¢«ç³»ç»?è¿?è¡??????¨ï?????ä»¥ä??è¦???¨ä½¿??¨ä¸­ç¼?å­??????¢ç??ä»»ä??ä¿¡æ?¯ã?? */
 	export class PhysicsContact {		
 		/**
 		!#en
 		Get the world manifold.
 		!#zh
-		è·å–ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ç¢°æ’ä¿¡æ¯ã€‚ 
+		??·å??ä¸??????????ç³»ä?????ç¢°æ??ä¿¡æ?¯ã?? 
 		*/
 		getWorldManifold(): WorldManifold;		
 		/**
 		!#en
 		Get the manifold.
 		!#zh
-		è·å–æœ¬åœ°ï¼ˆå±€éƒ¨ï¼‰åæ ‡ç³»ä¸‹çš„ç¢°æ’ä¿¡æ¯ã€‚ 
+		??·å????¬å?°ï??å±???¨ï????????ç³»ä?????ç¢°æ??ä¿¡æ?¯ã?? 
 		*/
 		getManifold(): Manifold;		
 		/**
@@ -11629,44 +11629,44 @@ declare namespace cc {
 		Get the impulses.
 		Note: PhysicsImpulse can only used in onPostSolve callback.
 		!#zh
-		è·å–å†²é‡ä¿¡æ¯
-		æ³¨æ„ï¼šè¿™ä¸ªä¿¡æ¯åªæœ‰åœ¨ onPostSolve å›è°ƒä¸­æ‰èƒ½è·å–åˆ° 
+		??·å????²é??ä¿¡æ??
+		æ³¨æ??ï¼?è¿?ä¸ªä¿¡??¯å?ªæ????? onPostSolve ???è°?ä¸­æ????½è?·å????? 
 		*/
 		getImpulse(): PhysicsImpulse;		
 		/** !#en
 		One of the collider that collided
 		!#zh
-		å‘ç”Ÿç¢°æ’çš„ç¢°æ’ä½“ä¹‹ä¸€ */
+		??????ç¢°æ?????ç¢°æ??ä½?ä¹?ä¸? */
 		colliderA: Collider;		
 		/** !#en
 		One of the collider that collided
 		!#zh
-		å‘ç”Ÿç¢°æ’çš„ç¢°æ’ä½“ä¹‹ä¸€ */
+		??????ç¢°æ?????ç¢°æ??ä½?ä¹?ä¸? */
 		colliderB: Collider;		
 		/** !#en
 		If set disabled to true, the contact will be ignored until contact end.
 		If you just want to disabled contact for current time step or sub-step, please use disabledOnce.
 		!#zh
-		å¦‚æœ disabled è¢«è®¾ç½®ä¸º trueï¼Œé‚£ä¹ˆç›´åˆ°æ¥è§¦ç»“æŸæ­¤æ¥è§¦éƒ½å°†è¢«å¿½ç•¥ã€‚
-		å¦‚æœåªæ˜¯å¸Œæœ›åœ¨å½“å‰æ—¶é—´æ­¥æˆ–å­æ­¥ä¸­å¿½ç•¥æ­¤æ¥è§¦ï¼Œè¯·ä½¿ç”¨ disabledOnce ã€‚ */
+		å¦???? disabled è¢«è®¾ç½®ä¸º trueï¼????ä¹???´å?°æ?¥è§¦ç»????æ­¤æ?¥è§¦??½å??è¢«å¿½??¥ã??
+		å¦??????ªæ?¯å???????¨å???????¶é?´æ­¥???å­?æ­¥ä¸­å¿½ç?¥æ­¤??¥è§¦ï¼?è¯·ä½¿??? disabledOnce ??? */
 		disabled: boolean;		
 		/** !#en
 		Disabled contact for current time step or sub-step.
 		!#zh
-		åœ¨å½“å‰æ—¶é—´æ­¥æˆ–å­æ­¥ä¸­å¿½ç•¥æ­¤æ¥è§¦ã€‚ */
+		??¨å???????¶é?´æ­¥???å­?æ­¥ä¸­å¿½ç?¥æ­¤??¥è§¦??? */
 		disabledOnce: boolean;		
 		/**
 		!#en
 		Is this contact touching?
 		!#zh
-		è¿”å›ç¢°æ’ä½“æ˜¯å¦å·²ç»æ¥è§¦åˆ°ã€‚ 
+		è¿????ç¢°æ??ä½???¯å?¦å·²ç»???¥è§¦??°ã?? 
 		*/
 		isTouching(): boolean;		
 		/**
 		!#en
 		Set the desired tangent speed for a conveyor belt behavior.
 		!#zh
-		ä¸ºä¼ é€å¸¦è®¾ç½®æœŸæœ›çš„åˆ‡çº¿é€Ÿåº¦
+		ä¸ºä?????å¸¦è®¾ç½®æ???????????çº¿é??åº?
 		@param tangentSpeed tangentSpeed 
 		*/
 		setTangentSpeed(tangentSpeed: number): void;		
@@ -11674,14 +11674,14 @@ declare namespace cc {
 		!#en
 		Get the desired tangent speed.
 		!#zh
-		è·å–åˆ‡çº¿é€Ÿåº¦ 
+		??·å?????çº¿é??åº? 
 		*/
 		getTangentSpeed(): number;		
 		/**
 		!#en
 		Override the default friction mixture. You can call this in onPreSolve callback.
 		!#zh
-		è¦†ç›–é»˜è®¤çš„æ‘©æ“¦åŠ›ç³»æ•°ã€‚ä½ å¯ä»¥åœ¨ onPreSolve å›è°ƒä¸­è°ƒç”¨æ­¤å‡½æ•°ã€‚
+		è¦????é»?è®¤ç????©æ?¦å??ç³»æ?°ã??ä½???¯ä»¥??? onPreSolve ???è°?ä¸­è????¨æ­¤??½æ?°ã??
 		@param friction friction 
 		*/
 		setFriction(friction: number): void;		
@@ -11689,21 +11689,21 @@ declare namespace cc {
 		!#en
 		Get the friction.
 		!#zh
-		è·å–å½“å‰æ‘©æ“¦åŠ›ç³»æ•° 
+		??·å??å½??????©æ?¦å??ç³»æ?? 
 		*/
 		getFriction(): number;		
 		/**
 		!#en
 		Reset the friction mixture to the default value.
 		!#zh
-		é‡ç½®æ‘©æ“¦åŠ›ç³»æ•°åˆ°é»˜è®¤å€¼ 
+		???ç½®æ?©æ?¦å??ç³»æ?°å?°é??è®¤å?? 
 		*/
 		resetFriction(): void;		
 		/**
 		!#en
 		Override the default restitution mixture. You can call this in onPreSolve callback.
 		!#zh
-		è¦†ç›–é»˜è®¤çš„æ¢å¤ç³»æ•°ã€‚ä½ å¯ä»¥åœ¨ onPreSolve å›è°ƒä¸­è°ƒç”¨æ­¤å‡½æ•°ã€‚
+		è¦????é»?è®¤ç????¢å??ç³»æ?°ã??ä½???¯ä»¥??? onPreSolve ???è°?ä¸­è????¨æ­¤??½æ?°ã??
 		@param restitution restitution 
 		*/
 		setRestitution(restitution: number): void;		
@@ -11711,14 +11711,14 @@ declare namespace cc {
 		!#en
 		Get the restitution.
 		!#zh
-		è·å–å½“å‰æ¢å¤ç³»æ•° 
+		??·å??å½??????¢å??ç³»æ?? 
 		*/
 		getRestitution(): number;		
 		/**
 		!#en
 		Reset the restitution mixture to the default value.
 		!#zh
-		é‡ç½®æ¢å¤ç³»æ•°åˆ°é»˜è®¤å€¼ 
+		???ç½®æ?¢å??ç³»æ?°å?°é??è®¤å?? 
 		*/
 		resetRestitution(): void;	
 	}	
@@ -11728,52 +11728,52 @@ declare namespace cc {
 	Physics manager distributes the collision information to each collision callback when collision is produced.
 	Note: You need first enable the collision listener in the rigidbody.
 	!#zh
-	ç‰©ç†ç³»ç»Ÿå°† box2d ä½œä¸ºå†…éƒ¨ç‰©ç†ç³»ç»Ÿï¼Œå¹¶ä¸”éšè—äº†å¤§éƒ¨åˆ† box2d å®ç°ç»†èŠ‚ï¼ˆæ¯”å¦‚åˆ›å»ºåˆšä½“ï¼ŒåŒæ­¥åˆšä½“ä¿¡æ¯åˆ°èŠ‚ç‚¹ä¸­ç­‰ï¼‰ã€‚
-	ä½ å¯ä»¥é€šè¿‡ç‰©ç†ç³»ç»Ÿè®¿é—®ä¸€äº› box2d å¸¸ç”¨çš„åŠŸèƒ½ï¼Œæ¯”å¦‚ç‚¹å‡»æµ‹è¯•ï¼Œå°„çº¿æµ‹è¯•ï¼Œè®¾ç½®æµ‹è¯•ä¿¡æ¯ç­‰ã€‚
-	ç‰©ç†ç³»ç»Ÿè¿˜ç®¡ç†ç¢°æ’ä¿¡æ¯çš„åˆ†å‘ï¼Œå¥¹ä¼šåœ¨äº§ç”Ÿç¢°æ’æ—¶ï¼Œå°†ç¢°æ’ä¿¡æ¯åˆ†å‘åˆ°å„ä¸ªç¢°æ’å›è°ƒä¸­ã€‚
-	æ³¨æ„ï¼šä½ éœ€è¦å…ˆåœ¨åˆšä½“ä¸­å¼€å¯ç¢°æ’æ¥å¬æ‰ä¼šäº§ç”Ÿç›¸åº”çš„ç¢°æ’å›è°ƒã€‚<br>
-	æ”¯æŒçš„ç‰©ç†ç³»ç»ŸæŒ‡å®šç»˜åˆ¶ä¿¡æ¯äº‹ä»¶ï¼Œè¯·å‚é˜… {{#crossLink "PhysicsManager.DrawBits"}}{{/crossLink}} */
+	??©ç??ç³»ç??å°? box2d ä½?ä¸ºå????¨ç?©ç??ç³»ç??ï¼?å¹¶ä????????äº?å¤§é?¨å?? box2d å®???°ç?????ï¼?æ¯?å¦????å»ºå??ä½?ï¼????æ­¥å??ä½?ä¿¡æ?¯å?°è????¹ä¸­ç­?ï¼????
+	ä½???¯ä»¥???è¿???©ç??ç³»ç??è®¿é?®ä??äº? box2d å¸¸ç?¨ç???????½ï??æ¯?å¦???¹å?»æ??è¯?ï¼?å°?çº¿æ??è¯?ï¼?è®¾ç½®æµ?è¯?ä¿¡æ?¯ç?????
+	??©ç??ç³»ç??è¿?ç®¡ç??ç¢°æ??ä¿¡æ?¯ç????????ï¼?å¥¹ä????¨äº§???ç¢°æ????¶ï??å°?ç¢°æ??ä¿¡æ?¯å???????°å??ä¸ªç¢°??????è°?ä¸­ã??
+	æ³¨æ??ï¼?ä½????è¦??????¨å??ä½?ä¸­å????¯ç¢°?????¥å?¬æ??ä¼?äº§ç????¸å?????ç¢°æ?????è°????<br>
+	??¯æ???????©ç??ç³»ç?????å®?ç»???¶ä¿¡??¯ä??ä»¶ï??è¯·å????? {{#crossLink "PhysicsManager.DrawBits"}}{{/crossLink}} */
 	export class PhysicsManager implements EventTarget {		
 		/** !#en
 		The ratio transform between physics unit and pixel unit, generally is 32.
 		!#zh
-		ç‰©ç†å•ä½ä¸åƒç´ å•ä½äº’ç›¸è½¬æ¢çš„æ¯”ç‡ï¼Œä¸€èˆ¬æ˜¯ 32ã€‚ */
+		??©ç?????ä½?ä¸????ç´????ä½?äº???¸è½¬??¢ç??æ¯????ï¼?ä¸???¬æ?? 32??? */
 		static PTM_RATIO: number;		
 		/** !#en
 		The velocity iterations for the velocity constraint solver.
 		!#zh
-		é€Ÿåº¦æ›´æ–°è¿­ä»£æ•° */
+		???åº¦æ?´æ?°è¿­ä»???? */
 		static VELOCITY_ITERATIONS: number;		
 		/** !#en
 		The position Iterations for the position constraint solver.
 		!#zh
-		ä½ç½®è¿­ä»£æ›´æ–°æ•° */
+		ä½?ç½®è¿­ä»???´æ?°æ?? */
 		static POSITION_ITERATIONS: number;		
 		/** !#en
 		Specify the fixed time step.
 		Need enabledAccumulator to make it work.
 		!#zh
-		æŒ‡å®šå›ºå®šçš„ç‰©ç†æ›´æ–°é—´éš”æ—¶é—´ï¼Œéœ€è¦å¼€å¯ enabledAccumulator æ‰æœ‰æ•ˆã€‚ */
+		???å®???ºå???????©ç????´æ?°é?´é????¶é?´ï?????è¦?å¼???? enabledAccumulator ???????????? */
 		static FIXED_TIME_STEP: number;		
 		/** !#en
 		Specify the max accumulator time.
 		Need enabledAccumulator to make it work.
 		!#zh
-		æ¯æ¬¡å¯ç”¨äºæ›´æ–°ç‰©ç†ç³»ç»Ÿçš„æœ€å¤§æ—¶é—´ï¼Œéœ€è¦å¼€å¯ enabledAccumulator æ‰æœ‰æ•ˆã€‚ */
+		æ¯?æ¬¡å?¯ç?¨ä????´æ?°ç?©ç??ç³»ç????????å¤§æ?¶é?´ï?????è¦?å¼???? enabledAccumulator ???????????? */
 		static MAX_ACCUMULATOR: number;		
 		/** !#en
 		If enabled accumulator, then will call step function with the fixed time step FIXED_TIME_STEP.
 		And if the update dt is bigger than the time step, then will call step function several times.
 		If disabled accumulator, then will call step function with a time step calculated with the frame rate.
 		!#zh
-		å¦‚æœå¼€å¯æ­¤é€‰é¡¹ï¼Œé‚£ä¹ˆå°†ä¼šä»¥å›ºå®šçš„é—´éš”æ—¶é—´ FIXED_TIME_STEP æ¥æ›´æ–°ç‰©ç†å¼•æ“ï¼Œå¦‚æœä¸€ä¸ª update çš„é—´éš”æ—¶é—´å¤§äº FIXED_TIME_STEPï¼Œåˆ™ä¼šå¯¹ç‰©ç†å¼•æ“è¿›è¡Œå¤šæ¬¡æ›´æ–°ã€‚
-		å¦‚æœå…³é—­æ­¤é€‰é¡¹ï¼Œé‚£ä¹ˆå°†ä¼šæ ¹æ®è®¾å®šçš„ frame rate è®¡ç®—å‡ºä¸€ä¸ªé—´éš”æ—¶é—´æ¥æ›´æ–°ç‰©ç†å¼•æ“ã€‚ */
+		å¦????å¼???¯æ­¤???é¡¹ï?????ä¹?å°?ä¼?ä»¥å?ºå???????´é????¶é?? FIXED_TIME_STEP ??¥æ?´æ?°ç?©ç??å¼????ï¼?å¦????ä¸?ä¸? update ?????´é????¶é?´å¤§äº? FIXED_TIME_STEPï¼????ä¼?å¯¹ç?©ç??å¼????è¿?è¡?å¤?æ¬¡æ?´æ?°ã??
+		å¦??????³é?­æ­¤???é¡¹ï?????ä¹?å°?ä¼???¹æ?®è®¾å®???? frame rate è®¡ç????ºä??ä¸ªé?´é????¶é?´æ?¥æ?´æ?°ç?©ç??å¼??????? */
 		enabledAccumulator: boolean;		
 		/**
 		!#en
 		Test which collider contains the given world point
 		!#zh
-		è·å–åŒ…å«ç»™å®šä¸–ç•Œåæ ‡ç³»ç‚¹çš„ç¢°æ’ä½“
+		??·å???????«ç??å®?ä¸??????????ç³»ç?¹ç??ç¢°æ??ä½?
 		@param point the world point 
 		*/
 		testPoint(point: Vec2): PhysicsCollider;		
@@ -11781,7 +11781,7 @@ declare namespace cc {
 		!#en
 		Test which colliders intersect the given world rect
 		!#zh
-		è·å–ä¸ç»™å®šä¸–ç•Œåæ ‡ç³»çŸ©å½¢ç›¸äº¤çš„ç¢°æ’ä½“
+		??·å??ä¸?ç»?å®?ä¸??????????ç³»ç?©å½¢??¸äº¤???ç¢°æ??ä½?
 		@param rect the world rect 
 		*/
 		testAABB(rect: Rect): PhysicsCollider[];		
@@ -11790,7 +11790,7 @@ declare namespace cc {
 		Raycast the world for all colliders in the path of the ray.
 		The raycast ignores colliders that contain the starting point.
 		!#zh
-		æ£€æµ‹å“ªäº›ç¢°æ’ä½“åœ¨ç»™å®šå°„çº¿çš„è·¯å¾„ä¸Šï¼Œå°„çº¿æ£€æµ‹å°†å¿½ç•¥åŒ…å«èµ·å§‹ç‚¹çš„ç¢°æ’ä½“ã€‚
+		æ£?æµ???ªä??ç¢°æ??ä½???¨ç??å®?å°?çº¿ç??è·¯å??ä¸?ï¼?å°?çº¿æ??æµ?å°?å¿½ç?¥å????«èµ·å§???¹ç??ç¢°æ??ä½????
 		@param p1 start point of the raycast
 		@param p2 end point of the raycast
 		@param type optional, default is RayCastType.Closest 
@@ -11799,21 +11799,21 @@ declare namespace cc {
 		/** !#en
 		Enabled the physics manager?
 		!#zh
-		æŒ‡å®šæ˜¯å¦å¯ç”¨ç‰©ç†ç³»ç»Ÿï¼Ÿ */
+		???å®???¯å?¦å?¯ç?¨ç?©ç??ç³»ç??ï¼? */
 		enabled: boolean;		
 		/** !#en
 		Debug draw flags.
 		!#zh
-		è®¾ç½®è°ƒè¯•ç»˜åˆ¶æ ‡å¿— */
+		è®¾ç½®è°?è¯?ç»???¶æ??å¿? */
 		debugDrawFlags: number;		
 		/** !#en
 		The physics world gravity.
 		!#zh
-		ç‰©ç†ä¸–ç•Œé‡åŠ›å€¼ */
+		??©ç??ä¸????????????? */
 		gravity: Vec2;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -11822,7 +11822,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -11841,7 +11841,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type being removed.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed
@@ -11864,9 +11864,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -11875,7 +11875,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param callback The callback that will be invoked when the event is dispatched.
 		                             The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -11893,7 +11893,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -11901,7 +11901,7 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
@@ -11910,26 +11910,26 @@ declare namespace cc {
 		/** !#en
 		The PhysicsCollider which intersects with the raycast
 		!#zh
-		ä¸å°„çº¿ç›¸äº¤çš„ç¢°æ’ä½“ */
+		ä¸?å°?çº¿ç?¸äº¤???ç¢°æ??ä½? */
 		collider: PhysicsCollider;		
 		/** !#en
 		The intersection point
 		!#zh
-		å°„çº¿ä¸ç¢°æ’ä½“ç›¸äº¤çš„ç‚¹ */
+		å°?çº¿ä??ç¢°æ??ä½???¸äº¤?????? */
 		point: Vec2;		
 		/** !#en
 		The normal vector at the point of intersection
 		!#zh
-		å°„çº¿ä¸ç¢°æ’ä½“ç›¸äº¤çš„ç‚¹çš„æ³•å‘é‡ */
+		å°?çº¿ä??ç¢°æ??ä½???¸äº¤?????¹ç??æ³??????? */
 		normal: Vec2;		
 		/** !#en
 		The fraction of the raycast path at the point of intersection
 		!#zh
-		å°„çº¿ä¸ç¢°æ’ä½“ç›¸äº¤çš„ç‚¹å å°„çº¿é•¿åº¦çš„åˆ†æ•° */
+		å°?çº¿ä??ç¢°æ??ä½???¸äº¤?????¹å??å°?çº¿é?¿åº¦????????? */
 		fraction: number;	
 	}	
 	/** !#en Enum for RigidBodyType.
-	!#zh åˆšä½“ç±»å‹ */
+	!#zh ???ä½?ç±»å?? */
 	export enum RigidBodyType {		
 		Static = 0,
 		Kinematic = 0,
@@ -11937,7 +11937,7 @@ declare namespace cc {
 		Animated = 0,	
 	}	
 	/** !#en Enum for RayCastType.
-	!#zh å°„çº¿æ£€æµ‹ç±»å‹ */
+	!#zh å°?çº¿æ??æµ?ç±»å?? */
 	export enum RayCastType {		
 		Closest = 0,
 		Any = 0,
@@ -11950,16 +11950,16 @@ declare namespace cc {
 		Should enabled contact listener?
 		When a collision is trigger, the collision callback will only be called when enabled contact listener.
 		!#zh
-		æ˜¯å¦å¯ç”¨æ¥è§¦æ¥å¬å™¨ã€‚
-		å½“ collider äº§ç”Ÿç¢°æ’æ—¶ï¼Œåªæœ‰å¼€å¯äº†æ¥è§¦æ¥å¬å™¨æ‰ä¼šè°ƒç”¨ç›¸åº”çš„å›è°ƒå‡½æ•° */
+		??¯å?¦å?¯ç?¨æ?¥è§¦??¥å?¬å?¨ã??
+		å½? collider äº§ç??ç¢°æ????¶ï????ªæ??å¼???¯ä????¥è§¦??¥å?¬å?¨æ??ä¼?è°???¨ç?¸å????????è°???½æ?? */
 		enabledContactListener: boolean;		
 		/**
 		!#en
 		Collision callback.
 		Called when two collider begin to touch.
 		!#zh
-		ç¢°æ’å›è°ƒã€‚
-		å¦‚æœä½ çš„è„šæœ¬ä¸­å®ç°äº†è¿™ä¸ªå‡½æ•°ï¼Œé‚£ä¹ˆå®ƒå°†ä¼šåœ¨ä¸¤ä¸ªç¢°æ’ä½“å¼€å§‹æ¥è§¦æ—¶è¢«è°ƒç”¨ã€‚
+		ç¢°æ?????è°????
+		å¦????ä½?????????¬ä¸­å®???°ä??è¿?ä¸ªå?½æ?°ï?????ä¹?å®?å°?ä¼???¨ä¸¤ä¸ªç¢°???ä½?å¼?å§???¥è§¦??¶è¢«è°???¨ã??
 		@param contact contact information
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
@@ -11970,8 +11970,8 @@ declare namespace cc {
 		Collision callback.
 		Called when two collider cease to touch.
 		!#zh
-		ç¢°æ’å›è°ƒã€‚
-		å¦‚æœä½ çš„è„šæœ¬ä¸­å®ç°äº†è¿™ä¸ªå‡½æ•°ï¼Œé‚£ä¹ˆå®ƒå°†ä¼šåœ¨ä¸¤ä¸ªç¢°æ’ä½“åœæ­¢æ¥è§¦æ—¶è¢«è°ƒç”¨ã€‚
+		ç¢°æ?????è°????
+		å¦????ä½?????????¬ä¸­å®???°ä??è¿?ä¸ªå?½æ?°ï?????ä¹?å®?å°?ä¼???¨ä¸¤ä¸ªç¢°???ä½????æ­¢æ?¥è§¦??¶è¢«è°???¨ã??
 		@param contact contact information
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
@@ -11986,12 +11986,12 @@ declare namespace cc {
 		Note: this is called even when the number of contact points is zero.
 		Note: this is not called for sensors.
 		!#zh
-		ç¢°æ’å›è°ƒã€‚
-		å¦‚æœä½ çš„è„šæœ¬ä¸­å®ç°äº†è¿™ä¸ªå‡½æ•°ï¼Œé‚£ä¹ˆå®ƒå°†ä¼šåœ¨æ¥è§¦æ›´æ–°æ—¶è¢«è°ƒç”¨ã€‚
-		ä½ å¯ä»¥åœ¨æ¥è§¦è¢«å¤„ç†å‰æ ¹æ®ä»–åŒ…å«çš„ä¿¡æ¯ä½œå‡ºç›¸åº”çš„å¤„ç†ï¼Œæ¯”å¦‚å°†è¿™ä¸ªæ¥è§¦ç¦ç”¨æ‰ã€‚
-		æ³¨æ„ï¼šå›è°ƒåªä¼šä¸ºé†’ç€çš„åˆšä½“è°ƒç”¨ã€‚
-		æ³¨æ„ï¼šæ¥è§¦ç‚¹ä¸ºé›¶çš„æ—¶å€™ä¹Ÿæœ‰å¯èƒ½è¢«è°ƒç”¨ã€‚
-		æ³¨æ„ï¼šæ„ŸçŸ¥ä½“(sensor)çš„å›è°ƒä¸ä¼šè¢«è°ƒç”¨ã€‚
+		ç¢°æ?????è°????
+		å¦????ä½?????????¬ä¸­å®???°ä??è¿?ä¸ªå?½æ?°ï?????ä¹?å®?å°?ä¼???¨æ?¥è§¦??´æ?°æ?¶è¢«è°???¨ã??
+		ä½???¯ä»¥??¨æ?¥è§¦è¢«å??????????¹æ?®ä???????«ç??ä¿¡æ?¯ä????ºç?¸å?????å¤????ï¼?æ¯?å¦?å°?è¿?ä¸ªæ?¥è§¦ç¦???¨æ?????
+		æ³¨æ??ï¼????è°???ªä??ä¸ºé???????????ä½?è°???¨ã??
+		æ³¨æ??ï¼???¥è§¦??¹ä¸º??¶ç????¶å??ä¹??????¯è?½è¢«è°???¨ã??
+		æ³¨æ??ï¼??????¥ä??(sensor)??????è°?ä¸?ä¼?è¢«è????¨ã??
 		@param contact contact information
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
@@ -12003,9 +12003,9 @@ declare namespace cc {
 		This is called after a contact is updated.
 		You can get the impulses from the contact in this callback.
 		!#zh
-		ç¢°æ’å›è°ƒã€‚
-		å¦‚æœä½ çš„è„šæœ¬ä¸­å®ç°äº†è¿™ä¸ªå‡½æ•°ï¼Œé‚£ä¹ˆå®ƒå°†ä¼šåœ¨æ¥è§¦æ›´æ–°å®Œåè¢«è°ƒç”¨ã€‚
-		ä½ å¯ä»¥åœ¨è¿™ä¸ªå›è°ƒä¸­ä»æ¥è§¦ä¿¡æ¯ä¸­è·å–åˆ°å†²é‡ä¿¡æ¯ã€‚
+		ç¢°æ?????è°????
+		å¦????ä½?????????¬ä¸­å®???°ä??è¿?ä¸ªå?½æ?°ï?????ä¹?å®?å°?ä¼???¨æ?¥è§¦??´æ?°å?????è¢«è????¨ã??
+		ä½???¯ä»¥??¨è??ä¸ªå??è°?ä¸­ä????¥è§¦ä¿¡æ?¯ä¸­??·å????°å?²é??ä¿¡æ?¯ã??
 		@param contact contact information
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
@@ -12018,66 +12018,66 @@ declare namespace cc {
 		- All bodies are prevented from tunneling through kinematic and static bodies. This setting is only considered on dynamic bodies.
 		- You should use this flag sparingly since it increases processing time.
 		!#zh
-		è¿™ä¸ªåˆšä½“æ˜¯å¦æ˜¯ä¸€ä¸ªå¿«é€Ÿç§»åŠ¨çš„åˆšä½“ï¼Œå¹¶ä¸”éœ€è¦ç¦æ­¢ç©¿è¿‡å…¶ä»–å¿«é€Ÿç§»åŠ¨çš„åˆšä½“ï¼Ÿ
-		éœ€è¦æ³¨æ„çš„æ˜¯ :
-		 - æ‰€æœ‰åˆšä½“éƒ½è¢«ç¦æ­¢ä» è¿åŠ¨åˆšä½“ å’Œ é™æ€åˆšä½“ ä¸­ç©¿è¿‡ã€‚æ­¤é€‰é¡¹åªå…³æ³¨äº åŠ¨æ€åˆšä½“ã€‚
-		 - åº”è¯¥å°½é‡å°‘çš„ä½¿ç”¨æ­¤é€‰é¡¹ï¼Œå› ä¸ºå®ƒä¼šå¢åŠ ç¨‹åºå¤„ç†æ—¶é—´ã€‚ */
+		è¿?ä¸ªå??ä½???¯å?¦æ?¯ä??ä¸ªå¿«???ç§»å?¨ç?????ä½?ï¼?å¹¶ä?????è¦?ç¦?æ­¢ç©¿è¿???¶ä??å¿«é??ç§»å?¨ç?????ä½?ï¼?
+		???è¦?æ³¨æ???????? :
+		 - ?????????ä½???½è¢«ç¦?æ­¢ä?? è¿???¨å??ä½? ??? ?????????ä½? ä¸­ç©¿è¿????æ­¤é??é¡¹å?ªå?³æ³¨äº? ??¨æ?????ä½????
+		 - åº?è¯¥å°½???å°????ä½¿ç?¨æ­¤???é¡¹ï?????ä¸ºå??ä¼?å¢????ç¨?åº?å¤??????¶é?´ã?? */
 		bullet: boolean;		
 		/** !#en
 		Rigidbody type : Static, Kinematic, Dynamic or Animated.
 		!#zh
-		åˆšä½“ç±»å‹ï¼š Static, Kinematic, Dynamic or Animated. */
+		???ä½?ç±»å??ï¼? Static, Kinematic, Dynamic or Animated. */
 		type: RigidBodyType;		
 		/** !#en
 		Set this flag to false if this body should never fall asleep.
 		Note that this increases CPU usage.
 		!#zh
-		å¦‚æœæ­¤åˆšä½“æ°¸è¿œéƒ½ä¸åº”è¯¥è¿›å…¥ç¡çœ ï¼Œé‚£ä¹ˆè®¾ç½®è¿™ä¸ªå±æ€§ä¸º falseã€‚
-		éœ€è¦æ³¨æ„è¿™å°†ä½¿ CPU å ç”¨ç‡æé«˜ã€‚ */
+		å¦????æ­¤å??ä½?æ°¸è????½ä??åº?è¯¥è????¥ç?¡ç??ï¼????ä¹?è®¾ç½®è¿?ä¸ªå????§ä¸º false???
+		???è¦?æ³¨æ??è¿?å°?ä½? CPU ?????¨ç?????é«???? */
 		allowSleep: boolean;		
 		/** !#en
 		Scale the gravity applied to this body.
 		!#zh
-		ç¼©æ”¾åº”ç”¨åœ¨æ­¤åˆšä½“ä¸Šçš„é‡åŠ›å€¼ */
+		ç¼©æ?¾å????¨å?¨æ­¤???ä½?ä¸????????????? */
 		gravityScale: number;		
 		/** !#en
 		Linear damping is use to reduce the linear velocity.
 		The damping parameter can be larger than 1, but the damping effect becomes sensitive to the
 		time step when the damping parameter is large.
 		!#zh
-		Linear damping ç”¨äºè¡°å‡åˆšä½“çš„çº¿æ€§é€Ÿåº¦ã€‚è¡°å‡ç³»æ•°å¯ä»¥å¤§äº 1ï¼Œä½†æ˜¯å½“è¡°å‡ç³»æ•°æ¯”è¾ƒå¤§çš„æ—¶å€™ï¼Œè¡°å‡çš„æ•ˆæœä¼šå˜å¾—æ¯”è¾ƒæ•æ„Ÿã€‚ */
+		Linear damping ??¨ä??è¡°å?????ä½????çº¿æ?§é??åº¦ã??è¡°å??ç³»æ?°å?¯ä»¥å¤§ä?? 1ï¼?ä½???¯å??è¡°å??ç³»æ?°æ??è¾?å¤§ç????¶å??ï¼?è¡°å???????????ä¼????å¾?æ¯?è¾?????????? */
 		linearDamping: number;		
 		/** !#en
 		Angular damping is use to reduce the angular velocity. The damping parameter
 		can be larger than 1 but the damping effect becomes sensitive to the
 		time step when the damping parameter is large.
 		!#zh
-		Angular damping ç”¨äºè¡°å‡åˆšä½“çš„è§’é€Ÿåº¦ã€‚è¡°å‡ç³»æ•°å¯ä»¥å¤§äº 1ï¼Œä½†æ˜¯å½“è¡°å‡ç³»æ•°æ¯”è¾ƒå¤§çš„æ—¶å€™ï¼Œè¡°å‡çš„æ•ˆæœä¼šå˜å¾—æ¯”è¾ƒæ•æ„Ÿã€‚ */
+		Angular damping ??¨ä??è¡°å?????ä½????è§????åº¦ã??è¡°å??ç³»æ?°å?¯ä»¥å¤§ä?? 1ï¼?ä½???¯å??è¡°å??ç³»æ?°æ??è¾?å¤§ç????¶å??ï¼?è¡°å???????????ä¼????å¾?æ¯?è¾?????????? */
 		angularDamping: number;		
 		/** !#en
 		The linear velocity of the body's origin in world co-ordinates.
 		!#zh
-		åˆšä½“åœ¨ä¸–ç•Œåæ ‡ä¸‹çš„çº¿æ€§é€Ÿåº¦ */
+		???ä½???¨ä???????????ä¸????çº¿æ?§é??åº? */
 		linearVelocity: Vec2;		
 		/** !#en
 		The angular velocity of the body.
 		!#zh
-		åˆšä½“çš„è§’é€Ÿåº¦ */
+		???ä½????è§????åº? */
 		angularVelocity: number;		
 		/** !#en
 		Should this body be prevented from rotating?
 		!#zh
-		æ˜¯å¦ç¦æ­¢æ­¤åˆšä½“è¿›è¡Œæ—‹è½¬ */
+		??¯å?¦ç??æ­¢æ­¤???ä½?è¿?è¡????è½? */
 		fixedRotation: boolean;		
 		/** !#en
 		Set the sleep state of the body. A sleeping body has very low CPU cost.(When the rigid body is hit, if the rigid body is in sleep state, it will be immediately awakened.)
 		!#zh
-		è®¾ç½®åˆšä½“çš„ç¡çœ çŠ¶æ€ã€‚ ç¡çœ çš„åˆšä½“å…·æœ‰éå¸¸ä½çš„ CPU æˆæœ¬ã€‚ï¼ˆå½“åˆšä½“è¢«ç¢°æ’åˆ°æ—¶ï¼Œå¦‚æœåˆšä½“å¤„äºç¡çœ çŠ¶æ€ï¼Œå®ƒä¼šç«‹å³è¢«å”¤é†’ï¼‰ */
+		è®¾ç½®???ä½??????¡ç????¶æ????? ??¡ç????????ä½???·æ?????å¸¸ä????? CPU ?????¬ã??ï¼?å½????ä½?è¢«ç¢°?????°æ?¶ï??å¦???????ä½?å¤?äº???¡ç????¶æ??ï¼?å®?ä¼?ç«???³è¢«??¤é??ï¼? */
 		awake: boolean;		
 		/** !#en
 		Whether to wake up this rigid body during initialization
 		!#zh
-		æ˜¯å¦åœ¨åˆå§‹åŒ–æ—¶å”¤é†’æ­¤åˆšä½“ */
+		??¯å?¦å?¨å??å§??????¶å?¤é??æ­¤å??ä½? */
 		awakeOnLoad: boolean;		
 		/** !#en
 		Set the active state of the body. An inactive body is not
@@ -12090,17 +12090,17 @@ declare namespace cc {
 		not participate in collisions, ray-casts, or queries.
 		Joints connected to an inactive body are implicitly inactive.
 		!#zh
-		è®¾ç½®åˆšä½“çš„æ¿€æ´»çŠ¶æ€ã€‚ä¸€ä¸ªéæ¿€æ´»çŠ¶æ€ä¸‹çš„åˆšä½“æ˜¯ä¸ä¼šè¢«æ¨¡æ‹Ÿå’Œç¢°æ’çš„ï¼Œä¸ç®¡å®ƒæ˜¯å¦å¤„äºç¡çœ çŠ¶æ€ä¸‹ã€‚
-		å¦‚æœåˆšä½“å¤„äºæ¿€æ´»çŠ¶æ€ä¸‹ï¼Œæ‰€æœ‰å¤¹å…·ä¼šè¢«æ·»åŠ åˆ° ç²—æµ‹é˜¶æ®µï¼ˆbroad-phaseï¼‰ã€‚
-		å¦‚æœåˆšä½“å¤„äºéæ¿€æ´»çŠ¶æ€ä¸‹ï¼Œæ‰€æœ‰å¤¹å…·ä¼šè¢«ä» ç²—æµ‹é˜¶æ®µï¼ˆbroad-phaseï¼‰ä¸­ç§»é™¤ã€‚
-		åœ¨éæ¿€æ´»çŠ¶æ€ä¸‹çš„å¤¹å…·ä¸ä¼šå‚ä¸åˆ°ç¢°æ’ï¼Œå°„çº¿ï¼Œæˆ–è€…æŸ¥æ‰¾ä¸­
-		é“¾æ¥åˆ°éæ¿€æ´»çŠ¶æ€ä¸‹åˆšä½“çš„å…³èŠ‚ä¹Ÿæ˜¯éæ¿€æ´»çš„ã€‚ */
+		è®¾ç½®???ä½????æ¿?æ´»ç?¶æ?????ä¸?ä¸ªé??æ¿?æ´»ç?¶æ??ä¸???????ä½???¯ä??ä¼?è¢«æ¨¡??????ç¢°æ?????ï¼?ä¸?ç®¡å????¯å?¦å??äº???¡ç????¶æ??ä¸????
+		å¦???????ä½?å¤?äº?æ¿?æ´»ç?¶æ??ä¸?ï¼???????å¤¹å?·ä??è¢«æ·»?????? ç²?æµ???¶æ®µï¼?broad-phaseï¼????
+		å¦???????ä½?å¤?äº????æ¿?æ´»ç?¶æ??ä¸?ï¼???????å¤¹å?·ä??è¢«ä?? ç²?æµ???¶æ®µï¼?broad-phaseï¼?ä¸­ç§»??¤ã??
+		??¨é??æ¿?æ´»ç?¶æ??ä¸????å¤¹å?·ä??ä¼????ä¸???°ç¢°???ï¼?å°?çº¿ï??????????¥æ?¾ä¸­
+		??¾æ?¥å?°é??æ¿?æ´»ç?¶æ??ä¸????ä½??????³è??ä¹???¯é??æ¿?æ´»ç????? */
 		active: boolean;		
 		/**
 		!#en
 		Converts a given point in the world coordinate system to this rigid body's local coordinate system
 		!#zh
-		å°†ä¸€ä¸ªç»™å®šçš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ç‚¹è½¬æ¢ä¸ºåˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹çš„ç‚¹
+		å°?ä¸?ä¸ªç??å®????ä¸??????????ç³»ä???????¹è½¬??¢ä¸º???ä½???¬å?°å?????ç³»ä????????
 		@param worldPoint a point in world coordinates.
 		@param out optional, the receiving point 
 		*/
@@ -12109,7 +12109,7 @@ declare namespace cc {
 		!#en
 		Converts a given point in this rigid body's local coordinate system to the world coordinate system
 		!#zh
-		å°†ä¸€ä¸ªç»™å®šçš„åˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹çš„ç‚¹è½¬æ¢ä¸ºä¸–ç•Œåæ ‡ç³»ä¸‹çš„ç‚¹
+		å°?ä¸?ä¸ªç??å®???????ä½???¬å?°å?????ç³»ä???????¹è½¬??¢ä¸ºä¸??????????ç³»ä????????
 		@param localPoint a point in local coordinates.
 		@param out optional, the receiving point 
 		*/
@@ -12118,7 +12118,7 @@ declare namespace cc {
 		!#en
 		Converts a given vector in this rigid body's local coordinate system to the world coordinate system
 		!#zh
-		å°†ä¸€ä¸ªç»™å®šçš„åˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹çš„å‘é‡è½¬æ¢ä¸ºä¸–ç•Œåæ ‡ç³»ä¸‹çš„å‘é‡
+		å°?ä¸?ä¸ªç??å®???????ä½???¬å?°å?????ç³»ä???????????è½¬æ?¢ä¸ºä¸??????????ç³»ä???????????
 		@param localVector a vector in world coordinates.
 		@param out optional, the receiving vector 
 		*/
@@ -12127,7 +12127,7 @@ declare namespace cc {
 		!#en
 		Converts a given vector in the world coordinate system to this rigid body's local coordinate system
 		!#zh
-		å°†ä¸€ä¸ªç»™å®šçš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„å‘é‡è½¬æ¢ä¸ºåˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹çš„å‘é‡
+		å°?ä¸?ä¸ªç??å®????ä¸??????????ç³»ä???????????è½¬æ?¢ä¸º???ä½???¬å?°å?????ç³»ä???????????
 		@param worldVector a vector in world coordinates.
 		@param out optional, the receiving vector 
 		*/
@@ -12136,7 +12136,7 @@ declare namespace cc {
 		!#en
 		Get the world body origin position.
 		!#zh
-		è·å–åˆšä½“ä¸–ç•Œåæ ‡ç³»ä¸‹çš„åŸç‚¹å€¼
+		??·å?????ä½?ä¸??????????ç³»ä??????????¹å??
 		@param out optional, the receiving point 
 		*/
 		getWorldPosition(out: Vec2): Vec2;		
@@ -12144,28 +12144,28 @@ declare namespace cc {
 		!#en
 		Get the world body rotation angle.
 		!#zh
-		è·å–åˆšä½“ä¸–ç•Œåæ ‡ç³»ä¸‹çš„æ—‹è½¬å€¼ã€‚ 
+		??·å?????ä½?ä¸??????????ç³»ä????????è½¬å?¼ã?? 
 		*/
 		getWorldRotation(): number;		
 		/**
 		!#en
 		Get the local position of the center of mass.
 		!#zh
-		è·å–åˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹çš„è´¨å¿ƒ 
+		??·å?????ä½???¬å?°å?????ç³»ä?????è´¨å?? 
 		*/
 		getLocalCenter(): Vec2;		
 		/**
 		!#en
 		Get the world position of the center of mass.
 		!#zh
-		è·å–åˆšä½“ä¸–ç•Œåæ ‡ç³»ä¸‹çš„è´¨å¿ƒ 
+		??·å?????ä½?ä¸??????????ç³»ä?????è´¨å?? 
 		*/
 		getWorldCenter(): Vec2;		
 		/**
 		!#en
 		Get the world linear velocity of a world point attached to this body.
 		!#zh
-		è·å–åˆšä½“ä¸ŠæŒ‡å®šç‚¹çš„çº¿æ€§é€Ÿåº¦
+		??·å?????ä½?ä¸????å®???¹ç??çº¿æ?§é??åº?
 		@param worldPoint a point in world coordinates.
 		@param out optional, the receiving point 
 		*/
@@ -12174,21 +12174,21 @@ declare namespace cc {
 		!#en
 		Get total mass of the body.
 		!#zh
-		è·å–åˆšä½“çš„è´¨é‡ã€‚ 
+		??·å?????ä½????è´¨é????? 
 		*/
 		getMass(): number;		
 		/**
 		!#en
 		Get the rotational inertia of the body about the local origin.
 		!#zh
-		è·å–åˆšä½“æœ¬åœ°åæ ‡ç³»ä¸‹åŸç‚¹çš„æ—‹è½¬æƒ¯æ€§ 
+		??·å?????ä½???¬å?°å?????ç³»ä???????¹ç?????è½¬æ?¯æ?? 
 		*/
 		getInertia(): number;		
 		/**
 		!#en
 		Get all the joints connect to the rigidbody.
 		!#zh
-		è·å–é“¾æ¥åˆ°æ­¤åˆšä½“çš„æ‰€æœ‰å…³èŠ‚ 
+		??·å????¾æ?¥å?°æ­¤???ä½????????????³è?? 
 		*/
 		getJointList(): Joint[];		
 		/**
@@ -12197,7 +12197,7 @@ declare namespace cc {
 		applied at the center of mass, it will generate a torque and
 		affect the angular velocity.
 		!#zh
-		æ–½åŠ ä¸€ä¸ªåŠ›åˆ°åˆšä½“ä¸Šçš„ä¸€ä¸ªç‚¹ã€‚å¦‚æœåŠ›æ²¡æœ‰æ–½åŠ åˆ°åˆšä½“çš„è´¨å¿ƒä¸Šï¼Œè¿˜ä¼šäº§ç”Ÿä¸€ä¸ªæ‰­çŸ©å¹¶ä¸”å½±å“åˆ°è§’é€Ÿåº¦ã€‚
+		??½å??ä¸?ä¸ªå????°å??ä½?ä¸????ä¸?ä¸ªç?¹ã??å¦???????æ²¡æ????½å????°å??ä½????è´¨å??ä¸?ï¼?è¿?ä¼?äº§ç??ä¸?ä¸ªæ?­ç?©å¹¶ä¸?å½±å????°è?????åº¦ã??
 		@param force the world force vector.
 		@param point the world position.
 		@param wake also wake up the body. 
@@ -12207,7 +12207,7 @@ declare namespace cc {
 		!#en
 		Apply a force to the center of mass.
 		!#zh
-		æ–½åŠ ä¸€ä¸ªåŠ›åˆ°åˆšä½“ä¸Šçš„è´¨å¿ƒä¸Šã€‚
+		??½å??ä¸?ä¸ªå????°å??ä½?ä¸????è´¨å??ä¸????
 		@param force the world force vector.
 		@param wake also wake up the body. 
 		*/
@@ -12216,7 +12216,7 @@ declare namespace cc {
 		!#en
 		Apply a torque. This affects the angular velocity.
 		!#zh
-		æ–½åŠ ä¸€ä¸ªæ‰­çŸ©åŠ›ï¼Œå°†å½±å“åˆšä½“çš„è§’é€Ÿåº¦
+		??½å??ä¸?ä¸ªæ?­ç?©å??ï¼?å°?å½±å?????ä½????è§????åº?
 		@param torque about the z-axis (out of the screen), usually in N-m.
 		@param wake also wake up the body 
 		*/
@@ -12227,8 +12227,8 @@ declare namespace cc {
 		If the impulse is not applied at the center of mass, it will generate a torque and
 		affect the angular velocity.
 		!#zh
-		æ–½åŠ å†²é‡åˆ°åˆšä½“ä¸Šçš„ä¸€ä¸ªç‚¹ï¼Œå°†ç«‹å³æ”¹å˜åˆšä½“çš„çº¿æ€§é€Ÿåº¦ã€‚
-		å¦‚æœå†²é‡æ–½åŠ åˆ°çš„ç‚¹ä¸æ˜¯åˆšä½“çš„è´¨å¿ƒï¼Œé‚£ä¹ˆå°†äº§ç”Ÿä¸€ä¸ªæ‰­çŸ©å¹¶å½±å“åˆšä½“çš„è§’é€Ÿåº¦ã€‚
+		??½å????²é????°å??ä½?ä¸????ä¸?ä¸ªç?¹ï??å°?ç«???³æ?¹å?????ä½????çº¿æ?§é??åº¦ã??
+		å¦??????²é????½å????°ç????¹ä????¯å??ä½????è´¨å??ï¼????ä¹?å°?äº§ç??ä¸?ä¸ªæ?­ç?©å¹¶å½±å?????ä½????è§????åº¦ã??
 		@param impulse the world impulse vector, usually in N-seconds or kg-m/s.
 		@param point the world position
 		@param wake alse wake up the body 
@@ -12238,7 +12238,7 @@ declare namespace cc {
 		!#en
 		Apply an angular impulse.
 		!#zh
-		æ–½åŠ ä¸€ä¸ªè§’é€Ÿåº¦å†²é‡ã€‚
+		??½å??ä¸?ä¸ªè?????åº¦å?²é?????
 		@param impulse the angular impulse in units of kg*m*m/s
 		@param wake also wake up the body 
 		*/
@@ -12249,8 +12249,8 @@ declare namespace cc {
 		If enableAnimated is true and rigidbody's type is Animated type,
 		will set linear velocity instead of directly set rigidbody's position.
 		!#zh
-		åŒæ­¥èŠ‚ç‚¹çš„ä¸–ç•Œåæ ‡åˆ° box2d åˆšä½“çš„åæ ‡ä¸Šã€‚
-		å¦‚æœ enableAnimated æ˜¯ trueï¼Œå¹¶ä¸”åˆšä½“çš„ç±»å‹æ˜¯ Animated ï¼Œé‚£ä¹ˆå°†è®¾ç½®åˆšä½“çš„çº¿æ€§é€Ÿåº¦æ¥ä»£æ›¿ç›´æ¥è®¾ç½®åˆšä½“çš„ä½ç½®ã€‚
+		???æ­¥è????¹ç??ä¸????????????? box2d ???ä½??????????ä¸????
+		å¦???? enableAnimated ??? trueï¼?å¹¶ä?????ä½????ç±»å????? Animated ï¼????ä¹?å°?è®¾ç½®???ä½????çº¿æ?§é??åº¦æ?¥ä»£??¿ç?´æ?¥è®¾ç½®å??ä½????ä½?ç½®ã??
 		@param enableAnimated enableAnimated 
 		*/
 		syncPosition(enableAnimated: boolean): void;		
@@ -12260,8 +12260,8 @@ declare namespace cc {
 		If enableAnimated is true and rigidbody's type is Animated type,
 		will set angular velocity instead of directly set rigidbody's angle.
 		!#zh
-		åŒæ­¥èŠ‚ç‚¹çš„ä¸–ç•Œæ—‹è½¬è§’åº¦å€¼åˆ° box2d åˆšä½“çš„æ—‹è½¬å€¼ä¸Šã€‚
-		å¦‚æœ enableAnimated æ˜¯ trueï¼Œå¹¶ä¸”åˆšä½“çš„ç±»å‹æ˜¯ Animated ï¼Œé‚£ä¹ˆå°†è®¾ç½®åˆšä½“çš„è§’é€Ÿåº¦æ¥ä»£æ›¿ç›´æ¥è®¾ç½®åˆšä½“çš„è§’åº¦ã€‚
+		???æ­¥è????¹ç??ä¸???????è½¬è??åº¦å?¼å?? box2d ???ä½???????è½¬å?¼ä?????
+		å¦???? enableAnimated ??? trueï¼?å¹¶ä?????ä½????ç±»å????? Animated ï¼????ä¹?å°?è®¾ç½®???ä½????è§????åº¦æ?¥ä»£??¿ç?´æ?¥è®¾ç½®å??ä½????è§?åº¦ã??
 		@param enableAnimated enableAnimated 
 		*/
 		syncRotation(enableAnimated: boolean): void;	
@@ -12274,44 +12274,44 @@ declare namespace cc {
 	You can also use the convenience method {{#crossLink "cc/color:method"}}cc.color{{/crossLink}} to create a new Color.
 	
 	!#zh
-	cc.Color ç”¨äºè¡¨ç¤ºé¢œè‰²ã€‚
+	cc.Color ??¨ä??è¡¨ç¤ºé¢???²ã??
 	
-	å®ƒåŒ…å« RGBA å››ä¸ªä»¥æµ®ç‚¹æ•°ä¿å­˜çš„é¢œè‰²åˆ†é‡ï¼Œæ¯ä¸ªçš„å€¼éƒ½åœ¨ 0 åˆ° 255 ä¹‹é—´ã€‚
+	å®??????? RGBA ???ä¸ªä»¥æµ®ç?¹æ?°ä??å­????é¢???²å?????ï¼?æ¯?ä¸ªç????¼é?½å?? 0 ??? 255 ä¹???´ã??
 	
-	æ‚¨ä¹Ÿå¯ä»¥é€šè¿‡ä½¿ç”¨ {{#crossLink "cc/color:method"}}cc.color{{/crossLink}} çš„ä¾¿æ·æ–¹æ³•æ¥åˆ›å»ºä¸€ä¸ªæ–°çš„ Colorã€‚ */
+	??¨ä????¯ä»¥???è¿?ä½¿ç?? {{#crossLink "cc/color:method"}}cc.color{{/crossLink}} ???ä¾¿æ?·æ?¹æ????¥å??å»ºä??ä¸ªæ?°ç?? Color??? */
 	export class Color extends ValueType {		
 		/** !#en Solid white, RGBA is [255, 255, 255, 255].
-		!#zh çº¯ç™½è‰²ï¼ŒRGBA æ˜¯ [255, 255, 255, 255]ã€‚ */
+		!#zh çº¯ç?½è?²ï??RGBA ??? [255, 255, 255, 255]??? */
 		static WHITE: Color;		
 		/** !#en Solid black, RGBA is [0, 0, 0, 255].
-		!#zh çº¯é»‘è‰²ï¼ŒRGBA æ˜¯ [0, 0, 0, 255]ã€‚ */
+		!#zh çº¯é????²ï??RGBA ??? [0, 0, 0, 255]??? */
 		static BLACK: Color;		
 		/** !#en Transparent, RGBA is [0, 0, 0, 0].
-		!#zh é€æ˜ï¼ŒRGBA æ˜¯ [0, 0, 0, 0]ã€‚ */
+		!#zh ??????ï¼?RGBA ??? [0, 0, 0, 0]??? */
 		static TRANSPARENT: Color;		
 		/** !#en Grey, RGBA is [127.5, 127.5, 127.5].
-		!#zh ç°è‰²ï¼ŒRGBA æ˜¯ [127.5, 127.5, 127.5]ã€‚ */
+		!#zh ??°è?²ï??RGBA ??? [127.5, 127.5, 127.5]??? */
 		static GRAY: Color;		
 		/** !#en Solid red, RGBA is [255, 0, 0].
-		!#zh çº¯çº¢è‰²ï¼ŒRGBA æ˜¯ [255, 0, 0]ã€‚ */
+		!#zh çº¯çº¢??²ï??RGBA ??? [255, 0, 0]??? */
 		static RED: Color;		
 		/** !#en Solid green, RGBA is [0, 255, 0].
-		!#zh çº¯ç»¿è‰²ï¼ŒRGBA æ˜¯ [0, 255, 0]ã€‚ */
+		!#zh çº¯ç»¿??²ï??RGBA ??? [0, 255, 0]??? */
 		static GREEN: Color;		
 		/** !#en Solid blue, RGBA is [0, 0, 255].
-		!#zh çº¯è“è‰²ï¼ŒRGBA æ˜¯ [0, 0, 255]ã€‚ */
+		!#zh çº¯è????²ï??RGBA ??? [0, 0, 255]??? */
 		static BLUE: Color;		
 		/** !#en Yellow, RGBA is [255, 235, 4].
-		!#zh é»„è‰²ï¼ŒRGBA æ˜¯ [255, 235, 4]ã€‚ */
+		!#zh é»???²ï??RGBA ??? [255, 235, 4]??? */
 		static YELLOW: Color;		
 		/** !#en Orange, RGBA is [255, 127, 0].
-		!#zh æ©™è‰²ï¼ŒRGBA æ˜¯ [255, 127, 0]ã€‚ */
+		!#zh æ©???²ï??RGBA ??? [255, 127, 0]??? */
 		static ORANGE: Color;		
 		/** !#en Cyan, RGBA is [0, 255, 255].
-		!#zh é’è‰²ï¼ŒRGBA æ˜¯ [0, 255, 255]ã€‚ */
+		!#zh ?????²ï??RGBA ??? [0, 255, 255]??? */
 		static CYAN: Color;		
 		/** !#en Magenta, RGBA is [255, 0, 255].
-		!#zh æ´‹çº¢è‰²ï¼ˆå“çº¢è‰²ï¼‰ï¼ŒRGBA æ˜¯ [255, 0, 255]ã€‚ */
+		!#zh æ´?çº¢è?²ï?????çº¢è?²ï??ï¼?RGBA ??? [255, 0, 255]??? */
 		static MAGENTA: Color;		
 		/**
 		Copy content of a color into another. 
@@ -12358,22 +12358,22 @@ declare namespace cc {
 		*/
 		static lerp (out: Color, a: Color, b: Color, t: number): Color;		
 		/**
-		!#zh é¢œè‰²è½¬æ•°ç»„
+		!#zh é¢???²è½¬??°ç??
 		!#en Turn an array of colors
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, a: IColorLike, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬é¢œè‰²
+		!#zh ??°ç??è½¬é?????
 		!#en An array of colors turn
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IColorLike> (arr: IWritableArrayLike<number>, out: Out, ofs?: number): Out;		
 		/**
-		!#zh é¢œè‰² RGB é¢„ä¹˜ Alpha é€šé“
+		!#zh é¢???? RGB é¢?ä¹? Alpha ??????
 		!#en RGB premultiply alpha channel
-		@param out è¿”å›é¢œè‰²
-		@param color é¢„ä¹˜å¤„ç†çš„ç›®æ ‡é¢œè‰² 
+		@param out è¿????é¢????
+		@param color é¢?ä¹?å¤?????????®æ??é¢???? 
 		*/
 		static premultiplyAlpha <Out extends IColorLike> (out: Out, a: IColorLike);		
 		/**
@@ -12386,7 +12386,7 @@ declare namespace cc {
 		constructor(r?: number, g?: number, b?: number, a?: number);		
 		/**
 		!#en Clone a new color from the current color.
-		!#zh å…‹éš†å½“å‰é¢œè‰²ã€‚
+		!#zh ??????å½????é¢???²ã??
 		
 		@example 
 		```js
@@ -12397,7 +12397,7 @@ declare namespace cc {
 		clone(): Color;		
 		/**
 		!#en TODO
-		!#zh åˆ¤æ–­ä¸¤ä¸ªé¢œè‰²æ˜¯å¦ç›¸ç­‰ã€‚
+		!#zh ??¤æ?­ä¸¤ä¸ªé????²æ?¯å?¦ç?¸ç?????
 		@param other other
 		
 		@example 
@@ -12412,7 +12412,7 @@ declare namespace cc {
 		equals(other: Color): boolean;		
 		/**
 		!#en TODO
-		!#zh çº¿æ€§æ’å€¼
+		!#zh çº¿æ?§æ?????
 		@param to to
 		@param ratio the interpolation coefficient.
 		@param out optional, the receiving vector.
@@ -12434,7 +12434,7 @@ declare namespace cc {
 		lerp(to: Color, ratio: number, out?: Color): Color;		
 		/**
 		!#en TODO
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²???
 		
 		@example 
 		```js
@@ -12444,25 +12444,25 @@ declare namespace cc {
 		*/
 		toString(): string;		
 		/** !#en Get or set red channel value
-		!#zh è·å–æˆ–è€…è®¾ç½®çº¢è‰²é€šé“ */
+		!#zh ??·å????????è®¾ç½®çº¢è?²é????? */
 		r: number;		
 		/** !#en Get or set green channel value
-		!#zh è·å–æˆ–è€…è®¾ç½®ç»¿è‰²é€šé“ */
+		!#zh ??·å????????è®¾ç½®ç»¿è?²é????? */
 		g: number;		
 		/** !#en Get or set blue channel value
-		!#zh è·å–æˆ–è€…è®¾ç½®è“è‰²é€šé“ */
+		!#zh ??·å????????è®¾ç½®?????²é????? */
 		b: number;		
 		/** !#en Get or set alpha channel value
-		!#zh è·å–æˆ–è€…è®¾ç½®é€æ˜é€šé“ */
+		!#zh ??·å????????è®¾ç½®???????????? */
 		a: number;		
 		/**
 		!#en Gets red channel value
-		!#zh è·å–å½“å‰é¢œè‰²çš„çº¢è‰²å€¼ã€‚ 
+		!#zh ??·å??å½????é¢???²ç??çº¢è?²å?¼ã?? 
 		*/
 		getR(): number;		
 		/**
 		!#en Sets red value and return the current color object
-		!#zh è®¾ç½®å½“å‰çš„çº¢è‰²å€¼ï¼Œå¹¶è¿”å›å½“å‰å¯¹è±¡ã€‚
+		!#zh è®¾ç½®å½???????çº¢è?²å?¼ï??å¹¶è?????å½????å¯¹è±¡???
 		@param red the new Red component.
 		
 		@example 
@@ -12474,12 +12474,12 @@ declare namespace cc {
 		setR(red: number): Color;		
 		/**
 		!#en Gets green channel value
-		!#zh è·å–å½“å‰é¢œè‰²çš„ç»¿è‰²å€¼ã€‚ 
+		!#zh ??·å??å½????é¢???²ç??ç»¿è?²å?¼ã?? 
 		*/
 		getG(): number;		
 		/**
 		!#en Sets green value and return the current color object
-		!#zh è®¾ç½®å½“å‰çš„ç»¿è‰²å€¼ï¼Œå¹¶è¿”å›å½“å‰å¯¹è±¡ã€‚
+		!#zh è®¾ç½®å½???????ç»¿è?²å?¼ï??å¹¶è?????å½????å¯¹è±¡???
 		@param green the new Green component.
 		
 		@example 
@@ -12491,12 +12491,12 @@ declare namespace cc {
 		setG(green: number): Color;		
 		/**
 		!#en Gets blue channel value
-		!#zh è·å–å½“å‰é¢œè‰²çš„è“è‰²å€¼ã€‚ 
+		!#zh ??·å??å½????é¢???²ç???????²å?¼ã?? 
 		*/
 		getB(): number;		
 		/**
 		!#en Sets blue value and return the current color object
-		!#zh è®¾ç½®å½“å‰çš„è“è‰²å€¼ï¼Œå¹¶è¿”å›å½“å‰å¯¹è±¡ã€‚
+		!#zh è®¾ç½®å½????????????²å?¼ï??å¹¶è?????å½????å¯¹è±¡???
 		@param blue the new Blue component.
 		
 		@example 
@@ -12508,12 +12508,12 @@ declare namespace cc {
 		setB(blue: number): Color;		
 		/**
 		!#en Gets alpha channel value
-		!#zh è·å–å½“å‰é¢œè‰²çš„é€æ˜åº¦å€¼ã€‚ 
+		!#zh ??·å??å½????é¢???²ç????????åº¦å?¼ã?? 
 		*/
 		getA(): number;		
 		/**
 		!#en Sets alpha value and return the current color object
-		!#zh è®¾ç½®å½“å‰çš„é€æ˜åº¦ï¼Œå¹¶è¿”å›å½“å‰å¯¹è±¡ã€‚
+		!#zh è®¾ç½®å½?????????????åº¦ï??å¹¶è?????å½????å¯¹è±¡???
 		@param alpha the new Alpha component.
 		
 		@example 
@@ -12525,7 +12525,7 @@ declare namespace cc {
 		setA(alpha: number): Color;		
 		/**
 		!#en Convert color to css format.
-		!#zh è½¬æ¢ä¸º CSS æ ¼å¼ã€‚
+		!#zh è½¬æ?¢ä¸º CSS ??¼å?????
 		@param opt "rgba", "rgb", "#rgb" or "#rrggbb".
 		
 		@example 
@@ -12541,7 +12541,7 @@ declare namespace cc {
 		toCSS(opt?: string): string;		
 		/**
 		!#en Read hex string and store color data into the current color object, the hex string must be formated as rgba or rgb.
-		!#zh è¯»å– 16 è¿›åˆ¶é¢œè‰²ã€‚
+		!#zh è¯»å?? 16 è¿???¶é????²ã??
 		@param hexString hexString
 		
 		@example 
@@ -12553,7 +12553,7 @@ declare namespace cc {
 		fromHEX(hexString: string): Color;		
 		/**
 		!#en convert Color to HEX color string.
-		!#zh è½¬æ¢ä¸º 16 è¿›åˆ¶ã€‚
+		!#zh è½¬æ?¢ä¸º 16 è¿???¶ã??
 		@param fmt "#rgb", "#rrggbb" or "#rrggbbaa".
 		
 		@example 
@@ -12566,7 +12566,7 @@ declare namespace cc {
 		toHEX(fmt?: string): string;		
 		/**
 		!#en Convert to 24bit rgb value.
-		!#zh è½¬æ¢ä¸º 24bit çš„ RGB å€¼ã€‚
+		!#zh è½¬æ?¢ä¸º 24bit ??? RGB ??¼ã??
 		
 		@example 
 		```js
@@ -12577,7 +12577,7 @@ declare namespace cc {
 		toRGBValue(): number;		
 		/**
 		!#en Read HSV model color and convert to RGB color
-		!#zh è¯»å– HSVï¼ˆè‰²å½©æ¨¡å‹ï¼‰æ ¼å¼ã€‚
+		!#zh è¯»å?? HSVï¼???²å½©æ¨¡å??ï¼???¼å?????
 		@param h h
 		@param s s
 		@param v v
@@ -12591,7 +12591,7 @@ declare namespace cc {
 		fromHSV(h: number, s: number, v: number): Color;		
 		/**
 		!#en Transform to HSV model color
-		!#zh è½¬æ¢ä¸º HSVï¼ˆè‰²å½©æ¨¡å‹ï¼‰æ ¼å¼ã€‚
+		!#zh è½¬æ?¢ä¸º HSVï¼???²å½©æ¨¡å??ï¼???¼å?????
 		
 		@example 
 		```js
@@ -12602,13 +12602,13 @@ declare namespace cc {
 		toHSV(): any;		
 		/**
 		!#en Set the color
-		!#zh è®¾ç½®é¢œè‰²
+		!#zh è®¾ç½®é¢????
 		@param color color 
 		*/
 		set (color: Color): Color;		
 		/**
 		!#en Multiplies the current color by the specified color
-		!#zh å°†å½“å‰é¢œè‰²ä¹˜ä»¥ä¸æŒ‡å®šé¢œè‰²
+		!#zh å°?å½????é¢???²ä??ä»¥ä?????å®?é¢????
 		@param other other 
 		*/
 		multiply(other: Color): Color;	
@@ -12641,42 +12641,42 @@ declare namespace cc {
 		/** Identity  of Mat3 */
 		static IDENTITY: Mat3;		
 		/**
-		!#zh çŸ©é˜µè½¬æ•°ç»„
+		!#zh ??©é?µè½¬??°ç??
 		!#en Matrix transpose array
-		@param ofs æ•°ç»„å†…çš„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç????????èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, mat: IMat3Like, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬çŸ©é˜µ
+		!#zh ??°ç??è½¬ç?©é??
 		!#en Transfer matrix array
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IMat3Like> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		/** !#en Matrix Data
-		!#zh çŸ©é˜µæ•°æ® */
+		!#zh ??©é?µæ?°æ?? */
 		m: Float64Array|Float32Array;		
 		constructor (m00?: number | Float32Array, m01?: number, m02?: number, m03?: number, m04?: number, m05?: number, m06?: number, m07?: number, m08?: number);	
 	}	
 	/** !#en Representation of 4*4 matrix.
-	!#zh è¡¨ç¤º 4*4 çŸ©é˜µ */
+	!#zh è¡¨ç¤º 4*4 ??©é?? */
 	export class Mat4 extends ValueType {		
 		/**
 		!#en Multiply the current matrix with another one
-		!#zh å°†å½“å‰çŸ©é˜µä¸æŒ‡å®šçŸ©é˜µç›¸ä¹˜
+		!#zh å°?å½??????©é?µä?????å®???©é?µç?¸ä??
 		@param other the second operand
 		@param out the receiving matrix, you can pass the same matrix to save result to itself, if not provided, a new matrix will be created 
 		*/
 		mul(other: Mat4, out?: Mat4): Mat4;		
 		/**
 		!#en Multiply each element of the matrix by a scalar.
-		!#zh å°†çŸ©é˜µçš„æ¯ä¸€ä¸ªå…ƒç´ éƒ½ä¹˜ä»¥æŒ‡å®šçš„ç¼©æ”¾å€¼ã€‚
+		!#zh å°???©é?µç??æ¯?ä¸?ä¸ªå??ç´???½ä??ä»¥æ??å®????ç¼©æ?¾å?¼ã??
 		@param number amount to scale the matrix's elements by
 		@param out the receiving matrix, you can pass the same matrix to save result to itself, if not provided, a new matrix will be created 
 		*/
 		mulScalar(number: number, out?: Mat4): Mat4;		
 		/**
 		!#en Subtracts the current matrix with another one
-		!#zh å°†å½“å‰çŸ©é˜µä¸æŒ‡å®šçš„çŸ©é˜µç›¸å‡
+		!#zh å°?å½??????©é?µä?????å®??????©é?µç?¸å??
 		@param other the second operand
 		@param out the receiving matrix, you can pass the same matrix to save result to itself, if not provided, a new matrix will be created 
 		*/
@@ -12684,279 +12684,279 @@ declare namespace cc {
 		/** Identity  of Mat4 */
 		static IDENTITY: Mat4;		
 		/**
-		!#zh è·å¾—æŒ‡å®šçŸ©é˜µçš„æ‹·è´
+		!#zh ??·å?????å®???©é?µç????·è??
 		!#en Copy of the specified matrix to obtain 
 		*/
 		static clone<Out extends IMat4Like> (a: Out): Mat4;		
 		/**
-		!#zh å¤åˆ¶ç›®æ ‡çŸ©é˜µ
+		!#zh å¤???¶ç?®æ????©é??
 		!#en Copy the target matrix 
 		*/
 		static copy<Out extends IMat4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å°†ç›®æ ‡èµ‹å€¼ä¸ºå•ä½çŸ©é˜µ
+		!#zh å°???®æ??èµ???¼ä¸º???ä½???©é??
 		!#en The target of an assignment is the identity matrix 
 		*/
 		static identity<Out extends IMat4Like> (out: Out): Out;		
 		/**
-		!#zh è½¬ç½®çŸ©é˜µ
+		!#zh è½¬ç½®??©é??
 		!#en Transposed matrix 
 		*/
 		static transpose<Out extends IMat4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh çŸ©é˜µæ±‚é€†
+		!#zh ??©é?µæ?????
 		!#en Matrix inversion 
 		*/
 		static invert<Out extends IMat4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh çŸ©é˜µè¡Œåˆ—å¼
+		!#zh ??©é?µè?????å¼?
 		!#en Matrix determinant 
 		*/
 		static determinant<Out extends IMat4Like> (a: Out): number;		
 		/**
-		!#zh çŸ©é˜µä¹˜æ³•
+		!#zh ??©é?µä??æ³?
 		!#en Matrix Multiplication 
 		*/
 		static multiply<Out extends IMat4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥å?????
 		!#en Was added in a given transformation matrix transformation on the basis of 
 		*/
 		static transform<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, a: Out, v: VecLike): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥æ–°ä½ç§»å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥æ?°ä??ç§»å?????
 		!#en Add new displacement transducer in a matrix transformation on the basis of a given 
 		*/
 		static translate<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, a: Out, v: VecLike): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥æ–°ç¼©æ”¾å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥æ?°ç¼©??¾å?????
 		!#en Add new scaling transformation in a given matrix transformation on the basis of 
 		*/
 		static scale<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, a: Out, v: VecLike): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥æ–°æ—‹è½¬å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥æ?°æ??è½¬å?????
 		!#en Add a new rotational transform matrix transformation on the basis of a given
-		@param rad æ—‹è½¬è§’åº¦
-		@param axis æ—‹è½¬è½´ 
+		@param rad ???è½¬è??åº?
+		@param axis ???è½¬è½´ 
 		*/
 		static rotate<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, a: Out, rad: number, axis: VecLike): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥ç»• X è½´çš„æ—‹è½¬å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥ç?? X è½´ç?????è½¬å?????
 		!#en Add rotational transformation around the X axis at a given matrix transformation on the basis of
-		@param rad æ—‹è½¬è§’åº¦ 
+		@param rad ???è½¬è??åº? 
 		*/
 		static rotateX<Out extends IMat4Like> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥ç»• Y è½´çš„æ—‹è½¬å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥ç?? Y è½´ç?????è½¬å?????
 		!#en Add about the Y axis rotation transformation in a given matrix transformation on the basis of
-		@param rad æ—‹è½¬è§’åº¦ 
+		@param rad ???è½¬è??åº? 
 		*/
 		static rotateY<Out extends IMat4Like> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh åœ¨ç»™å®šçŸ©é˜µå˜æ¢åŸºç¡€ä¸ŠåŠ å…¥ç»• Z è½´çš„æ—‹è½¬å˜æ¢
+		!#zh ??¨ç??å®???©é?µå????¢å?ºç??ä¸??????¥ç?? Z è½´ç?????è½¬å?????
 		!#en Added about the Z axis at a given rotational transformation matrix transformation on the basis of
-		@param rad æ—‹è½¬è§’åº¦ 
+		@param rad ???è½¬è??åº? 
 		*/
 		static rotateZ<Out extends IMat4Like> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh è®¡ç®—ä½ç§»çŸ©é˜µ
+		!#zh è®¡ç??ä½?ç§»ç?©é??
 		!#en Displacement matrix calculation 
 		*/
 		static fromTranslation<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, v: VecLike): Out;		
 		/**
-		!#zh è®¡ç®—ç¼©æ”¾çŸ©é˜µ
+		!#zh è®¡ç??ç¼©æ?¾ç?©é??
 		!#en Scaling matrix calculation 
 		*/
 		static fromScaling<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, v: VecLike): Out;		
 		/**
-		!#zh è®¡ç®—æ—‹è½¬çŸ©é˜µ
+		!#zh è®¡ç?????è½¬ç?©é??
 		!#en Calculates the rotation matrix 
 		*/
 		static fromRotation<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, rad: number, axis: VecLike): Out;		
 		/**
-		!#zh è®¡ç®—ç»• X è½´çš„æ—‹è½¬çŸ©é˜µ
+		!#zh è®¡ç??ç»? X è½´ç?????è½¬ç?©é??
 		!#en Calculating rotation matrix about the X axis 
 		*/
 		static fromXRotation<Out extends IMat4Like> (out: Out, rad: number): Out;		
 		/**
-		!#zh è®¡ç®—ç»• Y è½´çš„æ—‹è½¬çŸ©é˜µ
+		!#zh è®¡ç??ç»? Y è½´ç?????è½¬ç?©é??
 		!#en Calculating rotation matrix about the Y axis 
 		*/
 		static fromYRotation<Out extends IMat4Like> (out: Out, rad: number): Out;		
 		/**
-		!#zh è®¡ç®—ç»• Z è½´çš„æ—‹è½¬çŸ©é˜µ
+		!#zh è®¡ç??ç»? Z è½´ç?????è½¬ç?©é??
 		!#en Calculating rotation matrix about the Z axis 
 		*/
 		static fromZRotation<Out extends IMat4Like> (out: Out, rad: number): Out;		
 		/**
-		!#zh æ ¹æ®æ—‹è½¬å’Œä½ç§»ä¿¡æ¯è®¡ç®—çŸ©é˜µ
+		!#zh ??¹æ?®æ??è½¬å??ä½?ç§»ä¿¡??¯è®¡ç®???©é??
 		!#en The rotation and displacement information calculating matrix 
 		*/
 		static fromRT<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, q: Quat, v: VecLike): Out;		
 		/**
-		!#zh æå–çŸ©é˜µçš„ä½ç§»ä¿¡æ¯, é»˜è®¤çŸ©é˜µä¸­çš„å˜æ¢ä»¥ S->R->T çš„é¡ºåºåº”ç”¨
+		!#zh ????????©é?µç??ä½?ç§»ä¿¡???, é»?è®¤ç?©é?µä¸­????????¢ä»¥ S->R->T ???é¡ºå??åº????
 		!#en Extracting displacement information of the matrix, the matrix transform to the default sequential application S-> R-> T is 
 		*/
 		static getTranslation<Out extends IMat4Like, VecLike extends IVec3Like> (out: VecLike, mat: Out): VecLike;		
 		/**
-		!#zh æå–çŸ©é˜µçš„ç¼©æ”¾ä¿¡æ¯, é»˜è®¤çŸ©é˜µä¸­çš„å˜æ¢ä»¥ S->R->T çš„é¡ºåºåº”ç”¨
+		!#zh ????????©é?µç??ç¼©æ?¾ä¿¡???, é»?è®¤ç?©é?µä¸­????????¢ä»¥ S->R->T ???é¡ºå??åº????
 		!#en Scaling information extraction matrix, the matrix transform to the default sequential application S-> R-> T is 
 		*/
 		static getScaling<Out extends IMat4Like, VecLike extends IVec3Like> (out: VecLike, mat: Out): VecLike;		
 		/**
-		!#zh æå–çŸ©é˜µçš„æ—‹è½¬ä¿¡æ¯, é»˜è®¤è¾“å…¥çŸ©é˜µä¸å«æœ‰ç¼©æ”¾ä¿¡æ¯ï¼Œå¦‚è€ƒè™‘ç¼©æ”¾åº”ä½¿ç”¨ `toRTS` å‡½æ•°ã€‚
+		!#zh ????????©é?µç?????è½¬ä¿¡???, é»?è®¤è????¥ç?©é?µä????«æ??ç¼©æ?¾ä¿¡??¯ï??å¦???????ç¼©æ?¾å??ä½¿ç?? `toRTS` ??½æ?°ã??
 		!#en Rotation information extraction matrix, the matrix containing no default input scaling information, such as the use of `toRTS` should consider the scaling function. 
 		*/
 		static getRotation<Out extends IMat4Like> (out: Quat, mat: Out): Quat;		
 		/**
-		!#zh æå–æ—‹è½¬ã€ä½ç§»ã€ç¼©æ”¾ä¿¡æ¯ï¼Œ é»˜è®¤çŸ©é˜µä¸­çš„å˜æ¢ä»¥ S->R->T çš„é¡ºåºåº”ç”¨
+		!#zh ?????????è½¬ã??ä½?ç§»ã??ç¼©æ?¾ä¿¡??¯ï?? é»?è®¤ç?©é?µä¸­????????¢ä»¥ S->R->T ???é¡ºå??åº????
 		!#en Extracting rotational displacement, zoom information, the default matrix transformation in order S-> R-> T applications 
 		*/
 		static toRTS<Out extends IMat4Like, VecLike extends IVec3Like> (mat: Out, q: Quat, v: VecLike, s: VecLike): void;		
 		/**
-		!#zh æ ¹æ®æ—‹è½¬ã€ä½ç§»ã€ç¼©æ”¾ä¿¡æ¯è®¡ç®—çŸ©é˜µï¼Œä»¥ S->R->T çš„é¡ºåºåº”ç”¨
+		!#zh ??¹æ?®æ??è½¬ã??ä½?ç§»ã??ç¼©æ?¾ä¿¡??¯è®¡ç®???©é?µï??ä»? S->R->T ???é¡ºå??åº????
 		!#en The rotary displacement, the scaling matrix calculation information, the order S-> R-> T applications 
 		*/
 		static fromRTS<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, q: Quat, v: VecLike, s: VecLike): Out;		
 		/**
-		!#zh æ ¹æ®æŒ‡å®šçš„æ—‹è½¬ã€ä½ç§»ã€ç¼©æ”¾åŠå˜æ¢ä¸­å¿ƒä¿¡æ¯è®¡ç®—çŸ©é˜µï¼Œä»¥ S->R->T çš„é¡ºåºåº”ç”¨
+		!#zh ??¹æ?®æ??å®???????è½¬ã??ä½?ç§»ã??ç¼©æ?¾å???????¢ä¸­å¿?ä¿¡æ?¯è®¡ç®???©é?µï??ä»? S->R->T ???é¡ºå??åº????
 		!#en According to the specified rotation, displacement, and scale conversion matrix calculation information center, order S-> R-> T applications
-		@param q æ—‹è½¬å€¼
-		@param v ä½ç§»å€¼
-		@param s ç¼©æ”¾å€¼
-		@param o æŒ‡å®šå˜æ¢ä¸­å¿ƒ 
+		@param q ???è½¬å??
+		@param v ä½?ç§»å??
+		@param s ç¼©æ?¾å??
+		@param o ???å®??????¢ä¸­å¿? 
 		*/
 		static fromRTSOrigin<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, q: Quat, v: VecLike, s: VecLike, o: VecLike): Out;		
 		/**
-		!#zh æ ¹æ®æŒ‡å®šçš„æ—‹è½¬ä¿¡æ¯è®¡ç®—çŸ©é˜µ
+		!#zh ??¹æ?®æ??å®???????è½¬ä¿¡??¯è®¡ç®???©é??
 		!#en The rotation matrix calculation information specified 
 		*/
 		static fromQuat<Out extends IMat4Like> (out: Out, q: Quat): Out;		
 		/**
-		!#zh æ ¹æ®æŒ‡å®šçš„è§†é”¥ä½“ä¿¡æ¯è®¡ç®—çŸ©é˜µ
+		!#zh ??¹æ?®æ??å®????è§???¥ä??ä¿¡æ?¯è®¡ç®???©é??
 		!#en The matrix calculation information specified frustum
-		@param left å·¦å¹³é¢è·ç¦»
-		@param right å³å¹³é¢è·ç¦»
-		@param bottom ä¸‹å¹³é¢è·ç¦»
-		@param top ä¸Šå¹³é¢è·ç¦»
-		@param near è¿‘å¹³é¢è·ç¦»
-		@param far è¿œå¹³é¢è·ç¦» 
+		@param left å·¦å¹³??¢è??ç¦?
+		@param right ??³å¹³??¢è??ç¦?
+		@param bottom ä¸?å¹³é?¢è??ç¦?
+		@param top ä¸?å¹³é?¢è??ç¦?
+		@param near è¿?å¹³é?¢è??ç¦?
+		@param far è¿?å¹³é?¢è??ç¦? 
 		*/
 		static frustum<Out extends IMat4Like> (out: Out, left: number, right: number, bottom: number, top: number, near: number, far: number): Out;		
 		/**
-		!#zh è®¡ç®—é€è§†æŠ•å½±çŸ©é˜µ
+		!#zh è®¡ç?????è§????å½±ç?©é??
 		!#en Perspective projection matrix calculation
-		@param fovy çºµå‘è§†è§’é«˜åº¦
-		@param aspect é•¿å®½æ¯”
-		@param near è¿‘å¹³é¢è·ç¦»
-		@param far è¿œå¹³é¢è·ç¦» 
+		@param fovy çºµå??è§?è§?é«?åº?
+		@param aspect ??¿å®½æ¯?
+		@param near è¿?å¹³é?¢è??ç¦?
+		@param far è¿?å¹³é?¢è??ç¦? 
 		*/
 		static perspective<Out extends IMat4Like> (out: Out, fovy: number, aspect: number, near: number, far: number): Out;		
 		/**
-		!#zh è®¡ç®—æ­£äº¤æŠ•å½±çŸ©é˜µ
+		!#zh è®¡ç??æ­?äº¤æ??å½±ç?©é??
 		!#en Computing orthogonal projection matrix
-		@param left å·¦å¹³é¢è·ç¦»
-		@param right å³å¹³é¢è·ç¦»
-		@param bottom ä¸‹å¹³é¢è·ç¦»
-		@param top ä¸Šå¹³é¢è·ç¦»
-		@param near è¿‘å¹³é¢è·ç¦»
-		@param far è¿œå¹³é¢è·ç¦» 
+		@param left å·¦å¹³??¢è??ç¦?
+		@param right ??³å¹³??¢è??ç¦?
+		@param bottom ä¸?å¹³é?¢è??ç¦?
+		@param top ä¸?å¹³é?¢è??ç¦?
+		@param near è¿?å¹³é?¢è??ç¦?
+		@param far è¿?å¹³é?¢è??ç¦? 
 		*/
 		static ortho<Out extends IMat4Like> (out: Out, left: number, right: number, bottom: number, top: number, near: number, far: number): Out;		
 		/**
-		!#zh æ ¹æ®è§†ç‚¹è®¡ç®—çŸ©é˜µï¼Œæ³¨æ„ `eye - center` ä¸èƒ½ä¸ºé›¶å‘é‡æˆ–ä¸ `up` å‘é‡å¹³è¡Œ
+		!#zh ??¹æ?®è????¹è®¡ç®???©é?µï??æ³¨æ?? `eye - center` ä¸???½ä¸º??¶å????????ä¸? `up` ??????å¹³è??
 		!#en `Up` parallel vector or vector center` not be zero - the matrix calculation according to the viewpoint, note` eye
-		@param eye å½“å‰ä½ç½®
-		@param center ç›®æ ‡è§†ç‚¹
-		@param up è§†å£ä¸Šæ–¹å‘ 
+		@param eye å½????ä½?ç½?
+		@param center ??®æ??è§????
+		@param up è§????ä¸???¹å?? 
 		*/
 		static lookAt<Out extends IMat4Like, VecLike extends IVec3Like> (out: Out, eye: VecLike, center: VecLike, up: VecLike): Out;		
 		/**
-		!#zh è®¡ç®—é€†è½¬ç½®çŸ©é˜µ
+		!#zh è®¡ç?????è½¬ç½®??©é??
 		!#en Reversal matrix calculation 
 		*/
 		static inverseTranspose<Out extends IMat4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ çŸ©é˜µåŠ æ³•
+		!#zh ??????ç´???©é?µå??æ³?
 		!#en Element by element matrix addition 
 		*/
 		static add<Out extends IMat4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ çŸ©é˜µå‡æ³•
+		!#zh ??????ç´???©é?µå??æ³?
 		!#en Matrix element by element subtraction 
 		*/
 		static subtract<Out extends IMat4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh çŸ©é˜µæ ‡é‡ä¹˜æ³•
+		!#zh ??©é?µæ?????ä¹?æ³?
 		!#en Matrix scalar multiplication 
 		*/
 		static multiplyScalar<Out extends IMat4Like> (out: Out, a: Out, b: number): Out;		
 		/**
-		!#zh é€å…ƒç´ çŸ©é˜µæ ‡é‡ä¹˜åŠ : A + B * scale
+		!#zh ??????ç´???©é?µæ?????ä¹????: A + B * scale
 		!#en Elements of the matrix by the scalar multiplication and addition: A + B * scale 
 		*/
 		static multiplyScalarAndAdd<Out extends IMat4Like> (out: Out, a: Out, b: Out, scale: number): Out;		
 		/**
-		!#zh çŸ©é˜µç­‰ä»·åˆ¤æ–­
+		!#zh ??©é?µç??ä»·å?¤æ??
 		!#en Analyzing the equivalent matrix 
 		*/
 		static strictEquals<Out extends IMat4Like> (a: Out, b: Out): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„çŸ©é˜µè¿‘ä¼¼ç­‰ä»·åˆ¤æ–­
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç????©é?µè??ä¼¼ç??ä»·å?¤æ??
 		!#en Negative floating point error is approximately equivalent to determining a matrix 
 		*/
 		static equals<Out extends IMat4Like> (a: Out, b: Out, epsilon?: number): boolean;		
 		/**
-		!#zh çŸ©é˜µè½¬æ•°ç»„
+		!#zh ??©é?µè½¬??°ç??
 		!#en Matrix transpose array
-		@param ofs æ•°ç»„å†…çš„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç????????èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, mat: IMat4Like, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬çŸ©é˜µ
+		!#zh ??°ç??è½¬ç?©é??
 		!#en Transfer matrix array
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IMat4Like> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		/** !#en Matrix Data
-		!#zh çŸ©é˜µæ•°æ® */
+		!#zh ??©é?µæ?°æ?? */
 		m: Float64Array|Float32Array;		
 		/**
 		!#en
 		Constructor
 		see {{#crossLink "cc/mat4:method"}}cc.mat4{{/crossLink}}
 		!#zh
-		æ„é€ å‡½æ•°ï¼Œå¯æŸ¥çœ‹ {{#crossLink "cc/mat4:method"}}cc.mat4{{/crossLink}} 
+		????????½æ?°ï????¯æ?¥ç?? {{#crossLink "cc/mat4:method"}}cc.mat4{{/crossLink}} 
 		*/
 		constructor ( m00?: number, m01?: number, m02?: number, m03?: number, m10?: number, m11?: number, m12?: number, m13?: number, m20?: number, m21?: number, m22?: number, m23?: number, m30?: number, m31?: number, m32?: number, m33?: number);		
 		/**
 		!#en clone a Mat4 object
-		!#zh å…‹éš†ä¸€ä¸ª Mat4 å¯¹è±¡ 
+		!#zh ??????ä¸?ä¸? Mat4 å¯¹è±¡ 
 		*/
 		clone(): Mat4;		
 		/**
 		!#en Sets the matrix with another one's value
-		!#zh ç”¨å¦ä¸€ä¸ªçŸ©é˜µè®¾ç½®è¿™ä¸ªçŸ©é˜µçš„å€¼ã€‚
+		!#zh ??¨å?¦ä??ä¸ªç?©é?µè®¾ç½®è??ä¸ªç?©é?µç????¼ã??
 		@param srcObj srcObj 
 		*/
 		set(srcObj: Mat4): Mat4;		
 		/**
 		!#en Check whether two matrix equal
-		!#zh å½“å‰çš„çŸ©é˜µæ˜¯å¦ä¸æŒ‡å®šçš„çŸ©é˜µç›¸ç­‰ã€‚
+		!#zh å½?????????©é?µæ?¯å?¦ä?????å®??????©é?µç?¸ç?????
 		@param other other 
 		*/
 		equals(other: Mat4): boolean;		
 		/**
 		!#en Check whether two matrix equal with default degree of variance.
 		!#zh
-		è¿‘ä¼¼åˆ¤æ–­ä¸¤ä¸ªçŸ©é˜µæ˜¯å¦ç›¸ç­‰ã€‚<br/>
-		åˆ¤æ–­ 2 ä¸ªçŸ©é˜µæ˜¯å¦åœ¨é»˜è®¤è¯¯å·®èŒƒå›´ä¹‹å†…ï¼Œå¦‚æœåœ¨åˆ™è¿”å› trueï¼Œåä¹‹åˆ™è¿”å› falseã€‚
+		è¿?ä¼¼å?¤æ?­ä¸¤ä¸ªç?©é?µæ?¯å?¦ç?¸ç?????<br/>
+		??¤æ?? 2 ä¸ªç?©é?µæ?¯å?¦å?¨é??è®¤è¯¯å·®è????´ä?????ï¼?å¦??????¨å??è¿???? trueï¼????ä¹????è¿???? false???
 		@param other other 
 		*/
 		fuzzyEquals(other: Mat4): boolean;		
 		/**
 		!#en Transform to string with matrix informations
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚ 
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²??? 
 		*/
 		toString(): string;		
 		/**
@@ -13051,14 +13051,14 @@ declare namespace cc {
 		fromQuat(q: Quat): Mat4;	
 	}	
 	/** !#en Representation of 2D vectors and points.
-	!#zh è¡¨ç¤º 2D å‘é‡å’Œåæ ‡ */
+	!#zh è¡¨ç¤º 2D ??????????????? */
 	export class Quat extends ValueType {		
 		/**
 		!#en
 		Constructor
 		see {{#crossLink "cc/quat:method"}}cc.quat{{/crossLink}}
 		!#zh
-		æ„é€ å‡½æ•°ï¼Œå¯æŸ¥çœ‹ {{#crossLink "cc/quat:method"}}cc.quat{{/crossLink}}
+		????????½æ?°ï????¯æ?¥ç?? {{#crossLink "cc/quat:method"}}cc.quat{{/crossLink}}
 		@param x x
 		@param y y
 		@param z z
@@ -13067,208 +13067,208 @@ declare namespace cc {
 		constructor(x?: number, y?: number, z?: number, w?: number);		
 		/**
 		!#en Calculate the multiply result between this quaternion and another one
-		!#zh è®¡ç®—å››å…ƒæ•°ä¹˜ç§¯çš„ç»“æœ
+		!#zh è®¡ç??????????°ä??ç§¯ç??ç»????
 		@param other other
 		@param out out 
 		*/
 		mul(other: Quat, out?: Quat): Quat;		
 		/**
-		!#zh è·å¾—æŒ‡å®šå››å…ƒæ•°çš„æ‹·è´
+		!#zh ??·å?????å®?????????°ç????·è??
 		!#en Obtaining copy specified quaternion 
 		*/
 		static clone<Out extends IQuatLike> (a: Out): Quat;		
 		/**
-		!#zh å¤åˆ¶ç›®æ ‡å››å…ƒæ•°
+		!#zh å¤???¶ç?®æ???????????
 		!#en Copy quaternion target 
 		*/
 		static copy<Out extends IQuatLike, QuatLike extends IQuatLike> (out: Out, a: QuatLike): Out;		
 		/**
-		!#zh è®¾ç½®å››å…ƒæ•°å€¼
+		!#zh è®¾ç½®????????°å??
 		!#en Provided Quaternion Value 
 		*/
 		static set<Out extends IQuatLike> (out: Out, x: number, y: number, z: number, w: number): Out;		
 		/**
-		!#zh å°†ç›®æ ‡èµ‹å€¼ä¸ºå•ä½å››å…ƒæ•°
+		!#zh å°???®æ??èµ???¼ä¸º???ä½??????????
 		!#en The target of an assignment as a unit quaternion 
 		*/
 		static identity<Out extends IQuatLike> (out: Out): Out;		
 		/**
-		!#zh è®¾ç½®å››å…ƒæ•°ä¸ºä¸¤å‘é‡é—´çš„æœ€çŸ­è·¯å¾„æ—‹è½¬ï¼Œé»˜è®¤ä¸¤å‘é‡éƒ½å·²å½’ä¸€åŒ–
+		!#zh è®¾ç½®????????°ä¸ºä¸¤å???????´ç???????­è·¯å¾????è½¬ï??é»?è®¤ä¸¤????????½å·²å½?ä¸????
 		!#en Set quaternion rotation is the shortest path between two vectors, the default two vectors are normalized 
 		*/
 		static rotationTo<Out extends IQuatLike, VecLike extends IVec3Like> (out: Out, a: VecLike, b: VecLike): Out;		
 		/**
-		!#zh è·å–å››å…ƒæ•°çš„æ—‹è½¬è½´å’Œæ—‹è½¬å¼§åº¦
+		!#zh ??·å??????????°ç?????è½¬è½´??????è½¬å¼§åº?
 		!#en Get the rotary shaft and the arc of rotation quaternion
-		@param outAxis æ—‹è½¬è½´è¾“å‡º
-		@param q æºå››å…ƒæ•° 
+		@param outAxis ???è½¬è½´è¾????
+		@param q æº?????????? 
 		*/
 		static getAxisAngle<Out extends IQuatLike, VecLike extends IVec3Like> (outAxis: VecLike, q: Out): number;		
 		/**
-		!#zh å››å…ƒæ•°ä¹˜æ³•
+		!#zh ????????°ä??æ³?
 		!#en Quaternion multiplication 
 		*/
 		static multiply<Out extends IQuatLike, QuatLike_1 extends IQuatLike, QuatLike_2 extends IQuatLike> (out: Out, a: QuatLike_1, b: QuatLike_2): Out;		
 		/**
-		!#zh å››å…ƒæ•°æ ‡é‡ä¹˜æ³•
+		!#zh ????????°æ?????ä¹?æ³?
 		!#en Quaternion scalar multiplication 
 		*/
 		static multiplyScalar<Out extends IQuatLike> (out: Out, a: Out, b: number): Out;		
 		/**
-		!#zh å››å…ƒæ•°ä¹˜åŠ ï¼šA + B * scale
+		!#zh ????????°ä?????ï¼?A + B * scale
 		!#en Quaternion multiplication and addition: A + B * scale 
 		*/
 		static scaleAndAdd<Out extends IQuatLike> (out: Out, a: Out, b: Out, scale: number): Out;		
 		/**
-		!#zh ç»• X è½´æ—‹è½¬æŒ‡å®šå››å…ƒæ•°
+		!#zh ç»? X è½´æ??è½¬æ??å®??????????
 		!#en About the X axis specified quaternion
-		@param rad æ—‹è½¬å¼§åº¦ 
+		@param rad ???è½¬å¼§åº? 
 		*/
 		static rotateX<Out extends IQuatLike> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh ç»• Y è½´æ—‹è½¬æŒ‡å®šå››å…ƒæ•°
+		!#zh ç»? Y è½´æ??è½¬æ??å®??????????
 		!#en Rotation about the Y axis designated quaternion
-		@param rad æ—‹è½¬å¼§åº¦ 
+		@param rad ???è½¬å¼§åº? 
 		*/
 		static rotateY<Out extends IQuatLike> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh ç»• Z è½´æ—‹è½¬æŒ‡å®šå››å…ƒæ•°
+		!#zh ç»? Z è½´æ??è½¬æ??å®??????????
 		!#en Around the Z axis specified quaternion
-		@param rad æ—‹è½¬å¼§åº¦ 
+		@param rad ???è½¬å¼§åº? 
 		*/
 		static rotateZ<Out extends IQuatLike> (out: Out, a: Out, rad: number): Out;		
 		/**
-		!#zh ç»•ä¸–ç•Œç©ºé—´ä¸‹æŒ‡å®šè½´æ—‹è½¬å››å…ƒæ•°
+		!#zh ç»?ä¸????ç©ºé?´ä?????å®?è½´æ??è½¬å????????
 		!#en Space around the world at a given axis of rotation quaternion
-		@param axis æ—‹è½¬è½´ï¼Œé»˜è®¤å·²å½’ä¸€åŒ–
-		@param rad æ—‹è½¬å¼§åº¦ 
+		@param axis ???è½¬è½´ï¼?é»?è®¤å·²å½?ä¸????
+		@param rad ???è½¬å¼§åº? 
 		*/
 		static rotateAround<Out extends IQuatLike, VecLike extends IVec3Like> (out: Out, rot: Out, axis: VecLike, rad: number): Out;		
 		/**
-		!#zh ç»•æœ¬åœ°ç©ºé—´ä¸‹æŒ‡å®šè½´æ—‹è½¬å››å…ƒæ•°
+		!#zh ç»???¬å?°ç©º??´ä?????å®?è½´æ??è½¬å????????
 		!#en Local space around the specified axis rotation quaternion
-		@param axis æ—‹è½¬è½´
-		@param rad æ—‹è½¬å¼§åº¦ 
+		@param axis ???è½¬è½´
+		@param rad ???è½¬å¼§åº? 
 		*/
 		static rotateAroundLocal<Out extends IQuatLike, VecLike extends IVec3Like> (out: Out, rot: Out, axis: VecLike, rad: number): Out;		
 		/**
-		!#zh æ ¹æ® xyz åˆ†é‡è®¡ç®— w åˆ†é‡ï¼Œé»˜è®¤å·²å½’ä¸€åŒ–
+		!#zh ??¹æ?? xyz ??????è®¡ç?? w ??????ï¼?é»?è®¤å·²å½?ä¸????
 		!#en The component w xyz components calculated, normalized by default 
 		*/
 		static calculateW<Out extends IQuatLike> (out: Out, a: Out): Out;		
 		/**
-		!#zh å››å…ƒæ•°ç‚¹ç§¯ï¼ˆæ•°é‡ç§¯ï¼‰
+		!#zh ????????°ç?¹ç§¯ï¼???°é??ç§¯ï??
 		!#en Quaternion dot product (scalar product) 
 		*/
 		static dot<Out extends IQuatLike> (a: Out, b: Out): number;		
 		/**
-		!#zh é€å…ƒç´ çº¿æ€§æ’å€¼ï¼š A + t * (B - A)
+		!#zh ??????ç´?çº¿æ?§æ????¼ï?? A + t * (B - A)
 		!#en Element by element linear interpolation: A + t * (B - A) 
 		*/
 		static lerp<Out extends IQuatLike> (out: Out, a: Out, b: Out, t: number): Out;		
 		/**
-		!#zh å››å…ƒæ•°çƒé¢æ’å€¼
+		!#zh ????????°ç????¢æ?????
 		!#en Spherical quaternion interpolation 
 		*/
 		static slerp<Out extends IQuatLike, QuatLike_1 extends IQuatLike, QuatLike_2 extends IQuatLike>(out: Out, a: QuatLike_1, b: QuatLike_2, t: number): Out;		
 		/**
-		!#zh å¸¦ä¸¤ä¸ªæ§åˆ¶ç‚¹çš„å››å…ƒæ•°çƒé¢æ’å€¼
+		!#zh å¸¦ä¸¤ä¸ªæ?§å?¶ç?¹ç??????????°ç????¢æ?????
 		!#en Quaternion with two spherical interpolation control points 
 		*/
 		static sqlerp<Out extends IQuatLike> (out: Out, a: Out, b: Out, c: Out, d: Out, t: number): Out;		
 		/**
-		!#zh å››å…ƒæ•°æ±‚é€†
+		!#zh ????????°æ?????
 		!#en Quaternion inverse 
 		*/
 		static invert<Out extends IQuatLike, QuatLike extends IQuatLike> (out: Out, a: QuatLike): Out;		
 		/**
-		!#zh æ±‚å…±è½­å››å…ƒæ•°ï¼Œå¯¹å•ä½å››å…ƒæ•°ä¸æ±‚é€†ç­‰ä»·ï¼Œä½†æ›´é«˜æ•ˆ
+		!#zh æ±???±è½­????????°ï??å¯¹å??ä½?????????°ä??æ±????ç­?ä»·ï??ä½???´é?????
 		!#en Conjugating a quaternion, and the unit quaternion equivalent to inversion, but more efficient 
 		*/
 		static conjugate<Out extends IQuatLike> (out: Out, a: Out): Out;		
 		/**
-		!#zh æ±‚å››å…ƒæ•°é•¿åº¦
+		!#zh æ±?????????°é?¿åº¦
 		!#en Seek length quaternion 
 		*/
 		static len<Out extends IQuatLike> (a: Out): number;		
 		/**
-		!#zh æ±‚å››å…ƒæ•°é•¿åº¦å¹³æ–¹
+		!#zh æ±?????????°é?¿åº¦å¹³æ??
 		!#en Seeking quaternion square of the length 
 		*/
 		static lengthSqr<Out extends IQuatLike> (a: Out): number;		
 		/**
-		!#zh å½’ä¸€åŒ–å››å…ƒæ•°
+		!#zh å½?ä¸?????????????
 		!#en Normalized quaternions 
 		*/
 		static normalize<Out extends IQuatLike> (out: Out, a: Out): Out;		
 		/**
-		!#zh æ ¹æ®æœ¬åœ°åæ ‡è½´æœå‘è®¡ç®—å››å…ƒæ•°ï¼Œé»˜è®¤ä¸‰å‘é‡éƒ½å·²å½’ä¸€åŒ–ä¸”ç›¸äº’å‚ç›´
+		!#zh ??¹æ?®æ?¬å?°å?????è½´æ?????è®¡ç??????????°ï??é»?è®¤ä??????????½å·²å½?ä¸????ä¸???¸ä????????
 		!#en Calculated according to the local orientation quaternion coordinate axis, the default three vectors are normalized and mutually perpendicular 
 		*/
 		static fromAxes<Out extends IQuatLike, VecLike extends IVec3Like> (out: Out, xAxis: VecLike, yAxis: VecLike, zAxis: VecLike): Out;		
 		/**
-		!#zh æ ¹æ®è§†å£çš„å‰æ–¹å‘å’Œä¸Šæ–¹å‘è®¡ç®—å››å…ƒæ•°
+		!#zh ??¹æ?®è?????????????¹å?????ä¸???¹å??è®¡ç???????????
 		!#en The forward direction and the direction of the viewport computing quaternion
-		@param view è§†å£é¢å‘çš„å‰æ–¹å‘ï¼Œå¿…é¡»å½’ä¸€åŒ–
-		@param up è§†å£çš„ä¸Šæ–¹å‘ï¼Œå¿…é¡»å½’ä¸€åŒ–ï¼Œé»˜è®¤ä¸º (0, 1, 0) 
+		@param view è§??????¢å??????????¹å??ï¼?å¿?é¡»å??ä¸????
+		@param up è§???????ä¸???¹å??ï¼?å¿?é¡»å??ä¸????ï¼?é»?è®¤ä¸º (0, 1, 0) 
 		*/
 		static fromViewUp<Out extends IQuatLike> (out: Out, view: Vec3, up?: Vec3): Out;		
 		/**
-		!#zh æ ¹æ®æ—‹è½¬è½´å’Œæ—‹è½¬å¼§åº¦è®¡ç®—å››å…ƒæ•°
+		!#zh ??¹æ?®æ??è½¬è½´??????è½¬å¼§åº¦è®¡ç®??????????
 		!#en The quaternion calculated and the arc of rotation of the rotary shaft 
 		*/
 		static fromAxisAngle<Out extends IQuatLike, VecLike extends IVec3Like> (out: Out, axis: VecLike, rad: number): Out;		
 		/**
-		!#zh æ ¹æ®ä¸‰ç»´çŸ©é˜µä¿¡æ¯è®¡ç®—å››å…ƒæ•°ï¼Œé»˜è®¤è¾“å…¥çŸ©é˜µä¸å«æœ‰ç¼©æ”¾ä¿¡æ¯
+		!#zh ??¹æ?®ä??ç»´ç?©é?µä¿¡??¯è®¡ç®?????????°ï??é»?è®¤è????¥ç?©é?µä????«æ??ç¼©æ?¾ä¿¡???
 		!#en Calculating the three-dimensional quaternion matrix information, default zoom information input matrix does not contain 
 		*/
 		static fromMat3<Out extends IQuatLike> (out: Out, mat: Mat3): Out;		
 		/**
-		!#zh æ ¹æ®æ¬§æ‹‰è§’ä¿¡æ¯è®¡ç®—å››å…ƒæ•°ï¼Œæ—‹è½¬é¡ºåºä¸º YZX
+		!#zh ??¹æ?®æ¬§???è§?ä¿¡æ?¯è®¡ç®?????????°ï?????è½¬é¡ºåº?ä¸? YZX
 		!#en The quaternion calculated Euler angle information, rotation order YZX 
 		*/
 		static fromEuler<Out extends IQuatLike> (out: Out, x: number, y: number, z: number): Out;		
 		/**
-		!#zh è¿”å›å®šä¹‰æ­¤å››å…ƒæ•°çš„åæ ‡ç³» X è½´å‘é‡
+		!#zh è¿????å®?ä¹?æ­¤å???????°ç????????ç³? X è½´å?????
 		!#en This returns the result of the quaternion coordinate system X-axis vector 
 		*/
 		static toAxisX<Out extends IQuatLike, VecLike extends IVec3Like> (out: VecLike, q: Out): VecLike;		
 		/**
-		!#zh è¿”å›å®šä¹‰æ­¤å››å…ƒæ•°çš„åæ ‡ç³» Y è½´å‘é‡
+		!#zh è¿????å®?ä¹?æ­¤å???????°ç????????ç³? Y è½´å?????
 		!#en This returns the result of the quaternion coordinate system Y axis vector 
 		*/
 		static toAxisY<Out extends IQuatLike, VecLike extends IVec3Like> (out: VecLike, q: Out): VecLike;		
 		/**
-		!#zh è¿”å›å®šä¹‰æ­¤å››å…ƒæ•°çš„åæ ‡ç³» Z è½´å‘é‡
+		!#zh è¿????å®?ä¹?æ­¤å???????°ç????????ç³? Z è½´å?????
 		!#en This returns the result of the quaternion coordinate system the Z-axis vector 
 		*/
 		static toAxisZ<Out extends IQuatLike, VecLike extends IVec3Like> (out: VecLike, q: Out): VecLike;		
 		/**
-		!#zh æ ¹æ®å››å…ƒæ•°è®¡ç®—æ¬§æ‹‰è§’ï¼Œè¿”å›è§’åº¦ x, y åœ¨ [-180, 180] åŒºé—´å†…, z é»˜è®¤åœ¨ [-90, 90] åŒºé—´å†…ï¼Œæ—‹è½¬é¡ºåºä¸º YZX
+		!#zh ??¹æ?®å???????°è®¡ç®?æ¬§æ??è§?ï¼?è¿????è§?åº? x, y ??? [-180, 180] ??ºé?´å??, z é»?è®¤å?? [-90, 90] ??ºé?´å??ï¼????è½¬é¡ºåº?ä¸? YZX
 		!#en The quaternion calculated Euler angles, return angle x, y in the [-180, 180] interval, z default the range [-90, 90] interval, the rotation order YZX
-		@param outerZ z å–å€¼èŒƒå›´åŒºé—´æ”¹ä¸º [-180, -90] U [90, 180] 
+		@param outerZ z ?????¼è????´å?ºé?´æ?¹ä¸º [-180, -90] U [90, 180] 
 		*/
 		static toEuler<Out extends IVec3Like> (out: Out, q: IQuatLike, outerZ?: boolean): Out;		
 		/**
-		!#zh å››å…ƒæ•°ç­‰ä»·åˆ¤æ–­
+		!#zh ????????°ç??ä»·å?¤æ??
 		!#en Analyzing quaternion equivalent 
 		*/
 		static strictEquals<Out extends IQuatLike> (a: Out, b: Out): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„å››å…ƒæ•°è¿‘ä¼¼ç­‰ä»·åˆ¤æ–­
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç??????????°è??ä¼¼ç??ä»·å?¤æ??
 		!#en Negative floating point error quaternion approximately equivalent Analyzing 
 		*/
 		static equals<Out extends IQuatLike> (a: Out, b: Out, epsilon?: number): boolean;		
 		/**
-		!#zh å››å…ƒæ•°è½¬æ•°ç»„
+		!#zh ????????°è½¬??°ç??
 		!#en Quaternion rotation array
-		@param ofs æ•°ç»„å†…çš„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç????????èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, q: IQuatLike, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬å››å…ƒæ•°
+		!#zh ??°ç??è½¬å????????
 		!#en Array to a quaternion
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IQuatLike> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		x: number;		
@@ -13277,36 +13277,36 @@ declare namespace cc {
 		w: number;		
 		/**
 		!#en clone a Quat object and return the new object
-		!#zh å…‹éš†ä¸€ä¸ªå››å…ƒæ•°å¹¶è¿”å› 
+		!#zh ??????ä¸?ä¸ªå???????°å¹¶è¿???? 
 		*/
 		clone(): Quat;		
 		/**
 		!#en Set values with another quaternion
-		!#zh ç”¨å¦ä¸€ä¸ªå››å…ƒæ•°çš„å€¼è®¾ç½®åˆ°å½“å‰å¯¹è±¡ä¸Šã€‚
-		@param newValue !#en new value to set. !#zh è¦è®¾ç½®çš„æ–°å€¼ 
+		!#zh ??¨å?¦ä??ä¸ªå???????°ç????¼è®¾ç½®å?°å?????å¯¹è±¡ä¸????
+		@param newValue !#en new value to set. !#zh è¦?è®¾ç½®?????°å?? 
 		*/
 		set(newValue: Quat): Quat;		
 		/**
 		!#en Check whether current quaternion equals another
-		!#zh å½“å‰çš„å››å…ƒæ•°æ˜¯å¦ä¸æŒ‡å®šçš„å››å…ƒæ•°ç›¸ç­‰ã€‚
+		!#zh å½???????????????°æ?¯å?¦ä?????å®????????????°ç?¸ç?????
 		@param other other 
 		*/
 		equals(other: Quat): boolean;		
 		/**
 		!#en Convert quaternion to euler
-		!#zh è½¬æ¢å››å…ƒæ•°åˆ°æ¬§æ‹‰è§’
+		!#zh è½¬æ?¢å???????°å?°æ¬§???è§?
 		@param out out 
 		*/
 		toEuler(out: Vec3): Vec3;		
 		/**
 		!#en Convert euler to quaternion
-		!#zh è½¬æ¢æ¬§æ‹‰è§’åˆ°å››å…ƒæ•°
+		!#zh è½¬æ?¢æ¬§???è§???°å????????
 		@param euler euler 
 		*/
 		fromEuler(euler: Vec3): Quat;		
 		/**
 		!#en Calculate the interpolation result between this quaternion and another one with given ratio
-		!#zh è®¡ç®—å››å…ƒæ•°çš„æ’å€¼ç»“æœ
+		!#zh è®¡ç??????????°ç???????¼ç?????
 		@param to to
 		@param ratio ratio
 		@param out out 
@@ -13314,13 +13314,13 @@ declare namespace cc {
 		lerp(to: Quat, ratio: number, out?: Quat): Quat;		
 		/**
 		!#en Calculate the multiply result between this quaternion and another one
-		!#zh è®¡ç®—å››å…ƒæ•°ä¹˜ç§¯çš„ç»“æœ
+		!#zh è®¡ç??????????°ä??ç§¯ç??ç»????
 		@param other other 
 		*/
 		multiply(other: Quat): Quat;		
 		/**
 		!#en Rotates a quaternion by the given angle (in radians) about a world space axis.
-		!#zh å›´ç»•ä¸–ç•Œç©ºé—´è½´æŒ‰ç»™å®šå¼§åº¦æ—‹è½¬å››å…ƒæ•°
+		!#zh ??´ç??ä¸????ç©ºé?´è½´???ç»?å®?å¼§åº¦???è½¬å????????
 		@param rot Quaternion to rotate
 		@param axis The axis around which to rotate in world space
 		@param rad Angle (in radians) to rotate
@@ -13329,14 +13329,14 @@ declare namespace cc {
 		rotateAround(rot: Quat, axis: Vec3, rad: number, out?: Quat): Quat;	
 	}	
 	/** !#en A 2D rectangle defined by x, y position and width, height.
-	!#zh é€šè¿‡ä½ç½®å’Œå®½é«˜å®šä¹‰çš„ 2D çŸ©å½¢ã€‚ */
+	!#zh ???è¿?ä½?ç½®å??å®½é??å®?ä¹???? 2D ??©å½¢??? */
 	export class Rect extends ValueType {		
 		/**
 		!#en
 		Constructor of Rect class.
 		see {{#crossLink "cc/rect:method"}} cc.rect {{/crossLink}} for convenience method.
 		!#zh
-		Rectç±»çš„æ„é€ å‡½æ•°ã€‚å¯ä»¥é€šè¿‡ {{#crossLink "cc/rect:method"}} cc.rect {{/crossLink}} ç®€ä¾¿æ–¹æ³•è¿›è¡Œåˆ›å»ºã€‚
+		Rectç±»ç??????????½æ?°ã????¯ä»¥???è¿? {{#crossLink "cc/rect:method"}} cc.rect {{/crossLink}} ç®?ä¾¿æ?¹æ??è¿?è¡????å»ºã??
 		@param x x
 		@param y y
 		@param w w
@@ -13345,7 +13345,7 @@ declare namespace cc {
 		constructor(x?: number, y?: number, w?: number, h?: number);		
 		/**
 		!#en Creates a rectangle from two coordinate values.
-		!#zh æ ¹æ®æŒ‡å®š 2 ä¸ªåæ ‡åˆ›å»ºå‡ºä¸€ä¸ªçŸ©å½¢åŒºåŸŸã€‚
+		!#zh ??¹æ?®æ??å®? 2 ä¸ªå????????å»ºå?ºä??ä¸ªç?©å½¢??ºå?????
 		@param v1 v1
 		@param v2 v2
 		
@@ -13361,7 +13361,7 @@ declare namespace cc {
 		height: number;		
 		/**
 		!#en TODO
-		!#zh å…‹éš†ä¸€ä¸ªæ–°çš„ Rectã€‚
+		!#zh ??????ä¸?ä¸ªæ?°ç?? Rect???
 		
 		@example 
 		```js
@@ -13372,7 +13372,7 @@ declare namespace cc {
 		clone(): Rect;		
 		/**
 		!#en TODO
-		!#zh æ˜¯å¦ç­‰äºæŒ‡å®šçš„çŸ©å½¢ã€‚
+		!#zh ??¯å?¦ç??äº????å®??????©å½¢???
 		@param other other
 		
 		@example 
@@ -13385,7 +13385,7 @@ declare namespace cc {
 		equals(other: Rect): boolean;		
 		/**
 		!#en TODO
-		!#zh çº¿æ€§æ’å€¼
+		!#zh çº¿æ?§æ?????
 		@param to to
 		@param ratio the interpolation coefficient.
 		@param out optional, the receiving vector.
@@ -13405,7 +13405,7 @@ declare namespace cc {
 		lerp(to: Rect, ratio: number, out?: Rect): Rect;		
 		/**
 		!#en Check whether the current rectangle intersects with the given one
-		!#zh å½“å‰çŸ©å½¢ä¸æŒ‡å®šçŸ©å½¢æ˜¯å¦ç›¸äº¤ã€‚
+		!#zh å½??????©å½¢ä¸????å®???©å½¢??¯å?¦ç?¸äº¤???
 		@param rect rect
 		
 		@example 
@@ -13418,7 +13418,7 @@ declare namespace cc {
 		intersects(rect: Rect): boolean;		
 		/**
 		!#en Returns the overlapping portion of 2 rectangles.
-		!#zh è¿”å› 2 ä¸ªçŸ©å½¢é‡å çš„éƒ¨åˆ†ã€‚
+		!#zh è¿???? 2 ä¸ªç?©å½¢???????????¨å?????
 		@param out Stores the result
 		@param rectB rectB
 		
@@ -13433,7 +13433,7 @@ declare namespace cc {
 		intersection(out: Rect, rectB: Rect): Rect;		
 		/**
 		!#en Check whether the current rect contains the given point
-		!#zh å½“å‰çŸ©å½¢æ˜¯å¦åŒ…å«æŒ‡å®šåæ ‡ç‚¹ã€‚
+		!#zh å½??????©å½¢??¯å?¦å????«æ??å®?????????¹ã??
 		Returns true if the point inside this rectangle.
 		@param point point
 		
@@ -13447,7 +13447,7 @@ declare namespace cc {
 		contains(point: Vec2): boolean;		
 		/**
 		!#en Returns true if the other rect totally inside this rectangle.
-		!#zh å½“å‰çŸ©å½¢æ˜¯å¦åŒ…å«æŒ‡å®šçŸ©å½¢ã€‚
+		!#zh å½??????©å½¢??¯å?¦å????«æ??å®???©å½¢???
 		@param rect rect
 		
 		@example 
@@ -13460,7 +13460,7 @@ declare namespace cc {
 		containsRect(rect: Rect): boolean;		
 		/**
 		!#en Returns the smallest rectangle that contains the current rect and the given rect.
-		!#zh è¿”å›ä¸€ä¸ªåŒ…å«å½“å‰çŸ©å½¢å’ŒæŒ‡å®šçŸ©å½¢çš„æœ€å°çŸ©å½¢ã€‚
+		!#zh è¿????ä¸?ä¸ªå????«å???????©å½¢??????å®???©å½¢??????å°???©å½¢???
 		@param out Stores the result
 		@param rectB rectB
 		
@@ -13475,14 +13475,14 @@ declare namespace cc {
 		union(out: Rect, rectB: Rect): Rect;		
 		/**
 		!#en Apply matrix4 to the rect.
-		!#zh ä½¿ç”¨ mat4 å¯¹çŸ©å½¢è¿›è¡ŒçŸ©é˜µè½¬æ¢ã€‚
+		!#zh ä½¿ç?? mat4 å¯¹ç?©å½¢è¿?è¡???©é?µè½¬??¢ã??
 		@param out The output rect
 		@param mat The matrix4 
 		*/
 		transformMat4(out: Rect, mat: Mat4): void;		
 		/**
 		!#en Output rect informations to string
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²
 		
 		@example 
 		```js
@@ -13492,25 +13492,25 @@ declare namespace cc {
 		*/
 		toString(): string;		
 		/** !#en The minimum x value, equals to rect.x
-		!#zh çŸ©å½¢ x è½´ä¸Šçš„æœ€å°å€¼ï¼Œç­‰ä»·äº rect.xã€‚ */
+		!#zh ??©å½¢ x è½´ä????????å°???¼ï??ç­?ä»·ä?? rect.x??? */
 		xMin: number;		
 		/** !#en The minimum y value, equals to rect.y
-		!#zh çŸ©å½¢ y è½´ä¸Šçš„æœ€å°å€¼ã€‚ */
+		!#zh ??©å½¢ y è½´ä????????å°???¼ã?? */
 		yMin: number;		
 		/** !#en The maximum x value.
-		!#zh çŸ©å½¢ x è½´ä¸Šçš„æœ€å¤§å€¼ã€‚ */
+		!#zh ??©å½¢ x è½´ä????????å¤§å?¼ã?? */
 		xMax: number;		
 		/** !#en The maximum y value.
-		!#zh çŸ©å½¢ y è½´ä¸Šçš„æœ€å¤§å€¼ã€‚ */
+		!#zh ??©å½¢ y è½´ä????????å¤§å?¼ã?? */
 		yMax: number;		
 		/** !#en The position of the center of the rectangle.
-		!#zh çŸ©å½¢çš„ä¸­å¿ƒç‚¹ã€‚ */
+		!#zh ??©å½¢???ä¸­å????¹ã?? */
 		center: Vec2;		
 		/** !#en The X and Y position of the rectangle.
-		!#zh çŸ©å½¢çš„ x å’Œ y åæ ‡ã€‚ */
+		!#zh ??©å½¢??? x ??? y ????????? */
 		origin: Vec2;		
 		/** !#en Width and height of the rectangle.
-		!#zh çŸ©å½¢çš„å¤§å°ã€‚ */
+		!#zh ??©å½¢???å¤§å????? */
 		size: Size;	
 	}	
 	/** !#en
@@ -13520,10 +13520,10 @@ declare namespace cc {
 	It will be deprecated soon, please use cc.Vec2 instead.
 	
 	!#zh
-	cc.Size æ˜¯ size å¯¹è±¡çš„ç±»ã€‚<br/>
-	è¯·ä¸è¦ä½¿ç”¨å®ƒçš„æ„é€ å‡½æ•°åˆ›å»ºçš„ sizeï¼Œ<br/>
-	ä½¿ç”¨ {{#crossLink "cc/size:method"}}{{/crossLink}} åˆ«åå‡½æ•°ã€‚<br/>
-	å®ƒä¸ä¹…å°†è¢«å–æ¶ˆï¼Œè¯·ä½¿ç”¨cc.Vec2ä»£æ›¿ã€‚ */
+	cc.Size ??? size å¯¹è±¡???ç±»ã??<br/>
+	è¯·ä??è¦?ä½¿ç?¨å?????????????½æ?°å??å»ºç?? sizeï¼?<br/>
+	ä½¿ç?? {{#crossLink "cc/size:method"}}{{/crossLink}} ??«å????½æ?°ã??<br/>
+	å®?ä¸?ä¹?å°?è¢«å??æ¶?ï¼?è¯·ä½¿??¨cc.Vec2ä»???¿ã?? */
 	export class Size {		
 		/**
 		
@@ -13532,13 +13532,13 @@ declare namespace cc {
 		*/
 		constructor(width: number|Size, height?: number);		
 		/** !#en return a Size object with width = 0 and height = 0.
-		!#zh è¿”å›ä¸€ä¸ªå®½åº¦ä¸º 0 å’Œé«˜åº¦ä¸º 0 çš„ Size å¯¹è±¡ã€‚ */
+		!#zh è¿????ä¸?ä¸ªå®½åº¦ä¸º 0 ???é«?åº¦ä¸º 0 ??? Size å¯¹è±¡??? */
 		static ZERO: Size;		
 		width: number;		
 		height: number;		
 		/**
 		!#en TODO
-		!#zh å…‹éš† size å¯¹è±¡ã€‚
+		!#zh ?????? size å¯¹è±¡???
 		
 		@example 
 		```js
@@ -13549,7 +13549,7 @@ declare namespace cc {
 		clone(): Size;		
 		/**
 		!#en TODO
-		!#zh å½“å‰ Size å¯¹è±¡æ˜¯å¦ç­‰äºæŒ‡å®š Size å¯¹è±¡ã€‚
+		!#zh å½???? Size å¯¹è±¡??¯å?¦ç??äº????å®? Size å¯¹è±¡???
 		@param other other
 		
 		@example 
@@ -13561,7 +13561,7 @@ declare namespace cc {
 		equals(other: Size): boolean;		
 		/**
 		!#en TODO
-		!#zh çº¿æ€§æ’å€¼ã€‚
+		!#zh çº¿æ?§æ????¼ã??
 		@param to to
 		@param ratio the interpolation coefficient.
 		@param out optional, the receiving vector.
@@ -13581,7 +13581,7 @@ declare namespace cc {
 		lerp(to: Rect, ratio: number, out?: Size): Size;		
 		/**
 		!#en TODO
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²???
 		
 		@example 
 		```js
@@ -13592,16 +13592,16 @@ declare namespace cc {
 		toString(): string;	
 	}	
 	/** !#en The base class of all value types.
-	!#zh æ‰€æœ‰å€¼ç±»å‹çš„åŸºç±»ã€‚ */
+	!#zh ????????¼ç±»????????ºç±»??? */
 	export class ValueType {		
 		/**
 		!#en This method returns an exact copy of current value.
-		!#zh å…‹éš†å½“å‰å€¼ï¼Œè¯¥æ–¹æ³•è¿”å›ä¸€ä¸ªæ–°å¯¹è±¡ï¼Œæ–°å¯¹è±¡çš„å€¼å’ŒåŸå¯¹è±¡ç›¸ç­‰ã€‚ 
+		!#zh ??????å½??????¼ï??è¯¥æ?¹æ??è¿????ä¸?ä¸ªæ?°å¯¹è±¡ï????°å¯¹è±¡ç????¼å?????å¯¹è±¡??¸ç????? 
 		*/
 		clone(): ValueType;		
 		/**
 		!#en Compares this object with the other one.
-		!#zh å½“å‰å¯¹è±¡æ˜¯å¦ç­‰äºæŒ‡å®šå¯¹è±¡ã€‚
+		!#zh å½????å¯¹è±¡??¯å?¦ç??äº????å®?å¯¹è±¡???
 		@param other other 
 		*/
 		equals(other: ValueType): boolean;		
@@ -13610,8 +13610,8 @@ declare namespace cc {
 		Linearly interpolates between this value to to value by ratio which is in the range [0, 1].
 		When ratio = 0 returns this. When ratio = 1 return to. When ratio = 0.5 returns the average of this and to.
 		!#zh
-		çº¿æ€§æ’å€¼ã€‚<br/>
-		å½“ ratio = 0 æ—¶è¿”å›è‡ªèº«ï¼Œratio = 1 æ—¶è¿”å›ç›®æ ‡ï¼Œratio = 0.5 è¿”å›è‡ªèº«å’Œç›®æ ‡çš„å¹³å‡å€¼ã€‚ã€‚
+		çº¿æ?§æ????¼ã??<br/>
+		å½? ratio = 0 ??¶è???????ªèº«ï¼?ratio = 1 ??¶è???????®æ??ï¼?ratio = 0.5 è¿??????ªèº«?????®æ?????å¹³å????¼ã?????
 		@param to the to value
 		@param ratio the interpolation coefficient 
 		*/
@@ -13620,22 +13620,22 @@ declare namespace cc {
 		!#en
 		Copys all the properties from another given object to this value.
 		!#zh
-		ä»å…¶å®ƒå¯¹è±¡æŠŠæ‰€æœ‰å±æ€§å¤åˆ¶åˆ°å½“å‰å¯¹è±¡ã€‚
+		ä»???¶å??å¯¹è±¡?????????å±???§å????¶å?°å?????å¯¹è±¡???
 		@param source the source to copy 
 		*/
 		set(source: ValueType): void;		
 		/**
 		!#en Convert to a readable string.
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚ 
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²??? 
 		*/
 		toString(): string;	
 	}	
 	/** !#en Representation of 2D vectors and points.
-	!#zh è¡¨ç¤º 2D å‘é‡å’Œåæ ‡ */
+	!#zh è¡¨ç¤º 2D ??????????????? */
 	export class Vec2 extends ValueType {		
 		/**
 		!#en Returns the length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦???
 		
 		@example 
 		```js
@@ -13646,7 +13646,7 @@ declare namespace cc {
 		mag(): number;		
 		/**
 		!#en Returns the squared length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦å¹³æ–¹ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦å¹³æ?¹ã??
 		
 		@example 
 		```js
@@ -13657,7 +13657,7 @@ declare namespace cc {
 		magSqr(): number;		
 		/**
 		!#en Subtracts one vector from this. If you want to save result to another vector, use sub() instead.
-		!#zh å‘é‡å‡æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ sub() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? sub() ä»???¿ã??
 		@param vector vector
 		
 		@example 
@@ -13669,7 +13669,7 @@ declare namespace cc {
 		subSelf(vector: Vec2): Vec2;		
 		/**
 		!#en Subtracts one vector from this, and returns the new result.
-		!#zh å‘é‡å‡æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created
 		
@@ -13684,7 +13684,7 @@ declare namespace cc {
 		sub(vector: Vec2, out?: Vec2): Vec2;		
 		/**
 		!#en Multiplies this by a number. If you want to save result to another vector, use mul() instead.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ mul() ä»£æ›¿ã€‚
+		!#zh ç¼©æ?¾å??????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? mul() ä»???¿ã??
 		@param num num
 		
 		@example 
@@ -13696,7 +13696,7 @@ declare namespace cc {
 		mulSelf(num: number): Vec2;		
 		/**
 		!#en Multiplies by a number, and returns the new result.
-		!#zh ç¼©æ”¾å‘é‡ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ç¼©æ?¾å?????ï¼?å¹¶è???????°ç????????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created
 		
@@ -13711,7 +13711,7 @@ declare namespace cc {
 		mul(num: number, out?: Vec2): Vec2;		
 		/**
 		!#en Divides by a number. If you want to save result to another vector, use div() instead.
-		!#zh å‘é‡é™¤æ³•ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ div() ä»£æ›¿ã€‚
+		!#zh ????????¤æ?????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? div() ä»???¿ã??
 		@param num num
 		
 		@example 
@@ -13723,7 +13723,7 @@ declare namespace cc {
 		divSelf(num: number): Vec2;		
 		/**
 		!#en Divides by a number, and returns the new result.
-		!#zh å‘é‡é™¤æ³•ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¤æ??ï¼?å¹¶è???????°ç??ç»???????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created
 		
@@ -13738,7 +13738,7 @@ declare namespace cc {
 		div(num: number, out?: Vec2): Vec2;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector
 		
 		@example 
@@ -13750,7 +13750,7 @@ declare namespace cc {
 		scaleSelf(vector: Vec2): Vec2;		
 		/**
 		!#en Multiplies two vectors, and returns the new result.
-		!#zh åˆ†é‡ç›¸ä¹˜ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¸ä??ï¼?å¹¶è???????°ç??ç»???????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created
 		
@@ -13765,7 +13765,7 @@ declare namespace cc {
 		scale(vector: Vec2, out?: Vec2): Vec2;		
 		/**
 		!#en Negates the components. If you want to save result to another vector, use neg() instead.
-		!#zh å‘é‡å–åã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ neg() ä»£æ›¿ã€‚
+		!#zh ???????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? neg() ä»???¿ã??
 		
 		@example 
 		```js
@@ -13776,7 +13776,7 @@ declare namespace cc {
 		negSelf(): Vec2;		
 		/**
 		!#en Negates the components, and returns the new result.
-		!#zh è¿”å›å–ååçš„æ–°å‘é‡ã€‚
+		!#zh è¿??????????????????°å????????
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created
 		
 		@example 
@@ -13788,156 +13788,156 @@ declare namespace cc {
 		*/
 		neg(out?: Vec2): Vec2;		
 		/** !#en return a Vec2 object with x = 1 and y = 1.
-		!#zh æ–° Vec2 å¯¹è±¡ã€‚ */
+		!#zh ??? Vec2 å¯¹è±¡??? */
 		static ONE: Vec2;		
 		/** !#en return a Vec2 object with x = 0 and y = 0.
-		!#zh è¿”å› x = 0 å’Œ y = 0 çš„ Vec2 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0 ??? y = 0 ??? Vec2 å¯¹è±¡??? */
 		static ZERO: Vec2;		
 		/** !#en return a readonly Vec2 object with x = 0 and y = 0.
-		!#zh è¿”å›ä¸€ä¸ª x = 0 å’Œ y = 0 çš„ Vec2 åªè¯»å¯¹è±¡ã€‚ */
+		!#zh è¿????ä¸?ä¸? x = 0 ??? y = 0 ??? Vec2 ??ªè¯»å¯¹è±¡??? */
 		static ZERO_R: Vec2;		
 		/** !#en return a Vec2 object with x = 0 and y = 1.
-		!#zh è¿”å› x = 0 å’Œ y = 1 çš„ Vec2 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0 ??? y = 1 ??? Vec2 å¯¹è±¡??? */
 		static UP: Vec2;		
 		/** !#en return a readonly Vec2 object with x = 0 and y = 1.
-		!#zh è¿”å› x = 0 å’Œ y = 1 çš„ Vec2 åªè¯»å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0 ??? y = 1 ??? Vec2 ??ªè¯»å¯¹è±¡??? */
 		static UP_R: Vec2;		
 		/** !#en return a readonly Vec2 object with x = 1 and y = 0.
-		!#zh è¿”å› x = 1 å’Œ y = 0 çš„ Vec2 åªè¯»å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 1 ??? y = 0 ??? Vec2 ??ªè¯»å¯¹è±¡??? */
 		static RIGHT: Vec2;		
 		/** !#en return a Vec2 object with x = 1 and y = 0.
-		!#zh è¿”å› x = 1 å’Œ y = 0 çš„ Vec2 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 1 ??? y = 0 ??? Vec2 å¯¹è±¡??? */
 		static RIGHT_R: Vec2;		
 		/**
-		!#zh è·å¾—æŒ‡å®šå‘é‡çš„æ‹·è´ 
+		!#zh ??·å?????å®????????????·è?? 
 		*/
 		static clone <Out extends IVec2Like> (a: Out): Vec2;		
 		/**
-		!#zh å¤åˆ¶æŒ‡å®šå‘é‡çš„å€¼ 
+		!#zh å¤???¶æ??å®????????????? 
 		*/
 		static copy <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh  è®¾ç½®å‘é‡å€¼ 
+		!#zh  è®¾ç½®????????? 
 		*/
 		static set <Out extends IVec2Like> (out: Out, x: number, y: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡åŠ æ³• 
+		!#zh ??????ç´??????????æ³? 
 		*/
 		static add <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‡æ³• 
+		!#zh ??????ç´??????????æ³? 
 		*/
 		static subtract <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜æ³• 
+		!#zh ??????ç´???????ä¹?æ³? 
 		*/
 		static multiply <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡é™¤æ³• 
+		!#zh ??????ç´?????????¤æ?? 
 		*/
 		static divide <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸Šå–æ•´ 
+		!#zh ??????ç´??????????ä¸??????? 
 		*/
 		static ceil <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸‹å–æ•´ 
+		!#zh ??????ç´??????????ä¸??????? 
 		*/
 		static floor <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å°å€¼ 
+		!#zh ??????ç´??????????å°???? 
 		*/
 		static min <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å¤§å€¼ 
+		!#zh ??????ç´??????????å¤§å?? 
 		*/
 		static max <Out extends IVec2Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å››èˆäº”å…¥å–æ•´ 
+		!#zh ??????ç´?????????????äº???¥å????? 
 		*/
 		static round <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å‘é‡æ ‡é‡ä¹˜æ³• 
+		!#zh ????????????ä¹?æ³? 
 		*/
 		static multiplyScalar <Out extends IVec2Like> (out: Out, a: Out, b: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜åŠ : A + B * scale 
+		!#zh ??????ç´???????ä¹????: A + B * scale 
 		*/
 		static scaleAndAdd <Out extends IVec2Like> (out: Out, a: Out, b: Out, scale: number): Out;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦» 
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦? 
 		*/
 		static distance <Out extends IVec2Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦»å¹³æ–¹ 
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦»å¹³??? 
 		*/
 		static squaredDistance <Out extends IVec2Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦ 
+		!#zh æ±?????????¿åº¦ 
 		*/
 		static len <Out extends IVec2Like> (a: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦å¹³æ–¹ 
+		!#zh æ±?????????¿åº¦å¹³æ?? 
 		*/
 		static lengthSqr <Out extends IVec2Like> (a: Out): number;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–è´Ÿ 
+		!#zh ??????ç´??????????è´? 
 		*/
 		static negate <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› Infinity 
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? Infinity 
 		*/
 		static inverse <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› 0 
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? 0 
 		*/
 		static inverseSafe <Out extends IVec2Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å½’ä¸€åŒ–å‘é‡ 
+		!#zh å½?ä¸?????????? 
 		*/
 		static normalize <Out extends IVec2Like, Vec2Like extends IVec2Like> (out: Out, a: Vec2Like): Out;		
 		/**
-		!#zh å‘é‡ç‚¹ç§¯ï¼ˆæ•°é‡ç§¯ï¼‰ 
+		!#zh ????????¹ç§¯ï¼???°é??ç§¯ï?? 
 		*/
 		static dot <Out extends IVec2Like> (a: Out, b: Out): number;		
 		/**
-		!#zh å‘é‡å‰ç§¯ï¼ˆå‘é‡ç§¯ï¼‰ï¼Œæ³¨æ„äºŒç»´å‘é‡çš„å‰ç§¯ä¸ºä¸ Z è½´å¹³è¡Œçš„ä¸‰ç»´å‘é‡ 
+		!#zh ?????????ç§¯ï????????ç§¯ï??ï¼?æ³¨æ??äº?ç»´å???????????ç§¯ä¸ºä¸? Z è½´å¹³è¡????ä¸?ç»´å????? 
 		*/
 		static cross <Out extends IVec2Like> (out: Vec2, a: Out, b: Out): Vec2;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡çº¿æ€§æ’å€¼ï¼š A + t * (B - A) 
+		!#zh ??????ç´???????çº¿æ?§æ????¼ï?? A + t * (B - A) 
 		*/
 		static lerp <Out extends IVec2Like> (out: Out, a: Out, b: Out, t: number): Out;		
 		/**
-		!#zh ç”Ÿæˆä¸€ä¸ªåœ¨å•ä½åœ†ä¸Šå‡åŒ€åˆ†å¸ƒçš„éšæœºå‘é‡ 
+		!#zh ??????ä¸?ä¸ªå?¨å??ä½????ä¸??????????å¸?????????ºå????? 
 		*/
 		static random <Out extends IVec2Like> (out: Out, scale?: number): Out;		
 		/**
-		!#zh å‘é‡ä¸ä¸‰ç»´çŸ©é˜µä¹˜æ³•ï¼Œé»˜è®¤å‘é‡ç¬¬ä¸‰ä½ä¸º 1ã€‚ 
+		!#zh ??????ä¸?ä¸?ç»´ç?©é?µä??æ³?ï¼?é»?è®¤å?????ç¬¬ä??ä½?ä¸? 1??? 
 		*/
 		static transformMat3 <Out extends IVec2Like, MatLike extends IMat3Like> (out: Out, a: Out, mat: IMat3Like): Out;		
 		/**
-		!#zh å‘é‡ä¸å››ç»´çŸ©é˜µä¹˜æ³•ï¼Œé»˜è®¤å‘é‡ç¬¬ä¸‰ä½ä¸º 0ï¼Œç¬¬å››ä½ä¸º 1ã€‚ 
+		!#zh ??????ä¸????ç»´ç?©é?µä??æ³?ï¼?é»?è®¤å?????ç¬¬ä??ä½?ä¸? 0ï¼?ç¬¬å??ä½?ä¸? 1??? 
 		*/
 		static transformMat4 <Out extends IVec2Like, MatLike extends IMat4Like> (out: Out, a: Out, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡ç­‰ä»·åˆ¤æ–­ 
+		!#zh ??????ç­?ä»·å?¤æ?? 
 		*/
 		static strictEquals <Out extends IVec2Like> (a: Out, b: Out): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„å‘é‡è¿‘ä¼¼ç­‰ä»·åˆ¤æ–­ 
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç????????è¿?ä¼¼ç??ä»·å?¤æ?? 
 		*/
 		static equals <Out extends IVec2Like> (a: Out, b: Out,  epsilon?: number): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„å‘é‡è¿‘ä¼¼ç­‰ä»·åˆ¤æ–­ 
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç????????è¿?ä¼¼ç??ä»·å?¤æ?? 
 		*/
 		static angle <Out extends IVec2Like> (a: Out, b: Out): number;		
 		/**
-		!#zh å‘é‡è½¬æ•°ç»„ 
+		!#zh ??????è½¬æ?°ç?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, v: IVec2Like, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬å‘é‡ 
+		!#zh ??°ç??è½¬å????? 
 		*/
 		static fromArray <Out extends IVec2Like> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		x: number;		
@@ -13947,45 +13947,45 @@ declare namespace cc {
 		Constructor
 		see {{#crossLink "cc/vec2:method"}}cc.v2{{/crossLink}} or {{#crossLink "cc/p:method"}}cc.p{{/crossLink}}
 		!#zh
-		æ„é€ å‡½æ•°ï¼Œå¯æŸ¥çœ‹ {{#crossLink "cc/vec2:method"}}cc.v2{{/crossLink}} æˆ–è€… {{#crossLink "cc/p:method"}}cc.p{{/crossLink}}
+		????????½æ?°ï????¯æ?¥ç?? {{#crossLink "cc/vec2:method"}}cc.v2{{/crossLink}} ?????? {{#crossLink "cc/p:method"}}cc.p{{/crossLink}}
 		@param x x
 		@param y y 
 		*/
 		constructor(x?: number, y?: number);		
 		/**
 		!#en clone a Vec2 object
-		!#zh å…‹éš†ä¸€ä¸ª Vec2 å¯¹è±¡ 
+		!#zh ??????ä¸?ä¸? Vec2 å¯¹è±¡ 
 		*/
 		clone(): Vec2;		
 		/**
 		!#en Sets vector with another's value
-		!#zh è®¾ç½®å‘é‡å€¼ã€‚
-		@param newValue !#en new value to set. !#zh è¦è®¾ç½®çš„æ–°å€¼ 
+		!#zh è®¾ç½®????????¼ã??
+		@param newValue !#en new value to set. !#zh è¦?è®¾ç½®?????°å?? 
 		*/
 		set(newValue: Vec2): Vec2;		
 		/**
 		!#en Check whether two vector equal
-		!#zh å½“å‰çš„å‘é‡æ˜¯å¦ä¸æŒ‡å®šçš„å‘é‡ç›¸ç­‰ã€‚
+		!#zh å½???????????????¯å?¦ä?????å®????????????¸ç?????
 		@param other other 
 		*/
 		equals(other: Vec2): boolean;		
 		/**
 		!#en Check whether two vector equal with some degree of variance.
 		!#zh
-		è¿‘ä¼¼åˆ¤æ–­ä¸¤ä¸ªç‚¹æ˜¯å¦ç›¸ç­‰ã€‚<br/>
-		åˆ¤æ–­ 2 ä¸ªå‘é‡æ˜¯å¦åœ¨æŒ‡å®šæ•°å€¼çš„èŒƒå›´ä¹‹å†…ï¼Œå¦‚æœåœ¨åˆ™è¿”å› trueï¼Œåä¹‹åˆ™è¿”å› falseã€‚
+		è¿?ä¼¼å?¤æ?­ä¸¤ä¸ªç?¹æ?¯å?¦ç?¸ç?????<br/>
+		??¤æ?? 2 ä¸ªå???????¯å?¦å?¨æ??å®???°å?¼ç???????´ä?????ï¼?å¦??????¨å??è¿???? trueï¼????ä¹????è¿???? false???
 		@param other other
 		@param variance variance 
 		*/
 		fuzzyEquals(other: Vec2, variance: number): boolean;		
 		/**
 		!#en Transform to string with vector informations
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚ 
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²??? 
 		*/
 		toString(): string;		
 		/**
 		!#en Calculate linear interpolation result between this vector and another one with given ratio
-		!#zh çº¿æ€§æ’å€¼ã€‚
+		!#zh çº¿æ?§æ????¼ã??
 		@param to to
 		@param ratio the interpolation coefficient
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created 
@@ -13994,10 +13994,10 @@ declare namespace cc {
 		/**
 		!#en Clamp the vector between from float and to float.
 		!#zh
-		è¿”å›æŒ‡å®šé™åˆ¶åŒºåŸŸåçš„å‘é‡ã€‚<br/>
-		å‘é‡å¤§äº max_inclusive åˆ™è¿”å› max_inclusiveã€‚<br/>
-		å‘é‡å°äº min_inclusive åˆ™è¿”å› min_inclusiveã€‚<br/>
-		å¦åˆ™è¿”å›è‡ªèº«ã€‚
+		è¿???????å®??????¶å?ºå?????????????????<br/>
+		??????å¤§ä?? max_inclusive ???è¿???? max_inclusive???<br/>
+		??????å°?äº? min_inclusive ???è¿???? min_inclusive???<br/>
+		??¦å??è¿??????ªèº«???
 		@param min_inclusive min_inclusive
 		@param max_inclusive max_inclusive
 		
@@ -14013,7 +14013,7 @@ declare namespace cc {
 		clampf(min_inclusive: Vec2, max_inclusive: Vec2): Vec2;		
 		/**
 		!#en Adds this vector.
-		!#zh å‘é‡åŠ æ³•ã€‚
+		!#zh ?????????æ³????
 		@param vector vector
 		@param out out
 		
@@ -14026,13 +14026,13 @@ declare namespace cc {
 		add(vector: Vec2, out?: Vec2): Vec2;		
 		/**
 		!#en Adds this vector. If you want to save result to another vector, use add() instead.
-		!#zh å‘é‡åŠ æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œä½¿ç”¨ add() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼?ä½¿ç?? add() ä»???¿ã??
 		@param vector vector 
 		*/
 		addSelf(vector: Vec2): Vec2;		
 		/**
 		!#en Subtracts one vector from this.
-		!#zh å‘é‡å‡æ³•ã€‚
+		!#zh ?????????æ³????
 		@param vector vector
 		
 		@example 
@@ -14044,7 +14044,7 @@ declare namespace cc {
 		subtract(vector: Vec2): Vec2;		
 		/**
 		!#en Multiplies this by a number.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚
+		!#zh ç¼©æ?¾å??????????????
 		@param num num
 		
 		@example 
@@ -14056,7 +14056,7 @@ declare namespace cc {
 		multiplyScalar(num: number): Vec2;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector
 		
 		@example 
@@ -14068,7 +14068,7 @@ declare namespace cc {
 		multiply(vector: Vec2): Vec2;		
 		/**
 		!#en Divides by a number.
-		!#zh å‘é‡é™¤æ³•ã€‚
+		!#zh ????????¤æ?????
 		@param num num
 		
 		@example 
@@ -14080,7 +14080,7 @@ declare namespace cc {
 		divide(num: number): Vec2;		
 		/**
 		!#en Negates the components.
-		!#zh å‘é‡å–åã€‚
+		!#zh ???????????????
 		
 		@example 
 		```js
@@ -14091,7 +14091,7 @@ declare namespace cc {
 		negate(): Vec2;		
 		/**
 		!#en Dot product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œç‚¹ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡???¹ä?????
 		@param vector vector
 		
 		@example 
@@ -14103,7 +14103,7 @@ declare namespace cc {
 		dot(vector?: Vec2): number;		
 		/**
 		!#en Cross product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œå‰ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡????ä¹????
 		@param vector vector
 		
 		@example 
@@ -14115,7 +14115,7 @@ declare namespace cc {
 		cross(vector?: Vec2): number;		
 		/**
 		!#en Returns the length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦???
 		
 		@example 
 		```js
@@ -14126,7 +14126,7 @@ declare namespace cc {
 		len(): number;		
 		/**
 		!#en Returns the squared length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦å¹³æ–¹ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦å¹³æ?¹ã??
 		
 		@example 
 		```js
@@ -14137,7 +14137,7 @@ declare namespace cc {
 		lengthSqr(): number;		
 		/**
 		!#en Make the length of this vector to 1.
-		!#zh å‘é‡å½’ä¸€åŒ–ï¼Œè®©è¿™ä¸ªå‘é‡çš„é•¿åº¦ä¸º 1ã€‚
+		!#zh ??????å½?ä¸????ï¼?è®©è??ä¸ªå??????????¿åº¦ä¸? 1???
 		
 		@example 
 		```js
@@ -14152,40 +14152,40 @@ declare namespace cc {
 		<br/>
 		Note that the current vector is unchanged and a new normalized vector is returned. If you want to normalize the current vector, use normalizeSelf function.
 		!#zh
-		è¿”å›å½’ä¸€åŒ–åçš„å‘é‡ã€‚<br/>
+		è¿????å½?ä¸???????????????????<br/>
 		<br/>
-		æ³¨æ„ï¼Œå½“å‰å‘é‡ä¸å˜ï¼Œå¹¶è¿”å›ä¸€ä¸ªæ–°çš„å½’ä¸€åŒ–å‘é‡ã€‚å¦‚æœä½ æƒ³æ¥å½’ä¸€åŒ–å½“å‰å‘é‡ï¼Œå¯ä½¿ç”¨ normalizeSelf å‡½æ•°ã€‚
+		æ³¨æ??ï¼?å½??????????ä¸????ï¼?å¹¶è?????ä¸?ä¸ªæ?°ç??å½?ä¸?????????????å¦????ä½???³æ?¥å??ä¸????å½??????????ï¼???¯ä½¿??? normalizeSelf ??½æ?°ã??
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created 
 		*/
 		normalize(out?: Vec2): Vec2;		
 		/**
 		!#en Get angle in radian between this and vector.
-		!#zh å¤¹è§’çš„å¼§åº¦ã€‚
+		!#zh å¤¹è?????å¼§åº¦???
 		@param vector vector 
 		*/
 		angle(vector: Vec2): number;		
 		/**
 		!#en Get angle in radian between this and vector with direction.
-		!#zh å¸¦æ–¹å‘çš„å¤¹è§’çš„å¼§åº¦ã€‚
+		!#zh å¸¦æ?¹å?????å¤¹è?????å¼§åº¦???
 		@param vector vector 
 		*/
 		signAngle(vector: Vec2): number;		
 		/**
 		!#en rotate
-		!#zh è¿”å›æ—‹è½¬ç»™å®šå¼§åº¦åçš„æ–°å‘é‡ã€‚
+		!#zh è¿???????è½¬ç??å®?å¼§åº¦????????°å????????
 		@param radians radians
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created 
 		*/
 		rotate(radians: number, out?: Vec2): Vec2;		
 		/**
 		!#en rotate self
-		!#zh æŒ‰æŒ‡å®šå¼§åº¦æ—‹è½¬å‘é‡ã€‚
+		!#zh ??????å®?å¼§åº¦???è½¬å????????
 		@param radians radians 
 		*/
 		rotateSelf(radians: number): Vec2;		
 		/**
 		!#en Calculates the projection of the current vector over the given vector.
-		!#zh è¿”å›å½“å‰å‘é‡åœ¨æŒ‡å®š vector å‘é‡ä¸Šçš„æŠ•å½±å‘é‡ã€‚
+		!#zh è¿????å½????????????¨æ??å®? vector ??????ä¸???????å½±å????????
 		@param vector vector
 		
 		@example 
@@ -14208,11 +14208,11 @@ declare namespace cc {
 		maxAxis(): number;	
 	}	
 	/** !#en Representation of 3D vectors and points.
-	!#zh è¡¨ç¤º 3D å‘é‡å’Œåæ ‡ */
+	!#zh è¡¨ç¤º 3D ??????????????? */
 	export class Vec3 extends ValueType {		
 		/**
 		!#en Returns the length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦???
 		
 		@example 
 		```js
@@ -14223,321 +14223,321 @@ declare namespace cc {
 		mag(): number;		
 		/**
 		!#en Returns the squared length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦å¹³æ–¹ã€‚ 
+		!#zh è¿????è¯¥å??????????¿åº¦å¹³æ?¹ã?? 
 		*/
 		magSqr(): number;		
 		/**
 		!#en Subtracts one vector from this. If you want to save result to another vector, use sub() instead.
-		!#zh å‘é‡å‡æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ sub() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? sub() ä»???¿ã??
 		@param vector vector 
 		*/
 		subSelf(vector: Vec3): Vec3;		
 		/**
 		!#en Subtracts one vector from this, and returns the new result.
-		!#zh å‘é‡å‡æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		sub(vector: Vec3, out?: Vec3): Vec3;		
 		/**
 		!#en Multiplies this by a number. If you want to save result to another vector, use mul() instead.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ mul() ä»£æ›¿ã€‚
+		!#zh ç¼©æ?¾å??????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? mul() ä»???¿ã??
 		@param num num 
 		*/
 		mulSelf(num: number): Vec3;		
 		/**
 		!#en Multiplies by a number, and returns the new result.
-		!#zh ç¼©æ”¾å‘é‡ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ç¼©æ?¾å?????ï¼?å¹¶è???????°ç????????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		mul(num: number, out?: Vec3): Vec3;		
 		/**
 		!#en Divides by a number. If you want to save result to another vector, use div() instead.
-		!#zh å‘é‡é™¤æ³•ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ div() ä»£æ›¿ã€‚
+		!#zh ????????¤æ?????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? div() ä»???¿ã??
 		@param num num 
 		*/
 		divSelf(num: number): Vec3;		
 		/**
 		!#en Divides by a number, and returns the new result.
-		!#zh å‘é‡é™¤æ³•ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¤æ??ï¼?å¹¶è???????°ç??ç»???????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		div(num: number, out?: Vec3): Vec3;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector 
 		*/
 		scaleSelf(vector: Vec3): Vec3;		
 		/**
 		!#en Multiplies two vectors, and returns the new result.
-		!#zh åˆ†é‡ç›¸ä¹˜ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¸ä??ï¼?å¹¶è???????°ç??ç»???????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		scale(vector: Vec3, out?: Vec3): Vec3;		
 		/**
 		!#en Negates the components. If you want to save result to another vector, use neg() instead.
-		!#zh å‘é‡å–åã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ neg() ä»£æ›¿ã€‚ 
+		!#zh ???????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? neg() ä»???¿ã?? 
 		*/
 		negSelf(): Vec3;		
 		/**
 		!#en Negates the components, and returns the new result.
-		!#zh è¿”å›å–ååçš„æ–°å‘é‡ã€‚
+		!#zh è¿??????????????????°å????????
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		neg(out?: Vec3): Vec3;		
 		/** !#en return a Vec3 object with x = 1, y = 1, z = 1.
-		!#zh æ–° Vec3 å¯¹è±¡ã€‚ */
+		!#zh ??? Vec3 å¯¹è±¡??? */
 		static ONE: Vec3;		
 		/** !#en return a Vec3 object with x = 0, y = 0, z = 0.
-		!#zh è¿”å› x = 0ï¼Œy = 0ï¼Œz = 0 çš„ Vec3 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0ï¼?y = 0ï¼?z = 0 ??? Vec3 å¯¹è±¡??? */
 		static ZERO: Vec3;		
 		/** !#en return a Vec3 object with x = 0, y = 1, z = 0.
-		!#zh è¿”å› x = 0, y = 1, z = 0 çš„ Vec3 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0, y = 1, z = 0 ??? Vec3 å¯¹è±¡??? */
 		static UP: Vec3;		
 		/** !#en return a Vec3 object with x = 1, y = 0, z = 0.
-		!#zh è¿”å› x = 1ï¼Œy = 0ï¼Œz = 0 çš„ Vec3 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 1ï¼?y = 0ï¼?z = 0 ??? Vec3 å¯¹è±¡??? */
 		static RIGHT: Vec3;		
 		/** !#en return a Vec3 object with x = 0, y = 0, z = 1.
-		!#zh è¿”å› x = 0ï¼Œy = 0ï¼Œz = 1 çš„ Vec3 å¯¹è±¡ã€‚ */
+		!#zh è¿???? x = 0ï¼?y = 0ï¼?z = 1 ??? Vec3 å¯¹è±¡??? */
 		static FORWARD: Vec3;		
 		/**
-		!#zh å°†ç›®æ ‡èµ‹å€¼ä¸ºé›¶å‘é‡
+		!#zh å°???®æ??èµ???¼ä¸º??¶å?????
 		!#en The target of an assignment zero vector 
 		*/
 		static zero<Out extends IVec3Like> (out: Out): Out;		
 		/**
-		!#zh è·å¾—æŒ‡å®šå‘é‡çš„æ‹·è´
+		!#zh ??·å?????å®????????????·è??
 		!#en Obtaining copy vectors designated 
 		*/
 		static clone<Out extends IVec3Like> (a: Out): Vec3;		
 		/**
-		!#zh å¤åˆ¶ç›®æ ‡å‘é‡
+		!#zh å¤???¶ç?®æ????????
 		!#en Copy the target vector 
 		*/
 		static copy<Out extends IVec3Like, Vec3Like extends IVec3Like> (out: Out, a: Vec3Like): Out;		
 		/**
-		!#zh è®¾ç½®å‘é‡å€¼
+		!#zh è®¾ç½®?????????
 		!#en Set to value 
 		*/
 		static set<Out extends IVec3Like> (out: Out, x: number, y: number, z: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡åŠ æ³•
+		!#zh ??????ç´??????????æ³?
 		!#en Element-wise vector addition 
 		*/
 		static add<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‡æ³•
+		!#zh ??????ç´??????????æ³?
 		!#en Element-wise vector subtraction 
 		*/
 		static subtract<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜æ³• (åˆ†é‡ç§¯)
+		!#zh ??????ç´???????ä¹?æ³? (??????ç§?)
 		!#en Element-wise vector multiplication (product component) 
 		*/
 		static multiply<Out extends IVec3Like, Vec3Like_1 extends IVec3Like, Vec3Like_2 extends IVec3Like> (out: Out, a: Vec3Like_1, b: Vec3Like_2): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡é™¤æ³•
+		!#zh ??????ç´?????????¤æ??
 		!#en Element-wise vector division 
 		*/
 		static divide<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸Šå–æ•´
+		!#zh ??????ç´??????????ä¸???????
 		!#en Rounding up by elements of the vector 
 		*/
 		static ceil<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸‹å–æ•´
+		!#zh ??????ç´??????????ä¸???????
 		!#en Element vector by rounding down 
 		*/
 		static floor<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å°å€¼
+		!#zh ??????ç´??????????å°????
 		!#en The minimum by-element vector 
 		*/
 		static min<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å¤§å€¼
+		!#zh ??????ç´??????????å¤§å??
 		!#en The maximum value of the element-wise vector 
 		*/
 		static max<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å››èˆäº”å…¥å–æ•´
+		!#zh ??????ç´?????????????äº???¥å?????
 		!#en Element-wise vector of rounding to whole 
 		*/
 		static round<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å‘é‡æ ‡é‡ä¹˜æ³•
+		!#zh ????????????ä¹?æ³?
 		!#en Vector scalar multiplication 
 		*/
 		static multiplyScalar<Out extends IVec3Like, Vec3Like extends IVec3Like> (out: Out, a: Vec3Like, b: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜åŠ : A + B * scale
+		!#zh ??????ç´???????ä¹????: A + B * scale
 		!#en Element-wise vector multiply add: A + B * scale 
 		*/
 		static scaleAndAdd<Out extends IVec3Like> (out: Out, a: Out, b: Out, scale: number): Out;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦»
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦?
 		!#en Seeking two vectors Euclidean distance 
 		*/
 		static distance<Out extends IVec3Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦»å¹³æ–¹
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦»å¹³???
 		!#en Euclidean distance squared seeking two vectors 
 		*/
 		static squaredDistance<Out extends IVec3Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦
+		!#zh æ±?????????¿åº¦
 		!#en Seeking vector length 
 		*/
 		static len<Out extends IVec3Like> (a: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦å¹³æ–¹
+		!#zh æ±?????????¿åº¦å¹³æ??
 		!#en Seeking squared vector length 
 		*/
 		static lengthSqr<Out extends IVec3Like> (a: Out): number;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–è´Ÿ
+		!#zh ??????ç´??????????è´?
 		!#en By taking the negative elements of the vector 
 		*/
 		static negate<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› Infinity
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? Infinity
 		!#en Element vector by taking the inverse, return near 0 Infinity 
 		*/
 		static inverse<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› 0
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? 0
 		!#en Element vector by taking the inverse, return near 0 0 
 		*/
 		static inverseSafe<Out extends IVec3Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å½’ä¸€åŒ–å‘é‡
+		!#zh å½?ä¸??????????
 		!#en Normalized vector 
 		*/
 		static normalize<Out extends IVec3Like, Vec3Like extends IVec3Like> (out: Out, a: Vec3Like): Out;		
 		/**
-		!#zh å‘é‡ç‚¹ç§¯ï¼ˆæ•°é‡ç§¯ï¼‰
+		!#zh ????????¹ç§¯ï¼???°é??ç§¯ï??
 		!#en Vector dot product (scalar product) 
 		*/
 		static dot<Out extends IVec3Like> (a: Out, b: Out): number;		
 		/**
-		!#zh å‘é‡å‰ç§¯ï¼ˆå‘é‡ç§¯ï¼‰
+		!#zh ?????????ç§¯ï????????ç§¯ï??
 		!#en Vector cross product (vector product) 
 		*/
 		static cross<Out extends IVec3Like, Vec3Like_1 extends IVec3Like, Vec3Like_2 extends IVec3Like> (out: Out, a: Vec3Like_1, b: Vec3Like_2): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡çº¿æ€§æ’å€¼ï¼š A + t * (B - A)
+		!#zh ??????ç´???????çº¿æ?§æ????¼ï?? A + t * (B - A)
 		!#en Vector element by element linear interpolation: A + t * (B - A) 
 		*/
 		static lerp<Out extends IVec3Like> (out: Out, a: Out, b: Out, t: number): Out;		
 		/**
-		!#zh ç”Ÿæˆä¸€ä¸ªåœ¨å•ä½çƒä½“ä¸Šå‡åŒ€åˆ†å¸ƒçš„éšæœºå‘é‡
+		!#zh ??????ä¸?ä¸ªå?¨å??ä½????ä½?ä¸??????????å¸?????????ºå?????
 		!#en Generates a uniformly distributed random vectors on the unit sphere
-		@param scale ç”Ÿæˆçš„å‘é‡é•¿åº¦ 
+		@param scale ?????????????????¿åº¦ 
 		*/
 		static random<Out extends IVec3Like> (out: Out, scale?: number): Out;		
 		/**
-		!#zh å‘é‡ä¸å››ç»´çŸ©é˜µä¹˜æ³•ï¼Œé»˜è®¤å‘é‡ç¬¬å››ä½ä¸º 1ã€‚
+		!#zh ??????ä¸????ç»´ç?©é?µä??æ³?ï¼?é»?è®¤å?????ç¬¬å??ä½?ä¸? 1???
 		!#en Four-dimensional vector and matrix multiplication, the default vectors fourth one. 
 		*/
 		static transformMat4<Out extends IVec3Like, Vec3Like extends IVec3Like, MatLike extends IMat4Like> (out: Out, a: Vec3Like, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡ä¸å››ç»´çŸ©é˜µä¹˜æ³•ï¼Œé»˜è®¤å‘é‡ç¬¬å››ä½ä¸º 0ã€‚
+		!#zh ??????ä¸????ç»´ç?©é?µä??æ³?ï¼?é»?è®¤å?????ç¬¬å??ä½?ä¸? 0???
 		!#en Four-dimensional vector and matrix multiplication, vector fourth default is 0. 
 		*/
 		static transformMat4Normal<Out extends IVec3Like, MatLike extends IMat4Like> (out: Out, a: Out, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡ä¸ä¸‰ç»´çŸ©é˜µä¹˜æ³•
+		!#zh ??????ä¸?ä¸?ç»´ç?©é?µä??æ³?
 		!#en Dimensional vector matrix multiplication 
 		*/
 		static transformMat3<Out extends IVec3Like, MatLike extends IMat3Like> (out: Out, a: Out, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡ä»¿å°„å˜æ¢
+		!#zh ??????ä»¿å????????
 		!#en Affine transformation vector 
 		*/
 		static transformAffine<Out extends IVec3Like, VecLike extends IVec3Like, MatLike extends IMat4Like>(out: Out, v: VecLike, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡å››å…ƒæ•°ä¹˜æ³•
+		!#zh ??????????????°ä??æ³?
 		!#en Vector quaternion multiplication 
 		*/
 		static transformQuat<Out extends IVec3Like, VecLike extends IVec3Like, QuatLike extends IQuatLike> (out: Out, a: VecLike, q: QuatLike): Out;		
 		/**
-		!#zh ä»¥ç¼©æ”¾ -> æ—‹è½¬ -> å¹³ç§»é¡ºåºå˜æ¢å‘é‡
+		!#zh ä»¥ç¼©??? -> ???è½? -> å¹³ç§»é¡ºå???????¢å?????
 		!#en To scale -> rotation -> transformation vector sequence translation 
 		*/
 		static transformRTS<Out extends IVec3Like, VecLike extends IVec3Like, QuatLike extends IQuatLike>(out: Out, a: VecLike, r: QuatLike, t: VecLike, s: VecLike): Out;		
 		/**
-		!#zh ä»¥å¹³ç§» -> æ—‹è½¬ -> ç¼©æ”¾é¡ºåºé€†å˜æ¢å‘é‡
+		!#zh ä»¥å¹³ç§? -> ???è½? -> ç¼©æ?¾é¡ºåº?????????¢å?????
 		!#en Translational -> rotation -> Zoom inverse transformation vector sequence 
 		*/
 		static transformInverseRTS<Out extends IVec3Like, VecLike extends IVec3Like, QuatLike extends IQuatLike>(out: Out, a: VecLike, r: QuatLike, t: VecLike, s: VecLike): Out;		
 		/**
-		!#zh ç»• X è½´æ—‹è½¬å‘é‡æŒ‡å®šå¼§åº¦
+		!#zh ç»? X è½´æ??è½¬å????????å®?å¼§åº¦
 		!#en Rotation vector specified angle about the X axis
-		@param v å¾…æ—‹è½¬å‘é‡
-		@param o æ—‹è½¬ä¸­å¿ƒ
-		@param a æ—‹è½¬å¼§åº¦ 
+		@param v å¾????è½¬å?????
+		@param o ???è½¬ä¸­å¿?
+		@param a ???è½¬å¼§åº? 
 		*/
 		static rotateX<Out extends IVec3Like> (out: Out, v: Out, o: Out, a: number): Out;		
 		/**
-		!#zh ç»• Y è½´æ—‹è½¬å‘é‡æŒ‡å®šå¼§åº¦
+		!#zh ç»? Y è½´æ??è½¬å????????å®?å¼§åº¦
 		!#en Rotation vector specified angle around the Y axis
-		@param v å¾…æ—‹è½¬å‘é‡
-		@param o æ—‹è½¬ä¸­å¿ƒ
-		@param a æ—‹è½¬å¼§åº¦ 
+		@param v å¾????è½¬å?????
+		@param o ???è½¬ä¸­å¿?
+		@param a ???è½¬å¼§åº? 
 		*/
 		static rotateY<Out extends IVec3Like> (out: Out, v: Out, o: Out, a: number): Out;		
 		/**
-		!#zh ç»• Z è½´æ—‹è½¬å‘é‡æŒ‡å®šå¼§åº¦
+		!#zh ç»? Z è½´æ??è½¬å????????å®?å¼§åº¦
 		!#en Around the Z axis specified angle vector
-		@param v å¾…æ—‹è½¬å‘é‡
-		@param o æ—‹è½¬ä¸­å¿ƒ
-		@param a æ—‹è½¬å¼§åº¦ 
+		@param v å¾????è½¬å?????
+		@param o ???è½¬ä¸­å¿?
+		@param a ???è½¬å¼§åº? 
 		*/
 		static rotateZ<Out extends IVec3Like> (out: Out, v: Out, o: Out, a: number): Out;		
 		/**
-		!#zh å‘é‡ç­‰ä»·åˆ¤æ–­
+		!#zh ??????ç­?ä»·å?¤æ??
 		!#en Equivalent vectors Analyzing 
 		*/
 		static strictEquals<Out extends IVec3Like> (a: Out, b: Out): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„å‘é‡è¿‘ä¼¼ç­‰ä»·åˆ¤æ–­
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç????????è¿?ä¼¼ç??ä»·å?¤æ??
 		!#en Negative error vector floating point approximately equivalent Analyzing 
 		*/
 		static equals<Out extends IVec3Like> (a: Out, b: Out, epsilon?: number): boolean;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡å¤¹è§’å¼§åº¦
+		!#zh æ±?ä¸¤å?????å¤¹è??å¼§åº¦
 		!#en Radian angle between two vectors seek 
 		*/
 		static angle<Out extends IVec3Like> (a: Out, b: Out): number;		
 		/**
-		!#zh è®¡ç®—å‘é‡åœ¨æŒ‡å®šå¹³é¢ä¸Šçš„æŠ•å½±
+		!#zh è®¡ç??????????¨æ??å®?å¹³é?¢ä????????å½?
 		!#en Calculating a projection vector in the specified plane
-		@param a å¾…æŠ•å½±å‘é‡
-		@param n æŒ‡å®šå¹³é¢çš„æ³•çº¿ 
+		@param a å¾????å½±å?????
+		@param n ???å®?å¹³é?¢ç??æ³?çº? 
 		*/
 		static projectOnPlane<Out extends IVec3Like> (out: Out, a: Out, n: Out): Out;		
 		/**
-		!#zh è®¡ç®—å‘é‡åœ¨æŒ‡å®šå‘é‡ä¸Šçš„æŠ•å½±
+		!#zh è®¡ç??????????¨æ??å®???????ä¸???????å½?
 		!#en Projection vector calculated in the vector designated
-		@param a å¾…æŠ•å½±å‘é‡
-		@param n ç›®æ ‡å‘é‡ 
+		@param a å¾????å½±å?????
+		@param n ??®æ???????? 
 		*/
 		static project<Out extends IVec3Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh å‘é‡è½¬æ•°ç»„
+		!#zh ??????è½¬æ?°ç??
 		!#en Vector transfer array
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, v: IVec3Like, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬å‘é‡
+		!#zh ??°ç??è½¬å?????
 		!#en Array steering amount
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IVec3Like> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		x: number;		
@@ -14548,7 +14548,7 @@ declare namespace cc {
 		Constructor
 		see {{#crossLink "cc/vec3:method"}}cc.v3{{/crossLink}}
 		!#zh
-		æ„é€ å‡½æ•°ï¼Œå¯æŸ¥çœ‹ {{#crossLink "cc/vec3:method"}}cc.v3{{/crossLink}}
+		????????½æ?°ï????¯æ?¥ç?? {{#crossLink "cc/vec3:method"}}cc.v3{{/crossLink}}
 		@param x x
 		@param y y
 		@param z z 
@@ -14556,38 +14556,38 @@ declare namespace cc {
 		constructor(x?: Vec3|number, y?: number, z?: number);		
 		/**
 		!#en clone a Vec3 value
-		!#zh å…‹éš†ä¸€ä¸ª Vec3 å€¼ 
+		!#zh ??????ä¸?ä¸? Vec3 ??? 
 		*/
 		clone(): Vec3;		
 		/**
 		!#en Set the current vector value with the given vector.
-		!#zh ç”¨å¦ä¸€ä¸ªå‘é‡è®¾ç½®å½“å‰çš„å‘é‡å¯¹è±¡å€¼ã€‚
-		@param newValue !#en new value to set. !#zh è¦è®¾ç½®çš„æ–°å€¼ 
+		!#zh ??¨å?¦ä??ä¸ªå?????è®¾ç½®å½?????????????å¯¹è±¡??¼ã??
+		@param newValue !#en new value to set. !#zh è¦?è®¾ç½®?????°å?? 
 		*/
 		set(newValue: Vec3): Vec3;		
 		/**
 		!#en Check whether the vector equals another one
-		!#zh å½“å‰çš„å‘é‡æ˜¯å¦ä¸æŒ‡å®šçš„å‘é‡ç›¸ç­‰ã€‚
+		!#zh å½???????????????¯å?¦ä?????å®????????????¸ç?????
 		@param other other 
 		*/
 		equals(other: Vec3): boolean;		
 		/**
 		!#en Check whether two vector equal with some degree of variance.
 		!#zh
-		è¿‘ä¼¼åˆ¤æ–­ä¸¤ä¸ªç‚¹æ˜¯å¦ç›¸ç­‰ã€‚<br/>
-		åˆ¤æ–­ 2 ä¸ªå‘é‡æ˜¯å¦åœ¨æŒ‡å®šæ•°å€¼çš„èŒƒå›´ä¹‹å†…ï¼Œå¦‚æœåœ¨åˆ™è¿”å› trueï¼Œåä¹‹åˆ™è¿”å› falseã€‚
+		è¿?ä¼¼å?¤æ?­ä¸¤ä¸ªç?¹æ?¯å?¦ç?¸ç?????<br/>
+		??¤æ?? 2 ä¸ªå???????¯å?¦å?¨æ??å®???°å?¼ç???????´ä?????ï¼?å¦??????¨å??è¿???? trueï¼????ä¹????è¿???? false???
 		@param other other
 		@param variance variance 
 		*/
 		fuzzyEquals(other: Vec3, variance: number): boolean;		
 		/**
 		!#en Transform to string with vector informations
-		!#zh è½¬æ¢ä¸ºæ–¹ä¾¿é˜…è¯»çš„å­—ç¬¦ä¸²ã€‚ 
+		!#zh è½¬æ?¢ä¸º??¹ä¾¿???è¯»ç??å­?ç¬¦ä¸²??? 
 		*/
 		toString(): string;		
 		/**
 		!#en Calculate linear interpolation result between this vector and another one with given ratio
-		!#zh çº¿æ€§æ’å€¼ã€‚
+		!#zh çº¿æ?§æ????¼ã??
 		@param to to
 		@param ratio the interpolation coefficient
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
@@ -14596,72 +14596,72 @@ declare namespace cc {
 		/**
 		!#en Clamp the vector between from float and to float.
 		!#zh
-		è¿”å›æŒ‡å®šé™åˆ¶åŒºåŸŸåçš„å‘é‡ã€‚<br/>
-		å‘é‡å¤§äº max_inclusive åˆ™è¿”å› max_inclusiveã€‚<br/>
-		å‘é‡å°äº min_inclusive åˆ™è¿”å› min_inclusiveã€‚<br/>
-		å¦åˆ™è¿”å›è‡ªèº«ã€‚
+		è¿???????å®??????¶å?ºå?????????????????<br/>
+		??????å¤§ä?? max_inclusive ???è¿???? max_inclusive???<br/>
+		??????å°?äº? min_inclusive ???è¿???? min_inclusive???<br/>
+		??¦å??è¿??????ªèº«???
 		@param min_inclusive min_inclusive
 		@param max_inclusive max_inclusive 
 		*/
 		clampf(min_inclusive: Vec3, max_inclusive: Vec3): Vec3;		
 		/**
 		!#en Adds this vector. If you want to save result to another vector, use add() instead.
-		!#zh å‘é‡åŠ æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œä½¿ç”¨ add() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼?ä½¿ç?? add() ä»???¿ã??
 		@param vector vector 
 		*/
 		addSelf(vector: Vec3): Vec3;		
 		/**
 		!#en Adds two vectors, and returns the new result.
-		!#zh å‘é‡åŠ æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		add(vector: Vec3, out?: Vec3): Vec3;		
 		/**
 		!#en Subtracts one vector from this.
-		!#zh å‘é‡å‡æ³•ã€‚
+		!#zh ?????????æ³????
 		@param vector vector 
 		*/
 		subtract(vector: Vec3): Vec3;		
 		/**
 		!#en Multiplies this by a number.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚
+		!#zh ç¼©æ?¾å??????????????
 		@param num num 
 		*/
 		multiplyScalar(num: number): Vec3;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector 
 		*/
 		multiply(vector: Vec3): Vec3;		
 		/**
 		!#en Divides by a number.
-		!#zh å‘é‡é™¤æ³•ã€‚
+		!#zh ????????¤æ?????
 		@param num num 
 		*/
 		divide(num: number): Vec3;		
 		/**
 		!#en Negates the components.
-		!#zh å‘é‡å–åã€‚ 
+		!#zh ??????????????? 
 		*/
 		negate(): Vec3;		
 		/**
 		!#en Dot product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œç‚¹ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡???¹ä?????
 		@param vector vector 
 		*/
 		dot(vector?: Vec3): number;		
 		/**
 		!#en Cross product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œå‰ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡????ä¹????
 		@param vector vector
 		@param out out 
 		*/
 		cross(vector: Vec3, out?: Vec3): Vec3;		
 		/**
 		!#en Returns the length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦???
 		
 		@example 
 		```js
@@ -14672,12 +14672,12 @@ declare namespace cc {
 		len(): number;		
 		/**
 		!#en Returns the squared length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦å¹³æ–¹ã€‚ 
+		!#zh è¿????è¯¥å??????????¿åº¦å¹³æ?¹ã?? 
 		*/
 		lengthSqr(): number;		
 		/**
 		!#en Make the length of this vector to 1.
-		!#zh å‘é‡å½’ä¸€åŒ–ï¼Œè®©è¿™ä¸ªå‘é‡çš„é•¿åº¦ä¸º 1ã€‚ 
+		!#zh ??????å½?ä¸????ï¼?è®©è??ä¸ªå??????????¿åº¦ä¸? 1??? 
 		*/
 		normalizeSelf(): Vec3;		
 		/**
@@ -14686,9 +14686,9 @@ declare namespace cc {
 		<br/>
 		Note that the current vector is unchanged and a new normalized vector is returned. If you want to normalize the current vector, use normalizeSelf function.
 		!#zh
-		è¿”å›å½’ä¸€åŒ–åçš„å‘é‡ã€‚<br/>
+		è¿????å½?ä¸???????????????????<br/>
 		<br/>
-		æ³¨æ„ï¼Œå½“å‰å‘é‡ä¸å˜ï¼Œå¹¶è¿”å›ä¸€ä¸ªæ–°çš„å½’ä¸€åŒ–å‘é‡ã€‚å¦‚æœä½ æƒ³æ¥å½’ä¸€åŒ–å½“å‰å‘é‡ï¼Œå¯ä½¿ç”¨ normalizeSelf å‡½æ•°ã€‚
+		æ³¨æ??ï¼?å½??????????ä¸????ï¼?å¹¶è?????ä¸?ä¸ªæ?°ç??å½?ä¸?????????????å¦????ä½???³æ?¥å??ä¸????å½??????????ï¼???¯ä½¿??? normalizeSelf ??½æ?°ã??
 		@param out optional, the receiving vector, you can pass the same vec3 to save result to itself, if not provided, a new vec3 will be created 
 		*/
 		normalize(out?: Vec3): Vec3;		
@@ -14704,13 +14704,13 @@ declare namespace cc {
 		maxAxis(): number;		
 		/**
 		!#en Get angle in radian between this and vector.
-		!#zh å¤¹è§’çš„å¼§åº¦ã€‚
+		!#zh å¤¹è?????å¼§åº¦???
 		@param vector vector 
 		*/
 		angle(vector: Vec3): number;		
 		/**
 		!#en Calculates the projection of the current vector over the given vector.
-		!#zh è¿”å›å½“å‰å‘é‡åœ¨æŒ‡å®š vector å‘é‡ä¸Šçš„æŠ•å½±å‘é‡ã€‚
+		!#zh è¿????å½????????????¨æ??å®? vector ??????ä¸???????å½±å????????
 		@param vector vector
 		
 		@example 
@@ -14724,251 +14724,251 @@ declare namespace cc {
 		/**
 		!#en Get angle in radian between this and vector with direction. <br/>
 		In order to compatible with the vec2 API.
-		!#zh å¸¦æ–¹å‘çš„å¤¹è§’çš„å¼§åº¦ã€‚è¯¥æ–¹æ³•ä»…ç”¨åšå…¼å®¹ 2D è®¡ç®—ã€‚
+		!#zh å¸¦æ?¹å?????å¤¹è?????å¼§åº¦???è¯¥æ?¹æ??ä»???¨å????¼å®¹ 2D è®¡ç?????
 		@param vector vector 
 		*/
 		signAngle(vector: Vec3|Vec2): number;		
 		/**
 		!#en rotate. In order to compatible with the vec2 API.
-		!#zh è¿”å›æ—‹è½¬ç»™å®šå¼§åº¦åçš„æ–°å‘é‡ã€‚è¯¥æ–¹æ³•ä»…ç”¨åšå…¼å®¹ 2D è®¡ç®—ã€‚
+		!#zh è¿???????è½¬ç??å®?å¼§åº¦????????°å????????è¯¥æ?¹æ??ä»???¨å????¼å®¹ 2D è®¡ç?????
 		@param radians radians
 		@param out optional, the receiving vector, you can pass the same vec2 to save result to itself, if not provided, a new vec2 will be created 
 		*/
 		rotate(radians: number, out?: Vec3): Vec2;		
 		/**
 		!#en rotate self. In order to compatible with the vec2 API.
-		!#zh æŒ‰æŒ‡å®šå¼§åº¦æ—‹è½¬å‘é‡ã€‚è¯¥æ–¹æ³•ä»…ç”¨åšå…¼å®¹ 2D è®¡ç®—ã€‚
+		!#zh ??????å®?å¼§åº¦???è½¬å????????è¯¥æ?¹æ??ä»???¨å????¼å®¹ 2D è®¡ç?????
 		@param radians radians 
 		*/
 		rotateSelf(radians: number): Vec3;	
 	}	
 	/** !#en Representation of 3D vectors and points.
-	!#zh è¡¨ç¤º 3D å‘é‡å’Œåæ ‡ */
+	!#zh è¡¨ç¤º 3D ??????????????? */
 	export class Vec4 extends ValueType {		
 		/**
 		!#en Subtracts one vector from this. If you want to save result to another vector, use sub() instead.
-		!#zh å‘é‡å‡æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ sub() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? sub() ä»???¿ã??
 		@param vector vector 
 		*/
 		subSelf(vector: Vec4): Vec4;		
 		/**
 		!#en Subtracts one vector from this, and returns the new result.
-		!#zh å‘é‡å‡æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		sub(vector: Vec4, out?: Vec4): Vec4;		
 		/**
 		!#en Multiplies this by a number. If you want to save result to another vector, use mul() instead.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ mul() ä»£æ›¿ã€‚
+		!#zh ç¼©æ?¾å??????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? mul() ä»???¿ã??
 		@param num num 
 		*/
 		mulSelf(num: number): Vec4;		
 		/**
 		!#en Multiplies by a number, and returns the new result.
-		!#zh ç¼©æ”¾å‘é‡ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ç¼©æ?¾å?????ï¼?å¹¶è???????°ç????????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		mul(num: number, out?: Vec4): Vec4;		
 		/**
 		!#en Divides by a number. If you want to save result to another vector, use div() instead.
-		!#zh å‘é‡é™¤æ³•ã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ div() ä»£æ›¿ã€‚
+		!#zh ????????¤æ?????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? div() ä»???¿ã??
 		@param num num 
 		*/
 		divSelf(num: number): Vec4;		
 		/**
 		!#en Divides by a number, and returns the new result.
-		!#zh å‘é‡é™¤æ³•ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¤æ??ï¼?å¹¶è???????°ç??ç»???????
 		@param num num
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		div(num: number, out?: Vec4): Vec4;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector 
 		*/
 		scaleSelf(vector: Vec4): Vec4;		
 		/**
 		!#en Multiplies two vectors, and returns the new result.
-		!#zh åˆ†é‡ç›¸ä¹˜ï¼Œå¹¶è¿”å›æ–°çš„ç»“æœã€‚
+		!#zh ????????¸ä??ï¼?å¹¶è???????°ç??ç»???????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		scale(vector: Vec4, out?: Vec4): Vec4;		
 		/**
 		!#en Negates the components. If you want to save result to another vector, use neg() instead.
-		!#zh å‘é‡å–åã€‚å¦‚æœä½ æƒ³ç»“æœä¿å­˜åˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œå¯ä½¿ç”¨ neg() ä»£æ›¿ã€‚ 
+		!#zh ???????????????å¦????ä½???³ç?????ä¿?å­???°å?¦ä??ä¸ªå?????ï¼???¯ä½¿??? neg() ä»???¿ã?? 
 		*/
 		negSelf(): Vec4;		
 		/**
 		!#en Negates the components, and returns the new result.
-		!#zh è¿”å›å–ååçš„æ–°å‘é‡ã€‚
+		!#zh è¿??????????????????°å????????
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		neg(out?: Vec4): Vec4;		
 		/**
-		!#zh è·å¾—æŒ‡å®šå‘é‡çš„æ‹·è´
+		!#zh ??·å?????å®????????????·è??
 		!#en Obtaining copy vectors designated 
 		*/
 		static clone <Out extends IVec4Like> (a: Out): Vec4;		
 		/**
-		!#zh å¤åˆ¶ç›®æ ‡å‘é‡
+		!#zh å¤???¶ç?®æ????????
 		!#en Copy the target vector 
 		*/
 		static copy <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh è®¾ç½®å‘é‡å€¼
+		!#zh è®¾ç½®?????????
 		!#en Set to value 
 		*/
 		static set <Out extends IVec4Like> (out: Out, x: number, y: number, z: number, w: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡åŠ æ³•
+		!#zh ??????ç´??????????æ³?
 		!#en Element-wise vector addition 
 		*/
 		static add <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‡æ³•
+		!#zh ??????ç´??????????æ³?
 		!#en Element-wise vector subtraction 
 		*/
 		static subtract <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜æ³•
+		!#zh ??????ç´???????ä¹?æ³?
 		!#en Element-wise vector multiplication 
 		*/
 		static multiply <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡é™¤æ³•
+		!#zh ??????ç´?????????¤æ??
 		!#en Element-wise vector division 
 		*/
 		static divide <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸Šå–æ•´
+		!#zh ??????ç´??????????ä¸???????
 		!#en Rounding up by elements of the vector 
 		*/
 		static ceil <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å‘ä¸‹å–æ•´
+		!#zh ??????ç´??????????ä¸???????
 		!#en Element vector by rounding down 
 		*/
 		static floor <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å°å€¼
+		!#zh ??????ç´??????????å°????
 		!#en The minimum by-element vector 
 		*/
 		static min <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡æœ€å¤§å€¼
+		!#zh ??????ç´??????????å¤§å??
 		!#en The maximum value of the element-wise vector 
 		*/
 		static max <Out extends IVec4Like> (out: Out, a: Out, b: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å››èˆäº”å…¥å–æ•´
+		!#zh ??????ç´?????????????äº???¥å?????
 		!#en Element-wise vector of rounding to whole 
 		*/
 		static round <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å‘é‡æ ‡é‡ä¹˜æ³•
+		!#zh ????????????ä¹?æ³?
 		!#en Vector scalar multiplication 
 		*/
 		static multiplyScalar <Out extends IVec4Like> (out: Out, a: Out, b: number): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡ä¹˜åŠ : A + B * scale
+		!#zh ??????ç´???????ä¹????: A + B * scale
 		!#en Element-wise vector multiply add: A + B * scale 
 		*/
 		static scaleAndAdd <Out extends IVec4Like> (out: Out, a: Out, b: Out, scale: number): Out;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦»
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦?
 		!#en Seeking two vectors Euclidean distance 
 		*/
 		static distance <Out extends IVec4Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚ä¸¤å‘é‡çš„æ¬§æ°è·ç¦»å¹³æ–¹
+		!#zh æ±?ä¸¤å????????æ¬§æ??è·?ç¦»å¹³???
 		!#en Euclidean distance squared seeking two vectors 
 		*/
 		static squaredDistance <Out extends IVec4Like> (a: Out, b: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦
+		!#zh æ±?????????¿åº¦
 		!#en Seeking vector length 
 		*/
 		static len <Out extends IVec4Like> (a: Out): number;		
 		/**
-		!#zh æ±‚å‘é‡é•¿åº¦å¹³æ–¹
+		!#zh æ±?????????¿åº¦å¹³æ??
 		!#en Seeking squared vector length 
 		*/
 		static lengthSqr <Out extends IVec4Like> (a: Out): number;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–è´Ÿ
+		!#zh ??????ç´??????????è´?
 		!#en By taking the negative elements of the vector 
 		*/
 		static negate <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› Infinity
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? Infinity
 		!#en Element vector by taking the inverse, return near 0 Infinity 
 		*/
 		static inverse <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡å–å€’æ•°ï¼Œæ¥è¿‘ 0 æ—¶è¿”å› 0
+		!#zh ??????ç´???????????????°ï????¥è?? 0 ??¶è????? 0
 		!#en Element vector by taking the inverse, return near 0 0 
 		*/
 		static inverseSafe <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å½’ä¸€åŒ–å‘é‡
+		!#zh å½?ä¸??????????
 		!#en Normalized vector 
 		*/
 		static normalize <Out extends IVec4Like> (out: Out, a: Out): Out;		
 		/**
-		!#zh å‘é‡ç‚¹ç§¯ï¼ˆæ•°é‡ç§¯ï¼‰
+		!#zh ????????¹ç§¯ï¼???°é??ç§¯ï??
 		!#en Vector dot product (scalar product) 
 		*/
 		static dot <Out extends IVec4Like> (a: Out, b: Out): number;		
 		/**
-		!#zh é€å…ƒç´ å‘é‡çº¿æ€§æ’å€¼ï¼š A + t * (B - A)
+		!#zh ??????ç´???????çº¿æ?§æ????¼ï?? A + t * (B - A)
 		!#en Vector element by element linear interpolation: A + t * (B - A) 
 		*/
 		static lerp <Out extends IVec4Like> (out: Out, a: Out, b: Out, t: number): Out;		
 		/**
-		!#zh ç”Ÿæˆä¸€ä¸ªåœ¨å•ä½çƒä½“ä¸Šå‡åŒ€åˆ†å¸ƒçš„éšæœºå‘é‡
+		!#zh ??????ä¸?ä¸ªå?¨å??ä½????ä½?ä¸??????????å¸?????????ºå?????
 		!#en Generates a uniformly distributed random vectors on the unit sphere
-		@param scale ç”Ÿæˆçš„å‘é‡é•¿åº¦ 
+		@param scale ?????????????????¿åº¦ 
 		*/
 		static random <Out extends IVec4Like> (out: Out, scale?: number): Out;		
 		/**
-		!#zh å‘é‡çŸ©é˜µä¹˜æ³•
+		!#zh ????????©é?µä??æ³?
 		!#en Vector matrix multiplication 
 		*/
 		static transformMat4 <Out extends IVec4Like, MatLike extends IMat4Like> (out: Out, a: Out, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡ä»¿å°„å˜æ¢
+		!#zh ??????ä»¿å????????
 		!#en Affine transformation vector 
 		*/
 		static transformAffine<Out extends IVec4Like, VecLike extends IVec4Like, MatLike extends IMat4Like>(out: Out, v: VecLike, mat: MatLike): Out;		
 		/**
-		!#zh å‘é‡å››å…ƒæ•°ä¹˜æ³•
+		!#zh ??????????????°ä??æ³?
 		!#en Vector quaternion multiplication 
 		*/
 		static transformQuat <Out extends IVec4Like, QuatLike extends IQuatLike> (out: Out, a: Out, q: QuatLike): Out;		
 		/**
-		!#zh å‘é‡ç­‰ä»·åˆ¤æ–­
+		!#zh ??????ç­?ä»·å?¤æ??
 		!#en Equivalent vectors Analyzing 
 		*/
 		static strictEquals <Out extends IVec4Like> (a: Out, b: Out): boolean;		
 		/**
-		!#zh æ’é™¤æµ®ç‚¹æ•°è¯¯å·®çš„å‘é‡è¿‘ä¼¼ç­‰ä»·åˆ¤æ–­
+		!#zh ?????¤æµ®??¹æ?°è¯¯å·®ç????????è¿?ä¼¼ç??ä»·å?¤æ??
 		!#en Negative error vector floating point approximately equivalent Analyzing 
 		*/
 		static equals <Out extends IVec4Like> (a: Out, b: Out, epsilon?: number): boolean;		
 		/**
-		!#zh å‘é‡è½¬æ•°ç»„
+		!#zh ??????è½¬æ?°ç??
 		!#en Vector transfer array
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static toArray <Out extends IWritableArrayLike<number>> (out: Out, v: IVec4Like, ofs?: number): Out;		
 		/**
-		!#zh æ•°ç»„è½¬å‘é‡
+		!#zh ??°ç??è½¬å?????
 		!#en Array steering amount
-		@param ofs æ•°ç»„èµ·å§‹åç§»é‡ 
+		@param ofs ??°ç??èµ·å?????ç§»é?? 
 		*/
 		static fromArray <Out extends IVec4Like> (out: Out, arr: IWritableArrayLike<number>, ofs?: number): Out;		
 		x: number;		
@@ -14980,7 +14980,7 @@ declare namespace cc {
 		Constructor
 		see {{#crossLink "cc/vec4:method"}}cc.v4{{/crossLink}}
 		!#zh
-		æ„é€ å‡½æ•°ï¼Œå¯æŸ¥çœ‹ {{#crossLink "cc/vec4:method"}}cc.v4{{/crossLink}}
+		????????½æ?°ï????¯æ?¥ç?? {{#crossLink "cc/vec4:method"}}cc.v4{{/crossLink}}
 		@param x x
 		@param y y
 		@param z z
@@ -14989,125 +14989,125 @@ declare namespace cc {
 		constructor(x?: number, y?: number, z?: number, w?: number);		
 		/**
 		!#en clone a Vec4 value
-		!#zh å…‹éš†ä¸€ä¸ª Vec4 å€¼ 
+		!#zh ??????ä¸?ä¸? Vec4 ??? 
 		*/
 		clone(): Vec4;		
 		/**
 		!#en Set the current vector value with the given vector.
-		!#zh ç”¨å¦ä¸€ä¸ªå‘é‡è®¾ç½®å½“å‰çš„å‘é‡å¯¹è±¡å€¼ã€‚
-		@param newValue !#en new value to set. !#zh è¦è®¾ç½®çš„æ–°å€¼ 
+		!#zh ??¨å?¦ä??ä¸ªå?????è®¾ç½®å½?????????????å¯¹è±¡??¼ã??
+		@param newValue !#en new value to set. !#zh è¦?è®¾ç½®?????°å?? 
 		*/
 		set(newValue: Vec4): Vec4;		
 		/**
 		!#en Check whether the vector equals another one
-		!#zh å½“å‰çš„å‘é‡æ˜¯å¦ä¸æŒ‡å®šçš„å‘é‡ç›¸ç­‰ã€‚
+		!#zh å½???????????????¯å?¦ä?????å®????????????¸ç?????
 		@param other other
 		@param epsilon epsilon 
 		*/
 		equals(other: Vec4, epsilon?: number): boolean;		
 		/**
 		!#en Check whether the vector equals another one
-		!#zh åˆ¤æ–­å½“å‰å‘é‡æ˜¯å¦åœ¨è¯¯å·®èŒƒå›´å†…ä¸æŒ‡å®šåˆ†é‡çš„å‘é‡ç›¸ç­‰ã€‚
-		@param x ç›¸æ¯”è¾ƒçš„å‘é‡çš„ x åˆ†é‡ã€‚
-		@param y ç›¸æ¯”è¾ƒçš„å‘é‡çš„ y åˆ†é‡ã€‚
-		@param z ç›¸æ¯”è¾ƒçš„å‘é‡çš„ z åˆ†é‡ã€‚
-		@param w ç›¸æ¯”è¾ƒçš„å‘é‡çš„ w åˆ†é‡ã€‚
-		@param epsilon å…è®¸çš„è¯¯å·®ï¼Œåº”ä¸ºéè´Ÿæ•°ã€‚ 
+		!#zh ??¤æ?­å?????????????¯å?¦å?¨è¯¯å·®è????´å??ä¸????å®??????????????????¸ç?????
+		@param x ??¸æ??è¾????????????? x ?????????
+		@param y ??¸æ??è¾????????????? y ?????????
+		@param z ??¸æ??è¾????????????? z ?????????
+		@param w ??¸æ??è¾????????????? w ?????????
+		@param epsilon ???è®¸ç??è¯¯å·®ï¼?åº?ä¸ºé??è´???°ã?? 
 		*/
 		equals4f(x: number, y: number, z: number, w: number, epsilon?: number): boolean;		
 		/**
 		!#en Check whether strict equals other Vec4
-		!#zh åˆ¤æ–­å½“å‰å‘é‡æ˜¯å¦ä¸æŒ‡å®šå‘é‡ç›¸ç­‰ã€‚ä¸¤å‘é‡çš„å„åˆ†é‡éƒ½åˆ†åˆ«ç›¸ç­‰æ—¶è¿”å› `true`ï¼›å¦åˆ™è¿”å› `false`ã€‚
-		@param other ç›¸æ¯”è¾ƒçš„å‘é‡ã€‚ 
+		!#zh ??¤æ?­å?????????????¯å?¦ä?????å®?????????¸ç?????ä¸¤å???????????????????½å????«ç?¸ç????¶è????? `true`ï¼???¦å??è¿???? `false`???
+		@param other ??¸æ??è¾????????????? 
 		*/
 		strictEquals(other: Vec4): boolean;		
 		/**
 		!#en Check whether strict equals other Vec4
-		!#zh åˆ¤æ–­å½“å‰å‘é‡æ˜¯å¦ä¸æŒ‡å®šåˆ†é‡çš„å‘é‡ç›¸ç­‰ã€‚ä¸¤å‘é‡çš„å„åˆ†é‡éƒ½åˆ†åˆ«ç›¸ç­‰æ—¶è¿”å› `true`ï¼›å¦åˆ™è¿”å› `false`ã€‚
-		@param x æŒ‡å®šå‘é‡çš„ x åˆ†é‡ã€‚
-		@param y æŒ‡å®šå‘é‡çš„ y åˆ†é‡ã€‚
-		@param z æŒ‡å®šå‘é‡çš„ z åˆ†é‡ã€‚
-		@param w æŒ‡å®šå‘é‡çš„ w åˆ†é‡ã€‚ 
+		!#zh ??¤æ?­å?????????????¯å?¦ä?????å®??????????????????¸ç?????ä¸¤å???????????????????½å????«ç?¸ç????¶è????? `true`ï¼???¦å??è¿???? `false`???
+		@param x ???å®?????????? x ?????????
+		@param y ???å®?????????? y ?????????
+		@param z ???å®?????????? z ?????????
+		@param w ???å®?????????? w ????????? 
 		*/
 		strictEquals4f(x: number, y: number, z: number, w: number): boolean;		
 		/**
 		!#en Calculate linear interpolation result between this vector and another one with given ratio
-		!#zh æ ¹æ®æŒ‡å®šçš„æ’å€¼æ¯”ç‡ï¼Œä»å½“å‰å‘é‡åˆ°ç›®æ ‡å‘é‡ä¹‹é—´åšæ’å€¼ã€‚
-		@param to ç›®æ ‡å‘é‡ã€‚
-		@param ratio æ’å€¼æ¯”ç‡ï¼ŒèŒƒå›´ä¸º [0,1]ã€‚ 
+		!#zh ??¹æ?®æ??å®?????????¼æ?????ï¼?ä»?å½????????????°ç?®æ????????ä¹???´å???????¼ã??
+		@param to ??®æ???????????
+		@param ratio ?????¼æ?????ï¼??????´ä¸º [0,1]??? 
 		*/
 		lerp(to: Vec4, ratio: number): Vec4;		
 		/**
 		!#en Transform to string with vector informations
-		!#zh è¿”å›å½“å‰å‘é‡çš„å­—ç¬¦ä¸²è¡¨ç¤ºã€‚ 
+		!#zh è¿????å½?????????????å­?ç¬¦ä¸²è¡¨ç¤º??? 
 		*/
 		toString(): string;		
 		/**
 		!#en Clamp the vector between minInclusive and maxInclusive.
-		!#zh è®¾ç½®å½“å‰å‘é‡çš„å€¼ï¼Œä½¿å…¶å„ä¸ªåˆ†é‡éƒ½å¤„äºæŒ‡å®šçš„èŒƒå›´å†…ã€‚
-		@param minInclusive æ¯ä¸ªåˆ†é‡éƒ½ä»£è¡¨äº†å¯¹åº”åˆ†é‡å…è®¸çš„æœ€å°å€¼ã€‚
-		@param maxInclusive æ¯ä¸ªåˆ†é‡éƒ½ä»£è¡¨äº†å¯¹åº”åˆ†é‡å…è®¸çš„æœ€å¤§å€¼ã€‚ 
+		!#zh è®¾ç½®å½???????????????¼ï??ä½¿å?¶å??ä¸ªå???????½å??äº????å®?????????´å?????
+		@param minInclusive æ¯?ä¸ªå???????½ä»£è¡¨ä??å¯¹å???????????è®¸ç?????å°???¼ã??
+		@param maxInclusive æ¯?ä¸ªå???????½ä»£è¡¨ä??å¯¹å???????????è®¸ç?????å¤§å?¼ã?? 
 		*/
 		clampf(minInclusive: Vec4, maxInclusive: Vec4): Vec4;		
 		/**
 		!#en Adds this vector. If you want to save result to another vector, use add() instead.
-		!#zh å‘é‡åŠ æ³•ã€‚å¦‚æœä½ æƒ³ä¿å­˜ç»“æœåˆ°å¦ä¸€ä¸ªå‘é‡ï¼Œä½¿ç”¨ add() ä»£æ›¿ã€‚
+		!#zh ?????????æ³????å¦????ä½???³ä??å­?ç»??????°å?¦ä??ä¸ªå?????ï¼?ä½¿ç?? add() ä»???¿ã??
 		@param vector vector 
 		*/
 		addSelf(vector: Vec4): Vec4;		
 		/**
 		!#en Adds two vectors, and returns the new result.
-		!#zh å‘é‡åŠ æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		add(vector: Vec4, out?: Vec4): Vec4;		
 		/**
 		!#en Subtracts one vector from this, and returns the new result.
-		!#zh å‘é‡å‡æ³•ï¼Œå¹¶è¿”å›æ–°ç»“æœã€‚
+		!#zh ?????????æ³?ï¼?å¹¶è???????°ç????????
 		@param vector vector
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		subtract(vector: Vec4, out?: Vec4): Vec4;		
 		/**
 		!#en Multiplies this by a number.
-		!#zh ç¼©æ”¾å½“å‰å‘é‡ã€‚
+		!#zh ç¼©æ?¾å??????????????
 		@param num num 
 		*/
 		multiplyScalar(num: number): Vec4;		
 		/**
 		!#en Multiplies two vectors.
-		!#zh åˆ†é‡ç›¸ä¹˜ã€‚
+		!#zh ????????¸ä?????
 		@param vector vector 
 		*/
 		multiply(vector: Vec4): Vec4;		
 		/**
 		!#en Divides by a number.
-		!#zh å‘é‡é™¤æ³•ã€‚
+		!#zh ????????¤æ?????
 		@param num num 
 		*/
 		divide(num: number): Vec4;		
 		/**
 		!#en Negates the components.
-		!#zh å‘é‡å–å 
+		!#zh ???????????? 
 		*/
 		negate(): Vec4;		
 		/**
 		!#en Dot product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œç‚¹ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡???¹ä?????
 		@param vector vector 
 		*/
 		dot(vector?: Vec4): number;		
 		/**
 		!#en Cross product
-		!#zh å½“å‰å‘é‡ä¸æŒ‡å®šå‘é‡è¿›è¡Œå‰ä¹˜ã€‚
+		!#zh å½??????????ä¸????å®???????è¿?è¡????ä¹????
 		@param vector vector
 		@param out out 
 		*/
 		cross(vector: Vec4, out?: Vec4): Vec4;		
 		/**
 		!#en Returns the length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦ã€‚
+		!#zh è¿????è¯¥å??????????¿åº¦???
 		
 		@example 
 		```js
@@ -15118,12 +15118,12 @@ declare namespace cc {
 		len(): number;		
 		/**
 		!#en Returns the squared length of this vector.
-		!#zh è¿”å›è¯¥å‘é‡çš„é•¿åº¦å¹³æ–¹ã€‚ 
+		!#zh è¿????è¯¥å??????????¿åº¦å¹³æ?¹ã?? 
 		*/
 		lengthSqr(): number;		
 		/**
 		!#en Make the length of this vector to 1.
-		!#zh å‘é‡å½’ä¸€åŒ–ï¼Œè®©è¿™ä¸ªå‘é‡çš„é•¿åº¦ä¸º 1ã€‚ 
+		!#zh ??????å½?ä¸????ï¼?è®©è??ä¸ªå??????????¿åº¦ä¸? 1??? 
 		*/
 		normalizeSelf(): Vec4;		
 		/**
@@ -15132,9 +15132,9 @@ declare namespace cc {
 		<br/>
 		Note that the current vector is unchanged and a new normalized vector is returned. If you want to normalize the current vector, use normalizeSelf function.
 		!#zh
-		è¿”å›å½’ä¸€åŒ–åçš„å‘é‡ã€‚<br/>
+		è¿????å½?ä¸???????????????????<br/>
 		<br/>
-		æ³¨æ„ï¼Œå½“å‰å‘é‡ä¸å˜ï¼Œå¹¶è¿”å›ä¸€ä¸ªæ–°çš„å½’ä¸€åŒ–å‘é‡ã€‚å¦‚æœä½ æƒ³æ¥å½’ä¸€åŒ–å½“å‰å‘é‡ï¼Œå¯ä½¿ç”¨ normalizeSelf å‡½æ•°ã€‚
+		æ³¨æ??ï¼?å½??????????ä¸????ï¼?å¹¶è?????ä¸?ä¸ªæ?°ç??å½?ä¸?????????????å¦????ä½???³æ?¥å??ä¸????å½??????????ï¼???¯ä½¿??? normalizeSelf ??½æ?°ã??
 		@param out optional, the receiving vector, you can pass the same vec4 to save result to itself, if not provided, a new vec4 will be created 
 		*/
 		normalize(out?: Vec4): Vec4;		
@@ -15150,229 +15150,229 @@ declare namespace cc {
 		maxAxis(): number;	
 	}	
 	/** !#en .
-	!#zh ã€‚ */
+	!#zh ??? */
 	export class SkeletonAnimation extends Animation {	
 	}	
 	/** !#en SkeletonAnimationClip Asset.
-	!#zh éª¨éª¼åŠ¨ç”»å‰ªè¾‘ã€‚ */
+	!#zh éª¨éª¼??¨ç?»å?ªè????? */
 	export class SkeletonAnimationClip extends AnimationClip {	
 	}	
 	/** !#en
 	Skinned Mesh Renderer
 	!#zh
-	è’™çš®æ¸²æŸ“ç»„ä»¶ */
+	?????®æ¸²???ç»?ä»? */
 	export class SkinnedMeshRenderer extends MeshRenderer {		
 		/** !#en
 		Skeleton Asset
 		!#zh
-		éª¨éª¼èµ„æº */
+		éª¨éª¼èµ?æº? */
 		skeleton: sp.Skeleton;		
 		/** !#en
 		Root Bone
 		!#zh
-		éª¨éª¼æ ¹èŠ‚ç‚¹ */
+		éª¨éª¼??¹è????? */
 		rootBone: Node;	
 	}	
 	/** !#en The animation curve of 3d particle.
-	!#zh 3D ç²’å­åŠ¨ç”»æ›²çº¿ */
+	!#zh 3D ç²?å­???¨ç?»æ?²çº¿ */
 	export class AnimationCurve {		
 		/** !#en Array of key value.
-		!#zh å…³é”®å€¼åˆ—è¡¨ã€‚ */
+		!#zh ??³é?®å?¼å??è¡¨ã?? */
 		keyFrames: Keyframe[];		
 		/** !#en Pre-wrap mode.
-		!#zh å‰ç½®å¾ªç¯æ¨¡å¼ã€‚ */
+		!#zh ???ç½®å¾ª??¯æ¨¡å¼???? */
 		preWrapMode: WrapMode;		
 		/** !#en Post-wrap mode.
-		!#zh åç½®å¾ªç¯æ¨¡å¼ã€‚ */
+		!#zh ???ç½®å¾ª??¯æ¨¡å¼???? */
 		postWrapMode: WrapMode;	
 	}	
 	/** !#en The burst of 3d particle.
-	!#zh 3D ç²’å­å‘å°„æ—¶çš„çˆ†å‘ä¸ªæ•° */
+	!#zh 3D ç²?å­????å°???¶ç????????ä¸ªæ?? */
 	export class Burst {		
 		/** !#en Time between the start of the particle system and the trigger of this Brust
-		!#zh ç²’å­ç³»ç»Ÿå¼€å§‹è¿è¡Œåˆ°è§¦å‘æ­¤æ¬¡ Brust çš„æ—¶é—´ */
+		!#zh ç²?å­?ç³»ç??å¼?å§?è¿?è¡???°è§¦???æ­¤æ¬¡ Brust ?????¶é?? */
 		time: number;		
 		/** !#en Minimum number of emitted particles
-		!#zh å‘å°„ç²’å­çš„æœ€å°æ•°é‡ */
+		!#zh ???å°?ç²?å­???????å°???°é?? */
 		minCount: number;		
 		/** !#en Maximum number of emitted particles
-		!#zh å‘å°„ç²’å­çš„æœ€å¤§æ•°é‡ */
+		!#zh ???å°?ç²?å­???????å¤§æ?°é?? */
 		maxCount: number;		
 		/** !#en The number of times Burst was triggered.
-		!#zh Burst çš„è§¦å‘æ¬¡æ•° */
+		!#zh Burst ???è§¦å??æ¬¡æ?? */
 		repeatCount: number;		
 		/** !#en Interval of each trigger
-		!#zh æ¯æ¬¡è§¦å‘çš„é—´éš”æ—¶é—´ */
+		!#zh æ¯?æ¬¡è§¦????????´é????¶é?? */
 		repeatInterval: number;		
 		/** !#en Number of particles emitted
-		!#zh å‘å°„çš„ç²’å­çš„æ•°é‡ */
+		!#zh ???å°????ç²?å­??????°é?? */
 		count: CurveRange;	
 	}	
 	/** !#en The ParticleSystem3D Component.
-	!#zh 3D ç²’å­ç»„ä»¶ */
+	!#zh 3D ç²?å­?ç»?ä»? */
 	export class ParticleSystem3D extends RenderComponent {		
 		/** !#en The run time of particle.
-		!#zh ç²’å­ç³»ç»Ÿè¿è¡Œæ—¶é—´ */
+		!#zh ç²?å­?ç³»ç??è¿?è¡???¶é?? */
 		duration: number;		
 		/** !#en The maximum number of particles that a particle system can generate.
-		!#zh ç²’å­ç³»ç»Ÿèƒ½ç”Ÿæˆçš„æœ€å¤§ç²’å­æ•°é‡ */
+		!#zh ç²?å­?ç³»ç????½ç???????????å¤§ç??å­???°é?? */
 		capacity: number;		
 		/** !#en Whether the particle system loops.
-		!#zh ç²’å­ç³»ç»Ÿæ˜¯å¦å¾ªç¯æ’­æ”¾ */
+		!#zh ç²?å­?ç³»ç????¯å?¦å¾ª??¯æ?­æ?? */
 		loop: boolean;		
 		/** !#en Whether the particles start playing automatically after loaded.
-		!#zh ç²’å­ç³»ç»ŸåŠ è½½åæ˜¯å¦è‡ªåŠ¨å¼€å§‹æ’­æ”¾ */
+		!#zh ç²?å­?ç³»ç?????è½½å????¯å?¦è?ªå?¨å??å§???­æ?? */
 		playOnAwake: boolean;		
 		/** !#en When selected, the particle system will start playing after one round has been played (only effective when loop is enabled).
-		!#zh é€‰ä¸­ä¹‹åï¼Œç²’å­ç³»ç»Ÿä¼šä»¥å·²æ’­æ”¾å®Œä¸€è½®ä¹‹åçš„çŠ¶æ€å¼€å§‹æ’­æ”¾ï¼ˆä»…å½“å¾ªç¯æ’­æ”¾å¯ç”¨æ—¶æœ‰æ•ˆï¼‰ */
+		!#zh ???ä¸­ä?????ï¼?ç²?å­?ç³»ç??ä¼?ä»¥å·²??­æ?¾å??ä¸?è½®ä??????????¶æ??å¼?å§???­æ?¾ï??ä»?å½?å¾ªç?¯æ?­æ?¾å?¯ç?¨æ?¶æ?????ï¼? */
 		prewarm: boolean;		
 		/** !#en The coordinate system in which the particle system is located.<br>
 		World coordinates (does not change when the position of other objects changes)<br>
 		Local coordinates (moving as the position of the parent node changes)<br>
 		Custom coordinates (moving with the position of a custom node)
-		!#zh é€‰æ‹©ç²’å­ç³»ç»Ÿæ‰€åœ¨çš„åæ ‡ç³»<br>
-		ä¸–ç•Œåæ ‡ï¼ˆä¸éšå…¶ä»–ç‰©ä½“ä½ç½®æ”¹å˜è€Œå˜æ¢ï¼‰<br>
-		å±€éƒ¨åæ ‡ï¼ˆè·Ÿéšçˆ¶èŠ‚ç‚¹ä½ç½®æ”¹å˜è€Œç§»åŠ¨ï¼‰<br>
-		è‡ªå®šåæ ‡ï¼ˆè·Ÿéšè‡ªå®šä¹‰èŠ‚ç‚¹çš„ä½ç½®æ”¹å˜è€Œç§»åŠ¨ï¼‰ */
+		!#zh ?????©ç??å­?ç³»ç???????¨ç????????ç³?<br>
+		ä¸??????????ï¼?ä¸??????¶ä????©ä??ä½?ç½®æ?¹å??????????¢ï??<br>
+		å±???¨å?????ï¼?è·??????¶è????¹ä??ç½®æ?¹å?????ç§»å?¨ï??<br>
+		??ªå????????ï¼?è·??????ªå??ä¹??????¹ç??ä½?ç½®æ?¹å?????ç§»å?¨ï?? */
 		simulationSpace: ParticleSystem3DAssembler.Space;		
 		/** !#en Controlling the update speed of the entire particle system.
-		!#zh æ§åˆ¶æ•´ä¸ªç²’å­ç³»ç»Ÿçš„æ›´æ–°é€Ÿåº¦ã€‚ */
+		!#zh ??§å?¶æ?´ä¸ªç²?å­?ç³»ç???????´æ?°é??åº¦ã?? */
 		simulationSpeed: number;		
 		/** !#en Delay particle emission time after particle system starts running.
-		!#zh ç²’å­ç³»ç»Ÿå¼€å§‹è¿è¡Œåï¼Œå»¶è¿Ÿç²’å­å‘å°„çš„æ—¶é—´ã€‚ */
+		!#zh ç²?å­?ç³»ç??å¼?å§?è¿?è¡????ï¼?å»¶è??ç²?å­????å°??????¶é?´ã?? */
 		startDelay: CurveRange;		
-		/** !#en Particle life cycleã€‚
-		!#zh ç²’å­ç”Ÿå‘½å‘¨æœŸã€‚ */
+		/** !#en Particle life cycle???
+		!#zh ç²?å­??????½å?¨æ????? */
 		startLifetime: CurveRange;		
 		/** !#en Particle initial color
-		!#zh ç²’å­åˆå§‹é¢œè‰² */
+		!#zh ç²?å­????å§?é¢???? */
 		startColor: GradientRange;		
 		/** !#en Particle scale space
-		!#zh ç¼©æ”¾ç©ºé—´ */
+		!#zh ç¼©æ?¾ç©º??? */
 		scaleSpace: ParticleSystem3DAssembler.Space;		
 		/** !#en Initial particle size
-		!#zh ç²’å­åˆå§‹å¤§å° */
+		!#zh ç²?å­????å§?å¤§å?? */
 		startSize: CurveRange;		
 		/** !#en Initial particle speed
-		!#zh ç²’å­åˆå§‹é€Ÿåº¦ */
+		!#zh ç²?å­????å§????åº? */
 		startSpeed: CurveRange;		
 		/** !#en Particle initial rotation angle
-		!#zh ç²’å­åˆå§‹æ—‹è½¬è§’åº¦ */
+		!#zh ç²?å­????å§????è½¬è??åº? */
 		startRotation: CurveRange;		
 		/** !#en Gravity coefficient of particles affected by gravity
-		!#zh ç²’å­å—é‡åŠ›å½±å“çš„é‡åŠ›ç³»æ•° */
+		!#zh ç²?å­??????????å½±å???????????ç³»æ?? */
 		gravityModifier: CurveRange;		
 		/** !#en Particles emitted per second
-		!#zh æ¯ç§’å‘å°„çš„ç²’å­æ•° */
+		!#zh æ¯?ç§????å°????ç²?å­???? */
 		rateOverTime: CurveRange;		
 		/** !#en Number of particles emitted per unit distance moved
-		!#zh æ¯ç§»åŠ¨å•ä½è·ç¦»å‘å°„çš„ç²’å­æ•° */
+		!#zh æ¯?ç§»å?¨å??ä½?è·?ç¦»å??å°????ç²?å­???? */
 		rateOverDistance: CurveRange;		
 		/** !#en The number of Brusts that emit a specified number of particles at a specified time
-		!#zh è®¾å®šåœ¨æŒ‡å®šæ—¶é—´å‘å°„æŒ‡å®šæ•°é‡çš„ç²’å­çš„ Brust çš„æ•°é‡ */
+		!#zh è®¾å????¨æ??å®???¶é?´å??å°????å®???°é?????ç²?å­???? Brust ?????°é?? */
 		bursts: Burst[];		
 		/** !#en Particle emitter module
-		!#zh ç²’å­å‘å°„å™¨æ¨¡å— */
+		!#zh ç²?å­????å°???¨æ¨¡??? */
 		shapeModule: ShapeModule;		
 		/** !#en Color control module
-		!#zh é¢œè‰²æ§åˆ¶æ¨¡å— */
+		!#zh é¢???²æ?§å?¶æ¨¡??? */
 		colorOverLifetimeModule: ColorOverLifetimeModule;		
 		/** !#en Particle size module
-		!#zh ç²’å­å¤§å°æ¨¡å— */
+		!#zh ç²?å­?å¤§å??æ¨¡å?? */
 		sizeOvertimeModule: SizeOvertimeModule;		
 		/** !#en Particle speed module
-		!#zh ç²’å­é€Ÿåº¦æ¨¡å— */
+		!#zh ç²?å­????åº¦æ¨¡??? */
 		velocityOvertimeModule: VelocityOvertimeModule;		
 		/** !#en Particle acceleration module
-		!#zh ç²’å­åŠ é€Ÿåº¦æ¨¡å— */
+		!#zh ç²?å­???????åº¦æ¨¡??? */
 		forceOvertimeModule: ForceOvertimeModule;		
 		/** !#en Particle limit speed module (only CPU particles are supported)
-		!#zh ç²’å­é™åˆ¶é€Ÿåº¦æ¨¡å—ï¼ˆåªæ”¯æŒ CPU ç²’å­ï¼‰ */
+		!#zh ç²?å­??????¶é??åº¦æ¨¡???ï¼???ªæ?¯æ?? CPU ç²?å­?ï¼? */
 		limitVelocityOvertimeModule: LimitVelocityOvertimeModule;		
 		/** !#en Particle rotation module
-		!#zh ç²’å­æ—‹è½¬æ¨¡å— */
+		!#zh ç²?å­????è½¬æ¨¡??? */
 		rotationOvertimeModule: RotationOvertimeModule;		
 		/** !#en Texture Animation Module
-		!#zh è´´å›¾åŠ¨ç”»æ¨¡å— */
+		!#zh è´´å?¾å?¨ç?»æ¨¡??? */
 		textureAnimationModule: TextureAnimationModule;		
 		/** !#en Particle Trajectory Module
-		!#zh ç²’å­è½¨è¿¹æ¨¡å— */
+		!#zh ç²?å­?è½¨è¿¹æ¨¡å?? */
 		trailModule: TrailModule;		
 		/** !#en Particle generation mode
-		!#zh è®¾å®šç²’å­ç”Ÿæˆæ¨¡å¼ */
+		!#zh è®¾å??ç²?å­???????æ¨¡å?? */
 		renderMode: ParticleSystem3DAssembler.RenderMode;		
 		/** !#en When the particle generation mode is StrecthedBillboard, in the direction of movement of the particles is stretched by velocity magnitude
-		!#zh åœ¨ç²’å­ç”Ÿæˆæ–¹å¼ä¸º StrecthedBillboard æ—¶,å¯¹ç²’å­åœ¨è¿åŠ¨æ–¹å‘ä¸ŠæŒ‰é€Ÿåº¦å¤§å°è¿›è¡Œæ‹‰ä¼¸ */
+		!#zh ??¨ç??å­?????????¹å??ä¸? StrecthedBillboard ???,å¯¹ç??å­???¨è????¨æ?¹å??ä¸???????åº¦å¤§å°?è¿?è¡????ä¼? */
 		velocityScale: number;		
 		/** !#en When the particle generation method is StrecthedBillboard, the particles are stretched according to the particle size in the direction of motion
-		!#zh åœ¨ç²’å­ç”Ÿæˆæ–¹å¼ä¸º StrecthedBillboard æ—¶,å¯¹ç²’å­åœ¨è¿åŠ¨æ–¹å‘ä¸ŠæŒ‰ç²’å­å¤§å°è¿›è¡Œæ‹‰ä¼¸ */
+		!#zh ??¨ç??å­?????????¹å??ä¸? StrecthedBillboard ???,å¯¹ç??å­???¨è????¨æ?¹å??ä¸????ç²?å­?å¤§å??è¿?è¡????ä¼? */
 		lengthScale: number;		
 		/** !#en Particle model
-		!#zh ç²’å­æ¨¡å‹ */
+		!#zh ç²?å­?æ¨¡å?? */
 		mesh: Mesh;		
 		/** !#en Particle material
-		!#zh ç²’å­æè´¨ */
+		!#zh ç²?å­????è´? */
 		particleMaterial: Material;		
 		/** !#en Particle trail material
-		!#zh ç²’å­è½¨è¿¹æè´¨ */
+		!#zh ç²?å­?è½¨è¿¹???è´? */
 		trailMaterial: Material;		
 		/**
 		!#en Playing particle effects
-		!#zh æ’­æ”¾ç²’å­æ•ˆæœ 
+		!#zh ??­æ?¾ç??å­??????? 
 		*/
 		play(): void;		
 		/**
 		!#en Pause particle effect
-		!#zh æš‚åœæ’­æ”¾ç²’å­æ•ˆæœ 
+		!#zh ????????­æ?¾ç??å­??????? 
 		*/
 		pause(): void;		
 		/**
 		!#en Stop particle effect
-		!#zh åœæ­¢æ’­æ”¾ç²’å­æ•ˆæœ 
+		!#zh ???æ­¢æ?­æ?¾ç??å­??????? 
 		*/
 		stop(): void;		
 		/**
 		!#en Remove all particle effect
-		!#zh å°†æ‰€æœ‰ç²’å­ä»ç²’å­ç³»ç»Ÿä¸­æ¸…é™¤ 
+		!#zh å°???????ç²?å­?ä»?ç²?å­?ç³»ç??ä¸­æ????? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en
 	Helper class for ES5 Map.
 	!#zh
-	ES5 Map è¾…åŠ©ç±»ã€‚ */
+	ES5 Map è¾???©ç±»??? */
 	export class MapUtils {	
 	}	
 	/** !#en Effect Asset.
-	!#zh Effect èµ„æºç±»å‹ã€‚ */
+	!#zh Effect èµ?æº?ç±»å????? */
 	export class EffectAsset extends Asset {	
 	}	
 	/** !#en Material Asset.
-	!#zh æè´¨èµ„æºç±»ã€‚ */
+	!#zh ???è´¨è??æº?ç±»ã?? */
 	export class Material extends Asset {		
 		/**
 		!#en Get built-in materials
-		!#zh è·å–å†…ç½®æè´¨
+		!#zh ??·å?????ç½®æ??è´?
 		@param name name 
 		*/
 		static getBuiltinMaterial(name: string): Material;		
 		/**
 		!#en Creates a Material with builtin Effect.
-		!#zh ä½¿ç”¨å†…å»º Effect åˆ›å»ºä¸€ä¸ªæè´¨ã€‚
+		!#zh ä½¿ç?¨å??å»? Effect ???å»ºä??ä¸ªæ??è´¨ã??
 		@param effectName effectName
 		@param techniqueIndex techniqueIndex 
 		*/
 		static createWithBuiltin(effectName: string, techniqueIndex?: number): Material;		
 		/**
 		!#en Creates a Material.
-		!#zh åˆ›å»ºä¸€ä¸ªæè´¨ã€‚
+		!#zh ???å»ºä??ä¸ªæ??è´¨ã??
 		@param effectAsset effectAsset
 		@param techniqueIndex techniqueIndex 
 		*/
 		static create(effectAsset: EffectAsset, techniqueIndex?: number): Material;		
 		/**
 		!#en Sets the Material property
-		!#zh è®¾ç½®æè´¨çš„å±æ€§
+		!#zh è®¾ç½®???è´¨ç??å±????
 		@param name name
 		@param val val
 		@param passIdx passIdx
@@ -15381,14 +15381,14 @@ declare namespace cc {
 		setProperty(name: string, val: any, passIdx?: number, directly?: boolean): void;		
 		/**
 		!#en Gets the Material property.
-		!#zh è·å–æè´¨çš„å±æ€§ã€‚
+		!#zh ??·å?????è´¨ç??å±???§ã??
 		@param name name
 		@param passIdx passIdx 
 		*/
 		getProperty(name: string, passIdx: number): any;		
 		/**
 		!#en Sets the Material define.
-		!#zh è®¾ç½®æè´¨çš„å®å®šä¹‰ã€‚
+		!#zh è®¾ç½®???è´¨ç??å®?å®?ä¹????
 		@param name name
 		@param val val
 		@param passIdx passIdx
@@ -15397,21 +15397,21 @@ declare namespace cc {
 		define(name: string, val: boolean|number, passIdx?: number, force?: boolean): void;		
 		/**
 		!#en Gets the Material define.
-		!#zh è·å–æè´¨çš„å®å®šä¹‰ã€‚
+		!#zh ??·å?????è´¨ç??å®?å®?ä¹????
 		@param name name
 		@param passIdx passIdx 
 		*/
 		getDefine(name: string, passIdx?: number): boolean;		
 		/**
 		!#en Sets the Material cull mode.
-		!#zh è®¾ç½®æè´¨çš„è£å‡æ¨¡å¼ã€‚
+		!#zh è®¾ç½®???è´¨ç??è£????æ¨¡å?????
 		@param cullMode cullMode
 		@param passIdx passIdx 
 		*/
 		setCullMode(cullMode: number, passIdx: number): void;		
 		/**
 		!#en Sets the Material depth states.
-		!#zh è®¾ç½®æè´¨çš„æ·±åº¦æ¸²æŸ“çŠ¶æ€ã€‚
+		!#zh è®¾ç½®???è´¨ç??æ·±åº¦æ¸²æ????¶æ?????
 		@param depthTest depthTest
 		@param depthWrite depthWrite
 		@param depthFunc depthFunc
@@ -15420,7 +15420,7 @@ declare namespace cc {
 		setDepth(depthTest: boolean, depthWrite: boolean, depthFunc: number, passIdx: number): void;		
 		/**
 		!#en Sets the Material blend states.
-		!#zh è®¾ç½®æè´¨çš„æ··åˆæ¸²æŸ“çŠ¶æ€ã€‚
+		!#zh è®¾ç½®???è´¨ç??æ··å??æ¸²æ????¶æ?????
 		@param enabled enabled
 		@param blendEq blendEq
 		@param blendSrc blendSrc
@@ -15434,14 +15434,14 @@ declare namespace cc {
 		setBlend(enabled: boolean, blendEq: number, blendSrc: number, blendDst: number, blendAlphaEq: number, blendSrcAlpha: number, blendDstAlpha: number, blendColor: number, passIdx: number): void;		
 		/**
 		!#en Sets whether enable the stencil test.
-		!#zh è®¾ç½®æ˜¯å¦å¼€å¯æ¨¡æ¿æµ‹è¯•ã€‚
+		!#zh è®¾ç½®??¯å?¦å????¯æ¨¡??¿æ??è¯????
 		@param stencilTest stencilTest
 		@param passIdx passIdx 
 		*/
 		setStencilEnabled(stencilTest: number, passIdx: number): void;		
 		/**
 		!#en Sets the Material stencil render states.
-		!#zh è®¾ç½®æè´¨çš„æ¨¡æ¿æµ‹è¯•æ¸²æŸ“å‚æ•°ã€‚
+		!#zh è®¾ç½®???è´¨ç??æ¨¡æ?¿æ??è¯?æ¸²æ???????°ã??
 		@param stencilTest stencilTest
 		@param stencilFunc stencilFunc
 		@param stencilRef stencilRef
@@ -15460,9 +15460,9 @@ declare namespace cc {
 	and changes to Material Asset are synchronized to the Material Variant.
 	However, when a Material Variant had already modifies a state, the Material Asset state is not synchronized to the Material Variant.
 	!#zh
-	æè´¨å˜ä½“æ˜¯æè´¨èµ„æºçš„ä¸€ä¸ªå»¶ä¼¸ã€‚
-	æè´¨å˜ä½“çš„ä¿®æ”¹ä¸ä¼šå½±å“åˆ°å…¶ä»–çš„æè´¨å˜ä½“æˆ–è€…æè´¨èµ„æºï¼Œè€Œæè´¨èµ„æºçš„ä¿®æ”¹ä¼šåŒæ­¥ä½“ç°åˆ°æè´¨å˜ä½“ä¸Šï¼Œ
-	ä½†æ˜¯å½“æè´¨å˜ä½“å¯¹ä¸€ä¸ªçŠ¶æ€ä¿®æ”¹åï¼Œæè´¨èµ„æºå†å¯¹è¿™ä¸ªçŠ¶æ€ä¿®æ”¹æ˜¯ä¸ä¼šåŒæ­¥åˆ°æè´¨å˜ä½“ä¸Šçš„ã€‚ */
+	???è´¨å??ä½???¯æ??è´¨è??æº????ä¸?ä¸ªå»¶ä¼¸ã??
+	???è´¨å??ä½????ä¿®æ?¹ä??ä¼?å½±å????°å?¶ä????????è´¨å??ä½??????????è´¨è??æº?ï¼???????è´¨è??æº????ä¿®æ?¹ä?????æ­¥ä????°å?°æ??è´¨å??ä½?ä¸?ï¼?
+	ä½???¯å?????è´¨å??ä½?å¯¹ä??ä¸ªç?¶æ??ä¿®æ?¹å??ï¼????è´¨è??æº????å¯¹è??ä¸ªç?¶æ??ä¿®æ?¹æ?¯ä??ä¼????æ­¥å?°æ??è´¨å??ä½?ä¸??????? */
 	export class MaterialVariant extends Material {		
 		/**
 		
@@ -15478,101 +15478,101 @@ declare namespace cc {
 		static create (material: Material, owner: cc.RenderComponent): MaterialVariant | null;	
 	}	
 	/** !#en cc.EditBox is a component for inputing text, you can use it to gather small amounts of text from users.
-	!#zh EditBox ç»„ä»¶ï¼Œç”¨äºè·å–ç”¨æˆ·çš„è¾“å…¥æ–‡æœ¬ã€‚ */
+	!#zh EditBox ç»?ä»¶ï????¨ä????·å????¨æ?·ç??è¾???¥æ????¬ã?? */
 	export class EditBox extends Component {		
 		/** !#en Input string of EditBox.
-		!#zh è¾“å…¥æ¡†çš„åˆå§‹è¾“å…¥å†…å®¹ï¼Œå¦‚æœä¸ºç©ºåˆ™ä¼šæ˜¾ç¤ºå ä½ç¬¦çš„æ–‡æœ¬ã€‚ */
+		!#zh è¾???¥æ????????å§?è¾???¥å??å®¹ï??å¦????ä¸ºç©º???ä¼???¾ç¤º???ä½?ç¬¦ç???????¬ã?? */
 		string: string;		
 		/** !#en The Label component attached to the node for EditBox's input text label
-		!#zh è¾“å…¥æ¡†è¾“å…¥æ–‡æœ¬èŠ‚ç‚¹ä¸ŠæŒ‚è½½çš„ Label ç»„ä»¶å¯¹è±¡ */
+		!#zh è¾???¥æ??è¾???¥æ????¬è????¹ä?????è½½ç?? Label ç»?ä»¶å¯¹è±? */
 		textLabel: Label;		
 		/** !#en The Label component attached to the node for EditBox's placeholder text label
-		!#zh è¾“å…¥æ¡†å ä½ç¬¦èŠ‚ç‚¹ä¸ŠæŒ‚è½½çš„ Label ç»„ä»¶å¯¹è±¡ */
+		!#zh è¾???¥æ?????ä½?ç¬¦è????¹ä?????è½½ç?? Label ç»?ä»¶å¯¹è±? */
 		placeholderLabel: Label;		
 		/** !#en The Sprite component attached to the node for EditBox's background
-		!#zh è¾“å…¥æ¡†èƒŒæ™¯èŠ‚ç‚¹ä¸ŠæŒ‚è½½çš„ Sprite ç»„ä»¶å¯¹è±¡ */
+		!#zh è¾???¥æ???????¯è????¹ä?????è½½ç?? Sprite ç»?ä»¶å¯¹è±? */
 		background: Sprite;		
 		/** !#en The background image of EditBox. This property will be removed in the future, use editBox.background instead please.
-		!#zh è¾“å…¥æ¡†çš„èƒŒæ™¯å›¾ç‰‡ã€‚ è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ç”¨ editBox.background */
+		!#zh è¾???¥æ??????????¯å?¾ç????? è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ç?? editBox.background */
 		backgroundImage: SpriteFrame;		
 		/** !#en
 		The return key type of EditBox.
 		Note: it is meaningless for web platforms and desktop platforms.
 		!#zh
-		æŒ‡å®šç§»åŠ¨è®¾å¤‡ä¸Šé¢å›è½¦æŒ‰é’®çš„æ ·å¼ã€‚
-		æ³¨æ„ï¼šè¿™ä¸ªé€‰é¡¹å¯¹ web å¹³å°ä¸ desktop å¹³å°æ— æ•ˆã€‚ */
+		???å®?ç§»å?¨è®¾å¤?ä¸???¢å??è½¦æ????®ç????·å?????
+		æ³¨æ??ï¼?è¿?ä¸ªé??é¡¹å¯¹ web å¹³å?°ä?? desktop å¹³å?°æ???????? */
 		returnType: EditBox.KeyboardReturnType;		
 		/** !#en Set the input flags that are to be applied to the EditBox.
-		!#zh æŒ‡å®šè¾“å…¥æ ‡å¿—ä½ï¼Œå¯ä»¥æŒ‡å®šè¾“å…¥æ–¹å¼ä¸ºå¯†ç æˆ–è€…å•è¯é¦–å­—æ¯å¤§å†™ã€‚ */
+		!#zh ???å®?è¾???¥æ??å¿?ä½?ï¼???¯ä»¥???å®?è¾???¥æ?¹å??ä¸ºå??????????????è¯?é¦?å­?æ¯?å¤§å????? */
 		inputFlag: EditBox.InputFlag;		
 		/** !#en
 		Set the input mode of the edit box.
 		If you pass ANY, it will create a multiline EditBox.
 		!#zh
-		æŒ‡å®šè¾“å…¥æ¨¡å¼: ANYè¡¨ç¤ºå¤šè¡Œè¾“å…¥ï¼Œå…¶å®ƒéƒ½æ˜¯å•è¡Œè¾“å…¥ï¼Œç§»åŠ¨å¹³å°ä¸Šè¿˜å¯ä»¥æŒ‡å®šé”®ç›˜æ ·å¼ã€‚ */
+		???å®?è¾???¥æ¨¡å¼?: ANYè¡¨ç¤ºå¤?è¡?è¾???¥ï????¶å????½æ?¯å??è¡?è¾???¥ï??ç§»å?¨å¹³??°ä??è¿???¯ä»¥???å®???®ç????·å????? */
 		inputMode: EditBox.InputMode;		
 		/** !#en Font size of the input text. This property will be removed in the future, use editBox.textLabel.fontSize instead please.
-		!#zh è¾“å…¥æ¡†æ–‡æœ¬çš„å­—ä½“å¤§å°ã€‚ è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ä½¿ç”¨ editBox.textLabel.fontSizeã€‚ */
+		!#zh è¾???¥æ???????¬ç??å­?ä½?å¤§å????? è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ä½¿??? editBox.textLabel.fontSize??? */
 		fontSize: number;		
 		/** !#en Change the lineHeight of displayed text. This property will be removed in the future, use editBox.textLabel.lineHeight instead.
-		!#zh è¾“å…¥æ¡†æ–‡æœ¬çš„è¡Œé«˜ã€‚è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ä½¿ç”¨ editBox.textLabel.lineHeight */
+		!#zh è¾???¥æ???????¬ç??è¡?é«????è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ä½¿??? editBox.textLabel.lineHeight */
 		lineHeight: number;		
 		/** !#en Font color of the input text. This property will be removed in the future, use editBox.textLabel.node.color instead.
-		!#zh è¾“å…¥æ¡†æ–‡æœ¬çš„é¢œè‰²ã€‚è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ä½¿ç”¨ editBox.textLabel.node.color */
+		!#zh è¾???¥æ???????¬ç??é¢???²ã??è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ä½¿??? editBox.textLabel.node.color */
 		fontColor: Color;		
 		/** !#en The display text of placeholder.
-		!#zh è¾“å…¥æ¡†å ä½ç¬¦çš„æ–‡æœ¬å†…å®¹ã€‚ */
+		!#zh è¾???¥æ?????ä½?ç¬¦ç???????¬å??å®¹ã?? */
 		placeholder: string;		
 		/** !#en The font size of placeholder. This property will be removed in the future, use editBox.placeholderLabel.fontSize instead.
-		!#zh è¾“å…¥æ¡†å ä½ç¬¦çš„å­—ä½“å¤§å°ã€‚è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ä½¿ç”¨ editBox.placeholderLabel.fontSize */
+		!#zh è¾???¥æ?????ä½?ç¬¦ç??å­?ä½?å¤§å?????è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ä½¿??? editBox.placeholderLabel.fontSize */
 		placeholderFontSize: number;		
 		/** !#en The font color of placeholder. This property will be removed in the future, use editBox.placeholderLabel.node.color instead.
-		!#zh è¾“å…¥æ¡†å ä½ç¬¦çš„å­—ä½“é¢œè‰²ã€‚è¯¥å±æ€§ä¼šåœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­ç§»é™¤ï¼Œè¯·ä½¿ç”¨ editBox.placeholderLabel.node.color */
+		!#zh è¾???¥æ?????ä½?ç¬¦ç??å­?ä½?é¢???²ã??è¯¥å????§ä????¨å????¥ç???????¬ä¸­ç§»é?¤ï??è¯·ä½¿??? editBox.placeholderLabel.node.color */
 		placeholderFontColor: Color;		
 		/** !#en The maximize input length of EditBox.
 		- If pass a value less than 0, it won't limit the input number of characters.
 		- If pass 0, it doesn't allow input any characters.
-		!#zh è¾“å…¥æ¡†æœ€å¤§å…è®¸è¾“å…¥çš„å­—ç¬¦ä¸ªæ•°ã€‚
-		- å¦‚æœå€¼ä¸ºå°äº 0 çš„å€¼ï¼Œåˆ™ä¸ä¼šé™åˆ¶è¾“å…¥å­—ç¬¦ä¸ªæ•°ã€‚
-		- å¦‚æœå€¼ä¸º 0ï¼Œåˆ™ä¸å…è®¸ç”¨æˆ·è¿›è¡Œä»»ä½•è¾“å…¥ã€‚ */
+		!#zh è¾???¥æ?????å¤§å??è®¸è????¥ç??å­?ç¬¦ä¸ª??°ã??
+		- å¦??????¼ä¸ºå°?äº? 0 ?????¼ï?????ä¸?ä¼??????¶è????¥å??ç¬¦ä¸ª??°ã??
+		- å¦??????¼ä¸º 0ï¼????ä¸????è®¸ç?¨æ?·è??è¡?ä»»ä??è¾???¥ã?? */
 		maxLength: number;		
 		/** !#en The input is always visible and be on top of the game view (only useful on Web), this property will be removed on v2.1
-		!zh è¾“å…¥æ¡†æ€»æ˜¯å¯è§ï¼Œå¹¶ä¸”æ°¸è¿œåœ¨æ¸¸æˆè§†å›¾çš„ä¸Šé¢ï¼ˆè¿™ä¸ªå±æ€§åªæœ‰åœ¨ Web ä¸Šé¢ä¿®æ”¹æœ‰æ„ä¹‰ï¼‰ï¼Œè¯¥å±æ€§ä¼šåœ¨ v2.1 ä¸­ç§»é™¤
+		!zh è¾???¥æ????»æ?¯å?¯è??ï¼?å¹¶ä??æ°¸è????¨æ¸¸???è§???¾ç??ä¸???¢ï??è¿?ä¸ªå????§å?ªæ????? Web ä¸???¢ä¿®??¹æ?????ä¹?ï¼?ï¼?è¯¥å????§ä????? v2.1 ä¸­ç§»???
 		Note: only available on Web at the moment. */
 		stayOnTop: boolean;		
 		/** !#en Set the tabIndex of the DOM input element (only useful on Web).
-		!#zh ä¿®æ”¹ DOM è¾“å…¥å…ƒç´ çš„ tabIndexï¼ˆè¿™ä¸ªå±æ€§åªæœ‰åœ¨ Web ä¸Šé¢ä¿®æ”¹æœ‰æ„ä¹‰ï¼‰ã€‚ */
+		!#zh ä¿®æ?? DOM è¾???¥å??ç´???? tabIndexï¼?è¿?ä¸ªå????§å?ªæ????? Web ä¸???¢ä¿®??¹æ?????ä¹?ï¼???? */
 		tabIndex: number;		
 		/** !#en The event handler to be called when EditBox began to edit text.
-		!#zh å¼€å§‹ç¼–è¾‘æ–‡æœ¬è¾“å…¥æ¡†è§¦å‘çš„äº‹ä»¶å›è°ƒã€‚ */
+		!#zh å¼?å§?ç¼?è¾??????¬è????¥æ??è§¦å?????äº?ä»¶å??è°???? */
 		editingDidBegan: Component.EventHandler[];		
 		/** !#en The event handler to be called when EditBox text changes.
-		!#zh ç¼–è¾‘æ–‡æœ¬è¾“å…¥æ¡†æ—¶è§¦å‘çš„äº‹ä»¶å›è°ƒã€‚ */
+		!#zh ç¼?è¾??????¬è????¥æ????¶è§¦??????äº?ä»¶å??è°???? */
 		textChanged: Component.EventHandler[];		
 		/** !#en The event handler to be called when EditBox edit ends.
-		!#zh ç»“æŸç¼–è¾‘æ–‡æœ¬è¾“å…¥æ¡†æ—¶è§¦å‘çš„äº‹ä»¶å›è°ƒã€‚ */
+		!#zh ç»????ç¼?è¾??????¬è????¥æ????¶è§¦??????äº?ä»¶å??è°???? */
 		editingDidEnded: Component.EventHandler[];		
 		/** !#en The event handler to be called when return key is pressed. Windows is not supported.
-		!#zh å½“ç”¨æˆ·æŒ‰ä¸‹å›è½¦æŒ‰é”®æ—¶çš„äº‹ä»¶å›è°ƒï¼Œç›®å‰ä¸æ”¯æŒ windows å¹³å° */
+		!#zh å½???¨æ?·æ??ä¸????è½¦æ????®æ?¶ç??äº?ä»¶å??è°?ï¼???®å??ä¸???¯æ?? windows å¹³å?? */
 		editingReturn: Component.EventHandler[];		
 		/**
 		!#en Let the EditBox get focus, this method will be removed on v2.1
-		!#zh è®©å½“å‰ EditBox è·å¾—ç„¦ç‚¹, è¿™ä¸ªæ–¹æ³•ä¼šåœ¨ v2.1 ä¸­ç§»é™¤ 
+		!#zh è®©å????? EditBox ??·å????¦ç??, è¿?ä¸ªæ?¹æ??ä¼???? v2.1 ä¸­ç§»??? 
 		*/
 		setFocus(): void;		
 		/**
 		!#en Let the EditBox get focus
-		!#zh è®©å½“å‰ EditBox è·å¾—ç„¦ç‚¹ 
+		!#zh è®©å????? EditBox ??·å????¦ç?? 
 		*/
 		focus(): void;		
 		/**
 		!#en Let the EditBox lose focus
-		!#zh è®©å½“å‰ EditBox å¤±å»ç„¦ç‚¹ 
+		!#zh è®©å????? EditBox å¤±å?»ç?¦ç?? 
 		*/
 		blur(): void;		
 		/**
 		!#en Determine whether EditBox is getting focus or not.
-		!#zh åˆ¤æ–­ EditBox æ˜¯å¦è·å¾—äº†ç„¦ç‚¹ 
+		!#zh ??¤æ?? EditBox ??¯å?¦è?·å??äº???¦ç?? 
 		*/
 		isFocused(): void;		
 		/**
@@ -15580,8 +15580,8 @@ declare namespace cc {
 		call the destroy method on this component or the associated node explicitly.
 		Otherwise, the created DOM element won't be removed from web page.
 		!#zh
-		å¦‚æœä½ ä¸å†ä½¿ç”¨ EditBoxï¼Œå¹¶ä¸”ç»„ä»¶æœªæ·»åŠ åˆ°åœºæ™¯ä¸­ï¼Œé‚£ä¹ˆä½ å¿…é¡»æ‰‹åŠ¨å¯¹ç»„ä»¶æˆ–æ‰€åœ¨èŠ‚ç‚¹è°ƒç”¨ destroyã€‚
-		è¿™æ ·æ‰èƒ½ç§»é™¤ç½‘é¡µä¸Šçš„ DOM èŠ‚ç‚¹ï¼Œé¿å… Web å¹³å°å†…å­˜æ³„éœ²ã€‚
+		å¦????ä½?ä¸????ä½¿ç?? EditBoxï¼?å¹¶ä??ç»?ä»¶æ?ªæ·»?????°å?ºæ?¯ä¸­ï¼????ä¹?ä½?å¿?é¡»æ????¨å¯¹ç»?ä»¶æ???????¨è????¹è????? destroy???
+		è¿???·æ????½ç§»??¤ç??é¡µä????? DOM ?????¹ï????¿å?? Web å¹³å?°å??å­?æ³???²ã??
 		
 		@example 
 		```js
@@ -15595,28 +15595,28 @@ declare namespace cc {
 	/** undefined */
 	export class PhysicsBoxCollider extends PhysicsCollider implements Collider.Box {		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Box size
-		!#zh åŒ…å›´ç›’å¤§å° */
+		!#zh ?????´ç??å¤§å?? */
 		size: Size;	
 	}	
 	/** undefined */
 	export class PhysicsChainCollider extends PolygonCollider {		
 		/** !#en Whether the chain is loop
-		!#zh é“¾æ¡æ˜¯å¦é¦–å°¾ç›¸è¿ */
+		!#zh ??¾æ?¡æ?¯å?¦é??å°¾ç?¸è?? */
 		loop: boolean;		
 		/** !#en Chain points
-		!#zh é“¾æ¡é¡¶ç‚¹æ•°ç»„ */
+		!#zh ??¾æ?¡é¡¶??¹æ?°ç?? */
 		points: Vec2[];	
 	}	
 	/** undefined */
 	export class PhysicsCircleCollider extends PhysicsCollider implements Collider.Circle {		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Circle radius
-		!#zh åœ†å½¢åŠå¾„ */
+		!#zh ???å½¢å??å¾? */
 		radius: number;	
 	}	
 	/** undefined */
@@ -15624,50 +15624,50 @@ declare namespace cc {
 		/** !#en
 		The density.
 		!#zh
-		å¯†åº¦ */
+		å¯?åº? */
 		density: number;		
 		/** !#en
 		A sensor collider collects contact information but never generates a collision response
 		!#zh
-		ä¸€ä¸ªä¼ æ„Ÿå™¨ç±»å‹çš„ç¢°æ’ä½“ä¼šäº§ç”Ÿç¢°æ’å›è°ƒï¼Œä½†æ˜¯ä¸ä¼šå‘ç”Ÿç‰©ç†ç¢°æ’æ•ˆæœã€‚ */
+		ä¸?ä¸ªä???????¨ç±»??????ç¢°æ??ä½?ä¼?äº§ç??ç¢°æ?????è°?ï¼?ä½???¯ä??ä¼?????????©ç??ç¢°æ??????????? */
 		sensor: boolean;		
 		/** !#en
 		The friction coefficient, usually in the range [0,1].
 		!#zh
-		æ‘©æ“¦ç³»æ•°ï¼Œå–å€¼ä¸€èˆ¬åœ¨ [0, 1] ä¹‹é—´ */
+		??©æ?¦ç³»??°ï???????¼ä????¬å?? [0, 1] ä¹???? */
 		friction: number;		
 		/** !#en
 		The restitution (elasticity) usually in the range [0,1].
 		!#zh
-		å¼¹æ€§ç³»æ•°ï¼Œå–å€¼ä¸€èˆ¬åœ¨ [0, 1]ä¹‹é—´ */
+		å¼¹æ?§ç³»??°ï???????¼ä????¬å?? [0, 1]ä¹???? */
 		restitution: number;		
 		/** !#en
 		Physics collider will find the rigidbody component on the node and set to this property.
 		!#zh
-		ç¢°æ’ä½“ä¼šåœ¨åˆå§‹åŒ–æ—¶æŸ¥æ‰¾èŠ‚ç‚¹ä¸Šæ˜¯å¦å­˜åœ¨åˆšä½“ï¼Œå¦‚æœæŸ¥æ‰¾æˆåŠŸåˆ™èµ‹å€¼åˆ°è¿™ä¸ªå±æ€§ä¸Šã€‚ */
+		ç¢°æ??ä½?ä¼???¨å??å§??????¶æ?¥æ?¾è????¹ä????¯å?¦å????¨å??ä½?ï¼?å¦??????¥æ?¾æ????????èµ???¼å?°è??ä¸ªå????§ä????? */
 		body: RigidBody;		
 		/**
 		!#en
 		Apply current changes to collider, this will regenerate inner box2d fixtures.
 		!#zh
-		åº”ç”¨å½“å‰ collider ä¸­çš„ä¿®æ”¹ï¼Œè°ƒç”¨æ­¤å‡½æ•°ä¼šé‡æ–°ç”Ÿæˆå†…éƒ¨ box2d çš„å¤¹å…·ã€‚ 
+		åº???¨å????? collider ä¸­ç??ä¿®æ?¹ï??è°???¨æ­¤??½æ?°ä???????°ç??????????? box2d ???å¤¹å?·ã?? 
 		*/
 		apply(): void;		
 		/**
 		!#en
 		Get the world aabb of the collider
 		!#zh
-		è·å–ç¢°æ’ä½“çš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„åŒ…å›´ç›’ 
+		??·å??ç¢°æ??ä½????ä¸??????????ç³»ä??????????´ç?? 
 		*/
 		getAABB(): void;	
 	}	
 	/** undefined */
 	export class PhysicsPolygonCollider extends PhysicsCollider implements Collider.Polygon {		
 		/** !#en Position offset
-		!#zh ä½ç½®åç§»é‡ */
+		!#zh ä½?ç½®å??ç§»é?? */
 		offset: Vec2;		
 		/** !#en Polygon points
-		!#zh å¤šè¾¹å½¢é¡¶ç‚¹æ•°ç»„ */
+		!#zh å¤?è¾¹å½¢é¡¶ç?¹æ?°ç?? */
 		points: Vec2[];	
 	}	
 	/** !#en
@@ -15675,75 +15675,75 @@ declare namespace cc {
 	to remain at a fixed distance from each other. You can view
 	this as a massless, rigid rod.
 	!#zh
-	è·ç¦»å…³èŠ‚é€šè¿‡ä¸€ä¸ªå›ºå®šçš„é•¿åº¦æ¥çº¦æŸå…³èŠ‚é“¾æ¥çš„ä¸¤ä¸ªåˆšä½“ã€‚ä½ å¯ä»¥å°†å®ƒæƒ³è±¡æˆä¸€ä¸ªæ— è´¨é‡ï¼Œåšå›ºçš„æœ¨æ£ã€‚ */
+	è·?ç¦»å?³è?????è¿?ä¸?ä¸ªå?ºå???????¿åº¦??¥çº¦?????³è????¾æ?¥ç??ä¸¤ä¸ª???ä½????ä½???¯ä»¥å°?å®???³è±¡???ä¸?ä¸ªæ??è´¨é??ï¼??????ºç????¨æ????? */
 	export class DistanceJoint extends Joint {		
 		/** !#en
 		The distance separating the two ends of the joint.
 		!#zh
-		å…³èŠ‚ä¸¤ç«¯çš„è·ç¦» */
+		??³è??ä¸¤ç«¯???è·?ç¦? */
 		distance: number;		
 		/** !#en
 		The spring frequency.
 		!#zh
-		å¼¹æ€§ç³»æ•°ã€‚ */
+		å¼¹æ?§ç³»??°ã?? */
 		frequency: number;		
 		/** !#en
 		The damping ratio.
 		!#zh
-		é˜»å°¼ï¼Œè¡¨ç¤ºå…³èŠ‚å˜å½¢åï¼Œæ¢å¤åˆ°åˆå§‹çŠ¶æ€å—åˆ°çš„é˜»åŠ›ã€‚ */
+		??»å°¼ï¼?è¡¨ç¤º??³è?????å½¢å??ï¼???¢å????°å??å§???¶æ???????°ç????»å????? */
 		dampingRatio: number;	
 	}	
 	/** !#en
 	Base class for joints to connect rigidbody.
 	!#zh
-	å…³èŠ‚ç±»çš„åŸºç±» */
+	??³è??ç±»ç????ºç±» */
 	export class Joint extends Component {		
 		/** !#en
 		The anchor of the rigidbody.
 		!#zh
-		åˆšä½“çš„é”šç‚¹ã€‚ */
+		???ä½?????????¹ã?? */
 		anchor: Vec2;		
 		/** !#en
 		The anchor of the connected rigidbody.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯åˆšä½“çš„é”šç‚¹ã€‚ */
+		??³è????¦ä??ç«¯å??ä½?????????¹ã?? */
 		connectedAnchor: Vec2;		
 		/** !#en
 		The rigidbody to which the other end of the joint is attached.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯é“¾æ¥çš„åˆšä½“ */
+		??³è????¦ä??ç«¯é?¾æ?¥ç?????ä½? */
 		connectedBody: RigidBody;		
 		/** !#en
 		Should the two rigid bodies connected with this joint collide with each other?
 		!#zh
-		é“¾æ¥åˆ°å…³èŠ‚ä¸Šçš„ä¸¤ä¸ªåˆšä½“æ˜¯å¦åº”è¯¥ç›¸äº’ç¢°æ’ï¼Ÿ */
+		??¾æ?¥å?°å?³è??ä¸????ä¸¤ä¸ª???ä½???¯å?¦å??è¯¥ç?¸ä??ç¢°æ??ï¼? */
 		collideConnected: boolean;		
 		/**
 		!#en
 		Apply current changes to joint, this will regenerate inner box2d joint.
 		!#zh
-		åº”ç”¨å½“å‰å…³èŠ‚ä¸­çš„ä¿®æ”¹ï¼Œè°ƒç”¨æ­¤å‡½æ•°ä¼šé‡æ–°ç”Ÿæˆå†…éƒ¨ box2d çš„å…³èŠ‚ã€‚ 
+		åº???¨å???????³è??ä¸­ç??ä¿®æ?¹ï??è°???¨æ­¤??½æ?°ä???????°ç??????????? box2d ?????³è????? 
 		*/
 		apply(): void;		
 		/**
 		!#en
 		Get the anchor point on rigidbody in world coordinates.
 		!#zh
-		è·å–åˆšä½“ä¸–ç•Œåæ ‡ç³»ä¸‹çš„é”šç‚¹ã€‚ 
+		??·å?????ä½?ä¸??????????ç³»ä??????????¹ã?? 
 		*/
 		getWorldAnchor(): Vec2;		
 		/**
 		!#en
 		Get the anchor point on connected rigidbody in world coordinates.
 		!#zh
-		è·å–é“¾æ¥åˆšä½“ä¸–ç•Œåæ ‡ç³»ä¸‹çš„é”šç‚¹ã€‚ 
+		??·å????¾æ?¥å??ä½?ä¸??????????ç³»ä??????????¹ã?? 
 		*/
 		getWorldConnectedAnchor(): Vec2;		
 		/**
 		!#en
 		Gets the reaction force of the joint.
 		!#zh
-		è·å–å…³èŠ‚çš„åä½œç”¨åŠ›ã€‚
+		??·å????³è????????ä½???¨å?????
 		@param timeStep The time to calculate the reaction force for. 
 		*/
 		getReactionForce(timeStep: number): Vec2;		
@@ -15751,7 +15751,7 @@ declare namespace cc {
 		!#en
 		Gets the reaction torque of the joint.
 		!#zh
-		è·å–å…³èŠ‚çš„åæ‰­çŸ©ã€‚
+		??·å????³è??????????­ç?©ã??
 		@param timeStep The time to calculate the reaction torque for. 
 		*/
 		getReactionTorque(timeStep: number): number;	
@@ -15761,43 +15761,43 @@ declare namespace cc {
 	between two bodies. A typical usage is to control the movement
 	of a dynamic body with respect to the ground.
 	!#zh
-	é©¬è¾¾å…³èŠ‚è¢«ç”¨æ¥æ§åˆ¶ä¸¤ä¸ªåˆšä½“é—´çš„ç›¸å¯¹è¿åŠ¨ã€‚
-	ä¸€ä¸ªå…¸å‹çš„ä¾‹å­æ˜¯ç”¨æ¥æ§åˆ¶ä¸€ä¸ªåŠ¨æ€åˆšä½“ç›¸å¯¹äºåœ°é¢çš„è¿åŠ¨ã€‚ */
+	é©¬è¾¾??³è??è¢«ç?¨æ?¥æ?§å?¶ä¸¤ä¸ªå??ä½???´ç????¸å¯¹è¿???¨ã??
+	ä¸?ä¸ªå?¸å?????ä¾?å­???¯ç?¨æ?¥æ?§å?¶ä??ä¸ªå?¨æ?????ä½???¸å¯¹äº???°é?¢ç??è¿???¨ã?? */
 	export class MotorJoint extends Joint {		
 		/** !#en
 		The anchor of the rigidbody.
 		!#zh
-		åˆšä½“çš„é”šç‚¹ã€‚ */
+		???ä½?????????¹ã?? */
 		anchor: Vec2;		
 		/** !#en
 		The anchor of the connected rigidbody.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯åˆšä½“çš„é”šç‚¹ã€‚ */
+		??³è????¦ä??ç«¯å??ä½?????????¹ã?? */
 		connectedAnchor: Vec2;		
 		/** !#en
 		The linear offset from connected rigidbody to rigidbody.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯çš„åˆšä½“ç›¸å¯¹äºèµ·å§‹ç«¯åˆšä½“çš„ä½ç½®åç§»é‡ */
+		??³è????¦ä??ç«¯ç?????ä½???¸å¯¹äº?èµ·å??ç«¯å??ä½????ä½?ç½®å??ç§»é?? */
 		linearOffset: Vec2;		
 		/** !#en
 		The angular offset from connected rigidbody to rigidbody.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯çš„åˆšä½“ç›¸å¯¹äºèµ·å§‹ç«¯åˆšä½“çš„è§’åº¦åç§»é‡ */
+		??³è????¦ä??ç«¯ç?????ä½???¸å¯¹äº?èµ·å??ç«¯å??ä½????è§?åº¦å??ç§»é?? */
 		angularOffset: number;		
 		/** !#en
 		The maximum force can be applied to rigidbody.
 		!#zh
-		å¯ä»¥åº”ç”¨äºåˆšä½“çš„æœ€å¤§çš„åŠ›å€¼ */
+		??¯ä»¥åº???¨ä?????ä½???????å¤§ç???????? */
 		maxForce: number;		
 		/** !#en
 		The maximum torque can be applied to rigidbody.
 		!#zh
-		å¯ä»¥åº”ç”¨äºåˆšä½“çš„æœ€å¤§æ‰­çŸ©å€¼ */
+		??¯ä»¥åº???¨ä?????ä½???????å¤§æ?­ç?©å?? */
 		maxTorque: number;		
 		/** !#en
 		The position correction factor in the range [0,1].
 		!#zh
-		ä½ç½®çŸ«æ­£ç³»æ•°ï¼ŒèŒƒå›´ä¸º [0, 1] */
+		ä½?ç½®ç?«æ­£ç³»æ?°ï???????´ä¸º [0, 1] */
 		correctionFactor: number;	
 	}	
 	/** !#en
@@ -15809,48 +15809,48 @@ declare namespace cc {
 	and move the choosed rigidbody in touch move event.
 	Note : generally mouse joint only used in test bed.
 	!#zh
-	é¼ æ ‡å…³èŠ‚ç”¨äºä½¿åˆšä½“ä¸Šçš„ä¸€ä¸ªç‚¹è¿½è¸ªä¸€ä¸ªæŒ‡å®šçš„ä¸–ç•Œåæ ‡ç³»ä¸‹çš„ä½ç½®ã€‚
-	é¼ æ ‡å…³èŠ‚å¯ä»¥æŒ‡å®šä¸€ä¸ªæœ€å¤§çš„åŠ›æ¥æ–½åŠ ä¸€ä¸ªæŸ”å’Œçš„çº¦æŸã€‚
-	é¼ æ ‡å…³èŠ‚ä¼šè‡ªåŠ¨ä½¿ç”¨ mouse region èŠ‚ç‚¹æ¥æ³¨å†Œé¼ æ ‡äº‹ä»¶ï¼Œå¹¶ä¸”åœ¨è§¦æ‘¸ç§»åŠ¨äº‹ä»¶ä¸­ç§»åŠ¨é€‰ä¸­çš„åˆšä½“ã€‚
-	æ³¨æ„ï¼šä¸€èˆ¬é¼ æ ‡å…³èŠ‚åªåœ¨æµ‹è¯•ç¯å¢ƒä¸­ä½¿ç”¨ã€‚ */
+	é¼??????³è????¨ä??ä½¿å??ä½?ä¸????ä¸?ä¸ªç?¹è¿½è¸ªä??ä¸ªæ??å®????ä¸??????????ç³»ä?????ä½?ç½®ã??
+	é¼??????³è????¯ä»¥???å®?ä¸?ä¸ªæ??å¤§ç???????¥æ?½å??ä¸?ä¸ªæ????????çº¦æ?????
+	é¼??????³è??ä¼???ªå?¨ä½¿??? mouse region ?????¹æ?¥æ³¨???é¼????äº?ä»¶ï??å¹¶ä????¨è§¦??¸ç§»??¨ä??ä»¶ä¸­ç§»å?¨é??ä¸­ç?????ä½????
+	æ³¨æ??ï¼?ä¸???¬é???????³è????ªå?¨æ??è¯???¯å??ä¸­ä½¿??¨ã?? */
 	export class MouseJoint extends Joint {		
 		/** !#en
 		The anchor of the rigidbody.
 		!#zh
-		åˆšä½“çš„é”šç‚¹ã€‚ */
+		???ä½?????????¹ã?? */
 		anchor: Vec2;		
 		/** !#en
 		The anchor of the connected rigidbody.
 		!#zh
-		å…³èŠ‚å¦ä¸€ç«¯åˆšä½“çš„é”šç‚¹ã€‚ */
+		??³è????¦ä??ç«¯å??ä½?????????¹ã?? */
 		connectedAnchor: Vec2;		
 		/** !#en
 		The node used to register touch evnet.
 		If this is null, it will be the joint's node.
 		!#zh
-		ç”¨äºæ³¨å†Œè§¦æ‘¸äº‹ä»¶çš„èŠ‚ç‚¹ã€‚
-		å¦‚æœæ²¡æœ‰è®¾ç½®è¿™ä¸ªå€¼ï¼Œé‚£ä¹ˆå°†ä¼šä½¿ç”¨å…³èŠ‚çš„èŠ‚ç‚¹æ¥æ³¨å†Œäº‹ä»¶ã€‚ */
+		??¨ä??æ³¨å??è§¦æ?¸ä??ä»¶ç???????¹ã??
+		å¦????æ²¡æ??è®¾ç½®è¿?ä¸ªå?¼ï?????ä¹?å°?ä¼?ä½¿ç?¨å?³è??????????¹æ?¥æ³¨???äº?ä»¶ã?? */
 		mouseRegion: Node;		
 		/** !#en
 		The target point.
 		The mouse joint will move choosed rigidbody to target point.
 		!#zh
-		ç›®æ ‡ç‚¹ï¼Œé¼ æ ‡å…³èŠ‚å°†ä¼šç§»åŠ¨é€‰ä¸­çš„åˆšä½“åˆ°æŒ‡å®šçš„ç›®æ ‡ç‚¹ */
+		??®æ????¹ï??é¼??????³è??å°?ä¼?ç§»å?¨é??ä¸­ç?????ä½???°æ??å®??????®æ????? */
 		target: Vec2;		
 		/** !#en
 		The spring frequency.
 		!#zh
-		å¼¹ç°§ç³»æ•°ã€‚ */
+		å¼¹ç°§ç³»æ?°ã?? */
 		frequency: number;		
 		/** !#en
 		The damping ratio.
 		!#zh
-		é˜»å°¼ï¼Œè¡¨ç¤ºå…³èŠ‚å˜å½¢åï¼Œæ¢å¤åˆ°åˆå§‹çŠ¶æ€å—åˆ°çš„é˜»åŠ›ã€‚ */
+		??»å°¼ï¼?è¡¨ç¤º??³è?????å½¢å??ï¼???¢å????°å??å§???¶æ???????°ç????»å????? */
 		0: number;		
 		/** !#en
 		The maximum force
 		!#zh
-		æœ€å¤§é˜»åŠ›å€¼ */
+		???å¤§é?»å????? */
 		maxForce: number;	
 	}	
 	/** !#en
@@ -15859,48 +15859,48 @@ declare namespace cc {
 	use a joint limit to restrict the range of motion and a joint motor to
 	drive the motion or to model joint friction.
 	!#zh
-	ç§»åŠ¨å…³èŠ‚æŒ‡å®šäº†åªèƒ½åœ¨ä¸€ä¸ªæ–¹å‘ä¸Šç§»åŠ¨åˆšä½“ã€‚
-	ä½ å¯ä»¥å¼€å¯å…³èŠ‚é™åˆ¶æ¥è®¾ç½®åˆšä½“è¿è¡Œç§»åŠ¨çš„é—´è·ï¼Œä¹Ÿå¯ä»¥å¼€å¯é©¬è¾¾æ¥ä½¿ç”¨å…³èŠ‚é©¬è¾¾é©±åŠ¨åˆšä½“çš„è¿è¡Œã€‚ */
+	ç§»å?¨å?³è?????å®?äº???ªè?½å?¨ä??ä¸ªæ?¹å??ä¸?ç§»å?¨å??ä½????
+	ä½???¯ä»¥å¼???¯å?³è???????¶æ?¥è®¾ç½®å??ä½?è¿?è¡?ç§»å?¨ç????´è??ï¼?ä¹???¯ä»¥å¼???¯é©¬è¾¾æ?¥ä½¿??¨å?³è??é©¬è¾¾é©±å?¨å??ä½????è¿?è¡???? */
 	export class PrismaticJoint extends Joint {		
 		/** !#en
 		The local joint axis relative to rigidbody.
 		!#zh
-		æŒ‡å®šåˆšä½“å¯ä»¥ç§»åŠ¨çš„æ–¹å‘ã€‚ */
+		???å®????ä½???¯ä»¥ç§»å?¨ç????¹å????? */
 		localAxisA: Vec2;		
 		/** !#en
 		The reference angle.
 		!#zh
-		ç›¸å¯¹è§’åº¦ */
+		??¸å¯¹è§?åº? */
 		referenceAngle: number;		
 		/** !#en
 		Enable joint distance limit?
 		!#zh
-		æ˜¯å¦å¼€å¯å…³èŠ‚çš„è·ç¦»é™åˆ¶ï¼Ÿ */
+		??¯å?¦å????¯å?³è?????è·?ç¦»é????¶ï?? */
 		enableLimit: boolean;		
 		/** !#en
 		Enable joint motor?
 		!#zh
-		æ˜¯å¦å¼€å¯å…³èŠ‚é©¬è¾¾ï¼Ÿ */
+		??¯å?¦å????¯å?³è??é©¬è¾¾ï¼? */
 		enableMotor: boolean;		
 		/** !#en
 		The lower joint limit.
 		!#zh
-		åˆšä½“èƒ½å¤Ÿç§»åŠ¨çš„æœ€å°å€¼ */
+		???ä½???½å??ç§»å?¨ç?????å°???? */
 		lowerLimit: number;		
 		/** !#en
 		The upper joint limit.
 		!#zh
-		åˆšä½“èƒ½å¤Ÿç§»åŠ¨çš„æœ€å¤§å€¼ */
+		???ä½???½å??ç§»å?¨ç?????å¤§å?? */
 		upperLimit: number;		
 		/** !#en
 		The maxium force can be applied to rigidbody to rearch the target motor speed.
 		!#zh
-		å¯ä»¥æ–½åŠ åˆ°åˆšä½“çš„æœ€å¤§åŠ›ã€‚ */
+		??¯ä»¥??½å????°å??ä½???????å¤§å????? */
 		maxMotorForce: number;		
 		/** !#en
 		The expected motor speed.
 		!#zh
-		æœŸæœ›çš„é©¬è¾¾é€Ÿåº¦ã€‚ */
+		?????????é©¬è¾¾???åº¦ã?? */
 		motorSpeed: number;	
 	}	
 	/** !#en
@@ -15911,52 +15911,52 @@ declare namespace cc {
 	to drive the relative rotation about the shared point. A maximum motor torque
 	is provided so that infinite forces are not generated.
 	!#zh
-	æ—‹è½¬å…³èŠ‚å¯ä»¥çº¦æŸä¸¤ä¸ªåˆšä½“å›´ç»•ä¸€ä¸ªç‚¹æ¥è¿›è¡Œæ—‹è½¬ã€‚
-	ä½ å¯ä»¥é€šè¿‡å¼€å¯å…³èŠ‚é™åˆ¶æ¥é™åˆ¶æ—‹è½¬çš„æœ€å¤§è§’åº¦å’Œæœ€å°è§’åº¦ã€‚
-	ä½ å¯ä»¥é€šè¿‡å¼€å¯é©¬è¾¾æ¥æ–½åŠ ä¸€ä¸ªæ‰­çŸ©åŠ›æ¥é©±åŠ¨è¿™ä¸¤ä¸ªåˆšä½“åœ¨è¿™ä¸€ç‚¹ä¸Šçš„ç›¸å¯¹é€Ÿåº¦ã€‚ */
+	???è½¬å?³è????¯ä»¥çº¦æ??ä¸¤ä¸ª???ä½???´ç??ä¸?ä¸ªç?¹æ?¥è??è¡????è½¬ã??
+	ä½???¯ä»¥???è¿?å¼???¯å?³è???????¶æ?¥é????¶æ??è½¬ç?????å¤§è??åº¦å?????å°?è§?åº¦ã??
+	ä½???¯ä»¥???è¿?å¼???¯é©¬è¾¾æ?¥æ?½å??ä¸?ä¸ªæ?­ç?©å????¥é©±??¨è??ä¸¤ä¸ª???ä½???¨è??ä¸???¹ä???????¸å¯¹???åº¦ã?? */
 	export class RevoluteJoint extends Joint {		
 		/** !#en
 		The reference angle.
 		An angle between bodies considered to be zero for the joint angle.
 		!#zh
-		ç›¸å¯¹è§’åº¦ã€‚
-		ä¸¤ä¸ªç‰©ä½“ä¹‹é—´è§’åº¦ä¸ºé›¶æ—¶å¯ä»¥çœ‹ä½œç›¸ç­‰äºå…³èŠ‚è§’åº¦ */
+		??¸å¯¹è§?åº¦ã??
+		ä¸¤ä¸ª??©ä??ä¹???´è??åº¦ä¸º??¶æ?¶å?¯ä»¥???ä½???¸ç??äº???³è??è§?åº? */
 		referenceAngle: number;		
 		/** !#en
 		The lower angle.
 		!#zh
-		è§’åº¦çš„æœ€ä½é™åˆ¶ã€‚ */
+		è§?åº¦ç?????ä½??????¶ã?? */
 		lowerAngle: number;		
 		/** !#en
 		The upper angle.
 		!#zh
-		è§’åº¦çš„æœ€é«˜é™åˆ¶ã€‚ */
+		è§?åº¦ç?????é«??????¶ã?? */
 		upperAngle: number;		
 		/** !#en
 		The maxium torque can be applied to rigidbody to rearch the target motor speed.
 		!#zh
-		å¯ä»¥æ–½åŠ åˆ°åˆšä½“çš„æœ€å¤§æ‰­çŸ©ã€‚ */
+		??¯ä»¥??½å????°å??ä½???????å¤§æ?­ç?©ã?? */
 		maxMotorTorque: number;		
 		/** !#en
 		The expected motor speed.
 		!#zh
-		æœŸæœ›çš„é©¬è¾¾é€Ÿåº¦ã€‚ */
+		?????????é©¬è¾¾???åº¦ã?? */
 		motorSpeed: number;		
 		/** !#en
 		Enable joint limit?
 		!#zh
-		æ˜¯å¦å¼€å¯å…³èŠ‚çš„é™åˆ¶ï¼Ÿ */
+		??¯å?¦å????¯å?³è??????????¶ï?? */
 		enableLimit: boolean;		
 		/** !#en
 		Enable joint motor?
 		!#zh
-		æ˜¯å¦å¼€å¯å…³èŠ‚é©¬è¾¾ï¼Ÿ */
+		??¯å?¦å????¯å?³è??é©¬è¾¾ï¼? */
 		enableMotor: boolean;		
 		/**
 		!#en
 		Get the joint angle.
 		!#zh
-		è·å–å…³èŠ‚è§’åº¦ã€‚ 
+		??·å????³è??è§?åº¦ã?? 
 		*/
 		getJointAngle(): number;	
 	}	
@@ -15966,36 +15966,36 @@ declare namespace cc {
 	Warning: if you attempt to change the maximum length during
 	the simulation you will get some non-physical behavior.
 	!#zh
-	ç»³å­å…³èŠ‚åªæŒ‡å®šä¸¤ä¸ªåˆšä½“é—´çš„æœ€å¤§è·ç¦»ï¼Œæ²¡æœ‰å…¶ä»–çš„æ•ˆæœã€‚
-	æ³¨æ„ï¼šå¦‚æœä½ è¯•å›¾åŠ¨æ€ä¿®æ”¹å…³èŠ‚çš„é•¿åº¦ï¼Œè¿™æœ‰å¯èƒ½ä¼šå¾—åˆ°ä¸€äº›æ„å¤–çš„æ•ˆæœã€‚ */
+	ç»³å????³è????ªæ??å®?ä¸¤ä¸ª???ä½???´ç?????å¤§è??ç¦»ï??æ²¡æ????¶ä??????????????
+	æ³¨æ??ï¼?å¦????ä½?è¯???¾å?¨æ??ä¿®æ?¹å?³è???????¿åº¦ï¼?è¿??????¯è?½ä??å¾???°ä??äº????å¤????????????? */
 	export class RopeJoint extends Joint {		
 		/** !#en
 		The max length.
 		!#zh
-		æœ€å¤§é•¿åº¦ã€‚ */
+		???å¤§é?¿åº¦??? */
 		maxLength: number;	
 	}	
 	/** !#en
 	A weld joint essentially glues two bodies together. A weld joint may
 	distort somewhat because the island constraint solver is approximate.
 	!#zh
-	ç†”æ¥å…³èŠ‚ç›¸å½“äºå°†ä¸¤ä¸ªåˆšä½“ç²˜åœ¨äº†ä¸€èµ·ã€‚
-	ç†”æ¥å…³èŠ‚å¯èƒ½ä¼šä½¿æŸäº›ä¸œè¥¿å¤±çœŸï¼Œå› ä¸ºçº¦æŸæ±‚è§£å™¨ç®—å‡ºçš„éƒ½æ˜¯è¿‘ä¼¼å€¼ã€‚ */
+	?????¥å?³è????¸å??äº?å°?ä¸¤ä¸ª???ä½?ç²???¨ä??ä¸?èµ·ã??
+	?????¥å?³è????¯è?½ä??ä½¿æ??äº?ä¸?è¥¿å¤±???ï¼????ä¸ºçº¦???æ±?è§???¨ç????ºç????½æ?¯è??ä¼¼å?¼ã?? */
 	export class WeldJoint extends Joint {		
 		/** !#en
 		The reference angle.
 		!#zh
-		ç›¸å¯¹è§’åº¦ã€‚ */
+		??¸å¯¹è§?åº¦ã?? */
 		referenceAngle: number;		
 		/** !#en
 		The frequency.
 		!#zh
-		å¼¹æ€§ç³»æ•°ã€‚ */
+		å¼¹æ?§ç³»??°ã?? */
 		frequency: number;		
 		/** !#en
 		The damping ratio.
 		!#zh
-		é˜»å°¼ï¼Œè¡¨ç¤ºå…³èŠ‚å˜å½¢åï¼Œæ¢å¤åˆ°åˆå§‹çŠ¶æ€å—åˆ°çš„é˜»åŠ›ã€‚ */
+		??»å°¼ï¼?è¡¨ç¤º??³è?????å½¢å??ï¼???¢å????°å??å§???¶æ???????°ç????»å????? */
 		0: number;	
 	}	
 	/** !#en
@@ -16004,43 +16004,43 @@ declare namespace cc {
 	the rotation or to model rotational friction.
 	This joint is designed for vehicle suspensions.
 	!#zh
-	è½®å­å…³èŠ‚æä¾›ä¸¤ä¸ªç»´åº¦çš„è‡ªç”±åº¦ï¼šæ—‹è½¬å’Œæ²¿ç€æŒ‡å®šæ–¹å‘ä¸Šä½ç½®çš„ç§»åŠ¨ã€‚
-	ä½ å¯ä»¥é€šè¿‡å¼€å¯å…³èŠ‚é©¬è¾¾æ¥ä½¿ç”¨é©¬è¾¾é©±åŠ¨åˆšä½“çš„æ—‹è½¬ã€‚
-	è½®ç»„å…³èŠ‚æ˜¯ä¸“é—¨ä¸ºæœºåŠ¨è½¦ç±»å‹è®¾è®¡çš„ã€‚ */
+	è½®å????³è?????ä¾?ä¸¤ä¸ªç»´åº¦?????ªç?±åº¦ï¼????è½¬å??æ²¿ç?????å®???¹å??ä¸?ä½?ç½®ç??ç§»å?¨ã??
+	ä½???¯ä»¥???è¿?å¼???¯å?³è??é©¬è¾¾??¥ä½¿??¨é©¬è¾¾é©±??¨å??ä½???????è½¬ã??
+	è½®ç????³è????¯ä????¨ä¸º??ºå?¨è½¦ç±»å??è®¾è®¡?????? */
 	export class WheelJoint extends Joint {		
 		/** !#en
 		The local joint axis relative to rigidbody.
 		!#zh
-		æŒ‡å®šåˆšä½“å¯ä»¥ç§»åŠ¨çš„æ–¹å‘ã€‚ */
+		???å®????ä½???¯ä»¥ç§»å?¨ç????¹å????? */
 		localAxisA: Vec2;		
 		/** !#en
 		The maxium torque can be applied to rigidbody to rearch the target motor speed.
 		!#zh
-		å¯ä»¥æ–½åŠ åˆ°åˆšä½“çš„æœ€å¤§æ‰­çŸ©ã€‚ */
+		??¯ä»¥??½å????°å??ä½???????å¤§æ?­ç?©ã?? */
 		maxMotorTorque: number;		
 		/** !#en
 		The expected motor speed.
 		!#zh
-		æœŸæœ›çš„é©¬è¾¾é€Ÿåº¦ã€‚ */
+		?????????é©¬è¾¾???åº¦ã?? */
 		motorSpeed: number;		
 		/** !#en
 		Enable joint motor?
 		!#zh
-		æ˜¯å¦å¼€å¯å…³èŠ‚é©¬è¾¾ï¼Ÿ */
+		??¯å?¦å????¯å?³è??é©¬è¾¾ï¼? */
 		enableMotor: boolean;		
 		/** !#en
 		The spring frequency.
 		!#zh
-		å¼¹æ€§ç³»æ•°ã€‚ */
+		å¼¹æ?§ç³»??°ã?? */
 		frequency: number;		
 		/** !#en
 		The damping ratio.
 		!#zh
-		é˜»å°¼ï¼Œè¡¨ç¤ºå…³èŠ‚å˜å½¢åï¼Œæ¢å¤åˆ°åˆå§‹çŠ¶æ€å—åˆ°çš„é˜»åŠ›ã€‚ */
+		??»å°¼ï¼?è¡¨ç¤º??³è?????å½¢å??ï¼???¢å????°å??å§???¶æ???????°ç????»å????? */
 		dampingRatio: number;	
 	}	
 	/** !#en The rigid body type
-	!#zh åˆšä½“ç±»å‹ */
+	!#zh ???ä½?ç±»å?? */
 	export enum ERigidBodyType {		
 		DYNAMIC = 0,
 		STATIC = 0,
@@ -16049,122 +16049,122 @@ declare namespace cc {
 	/** !#en
 	Trigger event
 	!#zh
-	è§¦å‘äº‹ä»¶ã€‚ */
+	è§¦å??äº?ä»¶ã?? */
 	export class ITriggerEvent {		
 		/** !#en
 		The type of event fired
 		!#zh
-		è§¦å‘çš„äº‹ä»¶ç±»å‹ */
+		è§¦å?????äº?ä»¶ç±»??? */
 		type: string;		
 		/** !#en
 		Triggers its own collider in the event
 		!#zh
-		è§¦å‘äº‹ä»¶ä¸­çš„è‡ªå·±çš„ç¢°æ’å™¨ */
+		è§¦å??äº?ä»¶ä¸­?????ªå·±???ç¢°æ????? */
 		selfCollider: Collider3D;		
 		/** !#en
 		Triggers another collider in the event
 		!#zh
-		è§¦å‘äº‹ä»¶ä¸­çš„å¦ä¸€ä¸ªç¢°æ’å™¨ */
+		è§¦å??äº?ä»¶ä¸­?????¦ä??ä¸ªç¢°?????? */
 		otherCollider: Collider3D;	
 	}	
 	/** !#en
 	Collision information for collision events.
 	!#zh
-	ç¢°æ’äº‹ä»¶çš„ç¢°æ’ä¿¡æ¯ã€‚ */
+	ç¢°æ??äº?ä»¶ç??ç¢°æ??ä¿¡æ?¯ã?? */
 	export class IContactEquation {		
 		/** !#en
 		The collision point A in the collision information.
 		!#zh
-		ç¢°æ’ä¿¡æ¯ä¸­çš„ç¢°æ’ç‚¹ Aã€‚ */
+		ç¢°æ??ä¿¡æ?¯ä¸­???ç¢°æ????? A??? */
 		contactA: Vec3;		
 		/** !#en
 		Collision point B in collision information.
 		!#zh
-		ç¢°æ’ä¿¡æ¯ä¸­çš„ç¢°æ’ç‚¹ Bã€‚ */
+		ç¢°æ??ä¿¡æ?¯ä¸­???ç¢°æ????? B??? */
 		contactB: Vec3;		
 		/** !#en
 		Normals in collision information.
 		!#zh
-		ç¢°æ’ä¿¡æ¯ä¸­çš„æ³•çº¿ã€‚ */
+		ç¢°æ??ä¿¡æ?¯ä¸­???æ³?çº¿ã?? */
 		normal: Vec3;	
 	}	
 	/** !#en
 	Collision events.
 	!#zh
-	ç¢°æ’äº‹ä»¶ã€‚ */
+	ç¢°æ??äº?ä»¶ã?? */
 	export class ICollisionEvent {		
 		/** !#en
 		Event type of collision.
 		!#zh
-		ç¢°æ’çš„äº‹ä»¶ç±»å‹ã€‚ */
+		ç¢°æ?????äº?ä»¶ç±»?????? */
 		type: string;		
 		/** !#en
 		Collider of its own in collision.
 		!#zh
-		ç¢°æ’ä¸­çš„è‡ªå·±çš„ç¢°æ’å™¨ã€‚ */
+		ç¢°æ??ä¸­ç????ªå·±???ç¢°æ????¨ã?? */
 		selfCollider: Collider3D;		
 		/** !#en
 		Another collider in the collision.
 		!#zh
-		ç¢°æ’ä¸­çš„å¦ä¸€ä¸ªç¢°æ’å™¨ã€‚ */
+		ç¢°æ??ä¸­ç????¦ä??ä¸ªç¢°?????¨ã?? */
 		otherCollider: Collider3D;		
 		/** !#en
 		Information about all the points of impact in the collision.
 		!#zh
-		ç¢°æ’ä¸­çš„æ‰€æœ‰ç¢°æ’ç‚¹çš„ä¿¡æ¯ã€‚ */
+		ç¢°æ??ä¸­ç????????ç¢°æ????¹ç??ä¿¡æ?¯ã?? */
 		contacts: IContactEquation[];	
 	}	
 	/** !#en
 	Physical systems manager.
 	!#zh
-	ç‰©ç†ç³»ç»Ÿç®¡ç†å™¨ã€‚ */
+	??©ç??ç³»ç??ç®¡ç????¨ã?? */
 	export class Physics3DManager {		
 		/** !#en
 		Whether to enable the physics system, default is false.
 		!#zh
-		æ˜¯å¦å¯ç”¨ç‰©ç†ç³»ç»Ÿï¼Œé»˜è®¤ä¸å¯ç”¨ã€‚ */
+		??¯å?¦å?¯ç?¨ç?©ç??ç³»ç??ï¼?é»?è®¤ä????¯ç?¨ã?? */
 		enabled: boolean;		
 		/** !#en
 		Whether to allow the physics system to automatically hibernate, default is true.
 		!#zh
-		ç‰©ç†ç³»ç»Ÿæ˜¯å¦å…è®¸è‡ªåŠ¨ä¼‘çœ ï¼Œé»˜è®¤ä¸º trueã€‚ */
+		??©ç??ç³»ç????¯å?¦å??è®¸è?ªå?¨ä?????ï¼?é»?è®¤ä¸º true??? */
 		allowSleep: boolean;		
 		/** !#en
 		The maximum number of sub-steps a full step is permitted to be broken into, default is 2.
 		!#zh
-		ç‰©ç†æ¯å¸§æ¨¡æ‹Ÿçš„æœ€å¤§å­æ­¥æ•°ï¼Œé»˜è®¤ä¸º 2ã€‚ */
+		??©ç??æ¯?å¸§æ¨¡?????????å¤§å??æ­¥æ?°ï??é»?è®¤ä¸º 2??? */
 		maxSubStep: number;		
 		/** !#en
 		Time spent in each simulation of physics, default is 1/60s.
 		!#zh
-		ç‰©ç†æ¯æ­¥æ¨¡æ‹Ÿæ¶ˆè€—çš„å›ºå®šæ—¶é—´ï¼Œé»˜è®¤ä¸º 1/60 ç§’ã€‚ */
+		??©ç??æ¯?æ­¥æ¨¡???æ¶?????????ºå????¶é?´ï??é»?è®¤ä¸º 1/60 ç§???? */
 		deltaTime: number;		
 		/** !#en
 		Whether to use a fixed time step.
 		!#zh
-		æ˜¯å¦ä½¿ç”¨å›ºå®šçš„æ—¶é—´æ­¥é•¿ã€‚ */
+		??¯å?¦ä½¿??¨å?ºå???????¶é?´æ­¥??¿ã?? */
 		useFixedTime: boolean;		
 		/** !#en
 		Gravity value of the physics simulation, default is (0, -10, 0).
 		!#zh
-		ç‰©ç†ä¸–ç•Œçš„é‡åŠ›æ•°å€¼ï¼Œé»˜è®¤ä¸º (0, -10, 0)ã€‚ */
+		??©ç??ä¸???????????????°å?¼ï??é»?è®¤ä¸º (0, -10, 0)??? */
 		gravity: Vec3;		
 		/** !#en
 		Gets the global default physical material. Note that builtin is null.
 		!#zh
-		è·å–å…¨å±€çš„é»˜è®¤ç‰©ç†æè´¨ï¼Œæ³¨æ„ï¼šbuiltin æ—¶ä¸º nullã€‚ */
+		??·å????¨å?????é»?è®¤ç?©ç?????è´¨ï??æ³¨æ??ï¼?builtin ??¶ä¸º null??? */
 		defaultMaterial: PhysicsMaterial|void;		
 		/**
 		!#en
 		A physical system simulation is performed once and will now be performed automatically once per frame.
 		!#zh
-		æ‰§è¡Œä¸€æ¬¡ç‰©ç†ç³»ç»Ÿçš„æ¨¡æ‹Ÿï¼Œç›®å‰å°†åœ¨æ¯å¸§è‡ªåŠ¨æ‰§è¡Œä¸€æ¬¡ã€‚
+		??§è??ä¸?æ¬¡ç?©ç??ç³»ç?????æ¨¡æ??ï¼???®å??å°???¨æ??å¸§è?ªå?¨æ?§è??ä¸?æ¬¡ã??
 		@param deltaTime The time difference from the last execution is currently elapsed per frame 
 		*/
 		update(deltaTime: number): void;		
 		/**
 		!#en Detect all collision boxes and return all detected results, or null if none is detected. Note that the return value is taken from the object pool, so do not save the result reference or modify the result.
-		!#zh æ£€æµ‹æ‰€æœ‰çš„ç¢°æ’ç›’ï¼Œå¹¶è¿”å›æ‰€æœ‰è¢«æ£€æµ‹åˆ°çš„ç»“æœï¼Œè‹¥æ²¡æœ‰æ£€æµ‹åˆ°ï¼Œåˆ™è¿”å›ç©ºå€¼ã€‚æ³¨æ„è¿”å›å€¼æ˜¯ä»å¯¹è±¡æ± ä¸­å–çš„ï¼Œæ‰€ä»¥è¯·ä¸è¦ä¿å­˜ç»“æœå¼•ç”¨æˆ–è€…ä¿®æ”¹ç»“æœã€‚
+		!#zh æ£?æµ??????????ç¢°æ?????ï¼?å¹¶è???????????è¢«æ??æµ???°ç??ç»????ï¼???¥æ²¡???æ£?æµ???°ï?????è¿????ç©ºå?¼ã??æ³¨æ??è¿??????¼æ?¯ä??å¯¹è±¡æ±?ä¸­å?????ï¼????ä»¥è¯·ä¸?è¦?ä¿?å­?ç»????å¼???¨æ?????ä¿®æ?¹ç????????
 		@param worldRay A ray in world space
 		@param groupIndexOrName Collision group index or group name
 		@param maxDistance Maximum detection distance
@@ -16173,7 +16173,7 @@ declare namespace cc {
 		raycast(worldRay: geomUtils.Ray, groupIndexOrName: number|string, maxDistance: number, queryTrigger: boolean): PhysicsRayResult[];		
 		/**
 		!#en Detect all collision boxes and return the detection result with the shortest ray distance. If not, return null value. Note that the return value is taken from the object pool, so do not save the result reference or modify the result.
-		!#zh æ£€æµ‹æ‰€æœ‰çš„ç¢°æ’ç›’ï¼Œå¹¶è¿”å›å°„çº¿è·ç¦»æœ€çŸ­çš„æ£€æµ‹ç»“æœï¼Œè‹¥æ²¡æœ‰ï¼Œåˆ™è¿”å›ç©ºå€¼ã€‚æ³¨æ„è¿”å›å€¼æ˜¯ä»å¯¹è±¡æ± ä¸­å–çš„ï¼Œæ‰€ä»¥è¯·ä¸è¦ä¿å­˜ç»“æœå¼•ç”¨æˆ–è€…ä¿®æ”¹ç»“æœã€‚
+		!#zh æ£?æµ??????????ç¢°æ?????ï¼?å¹¶è?????å°?çº¿è??ç¦»æ????­ç??æ£?æµ?ç»????ï¼???¥æ²¡???ï¼????è¿????ç©ºå?¼ã??æ³¨æ??è¿??????¼æ?¯ä??å¯¹è±¡æ±?ä¸­å?????ï¼????ä»¥è¯·ä¸?è¦?ä¿?å­?ç»????å¼???¨æ?????ä¿®æ?¹ç????????
 		@param worldRay A ray in world space
 		@param groupIndexOrName Collision group index or group name
 		@param maxDistance Maximum detection distance
@@ -16184,28 +16184,28 @@ declare namespace cc {
 	/** !#en
 	Used to store physical ray detection results
 	!#zh
-	ç”¨äºä¿å­˜ç‰©ç†å°„çº¿æ£€æµ‹ç»“æœ */
+	??¨ä??ä¿?å­???©ç??å°?çº¿æ??æµ?ç»???? */
 	export class PhysicsRayResult {		
 		/** !#en
 		Hit the point
 		!#zh
-		å‡»ä¸­ç‚¹ */
+		??»ä¸­??? */
 		hitPoint: Vec3;		
 		/** !#en
 		Distance
 		!#zh
-		è·ç¦» */
+		è·?ç¦? */
 		distance: number;		
 		/** !#en
 		Hit the collision box
 		!#zh
-		å‡»ä¸­çš„ç¢°æ’ç›’ */
+		??»ä¸­???ç¢°æ????? */
 		collider: Collider3D;		
 		/**
 		!#en
 		Set up ray. This method is used internally by the engine. Do not call it from an external script
 		!#zh
-		è®¾ç½®å°„çº¿ï¼Œæ­¤æ–¹æ³•ç”±å¼•æ“å†…éƒ¨ä½¿ç”¨ï¼Œè¯·å‹¿åœ¨å¤–éƒ¨è„šæœ¬è°ƒç”¨
+		è®¾ç½®å°?çº¿ï??æ­¤æ?¹æ????±å??????????¨ä½¿??¨ï??è¯·å?¿å?¨å????¨è????¬è?????
 		@param hitPoint hitPoint
 		@param distance distance
 		@param collider collider 
@@ -16215,321 +16215,321 @@ declare namespace cc {
 		!#en
 		Clone
 		!#zh
-		å…‹éš† 
+		?????? 
 		*/
 		clone(): void;	
 	}	
 	/** !#en The shape module of 3d particle.
-	!#zh 3D ç²’å­çš„å‘å°„å½¢çŠ¶æ¨¡å— */
+	!#zh 3D ç²?å­???????å°?å½¢ç?¶æ¨¡??? */
 	export class ShapeModule {		
 		/** !#en The enable of shapeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Particle emitter type.
-		!#zh ç²’å­å‘å°„å™¨ç±»å‹ã€‚ */
+		!#zh ç²?å­????å°???¨ç±»?????? */
 		shapeType: shapeModule.ShapeType;		
 		/** !#en The emission site of the particle.
-		!#zh ç²’å­ä»å‘å°„å™¨å“ªä¸ªéƒ¨ä½å‘å°„ã€‚ */
+		!#zh ç²?å­?ä»????å°???¨å?ªä¸ª??¨ä?????å°???? */
 		emitFrom: shapeModule.EmitLocation;		
 		/** !#en Particle emitter radius.
-		!#zh ç²’å­å‘å°„å™¨åŠå¾„ã€‚ */
+		!#zh ç²?å­????å°???¨å??å¾???? */
 		radius: number;		
-		/** !#en Particle emitter emission position (not valid for Box type emitters)ï¼š<bg>
+		/** !#en Particle emitter emission position (not valid for Box type emitters)ï¼?<bg>
 		- 0 means emitted from the surface;
 		- 1 means launch from the center;
 		- 0 ~ 1 indicates emission from the center to the surface.
-		!#zh ç²’å­å‘å°„å™¨å‘å°„ä½ç½®ï¼ˆå¯¹ Box ç±»å‹çš„å‘å°„å™¨æ— æ•ˆï¼‰ï¼š<bg>
-		- 0 è¡¨ç¤ºä»è¡¨é¢å‘å°„ï¼›
-		- 1 è¡¨ç¤ºä»ä¸­å¿ƒå‘å°„ï¼›
-		- 0 ~ 1 ä¹‹é—´è¡¨ç¤ºåœ¨ä¸­å¿ƒåˆ°è¡¨é¢ä¹‹é—´å‘å°„ã€‚ */
+		!#zh ç²?å­????å°???¨å??å°?ä½?ç½®ï??å¯? Box ç±»å????????å°???¨æ?????ï¼?ï¼?<bg>
+		- 0 è¡¨ç¤ºä»?è¡¨é?¢å??å°?ï¼?
+		- 1 è¡¨ç¤ºä»?ä¸­å?????å°?ï¼?
+		- 0 ~ 1 ä¹???´è¡¨ç¤ºå?¨ä¸­å¿???°è¡¨??¢ä????´å??å°???? */
 		radiusThickness: number;		
 		/** !#en The angle between the axis of the cone and the generatrix<bg>
 		Determines the opening and closing of the cone launcher
-		!#zh åœ†é”¥çš„è½´ä¸æ¯çº¿çš„å¤¹è§’<bg>ã€‚
-		å†³å®šåœ†é”¥å‘å°„å™¨çš„å¼€åˆç¨‹åº¦ã€‚ */
+		!#zh ?????¥ç??è½´ä??æ¯?çº¿ç??å¤¹è??<bg>???
+		??³å???????¥å??å°???¨ç??å¼????ç¨?åº¦ã?? */
 		angle: number;		
 		/** !#en Particle emitters emit in a fan-shaped range.
-		!#zh ç²’å­å‘å°„å™¨åœ¨ä¸€ä¸ªæ‰‡å½¢èŒƒå›´å†…å‘å°„ã€‚ */
+		!#zh ç²?å­????å°???¨å?¨ä??ä¸ªæ??å½¢è????´å?????å°???? */
 		arc: number;		
 		/** !#en How particles are emitted in the sector range.
-		!#zh ç²’å­åœ¨æ‰‡å½¢èŒƒå›´å†…çš„å‘å°„æ–¹å¼ã€‚ */
+		!#zh ç²?å­???¨æ??å½¢è????´å????????å°???¹å????? */
 		arcMode: shapeModule.ArcMode;		
 		/** !#en Controls the discrete intervals around the arcs where particles might be generated.
-		!#zh æ§åˆ¶å¯èƒ½äº§ç”Ÿç²’å­çš„å¼§å‘¨å›´çš„ç¦»æ•£é—´éš”ã€‚ */
+		!#zh ??§å?¶å?¯è?½äº§???ç²?å­????å¼§å?¨å?´ç??ç¦»æ????´é????? */
 		arcSpread: number;		
 		/** !#en The speed at which particles are emitted around the circumference.
-		!#zh ç²’å­æ²¿åœ†å‘¨å‘å°„çš„é€Ÿåº¦ã€‚ */
+		!#zh ç²?å­?æ²¿å????¨å??å°???????åº¦ã?? */
 		arcSpeed: CurveRange;		
 		/** !#en Axis length from top of cone to bottom of cone <bg>.
 		Determines the height of the cone emitter.
-		!#zh åœ†é”¥é¡¶éƒ¨æˆªé¢è·ç¦»åº•éƒ¨çš„è½´é•¿<bg>ã€‚
-		å†³å®šåœ†é”¥å‘å°„å™¨çš„é«˜åº¦ã€‚ */
+		!#zh ?????¥é¡¶??¨æ?ªé?¢è??ç¦»å????¨ç??è½´é??<bg>???
+		??³å???????¥å??å°???¨ç??é«?åº¦ã?? */
 		length: number;		
 		/** !#en Particle emitter emission location (for box-type particle emitters).
-		!#zh ç²’å­å‘å°„å™¨å‘å°„ä½ç½®ï¼ˆé’ˆå¯¹ Box ç±»å‹çš„ç²’å­å‘å°„å™¨ã€‚ */
+		!#zh ç²?å­????å°???¨å??å°?ä½?ç½®ï?????å¯? Box ç±»å?????ç²?å­????å°???¨ã?? */
 		boxThickness: Vec3;		
 		/** !#en Particle Emitter Position
-		!#zh ç²’å­å‘å°„å™¨ä½ç½®ã€‚ */
+		!#zh ç²?å­????å°???¨ä??ç½®ã?? */
 		position: Vec3;		
 		/** !#en Particle emitter rotation angle.
-		!#zh ç²’å­å‘å°„å™¨æ—‹è½¬è§’åº¦ã€‚ */
+		!#zh ç²?å­????å°???¨æ??è½¬è??åº¦ã?? */
 		rotation: Vec3;		
 		/** !#en Particle emitter scaling
-		!#zh ç²’å­å‘å°„å™¨ç¼©æ”¾æ¯”ä¾‹ã€‚ */
+		!#zh ç²?å­????å°???¨ç¼©??¾æ??ä¾???? */
 		scale: Vec3;		
 		/** !#en The direction of particle movement is determined based on the initial direction of the particles.
-		!#zh æ ¹æ®ç²’å­çš„åˆå§‹æ–¹å‘å†³å®šç²’å­çš„ç§»åŠ¨æ–¹å‘ã€‚ */
+		!#zh ??¹æ?®ç??å­???????å§???¹å????³å??ç²?å­????ç§»å?¨æ?¹å????? */
 		alignToDirection: boolean;		
 		/** !#en Set particle generation direction randomly.
-		!#zh ç²’å­ç”Ÿæˆæ–¹å‘éšæœºè®¾å®šã€‚ */
+		!#zh ç²?å­?????????¹å???????ºè®¾å®???? */
 		randomDirectionAmount: number;		
 		/** !#en Interpolation between the current emission direction and the direction from the current position to the center of the node.
-		!#zh è¡¨ç¤ºå½“å‰å‘å°„æ–¹å‘ä¸å½“å‰ä½ç½®åˆ°ç»“ç‚¹ä¸­å¿ƒè¿çº¿æ–¹å‘çš„æ’å€¼ã€‚ */
+		!#zh è¡¨ç¤ºå½???????å°???¹å??ä¸?å½????ä½?ç½®å?°ç????¹ä¸­å¿?è¿?çº¿æ?¹å??????????¼ã?? */
 		sphericalDirectionAmount: number;	
 	}	
 	/** !#en The color over time module of 3d particle.
-	!#zh 3D ç²’å­é¢œè‰²å˜åŒ–æ¨¡å— */
+	!#zh 3D ç²?å­?é¢???²å?????æ¨¡å?? */
 	export class ColorOvertimeModule {		
 		/** !#en The enable of ColorOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;	
 	}	
 	/** !#en The curve range of target value.
-	!#zh ç›®æ ‡å€¼çš„æ›²çº¿èŒƒå›´ */
+	!#zh ??®æ????¼ç????²çº¿?????? */
 	export class CurveRange {		
 		/** !#en Curve type.
-		!#zh æ›²çº¿ç±»å‹ã€‚ */
+		!#zh ??²çº¿ç±»å????? */
 		mode: debug.DebugMode;		
 		/** !#en The curve to use when mode is Curve.
-		!#zh å½“ mode ä¸º Curve æ—¶ï¼Œä½¿ç”¨çš„æ›²çº¿ã€‚ */
+		!#zh å½? mode ä¸? Curve ??¶ï??ä½¿ç?¨ç????²çº¿??? */
 		curve: AnimationCurve;		
 		/** !#en The lower limit of the curve to use when mode is TwoCurves
-		!#zh å½“ mode ä¸º TwoCurves æ—¶ï¼Œä½¿ç”¨çš„æ›²çº¿ä¸‹é™ã€‚ */
+		!#zh å½? mode ä¸? TwoCurves ??¶ï??ä½¿ç?¨ç????²çº¿ä¸??????? */
 		curveMin: AnimationCurve;		
 		/** !#en The upper limit of the curve to use when mode is TwoCurves
-		!#zh å½“ mode ä¸º TwoCurves æ—¶ï¼Œä½¿ç”¨çš„æ›²çº¿ä¸Šé™ã€‚ */
+		!#zh å½? mode ä¸? TwoCurves ??¶ï??ä½¿ç?¨ç????²çº¿ä¸??????? */
 		curveMax: AnimationCurve;		
 		/** !#en When mode is Constant, the value of the curve.
-		!#zh å½“ mode ä¸º Constant æ—¶ï¼Œæ›²çº¿çš„å€¼ã€‚ */
+		!#zh å½? mode ä¸? Constant ??¶ï????²çº¿?????¼ã?? */
 		constant: number;		
 		/** !#en The lower limit of the curve to use when mode is TwoConstants
-		!#zh å½“ mode ä¸º TwoConstants æ—¶ï¼Œæ›²çº¿çš„ä¸‹é™ã€‚ */
+		!#zh å½? mode ä¸? TwoConstants ??¶ï????²çº¿???ä¸??????? */
 		constantMin: number;		
 		/** !#en The upper limit of the curve to use when mode is TwoConstants
-		!#zh å½“ mode ä¸º TwoConstants æ—¶ï¼Œæ›²çº¿çš„ä¸Šé™ã€‚ */
+		!#zh å½? mode ä¸? TwoConstants ??¶ï????²çº¿???ä¸??????? */
 		constantMax: number;		
 		/** !#en Coefficients applied to curve interpolation.
-		!#zh åº”ç”¨äºæ›²çº¿æ’å€¼çš„ç³»æ•°ã€‚ */
+		!#zh åº???¨ä????²çº¿?????¼ç??ç³»æ?°ã?? */
 		multiplier: number;	
 	}	
 	/** !#en The force over time module of 3d particle.
-	!#zh 3D ç²’å­çš„åŠ é€Ÿåº¦æ¨¡å— */
+	!#zh 3D ç²?å­??????????åº¦æ¨¡??? */
 	export class ForceOvertimeModule {		
 		/** !#en The enable of ColorOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Coordinate system used in acceleration calculation.
-		!#zh åŠ é€Ÿåº¦è®¡ç®—æ—¶é‡‡ç”¨çš„åæ ‡ç³»ã€‚ */
+		!#zh ??????åº¦è®¡ç®???¶é????¨ç????????ç³»ã?? */
 		space: ParticleSystem3DAssembler.Space;		
 		/** !#en X-axis acceleration component.
-		!#zh X è½´æ–¹å‘ä¸Šçš„åŠ é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh X è½´æ?¹å??ä¸??????????åº¦å???????? */
 		x: CurveRange;		
 		/** !#en Y-axis acceleration component.
-		!#zh Y è½´æ–¹å‘ä¸Šçš„åŠ é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh Y è½´æ?¹å??ä¸??????????åº¦å???????? */
 		y: CurveRange;		
 		/** !#en Z-axis acceleration component.
-		!#zh Z è½´æ–¹å‘ä¸Šçš„åŠ é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh Z è½´æ?¹å??ä¸??????????åº¦å???????? */
 		z: CurveRange;	
 	}	
 	/** !#en The gradient range of color.
-	!#zh é¢œè‰²å€¼çš„æ¸å˜èŒƒå›´ */
+	!#zh é¢???²å?¼ç??æ¸?????????? */
 	export class GradientRange {		
 		/** !#en Gradient type.
-		!#zh æ¸å˜è‰²ç±»å‹ã€‚ */
+		!#zh æ¸??????²ç±»?????? */
 		mode: debug.DebugMode;		
 		/** !#en The color when mode is Color.
-		!#zh å½“ mode ä¸º Color æ—¶çš„é¢œè‰²ã€‚ */
+		!#zh å½? mode ä¸? Color ??¶ç??é¢???²ã?? */
 		color: Color;		
 		/** !#en Lower color limit when mode is TwoColors.
-		!#zh å½“ mode ä¸º TwoColors æ—¶çš„é¢œè‰²ä¸‹é™ã€‚ */
+		!#zh å½? mode ä¸? TwoColors ??¶ç??é¢???²ä???????? */
 		colorMin: Color;		
 		/** !#en Upper color limit when mode is TwoColors.
-		!#zh å½“ mode ä¸º TwoColors æ—¶çš„é¢œè‰²ä¸Šé™ã€‚ */
+		!#zh å½? mode ä¸? TwoColors ??¶ç??é¢???²ä???????? */
 		colorMax: Color;		
 		/** !#en Color gradient when mode is Gradient
-		!#zh å½“ mode ä¸º Gradient æ—¶çš„é¢œè‰²æ¸å˜ã€‚ */
+		!#zh å½? mode ä¸? Gradient ??¶ç??é¢???²æ???????? */
 		gradient: Gradient;		
 		/** !#en Lower color gradient limit when mode is TwoGradients.
-		!#zh å½“ mode ä¸º TwoGradients æ—¶çš„é¢œè‰²æ¸å˜ä¸‹é™ã€‚ */
+		!#zh å½? mode ä¸? TwoGradients ??¶ç??é¢???²æ?????ä¸??????? */
 		gradientMin: Gradient;		
 		/** !#en Upper color gradient limit when mode is TwoGradients.
-		!#zh å½“ mode ä¸º TwoGradients æ—¶çš„é¢œè‰²æ¸å˜ä¸Šé™ã€‚ */
+		!#zh å½? mode ä¸? TwoGradients ??¶ç??é¢???²æ?????ä¸??????? */
 		gradientMax: Gradient;	
 	}	
 	/** !#en The color key of gradient.
-	!#zh color å…³é”®å¸§ */
+	!#zh color ??³é?®å¸§ */
 	export class ColorKey {		
 		/** !#en Color value.
-		!#zh é¢œè‰²å€¼ã€‚ */
+		!#zh é¢???²å?¼ã?? */
 		color: Color;		
 		/** !#en Time value.
-		!#zh æ—¶é—´å€¼ã€‚ */
+		!#zh ??¶é?´å?¼ã?? */
 		time: number;	
 	}	
 	/** !#en The alpha key of gradient.
-	!#zh alpha å…³é”®å¸§ */
+	!#zh alpha ??³é?®å¸§ */
 	export class AlphaKey {		
 		/** !#en Alpha value.
-		!#zh é€æ˜åº¦ã€‚ */
+		!#zh ??????åº¦ã?? */
 		alpha: number;		
 		/** !#en Time.
-		!#zh æ—¶é—´å¸§ã€‚ */
+		!#zh ??¶é?´å¸§??? */
 		time: number;	
 	}	
 	/** !#en The gradient data of color.
-	!#zh é¢œè‰²æ¸å˜æ•°æ® */
+	!#zh é¢???²æ???????°æ?? */
 	export class Gradient {		
 		/** !#en Array of color key.
-		!#zh é¢œè‰²å…³é”®å¸§åˆ—è¡¨ã€‚ */
+		!#zh é¢???²å?³é?®å¸§???è¡¨ã?? */
 		colorKeys: ColorKey[];		
 		/** !#en Array of alpha key.
-		!#zh é€æ˜åº¦å…³é”®å¸§åˆ—è¡¨ã€‚ */
+		!#zh ??????åº¦å?³é?®å¸§???è¡¨ã?? */
 		alphaKeys: AlphaKey[];		
 		/** !#en Blend mode.
-		!#zh æ··åˆæ¨¡å¼ã€‚ */
+		!#zh æ··å??æ¨¡å????? */
 		mode: debug.DebugMode;	
 	}	
 	/** !#en The limit velocity module of 3d particle.
-	!#zh 3D ç²’å­çš„é™é€Ÿæ¨¡å— */
+	!#zh 3D ç²?å­??????????æ¨¡å?? */
 	export class LimitVelocityOvertimeModule {		
 		/** !#en The enable of LimitVelocityOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en The coordinate system used when calculating the lower speed limit.
-		!#zh è®¡ç®—é€Ÿåº¦ä¸‹é™æ—¶é‡‡ç”¨çš„åæ ‡ç³»ã€‚ */
+		!#zh è®¡ç?????åº¦ä???????¶é????¨ç????????ç³»ã?? */
 		space: ParticleSystem3DAssembler.Space;		
 		/** !#en Whether to limit the three axes separately.
-		!#zh æ˜¯å¦ä¸‰ä¸ªè½´åˆ†å¼€é™åˆ¶ã€‚ */
+		!#zh ??¯å?¦ä??ä¸ªè½´???å¼??????¶ã?? */
 		separateAxes: boolean;		
 		/** !#en Lower speed limit
-		!#zh é€Ÿåº¦ä¸‹é™ã€‚ */
+		!#zh ???åº¦ä???????? */
 		limit: CurveRange;		
 		/** !#en Lower speed limit in X direction.
-		!#zh X è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦ä¸‹é™ã€‚ */
+		!#zh X è½´æ?¹å??ä¸???????åº¦ä???????? */
 		limitX: CurveRange;		
 		/** !#en Lower speed limit in Y direction.
-		!#zh Y è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦ä¸‹é™ã€‚ */
+		!#zh Y è½´æ?¹å??ä¸???????åº¦ä???????? */
 		limitY: CurveRange;		
 		/** !#en Lower speed limit in Z direction.
-		!#zh Z è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦ä¸‹é™ã€‚ */
+		!#zh Z è½´æ?¹å??ä¸???????åº¦ä???????? */
 		limitZ: CurveRange;		
 		/** !#en Interpolation of current speed and lower speed limit.
-		!#zh å½“å‰é€Ÿåº¦ä¸é€Ÿåº¦ä¸‹é™çš„æ’å€¼ã€‚ */
+		!#zh å½???????åº¦ä?????åº¦ä?????????????¼ã?? */
 		dampen: number;	
 	}	
 	/** !#en The optimized curve.
-	!#zh ä¼˜åŒ–æ›²çº¿ */
+	!#zh ä¼??????²çº¿ */
 	export class OptimizedCurve {	
 	}	
 	/** !#en The rotation module of 3d particle.
-	!#zh 3D ç²’å­çš„æ—‹è½¬æ¨¡å— */
+	!#zh 3D ç²?å­???????è½¬æ¨¡??? */
 	export class RotationOvertimeModule {		
 		/** !#en The enable of RotationOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Whether to set the rotation of three axes separately (not currently supported)
-		!#zh æ˜¯å¦ä¸‰ä¸ªè½´åˆ†å¼€è®¾å®šæ—‹è½¬ï¼ˆæš‚ä¸æ”¯æŒï¼‰ã€‚ */
+		!#zh ??¯å?¦ä??ä¸ªè½´???å¼?è®¾å?????è½¬ï?????ä¸???¯æ??ï¼???? */
 		separateAxes: boolean;		
 		/** !#en Set rotation around X axis.
-		!#zh ç»• X è½´è®¾å®šæ—‹è½¬ã€‚ */
+		!#zh ç»? X è½´è®¾å®????è½¬ã?? */
 		x: CurveRange;		
 		/** !#en Set rotation around Y axis.
-		!#zh ç»• Y è½´è®¾å®šæ—‹è½¬ã€‚ */
+		!#zh ç»? Y è½´è®¾å®????è½¬ã?? */
 		y: CurveRange;		
 		/** !#en Set rotation around Z axis.
-		!#zh ç»• Z è½´è®¾å®šæ—‹è½¬ã€‚ */
+		!#zh ç»? Z è½´è®¾å®????è½¬ã?? */
 		z: CurveRange;	
 	}	
 	/** !#en The size module of 3d particle.
-	!#zh 3D ç²’å­çš„å¤§å°æ¨¡å— */
+	!#zh 3D ç²?å­????å¤§å??æ¨¡å?? */
 	export class SizeOvertimeModule {		
 		/** !#en The enable of SizeOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Decide whether to control particle size independently on each axis.
-		!#zh å†³å®šæ˜¯å¦åœ¨æ¯ä¸ªè½´ä¸Šç‹¬ç«‹æ§åˆ¶ç²’å­å¤§å°ã€‚ */
+		!#zh ??³å????¯å?¦å?¨æ??ä¸ªè½´ä¸???¬ç????§å?¶ç??å­?å¤§å????? */
 		separateAxes: boolean;		
 		/** !#en Define a curve to determine the size change of particles during their life cycle.
-		!#zh å®šä¹‰ä¸€æ¡æ›²çº¿æ¥å†³å®šç²’å­åœ¨å…¶ç”Ÿå‘½å‘¨æœŸä¸­çš„å¤§å°å˜åŒ–ã€‚ */
+		!#zh å®?ä¹?ä¸???¡æ?²çº¿??¥å?³å??ç²?å­???¨å?¶ç????½å?¨æ??ä¸­ç??å¤§å??????????? */
 		size: CurveRange;		
 		/** !#en Defines a curve to determine the size change of particles in the X-axis direction during their life cycle.
-		!#zh å®šä¹‰ä¸€æ¡æ›²çº¿æ¥å†³å®šç²’å­åœ¨å…¶ç”Ÿå‘½å‘¨æœŸä¸­ X è½´æ–¹å‘ä¸Šçš„å¤§å°å˜åŒ–ã€‚ */
+		!#zh å®?ä¹?ä¸???¡æ?²çº¿??¥å?³å??ç²?å­???¨å?¶ç????½å?¨æ??ä¸? X è½´æ?¹å??ä¸????å¤§å??????????? */
 		x: CurveRange;		
 		/** !#en Defines a curve to determine the size change of particles in the Y-axis direction during their life cycle.
-		!#zh å®šä¹‰ä¸€æ¡æ›²çº¿æ¥å†³å®šç²’å­åœ¨å…¶ç”Ÿå‘½å‘¨æœŸä¸­ Y è½´æ–¹å‘ä¸Šçš„å¤§å°å˜åŒ–ã€‚ */
+		!#zh å®?ä¹?ä¸???¡æ?²çº¿??¥å?³å??ç²?å­???¨å?¶ç????½å?¨æ??ä¸? Y è½´æ?¹å??ä¸????å¤§å??????????? */
 		y: CurveRange;		
 		/** !#en Defines a curve to determine the size change of particles in the Z-axis direction during their life cycle.
-		!#zh å®šä¹‰ä¸€æ¡æ›²çº¿æ¥å†³å®šç²’å­åœ¨å…¶ç”Ÿå‘½å‘¨æœŸä¸­ Z è½´æ–¹å‘ä¸Šçš„å¤§å°å˜åŒ–ã€‚ */
+		!#zh å®?ä¹?ä¸???¡æ?²çº¿??¥å?³å??ç²?å­???¨å?¶ç????½å?¨æ??ä¸? Z è½´æ?¹å??ä¸????å¤§å??????????? */
 		z: CurveRange;	
 	}	
 	/** !#en The texture animation module of 3d particle.
-	!#zh 3D ç²’å­çš„è´´å›¾åŠ¨ç”»æ¨¡å— */
+	!#zh 3D ç²?å­????è´´å?¾å?¨ç?»æ¨¡??? */
 	export class TextureAnimationModule {		
 		/** !#en The enable of TextureAnimationModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Set the type of particle map animation (only supports Grid mode for the time being)
-		!#zh è®¾å®šç²’å­è´´å›¾åŠ¨ç”»çš„ç±»å‹ï¼ˆæš‚åªæ”¯æŒ Grid æ¨¡å¼ã€‚ */
+		!#zh è®¾å??ç²?å­?è´´å?¾å?¨ç?»ç??ç±»å??ï¼??????ªæ?¯æ?? Grid æ¨¡å????? */
 		mode: debug.DebugMode;		
 		/** !#en Animation frames in X direction.
-		!#zh X æ–¹å‘åŠ¨ç”»å¸§æ•°ã€‚ */
+		!#zh X ??¹å????¨ç?»å¸§??°ã?? */
 		numTilesX: number;		
 		/** !#en Animation frames in Y direction.
-		!#zh Y æ–¹å‘åŠ¨ç”»å¸§æ•°ã€‚ */
+		!#zh Y ??¹å????¨ç?»å¸§??°ã?? */
 		numTilesY: number;		
 		/** !#en The way of the animation plays.
-		!#zh åŠ¨ç”»æ’­æ”¾æ–¹å¼ã€‚ */
+		!#zh ??¨ç?»æ?­æ?¾æ?¹å????? */
 		animation: Animation;		
 		/** !#en Randomly select a line from the animated map to generate the animation. <br>
 		This option only takes effect when the animation playback mode is SingleRow.
-		!#zh éšæœºä»åŠ¨ç”»è´´å›¾ä¸­é€‰æ‹©ä¸€è¡Œä»¥ç”ŸæˆåŠ¨ç”»ã€‚<br>
-		æ­¤é€‰é¡¹ä»…åœ¨åŠ¨ç”»æ’­æ”¾æ–¹å¼ä¸º SingleRow æ—¶ç”Ÿæ•ˆã€‚ */
+		!#zh ?????ºä????¨ç?»è´´??¾ä¸­?????©ä??è¡?ä»¥ç???????¨ç?»ã??<br>
+		æ­¤é??é¡¹ä????¨å?¨ç?»æ?­æ?¾æ?¹å??ä¸? SingleRow ??¶ç???????? */
 		randomRow: boolean;		
 		/** !#en Select specific lines from the animation map to generate the animation. <br>
 		This option is only available when the animation playback mode is SingleRow and randomRow is disabled.
-		!#zh ä»åŠ¨ç”»è´´å›¾ä¸­é€‰æ‹©ç‰¹å®šè¡Œä»¥ç”ŸæˆåŠ¨ç”»ã€‚<br>
-		æ­¤é€‰é¡¹ä»…åœ¨åŠ¨ç”»æ’­æ”¾æ–¹å¼ä¸º SingleRow æ—¶ä¸”ç¦ç”¨ randomRow æ—¶å¯ç”¨ã€‚ */
+		!#zh ä»???¨ç?»è´´??¾ä¸­?????©ç?¹å??è¡?ä»¥ç???????¨ç?»ã??<br>
+		æ­¤é??é¡¹ä????¨å?¨ç?»æ?­æ?¾æ?¹å??ä¸? SingleRow ??¶ä??ç¦???? randomRow ??¶å?¯ç?¨ã?? */
 		rowIndex: number;		
 		/** !#en Frame and time curve of animation playback in one cycle.
-		!#zh ä¸€ä¸ªå‘¨æœŸå†…åŠ¨ç”»æ’­æ”¾çš„å¸§ä¸æ—¶é—´å˜åŒ–æ›²çº¿ã€‚ */
+		!#zh ä¸?ä¸ªå?¨æ???????¨ç?»æ?­æ?¾ç??å¸§ä????¶é?´å???????²çº¿??? */
 		frameOverTime: CurveRange;		
 		/** !#en Play from which frames, the time is the life cycle of the entire particle system.
-		!#zh ä»ç¬¬å‡ å¸§å¼€å§‹æ’­æ”¾ï¼Œæ—¶é—´ä¸ºæ•´ä¸ªç²’å­ç³»ç»Ÿçš„ç”Ÿå‘½å‘¨æœŸã€‚ */
+		!#zh ä»?ç¬¬å??å¸§å??å§???­æ?¾ï????¶é?´ä¸º??´ä¸ªç²?å­?ç³»ç??????????½å?¨æ????? */
 		startFrame: CurveRange;		
 		/** !#en Number of playback loops in a life cycle.
-		!#zh ä¸€ä¸ªç”Ÿå‘½å‘¨æœŸå†…æ’­æ”¾å¾ªç¯çš„æ¬¡æ•°ã€‚ */
+		!#zh ä¸?ä¸ªç????½å?¨æ???????­æ?¾å¾ª??¯ç??æ¬¡æ?°ã?? */
 		cycleCount: number;	
 	}	
 	/** !#en The velocity module of 3d particle.
-	!#zh 3D ç²’å­çš„é€Ÿåº¦æ¨¡å— */
+	!#zh 3D ç²?å­???????åº¦æ¨¡??? */
 	export class VelocityOvertimeModule {		
 		/** !#en The enable of VelocityOvertimeModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Coordinate system used in speed calculation.
-		!#zh é€Ÿåº¦è®¡ç®—æ—¶é‡‡ç”¨çš„åæ ‡ç³»ã€‚ */
+		!#zh ???åº¦è®¡ç®???¶é????¨ç????????ç³»ã?? */
 		space: ParticleSystem3DAssembler.Space;		
 		/** !#en Velocity component in X axis direction
-		!#zh X è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh X è½´æ?¹å??ä¸???????åº¦å???????? */
 		x: CurveRange;		
 		/** !#en Velocity component in Y axis direction
-		!#zh Y è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh Y è½´æ?¹å??ä¸???????åº¦å???????? */
 		y: CurveRange;		
 		/** !#en Velocity component in Z axis direction
-		!#zh Z è½´æ–¹å‘ä¸Šçš„é€Ÿåº¦åˆ†é‡ã€‚ */
+		!#zh Z è½´æ?¹å??ä¸???????åº¦å???????? */
 		z: CurveRange;		
 		/** !#en Speed correction factor (only supports CPU particles).
-		!#zh é€Ÿåº¦ä¿®æ­£ç³»æ•°ï¼ˆåªæ”¯æŒ CPU ç²’å­ï¼‰ã€‚ */
+		!#zh ???åº¦ä¿®æ­?ç³»æ?°ï????ªæ?¯æ?? CPU ç²?å­?ï¼???? */
 		speedModifier: CurveRange;	
 	}	
 	/** Rigid body interface */
@@ -16661,83 +16661,83 @@ declare namespace cc {
 	export class IPhysicsWorld {	
 	}	
 	/** !#en The trail module of 3d particle.
-	!#zh 3D ç²’å­æ‹–å°¾æ¨¡å— */
+	!#zh 3D ç²?å­????å°¾æ¨¡??? */
 	export class TrailModule {		
 		/** !#en The enable of trailModule.
-		!#zh æ˜¯å¦å¯ç”¨ */
+		!#zh ??¯å?¦å?¯ç?? */
 		enable: boolean;		
 		/** !#en Sets how particles generate trajectories.
-		!#zh è®¾å®šç²’å­ç”Ÿæˆè½¨è¿¹çš„æ–¹å¼ã€‚ */
+		!#zh è®¾å??ç²?å­???????è½¨è¿¹?????¹å????? */
 		mode: trailModule.TrailMode;		
 		/** !#en Life cycle of trajectory.
-		!#zh è½¨è¿¹å­˜åœ¨çš„ç”Ÿå‘½å‘¨æœŸã€‚ */
+		!#zh è½¨è¿¹å­???¨ç???????½å?¨æ????? */
 		lifeTime: CurveRange;		
 		/** !#en Minimum spacing between each track particle
-		!#zh æ¯ä¸ªè½¨è¿¹ç²’å­ä¹‹é—´çš„æœ€å°é—´è·ã€‚ */
+		!#zh æ¯?ä¸ªè½¨è¿¹ç??å­?ä¹???´ç?????å°???´è????? */
 		minParticleDistance: number;		
 		/** !#en The coordinate system of trajectories.
-		!#zh è½¨è¿¹è®¾å®šæ—¶çš„åæ ‡ç³»ã€‚ */
+		!#zh è½¨è¿¹è®¾å????¶ç????????ç³»ã?? */
 		space: ParticleSystem3DAssembler.Space;		
 		/** !#en Whether the particle itself exists.
-		!#zh ç²’å­æœ¬èº«æ˜¯å¦å­˜åœ¨ã€‚ */
+		!#zh ç²?å­???¬èº«??¯å?¦å????¨ã?? */
 		existWithParticles: boolean;		
 		/** !#en Set the texture fill method
-		!#zh è®¾å®šçº¹ç†å¡«å……æ–¹å¼ã€‚ */
+		!#zh è®¾å??çº¹ç??å¡«å????¹å????? */
 		textureMode: trailModule.TextureMode;		
 		/** !#en Whether to use particle width
-		!#zh æ˜¯å¦ä½¿ç”¨ç²’å­çš„å®½åº¦ã€‚ */
+		!#zh ??¯å?¦ä½¿??¨ç??å­????å®½åº¦??? */
 		widthFromParticle: boolean;		
 		/** !#en Curves that control track length
-		!#zh æ§åˆ¶è½¨è¿¹é•¿åº¦çš„æ›²çº¿ã€‚ */
+		!#zh ??§å?¶è½¨è¿¹é?¿åº¦?????²çº¿??? */
 		widthRatio: CurveRange;		
 		/** !#en Whether to use particle color
-		!#zh æ˜¯å¦ä½¿ç”¨ç²’å­çš„é¢œè‰²ã€‚ */
+		!#zh ??¯å?¦ä½¿??¨ç??å­????é¢???²ã?? */
 		colorFromParticle: boolean;		
 		/** !#en The color of trajectories.
-		!#zh è½¨è¿¹çš„é¢œè‰²ã€‚ */
+		!#zh è½¨è¿¹???é¢???²ã?? */
 		colorOverTrail: GradientRange;		
 		/** !#en Trajectories color over time.
-		!#zh è½¨è¿¹éšæ—¶é—´å˜åŒ–çš„é¢œè‰²ã€‚ */
+		!#zh è½¨è¿¹?????¶é?´å????????é¢???²ã?? */
 		colorOvertime: GradientRange;	
 	}	
 	/** !#en Manage Dynamic Atlas Manager. Dynamic Atlas Manager is used for merging textures at runtime, see [Dynamic Atlas](https://docs.cocos.com/creator/manual/en/advanced-topics/dynamic-atlas.html) for details.
-	!#zh ç®¡ç†åŠ¨æ€å›¾é›†ã€‚åŠ¨æ€å›¾é›†ç”¨äºåœ¨è¿è¡Œæ—¶å¯¹è´´å›¾è¿›è¡Œåˆå¹¶ï¼Œè¯¦è§ [åŠ¨æ€åˆå›¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)ã€‚ */
+	!#zh ç®¡ç????¨æ????¾é???????¨æ????¾é????¨ä????¨è??è¡???¶å¯¹è´´å?¾è??è¡????å¹¶ï??è¯¦è?? [??¨æ???????¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)??? */
 	export class DynamicAtlasManager {		
 		/** !#en Enable or disable the dynamic atlas, see [Dynamic Atlas](https://docs.cocos.com/creator/manual/en/advanced-topics/dynamic-atlas.html) for details.
-		!#zh å¼€å¯æˆ–è€…å…³é—­åŠ¨æ€å›¾é›†ï¼Œè¯¦è§ [åŠ¨æ€åˆå›¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)ã€‚ */
+		!#zh å¼???¯æ???????³é?­å?¨æ????¾é??ï¼?è¯¦è?? [??¨æ???????¾](https://docs.cocos.com/creator/manual/zh/advanced-topics/dynamic-atlas.html)??? */
 		enabled: boolean;		
 		/** !#en The maximum number of atlas that can be created.
-		!#zh å¯ä»¥åˆ›å»ºçš„æœ€å¤§å›¾é›†æ•°é‡ã€‚ */
+		!#zh ??¯ä»¥???å»ºç?????å¤§å?¾é????°é????? */
 		maxAtlasCount: number;		
 		/** !#en Get the current created atlas count.
-		!#zh è·å–å½“å‰å·²ç»åˆ›å»ºçš„å›¾é›†æ•°é‡ã€‚ */
+		!#zh ??·å??å½????å·²ç?????å»ºç????¾é????°é????? */
 		atlasCount: number;		
 		/** !#en Is enable textureBleeding.
-		!#zh æ˜¯å¦å¼€å¯ textureBleeding */
+		!#zh ??¯å?¦å????? textureBleeding */
 		textureBleeding: boolean;		
 		/** !#en The size of the atlas that was created
-		!#zh åˆ›å»ºçš„å›¾é›†çš„å®½é«˜ */
+		!#zh ???å»ºç????¾é?????å®½é?? */
 		textureSize: number;		
 		/** !#en The maximum size of the picture that can be added to the atlas.
-		!#zh å¯ä»¥æ·»åŠ è¿›å›¾é›†çš„å›¾ç‰‡çš„æœ€å¤§å°ºå¯¸ã€‚ */
+		!#zh ??¯ä»¥æ·»å??è¿???¾é???????¾ç????????å¤§å°ºå¯¸ã?? */
 		maxFrameSize: number;		
 		/** !#en The minimum size of the picture that can be added to the atlas.
-		!#zh å¯ä»¥æ·»åŠ è¿›å›¾é›†çš„å›¾ç‰‡çš„æœ€å°å°ºå¯¸ã€‚ */
+		!#zh ??¯ä»¥æ·»å??è¿???¾é???????¾ç????????å°?å°ºå¯¸??? */
 		minFrameSize: number;		
 		/**
 		!#en Append a sprite frame into the dynamic atlas.
-		!#zh æ·»åŠ ç¢å›¾è¿›å…¥åŠ¨æ€å›¾é›†ã€‚
+		!#zh æ·»å??ç¢???¾è????¥å?¨æ????¾é?????
 		@param spriteFrame spriteFrame 
 		*/
 		insertSpriteFrame(spriteFrame: SpriteFrame): void;		
 		/**
 		!#en Resets all dynamic atlas, and the existing ones will be destroyed.
-		!#zh é‡ç½®æ‰€æœ‰åŠ¨æ€å›¾é›†ï¼Œå·²æœ‰çš„åŠ¨æ€å›¾é›†ä¼šè¢«é”€æ¯ã€‚ 
+		!#zh ???ç½®æ???????¨æ????¾é??ï¼?å·²æ???????¨æ????¾é??ä¼?è¢«é??æ¯???? 
 		*/
 		reset(): void;		
 		/**
 		!#en Displays all the dynamic atlas in the current scene, which you can use to view the current atlas state.
-		!#zh åœ¨å½“å‰åœºæ™¯ä¸­æ˜¾ç¤ºæ‰€æœ‰åŠ¨æ€å›¾é›†ï¼Œå¯ä»¥ç”¨æ¥æŸ¥çœ‹å½“å‰çš„åˆå›¾çŠ¶æ€ã€‚
+		!#zh ??¨å???????ºæ?¯ä¸­??¾ç¤º????????¨æ????¾é??ï¼???¯ä»¥??¨æ?¥æ?¥ç??å½????????????¾ç?¶æ?????
 		@param show show 
 		*/
 		showDebug(show: boolean): Node;	
@@ -16745,120 +16745,120 @@ declare namespace cc {
 	/** !#en
 	Physics material.
 	!#zh
-	ç‰©ç†æè´¨ã€‚ */
+	??©ç?????è´¨ã?? */
 	export class PhysicsMaterial extends Asset {		
 		/** !#en
 		Friction for this material.
 		!#zh
-		ç‰©ç†æè´¨çš„æ‘©æ“¦åŠ›ã€‚ */
+		??©ç?????è´¨ç????©æ?¦å????? */
 		friction: number;		
 		/** !#en
 		Restitution for this material.
 		!#zh
-		ç‰©ç†æè´¨çš„å¼¹åŠ›ã€‚ */
+		??©ç?????è´¨ç??å¼¹å????? */
 		restitution: number;	
 	}	
 	/** !#en
 	Each frame applies a constant force to a rigid body, depending on the RigidBody3D
 	!#zh
-	åœ¨æ¯å¸§å¯¹ä¸€ä¸ªåˆšä½“æ–½åŠ æŒç»­çš„åŠ›ï¼Œä¾èµ– RigidBody3D ç»„ä»¶ */
+	??¨æ??å¸§å¯¹ä¸?ä¸ªå??ä½???½å?????ç»­ç?????ï¼?ä¾?èµ? RigidBody3D ç»?ä»? */
 	export class ConstantForce extends Component {		
 		/** !#en
 		Set the force used in the world coordinate system, use `this.force = otherVec3`.
 		!#zh
-		è®¾ç½®ä¸–ç•Œåæ ‡ç³»ä¸­ä½¿ç”¨çš„åŠ›ï¼Œè®¾ç½®æ—¶è¯·ç”¨ `this.force = otherVec3` çš„æ–¹å¼ã€‚ */
+		è®¾ç½®ä¸??????????ç³»ä¸­ä½¿ç?¨ç?????ï¼?è®¾ç½®??¶è¯·??? `this.force = otherVec3` ?????¹å????? */
 		force: Vec3;		
 		/** !#en
 		Set the force used in the local coordinate system, using `this.localforce = otherVec3`.
 		!#zh
-		è·å–å’Œè®¾ç½®æœ¬åœ°åæ ‡ç³»ä¸­ä½¿ç”¨çš„åŠ›ï¼Œè®¾ç½®æ—¶è¯·ç”¨ `this.localForce = otherVec3` çš„æ–¹å¼ã€‚ */
+		??·å?????è®¾ç½®??¬å?°å?????ç³»ä¸­ä½¿ç?¨ç?????ï¼?è®¾ç½®??¶è¯·??? `this.localForce = otherVec3` ?????¹å????? */
 		localForce: Vec3;		
 		/** !#en
 		Torque applied to the world orientation
 		!#zh
-		å¯¹ä¸–ç•Œæœå‘æ–½åŠ çš„æ‰­çŸ© */
+		å¯¹ä?????????????½å???????­ç?? */
 		torque: Vec3;		
 		/** !#en
 		Torque applied to local orientation, using `this.localtorque = otherVec3`.
 		!#zh
-		å¯¹æœ¬åœ°æœå‘æ–½åŠ çš„æ‰­çŸ©ï¼Œè®¾ç½®æ—¶è¯·ç”¨ `this.localTorque = otherVec3` çš„æ–¹å¼ã€‚ */
+		å¯¹æ?¬å?°æ???????½å???????­ç?©ï??è®¾ç½®??¶è¯·??? `this.localTorque = otherVec3` ?????¹å????? */
 		localTorque: Vec3;	
 	}	
 	/** !#en
 	RigidBody is the basic object that make up the physical world, and it can make a node physically affected and react.
 	!#zh
-	åˆšä½“æ˜¯ç»„æˆç‰©ç†ä¸–ç•Œçš„åŸºæœ¬å¯¹è±¡ï¼Œå¯ä»¥è®©ä¸€ä¸ªèŠ‚ç‚¹å—åˆ°ç‰©ç†å½±å“å¹¶äº§ç”Ÿååº”ã€‚è¯¥ç»„ä»¶åœ¨ä½¿ç”¨ Builtin ç‰©ç†å¼•æ“æ—¶æ— æ•ˆã€‚ */
+	???ä½???¯ç???????©ç??ä¸?????????ºæ?¬å¯¹è±¡ï????¯ä»¥è®©ä??ä¸ªè????¹å????°ç?©ç??å½±å??å¹¶äº§??????åº????è¯¥ç??ä»¶å?¨ä½¿??? Builtin ??©ç??å¼??????¶æ???????? */
 	export class RigidBody3D extends Component {		
 		/** !#en
 		Whether sleep is allowed.
 		!#zh
-		æ˜¯å¦å…è®¸ä¼‘çœ ã€‚ */
+		??¯å?¦å??è®¸ä???????? */
 		allowSleep: boolean;		
 		/** !#en
 		The mass of the rigidbody.
 		!#zh
-		åˆšä½“çš„è´¨é‡ã€‚ */
+		???ä½????è´¨é????? */
 		mass: number;		
 		/** !#en
 		Used to reduce the linear rate of rigidbody. The larger the value, the slower the rigidbody moves.
 		!#zh
-		çº¿æ€§é˜»å°¼ï¼Œç”¨äºå‡å°åˆšä½“çš„çº¿æ€§é€Ÿç‡ï¼Œå€¼è¶Šå¤§ç‰©ä½“ç§»åŠ¨è¶Šæ…¢ã€‚ */
+		çº¿æ?§é?»å°¼ï¼???¨ä?????å°????ä½????çº¿æ?§é?????ï¼???¼è??å¤§ç?©ä??ç§»å?¨è????¢ã?? */
 		linearDamping: number;		
 		/** !#en
 		Used to reduce the rotation rate of rigidbody. The larger the value, the slower the rigidbody rotates.
 		!#zh
-		è§’é˜»å°¼ï¼Œç”¨äºå‡å°åˆšä½“çš„æ—‹è½¬é€Ÿç‡ï¼Œå€¼è¶Šå¤§åˆšä½“æ—‹è½¬è¶Šæ…¢ã€‚ */
+		è§???»å°¼ï¼???¨ä?????å°????ä½???????è½¬é?????ï¼???¼è??å¤§å??ä½????è½¬è????¢ã?? */
 		angularDamping: number;		
 		/** !#en
 		If enabled, the developer controls the displacement and rotation of the rigidbody, not the physics engine.
 		!#zh
-		æ˜¯å¦ç”±å¼€å‘è€…æ¥æ§åˆ¶åˆšä½“çš„ä½ç§»å’Œæ—‹è½¬ï¼Œè€Œä¸æ˜¯å—ç‰©ç†å¼•æ“çš„å½±å“ã€‚ */
+		??¯å?¦ç?±å??????????¥æ?§å?¶å??ä½????ä½?ç§»å?????è½¬ï?????ä¸???¯å????©ç??å¼???????å½±å????? */
 		isKinematic: boolean;		
 		/** !#en
 		If enabled, the rigidbody is affected by gravity.
 		!#zh
-		å¦‚æœå¼€å¯ï¼Œåˆšä½“ä¼šå—åˆ°é‡åŠ›å½±å“ã€‚ */
+		å¦????å¼???¯ï?????ä½?ä¼??????°é?????å½±å????? */
 		useGravity: boolean;		
 		/** !#en
 		If enabled, the rigidbody will be fixed without rotation during a collision.
 		!#zh
-		å¦‚æœå¼€å¯ï¼Œå‘ç”Ÿç¢°æ’æ—¶ä¼šå›ºå®šåˆšä½“ä¸äº§ç”Ÿæ—‹è½¬ã€‚ */
+		å¦????å¼???¯ï????????ç¢°æ????¶ä????ºå?????ä½?ä¸?äº§ç?????è½¬ã?? */
 		fixedRotation: boolean;		
 		/** !#en
 		It can affect the linear velocity change of the rigidbody in each axis. The larger the value, the faster the rigidbody moves.
 		!#zh
-		çº¿æ€§å› å­ï¼Œå¯å½±å“åˆšä½“åœ¨æ¯ä¸ªè½´å‘çš„çº¿æ€§é€Ÿåº¦å˜åŒ–ï¼Œå€¼è¶Šå¤§åˆšä½“ç§»åŠ¨è¶Šå¿«ã€‚ */
+		çº¿æ?§å??å­?ï¼???¯å½±??????ä½???¨æ??ä¸ªè½´??????çº¿æ?§é??åº¦å?????ï¼???¼è??å¤§å??ä½?ç§»å?¨è??å¿«ã?? */
 		linearFactor: Vec3;		
 		/** !#en
 		It can affect the rotation speed change of the rigidbody in each axis. The larger the value, the faster the rigidbody rotates.
 		!#zh
-		æ—‹è½¬å› å­ï¼Œå¯å½±å“åˆšä½“åœ¨æ¯ä¸ªè½´å‘çš„æ—‹è½¬é€Ÿåº¦å˜åŒ–ï¼Œå€¼è¶Šå¤§åˆšä½“æ—‹è½¬è¶Šå¿«ã€‚ */
+		???è½¬å??å­?ï¼???¯å½±??????ä½???¨æ??ä¸ªè½´?????????è½¬é??åº¦å?????ï¼???¼è??å¤§å??ä½????è½¬è??å¿«ã?? */
 		angularFactor: Vec3;		
 		/** !#en
 		The rigidbody is awake.
 		!#zh
-		åˆšä½“æ˜¯å¦ä¸ºå”¤é†’çš„çŠ¶æ€ã€‚ */
+		???ä½???¯å?¦ä¸º??¤é???????¶æ????? */
 		isAwake: boolean;		
 		/** !#en
 		The rigidbody can enter hibernation.
 		!#zh
-		åˆšä½“æ˜¯å¦ä¸ºå¯è¿›å…¥ä¼‘çœ çš„çŠ¶æ€ã€‚ */
+		???ä½???¯å?¦ä¸º??¯è????¥ä??????????¶æ????? */
 		isSleepy: boolean;		
 		/** !#en
 		The rigidbody is sleeping.
 		!#zh
-		åˆšä½“æ˜¯å¦ä¸ºæ­£åœ¨ä¼‘çœ çš„çŠ¶æ€ã€‚ */
+		???ä½???¯å?¦ä¸ºæ­???¨ä??????????¶æ????? */
 		isSleeping: boolean;		
 		/** !#en
 		Get the rigidbody object inside the physics engine.
 		!#zh
-		è·å¾—ç‰©ç†å¼•æ“å†…éƒ¨åˆšä½“å¯¹è±¡ã€‚ */
+		??·å????©ç??å¼?????????¨å??ä½?å¯¹è±¡??? */
 		rigidBody: IRigidBody;		
 		/**
 		!#en
 		A force is applied to a rigid body at a point in world space.
 		!#zh
-		åœ¨ä¸–ç•Œç©ºé—´ä¸­çš„æŸç‚¹ä¸Šå¯¹åˆšä½“æ–½åŠ ä¸€ä¸ªä½œç”¨åŠ›ã€‚
+		??¨ä?????ç©ºé?´ä¸­????????¹ä??å¯¹å??ä½???½å??ä¸?ä¸ªä????¨å?????
 		@param force force
 		@param relativePoint The point of action, relative to the center of the rigid body. 
 		*/
@@ -16867,7 +16867,7 @@ declare namespace cc {
 		!#en
 		Apply a force on the rigid body at a point in local space.
 		!#zh
-		åœ¨æœ¬åœ°ç©ºé—´ä¸­çš„æŸç‚¹ä¸Šå¯¹åˆšä½“æ–½åŠ ä¸€ä¸ªä½œç”¨åŠ›ã€‚
+		??¨æ?¬å?°ç©º??´ä¸­????????¹ä??å¯¹å??ä½???½å??ä¸?ä¸ªä????¨å?????
 		@param force force
 		@param localPoint Point of application 
 		*/
@@ -16876,7 +16876,7 @@ declare namespace cc {
 		!#en
 		Apply an impulse to a rigid body at a point in world space.
 		!#zh
-		åœ¨ä¸–ç•Œç©ºé—´çš„æŸç‚¹ä¸Šå¯¹åˆšä½“æ–½åŠ ä¸€ä¸ªå†²é‡ã€‚
+		??¨ä?????ç©ºé?´ç???????¹ä??å¯¹å??ä½???½å??ä¸?ä¸ªå?²é?????
 		@param impulse impulse
 		@param relativePoint The point of action, relative to the center of the rigid body. 
 		*/
@@ -16885,7 +16885,7 @@ declare namespace cc {
 		!#en
 		Apply an impulse to the rigid body at a point in local space.
 		!#zh
-		åœ¨æœ¬åœ°ç©ºé—´çš„æŸç‚¹ä¸Šå¯¹åˆšä½“æ–½åŠ ä¸€ä¸ªå†²é‡ã€‚
+		??¨æ?¬å?°ç©º??´ç???????¹ä??å¯¹å??ä½???½å??ä¸?ä¸ªå?²é?????
 		@param impulse impulse
 		@param localPoint Point of application 
 		*/
@@ -16894,7 +16894,7 @@ declare namespace cc {
 		!#en
 		Apply a torque to the rigid body.
 		!#zh
-		å¯¹åˆšä½“æ–½åŠ æ‰­è½¬åŠ›ã€‚
+		å¯¹å??ä½???½å????­è½¬??????
 		@param torque torque 
 		*/
 		applyTorque(torque: Vec3): void;		
@@ -16902,7 +16902,7 @@ declare namespace cc {
 		!#en
 		Apply a local torque to the rigid body.
 		!#zh
-		å¯¹åˆšä½“æ–½åŠ æœ¬åœ°æ‰­è½¬åŠ›ã€‚
+		å¯¹å??ä½???½å????¬å?°æ?­è½¬??????
 		@param torque torque 
 		*/
 		applyLocalTorque(torque: Vec3): void;		
@@ -16910,21 +16910,21 @@ declare namespace cc {
 		!#en
 		Awaken the rigid body.
 		!#zh
-		å”¤é†’åˆšä½“ã€‚ 
+		??¤é?????ä½???? 
 		*/
 		wakeUp(): void;		
 		/**
 		!#en
 		Dormant rigid body.
 		!#zh
-		ä¼‘çœ åˆšä½“ã€‚ 
+		ä¼???????ä½???? 
 		*/
 		sleep(): void;		
 		/**
 		!#en
 		Get linear velocity.
 		!#zh
-		è·å–çº¿æ€§é€Ÿåº¦ã€‚
+		??·å??çº¿æ?§é??åº¦ã??
 		@param out out 
 		*/
 		getLinearVelocity(out: Vec3): void;		
@@ -16932,7 +16932,7 @@ declare namespace cc {
 		!#en
 		Set linear speed.
 		!#zh
-		è®¾ç½®çº¿æ€§é€Ÿåº¦ã€‚
+		è®¾ç½®çº¿æ?§é??åº¦ã??
 		@param value value 
 		*/
 		setLinearVelocity(value: Vec3): void;		
@@ -16940,7 +16940,7 @@ declare namespace cc {
 		!#en
 		Gets the rotation speed.
 		!#zh
-		è·å–æ—‹è½¬é€Ÿåº¦ã€‚
+		??·å?????è½¬é??åº¦ã??
 		@param out out 
 		*/
 		getAngularVelocity(out: Vec3): void;		
@@ -16948,7 +16948,7 @@ declare namespace cc {
 		!#en
 		Set rotation speed.
 		!#zh
-		è®¾ç½®æ—‹è½¬é€Ÿåº¦ã€‚
+		è®¾ç½®???è½¬é??åº¦ã??
 		@param value value 
 		*/
 		setAngularVelocity(value: Vec3): void;	
@@ -16956,47 +16956,47 @@ declare namespace cc {
 	/** !#en
 	Physics box collider
 	!#zh
-	ç‰©ç†ç›’å­ç¢°æ’å™¨ */
+	??©ç?????å­?ç¢°æ????? */
 	export class BoxCollider3D extends Collider3D {		
 		/** !#en
 		Get or set the size of the box, in local space.
 		!#zh
-		è·å–æˆ–è®¾ç½®ç›’çš„å¤§å°ã€‚ */
+		??·å?????è®¾ç½®??????å¤§å????? */
 		size: Vec3;		
 		boxShape: IBoxShape;	
 	}	
 	/** !#en
 	The base class of the collider.
 	!#zh
-	ç¢°æ’å™¨çš„åŸºç±»ã€‚ */
+	ç¢°æ????¨ç????ºç±»??? */
 	export class Collider3D extends Component implements EventTarget {		
 		sharedMaterial: PhysicsMaterial;		
 		/** !#en
 		get or set the collider is trigger, this will be always trigger if using builtin.
 		!#zh
-		è·å–æˆ–è®¾ç½®ç¢°æ’å™¨æ˜¯å¦ä¸ºè§¦å‘å™¨ã€‚ */
+		??·å?????è®¾ç½®ç¢°æ????¨æ?¯å?¦ä¸ºè§¦å????¨ã?? */
 		isTrigger: boolean;		
 		/** !#en
 		get or set the center of the collider, in local space.
 		!#zh
-		è·å–æˆ–è®¾ç½®ç¢°æ’å™¨çš„ä¸­å¿ƒç‚¹ã€‚ */
+		??·å?????è®¾ç½®ç¢°æ????¨ç??ä¸­å????¹ã?? */
 		center: Vec3;		
 		/** !#en
 		get the collider attached rigidbody, this may be null.
 		!#zh
-		è·å–ç¢°æ’å™¨æ‰€ç»‘å®šçš„åˆšä½“ç»„ä»¶ï¼Œå¯èƒ½ä¸º nullã€‚ */
+		??·å??ç¢°æ????¨æ??ç»?å®???????ä½?ç»?ä»¶ï????¯è?½ä¸º null??? */
 		attachedRigidbody: RigidBody3D|void;		
 		/** !#en
 		get collider shape.
 		!#zh
-		è·å–ç¢°æ’å™¨å½¢çŠ¶ã€‚ */
+		??·å??ç¢°æ????¨å½¢??¶ã?? */
 		shape: IBaseShape;		
 		/**
 		!#en
 		Register an callback of a specific event type on the EventTarget.
 		This type of event should be triggered via `emit`.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒã€‚è¿™ç§ç±»å‹çš„äº‹ä»¶åº”è¯¥è¢« `emit` è§¦å‘ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°????è¿?ç§?ç±»å?????äº?ä»¶å??è¯¥è¢« `emit` è§¦å?????
 		@param type The type of collider event can be `trigger-enter`, `trigger-stay`, `trigger-exit` or `collision-enter`, `collision-stay`, `collision-exit`.
 		@param callback The callback that will be invoked when the event is dispatched.
 		The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -17015,7 +17015,7 @@ declare namespace cc {
 		Removes the listeners previously registered with the same type, callback, target and or useCapture,
 		if only type is passed as parameter, all listeners registered with that type will be removed.
 		!#zh
-		åˆ é™¤ä¹‹å‰ç”¨åŒç±»å‹ï¼Œå›è°ƒï¼Œç›®æ ‡æˆ– useCapture æ³¨å†Œçš„äº‹ä»¶ç›‘å¬å™¨ï¼Œå¦‚æœåªä¼ é€’ typeï¼Œå°†ä¼šåˆ é™¤ type ç±»å‹çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		?????¤ä???????¨å??ç±»å??ï¼????è°?ï¼???®æ????? useCapture æ³¨å?????äº?ä»¶ç????¬å?¨ï??å¦??????ªä????? typeï¼?å°?ä¼??????? type ç±»å???????????äº?ä»¶ç????¬å?¨ã??
 		@param type The type of collider event can be `trigger-enter`, `trigger-stay`, `trigger-exit` or `collision-enter`, `collision-stay`, `collision-exit`.
 		@param callback The callback to remove.
 		@param target The target (this object) to invoke the callback, if it's not given, only callback without target will be removed.
@@ -17038,7 +17038,7 @@ declare namespace cc {
 		Register an callback of a specific event type on the EventTarget,
 		the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ³¨å†Œäº‹ä»¶ç›®æ ‡çš„ç‰¹å®šäº‹ä»¶ç±»å‹å›è°ƒï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ³¨å??äº?ä»¶ç?®æ???????¹å??äº?ä»¶ç±»??????è°?ï¼????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type The type of collider event can be `trigger-enter`, `trigger-stay`, `trigger-exit` or `collision-enter`, `collision-stay`, `collision-exit`.
 		@param callback The callback that will be invoked when the event is dispatched.
 		The callback is ignored if it is a duplicate (the callbacks are unique).
@@ -17054,7 +17054,7 @@ declare namespace cc {
 		once(type: string, callback: (event: ITriggerEvent|ICollisionEvent) => void, target?: any): void;		
 		/**
 		!#en Checks whether the EventTarget object has any callback registered for a specific type of event.
-		!#zh æ£€æŸ¥äº‹ä»¶ç›®æ ‡å¯¹è±¡æ˜¯å¦æœ‰ä¸ºç‰¹å®šç±»å‹çš„äº‹ä»¶æ³¨å†Œçš„å›è°ƒã€‚
+		!#zh æ£???¥ä??ä»¶ç?®æ??å¯¹è±¡??¯å?¦æ??ä¸ºç?¹å??ç±»å?????äº?ä»¶æ³¨?????????è°????
 		@param type The type of event. 
 		*/
 		hasEventListener(type: string): boolean;		
@@ -17063,9 +17063,9 @@ declare namespace cc {
 		This is not for removing all listeners in the current event target,
 		and this is not for removing all listeners the target parameter have registered.
 		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh åœ¨å½“å‰ EventTarget ä¸Šåˆ é™¤æŒ‡å®šç›®æ ‡ï¼ˆtarget å‚æ•°ï¼‰æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°æ— æ³•åˆ é™¤å½“å‰ EventTarget çš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ï¼Œä¹Ÿæ— æ³•åˆ é™¤ target å‚æ•°æ‰€æ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
-		è¿™ä¸ªå‡½æ•°åªèƒ½åˆ é™¤ target å‚æ•°åœ¨å½“å‰ EventTarget ä¸Šæ³¨å†Œçš„æ‰€æœ‰äº‹ä»¶ç›‘å¬å™¨ã€‚
+		!#zh ??¨å????? EventTarget ä¸??????¤æ??å®???®æ??ï¼?target ?????°ï??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°æ??æ³??????¤å????? EventTarget ?????????äº?ä»¶ç????¬å?¨ï??ä¹????æ³??????? target ?????°æ??æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
+		è¿?ä¸ªå?½æ?°å?ªè?½å????? target ?????°å?¨å????? EventTarget ä¸?æ³¨å???????????äº?ä»¶ç????¬å?¨ã??
 		@param target The target to be searched for all related listeners 
 		*/
 		targetOff(target: any): void;		
@@ -17073,7 +17073,7 @@ declare namespace cc {
 		!#en
 		Send an event with the event object.
 		!#zh
-		é€šè¿‡äº‹ä»¶å¯¹è±¡æ´¾å‘äº‹ä»¶
+		???è¿?äº?ä»¶å¯¹è±¡æ´¾???äº?ä»?
 		@param event event 
 		*/
 		dispatchEvent(event: Event): void;		
@@ -17081,19 +17081,19 @@ declare namespace cc {
 		!#en
 		Destroy all callbackInfos.
 		!#zh
-		é”€æ¯è®°å½•çš„äº‹ä»¶ 
+		???æ¯?è®°å?????äº?ä»? 
 		*/
 		clear(): void;	
 	}	
 	/** !#en
 	Physics sphere collider
 	!#zh
-	ç‰©ç†çƒç¢°æ’å™¨ */
+	??©ç?????ç¢°æ????? */
 	export class SphereCollider3D extends Collider3D {		
 		/** !#en
 		Get or set the radius of the sphere.
 		!#zh
-		è·å–æˆ–è®¾ç½®çƒçš„åŠå¾„ã€‚ */
+		??·å?????è®¾ç½®?????????å¾???? */
 		radius: number;		
 		sphereShape: ISphereShape;	
 	}	
@@ -17103,7 +17103,7 @@ declare namespace cc {
 	
 	export namespace audioEngine {		
 		/** !#en Audio state.
-		!#zh å£°éŸ³æ’­æ”¾çŠ¶æ€ */
+		!#zh å£°é?³æ?­æ?¾ç?¶æ?? */
 		export enum AudioState {			
 			ERROR = 0,
 			INITIALZING = 0,
@@ -17119,7 +17119,7 @@ declare namespace cc {
 	
 	export namespace debug {		
 		/** !#en Enum for debug modes.
-		!#zh è°ƒè¯•æ¨¡å¼ */
+		!#zh è°?è¯?æ¨¡å?? */
 		export enum DebugMode {			
 			NONE = 0,
 			INFO = 0,
@@ -17137,7 +17137,7 @@ declare namespace cc {
 	
 	export namespace Node {		
 		/** !#en Node's local dirty properties flag
-		!#zh Node çš„æœ¬åœ°å±æ€§ dirty çŠ¶æ€ä½ */
+		!#zh Node ?????¬å?°å????? dirty ??¶æ??ä½? */
 		export enum _LocalDirtyFlag {			
 			POSITION = 0,
 			SCALE = 0,
@@ -17165,88 +17165,88 @@ declare namespace cc {
 	
 	export namespace Node {		
 		/** !#en The event type supported by Node
-		!#zh Node æ”¯æŒçš„äº‹ä»¶ç±»å‹ */
+		!#zh Node ??¯æ?????äº?ä»¶ç±»??? */
 		export class EventType {			
 			/** !#en The event type for touch start event, you can use its value directly: 'touchstart'
-			!#zh å½“æ‰‹æŒ‡è§¦æ‘¸åˆ°å±å¹•æ—¶ã€‚ */
+			!#zh å½???????è§¦æ?¸å?°å??å¹???¶ã?? */
 			static TOUCH_START: string;			
 			/** !#en The event type for touch move event, you can use its value directly: 'touchmove'
-			!#zh å½“æ‰‹æŒ‡åœ¨å±å¹•ä¸Šç§»åŠ¨æ—¶ã€‚ */
+			!#zh å½?????????¨å??å¹?ä¸?ç§»å?¨æ?¶ã?? */
 			static TOUCH_MOVE: string;			
 			/** !#en The event type for touch end event, you can use its value directly: 'touchend'
-			!#zh å½“æ‰‹æŒ‡åœ¨ç›®æ ‡èŠ‚ç‚¹åŒºåŸŸå†…ç¦»å¼€å±å¹•æ—¶ã€‚ */
+			!#zh å½?????????¨ç?®æ???????¹å?ºå?????ç¦»å??å±?å¹???¶ã?? */
 			static TOUCH_END: string;			
 			/** !#en The event type for touch end event, you can use its value directly: 'touchcancel'
-			!#zh å½“æ‰‹æŒ‡åœ¨ç›®æ ‡èŠ‚ç‚¹åŒºåŸŸå¤–ç¦»å¼€å±å¹•æ—¶ã€‚ */
+			!#zh å½?????????¨ç?®æ???????¹å?ºå??å¤?ç¦»å??å±?å¹???¶ã?? */
 			static TOUCH_CANCEL: string;			
 			/** !#en The event type for mouse down events, you can use its value directly: 'mousedown'
-			!#zh å½“é¼ æ ‡æŒ‰ä¸‹æ—¶è§¦å‘ä¸€æ¬¡ã€‚ */
+			!#zh å½?é¼???????ä¸???¶è§¦???ä¸?æ¬¡ã?? */
 			static MOUSE_DOWN: string;			
 			/** !#en The event type for mouse move events, you can use its value directly: 'mousemove'
-			!#zh å½“é¼ æ ‡åœ¨ç›®æ ‡èŠ‚ç‚¹åœ¨ç›®æ ‡èŠ‚ç‚¹åŒºåŸŸä¸­ç§»åŠ¨æ—¶ï¼Œä¸è®ºæ˜¯å¦æŒ‰ä¸‹ã€‚ */
+			!#zh å½?é¼??????¨ç?®æ???????¹å?¨ç?®æ???????¹å?ºå??ä¸­ç§»??¨æ?¶ï??ä¸?è®ºæ?¯å?¦æ??ä¸???? */
 			static MOUSE_MOVE: string;			
 			/** !#en The event type for mouse enter target events, you can use its value directly: 'mouseenter'
-			!#zh å½“é¼ æ ‡ç§»å…¥ç›®æ ‡èŠ‚ç‚¹åŒºåŸŸæ—¶ï¼Œä¸è®ºæ˜¯å¦æŒ‰ä¸‹ã€‚ */
+			!#zh å½?é¼????ç§»å?¥ç?®æ???????¹å?ºå????¶ï??ä¸?è®ºæ?¯å?¦æ??ä¸???? */
 			static MOUSE_ENTER: string;			
 			/** !#en The event type for mouse leave target events, you can use its value directly: 'mouseleave'
-			!#zh å½“é¼ æ ‡ç§»å‡ºç›®æ ‡èŠ‚ç‚¹åŒºåŸŸæ—¶ï¼Œä¸è®ºæ˜¯å¦æŒ‰ä¸‹ã€‚ */
+			!#zh å½?é¼????ç§»å?ºç?®æ???????¹å?ºå????¶ï??ä¸?è®ºæ?¯å?¦æ??ä¸???? */
 			static MOUSE_LEAVE: string;			
 			/** !#en The event type for mouse up events, you can use its value directly: 'mouseup'
-			!#zh å½“é¼ æ ‡ä»æŒ‰ä¸‹çŠ¶æ€æ¾å¼€æ—¶è§¦å‘ä¸€æ¬¡ã€‚ */
+			!#zh å½?é¼????ä»????ä¸???¶æ????¾å????¶è§¦???ä¸?æ¬¡ã?? */
 			static MOUSE_UP: string;			
 			/** !#en The event type for mouse wheel events, you can use its value directly: 'mousewheel'
-			!#zh å½“é¼ æ ‡æ»šè½®æ»šåŠ¨æ—¶ã€‚ */
+			!#zh å½?é¼????æ»?è½®æ????¨æ?¶ã?? */
 			static MOUSE_WHEEL: string;			
 			/** !#en The event type for position change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹ä½ç½®æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹ä??ç½®æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static POSITION_CHANGED: string;			
 			/** !#en The event type for rotation change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹æ—‹è½¬æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹æ??è½¬æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static ROTATION_CHANGED: string;			
 			/** !#en The event type for scale change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹ç¼©æ”¾æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹ç¼©??¾æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static SCALE_CHANGED: string;			
 			/** !#en The event type for size change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹å°ºå¯¸æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹å°ºå¯¸æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static SIZE_CHANGED: string;			
 			/** !#en The event type for anchor point change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹é”šç‚¹æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹é????¹æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static ANCHOR_CHANGED: string;			
 			/** !#en The event type for color change events.
 			Performance note, this event will be triggered every time corresponding properties being changed,
 			if the event callback have heavy logic it may have great performance impact, try to avoid such scenario.
-			!#zh å½“èŠ‚ç‚¹é¢œè‰²æ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚
-			æ€§èƒ½è­¦å‘Šï¼šè¿™ä¸ªäº‹ä»¶ä¼šåœ¨æ¯æ¬¡å¯¹åº”çš„å±æ€§è¢«ä¿®æ”¹æ—¶è§¦å‘ï¼Œå¦‚æœäº‹ä»¶å›è°ƒæŸè€—è¾ƒé«˜ï¼Œæœ‰å¯èƒ½å¯¹æ€§èƒ½æœ‰å¾ˆå¤§çš„è´Ÿé¢å½±å“ï¼Œè¯·å°½é‡é¿å…è¿™ç§æƒ…å†µã€‚ */
+			!#zh å½??????¹é????²æ?¹å????¶è§¦??????äº?ä»¶ã??
+			??§è?½è­¦???ï¼?è¿?ä¸ªä??ä»¶ä????¨æ??æ¬¡å¯¹åº????å±???§è¢«ä¿®æ?¹æ?¶è§¦???ï¼?å¦????äº?ä»¶å??è°???????è¾?é«?ï¼??????¯è?½å¯¹??§è?½æ??å¾?å¤§ç??è´???¢å½±???ï¼?è¯·å°½?????¿å??è¿?ç§??????µã?? */
 			static COLOR_CHANGED: string;			
 			/** !#en The event type for new child added events.
-			!#zh å½“æ–°çš„å­èŠ‚ç‚¹è¢«æ·»åŠ æ—¶è§¦å‘çš„äº‹ä»¶ã€‚ */
+			!#zh å½???°ç??å­??????¹è¢«æ·»å????¶è§¦??????äº?ä»¶ã?? */
 			static CHILD_ADDED: string;			
 			/** !#en The event type for child removed events.
-			!#zh å½“å­èŠ‚ç‚¹è¢«ç§»é™¤æ—¶è§¦å‘çš„äº‹ä»¶ã€‚ */
+			!#zh å½?å­??????¹è¢«ç§»é?¤æ?¶è§¦??????äº?ä»¶ã?? */
 			static CHILD_REMOVED: string;			
 			/** !#en The event type for children reorder events.
-			!#zh å½“å­èŠ‚ç‚¹é¡ºåºæ”¹å˜æ—¶è§¦å‘çš„äº‹ä»¶ã€‚ */
+			!#zh å½?å­??????¹é¡ºåº???¹å????¶è§¦??????äº?ä»¶ã?? */
 			static CHILD_REORDER: string;			
 			/** !#en The event type for node group changed events.
-			!#zh å½“èŠ‚ç‚¹å½’å±ç¾¤ç»„å‘ç”Ÿå˜åŒ–æ—¶è§¦å‘çš„äº‹ä»¶ã€‚ */
+			!#zh å½??????¹å??å±?ç¾¤ç????????????????¶è§¦??????äº?ä»¶ã?? */
 			static GROUP_CHANGED: string;			
 			/** !#en The event type for node's sibling order changed.
-			!#zh å½“èŠ‚ç‚¹åœ¨å…„å¼ŸèŠ‚ç‚¹ä¸­çš„é¡ºåºå‘ç”Ÿå˜åŒ–æ—¶è§¦å‘çš„äº‹ä»¶ã€‚ */
+			!#zh å½??????¹å?¨å??å¼??????¹ä¸­???é¡ºå????????????????¶è§¦??????äº?ä»¶ã?? */
 			static SIBLING_ORDER_CHANGED: string;		
 		}	
 	}
@@ -17257,7 +17257,7 @@ declare namespace cc {
 	
 	export namespace VideoPlayer {		
 		/** !#en Video event type
-		!#zh è§†é¢‘äº‹ä»¶ç±»å‹ */
+		!#zh è§?é¢?äº?ä»¶ç±»??? */
 		export enum EventType {			
 			PLAYING = 0,
 			PAUSED = 0,
@@ -17275,7 +17275,7 @@ declare namespace cc {
 	
 	export namespace VideoPlayer {		
 		/** !#en Enum for video resouce type type.
-		!#zh è§†é¢‘æ¥æº */
+		!#zh è§?é¢???¥æ?? */
 		export enum ResourceType {			
 			REMOTE = 0,
 			LOCAL = 0,		
@@ -17288,7 +17288,7 @@ declare namespace cc {
 	
 	export namespace ParticleSystem {		
 		/** !#en Enum for emitter modes
-		!#zh å‘å°„æ¨¡å¼ */
+		!#zh ???å°?æ¨¡å?? */
 		export enum EmitterMode {			
 			GRAVITY = 0,
 			RADIUS = 0,		
@@ -17301,7 +17301,7 @@ declare namespace cc {
 	
 	export namespace ParticleSystem {		
 		/** !#en Enum for particles movement type.
-		!#zh ç²’å­ä½ç½®ç±»å‹ */
+		!#zh ç²?å­?ä½?ç½®ç±»??? */
 		export enum PositionType {			
 			FREE = 0,
 			RELATIVE = 0,
@@ -17315,7 +17315,7 @@ declare namespace cc {
 	
 	export namespace TiledMap {		
 		/** !#en The orientation of tiled map.
-		!#zh Tiled Map åœ°å›¾æ–¹å‘ã€‚ */
+		!#zh Tiled Map ??°å?¾æ?¹å????? */
 		export enum Orientation {			
 			ORTHO = 0,
 			HEX = 0,
@@ -17360,7 +17360,7 @@ declare namespace cc {
 	
 	export namespace TiledMap {		
 		/** !#en The stagger axis of Hex tiled map.
-		!#zh å…­è¾¹å½¢åœ°å›¾çš„ stagger axis å€¼ */
+		!#zh ??­è¾¹å½¢å?°å?¾ç?? stagger axis ??? */
 		export enum StaggerAxis {			
 			STAGGERAXIS_X = 0,
 			STAGGERAXIS_Y = 0,		
@@ -17373,7 +17373,7 @@ declare namespace cc {
 	
 	export namespace TiledMap {		
 		/** !#en The render order of tiled map.
-		!#zh åœ°å›¾çš„æ¸²æŸ“é¡ºåº */
+		!#zh ??°å?¾ç??æ¸²æ??é¡ºå?? */
 		export enum RenderOrder {			
 			STAGGERINDEX_ODD = 0,
 			STAGGERINDEX_EVEN = 0,
@@ -17390,7 +17390,7 @@ declare namespace cc {
 	
 	export namespace TiledMap {		
 		/** !#en TiledMap Object Type
-		!#zh åœ°å›¾ç‰©ä½“ç±»å‹ */
+		!#zh ??°å?¾ç?©ä??ç±»å?? */
 		export enum TMXObjectType {			
 			RECT = 0,
 			ELLIPSE = 0,
@@ -17407,7 +17407,7 @@ declare namespace cc {
 	
 	export namespace WebView {		
 		/** !#en WebView event type
-		!#zh ç½‘é¡µè§†å›¾äº‹ä»¶ç±»å‹ */
+		!#zh ç½?é¡µè????¾ä??ä»¶ç±»??? */
 		export enum EventType {			
 			LOADED = 0,
 			LOADING = 0,
@@ -17421,7 +17421,7 @@ declare namespace cc {
 	
 	export namespace Camera {		
 		/** !#en Values for Camera.clearFlags, determining what to clear when rendering a Camera.
-		!#zh æ‘„åƒæœºæ¸…é™¤æ ‡è®°ä½ï¼Œå†³å®šæ‘„åƒæœºæ¸²æŸ“æ—¶ä¼šæ¸…é™¤å“ªäº›çŠ¶æ€ */
+		!#zh ????????ºæ????¤æ??è®°ä??ï¼???³å??????????ºæ¸²?????¶ä??æ¸???¤å?ªä????¶æ?? */
 		export enum ClearFlags {			
 			COLOR = 0,
 			DEPTH = 0,
@@ -17436,7 +17436,7 @@ declare namespace cc {
 	export namespace Light {		
 		/** !#en The light source type
 		
-		!#zh å…‰æºç±»å‹ */
+		!#zh ???æº?ç±»å?? */
 		export enum Type {			
 			DIRECTIONAL = 0,
 			POINT = 0,
@@ -17452,7 +17452,7 @@ declare namespace cc {
 	export namespace Light {		
 		/** !#en The shadow type
 		
-		!#zh é˜´å½±ç±»å‹ */
+		!#zh ??´å½±ç±»å?? */
 		export enum ShadowType {			
 			NONE = 0,
 			HARD = 0,
@@ -17467,7 +17467,7 @@ declare namespace cc {
 	
 	export namespace Prefab {		
 		/** !#zh
-		Prefab åˆ›å»ºå®ä¾‹æ‰€ç”¨çš„ä¼˜åŒ–ç­–ç•¥ï¼Œé…åˆ {{#crossLink "Prefab.optimizationPolicy"}}cc.Prefab#optimizationPolicy{{/crossLink}} ä½¿ç”¨ã€‚
+		Prefab ???å»ºå??ä¾??????¨ç??ä¼????ç­???¥ï???????? {{#crossLink "Prefab.optimizationPolicy"}}cc.Prefab#optimizationPolicy{{/crossLink}} ä½¿ç?¨ã??
 		!#en
 		An enumeration used with the {{#crossLink "Prefab.optimizationPolicy"}}cc.Prefab#optimizationPolicy{{/crossLink}}
 		to specify how to optimize the instantiate operation. */
@@ -17484,7 +17484,7 @@ declare namespace cc {
 	
 	export namespace RenderTexture {		
 		/** !#en The depth buffer and stencil buffer format for RenderTexture.
-		!#zh RenderTexture çš„æ·±åº¦ç¼“å†²ä»¥åŠæ¨¡æ¿ç¼“å†²æ ¼å¼ã€‚ */
+		!#zh RenderTexture ???æ·±åº¦ç¼???²ä»¥???æ¨¡æ?¿ç????²æ?¼å????? */
 		export enum DepthStencilFormat {			
 			RB_FMT_D24S8 = 0,
 			RB_FMT_S8 = 0,
@@ -17554,13 +17554,13 @@ declare namespace cc {
 	
 	export namespace Collider {		
 		/** !#en Defines a Box Collider .
-		!#zh ç”¨æ¥å®šä¹‰åŒ…å›´ç›’ç¢°æ’ä½“ */
+		!#zh ??¨æ?¥å??ä¹??????´ç??ç¢°æ??ä½? */
 		export class Box {			
 			/** !#en Position offset
-			!#zh ä½ç½®åç§»é‡ */
+			!#zh ä½?ç½®å??ç§»é?? */
 			offset: Vec2;			
 			/** !#en Box size
-			!#zh åŒ…å›´ç›’å¤§å° */
+			!#zh ?????´ç??å¤§å?? */
 			size: Size;		
 		}	
 	}
@@ -17571,13 +17571,13 @@ declare namespace cc {
 	
 	export namespace Collider {		
 		/** !#en Defines a Circle Collider .
-		!#zh ç”¨æ¥å®šä¹‰åœ†å½¢ç¢°æ’ä½“ */
+		!#zh ??¨æ?¥å??ä¹????å½¢ç¢°???ä½? */
 		export class Circle {			
 			/** !#en Position offset
-			!#zh ä½ç½®åç§»é‡ */
+			!#zh ä½?ç½®å??ç§»é?? */
 			offset: Vec2;			
 			/** !#en Circle radius
-			!#zh åœ†å½¢åŠå¾„ */
+			!#zh ???å½¢å??å¾? */
 			radius: number;		
 		}	
 	}
@@ -17588,13 +17588,13 @@ declare namespace cc {
 	
 	export namespace Collider {		
 		/** !#en Defines a Polygon Collider .
-		!#zh ç”¨æ¥å®šä¹‰å¤šè¾¹å½¢ç¢°æ’ä½“ */
+		!#zh ??¨æ?¥å??ä¹?å¤?è¾¹å½¢ç¢°æ??ä½? */
 		export class Polygon {			
 			/** !#en Position offset
-			!#zh ä½ç½®åç§»é‡ */
+			!#zh ä½?ç½®å??ç§»é?? */
 			offset: Vec2;			
 			/** !#en Polygon points
-			!#zh å¤šè¾¹å½¢é¡¶ç‚¹æ•°ç»„ */
+			!#zh å¤?è¾¹å½¢é¡¶ç?¹æ?°ç?? */
 			points: Vec2[];		
 		}	
 	}
@@ -17605,121 +17605,121 @@ declare namespace cc {
 	
 	export namespace Event {		
 		/** !#en The mouse event
-		!#zh é¼ æ ‡äº‹ä»¶ç±»å‹ */
+		!#zh é¼????äº?ä»¶ç±»??? */
 		export class EventMouse extends Event {			
 			/**
 			!#en Sets scroll data.
-			!#zh è®¾ç½®é¼ æ ‡çš„æ»šåŠ¨æ•°æ®ã€‚
+			!#zh è®¾ç½®é¼???????æ»???¨æ?°æ?®ã??
 			@param scrollX scrollX
 			@param scrollY scrollY 
 			*/
 			setScrollData(scrollX: number, scrollY: number): void;			
 			/**
 			!#en Returns the x axis scroll value.
-			!#zh è·å–é¼ æ ‡æ»šåŠ¨çš„Xè½´è·ç¦»ï¼Œåªæœ‰æ»šåŠ¨æ—¶æ‰æœ‰æ•ˆã€‚ 
+			!#zh ??·å??é¼????æ»???¨ç??Xè½´è??ç¦»ï????ªæ??æ»???¨æ?¶æ??????????? 
 			*/
 			getScrollX(): number;			
 			/**
 			!#en Returns the y axis scroll value.
-			!#zh è·å–æ»šè½®æ»šåŠ¨çš„ Y è½´è·ç¦»ï¼Œåªæœ‰æ»šåŠ¨æ—¶æ‰æœ‰æ•ˆã€‚ 
+			!#zh ??·å??æ»?è½®æ????¨ç?? Y è½´è??ç¦»ï????ªæ??æ»???¨æ?¶æ??????????? 
 			*/
 			getScrollY(): number;			
 			/**
 			!#en Sets cursor location.
-			!#zh è®¾ç½®å½“å‰é¼ æ ‡ä½ç½®ã€‚
+			!#zh è®¾ç½®å½????é¼????ä½?ç½®ã??
 			@param x x
 			@param y y 
 			*/
 			setLocation(x: number, y: number): void;			
 			/**
 			!#en Returns cursor location.
-			!#zh è·å–é¼ æ ‡ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??é¼????ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getLocation(): Vec2;			
 			/**
 			!#en Returns the current cursor location in screen coordinates.
-			!#zh è·å–å½“å‰äº‹ä»¶åœ¨æ¸¸æˆçª—å£å†…çš„åæ ‡ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??å½????äº?ä»¶å?¨æ¸¸???çª????????????????ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getLocationInView(): Vec2;			
 			/**
 			!#en Returns the previous touch location.
-			!#zh è·å–é¼ æ ‡ç‚¹å‡»åœ¨ä¸Šä¸€æ¬¡äº‹ä»¶æ—¶çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??é¼??????¹å?»å?¨ä??ä¸?æ¬¡ä??ä»¶æ?¶ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getPreviousLocation(): Vec2;			
 			/**
 			!#en Returns the delta distance from the previous location to current location.
-			!#zh è·å–é¼ æ ‡è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„è·ç¦»å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??é¼????è·?ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç??è·?ç¦»å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getDelta(): Vec2;			
 			/**
 			!#en Returns the X axis delta distance from the previous location to current location.
-			!#zh è·å–é¼ æ ‡è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„ X è½´è·ç¦»ã€‚ 
+			!#zh ??·å??é¼????è·?ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç?? X è½´è??ç¦»ã?? 
 			*/
 			getDeltaX(): number;			
 			/**
 			!#en Returns the Y axis delta distance from the previous location to current location.
-			!#zh è·å–é¼ æ ‡è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„ Y è½´è·ç¦»ã€‚ 
+			!#zh ??·å??é¼????è·?ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç?? Y è½´è??ç¦»ã?? 
 			*/
 			getDeltaY(): number;			
 			/**
 			!#en Sets mouse button.
-			!#zh è®¾ç½®é¼ æ ‡æŒ‰é”®ã€‚
+			!#zh è®¾ç½®é¼?????????®ã??
 			@param button button 
 			*/
 			setButton(button: number): void;			
 			/**
 			!#en Returns mouse button.
-			!#zh è·å–é¼ æ ‡æŒ‰é”®ã€‚ 
+			!#zh ??·å??é¼?????????®ã?? 
 			*/
 			getButton(): number;			
 			/**
 			!#en Returns location X axis data.
-			!#zh è·å–é¼ æ ‡å½“å‰ä½ç½® X è½´ã€‚ 
+			!#zh ??·å??é¼????å½????ä½?ç½? X è½´ã?? 
 			*/
 			getLocationX(): number;			
 			/**
 			!#en Returns location Y axis data.
-			!#zh è·å–é¼ æ ‡å½“å‰ä½ç½® Y è½´ã€‚ 
+			!#zh ??·å??é¼????å½????ä½?ç½? Y è½´ã?? 
 			*/
 			getLocationY(): number;			
 			/** !#en The none event code of mouse event.
-			!#zh æ— ã€‚ */
+			!#zh ?????? */
 			static NONE: number;			
 			/** !#en The event type code of mouse down event.
-			!#zh é¼ æ ‡æŒ‰ä¸‹äº‹ä»¶ã€‚ */
+			!#zh é¼???????ä¸?äº?ä»¶ã?? */
 			static DOWN: number;			
 			/** !#en The event type code of mouse up event.
-			!#zh é¼ æ ‡æŒ‰ä¸‹åé‡Šæ”¾äº‹ä»¶ã€‚ */
+			!#zh é¼???????ä¸?????????¾ä??ä»¶ã?? */
 			static UP: number;			
 			/** !#en The event type code of mouse move event.
-			!#zh é¼ æ ‡ç§»åŠ¨äº‹ä»¶ã€‚ */
+			!#zh é¼????ç§»å?¨ä??ä»¶ã?? */
 			static MOVE: number;			
 			/** !#en The event type code of mouse scroll event.
-			!#zh é¼ æ ‡æ»šè½®äº‹ä»¶ã€‚ */
+			!#zh é¼????æ»?è½®ä??ä»¶ã?? */
 			static SCROLL: number;			
 			/** !#en The tag of Mouse left button.
-			!#zh é¼ æ ‡å·¦é”®çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼????å·¦é?®ç?????ç­¾ã?? */
 			static BUTTON_LEFT: number;			
 			/** !#en The tag of Mouse right button  (The right button number is 2 on browser).
-			!#zh é¼ æ ‡å³é”®çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼??????³é?®ç?????ç­¾ã?? */
 			static BUTTON_RIGHT: number;			
 			/** !#en The tag of Mouse middle button  (The right button number is 1 on browser).
-			!#zh é¼ æ ‡ä¸­é”®çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼????ä¸­é?®ç?????ç­¾ã?? */
 			static BUTTON_MIDDLE: number;			
 			/** !#en The tag of Mouse button 4.
-			!#zh é¼ æ ‡æŒ‰é”® 4 çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼?????????? 4 ??????ç­¾ã?? */
 			static BUTTON_4: number;			
 			/** !#en The tag of Mouse button 5.
-			!#zh é¼ æ ‡æŒ‰é”® 5 çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼?????????? 5 ??????ç­¾ã?? */
 			static BUTTON_5: number;			
 			/** !#en The tag of Mouse button 6.
-			!#zh é¼ æ ‡æŒ‰é”® 6 çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼?????????? 6 ??????ç­¾ã?? */
 			static BUTTON_6: number;			
 			/** !#en The tag of Mouse button 7.
-			!#zh é¼ æ ‡æŒ‰é”® 7 çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼?????????? 7 ??????ç­¾ã?? */
 			static BUTTON_7: number;			
 			/** !#en The tag of Mouse button 8.
-			!#zh é¼ æ ‡æŒ‰é”® 8 çš„æ ‡ç­¾ã€‚ */
+			!#zh é¼?????????? 8 ??????ç­¾ã?? */
 			static BUTTON_8: number;		
 		}	
 	}
@@ -17730,7 +17730,7 @@ declare namespace cc {
 	
 	export namespace Event {		
 		/** !#en The touch event
-		!#zh è§¦æ‘¸äº‹ä»¶ */
+		!#zh è§¦æ?¸ä??ä»? */
 		export class EventTouch extends Event {			
 			/**
 			
@@ -17739,73 +17739,73 @@ declare namespace cc {
 			*/
 			constructor(touchArr: any[], bubbles: boolean);			
 			/** !#en The current touch object
-			!#zh å½“å‰è§¦ç‚¹å¯¹è±¡ */
+			!#zh å½????è§¦ç?¹å¯¹è±? */
 			touch: Touch;			
 			/**
 			!#en Returns event code.
-			!#zh è·å–äº‹ä»¶ç±»å‹ã€‚ 
+			!#zh ??·å??äº?ä»¶ç±»?????? 
 			*/
 			getEventCode(): number;			
 			/**
 			!#en Returns touches of event.
-			!#zh è·å–è§¦æ‘¸ç‚¹çš„åˆ—è¡¨ã€‚ 
+			!#zh ??·å??è§¦æ?¸ç?¹ç?????è¡¨ã?? 
 			*/
 			getTouches(): any[];			
 			/**
 			!#en Sets touch location.
-			!#zh è®¾ç½®å½“å‰è§¦ç‚¹ä½ç½®
+			!#zh è®¾ç½®å½????è§¦ç?¹ä??ç½?
 			@param x x
 			@param y y 
 			*/
 			setLocation(x: number, y: number): void;			
 			/**
 			!#en Returns touch location.
-			!#zh è·å–è§¦ç‚¹ä½ç½®ã€‚ 
+			!#zh ??·å??è§¦ç?¹ä??ç½®ã?? 
 			*/
 			getLocation(): Vec2;			
 			/**
 			!#en Returns the current touch location in screen coordinates.
-			!#zh è·å–å½“å‰è§¦ç‚¹åœ¨æ¸¸æˆçª—å£ä¸­çš„ä½ç½®ã€‚ 
+			!#zh ??·å??å½????è§¦ç?¹å?¨æ¸¸???çª????ä¸­ç??ä½?ç½®ã?? 
 			*/
 			getLocationInView(): Vec2;			
 			/**
 			!#en Returns the previous touch location.
-			!#zh è·å–è§¦ç‚¹åœ¨ä¸Šä¸€æ¬¡äº‹ä»¶æ—¶çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??è§¦ç?¹å?¨ä??ä¸?æ¬¡ä??ä»¶æ?¶ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getPreviousLocation(): Vec2;			
 			/**
 			!#en Returns the start touch location.
-			!#zh è·å–è§¦ç‚¹è½ä¸‹æ—¶çš„ä½ç½®å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??è§¦ç?¹è?½ä????¶ç??ä½?ç½®å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getStartLocation(): Vec2;			
 			/**
 			!#en Returns the id of cc.Touch.
-			!#zh è§¦ç‚¹çš„æ ‡è¯† IDï¼Œå¯ä»¥ç”¨æ¥åœ¨å¤šç‚¹è§¦æ‘¸ä¸­è·Ÿè¸ªè§¦ç‚¹ã€‚ 
+			!#zh è§¦ç?¹ç?????è¯? IDï¼???¯ä»¥??¨æ?¥å?¨å????¹è§¦??¸ä¸­è·?è¸ªè§¦??¹ã?? 
 			*/
 			getID(): number;			
 			/**
 			!#en Returns the delta distance from the previous location to current location.
-			!#zh è·å–è§¦ç‚¹è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„è·ç¦»å¯¹è±¡ï¼Œå¯¹è±¡åŒ…å« x å’Œ y å±æ€§ã€‚ 
+			!#zh ??·å??è§¦ç?¹è??ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç??è·?ç¦»å¯¹è±¡ï??å¯¹è±¡?????? x ??? y å±???§ã?? 
 			*/
 			getDelta(): Vec2;			
 			/**
 			!#en Returns the X axis delta distance from the previous location to current location.
-			!#zh è·å–è§¦ç‚¹è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„ x è½´è·ç¦»ã€‚ 
+			!#zh ??·å??è§¦ç?¹è??ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç?? x è½´è??ç¦»ã?? 
 			*/
 			getDeltaX(): number;			
 			/**
 			!#en Returns the Y axis delta distance from the previous location to current location.
-			!#zh è·å–è§¦ç‚¹è·ç¦»ä¸Šä¸€æ¬¡äº‹ä»¶ç§»åŠ¨çš„ y è½´è·ç¦»ã€‚ 
+			!#zh ??·å??è§¦ç?¹è??ç¦»ä??ä¸?æ¬¡ä??ä»¶ç§»??¨ç?? y è½´è??ç¦»ã?? 
 			*/
 			getDeltaY(): number;			
 			/**
 			!#en Returns location X axis data.
-			!#zh è·å–å½“å‰è§¦ç‚¹ X è½´ä½ç½®ã€‚ 
+			!#zh ??·å??å½????è§¦ç?? X è½´ä??ç½®ã?? 
 			*/
 			getLocationX(): number;			
 			/**
 			!#en Returns location Y axis data.
-			!#zh è·å–å½“å‰è§¦ç‚¹ Y è½´ä½ç½®ã€‚ 
+			!#zh ??·å??å½????è§¦ç?? Y è½´ä??ç½®ã?? 
 			*/
 			getLocationY(): number;		
 		}	
@@ -17817,7 +17817,7 @@ declare namespace cc {
 	
 	export namespace Event {		
 		/** !#en The acceleration event
-		!#zh åŠ é€Ÿåº¦äº‹ä»¶ */
+		!#zh ??????åº¦ä??ä»? */
 		export class EventAcceleration extends Event {		
 		}	
 	}
@@ -17828,7 +17828,7 @@ declare namespace cc {
 	
 	export namespace Event {		
 		/** !#en The keyboard event
-		!#zh é”®ç›˜äº‹ä»¶ */
+		!#zh ??®ç??äº?ä»? */
 		export class EventKeyboard extends Event {			
 			/** !#en
 			The keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
@@ -17836,9 +17836,9 @@ declare namespace cc {
 			If the key can't be identified, this value is 0.
 			
 			!#zh
-			keyCode æ˜¯åªè¯»å±æ€§å®ƒè¡¨ç¤ºä¸€ä¸ªç³»ç»Ÿå’Œä¾èµ–äºå®ç°çš„æ•°å­—ä»£ç ï¼Œå¯ä»¥è¯†åˆ«æŒ‰é”®çš„æœªä¿®æ”¹å€¼ã€‚
-			è¿™é€šå¸¸æ˜¯åè¿›åˆ¶ ASCII (RFC20) æˆ–è€… Windows 1252 ä»£ç ï¼Œæ‰€å¯¹åº”çš„å¯†é’¥ã€‚
-			å¦‚æœæ— æ³•è¯†åˆ«è¯¥é”®ï¼Œåˆ™è¯¥å€¼ä¸º 0ã€‚ */
+			keyCode ??¯å?ªè¯»å±???§å??è¡¨ç¤ºä¸?ä¸ªç³»ç»????ä¾?èµ?äº?å®???°ç????°å??ä»????ï¼???¯ä»¥è¯???«æ????®ç????ªä¿®??¹å?¼ã??
+			è¿????å¸¸æ?¯å??è¿???? ASCII (RFC20) ?????? Windows 1252 ä»????ï¼????å¯¹å?????å¯???¥ã??
+			å¦???????æ³?è¯???«è¯¥??®ï?????è¯¥å?¼ä¸º 0??? */
 			keyCode: number;		
 		}	
 	}
@@ -17849,7 +17849,7 @@ declare namespace cc {
 	
 	export namespace Event {		
 		/** !#en The Custom event
-		!#zh è‡ªå®šä¹‰äº‹ä»¶ */
+		!#zh ??ªå??ä¹?äº?ä»? */
 		export class EventCustom extends Event {			
 			/**
 			
@@ -17858,22 +17858,22 @@ declare namespace cc {
 			*/
 			constructor(type: string, bubbles: boolean);			
 			/** !#en A reference to the detailed data of the event
-			!#zh äº‹ä»¶çš„è¯¦ç»†æ•°æ® */
+			!#zh äº?ä»¶ç??è¯¦ç????°æ?? */
 			detail: any;			
 			/**
 			!#en Sets user data
-			!#zh è®¾ç½®ç”¨æˆ·æ•°æ®
+			!#zh è®¾ç½®??¨æ?·æ?°æ??
 			@param data data 
 			*/
 			setUserData(data: any): void;			
 			/**
 			!#en Gets user data
-			!#zh è·å–ç”¨æˆ·æ•°æ® 
+			!#zh ??·å????¨æ?·æ?°æ?? 
 			*/
 			getUserData(): any;			
 			/**
 			!#en Gets event name
-			!#zh è·å–äº‹ä»¶åç§° 
+			!#zh ??·å??äº?ä»¶å??ç§? 
 			*/
 			getEventName(): string;		
 		}	
@@ -17885,16 +17885,16 @@ declare namespace cc {
 	
 	export namespace SystemEvent {		
 		/** !#en The event type supported by SystemEvent
-		!#zh SystemEvent æ”¯æŒçš„äº‹ä»¶ç±»å‹ */
+		!#zh SystemEvent ??¯æ?????äº?ä»¶ç±»??? */
 		export class EventType {			
 			/** !#en The event type for press the key down event, you can use its value directly: 'keydown'
-			!#zh å½“æŒ‰ä¸‹æŒ‰é”®æ—¶è§¦å‘çš„äº‹ä»¶ */
+			!#zh å½????ä¸??????®æ?¶è§¦??????äº?ä»? */
 			static KEY_DOWN: string;			
 			/** !#en The event type for press the key up event, you can use its value directly: 'keyup'
-			!#zh å½“æ¾å¼€æŒ‰é”®æ—¶è§¦å‘çš„äº‹ä»¶ */
+			!#zh å½???¾å???????®æ?¶è§¦??????äº?ä»? */
 			static KEY_UP: string;			
 			/** !#en The event type for press the devicemotion event, you can use its value directly: 'devicemotion'
-			!#zh é‡åŠ›æ„Ÿåº” */
+			!#zh ?????????åº? */
 			static DEVICEMOTION: string;		
 		}	
 	}
@@ -17905,25 +17905,25 @@ declare namespace cc {
 	
 	export namespace Animation {		
 		/** !#en The event type supported by Animation
-		!#zh Animation æ”¯æŒçš„äº‹ä»¶ç±»å‹ */
+		!#zh Animation ??¯æ?????äº?ä»¶ç±»??? */
 		export class EventType {			
 			/** !#en Emit when begin playing animation
-			!#zh å¼€å§‹æ’­æ”¾æ—¶è§¦å‘ */
+			!#zh å¼?å§???­æ?¾æ?¶è§¦??? */
 			static PLAY: string;			
 			/** !#en Emit when stop playing animation
-			!#zh åœæ­¢æ’­æ”¾æ—¶è§¦å‘ */
+			!#zh ???æ­¢æ?­æ?¾æ?¶è§¦??? */
 			static STOP: string;			
 			/** !#en Emit when pause animation
-			!#zh æš‚åœæ’­æ”¾æ—¶è§¦å‘ */
+			!#zh ????????­æ?¾æ?¶è§¦??? */
 			static PAUSE: string;			
 			/** !#en Emit when resume animation
-			!#zh æ¢å¤æ’­æ”¾æ—¶è§¦å‘ */
+			!#zh ??¢å????­æ?¾æ?¶è§¦??? */
 			static RESUME: string;			
 			/** !#en If animation repeat count is larger than 1, emit when animation play to the last frame
-			!#zh å‡å¦‚åŠ¨ç”»å¾ªç¯æ¬¡æ•°å¤§äº 1ï¼Œå½“åŠ¨ç”»æ’­æ”¾åˆ°æœ€åä¸€å¸§æ—¶è§¦å‘ */
+			!#zh ???å¦???¨ç?»å¾ª??¯æ¬¡??°å¤§äº? 1ï¼?å½???¨ç?»æ?­æ?¾å?°æ?????ä¸?å¸§æ?¶è§¦??? */
 			static LASTFRAME: string;			
 			/** !#en Emit when finish playing animation
-			!#zh åŠ¨ç”»æ’­æ”¾å®Œæˆæ—¶è§¦å‘ */
+			!#zh ??¨ç?»æ?­æ?¾å???????¶è§¦??? */
 			static FINISHED: string;		
 		}	
 	}
@@ -17934,7 +17934,7 @@ declare namespace cc {
 	
 	export namespace Button {		
 		/** !#en Enum for transition type.
-		!#zh è¿‡æ¸¡ç±»å‹ */
+		!#zh è¿?æ¸¡ç±»??? */
 		export enum Transition {			
 			NONE = 0,
 			COLOR = 0,
@@ -17953,21 +17953,21 @@ declare namespace cc {
 		And it will trigger the handler when a certain event occurs.
 		
 		!@zh
-		â€œEventHandlerâ€ ç±»ç”¨æ¥è®¾ç½®åœºæ™¯ä¸­çš„äº‹ä»¶å›è°ƒï¼Œ
-		è¯¥ç±»å…è®¸ç”¨æˆ·è®¾ç½®å›è°ƒç›®æ ‡èŠ‚ç‚¹ï¼Œç›®æ ‡ç»„ä»¶åï¼Œç»„ä»¶æ–¹æ³•åï¼Œ
-		å¹¶å¯é€šè¿‡ emit æ–¹æ³•è°ƒç”¨ç›®æ ‡å‡½æ•°ã€‚ */
+		???EventHandler??? ç±»ç?¨æ?¥è®¾ç½®å?ºæ?¯ä¸­???äº?ä»¶å??è°?ï¼?
+		è¯¥ç±»???è®¸ç?¨æ?·è®¾ç½®å??è°???®æ???????¹ï????®æ??ç»?ä»¶å??ï¼?ç»?ä»¶æ?¹æ?????ï¼?
+		å¹¶å?¯é??è¿? emit ??¹æ??è°???¨ç?®æ????½æ?°ã?? */
 		export class EventHandler {			
 			/** !#en the node that contains target callback, such as the node example script belongs to
-			!#zh äº‹ä»¶å“åº”å‡½æ•°æ‰€åœ¨èŠ‚ç‚¹ ï¼Œæ¯”å¦‚ä¾‹å­ä¸­è„šæœ¬å½’å±çš„èŠ‚ç‚¹æœ¬èº« */
+			!#zh äº?ä»¶å??åº???½æ?°æ????¨è????? ï¼?æ¯?å¦?ä¾?å­?ä¸­è????¬å??å±?????????¹æ?¬èº« */
 			target: Node;			
 			/** !#en name of the component(script) that contains target callback, such as the name 'MainMenu' of script in example
-			!#zh äº‹ä»¶å“åº”å‡½æ•°æ‰€åœ¨ç»„ä»¶åï¼ˆè„šæœ¬åï¼‰, æ¯”å¦‚ä¾‹å­ä¸­çš„è„šæœ¬å 'MainMenu' */
+			!#zh äº?ä»¶å??åº???½æ?°æ????¨ç??ä»¶å??ï¼??????¬å??ï¼?, æ¯?å¦?ä¾?å­?ä¸­ç???????¬å?? 'MainMenu' */
 			component: string;			
 			/** !#en Event handler, such as function's name 'onClick' in example
-			!#zh å“åº”äº‹ä»¶å‡½æ•°åï¼Œæ¯”å¦‚ä¾‹å­ä¸­çš„ 'onClick' */
+			!#zh ???åº?äº?ä»¶å?½æ?°å??ï¼?æ¯?å¦?ä¾?å­?ä¸­ç?? 'onClick' */
 			handler: string;			
 			/** !#en Custom Event Data, such as 'eventType' in example
-			!#zh è‡ªå®šä¹‰äº‹ä»¶æ•°æ®ï¼Œæ¯”å¦‚ä¾‹å­ä¸­çš„ eventType */
+			!#zh ??ªå??ä¹?äº?ä»¶æ?°æ?®ï??æ¯?å¦?ä¾?å­?ä¸­ç?? eventType */
 			customEventData: string;			
 			/**
 			
@@ -17977,7 +17977,7 @@ declare namespace cc {
 			static emitEvents(events: EventHandler[], ...params: any[]): void;			
 			/**
 			!#en Emit event with params
-			!#zh è§¦å‘ç›®æ ‡ç»„ä»¶ä¸Šçš„æŒ‡å®š handler å‡½æ•°ï¼Œè¯¥å‚æ•°æ˜¯å›è°ƒå‡½æ•°çš„å‚æ•°å€¼ï¼ˆå¯ä¸å¡«ï¼‰ã€‚
+			!#zh è§¦å????®æ??ç»?ä»¶ä????????å®? handler ??½æ?°ï??è¯¥å????°æ?¯å??è°???½æ?°ç???????°å?¼ï????¯ä??å¡«ï?????
 			@param params params
 			
 			@example 
@@ -18000,7 +18000,7 @@ declare namespace cc {
 	
 	export namespace Label {		
 		/** !#en Enum for text alignment.
-		!#zh æ–‡æœ¬æ¨ªå‘å¯¹é½ç±»å‹ */
+		!#zh ?????¬æ¨ª???å¯¹é??ç±»å?? */
 		export enum HorizontalAlign {			
 			LEFT = 0,
 			CENTER = 0,
@@ -18014,7 +18014,7 @@ declare namespace cc {
 	
 	export namespace Label {		
 		/** !#en Enum for vertical text alignment.
-		!#zh æ–‡æœ¬å‚ç›´å¯¹é½ç±»å‹ */
+		!#zh ?????¬å????´å¯¹é½?ç±»å?? */
 		export enum VerticalAlign {			
 			TOP = 0,
 			CENTER = 0,
@@ -18028,7 +18028,7 @@ declare namespace cc {
 	
 	export namespace Label {		
 		/** !#en Enum for Overflow.
-		!#zh Overflow ç±»å‹ */
+		!#zh Overflow ç±»å?? */
 		export enum Overflow {			
 			NONE = 0,
 			CLAMP = 0,
@@ -18043,7 +18043,7 @@ declare namespace cc {
 	
 	export namespace Label {		
 		/** !#en Enum for font type.
-		!#zh Type ç±»å‹ */
+		!#zh Type ç±»å?? */
 		export enum Type {			
 			TTF = 0,
 			BMFont = 0,
@@ -18057,7 +18057,7 @@ declare namespace cc {
 	
 	export namespace Label {		
 		/** !#en Enum for cache mode.
-		!#zh CacheMode ç±»å‹ */
+		!#zh CacheMode ç±»å?? */
 		export enum CacheMode {			
 			NONE = 0,
 			BITMAP = 0,
@@ -18071,7 +18071,7 @@ declare namespace cc {
 	
 	export namespace Layout {		
 		/** !#en Enum for Layout type
-		!#zh å¸ƒå±€ç±»å‹ */
+		!#zh å¸?å±?ç±»å?? */
 		export enum Type {			
 			NONE = 0,
 			HORIZONTAL = 0,
@@ -18086,7 +18086,7 @@ declare namespace cc {
 	
 	export namespace Layout {		
 		/** !#en Enum for Layout Resize Mode
-		!#zh ç¼©æ”¾æ¨¡å¼ */
+		!#zh ç¼©æ?¾æ¨¡å¼? */
 		export enum ResizeMode {			
 			NONE = 0,
 			CONTAINER = 0,
@@ -18101,7 +18101,7 @@ declare namespace cc {
 	export namespace Layout {		
 		/** !#en Enum for Grid Layout start axis direction.
 		The items in grid layout will be arranged in each axis at first.;
-		!#zh å¸ƒå±€è½´å‘ï¼Œåªç”¨äº GRID å¸ƒå±€ã€‚ */
+		!#zh å¸?å±?è½´å??ï¼???ªç?¨ä?? GRID å¸?å±???? */
 		export enum AxisDirection {			
 			HORIZONTAL = 0,
 			VERTICAL = 0,		
@@ -18115,7 +18115,7 @@ declare namespace cc {
 	export namespace Layout {		
 		/** !#en Enum for vertical layout direction.
 		 Used in Grid Layout together with AxisDirection is VERTICAL
-		!#zh å‚ç›´æ–¹å‘å¸ƒå±€æ–¹å¼ */
+		!#zh ?????´æ?¹å??å¸?å±???¹å?? */
 		export enum VerticalDirection {			
 			BOTTOM_TO_TOP = 0,
 			TOP_TO_BOTTOM = 0,		
@@ -18129,7 +18129,7 @@ declare namespace cc {
 	export namespace Layout {		
 		/** !#en Enum for horizontal layout direction.
 		 Used in Grid Layout together with AxisDirection is HORIZONTAL
-		!#zh æ°´å¹³æ–¹å‘å¸ƒå±€æ–¹å¼ */
+		!#zh æ°´å¹³??¹å??å¸?å±???¹å?? */
 		export enum HorizontalDirection {			
 			LEFT_TO_RIGHT = 0,
 			RIGHT_TO_LEFT = 0,		
@@ -18142,7 +18142,7 @@ declare namespace cc {
 	
 	export namespace Mask {		
 		/** !#en the type for mask.
-		!#zh é®ç½©ç»„ä»¶ç±»å‹ */
+		!#zh ??®ç½©ç»?ä»¶ç±»??? */
 		export enum Type {			
 			RECT = 0,
 			ELLIPSE = 0,
@@ -18156,7 +18156,7 @@ declare namespace cc {
 	
 	export namespace PageView {		
 		/** !#en The Page View Size Mode
-		!#zh é¡µé¢è§†å›¾æ¯ä¸ªé¡µé¢ç»Ÿä¸€çš„å¤§å°ç±»å‹ */
+		!#zh é¡µé?¢è????¾æ??ä¸ªé¡µ??¢ç??ä¸????å¤§å??ç±»å?? */
 		export enum SizeMode {			
 			Unified = 0,
 			Free = 0,		
@@ -18169,7 +18169,7 @@ declare namespace cc {
 	
 	export namespace PageView {		
 		/** !#en The Page View Direction
-		!#zh é¡µé¢è§†å›¾æ»šåŠ¨ç±»å‹ */
+		!#zh é¡µé?¢è????¾æ????¨ç±»??? */
 		export enum Direction {			
 			Horizontal = 0,
 			Vertical = 0,		
@@ -18182,7 +18182,7 @@ declare namespace cc {
 	
 	export namespace PageView {		
 		/** !#en Enum for ScrollView event type.
-		!#zh æ»šåŠ¨è§†å›¾äº‹ä»¶ç±»å‹ */
+		!#zh æ»???¨è????¾ä??ä»¶ç±»??? */
 		export enum EventType {			
 			PAGE_TURNING = 0,		
 		}	
@@ -18194,7 +18194,7 @@ declare namespace cc {
 	
 	export namespace PageViewIndicator {		
 		/** !#en Enum for PageView Indicator direction
-		!#zh é¡µé¢è§†å›¾æŒ‡ç¤ºå™¨çš„æ‘†æ”¾æ–¹å‘ */
+		!#zh é¡µé?¢è????¾æ??ç¤ºå?¨ç???????¾æ?¹å?? */
 		export enum Direction {			
 			HORIZONTAL = 0,
 			VERTICAL = 0,		
@@ -18207,7 +18207,7 @@ declare namespace cc {
 	
 	export namespace ProgressBar {		
 		/** !#en Enum for ProgressBar mode
-		!#zh è¿›åº¦æ¡æ¨¡å¼ */
+		!#zh è¿?åº¦æ?¡æ¨¡å¼? */
 		export enum Mode {			
 			HORIZONTAL = 0,
 			VERTICAL = 0,
@@ -18233,7 +18233,7 @@ declare namespace cc {
 	
 	export namespace ScrollView {		
 		/** !#en Enum for ScrollView event type.
-		!#zh æ»šåŠ¨è§†å›¾äº‹ä»¶ç±»å‹ */
+		!#zh æ»???¨è????¾ä??ä»¶ç±»??? */
 		export enum EventType {			
 			SCROLL_TO_TOP = 0,
 			SCROLL_TO_BOTTOM = 0,
@@ -18257,7 +18257,7 @@ declare namespace cc {
 	
 	export namespace Slider {		
 		/** !#en The Slider Direction
-		!#zh æ»‘åŠ¨å™¨æ–¹å‘ */
+		!#zh æ»???¨å?¨æ?¹å?? */
 		export enum Direction {			
 			Horizontal = 0,
 			Vertical = 0,		
@@ -18270,7 +18270,7 @@ declare namespace cc {
 	
 	export namespace Sprite {		
 		/** !#en Enum for sprite type.
-		!#zh Sprite ç±»å‹ */
+		!#zh Sprite ç±»å?? */
 		export enum Type {			
 			SIMPLE = 0,
 			SLICED = 0,
@@ -18286,7 +18286,7 @@ declare namespace cc {
 	
 	export namespace Sprite {		
 		/** !#en Enum for fill type.
-		!#zh å¡«å……ç±»å‹ */
+		!#zh å¡«å??ç±»å?? */
 		export enum FillType {			
 			HORIZONTAL = 0,
 			VERTICAL = 0,
@@ -18300,7 +18300,7 @@ declare namespace cc {
 	
 	export namespace Sprite {		
 		/** !#en Sprite Size can track trimmed size, raw size or none.
-		!#zh ç²¾çµå°ºå¯¸è°ƒæ•´æ¨¡å¼ */
+		!#zh ç²¾ç?µå°ºå¯¸è????´æ¨¡å¼? */
 		export enum SizeMode {			
 			CUSTOM = 0,
 			TRIMMED = 0,
@@ -18314,7 +18314,7 @@ declare namespace cc {
 	
 	export namespace Sprite {		
 		/** !#en Sprite state can choice the normal or grayscale.
-		!#zh ç²¾çµé¢œè‰²é€šé“æ¨¡å¼ã€‚ */
+		!#zh ç²¾ç?µé????²é?????æ¨¡å????? */
 		export enum State {			
 			NORMAL = 0,
 			GRAY = 0,		
@@ -18327,7 +18327,7 @@ declare namespace cc {
 	
 	export namespace Widget {		
 		/** !#en Enum for Widget's alignment mode, indicating when the widget should refresh.
-		!#zh Widget çš„å¯¹é½æ¨¡å¼ï¼Œè¡¨ç¤º Widget åº”è¯¥ä½•æ—¶åˆ·æ–°ã€‚ */
+		!#zh Widget ???å¯¹é??æ¨¡å??ï¼?è¡¨ç¤º Widget åº?è¯¥ä????¶å?·æ?°ã?? */
 		export enum AlignMode {			
 			ONCE = 0,
 			ON_WINDOW_RESIZE = 0,
@@ -18427,7 +18427,7 @@ declare namespace cc {
 	
 	export namespace geomUtils {		
 		/** !#en frustum
-		!#zh å¹³æˆªå¤´ä½“ */
+		!#zh å¹³æ?ªå¤´ä½? */
 		export class Frustum {			
 			/** Set whether to use accurate intersection testing function on this frustum */
 			accurate: boolean;			
@@ -18474,7 +18474,7 @@ declare namespace cc {
 			!#en
 			Check whether ray intersect with nodes
 			!#zh
-			æ£€æµ‹å°„çº¿æ˜¯å¦ä¸ç‰©ä½“æœ‰äº¤é›†
+			æ£?æµ?å°?çº¿æ?¯å?¦ä????©ä?????äº¤é??
 			@param root If root is null, then traversal nodes from scene node
 			@param worldRay worldRay
 			@param handler handler
@@ -18483,21 +18483,21 @@ declare namespace cc {
 			static ray_cast(root: Node, worldRay: geomUtils.Ray, handler: Function, filter: Function): any[];			
 			/**
 			!#en ray-plane intersect<br/>
-			!#zh å°„çº¿ä¸å¹³é¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh å°?çº¿ä??å¹³é?¢ç????¸äº¤??§æ??æµ????
 			@param ray ray
 			@param plane plane 
 			*/
 			static ray_plane(ray: geomUtils.Ray, plane: geomUtils.Plane): number;			
 			/**
 			!#en line-plane intersect<br/>
-			!#zh çº¿æ®µä¸å¹³é¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh çº¿æ®µä¸?å¹³é?¢ç????¸äº¤??§æ??æµ????
 			@param line line
 			@param plane plane 
 			*/
 			static line_plane(line: geomUtils.Line, plane: geomUtils.Plane): number;			
 			/**
 			!#en ray-triangle intersect<br/>
-			!#zh å°„çº¿ä¸ä¸‰è§’å½¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh å°?çº¿ä??ä¸?è§?å½¢ç????¸äº¤??§æ??æµ????
 			@param ray ray
 			@param triangle triangle
 			@param doubleSided doubleSided 
@@ -18505,7 +18505,7 @@ declare namespace cc {
 			static ray_triangle(ray: geomUtils.Ray, triangle: geomUtils.Triangle, doubleSided: boolean): number;			
 			/**
 			!#en line-triangle intersect<br/>
-			!#zh çº¿æ®µä¸ä¸‰è§’å½¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh çº¿æ®µä¸?ä¸?è§?å½¢ç????¸äº¤??§æ??æµ????
 			@param line line
 			@param triangle triangle
 			@param outPt optional, The intersection point 
@@ -18513,7 +18513,7 @@ declare namespace cc {
 			static line_triangle(line: geomUtils.Line, triangle: geomUtils.Triangle, outPt: Vec3): number;			
 			/**
 			!#en line-quad intersect<br/>
-			!#zh çº¿æ®µä¸å››è¾¹å½¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh çº¿æ®µä¸????è¾¹å½¢?????¸äº¤??§æ??æµ????
 			@param p A point on a line segment
 			@param q Another point on the line segment
 			@param a Quadrilateral point a
@@ -18525,91 +18525,91 @@ declare namespace cc {
 			static line_quad(p: Vec3, q: Vec3, a: Vec3, b: Vec3, c: Vec3, d: Vec3, outPt: Vec3): number;			
 			/**
 			!#en ray-sphere intersect<br/>
-			!#zh å°„çº¿å’Œçƒçš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh å°?çº¿å??????????¸äº¤??§æ??æµ????
 			@param ray ray
 			@param sphere sphere 
 			*/
 			static ray_sphere(ray: geomUtils.Ray, sphere: geomUtils.Sphere): number;			
 			/**
 			!#en ray-aabb intersect<br/>
-			!#zh å°„çº¿å’Œè½´å¯¹é½åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh å°?çº¿å??è½´å¯¹é½??????´ç???????¸äº¤??§æ??æµ????
 			@param ray ray
 			@param aabb Align the axis around the box 
 			*/
 			static ray_aabb(ray: geomUtils.Ray, aabb: Aabb): number;			
 			/**
 			!#en ray-obb intersect<br/>
-			!#zh å°„çº¿å’Œæ–¹å‘åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh å°?çº¿å????¹å???????´ç???????¸äº¤??§æ??æµ????
 			@param ray ray
 			@param obb Direction box 
 			*/
 			static ray_obb(ray: geomUtils.Ray, obb: geomUtils.Obb): number;			
 			/**
 			!#en aabb-aabb intersect<br/>
-			!#zh è½´å¯¹é½åŒ…å›´ç›’å’Œè½´å¯¹é½åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh è½´å¯¹é½??????´ç?????è½´å¯¹é½??????´ç???????¸äº¤??§æ??æµ????
 			@param aabb1 Axis alignment surrounds box 1
 			@param aabb2 Axis alignment surrounds box 2 
 			*/
 			static aabb_aabb(aabb1: Aabb, aabb2: Aabb): number;			
 			/**
 			!#en aabb-obb intersect<br/>
-			!#zh è½´å¯¹é½åŒ…å›´ç›’å’Œæ–¹å‘åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh è½´å¯¹é½??????´ç???????¹å???????´ç???????¸äº¤??§æ??æµ????
 			@param aabb Align the axis around the box
 			@param obb Direction box 
 			*/
 			static aabb_obb(aabb: Aabb, obb: geomUtils.Obb): number;			
 			/**
 			!#en aabb-plane intersect<br/>
-			!#zh è½´å¯¹é½åŒ…å›´ç›’å’Œå¹³é¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh è½´å¯¹é½??????´ç?????å¹³é?¢ç????¸äº¤??§æ??æµ????
 			@param aabb Align the axis around the box
 			@param plane plane 
 			*/
 			static aabb_plane(aabb: Aabb, plane: geomUtils.Plane): number;			
 			/**
 			!#en aabb-frustum intersect, faster but has false positive corner cases<br/>
-			!#zh è½´å¯¹é½åŒ…å›´ç›’å’Œé”¥å°ç›¸äº¤æ€§æ£€æµ‹ï¼Œé€Ÿåº¦å¿«ï¼Œä½†æœ‰é”™è¯¯æƒ…å†µã€‚
+			!#zh è½´å¯¹é½??????´ç???????¥å?°ç?¸äº¤??§æ??æµ?ï¼????åº¦å¿«ï¼?ä½???????è¯¯æ????µã??
 			@param aabb Align the axis around the box
 			@param frustum frustum 
 			*/
 			static aabb_frustum(aabb: Aabb, frustum: Frustum): number;			
 			/**
 			!#en aabb-frustum intersect, handles most of the false positives correctly<br/>
-			!#zh è½´å¯¹é½åŒ…å›´ç›’å’Œé”¥å°ç›¸äº¤æ€§æ£€æµ‹ï¼Œæ­£ç¡®å¤„ç†å¤§å¤šæ•°é”™è¯¯æƒ…å†µã€‚
+			!#zh è½´å¯¹é½??????´ç???????¥å?°ç?¸äº¤??§æ??æµ?ï¼?æ­?ç¡®å?????å¤§å????°é??è¯¯æ????µã??
 			@param aabb Align the axis around the box
 			@param frustum frustum 
 			*/
 			static aabb_frustum_accurate(aabb: Aabb, frustum: Frustum): number;			
 			/**
 			!#en obb-point intersect<br/>
-			!#zh æ–¹å‘åŒ…å›´ç›’å’Œç‚¹çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ??¹å???????´ç???????¹ç????¸äº¤??§æ??æµ????
 			@param obb Direction box
 			@param point point 
 			*/
 			static obb_point(obb: geomUtils.Obb, point: geomUtils.Vec3): boolean;			
 			/**
 			!#en obb-plane intersect<br/>
-			!#zh æ–¹å‘åŒ…å›´ç›’å’Œå¹³é¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ??¹å???????´ç?????å¹³é?¢ç????¸äº¤??§æ??æµ????
 			@param obb Direction box
 			@param plane plane 
 			*/
 			static obb_plane(obb: geomUtils.Obb, plane: geomUtils.Plane): number;			
 			/**
 			!#en obb-frustum intersect, faster but has false positive corner cases<br/>
-			!#zh æ–¹å‘åŒ…å›´ç›’å’Œé”¥å°ç›¸äº¤æ€§æ£€æµ‹ï¼Œé€Ÿåº¦å¿«ï¼Œä½†æœ‰é”™è¯¯æƒ…å†µã€‚
+			!#zh ??¹å???????´ç???????¥å?°ç?¸äº¤??§æ??æµ?ï¼????åº¦å¿«ï¼?ä½???????è¯¯æ????µã??
 			@param obb Direction box
 			@param frustum frustum 
 			*/
 			static obb_frustum(obb: geomUtils.Obb, frustum: Frustum): number;			
 			/**
 			!#en obb-frustum intersect, handles most of the false positives correctly<br/>
-			!#zh æ–¹å‘åŒ…å›´ç›’å’Œé”¥å°ç›¸äº¤æ€§æ£€æµ‹ï¼Œæ­£ç¡®å¤„ç†å¤§å¤šæ•°é”™è¯¯æƒ…å†µã€‚
+			!#zh ??¹å???????´ç???????¥å?°ç?¸äº¤??§æ??æµ?ï¼?æ­?ç¡®å?????å¤§å????°é??è¯¯æ????µã??
 			@param obb Direction box
 			@param frustum frustum 
 			*/
 			static obb_frustum_accurate(obb: geomUtils.Obb, frustum: Frustum): number;			
 			/**
 			!#en obb-obb intersect<br/>
-			!#zh æ–¹å‘åŒ…å›´ç›’å’Œæ–¹å‘åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ??¹å???????´ç???????¹å???????´ç???????¸äº¤??§æ??æµ????
 			@param obb1 Direction box1
 			@param obb2 Direction box2 
 			*/
@@ -18618,42 +18618,42 @@ declare namespace cc {
 			!#en phere-plane intersect, not necessarily faster than obb-plane<br/>
 			due to the length calculation of the plane normal to factor out<br/>
 			the unnomalized plane distance<br/>
-			!#zh çƒä¸å¹³é¢çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ???ä¸?å¹³é?¢ç????¸äº¤??§æ??æµ????
 			@param sphere sphere
 			@param plane plane 
 			*/
 			static sphere_plane(sphere: geomUtils.Sphere, plane: geomUtils.Plane): number;			
 			/**
 			!#en sphere-frustum intersect, faster but has false positive corner cases<br/>
-			!#zh çƒå’Œé”¥å°çš„ç›¸äº¤æ€§æ£€æµ‹ï¼Œé€Ÿåº¦å¿«ï¼Œä½†æœ‰é”™è¯¯æƒ…å†µã€‚
+			!#zh ????????¥å?°ç????¸äº¤??§æ??æµ?ï¼????åº¦å¿«ï¼?ä½???????è¯¯æ????µã??
 			@param sphere sphere
 			@param frustum frustum 
 			*/
 			static sphere_frustum(sphere: geomUtils.Sphere, frustum: Frustum): number;			
 			/**
 			!#en sphere-frustum intersect, handles the false positives correctly<br/>
-			!#zh çƒå’Œé”¥å°çš„ç›¸äº¤æ€§æ£€æµ‹ï¼Œæ­£ç¡®å¤„ç†å¤§å¤šæ•°é”™è¯¯æƒ…å†µã€‚
+			!#zh ????????¥å?°ç????¸äº¤??§æ??æµ?ï¼?æ­?ç¡®å?????å¤§å????°é??è¯¯æ????µã??
 			@param sphere sphere
 			@param frustum frustum 
 			*/
 			static sphere_frustum_accurate(sphere: geomUtils.Sphere, frustum: Frustum): number;			
 			/**
 			!#en sphere-sphere intersect<br/>
-			!#zh çƒå’Œçƒçš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ??????????????¸äº¤??§æ??æµ????
 			@param sphere0 sphere0
 			@param sphere1 sphere1 
 			*/
 			static sphere_sphere(sphere0: geomUtils.Sphere, sphere1: geomUtils.Sphere): boolean;			
 			/**
 			!#en sphere-aabb intersect<br/>
-			!#zh çƒå’Œè½´å¯¹é½åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ??????è½´å¯¹é½??????´ç???????¸äº¤??§æ??æµ????
 			@param sphere sphere
 			@param aabb aabb 
 			*/
 			static sphere_aabb(sphere: geomUtils.Sphere, aabb: Aabb): boolean;			
 			/**
 			!#en sphere-obb intersect<br/>
-			!#zh çƒå’Œæ–¹å‘åŒ…å›´ç›’çš„ç›¸äº¤æ€§æ£€æµ‹ã€‚
+			!#zh ????????¹å???????´ç???????¸äº¤??§æ??æµ????
 			@param sphere sphere
 			@param obb obb 
 			*/
@@ -18662,7 +18662,7 @@ declare namespace cc {
 			!#en
 			The intersection detection of g1 and g2 can fill in the shape in the basic geometry.
 			!#zh
-			g1 å’Œ g2 çš„ç›¸äº¤æ€§æ£€æµ‹ï¼Œå¯å¡«å…¥åŸºç¡€å‡ ä½•ä¸­çš„å½¢çŠ¶ã€‚
+			g1 ??? g2 ?????¸äº¤??§æ??æµ?ï¼???¯å¡«??¥å?ºç?????ä½?ä¸­ç??å½¢ç?¶ã??
 			@param g1 Geometry 1
 			@param g2 Geometry 2
 			@param outPt optional, Intersection point. (note: only partial shape detection with this return value) 
@@ -18679,13 +18679,13 @@ declare namespace cc {
 		/** !#en
 		line
 		!#zh
-		ç›´çº¿ */
+		??´çº¿ */
 		export class Line {			
 			/**
 			!#en
 			create a new line
 			!#zh
-			åˆ›å»ºä¸€ä¸ªæ–°çš„ lineã€‚
+			???å»ºä??ä¸ªæ?°ç?? line???
 			@param sx The x part of the starting point.
 			@param sy The y part of the starting point.
 			@param sz The z part of the starting point.
@@ -18698,7 +18698,7 @@ declare namespace cc {
 			!#en
 			Creates a new line initialized with values from an existing line
 			!#zh
-			å…‹éš†ä¸€ä¸ªæ–°çš„ lineã€‚
+			??????ä¸?ä¸ªæ?°ç?? line???
 			@param a The source of cloning. 
 			*/
 			clone(a: Line): Line;			
@@ -18706,7 +18706,7 @@ declare namespace cc {
 			!#en
 			Copy the values from one line to another
 			!#zh
-			å¤åˆ¶ä¸€ä¸ªçº¿çš„å€¼åˆ°å¦ä¸€ä¸ªã€‚
+			å¤???¶ä??ä¸ªçº¿?????¼å?°å?¦ä??ä¸ªã??
 			@param out The object that accepts the action.
 			@param a The source of the copy. 
 			*/
@@ -18715,7 +18715,7 @@ declare namespace cc {
 			!#en
 			create a line from two points
 			!#zh
-			ç”¨ä¸¤ä¸ªç‚¹åˆ›å»ºä¸€ä¸ªçº¿ã€‚
+			??¨ä¸¤ä¸ªç?¹å??å»ºä??ä¸ªçº¿???
 			@param out The object that accepts the action.
 			@param start The starting point.
 			@param end At the end. 
@@ -18725,7 +18725,7 @@ declare namespace cc {
 			!#en
 			Set the components of a Vec3 to the given values
 			!#zh
-			å°†ç»™å®šçº¿çš„å±æ€§è®¾ç½®ä¸ºç»™å®šå€¼ã€‚
+			å°?ç»?å®?çº¿ç??å±???§è®¾ç½®ä¸ºç»?å®???¼ã??
 			@param out The object that accepts the action.
 			@param sx The x part of the starting point.
 			@param sy The y part of the starting point.
@@ -18739,25 +18739,25 @@ declare namespace cc {
 			!#en
 			Calculate the length of the line.
 			!#zh
-			è®¡ç®—çº¿çš„é•¿åº¦ã€‚
+			è®¡ç??çº¿ç????¿åº¦???
 			@param a The line to calculate. 
 			*/
 			len(a: Line): number;			
 			/** !#en
 			Start points.
 			!#zh
-			èµ·ç‚¹ã€‚ */
+			èµ·ç?¹ã?? */
 			s: Vec3;			
 			/** !#en
 			End points.
 			!#zh
-			ç»ˆç‚¹ã€‚ */
+			ç»???¹ã?? */
 			e: Vec3;			
 			/**
 			!#en
 			Calculate the length of the line.
 			!#zh
-			è®¡ç®—çº¿çš„é•¿åº¦ã€‚ 
+			è®¡ç??çº¿ç????¿åº¦??? 
 			*/
 			length(): number;		
 		}	
@@ -18770,16 +18770,16 @@ declare namespace cc {
 	export namespace geomUtils {		
 		/** !#en obb
 		!#zh
-		åŸºç¡€å‡ ä½•  æ–¹å‘åŒ…å›´ç›’ã€‚ */
+		??ºç?????ä½?  ??¹å???????´ç????? */
 		export class Obb {			
 			/** !#zh
-			è·å–å½¢çŠ¶çš„ç±»å‹ã€‚ */
+			??·å??å½¢ç?¶ç??ç±»å????? */
 			type: number;			
 			/**
 			!#en
 			create a new obb
 			!#zh
-			åˆ›å»ºä¸€ä¸ªæ–°çš„ obb å®ä¾‹ã€‚
+			???å»ºä??ä¸ªæ?°ç?? obb å®?ä¾????
 			@param cx X coordinates of the shape relative to the origin.
 			@param cy Y coordinates of the shape relative to the origin.
 			@param cz Z coordinates of the shape relative to the origin.
@@ -18801,7 +18801,7 @@ declare namespace cc {
 			!#en
 			clone a new obb
 			!#zh
-			å…‹éš†ä¸€ä¸ª obbã€‚
+			??????ä¸?ä¸? obb???
 			@param a The target of cloning. 
 			*/
 			clone(a: Obb): Obb;			
@@ -18809,7 +18809,7 @@ declare namespace cc {
 			!#en
 			copy the values from one obb to another
 			!#zh
-			å°†ä»ä¸€ä¸ª obb çš„å€¼å¤åˆ¶åˆ°å¦ä¸€ä¸ª obbã€‚
+			å°?ä»?ä¸?ä¸? obb ?????¼å????¶å?°å?¦ä??ä¸? obb???
 			@param out Obb that accepts the operation.
 			@param a Obb being copied. 
 			*/
@@ -18818,7 +18818,7 @@ declare namespace cc {
 			!#en
 			create a new obb from two corner points
 			!#zh
-			ç”¨ä¸¤ä¸ªç‚¹åˆ›å»ºä¸€ä¸ªæ–°çš„ obbã€‚
+			??¨ä¸¤ä¸ªç?¹å??å»ºä??ä¸ªæ?°ç?? obb???
 			@param out Obb that accepts the operation.
 			@param minPos The smallest point of obb.
 			@param maxPos Obb's maximum point. 
@@ -18828,7 +18828,7 @@ declare namespace cc {
 			!#en
 			Set the components of a obb to the given values
 			!#zh
-			å°†ç»™å®š obb çš„å±æ€§è®¾ç½®ä¸ºç»™å®šçš„å€¼ã€‚
+			å°?ç»?å®? obb ???å±???§è®¾ç½®ä¸ºç»?å®??????¼ã??
 			@param cx X coordinates of the shape relative to the origin.
 			@param cy Y coordinates of the shape relative to the origin.
 			@param cz Z coordinates of the shape relative to the origin.
@@ -18849,23 +18849,23 @@ declare namespace cc {
 			/** !#en
 			The center of the local coordinate.
 			!#zh
-			æœ¬åœ°åæ ‡çš„ä¸­å¿ƒç‚¹ã€‚ */
+			??¬å?°å????????ä¸­å????¹ã?? */
 			center: Vec3;			
 			/** !#en
 			Half the length, width, and height.
 			!#zh
-			é•¿å®½é«˜çš„ä¸€åŠã€‚ */
+			??¿å®½é«????ä¸??????? */
 			halfExtents: Vec3;			
 			/** !#en
 			Direction matrix.
 			!#zh
-			æ–¹å‘çŸ©é˜µã€‚ */
+			??¹å????©é?µã?? */
 			orientation: Mat3;			
 			/**
 			!#en
 			Get the bounding points of this shape
 			!#zh
-			è·å– obb çš„æœ€å°ç‚¹å’Œæœ€å¤§ç‚¹ã€‚
+			??·å?? obb ??????å°???¹å?????å¤§ç?¹ã??
 			@param minPos minPos
 			@param maxPos maxPos 
 			*/
@@ -18873,7 +18873,7 @@ declare namespace cc {
 			/**
 			!#en Transform this shape
 			!#zh
-			å°† out æ ¹æ®è¿™ä¸ª obb çš„æ•°æ®è¿›è¡Œå˜æ¢ã€‚
+			å°? out ??¹æ?®è??ä¸? obb ?????°æ?®è??è¡??????¢ã??
 			@param m The transformation matrix.
 			@param pos The position part of the transformation.
 			@param rot The rotating part of the transformation.
@@ -18885,7 +18885,7 @@ declare namespace cc {
 			!#en
 			Transform out based on this obb data.
 			!#zh
-			å°† out æ ¹æ®è¿™ä¸ª obb çš„æ•°æ®è¿›è¡Œå˜æ¢ã€‚
+			å°? out ??¹æ?®è??ä¸? obb ?????°æ?®è??è¡??????¢ã??
 			@param m The transformation matrix.
 			@param rot The rotating part of the transformation.
 			@param out Target of transformation. 
@@ -18895,7 +18895,7 @@ declare namespace cc {
 			!#en
 			Scale out based on this obb data.
 			!#zh
-			å°† out æ ¹æ®è¿™ä¸ª obb çš„æ•°æ®è¿›è¡Œç¼©æ”¾ã€‚
+			å°? out ??¹æ?®è??ä¸? obb ?????°æ?®è??è¡?ç¼©æ?¾ã??
 			@param scale Scale value.
 			@param out Scaled target. 
 			*/
@@ -18909,15 +18909,15 @@ declare namespace cc {
 	
 	export namespace geomUtils {		
 		/** !#en
-		planeã€‚
+		plane???
 		!#zh
-		å¹³é¢ã€‚ */
+		å¹³é?¢ã?? */
 		export class Plane {			
 			/**
 			!#en
 			create a new plane
 			!#zh
-			åˆ›å»ºä¸€ä¸ªæ–°çš„ planeã€‚
+			???å»ºä??ä¸ªæ?°ç?? plane???
 			@param nx The x part of the normal component.
 			@param ny The y part of the normal component.
 			@param nz The z part of the normal component.
@@ -18928,7 +18928,7 @@ declare namespace cc {
 			!#en
 			clone a new plane
 			!#zh
-			å…‹éš†ä¸€ä¸ªæ–°çš„ planeã€‚
+			??????ä¸?ä¸ªæ?°ç?? plane???
 			@param p The source of cloning. 
 			*/
 			clone(p: Plane): Plane;			
@@ -18936,7 +18936,7 @@ declare namespace cc {
 			!#en
 			copy the values from one plane to another
 			!#zh
-			å¤åˆ¶ä¸€ä¸ªå¹³é¢çš„å€¼åˆ°å¦ä¸€ä¸ªã€‚
+			å¤???¶ä??ä¸ªå¹³??¢ç????¼å?°å?¦ä??ä¸ªã??
 			@param out The object that accepts the action.
 			@param p The source of the copy. 
 			*/
@@ -18945,18 +18945,18 @@ declare namespace cc {
 			!#en
 			create a plane from three points
 			!#zh
-			ç”¨ä¸‰ä¸ªç‚¹åˆ›å»ºä¸€ä¸ªå¹³é¢ã€‚
+			??¨ä??ä¸ªç?¹å??å»ºä??ä¸ªå¹³??¢ã??
 			@param out The object that accepts the action.
-			@param a Point aã€‚
-			@param b Point bã€‚
-			@param c Point cã€‚ 
+			@param a Point a???
+			@param b Point b???
+			@param c Point c??? 
 			*/
 			fromPoints(out: Plane, a: Vec3, b: Vec3, c: Vec3): Plane;			
 			/**
 			!#en
 			Set the components of a plane to the given values
 			!#zh
-			å°†ç»™å®šå¹³é¢çš„å±æ€§è®¾ç½®ä¸ºç»™å®šå€¼ã€‚
+			å°?ç»?å®?å¹³é?¢ç??å±???§è®¾ç½®ä¸ºç»?å®???¼ã??
 			@param out The object that accepts the action.
 			@param nx The x part of the normal component.
 			@param ny The y part of the normal component.
@@ -18968,7 +18968,7 @@ declare namespace cc {
 			!#en
 			create plane from normal and point
 			!#zh
-			ç”¨ä¸€æ¡æ³•çº¿å’Œä¸€ä¸ªç‚¹åˆ›å»ºå¹³é¢ã€‚
+			??¨ä????¡æ??çº¿å??ä¸?ä¸ªç?¹å??å»ºå¹³??¢ã??
 			@param out The object that accepts the action.
 			@param normal The normal of a plane.
 			@param point A point on the plane. 
@@ -18978,7 +18978,7 @@ declare namespace cc {
 			!#en
 			normalize a plane
 			!#zh
-			å½’ä¸€åŒ–ä¸€ä¸ªå¹³é¢ã€‚
+			å½?ä¸????ä¸?ä¸ªå¹³??¢ã??
 			@param out The object that accepts the action.
 			@param a Source data for operations. 
 			*/
@@ -18986,18 +18986,18 @@ declare namespace cc {
 			/** !#en
 			A normal vector.
 			!#zh
-			æ³•çº¿å‘é‡ã€‚ */
+			æ³?çº¿å???????? */
 			n: Vec3;			
 			/** !#en
 			The distance from the origin to the plane.
 			!#zh
-			åŸç‚¹åˆ°å¹³é¢çš„è·ç¦»ã€‚ */
+			?????¹å?°å¹³??¢ç??è·?ç¦»ã?? */
 			d: number;			
 			/**
 			!#en
 			Transform a plane.
 			!#zh
-			å˜æ¢ä¸€ä¸ªå¹³é¢ã€‚
+			?????¢ä??ä¸ªå¹³??¢ã??
 			@param mat mat 
 			*/
 			transform(mat: Mat4): void;		
@@ -19012,13 +19012,13 @@ declare namespace cc {
 		/** !#en
 		ray
 		!#zh
-		å°„çº¿ã€‚ */
+		å°?çº¿ã?? */
 		export class Ray {			
 			/**
 			!#en
 			create a new ray
 			!#zh
-			åˆ›å»ºä¸€æ¡å°„çº¿ã€‚
+			???å»ºä????¡å??çº¿ã??
 			@param ox The x part of the starting point.
 			@param oy The y part of the starting point.
 			@param oz The z part of the starting point.
@@ -19031,7 +19031,7 @@ declare namespace cc {
 			!#en
 			Creates a new ray initialized with values from an existing ray
 			!#zh
-			ä»ä¸€æ¡å°„çº¿å…‹éš†å‡ºä¸€æ¡æ–°çš„å°„çº¿ã€‚
+			ä»?ä¸???¡å??çº¿å???????ºä????¡æ?°ç??å°?çº¿ã??
 			@param a Clone target 
 			*/
 			clone(a: Ray): Ray;			
@@ -19039,7 +19039,7 @@ declare namespace cc {
 			!#en
 			Copy the values from one ray to another
 			!#zh
-			å°†ä»ä¸€ä¸ª ray çš„å€¼å¤åˆ¶åˆ°å¦ä¸€ä¸ª rayã€‚
+			å°?ä»?ä¸?ä¸? ray ?????¼å????¶å?°å?¦ä??ä¸? ray???
 			@param out Accept the ray of the operation.
 			@param a Copied ray. 
 			*/
@@ -19048,7 +19048,7 @@ declare namespace cc {
 			!#en
 			create a ray from two points
 			!#zh
-			ç”¨ä¸¤ä¸ªç‚¹åˆ›å»ºä¸€æ¡å°„çº¿ã€‚
+			??¨ä¸¤ä¸ªç?¹å??å»ºä????¡å??çº¿ã??
 			@param out Receive the operating ray.
 			@param origin Origin of ray
 			@param target A point on a ray. 
@@ -19058,7 +19058,7 @@ declare namespace cc {
 			!#en
 			Set the components of a ray to the given values
 			!#zh
-			å°†ç»™å®šå°„çº¿çš„å±æ€§è®¾ç½®ä¸ºç»™å®šçš„å€¼ã€‚
+			å°?ç»?å®?å°?çº¿ç??å±???§è®¾ç½®ä¸ºç»?å®??????¼ã??
 			@param out Receive the operating ray.
 			@param ox The x part of the starting point.
 			@param oy The y part of the starting point.
@@ -19071,12 +19071,12 @@ declare namespace cc {
 			/** !#en
 			Start point.
 			!#zh
-			èµ·ç‚¹ã€‚ */
+			èµ·ç?¹ã?? */
 			o: Vec3;			
 			/** !#e
 			Direction
 			!#zh
-			æ–¹å‘ã€‚ */
+			??¹å????? */
 			d: Vec3;			
 			/**
 			!#en Compute hit.
@@ -19095,13 +19095,13 @@ declare namespace cc {
 		/** !#en
 		Sphere.
 		!#zh
-		è½´å¯¹é½çƒã€‚ */
+		è½´å¯¹é½??????? */
 		export class Sphere {			
 			/**
 			!#en
 			create a new sphere
 			!#zh
-			åˆ›å»ºä¸€ä¸ªæ–°çš„ sphere å®ä¾‹ã€‚
+			???å»ºä??ä¸ªæ?°ç?? sphere å®?ä¾????
 			@param cx X coordinates of the shape relative to the origin.
 			@param cy Y coordinates of the shape relative to the origin.
 			@param cz Z coordinates of the shape relative to the origin.
@@ -19112,7 +19112,7 @@ declare namespace cc {
 			!#en
 			clone a new sphere
 			!#zh
-			å…‹éš†ä¸€ä¸ªæ–°çš„ sphere å®ä¾‹ã€‚
+			??????ä¸?ä¸ªæ?°ç?? sphere å®?ä¾????
 			@param p The target of cloning. 
 			*/
 			clone(p: Sphere): Sphere;			
@@ -19120,7 +19120,7 @@ declare namespace cc {
 			!#en
 			copy the values from one sphere to another
 			!#zh
-			å°†ä»ä¸€ä¸ª sphere çš„å€¼å¤åˆ¶åˆ°å¦ä¸€ä¸ª sphereã€‚
+			å°?ä»?ä¸?ä¸? sphere ?????¼å????¶å?°å?¦ä??ä¸? sphere???
 			@param out Accept the sphere of operations.
 			@param a Sphere being copied. 
 			*/
@@ -19129,7 +19129,7 @@ declare namespace cc {
 			!#en
 			create a new bounding sphere from two corner points
 			!#zh
-			ä»ä¸¤ä¸ªç‚¹åˆ›å»ºä¸€ä¸ªæ–°çš„ sphereã€‚
+			ä»?ä¸¤ä¸ª??¹å??å»ºä??ä¸ªæ?°ç?? sphere???
 			@param out Accept the sphere of operations.
 			@param minPos The smallest point of sphere.
 			@param maxPos The maximum point of sphere. 
@@ -19137,7 +19137,7 @@ declare namespace cc {
 			fromPoints(out: any, minPos: any, maxPos: any): Sphere;			
 			/**
 			!#en Set the components of a sphere to the given values
-			!#zh å°†çƒä½“çš„å±æ€§è®¾ç½®ä¸ºç»™å®šçš„å€¼ã€‚
+			!#zh å°????ä½????å±???§è®¾ç½®ä¸ºç»?å®??????¼ã??
 			@param out Accept the sphere of operations.
 			@param cx X coordinates of the shape relative to the origin.
 			@param cy Y coordinates of the shape relative to the origin.
@@ -19148,23 +19148,23 @@ declare namespace cc {
 			/** !#en
 			The center of the local coordinate.
 			!#zh
-			æœ¬åœ°åæ ‡çš„ä¸­å¿ƒç‚¹ã€‚ */
+			??¬å?°å????????ä¸­å????¹ã?? */
 			center: Vec3;			
 			/** !#zh
-			åŠå¾„ã€‚ */
+			???å¾???? */
 			radius: number;			
 			/**
 			!#en
 			Clone.
 			!#zh
-			è·å¾—å…‹éš†ã€‚ 
+			??·å??????????? 
 			*/
 			clone(): void;			
 			/**
 			!#en
 			Copy sphere
 			!#zh
-			æ‹·è´å¯¹è±¡ã€‚
+			??·è??å¯¹è±¡???
 			@param a Copy target. 
 			*/
 			copy(a: any): void;			
@@ -19172,7 +19172,7 @@ declare namespace cc {
 			!#en
 			Get the bounding points of this shape
 			!#zh
-			è·å–æ­¤å½¢çŠ¶çš„è¾¹ç•Œç‚¹ã€‚
+			??·å??æ­¤å½¢??¶ç??è¾¹ç????¹ã??
 			@param minPos minPos
 			@param maxPos maxPos 
 			*/
@@ -19181,7 +19181,7 @@ declare namespace cc {
 			!#en
 			Transform this shape
 			!#zh
-			å°† out æ ¹æ®è¿™ä¸ª sphere çš„æ•°æ®è¿›è¡Œå˜æ¢ã€‚
+			å°? out ??¹æ?®è??ä¸? sphere ?????°æ?®è??è¡??????¢ã??
 			@param m The transformation matrix.
 			@param pos The position part of the transformation.
 			@param rot The rotating part of the transformation.
@@ -19193,7 +19193,7 @@ declare namespace cc {
 			!#en
 			Scale out based on the sphere data.
 			!#zh
-			å°† out æ ¹æ®è¿™ä¸ª sphere çš„æ•°æ®è¿›è¡Œç¼©æ”¾ã€‚
+			å°? out ??¹æ?®è??ä¸? sphere ?????°æ?®è??è¡?ç¼©æ?¾ã??
 			@param scale Scale value
 			@param out Scale target 
 			*/
@@ -19267,7 +19267,7 @@ declare namespace cc {
 	export namespace MeshRenderer {		
 		/** !#en Shadow projection mode
 		
-		!#ch é˜´å½±æŠ•å°„æ–¹å¼ */
+		!#ch ??´å½±???å°???¹å?? */
 		export enum ShadowCastingMode {			
 			OFF = 0,
 			ON = 0,		
@@ -19280,7 +19280,7 @@ declare namespace cc {
 	
 	export namespace Graphics {		
 		/** !#en Enum for LineCap.
-		!#zh çº¿æ®µæœ«ç«¯å±æ€§ */
+		!#zh çº¿æ®µ??«ç«¯å±???? */
 		export enum LineCap {			
 			BUTT = 0,
 			ROUND = 0,
@@ -19294,7 +19294,7 @@ declare namespace cc {
 	
 	export namespace Graphics {		
 		/** !#en Enum for LineJoin.
-		!#zh çº¿æ®µæ‹è§’å±æ€§ */
+		!#zh çº¿æ®µ???è§?å±???? */
 		export enum LineJoin {			
 			BEVEL = 0,
 			ROUND = 0,
@@ -19308,7 +19308,7 @@ declare namespace cc {
 	
 	export namespace macro {		
 		/** !#en Key map for keyboard event
-		!#zh é”®ç›˜äº‹ä»¶çš„æŒ‰é”®å€¼ */
+		!#zh ??®ç??äº?ä»¶ç???????®å?? */
 		export enum KEY {			
 			none = 0,
 			back = 0,
@@ -19444,8 +19444,8 @@ declare namespace cc {
 		Enum for blend factor
 		Refer to: http://www.andersriggelsen.dk/glblendfunc.php
 		!#zh
-		æ··åˆå› å­
-		å¯å‚è€ƒ: http://www.andersriggelsen.dk/glblendfunc.php */
+		æ··å?????å­?
+		??¯å?????: http://www.andersriggelsen.dk/glblendfunc.php */
 		export enum BlendFactor {			
 			ONE = 0,
 			ZERO = 0,
@@ -19481,7 +19481,7 @@ declare namespace cc {
 		/** !#en
 		Network type enumeration
 		!#zh
-		ç½‘ç»œç±»å‹æšä¸¾ */
+		ç½?ç»?ç±»å?????ä¸? */
 		export enum NetworkType {			
 			NONE = 0,
 			LAN = 0,
@@ -19506,7 +19506,7 @@ declare namespace cc {
 		 cc.PhysicsManager.DrawBits.e_shapeBit;
 		```
 		!#zh
-		æŒ‡å®šç‰©ç†ç³»ç»Ÿéœ€è¦ç»˜åˆ¶å“ªäº›è°ƒè¯•ä¿¡æ¯ã€‚<br>
+		???å®???©ç??ç³»ç?????è¦?ç»???¶å?ªä??è°?è¯?ä¿¡æ?¯ã??<br>
 		example:<br>
 		```js
 		cc.director.getPhysicsManager().debugDrawFlags =
@@ -19529,7 +19529,7 @@ declare namespace cc {
 	
 	export namespace AnimationCurve {		
 		/** !#en The wrap mode
-		!#zh å¾ªç¯æ¨¡å¼ */
+		!#zh å¾ªç?¯æ¨¡å¼? */
 		export enum WrapMode {			
 			Default = 0,
 			Once = 0,
@@ -19558,7 +19558,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace ParticleSystem3DAssembler {		
-		/** ç²’å­çš„ç”Ÿæˆæ¨¡å¼ */
+		/** ç²?å­??????????æ¨¡å?? */
 		export enum RenderMode {					
 		}	
 	}
@@ -19568,7 +19568,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace shapeModule {		
-		/** ç²’å­å‘å°„å™¨ç±»å‹ */
+		/** ç²?å­????å°???¨ç±»??? */
 		export enum ShapeType {			
 			Box = 0,
 			Circle = 0,
@@ -19583,7 +19583,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace shapeModule {		
-		/** ç²’å­ä»å‘å°„å™¨çš„å“ªä¸ªéƒ¨ä½å‘å°„ */
+		/** ç²?å­?ä»????å°???¨ç????ªä¸ª??¨ä?????å°? */
 		export enum EmitLocation {			
 			Base = 0,
 			Edge = 0,
@@ -19597,7 +19597,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace shapeModule {		
-		/** ç²’å­åœ¨æ‰‡å½¢åŒºåŸŸçš„å‘å°„æ–¹å¼ */
+		/** ç²?å­???¨æ??å½¢å?ºå????????å°???¹å?? */
 		export enum ArcMode {			
 			Random = 0,
 			Loop = 0,
@@ -19610,7 +19610,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace trailModule {		
-		/** é€‰æ‹©å¦‚ä½•ä¸ºç²’å­ç³»ç»Ÿç”Ÿæˆè½¨è¿¹ */
+		/** ?????©å??ä½?ä¸ºç??å­?ç³»ç????????è½¨è¿¹ */
 		export enum TrailMode {					
 		}	
 	}
@@ -19620,7 +19620,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace trailModule {		
-		/** çº¹ç†å¡«å……æ¨¡å¼ */
+		/** çº¹ç??å¡«å??æ¨¡å?? */
 		export enum TextureMode {					
 		}	
 	}
@@ -19673,7 +19673,7 @@ declare namespace cc {
 	
 	export namespace Material {		
 		/** !#en Material builtin name
-		!#zh å†…ç½®æè´¨åå­— */
+		!#zh ???ç½®æ??è´¨å??å­? */
 		export enum BUILTIN_NAME {			
 			SPRITE = 0,
 			GRAY_SPRITE = 0,
@@ -19687,7 +19687,7 @@ declare namespace cc {
 	
 	export namespace EditBox {		
 		/** !#en Enum for keyboard return types
-		!#zh é”®ç›˜çš„è¿”å›é”®ç±»å‹ */
+		!#zh ??®ç?????è¿??????®ç±»??? */
 		export enum KeyboardReturnType {			
 			DEFAULT = 0,
 			DONE = 0,
@@ -19704,7 +19704,7 @@ declare namespace cc {
 	
 	export namespace EditBox {		
 		/** !#en The EditBox's InputMode defines the type of text that the user is allowed to enter.
-		!#zh è¾“å…¥æ¨¡å¼ */
+		!#zh è¾???¥æ¨¡å¼? */
 		export enum InputMode {			
 			ANY = 0,
 			EMAIL_ADDR = 0,
@@ -19722,7 +19722,7 @@ declare namespace cc {
 	
 	export namespace EditBox {		
 		/** !#en Enum for the EditBox's input flags
-		!#zh å®šä¹‰äº†ä¸€äº›ç”¨äºè®¾ç½®æ–‡æœ¬æ˜¾ç¤ºå’Œæ–‡æœ¬æ ¼å¼åŒ–çš„æ ‡å¿—ä½ã€‚ */
+		!#zh å®?ä¹?äº?ä¸?äº???¨ä??è®¾ç½®?????¬æ?¾ç¤º????????¬æ?¼å???????????å¿?ä½???? */
 		export enum InputFlag {			
 			PASSWORD = 0,
 			SENSITIVE = 0,
@@ -19738,7 +19738,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace textureAnimationModule {		
-		/** ç²’å­è´´å›¾åŠ¨ç”»ç±»å‹ */
+		/** ç²?å­?è´´å?¾å?¨ç?»ç±»??? */
 		export enum Mode {					
 		}	
 	}
@@ -19748,7 +19748,7 @@ declare namespace cc {
 	*****************************************************/
 	
 	export namespace textureAnimationModule {		
-		/** è´´å›¾åŠ¨ç”»çš„æ’­æ”¾æ–¹å¼ */
+		/** è´´å?¾å?¨ç?»ç????­æ?¾æ?¹å?? */
 		export enum Animation {					
 		}	
 	}
@@ -19759,8 +19759,8 @@ declare namespace cc {
 The global main namespace of Spine, all classes, functions,
 properties and constants of Spine are defined in this namespace
 !#zh
-Spine çš„å…¨å±€çš„å‘½åç©ºé—´ï¼Œ
-ä¸ Spine ç›¸å…³çš„æ‰€æœ‰çš„ç±»ï¼Œå‡½æ•°ï¼Œå±æ€§ï¼Œå¸¸é‡éƒ½åœ¨è¿™ä¸ªå‘½åç©ºé—´ä¸­å®šä¹‰ã€‚ */
+Spine ?????¨å???????½å??ç©ºé?´ï??
+ä¸? Spine ??¸å?³ç???????????ç±»ï????½æ?°ï??å±???§ï??å¸¸é????½å?¨è??ä¸ªå?½å??ç©ºé?´ä¸­å®?ä¹???? */
 declare namespace sp {	
 	/** !#en
 	The skeleton of Spine <br/>
@@ -19769,74 +19769,74 @@ declare namespace sp {
 	which consists of the current pose's bone SRT, slot colors, and which slot attachments are visible. <br/>
 	Multiple skeletons can use the same SkeletonData which includes all animations, skins, and attachments.) <br/>
 	!#zh
-	Spine éª¨éª¼åŠ¨ç”» <br/>
+	Spine éª¨éª¼??¨ç?? <br/>
 	<br/>
-	(Skeleton å…·æœ‰å¯¹éª¨éª¼æ•°æ®çš„å¼•ç”¨å¹¶ä¸”å­˜å‚¨äº†éª¨éª¼å®ä¾‹çš„çŠ¶æ€ï¼Œ
-	å®ƒç”±å½“å‰çš„éª¨éª¼åŠ¨ä½œï¼Œslot é¢œè‰²ï¼Œå’Œå¯è§çš„ slot attachments ç»„æˆã€‚<br/>
-	å¤šä¸ª Skeleton å¯ä»¥ä½¿ç”¨ç›¸åŒçš„éª¨éª¼æ•°æ®ï¼Œå…¶ä¸­åŒ…æ‹¬æ‰€æœ‰çš„åŠ¨ç”»ï¼Œçš®è‚¤å’Œ attachmentsã€‚ */
+	(Skeleton ??·æ??å¯¹éª¨éª¼æ?°æ?®ç??å¼???¨å¹¶ä¸?å­???¨ä??éª¨éª¼å®?ä¾??????¶æ??ï¼?
+	å®???±å????????éª¨éª¼??¨ä??ï¼?slot é¢???²ï???????¯è????? slot attachments ç»???????<br/>
+	å¤?ä¸? Skeleton ??¯ä»¥ä½¿ç?¨ç?¸å?????éª¨éª¼??°æ?®ï????¶ä¸­?????¬æ??????????¨ç?»ï????®è?¤å?? attachments??? */
 	export class Skeleton extends cc.RenderComponent {		
 		/** !#en The skeletal animation is paused?
-		!#zh è¯¥éª¨éª¼åŠ¨ç”»æ˜¯å¦æš‚åœã€‚ */
+		!#zh è¯¥éª¨éª¼å?¨ç?»æ?¯å?¦æ???????? */
 		paused: boolean;		
 		/** !#en
 		The skeleton data contains the skeleton information (bind pose bones, slots, draw order,
 		attachments, skins, etc) and animations but does not hold any state.<br/>
 		Multiple skeletons can share the same skeleton data.
 		!#zh
-		éª¨éª¼æ•°æ®åŒ…å«äº†éª¨éª¼ä¿¡æ¯ï¼ˆç»‘å®šéª¨éª¼åŠ¨ä½œï¼Œslotsï¼Œæ¸²æŸ“é¡ºåºï¼Œ
-		attachmentsï¼Œçš®è‚¤ç­‰ç­‰ï¼‰å’ŒåŠ¨ç”»ä½†ä¸æŒæœ‰ä»»ä½•çŠ¶æ€ã€‚<br/>
-		å¤šä¸ª Skeleton å¯ä»¥å…±ç”¨ç›¸åŒçš„éª¨éª¼æ•°æ®ã€‚ */
+		éª¨éª¼??°æ?®å????«ä??éª¨éª¼ä¿¡æ?¯ï??ç»?å®?éª¨éª¼??¨ä??ï¼?slotsï¼?æ¸²æ??é¡ºå??ï¼?
+		attachmentsï¼???®è?¤ç??ç­?ï¼??????¨ç?»ä??ä¸???????ä»»ä????¶æ?????<br/>
+		å¤?ä¸? Skeleton ??¯ä»¥??±ç?¨ç?¸å?????éª¨éª¼??°æ?®ã?? */
 		skeletonData: SkeletonData;		
 		/** !#en The name of default skin.
-		!#zh é»˜è®¤çš„çš®è‚¤åç§°ã€‚ */
+		!#zh é»?è®¤ç????®è?¤å??ç§°ã?? */
 		defaultSkin: string;		
 		/** !#en The name of default animation.
-		!#zh é»˜è®¤çš„åŠ¨ç”»åç§°ã€‚ */
+		!#zh é»?è®¤ç????¨ç?»å??ç§°ã?? */
 		defaultAnimation: string;		
 		/** !#en The name of current playing animation.
-		!#zh å½“å‰æ’­æ”¾çš„åŠ¨ç”»åç§°ã€‚ */
+		!#zh å½??????­æ?¾ç????¨ç?»å??ç§°ã?? */
 		animation: string;		
 		_defaultSkinIndex: number;		
 		/** !#en TODO
-		!#zh æ˜¯å¦å¾ªç¯æ’­æ”¾å½“å‰éª¨éª¼åŠ¨ç”»ã€‚ */
+		!#zh ??¯å?¦å¾ª??¯æ?­æ?¾å?????éª¨éª¼??¨ç?»ã?? */
 		loop: boolean;		
 		/** !#en Indicates whether to enable premultiplied alpha.
 		You should disable this option when image's transparent area appears to have opaque pixels,
 		or enable this option when image's half transparent area appears to be darken.
-		!#zh æ˜¯å¦å¯ç”¨è´´å›¾é¢„ä¹˜ã€‚
-		å½“å›¾ç‰‡çš„é€æ˜åŒºåŸŸå‡ºç°è‰²å—æ—¶éœ€è¦å…³é—­è¯¥é€‰é¡¹ï¼Œå½“å›¾ç‰‡çš„åŠé€æ˜åŒºåŸŸé¢œè‰²å˜é»‘æ—¶éœ€è¦å¯ç”¨è¯¥é€‰é¡¹ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨è´´??¾é??ä¹????
+		å½???¾ç?????????????ºå????ºç?°è?²å????¶é??è¦???³é?­è¯¥???é¡¹ï??å½???¾ç????????????????ºå??é¢???²å??é»???¶é??è¦???¯ç?¨è¯¥???é¡¹ã?? */
 		premultipliedAlpha: boolean;		
 		/** !#en The time scale of this skeleton.
-		!#zh å½“å‰éª¨éª¼ä¸­æ‰€æœ‰åŠ¨ç”»çš„æ—¶é—´ç¼©æ”¾ç‡ã€‚ */
+		!#zh å½????éª¨éª¼ä¸­æ???????¨ç?»ç????¶é?´ç¼©??¾ç????? */
 		timeScale: number;		
 		/** !#en Indicates whether open debug slots.
-		!#zh æ˜¯å¦æ˜¾ç¤º slot çš„ debug ä¿¡æ¯ã€‚ */
+		!#zh ??¯å?¦æ?¾ç¤º slot ??? debug ä¿¡æ?¯ã?? */
 		debugSlots: boolean;		
 		/** !#en Indicates whether open debug bones.
-		!#zh æ˜¯å¦æ˜¾ç¤º bone çš„ debug ä¿¡æ¯ã€‚ */
+		!#zh ??¯å?¦æ?¾ç¤º bone ??? debug ä¿¡æ?¯ã?? */
 		debugBones: boolean;		
 		/** !#en Indicates whether open debug mesh.
-		!#zh æ˜¯å¦æ˜¾ç¤º mesh çš„ debug ä¿¡æ¯ã€‚ */
+		!#zh ??¯å?¦æ?¾ç¤º mesh ??? debug ä¿¡æ?¯ã?? */
 		debugMesh: boolean;		
 		/** !#en Enabled two color tint.
-		!#zh æ˜¯å¦å¯ç”¨æŸ“è‰²æ•ˆæœã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨æ????²æ???????? */
 		useTint: boolean;		
 		/** !#en Enabled batch model, if skeleton is complex, do not enable batch, or will lower performance.
-		!#zh å¼€å¯åˆæ‰¹ï¼Œå¦‚æœæ¸²æŸ“å¤§é‡ç›¸åŒçº¹ç†ï¼Œä¸”ç»“æ„ç®€å•çš„éª¨éª¼åŠ¨ç”»ï¼Œå¼€å¯åˆæ‰¹å¯ä»¥é™ä½drawcallï¼Œå¦åˆ™è¯·ä¸è¦å¼€å¯ï¼Œcpuæ¶ˆè€—ä¼šä¸Šå‡ã€‚ */
+		!#zh å¼???¯å????¹ï??å¦????æ¸²æ??å¤§é????¸å??çº¹ç??ï¼?ä¸?ç»????ç®???????éª¨éª¼??¨ç?»ï??å¼???¯å????¹å?¯ä»¥???ä½?drawcallï¼???¦å??è¯·ä??è¦?å¼???¯ï??cpuæ¶????ä¼?ä¸??????? */
 		enableBatch: boolean;		
 		/**
 		!#en
 		Sets runtime skeleton data to sp.Skeleton.<br>
 		This method is different from the `skeletonData` property. This method is passed in the raw data provided by the Spine runtime, and the skeletonData type is the asset type provided by Creator.
 		!#zh
-		è®¾ç½®åº•å±‚è¿è¡Œæ—¶ç”¨åˆ°çš„ SkeletonDataã€‚<br>
-		è¿™ä¸ªæ¥å£æœ‰åˆ«äº `skeletonData` å±æ€§ï¼Œè¿™ä¸ªæ¥å£ä¼ å…¥çš„æ˜¯ Spine runtime æä¾›çš„åŸå§‹æ•°æ®ï¼Œè€Œ skeletonData çš„ç±»å‹æ˜¯ Creator æä¾›çš„èµ„æºç±»å‹ã€‚
+		è®¾ç½®åº?å±?è¿?è¡???¶ç?¨å?°ç?? SkeletonData???<br>
+		è¿?ä¸ªæ?¥å???????«ä?? `skeletonData` å±???§ï??è¿?ä¸ªæ?¥å??ä¼???¥ç????? Spine runtime ???ä¾???????å§???°æ?®ï????? skeletonData ???ç±»å????? Creator ???ä¾????èµ?æº?ç±»å?????
 		@param skeletonData skeletonData 
 		*/
 		setSkeletonData(skeletonData: sp.spine.SkeletonData): void;		
 		/**
 		!#en Sets slots visible range.
-		!#zh è®¾ç½®éª¨éª¼æ’æ§½å¯è§†èŒƒå›´ã€‚
+		!#zh è®¾ç½®éª¨éª¼???æ§½å?¯è???????´ã??
 		@param startSlotIndex startSlotIndex
 		@param endSlotIndex endSlotIndex 
 		*/
@@ -19844,8 +19844,8 @@ declare namespace sp {
 		/**
 		!#en Sets animation state data.<br>
 		The parameter type is {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.AnimationStateData.
-		!#zh è®¾ç½®åŠ¨ç”»çŠ¶æ€æ•°æ®ã€‚<br>
-		å‚æ•°æ˜¯ {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.AnimationStateDataã€‚
+		!#zh è®¾ç½®??¨ç?»ç?¶æ????°æ?®ã??<br>
+		?????°æ?? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.AnimationStateData???
 		@param stateData stateData 
 		*/
 		setAnimationStateData(stateData: sp.spine.AnimationStateData): void;		
@@ -19854,8 +19854,8 @@ declare namespace sp {
 		It's best to set cache mode before set property 'dragonAsset', or will waste some cpu time.
 		If set the mode in editor, then no need to worry about order problem.
 		!#zh
-		è‹¥æƒ³åˆ‡æ¢æ¸²æŸ“æ¨¡å¼ï¼Œæœ€å¥½åœ¨è®¾ç½®'dragonAsset'ä¹‹å‰ï¼Œå…ˆè®¾ç½®å¥½æ¸²æŸ“æ¨¡å¼ï¼Œå¦åˆ™æœ‰è¿è¡Œæ—¶å¼€é”€ã€‚
-		è‹¥åœ¨ç¼–è¾‘ä¸­è®¾ç½®æ¸²æŸ“æ¨¡å¼ï¼Œåˆ™æ— éœ€æ‹…å¿ƒè®¾ç½®æ¬¡åºçš„é—®é¢˜ã€‚
+		??¥æ?³å????¢æ¸²???æ¨¡å??ï¼????å¥½å?¨è®¾ç½?'dragonAsset'ä¹????ï¼????è®¾ç½®å¥½æ¸²???æ¨¡å??ï¼???¦å?????è¿?è¡???¶å????????
+		??¥å?¨ç??è¾?ä¸­è®¾ç½®æ¸²???æ¨¡å??ï¼?????????????å¿?è®¾ç½®æ¬¡å???????®é?????
 		@param cacheMode cacheMode
 		
 		@example 
@@ -19866,19 +19866,19 @@ declare namespace sp {
 		setAnimationCacheMode(cacheMode: Skeleton.AnimationCacheMode): void;		
 		/**
 		!#en Whether in cached mode.
-		!#zh å½“å‰æ˜¯å¦å¤„äºç¼“å­˜æ¨¡å¼ã€‚ 
+		!#zh å½??????¯å?¦å??äº?ç¼?å­?æ¨¡å????? 
 		*/
 		isAnimationCached(): boolean;		
 		/**
 		!#en Sets vertex effect delegate.
-		!#zh è®¾ç½®é¡¶ç‚¹åŠ¨ç”»ä»£ç†
+		!#zh è®¾ç½®é¡¶ç?¹å?¨ç?»ä»£???
 		@param effectDelegate effectDelegate 
 		*/
 		setVertexEffectDelegate(effectDelegate: VertexEffectDelegate): void;		
 		/**
 		!#en Computes the world SRT from the local SRT for each bone.
-		!#zh é‡æ–°æ›´æ–°æ‰€æœ‰éª¨éª¼çš„ä¸–ç•Œ Transformï¼Œ
-		å½“è·å– bone çš„æ•°å€¼æœªæ›´æ–°æ—¶ï¼Œå³å¯ä½¿ç”¨è¯¥å‡½æ•°è¿›è¡Œæ›´æ–°æ•°å€¼ã€‚
+		!#zh ?????°æ?´æ?°æ?????éª¨éª¼???ä¸???? Transformï¼?
+		å½???·å?? bone ?????°å?¼æ?ªæ?´æ?°æ?¶ï????³å?¯ä½¿??¨è¯¥??½æ?°è??è¡???´æ?°æ?°å?¼ã??
 		
 		@example 
 		```js
@@ -19892,7 +19892,7 @@ declare namespace sp {
 		updateWorldTransform(): void;		
 		/**
 		!#en Sets the bones and slots to the setup pose.
-		!#zh è¿˜åŸåˆ°èµ·å§‹åŠ¨ä½œ 
+		!#zh è¿??????°èµ·å§???¨ä?? 
 		*/
 		setToSetupPose(): void;		
 		/**
@@ -19900,8 +19900,8 @@ declare namespace sp {
 		Sets the bones to the setup pose,
 		using the values from the `BoneData` list in the `SkeletonData`.
 		!#zh
-		è®¾ç½® bone åˆ°èµ·å§‹åŠ¨ä½œ
-		ä½¿ç”¨ SkeletonData ä¸­çš„ BoneData åˆ—è¡¨ä¸­çš„å€¼ã€‚ 
+		è®¾ç½® bone ??°èµ·å§???¨ä??
+		ä½¿ç?? SkeletonData ä¸­ç?? BoneData ???è¡¨ä¸­?????¼ã?? 
 		*/
 		setBonesToSetupPose(): void;		
 		/**
@@ -19909,8 +19909,8 @@ declare namespace sp {
 		Sets the slots to the setup pose,
 		using the values from the `SlotData` list in the `SkeletonData`.
 		!#zh
-		è®¾ç½® slot åˆ°èµ·å§‹åŠ¨ä½œã€‚
-		ä½¿ç”¨ SkeletonData ä¸­çš„ SlotData åˆ—è¡¨ä¸­çš„å€¼ã€‚ 
+		è®¾ç½® slot ??°èµ·å§???¨ä?????
+		ä½¿ç?? SkeletonData ä¸­ç?? SlotData ???è¡¨ä¸­?????¼ã?? 
 		*/
 		setSlotsToSetupPose(): void;		
 		/**
@@ -19919,8 +19919,8 @@ declare namespace sp {
 		performance due to calculating all data in a single frame.
 		To update the cache, use the invalidAnimationCache method with high performance.
 		!#zh
-		æ›´æ–°æŸä¸ªåŠ¨ç”»ç¼“å­˜, é¢„è®¡ç®—åŠ¨ç”»ä¸­æ‰€æœ‰å¸§æ•°æ®ï¼Œç”±äºåœ¨å•å¸§è®¡ç®—æ‰€æœ‰æ•°æ®ï¼Œæ‰€ä»¥è¾ƒæ¶ˆè€—æ€§èƒ½ã€‚
-		è‹¥æƒ³æ›´æ–°ç¼“å­˜ï¼Œå¯ä½¿ç”¨ invalidAnimationCache æ–¹æ³•ï¼Œå…·æœ‰è¾ƒé«˜æ€§èƒ½ã€‚
+		??´æ?°æ??ä¸ªå?¨ç?»ç??å­?, é¢?è®¡ç????¨ç?»ä¸­??????å¸§æ?°æ?®ï????±ä????¨å??å¸§è®¡ç®?????????°æ?®ï?????ä»¥è??æ¶??????§è?½ã??
+		??¥æ?³æ?´æ?°ç??å­?ï¼???¯ä½¿??? invalidAnimationCache ??¹æ??ï¼???·æ??è¾?é«???§è?½ã??
 		@param animName animName 
 		*/
 		updateAnimationCache(animName: string): void;		
@@ -19928,7 +19928,7 @@ declare namespace sp {
 		!#en
 		Invalidates the animation cache, which is then recomputed on each frame..
 		!#zh
-		ä½¿åŠ¨ç”»ç¼“å­˜å¤±æ•ˆï¼Œä¹‹åä¼šåœ¨æ¯å¸§é‡æ–°è®¡ç®—ã€‚ 
+		ä½¿å?¨ç?»ç??å­?å¤±æ??ï¼?ä¹????ä¼???¨æ??å¸§é????°è®¡ç®???? 
 		*/
 		invalidAnimationCache(): void;		
 		/**
@@ -19937,9 +19937,9 @@ declare namespace sp {
 		This does a string comparison for every bone.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Bone object.
 		!#zh
-		é€šè¿‡åç§°æŸ¥æ‰¾ boneã€‚
-		è¿™é‡Œå¯¹æ¯ä¸ª bone çš„åç§°è¿›è¡Œäº†å¯¹æ¯”ã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Bone å¯¹è±¡ã€‚
+		???è¿????ç§°æ?¥æ?? bone???
+		è¿????å¯¹æ??ä¸? bone ??????ç§°è??è¡?äº?å¯¹æ?????<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Bone å¯¹è±¡???
 		@param boneName boneName 
 		*/
 		findBone(boneName: string): sp.spine.Bone;		
@@ -19948,8 +19948,8 @@ declare namespace sp {
 		Finds a slot by name. This does a string comparison for every slot.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Slot object.
 		!#zh
-		é€šè¿‡åç§°æŸ¥æ‰¾ slotã€‚è¿™é‡Œå¯¹æ¯ä¸ª slot çš„åç§°è¿›è¡Œäº†æ¯”è¾ƒã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Slot å¯¹è±¡ã€‚
+		???è¿????ç§°æ?¥æ?? slot???è¿????å¯¹æ??ä¸? slot ??????ç§°è??è¡?äº?æ¯?è¾????<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Slot å¯¹è±¡???
 		@param slotName slotName 
 		*/
 		findSlot(slotName: string): sp.spine.Slot;		
@@ -19960,20 +19960,20 @@ declare namespace sp {
 		Note that setting the skin does not change which attachments are visible.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Skin object.
 		!#zh
-		æŒ‰åç§°æŸ¥æ‰¾çš®è‚¤ï¼Œæ¿€æ´»è¯¥çš®è‚¤ã€‚è¿™é‡Œå¯¹æ¯ä¸ªçš®è‚¤çš„åç§°è¿›è¡Œäº†æ¯”è¾ƒã€‚<br>
-		æ³¨æ„ï¼šè®¾ç½®çš®è‚¤ä¸ä¼šæ”¹å˜ attachment çš„å¯è§æ€§ã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Skin å¯¹è±¡ã€‚
+		??????ç§°æ?¥æ?¾ç?®è?¤ï??æ¿?æ´»è¯¥??®è?¤ã??è¿????å¯¹æ??ä¸ªç?®è?¤ç?????ç§°è??è¡?äº?æ¯?è¾????<br>
+		æ³¨æ??ï¼?è®¾ç½®??®è?¤ä??ä¼???¹å?? attachment ?????¯è????§ã??<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Skin å¯¹è±¡???
 		@param skinName skinName 
 		*/
 		setSkin(skinName: string): void;		
 		/**
 		!#en
 		Returns the attachment for the slot and attachment name.
-		The skeleton looks first in its skin, then in the skeleton dataâ€™s default skin.<br>
+		The skeleton looks first in its skin, then in the skeleton data???s default skin.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Attachment object.
 		!#zh
-		é€šè¿‡ slot å’Œ attachment çš„åç§°è·å– attachmentã€‚Skeleton ä¼˜å…ˆæŸ¥æ‰¾å®ƒçš„çš®è‚¤ï¼Œç„¶åæ‰æ˜¯ Skeleton Data ä¸­é»˜è®¤çš„çš®è‚¤ã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Attachment å¯¹è±¡ã€‚
+		???è¿? slot ??? attachment ??????ç§°è?·å?? attachment???Skeleton ä¼??????¥æ?¾å???????®è?¤ï????¶å???????? Skeleton Data ä¸­é??è®¤ç????®è?¤ã??<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.Attachment å¯¹è±¡???
 		@param slotName slotName
 		@param attachmentName attachmentName 
 		*/
@@ -19981,10 +19981,10 @@ declare namespace sp {
 		/**
 		!#en
 		Sets the attachment for the slot and attachment name.
-		The skeleton looks first in its skin, then in the skeleton dataâ€™s default skin.
+		The skeleton looks first in its skin, then in the skeleton data???s default skin.
 		!#zh
-		é€šè¿‡ slot å’Œ attachment çš„åå­—æ¥è®¾ç½® attachmentã€‚
-		Skeleton ä¼˜å…ˆæŸ¥æ‰¾å®ƒçš„çš®è‚¤ï¼Œç„¶åæ‰æ˜¯ Skeleton Data ä¸­é»˜è®¤çš„çš®è‚¤ã€‚
+		???è¿? slot ??? attachment ??????å­???¥è®¾ç½? attachment???
+		Skeleton ä¼??????¥æ?¾å???????®è?¤ï????¶å???????? Skeleton Data ä¸­é??è®¤ç????®è?¤ã??
 		@param slotName slotName
 		@param attachmentName attachmentName 
 		*/
@@ -19998,7 +19998,7 @@ declare namespace sp {
 		!#en
 		Mix applies all keyframe values,
 		interpolated for the specified time and mixed with the current values.
-		!#zh ä¸ºæ‰€æœ‰å…³é”®å¸§è®¾å®šæ··åˆåŠæ··åˆæ—¶é—´ï¼ˆä»å½“å‰å€¼å¼€å§‹å·®å€¼ï¼‰ã€‚
+		!#zh ä¸ºæ???????³é?®å¸§è®¾å??æ··å?????æ··å????¶é?´ï??ä»?å½??????¼å??å§?å·®å?¼ï?????
 		@param fromAnimation fromAnimation
 		@param toAnimation toAnimation
 		@param duration duration 
@@ -20007,8 +20007,8 @@ declare namespace sp {
 		/**
 		!#en Set the current animation. Any queued animations are cleared.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry object.
-		!#zh è®¾ç½®å½“å‰åŠ¨ç”»ã€‚é˜Ÿåˆ—ä¸­çš„ä»»ä½•çš„åŠ¨ç”»å°†è¢«æ¸…é™¤ã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡ã€‚
+		!#zh è®¾ç½®å½??????¨ç?»ã????????ä¸­ç??ä»»ä???????¨ç?»å??è¢«æ????¤ã??<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡???
 		@param trackIndex trackIndex
 		@param name name
 		@param loop loop 
@@ -20017,8 +20017,8 @@ declare namespace sp {
 		/**
 		!#en Adds an animation to be played delay seconds after the current or last queued animation.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry object.
-		!#zh æ·»åŠ ä¸€ä¸ªåŠ¨ç”»åˆ°åŠ¨ç”»é˜Ÿåˆ—å°¾éƒ¨ï¼Œè¿˜å¯ä»¥å»¶è¿ŸæŒ‡å®šçš„ç§’æ•°ã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡ã€‚
+		!#zh æ·»å??ä¸?ä¸ªå?¨ç?»å?°å?¨ç?»é?????å°¾é?¨ï??è¿???¯ä»¥å»¶è?????å®????ç§???°ã??<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡???
 		@param trackIndex trackIndex
 		@param name name
 		@param loop loop
@@ -20027,118 +20027,118 @@ declare namespace sp {
 		addAnimation(trackIndex: number, name: string, loop: boolean, delay?: number): sp.spine.TrackEntry;		
 		/**
 		!#en Find animation with specified name.
-		!#zh æŸ¥æ‰¾æŒ‡å®šåç§°çš„åŠ¨ç”»
+		!#zh ??¥æ?¾æ??å®????ç§°ç????¨ç??
 		@param name name 
 		*/
 		findAnimation(name: string): sp.spine.Animation;		
 		/**
 		!#en Returns track entry by trackIndex.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry object.
-		!#zh é€šè¿‡ track ç´¢å¼•è·å– TrackEntryã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡ã€‚
+		!#zh ???è¿? track ç´¢å????·å?? TrackEntry???<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.TrackEntry å¯¹è±¡???
 		@param trackIndex trackIndex 
 		*/
 		getCurrent(trackIndex: any): sp.spine.TrackEntry;		
 		/**
 		!#en Clears all tracks of animation state.
-		!#zh æ¸…é™¤æ‰€æœ‰ track çš„åŠ¨ç”»çŠ¶æ€ã€‚ 
+		!#zh æ¸???¤æ????? track ?????¨ç?»ç?¶æ????? 
 		*/
 		clearTracks(): void;		
 		/**
 		!#en Clears track of animation state by trackIndex.
-		!#zh æ¸…é™¤å‡ºæŒ‡å®š track çš„åŠ¨ç”»çŠ¶æ€ã€‚
+		!#zh æ¸???¤å?ºæ??å®? track ?????¨ç?»ç?¶æ?????
 		@param trackIndex trackIndex 
 		*/
 		clearTrack(trackIndex: number): void;		
 		/**
 		!#en Set the start event listener.
-		!#zh ç”¨æ¥è®¾ç½®å¼€å§‹æ’­æ”¾åŠ¨ç”»çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å??å§???­æ?¾å?¨ç?»ç??äº?ä»¶ç????¬ã??
 		@param listener listener 
 		*/
 		setStartListener(listener: Function): void;		
 		/**
 		!#en Set the interrupt event listener.
-		!#zh ç”¨æ¥è®¾ç½®åŠ¨ç”»è¢«æ‰“æ–­çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å?¨ç?»è¢«?????­ç??äº?ä»¶ç????¬ã??
 		@param listener listener 
 		*/
 		setInterruptListener(listener: Function): void;		
 		/**
 		!#en Set the end event listener.
-		!#zh ç”¨æ¥è®¾ç½®åŠ¨ç”»æ’­æ”¾å®Œåçš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å?¨ç?»æ?­æ?¾å????????äº?ä»¶ç????¬ã??
 		@param listener listener 
 		*/
 		setEndListener(listener: Function): void;		
 		/**
 		!#en Set the dispose event listener.
-		!#zh ç”¨æ¥è®¾ç½®åŠ¨ç”»å°†è¢«é”€æ¯çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å?¨ç?»å??è¢«é??æ¯????äº?ä»¶ç????¬ã??
 		@param listener listener 
 		*/
 		setDisposeListener(listener: Function): void;		
 		/**
 		!#en Set the complete event listener.
-		!#zh ç”¨æ¥è®¾ç½®åŠ¨ç”»æ’­æ”¾ä¸€æ¬¡å¾ªç¯ç»“æŸåçš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å?¨ç?»æ?­æ?¾ä??æ¬¡å¾ª??¯ç???????????äº?ä»¶ç????¬ã??
 		@param listener listener 
 		*/
 		setCompleteListener(listener: Function): void;		
 		/**
 		!#en Set the animation event listener.
-		!#zh ç”¨æ¥è®¾ç½®åŠ¨ç”»æ’­æ”¾è¿‡ç¨‹ä¸­å¸§äº‹ä»¶çš„ç›‘å¬ã€‚
+		!#zh ??¨æ?¥è®¾ç½®å?¨ç?»æ?­æ?¾è??ç¨?ä¸­å¸§äº?ä»¶ç???????¬ã??
 		@param listener listener 
 		*/
 		setEventListener(listener: Function): void;		
 		/**
 		!#en Set the start event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»å¼€å§‹æ’­æ”¾çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»å??å§???­æ?¾ç??äº?ä»¶ç????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackStartListener(entry: sp.spine.TrackEntry, listener: Function): void;		
 		/**
 		!#en Set the interrupt event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»è¢«æ‰“æ–­çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»è¢«?????­ç??äº?ä»¶ç????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackInterruptListener(entry: sp.spine.TrackEntry, listener: Function): void;		
 		/**
 		!#en Set the end event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»æ’­æ”¾ç»“æŸçš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»æ?­æ?¾ç????????äº?ä»¶ç????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackEndListener(entry: sp.spine.TrackEntry, listener: Function): void;		
 		/**
 		!#en Set the dispose event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»å³å°†è¢«é”€æ¯çš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»å?³å??è¢«é??æ¯????äº?ä»¶ç????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackDisposeListener(entry: sp.spine.TrackEntry, listener: Function): void;		
 		/**
 		!#en Set the complete event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»ä¸€æ¬¡å¾ªç¯æ’­æ”¾ç»“æŸçš„äº‹ä»¶ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»ä??æ¬¡å¾ª??¯æ?­æ?¾ç????????äº?ä»¶ç????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackCompleteListener(entry: sp.spine.TrackEntry, listener: (entry: sp.spine.TrackEntry, loopCount: number) => void): void;		
 		/**
 		!#en Set the event listener for specified TrackEntry.
-		!#zh ç”¨æ¥ä¸ºæŒ‡å®šçš„ TrackEntry è®¾ç½®åŠ¨ç”»å¸§äº‹ä»¶çš„ç›‘å¬ã€‚
+		!#zh ??¨æ?¥ä¸º???å®???? TrackEntry è®¾ç½®??¨ç?»å¸§äº?ä»¶ç???????¬ã??
 		@param entry entry
 		@param listener listener 
 		*/
 		setTrackEventListener(entry: sp.spine.TrackEntry, listener: Function): void;		
 		/**
 		!#en Get the animation state object
-		!#zh è·å–åŠ¨ç”»çŠ¶æ€ 
+		!#zh ??·å????¨ç?»ç?¶æ?? 
 		*/
 		getState(): sp.spine.AnimationState;	
 	}	
 	/** !#en The skeleton data of spine.
-	!#zh Spine çš„ éª¨éª¼æ•°æ®ã€‚ */
+	!#zh Spine ??? éª¨éª¼??°æ?®ã?? */
 	export class SkeletonData extends cc.Asset {		
 		/** !#en See http://en.esotericsoftware.com/spine-json-format
-		!#zh å¯æŸ¥çœ‹ Spine å®˜æ–¹æ–‡æ¡£ http://zh.esotericsoftware.com/spine-json-format */
+		!#zh ??¯æ?¥ç?? Spine å®???¹æ??æ¡? http://zh.esotericsoftware.com/spine-json-format */
 		skeletonJson: any;		
 		atlasText: string;		
 		textures: cc.Texture2D[];		
@@ -20150,19 +20150,19 @@ declare namespace sp {
 		a scale of 0.5 can be used. This is commonly used for games that can run with either low or high
 		resolution texture atlases.
 		see http://en.esotericsoftware.com/spine-using-runtimes#Scaling
-		!#zh å¯æŸ¥çœ‹ Spine å®˜æ–¹æ–‡æ¡£ï¼š http://zh.esotericsoftware.com/spine-using-runtimes#Scaling */
+		!#zh ??¯æ?¥ç?? Spine å®???¹æ??æ¡?ï¼? http://zh.esotericsoftware.com/spine-using-runtimes#Scaling */
 		scale: number;		
 		/**
 		!#en Get the included SkeletonData used in spine runtime.<br>
 		Returns a {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.SkeletonData object.
-		!#zh è·å– Spine Runtime ä½¿ç”¨çš„ SkeletonDataã€‚<br>
-		è¿”å›ä¸€ä¸ª {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.SkeletonData å¯¹è±¡ã€‚
+		!#zh ??·å?? Spine Runtime ä½¿ç?¨ç?? SkeletonData???<br>
+		è¿????ä¸?ä¸? {{#crossLinkModule "sp.spine"}}sp.spine{{/crossLinkModule}}.SkeletonData å¯¹è±¡???
 		@param quiet quiet 
 		*/
 		getRuntimeData(quiet?: boolean): sp.spine.SkeletonData;	
 	}	
 	/** !#en The event type of spine skeleton animation.
-	!#zh éª¨éª¼åŠ¨ç”»äº‹ä»¶ç±»å‹ã€‚ */
+	!#zh éª¨éª¼??¨ç?»ä??ä»¶ç±»?????? */
 	export enum AnimationEventType {		
 		START = 0,
 		END = 0,
@@ -20172,52 +20172,52 @@ declare namespace sp {
 	/** !#en
 	The delegate of spine vertex effect
 	!#zh
-	Spine é¡¶ç‚¹åŠ¨ç”»ä»£ç† */
+	Spine é¡¶ç?¹å?¨ç?»ä»£??? */
 	export class VertexEffectDelegate {		
 		/**
 		!#en Clears vertex effect.
-		!#zh æ¸…ç©ºé¡¶ç‚¹æ•ˆæœ 
+		!#zh æ¸?ç©ºé¡¶??¹æ????? 
 		*/
 		clear(): void;		
 		/**
 		!#en Inits delegate with jitter effect
-		!#zh è®¾ç½®é¡¶ç‚¹æŠ–åŠ¨æ•ˆæœ
+		!#zh è®¾ç½®é¡¶ç?¹æ????¨æ?????
 		@param jitterX jitterX
 		@param jitterY jitterY 
 		*/
 		initJitter(jitterX: number, jitterY: number): void;		
 		/**
 		!#en Inits delegate with swirl effect
-		!#zh è®¾ç½®é¡¶ç‚¹æ¼©æ¶¡æ•ˆæœ
+		!#zh è®¾ç½®é¡¶ç?¹æ¼©æ¶¡æ?????
 		@param radius radius
 		@param power power 
 		*/
 		initSwirlWithPow(radius: number, power: number): sp.spine.JitterEffect;		
 		/**
 		!#en Inits delegate with swirl effect
-		!#zh è®¾ç½®é¡¶ç‚¹æ¼©æ¶¡æ•ˆæœ
+		!#zh è®¾ç½®é¡¶ç?¹æ¼©æ¶¡æ?????
 		@param radius radius
 		@param power power 
 		*/
 		initSwirlWithPowOut(radius: number, power: number): sp.spine.SwirlEffect;		
 		/**
 		!#en Gets jitter vertex effect
-		!#zh è·å–é¡¶ç‚¹æŠ–åŠ¨æ•ˆæœ 
+		!#zh ??·å??é¡¶ç?¹æ????¨æ????? 
 		*/
 		getJitterVertexEffect(): sp.spine.JitterEffect;		
 		/**
 		!#en Gets swirl vertex effect
-		!#zh è·å–é¡¶ç‚¹æ¼©æ¶¡æ•ˆæœ 
+		!#zh ??·å??é¡¶ç?¹æ¼©æ¶¡æ????? 
 		*/
 		getSwirlVertexEffect(): sp.spine.SwirlEffect;		
 		/**
 		!#en Gets vertex effect
-		!#zh è·å–é¡¶ç‚¹æ•ˆæœ 
+		!#zh ??·å??é¡¶ç?¹æ????? 
 		*/
 		getVertexEffect(): sp.spine.JitterEffect;		
 		/**
 		!#en Gets effect type
-		!#zh è·å–æ•ˆæœç±»å‹ 
+		!#zh ??·å????????ç±»å?? 
 		*/
 		getEffectType(): string;	
 	}	
@@ -20227,39 +20227,39 @@ declare namespace sp {
 	
 	export namespace sp {		
 		/** !#en Attach node tool
-		!#zh æŒ‚ç‚¹å·¥å…·ç±» */
+		!#zh ?????¹å·¥??·ç±» */
 		export class AttachUtil {			
 			/**
 			!#en Gets attached root node.
-			!#zh è·å–æŒ‚æ¥èŠ‚ç‚¹æ ‘çš„æ ¹èŠ‚ç‚¹ 
+			!#zh ??·å???????¥è????¹æ???????¹è????? 
 			*/
 			getAttachedRootNode(): cc.Node;			
 			/**
 			!#en Gets attached node which you want.
-			!#zh è·å¾—å¯¹åº”çš„æŒ‚ç‚¹
+			!#zh ??·å??å¯¹å???????????
 			@param boneName boneName 
 			*/
 			getAttachedNodes(boneName: string): cc.Node[];			
 			/**
 			!#en Destroy attached node which you want.
-			!#zh é”€æ¯å¯¹åº”çš„æŒ‚ç‚¹
+			!#zh ???æ¯?å¯¹å???????????
 			@param boneName boneName 
 			*/
 			destroyAttachedNodes(boneName: string): void;			
 			/**
 			!#en Traverse all bones to generate the minimum node tree containing the given bone names, NOTE that make sure the skeleton has initialized before calling this interface.
-			!#zh éå†æ‰€æœ‰æ’æ§½ï¼Œç”ŸæˆåŒ…å«æ‰€æœ‰ç»™å®šæ’æ§½åç§°çš„æœ€å°èŠ‚ç‚¹æ ‘ï¼Œæ³¨æ„ï¼Œè°ƒç”¨è¯¥æ¥å£å‰è¯·ç¡®ä¿éª¨éª¼åŠ¨ç”»å·²ç»åˆå§‹åŒ–å¥½ã€‚
+			!#zh ???????????????æ§½ï?????????????«æ?????ç»?å®????æ§½å??ç§°ç?????å°??????¹æ??ï¼?æ³¨æ??ï¼?è°???¨è¯¥??¥å?????è¯·ç¡®ä¿?éª¨éª¼??¨ç?»å·²ç»????å§????å¥½ã??
 			@param boneName boneName 
 			*/
 			generateAttachedNodes(boneName: string): cc.Node[];			
 			/**
 			!#en Destroy all attached node.
-			!#zh é”€æ¯æ‰€æœ‰æŒ‚ç‚¹ 
+			!#zh ???æ¯????????????? 
 			*/
 			destroyAllAttachedNodes(): void;			
 			/**
 			!#en Traverse all bones to generate a tree containing all bones nodes, NOTE that make sure the skeleton has initialized before calling this interface.
-			!#zh éå†æ‰€æœ‰æ’æ§½ï¼Œç”ŸæˆåŒ…å«æ‰€æœ‰æ’æ§½çš„èŠ‚ç‚¹æ ‘ï¼Œæ³¨æ„ï¼Œè°ƒç”¨è¯¥æ¥å£å‰è¯·ç¡®ä¿éª¨éª¼åŠ¨ç”»å·²ç»åˆå§‹åŒ–å¥½ã€‚ 
+			!#zh ???????????????æ§½ï?????????????«æ????????æ§½ç???????¹æ??ï¼?æ³¨æ??ï¼?è°???¨è¯¥??¥å?????è¯·ç¡®ä¿?éª¨éª¼??¨ç?»å·²ç»????å§????å¥½ã?? 
 			*/
 			generateAllAttachedNodes(): cc.Node;		
 		}	
@@ -20271,7 +20271,7 @@ declare namespace sp {
 	
 	export namespace Skeleton {		
 		/** !#en Enum for animation cache mode type.
-		!#zh SpineåŠ¨ç”»ç¼“å­˜ç±»å‹ */
+		!#zh Spine??¨ç?»ç??å­?ç±»å?? */
 		export enum AnimationCacheMode {			
 			REALTIME = 0,
 			SHARED_CACHE = 0,
@@ -20285,7 +20285,7 @@ declare namespace sp {
 `sp.spine` is the namespace for official Spine Runtime, which officially implemented and maintained by Spine.<br>
 Please refer to the official documentation for its detailed usage: [http://en.esotericsoftware.com/spine-using-runtimes](http://en.esotericsoftware.com/spine-using-runtimes)
 !#zh
-sp.spine æ¨¡å—æ˜¯ Spine å®˜æ–¹è¿è¡Œåº“çš„ API å…¥å£ï¼Œç”± Spine å®˜æ–¹ç»Ÿä¸€å®ç°å’Œç»´æŠ¤ï¼Œå…·ä½“ç”¨æ³•è¯·å‚è€ƒï¼š[http://zh.esotericsoftware.com/spine-using-runtimes](http://zh.esotericsoftware.com/spine-using-runtimes) */
+sp.spine æ¨¡å????? Spine å®???¹è??è¡?åº???? API ??¥å??ï¼???? Spine å®???¹ç??ä¸?å®???°å??ç»´æ?¤ï????·ä????¨æ??è¯·å?????ï¼?[http://zh.esotericsoftware.com/spine-using-runtimes](http://zh.esotericsoftware.com/spine-using-runtimes) */
 declare namespace sp.spine {
 }
 
@@ -20293,8 +20293,8 @@ declare namespace sp.spine {
 The global main namespace of DragonBones, all classes, functions,
 properties and constants of DragonBones are defined in this namespace
 !#zh
-DragonBones çš„å…¨å±€çš„å‘½åç©ºé—´ï¼Œ
-ä¸ DragonBones ç›¸å…³çš„æ‰€æœ‰çš„ç±»ï¼Œå‡½æ•°ï¼Œå±æ€§ï¼Œå¸¸é‡éƒ½åœ¨è¿™ä¸ªå‘½åç©ºé—´ä¸­å®šä¹‰ã€‚ */
+DragonBones ?????¨å???????½å??ç©ºé?´ï??
+ä¸? DragonBones ??¸å?³ç???????????ç±»ï????½æ?°ï??å±???§ï??å¸¸é????½å?¨è??ä¸ªå?½å??ç©ºé?´ä¸­å®?ä¹???? */
 declare namespace dragonBones {	
 	/** !#en
 	The Armature Display of DragonBones <br/>
@@ -20303,62 +20303,62 @@ declare namespace dragonBones {
 	which consists of the current pose's bone SRT, slot colors, and which slot attachments are visible. <br/>
 	Multiple Armature Display can use the same DragonBonesAsset which includes all animations, skins, and attachments. <br/>
 	!#zh
-	DragonBones éª¨éª¼åŠ¨ç”» <br/>
+	DragonBones éª¨éª¼??¨ç?? <br/>
 	<br/>
-	Armature Display å…·æœ‰å¯¹éª¨éª¼æ•°æ®çš„å¼•ç”¨å¹¶ä¸”å­˜å‚¨äº†éª¨éª¼å®ä¾‹çš„çŠ¶æ€ï¼Œ
-	å®ƒç”±å½“å‰çš„éª¨éª¼åŠ¨ä½œï¼Œslot é¢œè‰²ï¼Œå’Œå¯è§çš„ slot attachments ç»„æˆã€‚<br/>
-	å¤šä¸ª Armature Display å¯ä»¥ä½¿ç”¨ç›¸åŒçš„éª¨éª¼æ•°æ®ï¼Œå…¶ä¸­åŒ…æ‹¬æ‰€æœ‰çš„åŠ¨ç”»ï¼Œçš®è‚¤å’Œ attachmentsã€‚<br/> */
+	Armature Display ??·æ??å¯¹éª¨éª¼æ?°æ?®ç??å¼???¨å¹¶ä¸?å­???¨ä??éª¨éª¼å®?ä¾??????¶æ??ï¼?
+	å®???±å????????éª¨éª¼??¨ä??ï¼?slot é¢???²ï???????¯è????? slot attachments ç»???????<br/>
+	å¤?ä¸? Armature Display ??¯ä»¥ä½¿ç?¨ç?¸å?????éª¨éª¼??°æ?®ï????¶ä¸­?????¬æ??????????¨ç?»ï????®è?¤å?? attachments???<br/> */
 	export class ArmatureDisplay extends cc.RenderComponent {		
 		/** !#en
 		The DragonBones data contains the armatures information (bind pose bones, slots, draw order,
 		attachments, skins, etc) and animations but does not hold any state.<br/>
 		Multiple ArmatureDisplay can share the same DragonBones data.
 		!#zh
-		éª¨éª¼æ•°æ®åŒ…å«äº†éª¨éª¼ä¿¡æ¯ï¼ˆç»‘å®šéª¨éª¼åŠ¨ä½œï¼Œslotsï¼Œæ¸²æŸ“é¡ºåºï¼Œ
-		attachmentsï¼Œçš®è‚¤ç­‰ç­‰ï¼‰å’ŒåŠ¨ç”»ä½†ä¸æŒæœ‰ä»»ä½•çŠ¶æ€ã€‚<br/>
-		å¤šä¸ª ArmatureDisplay å¯ä»¥å…±ç”¨ç›¸åŒçš„éª¨éª¼æ•°æ®ã€‚ */
+		éª¨éª¼??°æ?®å????«ä??éª¨éª¼ä¿¡æ?¯ï??ç»?å®?éª¨éª¼??¨ä??ï¼?slotsï¼?æ¸²æ??é¡ºå??ï¼?
+		attachmentsï¼???®è?¤ç??ç­?ï¼??????¨ç?»ä??ä¸???????ä»»ä????¶æ?????<br/>
+		å¤?ä¸? ArmatureDisplay ??¯ä»¥??±ç?¨ç?¸å?????éª¨éª¼??°æ?®ã?? */
 		dragonAsset: DragonBonesAsset;		
 		/** !#en
 		The atlas asset for the DragonBones.
 		!#zh
-		éª¨éª¼æ•°æ®æ‰€éœ€çš„ Atlas Texture æ•°æ®ã€‚ */
+		éª¨éª¼??°æ?®æ???????? Atlas Texture ??°æ?®ã?? */
 		dragonAtlasAsset: DragonBonesAtlasAsset;		
 		/** !#en The name of current armature.
-		!#zh å½“å‰çš„ Armature åç§°ã€‚ */
+		!#zh å½??????? Armature ???ç§°ã?? */
 		armatureName: string;		
 		/** !#en The name of current playing animation.
-		!#zh å½“å‰æ’­æ”¾çš„åŠ¨ç”»åç§°ã€‚ */
+		!#zh å½??????­æ?¾ç????¨ç?»å??ç§°ã?? */
 		animationName: string;		
 		_defaultArmatureIndex: number;		
 		/** !#en The time scale of this armature.
-		!#zh å½“å‰éª¨éª¼ä¸­æ‰€æœ‰åŠ¨ç”»çš„æ—¶é—´ç¼©æ”¾ç‡ã€‚ */
+		!#zh å½????éª¨éª¼ä¸­æ???????¨ç?»ç????¶é?´ç¼©??¾ç????? */
 		timeScale: number;		
 		/** !#en The play times of the default animation.
 		     -1 means using the value of config file;
 		     0 means repeat for ever
 		     >0 means repeat times
-		!#zh æ’­æ”¾é»˜è®¤åŠ¨ç”»çš„å¾ªç¯æ¬¡æ•°
-		     -1 è¡¨ç¤ºä½¿ç”¨é…ç½®æ–‡ä»¶ä¸­çš„é»˜è®¤å€¼;
-		     0 è¡¨ç¤ºæ— é™å¾ªç¯
-		     >0 è¡¨ç¤ºå¾ªç¯æ¬¡æ•° */
+		!#zh ??­æ?¾é??è®¤å?¨ç?»ç??å¾ªç?¯æ¬¡???
+		     -1 è¡¨ç¤ºä½¿ç?¨é??ç½®æ??ä»¶ä¸­???é»?è®¤å??;
+		     0 è¡¨ç¤º??????å¾ªç??
+		     >0 è¡¨ç¤ºå¾ªç?¯æ¬¡??? */
 		playTimes: number;		
 		/** !#en Indicates whether to enable premultiplied alpha.
 		You should disable this option when image's transparent area appears to have opaque pixels,
 		or enable this option when image's half transparent area appears to be darken.
-		!#zh æ˜¯å¦å¯ç”¨è´´å›¾é¢„ä¹˜ã€‚
-		å½“å›¾ç‰‡çš„é€æ˜åŒºåŸŸå‡ºç°è‰²å—æ—¶éœ€è¦å…³é—­è¯¥é€‰é¡¹ï¼Œå½“å›¾ç‰‡çš„åŠé€æ˜åŒºåŸŸé¢œè‰²å˜é»‘æ—¶éœ€è¦å¯ç”¨è¯¥é€‰é¡¹ã€‚ */
+		!#zh ??¯å?¦å?¯ç?¨è´´??¾é??ä¹????
+		å½???¾ç?????????????ºå????ºç?°è?²å????¶é??è¦???³é?­è¯¥???é¡¹ï??å½???¾ç????????????????ºå??é¢???²å??é»???¶é??è¦???¯ç?¨è¯¥???é¡¹ã?? */
 		premultipliedAlpha: boolean;		
 		/** !#en Indicates whether open debug bones.
-		!#zh æ˜¯å¦æ˜¾ç¤º bone çš„ debug ä¿¡æ¯ã€‚ */
+		!#zh ??¯å?¦æ?¾ç¤º bone ??? debug ä¿¡æ?¯ã?? */
 		debugBones: boolean;		
 		/** !#en Enabled batch model, if skeleton is complex, do not enable batch, or will lower performance.
-		!#zh å¼€å¯åˆæ‰¹ï¼Œå¦‚æœæ¸²æŸ“å¤§é‡ç›¸åŒçº¹ç†ï¼Œä¸”ç»“æ„ç®€å•çš„éª¨éª¼åŠ¨ç”»ï¼Œå¼€å¯åˆæ‰¹å¯ä»¥é™ä½drawcallï¼Œå¦åˆ™è¯·ä¸è¦å¼€å¯ï¼Œcpuæ¶ˆè€—ä¼šä¸Šå‡ã€‚ */
+		!#zh å¼???¯å????¹ï??å¦????æ¸²æ??å¤§é????¸å??çº¹ç??ï¼?ä¸?ç»????ç®???????éª¨éª¼??¨ç?»ï??å¼???¯å????¹å?¯ä»¥???ä½?drawcallï¼???¦å??è¯·ä??è¦?å¼???¯ï??cpuæ¶????ä¼?ä¸??????? */
 		enableBatch: boolean;		
 		/**
 		!#en
 		The key of dragonbones cache data, which is regard as 'dragonbonesName', when you want to change dragonbones cloth.
 		!#zh
-		ç¼“å­˜é¾™éª¨æ•°æ®çš„keyå€¼ï¼Œæ¢è£…çš„æ—¶ä¼šä½¿ç”¨åˆ°è¯¥å€¼ï¼Œä½œä¸ºdragonbonesNameä½¿ç”¨
+		ç¼?å­?é¾?éª¨æ?°æ?®ç??key??¼ï????¢è???????¶ä??ä½¿ç?¨å?°è¯¥??¼ï??ä½?ä¸ºdragonbonesNameä½¿ç??
 		
 		@example 
 		```js
@@ -20373,8 +20373,8 @@ declare namespace dragonBones {
 		It's best to set cache mode before set property 'dragonAsset', or will waste some cpu time.
 		If set the mode in editor, then no need to worry about order problem.
 		!#zh
-		è‹¥æƒ³åˆ‡æ¢æ¸²æŸ“æ¨¡å¼ï¼Œæœ€å¥½åœ¨è®¾ç½®'dragonAsset'ä¹‹å‰ï¼Œå…ˆè®¾ç½®å¥½æ¸²æŸ“æ¨¡å¼ï¼Œå¦åˆ™æœ‰è¿è¡Œæ—¶å¼€é”€ã€‚
-		è‹¥åœ¨ç¼–è¾‘ä¸­è®¾ç½®æ¸²æŸ“æ¨¡å¼ï¼Œåˆ™æ— éœ€æ‹…å¿ƒè®¾ç½®æ¬¡åºçš„é—®é¢˜ã€‚
+		??¥æ?³å????¢æ¸²???æ¨¡å??ï¼????å¥½å?¨è®¾ç½?'dragonAsset'ä¹????ï¼????è®¾ç½®å¥½æ¸²???æ¨¡å??ï¼???¦å?????è¿?è¡???¶å????????
+		??¥å?¨ç??è¾?ä¸­è®¾ç½®æ¸²???æ¨¡å??ï¼?????????????å¿?è®¾ç½®æ¬¡å???????®é?????
 		@param cacheMode cacheMode
 		
 		@example 
@@ -20385,7 +20385,7 @@ declare namespace dragonBones {
 		setAnimationCacheMode(cacheMode: ArmatureDisplay.AnimationCacheMode): void;		
 		/**
 		!#en Whether in cached mode.
-		!#zh å½“å‰æ˜¯å¦å¤„äºç¼“å­˜æ¨¡å¼ã€‚ 
+		!#zh å½??????¯å?¦å??äº?ç¼?å­?æ¨¡å????? 
 		*/
 		isAnimationCached(): boolean;		
 		/**
@@ -20397,12 +20397,12 @@ declare namespace dragonBones {
 		0 means play the animation for ever.
 		>0 means repeat times.
 		!#zh
-		æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”».
-		animName æŒ‡å®šæ’­æ”¾åŠ¨ç”»çš„åç§°ã€‚
-		playTimes æŒ‡å®šæ’­æ”¾åŠ¨ç”»çš„æ¬¡æ•°ã€‚
-		-1 ä¸ºä½¿ç”¨é…ç½®æ–‡ä»¶ä¸­çš„æ¬¡æ•°ã€‚
-		0 ä¸ºæ— é™å¾ªç¯æ’­æ”¾ã€‚
-		>0 ä¸ºåŠ¨ç”»çš„é‡å¤æ¬¡æ•°ã€‚
+		??­æ?¾æ??å®??????¨ç??.
+		animName ???å®???­æ?¾å?¨ç?»ç?????ç§°ã??
+		playTimes ???å®???­æ?¾å?¨ç?»ç??æ¬¡æ?°ã??
+		-1 ä¸ºä½¿??¨é??ç½®æ??ä»¶ä¸­???æ¬¡æ?°ã??
+		0 ä¸ºæ?????å¾ªç?¯æ?­æ?¾ã??
+		>0 ä¸ºå?¨ç?»ç?????å¤?æ¬¡æ?°ã??
 		@param animName animName
 		@param playTimes playTimes 
 		*/
@@ -20413,8 +20413,8 @@ declare namespace dragonBones {
 		performance due to calculating all data in a single frame.
 		To update the cache, use the invalidAnimationCache method with high performance.
 		!#zh
-		æ›´æ–°æŸä¸ªåŠ¨ç”»ç¼“å­˜, é¢„è®¡ç®—åŠ¨ç”»ä¸­æ‰€æœ‰å¸§æ•°æ®ï¼Œç”±äºåœ¨å•å¸§è®¡ç®—æ‰€æœ‰æ•°æ®ï¼Œæ‰€ä»¥è¾ƒæ¶ˆè€—æ€§èƒ½ã€‚
-		è‹¥æƒ³æ›´æ–°ç¼“å­˜ï¼Œå¯ä½¿ç”¨ invalidAnimationCache æ–¹æ³•ï¼Œå…·æœ‰è¾ƒé«˜æ€§èƒ½ã€‚
+		??´æ?°æ??ä¸ªå?¨ç?»ç??å­?, é¢?è®¡ç????¨ç?»ä¸­??????å¸§æ?°æ?®ï????±ä????¨å??å¸§è®¡ç®?????????°æ?®ï?????ä»¥è??æ¶??????§è?½ã??
+		??¥æ?³æ?´æ?°ç??å­?ï¼???¯ä½¿??? invalidAnimationCache ??¹æ??ï¼???·æ??è¾?é«???§è?½ã??
 		@param animName animName 
 		*/
 		updateAnimationCache(animName: string): void;		
@@ -20422,21 +20422,21 @@ declare namespace dragonBones {
 		!#en
 		Invalidates the animation cache, which is then recomputed on each frame..
 		!#zh
-		ä½¿åŠ¨ç”»ç¼“å­˜å¤±æ•ˆï¼Œä¹‹åä¼šåœ¨æ¯å¸§é‡æ–°è®¡ç®—ã€‚ 
+		ä½¿å?¨ç?»ç??å­?å¤±æ??ï¼?ä¹????ä¼???¨æ??å¸§é????°è®¡ç®???? 
 		*/
 		invalidAnimationCache(): void;		
 		/**
 		!#en
 		Get the all armature names in the DragonBones Data.
 		!#zh
-		è·å– DragonBones æ•°æ®ä¸­æ‰€æœ‰çš„ armature åç§° 
+		??·å?? DragonBones ??°æ?®ä¸­????????? armature ???ç§? 
 		*/
 		getArmatureNames(): any[];		
 		/**
 		!#en
 		Get the all animation names of specified armature.
 		!#zh
-		è·å–æŒ‡å®šçš„ armature çš„æ‰€æœ‰åŠ¨ç”»åç§°ã€‚
+		??·å?????å®???? armature ???????????¨ç?»å??ç§°ã??
 		@param armatureName armatureName 
 		*/
 		getAnimationNames(armatureName: string): any[];		
@@ -20444,7 +20444,7 @@ declare namespace dragonBones {
 		!#en
 		Add event listener for the DragonBones Event, the same to addEventListener.
 		!#zh
-		æ·»åŠ  DragonBones äº‹ä»¶ç›‘å¬å™¨ï¼Œä¸ addEventListener ä½œç”¨ç›¸åŒã€‚
+		æ·»å?? DragonBones äº?ä»¶ç????¬å?¨ï??ä¸? addEventListener ä½???¨ç?¸å?????
 		@param type A string representing the event type to listen for.
 		@param listener The callback that will be invoked when the event is dispatched.
 		@param target The target (this object) to invoke the callback, can be null 
@@ -20454,7 +20454,7 @@ declare namespace dragonBones {
 		!#en
 		Remove the event listener for the DragonBones Event, the same to removeEventListener.
 		!#zh
-		ç§»é™¤ DragonBones äº‹ä»¶ç›‘å¬å™¨ï¼Œä¸ removeEventListener ä½œç”¨ç›¸åŒã€‚
+		ç§»é?? DragonBones äº?ä»¶ç????¬å?¨ï??ä¸? removeEventListener ä½???¨ç?¸å?????
 		@param type A string representing the event type to listen for.
 		@param listener listener
 		@param target target 
@@ -20464,7 +20464,7 @@ declare namespace dragonBones {
 		!#en
 		Add DragonBones one-time event listener, the callback will remove itself after the first time it is triggered.
 		!#zh
-		æ·»åŠ  DragonBones ä¸€æ¬¡æ€§äº‹ä»¶ç›‘å¬å™¨ï¼Œå›è°ƒä¼šåœ¨ç¬¬ä¸€æ—¶é—´è¢«è§¦å‘ååˆ é™¤è‡ªèº«ã€‚
+		æ·»å?? DragonBones ä¸?æ¬¡æ?§ä??ä»¶ç????¬å?¨ï?????è°?ä¼???¨ç¬¬ä¸???¶é?´è¢«è§¦å??????????¤è?ªèº«???
 		@param type A string representing the event type to listen for.
 		@param listener The callback that will be invoked when the event is dispatched.
 		@param target The target (this object) to invoke the callback, can be null 
@@ -20474,7 +20474,7 @@ declare namespace dragonBones {
 		!#en
 		Add event listener for the DragonBones Event.
 		!#zh
-		æ·»åŠ  DragonBones äº‹ä»¶ç›‘å¬å™¨ã€‚
+		æ·»å?? DragonBones äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type to listen for.
 		@param listener The callback that will be invoked when the event is dispatched.
 		@param target The target (this object) to invoke the callback, can be null 
@@ -20484,7 +20484,7 @@ declare namespace dragonBones {
 		!#en
 		Remove the event listener for the DragonBones Event.
 		!#zh
-		ç§»é™¤ DragonBones äº‹ä»¶ç›‘å¬å™¨ã€‚
+		ç§»é?? DragonBones äº?ä»¶ç????¬å?¨ã??
 		@param type A string representing the event type to listen for.
 		@param listener listener
 		@param target target 
@@ -20494,7 +20494,7 @@ declare namespace dragonBones {
 		!#en
 		Build the armature for specified name.
 		!#zh
-		æ„å»ºæŒ‡å®šåç§°çš„ armature å¯¹è±¡
+		???å»ºæ??å®????ç§°ç?? armature å¯¹è±¡
 		@param armatureName armatureName
 		@param node node 
 		*/
@@ -20503,7 +20503,7 @@ declare namespace dragonBones {
 		!#en
 		Get the current armature object of the ArmatureDisplay.
 		!#zh
-		è·å– ArmatureDisplay å½“å‰ä½¿ç”¨çš„ Armature å¯¹è±¡ 
+		??·å?? ArmatureDisplay å½????ä½¿ç?¨ç?? Armature å¯¹è±¡ 
 		*/
 		armature(): any;	
 	}	
@@ -20520,14 +20520,14 @@ declare namespace dragonBones {
 		static getInstance(): CCFactory;	
 	}	
 	/** !#en The skeleton data of dragonBones.
-	!#zh dragonBones çš„ éª¨éª¼æ•°æ®ã€‚ */
+	!#zh dragonBones ??? éª¨éª¼??°æ?®ã?? */
 	export class DragonBonesAsset extends cc.Asset {		
 		/** !#en See http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html
-		!#zh å¯æŸ¥çœ‹ DragonBones å®˜æ–¹æ–‡æ¡£ http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html */
+		!#zh ??¯æ?¥ç?? DragonBones å®???¹æ??æ¡? http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html */
 		dragonBonesJson: string;	
 	}	
 	/** !#en The skeleton atlas data of dragonBones.
-	!#zh dragonBones çš„éª¨éª¼çº¹ç†æ•°æ®ã€‚ */
+	!#zh dragonBones ???éª¨éª¼çº¹ç????°æ?®ã?? */
 	export class DragonBonesAtlasAsset extends cc.Asset {		
 		atlasJson: string;		
 		texture: cc.Texture2D;	
@@ -20538,7 +20538,7 @@ declare namespace dragonBones {
 	
 	export namespace ArmatureDisplay {		
 		/** !#en Enum for cache mode type.
-		!#zh Dragonbonesæ¸²æŸ“ç±»å‹ */
+		!#zh Dragonbonesæ¸²æ??ç±»å?? */
 		export enum AnimationCacheMode {			
 			REALTIME = 0,
 			SHARED_CACHE = 0,
@@ -20552,39 +20552,39 @@ declare namespace dragonBones {
 	
 	export namespace dragonBones {		
 		/** !#en Attach node tool
-		!#zh æŒ‚ç‚¹å·¥å…·ç±» */
+		!#zh ?????¹å·¥??·ç±» */
 		export class AttachUtil {			
 			/**
 			!#en Gets attached root node.
-			!#zh è·å–æŒ‚æ¥èŠ‚ç‚¹æ ‘çš„æ ¹èŠ‚ç‚¹ 
+			!#zh ??·å???????¥è????¹æ???????¹è????? 
 			*/
 			getAttachedRootNode(): cc.Node;			
 			/**
 			!#en Gets attached node which you want.
-			!#zh è·å¾—å¯¹åº”çš„æŒ‚ç‚¹
+			!#zh ??·å??å¯¹å???????????
 			@param boneName boneName 
 			*/
 			getAttachedNodes(boneName: string): cc.Node[];			
 			/**
 			!#en Destroy attached node which you want.
-			!#zh é”€æ¯å¯¹åº”çš„æŒ‚ç‚¹
+			!#zh ???æ¯?å¯¹å???????????
 			@param boneName boneName 
 			*/
 			destroyAttachedNodes(boneName: string): void;			
 			/**
 			!#en Traverse all bones to generate the minimum node tree containing the given bone names, NOTE that make sure the skeleton has initialized before calling this interface.
-			!#zh éå†æ‰€æœ‰æ’æ§½ï¼Œç”ŸæˆåŒ…å«æ‰€æœ‰ç»™å®šæ’æ§½åç§°çš„æœ€å°èŠ‚ç‚¹æ ‘ï¼Œæ³¨æ„ï¼Œè°ƒç”¨è¯¥æ¥å£å‰è¯·ç¡®ä¿éª¨éª¼åŠ¨ç”»å·²ç»åˆå§‹åŒ–å¥½ã€‚
+			!#zh ???????????????æ§½ï?????????????«æ?????ç»?å®????æ§½å??ç§°ç?????å°??????¹æ??ï¼?æ³¨æ??ï¼?è°???¨è¯¥??¥å?????è¯·ç¡®ä¿?éª¨éª¼??¨ç?»å·²ç»????å§????å¥½ã??
 			@param boneName boneName 
 			*/
 			generateAttachedNodes(boneName: string): cc.Node[];			
 			/**
 			!#en Destroy all attached node.
-			!#zh é”€æ¯æ‰€æœ‰æŒ‚ç‚¹ 
+			!#zh ???æ¯????????????? 
 			*/
 			destroyAllAttachedNodes(): void;			
 			/**
 			!#en Traverse all bones to generate a tree containing all bones nodes, NOTE that make sure the skeleton has initialized before calling this interface.
-			!#zh éå†æ‰€æœ‰æ’æ§½ï¼Œç”ŸæˆåŒ…å«æ‰€æœ‰æ’æ§½çš„èŠ‚ç‚¹æ ‘ï¼Œæ³¨æ„ï¼Œè°ƒç”¨è¯¥æ¥å£å‰è¯·ç¡®ä¿éª¨éª¼åŠ¨ç”»å·²ç»åˆå§‹åŒ–å¥½ã€‚ 
+			!#zh ???????????????æ§½ï?????????????«æ????????æ§½ç???????¹æ??ï¼?æ³¨æ??ï¼?è°???¨è¯¥??¥å?????è¯·ç¡®ä¿?éª¨éª¼??¨ç?»å·²ç»????å§????å¥½ã?? 
 			*/
 			generateAllAttachedNodes(): cc.Node;		
 		}	
@@ -20597,20 +20597,20 @@ This module controls asset's behaviors and information, include loading, releasi
 All member can be accessed with `cc.assetManager`. All class or enum can be accessed with `cc.AssetManager`
 
 !#zh
-æ­¤æ¨¡å—ç®¡ç†èµ„æºçš„è¡Œä¸ºå’Œä¿¡æ¯ï¼ŒåŒ…æ‹¬åŠ è½½ï¼Œé‡Šæ”¾ç­‰ï¼Œæ‰€æœ‰æˆå‘˜èƒ½å¤Ÿé€šè¿‡ `cc.assetManager` è°ƒç”¨. æ‰€æœ‰ç±»å‹æˆ–æšä¸¾èƒ½é€šè¿‡ `cc.AssetManager` è®¿é—® */
+æ­¤æ¨¡???ç®¡ç??èµ?æº????è¡?ä¸ºå??ä¿¡æ?¯ï???????¬å??è½½ï???????¾ç??ï¼???????????????½å?????è¿? `cc.assetManager` è°????. ??????ç±»å????????ä¸¾è?½é??è¿? `cc.AssetManager` è®¿é?? */
 declare namespace cc.AssetManager {	
 	/** !#en
 	This module contains the builtin asset, it's a singleton, all member can be accessed with `cc.assetManager.builtins`
 	
 	!#zh
-	æ­¤æ¨¡å—åŒ…å«å†…å»ºèµ„æºï¼Œè¿™æ˜¯ä¸€ä¸ªå•ä¾‹ï¼Œæ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.builtins` è®¿é—® */
+	æ­¤æ¨¡????????«å??å»ºè??æº?ï¼?è¿???¯ä??ä¸ªå??ä¾?ï¼???????????????½é??è¿? `cc.assetManager.builtins` è®¿é?? */
 	export class Builtins {		
 		/**
 		!#en
 		Initialize
 		
 		!#zh
-		åˆå§‹åŒ–
+		???å§????
 		@param cb Callback when finish loading built-in assets 
 		*/
 		init (cb: () => void): void;		
@@ -20619,7 +20619,7 @@ declare namespace cc.AssetManager {
 		Get the built-in asset using specific type and name.
 		
 		!#zh
-		é€šè¿‡ç‰¹å®šçš„ç±»å‹å’Œåç§°è·å–å†…å»ºèµ„æº
+		???è¿???¹å?????ç±»å????????ç§°è?·å?????å»ºè??æº?
 		@param type The type of asset, such as `effect`
 		@param name The name of asset, such as `phong`
 		
@@ -20634,7 +20634,7 @@ declare namespace cc.AssetManager {
 		Clear all builtin assets
 		
 		!#zh
-		æ¸…ç©ºæ‰€æœ‰å†…ç½®èµ„æº 
+		æ¸?ç©ºæ????????ç½®è??æº? 
 		*/
 		clear(): void;	
 	}	
@@ -20642,40 +20642,40 @@ declare namespace cc.AssetManager {
 	A bundle contains an amount of assets(includes scene), you can load, preload, release asset which is in this bundle
 	
 	!#zh
-	ä¸€ä¸ªåŒ…å«ä¸€å®šæ•°é‡èµ„æºï¼ˆåŒ…æ‹¬åœºæ™¯ï¼‰çš„åŒ…ï¼Œä½ å¯ä»¥åŠ è½½ï¼Œé¢„åŠ è½½ï¼Œé‡Šæ”¾æ­¤åŒ…å†…çš„èµ„æº */
+	ä¸?ä¸ªå????«ä??å®???°é??èµ?æº?ï¼??????¬å?ºæ?¯ï????????ï¼?ä½???¯ä»¥???è½½ï??é¢????è½½ï???????¾æ­¤?????????èµ?æº? */
 	export class Bundle {		
 		/**
 		!#en
 		Create a bundle
 		
 		!#zh
-		åˆ›å»ºä¸€ä¸ª bundle 
+		???å»ºä??ä¸? bundle 
 		*/
 		constructor();		
 		/** !#en
 		The name of this bundle
 		
 		!#zh
-		æ­¤ bundle çš„åç§° */
+		æ­? bundle ??????ç§? */
 		name: string;		
 		/** !#en
 		The dependency of this bundle
 		
 		!#zh
-		æ­¤ bundle çš„ä¾èµ– */
+		æ­? bundle ???ä¾?èµ? */
 		deps: string[];		
 		/** !#en
 		The root path of this bundle, such like 'http://example.com/bundle1'
 		
 		!#zh
-		æ­¤ bundle çš„æ ¹è·¯å¾„, ä¾‹å¦‚ 'http://example.com/bundle1' */
+		æ­? bundle ?????¹è·¯å¾?, ä¾?å¦? 'http://example.com/bundle1' */
 		base: string;		
 		/**
 		!#en
 		Get asset's info using path, only valid when asset is in bundle folder.
 		
 		!#zh
-		ä½¿ç”¨ path è·å–èµ„æºçš„é…ç½®ä¿¡æ¯
+		ä½¿ç?? path ??·å??èµ?æº???????ç½®ä¿¡???
 		@param path The relative path of asset, such as 'images/a'
 		@param type The constructor of asset, such as  `cc.Texture2D`
 		
@@ -20690,7 +20690,7 @@ declare namespace cc.AssetManager {
 		Get all asset's info within specific folder
 		
 		!#zh
-		è·å–åœ¨æŸä¸ªæŒ‡å®šæ–‡ä»¶å¤¹ä¸‹çš„æ‰€æœ‰èµ„æºä¿¡æ¯
+		??·å????¨æ??ä¸ªæ??å®????ä»¶å¤¹ä¸??????????èµ?æº?ä¿¡æ??
 		@param path The relative path of folder, such as 'images'
 		@param type The constructor should be used to filter paths
 		@param out The output array
@@ -20709,7 +20709,7 @@ declare namespace cc.AssetManager {
 		Get asset's info with uuid
 		
 		!#zh
-		é€šè¿‡ uuid è·å–èµ„æºä¿¡æ¯
+		???è¿? uuid ??·å??èµ?æº?ä¿¡æ??
 		@param uuid The asset's uuid
 		
 		@example 
@@ -20723,7 +20723,7 @@ declare namespace cc.AssetManager {
 		Get scene'info with name
 		
 		!#zh
-		é€šè¿‡åœºæ™¯åè·å–åœºæ™¯ä¿¡æ¯
+		???è¿???ºæ?¯å????·å????ºæ?¯ä¿¡???
 		@param name The name of scene
 		
 		@example 
@@ -20737,7 +20737,7 @@ declare namespace cc.AssetManager {
 		Initialize this bundle with options
 		
 		!#zh
-		åˆå§‹åŒ–æ­¤ bundle
+		???å§????æ­? bundle
 		@param options options 
 		*/
 		init(options: Record<string, any>): void;		
@@ -20746,7 +20746,7 @@ declare namespace cc.AssetManager {
 		Load the asset within this bundle by the path which is relative to bundle's path
 		
 		!#zh
-		é€šè¿‡ç›¸å¯¹è·¯å¾„åŠ è½½åˆ†åŒ…ä¸­çš„èµ„æºã€‚è·¯å¾„æ˜¯ç›¸å¯¹åˆ†åŒ…æ–‡ä»¶å¤¹è·¯å¾„çš„ç›¸å¯¹è·¯å¾„
+		???è¿???¸å¯¹è·¯å?????è½½å?????ä¸­ç??èµ?æº????è·¯å????¯ç?¸å¯¹?????????ä»¶å¤¹è·¯å???????¸å¯¹è·¯å??
 		@param paths Paths of the target assets.The path is relative to the bundle's folder, extensions must be omitted.
 		@param type Only asset of type will be loaded if this argument is supplied.
 		@param onProgress Callback invoked when progression change.
@@ -20783,8 +20783,8 @@ declare namespace cc.AssetManager {
 		yet finished
 		
 		!#zh
-		é€šè¿‡ç›¸å¯¹è·¯å¾„é¢„åŠ è½½åˆ†åŒ…ä¸­çš„èµ„æºã€‚è·¯å¾„æ˜¯ç›¸å¯¹åˆ†åŒ…æ–‡ä»¶å¤¹è·¯å¾„çš„ç›¸å¯¹è·¯å¾„ã€‚è°ƒç”¨å®Œåï¼Œä½ ä»ç„¶éœ€è¦é€šè¿‡ `Bundle.load` æ¥å®ŒæˆåŠ è½½ã€‚
-		å°±ç®—é¢„åŠ è½½è¿˜æ²¡å®Œæˆï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥è°ƒç”¨ `Bundle.load`ã€‚
+		???è¿???¸å¯¹è·¯å??é¢????è½½å?????ä¸­ç??èµ?æº????è·¯å????¯ç?¸å¯¹?????????ä»¶å¤¹è·¯å???????¸å¯¹è·¯å?????è°???¨å?????ï¼?ä½?ä»???¶é??è¦????è¿? `Bundle.load` ??¥å????????è½½ã??
+		å°±ç??é¢????è½½è??æ²¡å?????ï¼?ä½?ä¹???¯ä»¥??´æ?¥è????? `Bundle.load`???
 		@param paths Paths of the target asset.The path is relative to bundle folder, extensions must be omitted.
 		@param type Only asset of type will be loaded if this argument is supplied.
 		@param onProgress Callback invoked when progression change.
@@ -20822,7 +20822,7 @@ declare namespace cc.AssetManager {
 		Note: All asset paths in Creator use forward slashes, paths using backslashes will not work.
 		
 		!#zh
-		åŠ è½½ç›®æ ‡æ–‡ä»¶å¤¹ä¸­çš„æ‰€æœ‰èµ„æº, æ³¨æ„ï¼šè·¯å¾„ä¸­åªèƒ½ä½¿ç”¨æ–œæ ï¼Œåæ–œæ å°†åœæ­¢å·¥ä½œ
+		???è½½ç?®æ?????ä»¶å¤¹ä¸­ç????????èµ?æº?, æ³¨æ??ï¼?è·¯å??ä¸­å?ªè?½ä½¿??¨æ?????ï¼??????????å°????æ­¢å·¥ä½?
 		@param dir path of the target folder.The path is relative to the bundle folder, extensions must be omitted.
 		@param type Only asset of type will be loaded if this argument is supplied.
 		@param onProgress Callback invoked when progression change.
@@ -20858,8 +20858,8 @@ declare namespace cc.AssetManager {
 		It will be totally fine to call `Bundle.loadDir` at any time even if the preloading is not yet finished
 		
 		!#zh
-		é¢„åŠ è½½ç›®æ ‡æ–‡ä»¶å¤¹ä¸­çš„æ‰€æœ‰èµ„æºã€‚è°ƒç”¨å®Œåï¼Œä½ ä»ç„¶éœ€è¦é€šè¿‡ `Bundle.loadDir` æ¥å®ŒæˆåŠ è½½ã€‚
-		å°±ç®—é¢„åŠ è½½è¿˜æ²¡å®Œæˆï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥è°ƒç”¨ `Bundle.loadDir`ã€‚
+		é¢????è½½ç?®æ?????ä»¶å¤¹ä¸­ç????????èµ?æº????è°???¨å?????ï¼?ä½?ä»???¶é??è¦????è¿? `Bundle.loadDir` ??¥å????????è½½ã??
+		å°±ç??é¢????è½½è??æ²¡å?????ï¼?ä½?ä¹???¯ä»¥??´æ?¥è????? `Bundle.loadDir`???
 		@param dir path of the target folder.The path is relative to the bundle folder, extensions must be omitted.
 		@param type Only asset of type will be preloaded if this argument is supplied.
 		@param onProgress Callback invoked when progression change.
@@ -20895,7 +20895,7 @@ declare namespace cc.AssetManager {
 		Loads the scene within this bundle by its name.
 		
 		!#zh
-		é€šè¿‡åœºæ™¯åç§°åŠ è½½åˆ†åŒ…ä¸­çš„åœºæ™¯ã€‚
+		???è¿???ºæ?¯å??ç§°å??è½½å?????ä¸­ç????ºæ?¯ã??
 		@param sceneName The name of the scene to load.
 		@param options Some optional parameters
 		@param onProgress Callback invoked when progression change.
@@ -20918,8 +20918,8 @@ declare namespace cc.AssetManager {
 		It will be totally fine to call `Bundle.loadDir` at any time even if the preloading is not yet finished
 		
 		!#zh
-		é€šè¿‡åœºæ™¯åç§°é¢„åŠ è½½åˆ†åŒ…ä¸­çš„åœºæ™¯.è°ƒç”¨å®Œåï¼Œä½ ä»ç„¶éœ€è¦é€šè¿‡ `Bundle.loadScene` æˆ– `cc.director.loadScene` æ¥å®ŒæˆåŠ è½½ã€‚
-		å°±ç®—é¢„åŠ è½½è¿˜æ²¡å®Œæˆï¼Œä½ ä¹Ÿå¯ä»¥ç›´æ¥è°ƒç”¨ `Bundle.loadScene` æˆ– `cc.director.loadScene`ã€‚
+		???è¿???ºæ?¯å??ç§°é?????è½½å?????ä¸­ç????ºæ??.è°???¨å?????ï¼?ä½?ä»???¶é??è¦????è¿? `Bundle.loadScene` ??? `cc.director.loadScene` ??¥å????????è½½ã??
+		å°±ç??é¢????è½½è??æ²¡å?????ï¼?ä½?ä¹???¯ä»¥??´æ?¥è????? `Bundle.loadScene` ??? `cc.director.loadScene`???
 		@param sceneName The name of the scene to preload.
 		@param options Some optional parameters
 		@param onProgress callback, will be called when the load progression change.
@@ -20945,8 +20945,8 @@ declare namespace cc.AssetManager {
 		you can acquire them by passing the path to this API.
 		
 		!#zh
-		é€šè¿‡è·¯å¾„ä¸ç±»å‹è·å–èµ„æºã€‚åœ¨ä½ ä½¿ç”¨ {{#crossLink "Bundle/load:method"}}{{/crossLink}} æˆ–è€… {{#crossLink "Bundle/loadDir:method"}}{{/crossLink}} ä¹‹åï¼Œ
-		ä½ èƒ½é€šè¿‡ä¼ è·¯å¾„é€šè¿‡è¿™ä¸ª API è·å–åˆ°è¿™äº›èµ„æºã€‚
+		???è¿?è·¯å??ä¸?ç±»å????·å??èµ?æº??????¨ä??ä½¿ç?? {{#crossLink "Bundle/load:method"}}{{/crossLink}} ?????? {{#crossLink "Bundle/loadDir:method"}}{{/crossLink}} ä¹????ï¼?
+		ä½???½é??è¿?ä¼?è·¯å?????è¿?è¿?ä¸? API ??·å????°è??äº?èµ?æº????
 		@param path The path of asset
 		@param type Only asset of type will be returned if this argument is supplied.
 		
@@ -20962,7 +20962,7 @@ declare namespace cc.AssetManager {
 		Refer to {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}} for detailed informations.
 		
 		!#zh
-		é‡Šæ”¾é€šè¿‡ {{#crossLink "Bundle/load:method"}}{{/crossLink}} æˆ–è€… {{#crossLink "Bundle/loadDir:method"}}{{/crossLink}} åŠ è½½çš„èµ„æºã€‚è¯¦ç»†ä¿¡æ¯è¯·å‚è€ƒ {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}}
+		?????¾é??è¿? {{#crossLink "Bundle/load:method"}}{{/crossLink}} ?????? {{#crossLink "Bundle/loadDir:method"}}{{/crossLink}} ???è½½ç??èµ?æº????è¯¦ç??ä¿¡æ?¯è¯·?????? {{#crossLink "AssetManager/releaseAsset:method"}}{{/crossLink}}
 		@param path The path of asset
 		@param type Only asset of type will be released if this argument is supplied.
 		
@@ -20979,7 +20979,7 @@ declare namespace cc.AssetManager {
 		Release all assets within this bundle. Refer to {{#crossLink "AssetManager/releaseAll:method"}}{{/crossLink}} for detailed informations.
 		
 		!#zh
-		é‡Šæ”¾æ­¤åŒ…ä¸­çš„æ‰€æœ‰èµ„æºã€‚è¯¦ç»†ä¿¡æ¯è¯·å‚è€ƒ {{#crossLink "AssetManager/releaseAll:method"}}{{/crossLink}}
+		?????¾æ­¤???ä¸­ç????????èµ?æº????è¯¦ç??ä¿¡æ?¯è¯·?????? {{#crossLink "AssetManager/releaseAll:method"}}{{/crossLink}}
 		
 		@example 
 		```js
@@ -20994,50 +20994,50 @@ declare namespace cc.AssetManager {
 	All member can be accessed with `cc.assetManager.cacheManager`.
 	
 	!#zh
-	ç¼“å­˜ç®¡ç†å™¨æ˜¯ä¸€ä¸ªæ¨¡å—ï¼Œåœ¨é WEB å¹³å°ä¸Šï¼Œç”¨äºç®¡ç†æ‰€æœ‰ä»æœåŠ¡å™¨ä¸Šä¸‹è½½ä¸‹æ¥çš„ç¼“å­˜ï¼Œè¿™æ˜¯ä¸€ä¸ªå•ä¾‹ï¼Œæ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.cacheManager` è®¿é—®ã€‚ */
+	ç¼?å­?ç®¡ç????¨æ?¯ä??ä¸ªæ¨¡???ï¼???¨é?? WEB å¹³å?°ä??ï¼???¨ä??ç®¡ç????????ä»??????¡å?¨ä??ä¸?è½½ä????¥ç??ç¼?å­?ï¼?è¿???¯ä??ä¸ªå??ä¾?ï¼???????????????½é??è¿? `cc.assetManager.cacheManager` è®¿é?®ã?? */
 	export class CacheManager {		
 		/** !#en
 		The name of cacheDir
 		
 		!#zh
-		ç¼“å­˜ç›®å½•çš„åç§° */
+		ç¼?å­???®å????????ç§? */
 		cacheDir: string;		
 		/** !#en
 		Whether or not cache asset into user's storage space, this property only works on mini-game platforms
 		
 		!#zh
-		æ˜¯å¦ç¼“å­˜èµ„æºåˆ°ç”¨æˆ·å­˜å‚¨ç©ºé—´ï¼Œæ­¤å±æ€§åªåœ¨å°æ¸¸æˆå¹³å°æœ‰æ•ˆ */
+		??¯å?¦ç??å­?èµ?æº???°ç?¨æ?·å????¨ç©º??´ï??æ­¤å????§å?ªå?¨å??æ¸¸æ??å¹³å?°æ????? */
 		cacheEnabled: boolean;		
 		/** !#en
 		Whether or not auto clear cache when storage ran out, this property only works on mini-game platforms
 		
 		!#zh
-		æ˜¯å¦åœ¨å­˜å‚¨ç©ºé—´æ»¡äº†åè‡ªåŠ¨æ¸…ç†ç¼“å­˜ï¼Œæ­¤å±æ€§åªåœ¨å°æ¸¸æˆå¹³å°æœ‰æ•ˆ */
+		??¯å?¦å?¨å????¨ç©º??´æ»¡äº??????ªå?¨æ?????ç¼?å­?ï¼?æ­¤å????§å?ªå?¨å??æ¸¸æ??å¹³å?°æ????? */
 		autoClear: boolean;		
 		/** !#en
 		The interval between caching resources, this property only works on mini-game platforms, unit: ms
 		
 		!#zh
-		ç¼“å­˜èµ„æºçš„é—´éš”æ—¶é—´ï¼Œæ­¤å±æ€§åªåœ¨å°æ¸¸æˆå¹³å°æœ‰æ•ˆï¼Œå•ä½ï¼šms */
+		ç¼?å­?èµ?æº??????´é????¶é?´ï??æ­¤å????§å?ªå?¨å??æ¸¸æ??å¹³å?°æ?????ï¼????ä½?ï¼?ms */
 		cacheInterval: number;		
 		/** !#en
 		The interval between deleting resources, when you use `cleanLRU`, the resources will be deleted as this interval, unit: ms
 		
 		!#zh
-		æ¸…ç†èµ„æºçš„é—´éš”æ—¶é—´ï¼Œå½“ä½ ä½¿ç”¨ `cleanLRU` æ—¶ï¼Œèµ„æºå°†ä»¥æ­¤é—´éš”è¢«åˆ é™¤ï¼Œå•ä½ï¼šms */
+		æ¸????èµ?æº??????´é????¶é?´ï??å½?ä½?ä½¿ç?? `cleanLRU` ??¶ï??èµ?æº?å°?ä»¥æ­¤??´é??è¢«å????¤ï?????ä½?ï¼?ms */
 		deleteInterval: number;		
 		/** !#en
 		List of all cached files
 		
 		!#zh
-		æ‰€æœ‰ç¼“å­˜æ–‡ä»¶åˆ—è¡¨ */
+		??????ç¼?å­????ä»¶å??è¡? */
 		cachedFiles: Cache<{ bundle: string, url: string, lastTime: number }>;		
 		/**
 		!#en
 		Get cached path with origin url
 		
 		!#zh
-		é€šè¿‡åŸå§‹ url è·å–ç¼“å­˜åçš„è·¯å¾„
+		???è¿????å§? url ??·å??ç¼?å­???????è·¯å??
 		@param originUrl originUrl 
 		*/
 		getCache(originUrl: string): string;		
@@ -21046,7 +21046,7 @@ declare namespace cc.AssetManager {
 		Get temporary path with origin url, this method only works on mini-game platforms
 		
 		!#zh
-		é€šè¿‡åŸå§‹ url è·å–ä¸´æ—¶æ–‡ä»¶çš„è·¯å¾„ï¼Œæ­¤æ–¹æ³•åªåœ¨å°æ¸¸æˆå¹³å°æœ‰æ•ˆ
+		???è¿????å§? url ??·å??ä¸´æ?¶æ??ä»¶ç??è·¯å??ï¼?æ­¤æ?¹æ????ªå?¨å??æ¸¸æ??å¹³å?°æ?????
 		@param originUrl originUrl 
 		*/
 		getTemp(originUrl: string): string;		
@@ -21055,7 +21055,7 @@ declare namespace cc.AssetManager {
 		Clear all caches, please use with caution, If necessary, we recommend using it before the game is launched
 		
 		!#zh
-		æ¸…ç©ºæ‰€æœ‰ç¼“å­˜ï¼Œè¯·è°¨æ…ä½¿ç”¨ï¼Œå¦‚æœå¿…è¦çš„è¯ï¼Œæˆ‘ä»¬å»ºè®®åœ¨æ¸¸æˆå¯åŠ¨ä¹‹å‰ä½¿ç”¨ 
+		æ¸?ç©ºæ?????ç¼?å­?ï¼?è¯·è°¨???ä½¿ç?¨ï??å¦????å¿?è¦????è¯?ï¼????ä»¬å»ºè®®å?¨æ¸¸?????¯å?¨ä?????ä½¿ç?? 
 		*/
 		clearCache(): void;		
 		/**
@@ -21063,7 +21063,7 @@ declare namespace cc.AssetManager {
 		Clear part of caches with LRU strategy
 		
 		!#zh
-		ä½¿ç”¨ LRU ç­–ç•¥æ¸…ç©ºéƒ¨åˆ†ç¼“å­˜ 
+		ä½¿ç?? LRU ç­???¥æ??ç©ºé?¨å??ç¼?å­? 
 		*/
 		clearLRU(): void;		
 		/**
@@ -21071,7 +21071,7 @@ declare namespace cc.AssetManager {
 		Remove cache with origin url
 		
 		!#zh
-		é€šè¿‡åŸå§‹ url ç§»é™¤ç¼“å­˜ 
+		???è¿????å§? url ç§»é?¤ç??å­? 
 		*/
 		removeCache(): void;	
 	}	
@@ -21079,14 +21079,14 @@ declare namespace cc.AssetManager {
 	use to cache something
 	
 	!#zh
-	ç”¨äºç¼“å­˜æŸäº›å†…å®¹ */
+	??¨ä??ç¼?å­????äº????å®? */
 	export class Cache<T = any> {		
 		/**
 		!#en
 		Create a cache
 		
 		!#zh
-		åˆ›å»ºä¸€ä¸ª cache
+		???å»ºä??ä¸? cache
 		@param map An object used to initialize 
 		*/
 		constructor(map?: Record<string, T>);		
@@ -21095,7 +21095,7 @@ declare namespace cc.AssetManager {
 		Add Key-Value to cache
 		
 		!#zh
-		å¢åŠ é”®å€¼å¯¹åˆ°ç¼“å­˜ä¸­
+		å¢??????®å?¼å¯¹??°ç??å­?ä¸?
 		@param key The key
 		@param val The value
 		
@@ -21111,7 +21111,7 @@ declare namespace cc.AssetManager {
 		Get the cached content by key
 		
 		!#zh
-		é€šè¿‡ key è·å–å¯¹åº”çš„ value
+		???è¿? key ??·å??å¯¹å????? value
 		@param key The key
 		
 		@example 
@@ -21126,7 +21126,7 @@ declare namespace cc.AssetManager {
 		Check whether or not content exists by key
 		
 		!#zh
-		é€šè¿‡ Key åˆ¤æ–­æ˜¯å¦å­˜åœ¨å¯¹åº”çš„å†…å®¹
+		???è¿? Key ??¤æ?­æ?¯å?¦å????¨å¯¹åº???????å®?
 		@param key The key
 		
 		@example 
@@ -21141,7 +21141,7 @@ declare namespace cc.AssetManager {
 		Remove the cached content by key
 		
 		!#zh
-		é€šè¿‡ Key ç§»é™¤å¯¹åº”çš„å†…å®¹
+		???è¿? Key ç§»é?¤å¯¹åº???????å®?
 		@param key The key
 		
 		@example 
@@ -21156,7 +21156,7 @@ declare namespace cc.AssetManager {
 		Clear all content
 		
 		!#zh
-		æ¸…é™¤æ‰€æœ‰å†…å®¹
+		æ¸???¤æ????????å®?
 		
 		@example 
 		```js
@@ -21170,7 +21170,7 @@ declare namespace cc.AssetManager {
 		Enumerate all content and invoke function
 		
 		!#zh
-		æšä¸¾æ‰€æœ‰å†…å®¹å¹¶æ‰§è¡Œæ–¹æ³•
+		???ä¸¾æ????????å®¹å¹¶??§è????¹æ??
 		@param func Function to be invoked
 		
 		@example 
@@ -21185,7 +21185,7 @@ declare namespace cc.AssetManager {
 		Enumerate all content to find one element which can fulfill condition
 		
 		!#zh
-		æšä¸¾æ‰€æœ‰å†…å®¹ï¼Œæ‰¾åˆ°ä¸€ä¸ªå¯ä»¥æ»¡è¶³æ¡ä»¶çš„å…ƒç´ 
+		???ä¸¾æ????????å®¹ï????¾å?°ä??ä¸ªå?¯ä»¥æ»¡è¶³??¡ä»¶??????ç´?
 		@param predicate The condition
 		
 		@example 
@@ -21199,14 +21199,14 @@ declare namespace cc.AssetManager {
 		The count of cached content
 		
 		!#zh
-		ç¼“å­˜æ•°é‡ */
+		ç¼?å­???°é?? */
 		count: number;		
 		/**
 		!#en
 		Destroy this cache
 		
 		!#zh
-		é”€æ¯è¿™ä¸ª cache 
+		???æ¯?è¿?ä¸? cache 
 		*/
 		destroy(): void;	
 	}	
@@ -21214,14 +21214,14 @@ declare namespace cc.AssetManager {
 	Control asset's dependency list, it is a singleton. All member can be accessed with `cc.assetManager.dependUtil`
 	
 	!#zh
-	æ§åˆ¶èµ„æºçš„ä¾èµ–åˆ—è¡¨ï¼Œè¿™æ˜¯ä¸€ä¸ªå•ä¾‹, æ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.dependUtil` è®¿é—® */
+	??§å?¶è??æº????ä¾?èµ????è¡¨ï??è¿???¯ä??ä¸ªå??ä¾?, ??????????????½é??è¿? `cc.assetManager.dependUtil` è®¿é?? */
 	export class DependUtil {		
 		/**
 		!#en
 		Get asset's native dependency. For example, Texture's native dependency is image.
 		
 		!#zh
-		è·å–èµ„æºçš„åŸç”Ÿä¾èµ–ï¼Œä¾‹å¦‚ Texture çš„åŸç”Ÿä¾èµ–æ˜¯å›¾ç‰‡
+		??·å??èµ?æº??????????ä¾?èµ?ï¼?ä¾?å¦? Texture ?????????ä¾?èµ???¯å?¾ç??
 		@param uuid asset's uuid
 		
 		@example 
@@ -21235,7 +21235,7 @@ declare namespace cc.AssetManager {
 		Get asset's direct referencing non-native dependency list. For example, Material's non-native dependencies are Texture.
 		
 		!#zh
-		è·å–èµ„æºç›´æ¥å¼•ç”¨çš„éåŸç”Ÿä¾èµ–åˆ—è¡¨ï¼Œä¾‹å¦‚ï¼Œæè´¨çš„éåŸç”Ÿä¾èµ–æ˜¯ Texture
+		??·å??èµ?æº???´æ?¥å????¨ç???????????ä¾?èµ????è¡¨ï??ä¾?å¦?ï¼????è´¨ç???????????ä¾?èµ???? Texture
 		@param uuid asset's uuid
 		
 		@example 
@@ -21250,8 +21250,8 @@ declare namespace cc.AssetManager {
 		The returned array stores the dependencies with their uuid, after retrieve dependencies,
 		
 		!#zh
-		è·å–æŸä¸ªå·²ç»åŠ è½½å¥½çš„èµ„æºçš„æ‰€æœ‰éåŸç”Ÿä¾èµ–èµ„æºåˆ—è¡¨ï¼ŒåŒ…æ‹¬é—´æ¥å¼•ç”¨çš„èµ„æºï¼Œå¹¶ä¿å­˜åœ¨æ•°ç»„ä¸­è¿”å›ã€‚
-		è¿”å›çš„æ•°ç»„å°†ä»…ä¿å­˜ä¾èµ–èµ„æºçš„ uuidã€‚
+		??·å?????ä¸ªå·²ç»????è½½å¥½???èµ?æº???????????????????ä¾?èµ?èµ?æº????è¡¨ï???????¬é?´æ?¥å????¨ç??èµ?æº?ï¼?å¹¶ä??å­???¨æ?°ç??ä¸­è????????
+		è¿?????????°ç??å°?ä»?ä¿?å­?ä¾?èµ?èµ?æº???? uuid???
 		@param uuid The asset's uuid
 		
 		@example 
@@ -21270,49 +21270,49 @@ declare namespace cc.AssetManager {
 	5. Scripts
 	
 	!#zh
-	ç®¡ç†æ‰€æœ‰ä¸‹è½½è¿‡ç¨‹ï¼Œdownloader æ˜¯ä¸ªå•ä¾‹ï¼Œæ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.downloader` è®¿é—®ï¼Œå®ƒèƒ½ä¸‹è½½ä»¥ä¸‹å‡ ç§ç±»å‹çš„æ–‡ä»¶ï¼š
-	1. æ–‡æœ¬
-	2. å›¾ç‰‡
-	3. éŸ³é¢‘
-	4. èµ„æº
-	5. è„šæœ¬ */
+	ç®¡ç????????ä¸?è½½è??ç¨?ï¼?downloader ??¯ä¸ª???ä¾?ï¼???????????????½é??è¿? `cc.assetManager.downloader` è®¿é?®ï??å®???½ä??è½½ä»¥ä¸????ç§?ç±»å????????ä»¶ï??
+	1. ??????
+	2. ??¾ç??
+	3. ??³é??
+	4. èµ?æº?
+	5. ?????? */
 	export class Downloader {		
 		/** !#en
 		The address of remote server
 		
 		!#zh
-		è¿œç¨‹æœåŠ¡å™¨åœ°å€ */
+		è¿?ç¨??????¡å?¨å?°å?? */
 		remoteServerAddress: string;		
 		/** !#en
 		The maximum number of concurrent when downloading
 		
 		!#zh
-		ä¸‹è½½æ—¶çš„æœ€å¤§å¹¶å‘æ•° */
+		ä¸?è½½æ?¶ç?????å¤§å¹¶?????? */
 		maxConcurrency: number;		
 		/** !#en
 		The maximum number of request can be launched per frame when downloading
 		
 		!#zh
-		ä¸‹è½½æ—¶æ¯å¸§å¯ä»¥å¯åŠ¨çš„æœ€å¤§è¯·æ±‚æ•° */
+		ä¸?è½½æ?¶æ??å¸§å?¯ä»¥??¯å?¨ç?????å¤§è¯·æ±???? */
 		maxRequestsPerFrame: number;		
 		/** !#en
 		The max number of retries when fail
 		
 		!#zh
-		å¤±è´¥é‡è¯•æ¬¡æ•° */
+		å¤±è´¥???è¯?æ¬¡æ?? */
 		maxRetryCount: number;		
 		/** !#en
 		Wait for while before another retry, unit: ms
 		
 		!#zh
-		é‡è¯•çš„é—´éš”æ—¶é—´ */
+		???è¯??????´é????¶é?? */
 		retryInterval: number;		
 		/**
 		!#en
 		Register custom handler if you want to change default behavior or extend downloader to download other format file
 		
 		!#zh
-		å½“ä½ æƒ³ä¿®æ”¹é»˜è®¤è¡Œä¸ºæˆ–è€…æ‹“å±• downloader æ¥ä¸‹è½½å…¶ä»–æ ¼å¼æ–‡ä»¶æ—¶å¯ä»¥æ³¨å†Œè‡ªå®šä¹‰çš„ handler
+		å½?ä½???³ä¿®??¹é??è®¤è??ä¸ºæ????????å±? downloader ??¥ä??è½½å?¶ä????¼å?????ä»¶æ?¶å?¯ä»¥æ³¨å????ªå??ä¹???? handler
 		@param type Extension likes '.jpg' or map likes {'.jpg': jpgHandler, '.png': pngHandler}
 		@param handler handler
 		
@@ -21329,7 +21329,7 @@ declare namespace cc.AssetManager {
 		Use corresponding handler to download file under limitation
 		
 		!#zh
-		åœ¨é™åˆ¶ä¸‹ä½¿ç”¨å¯¹åº”çš„ handler æ¥ä¸‹è½½æ–‡ä»¶
+		??¨é????¶ä??ä½¿ç?¨å¯¹åº???? handler ??¥ä??è½½æ??ä»?
 		@param url The url should be downloaded
 		@param type The type indicates that which handler should be used to download, such as '.jpg'
 		@param options some optional paramters will be transferred to the corresponding handler.
@@ -21346,14 +21346,14 @@ declare namespace cc.AssetManager {
 	Provide some helpful function, it is a singleton. All member can be accessed with `cc.assetManager.utils`
 	
 	!#zh
-	æä¾›ä¸€äº›è¾…åŠ©æ–¹æ³•ï¼Œhelper æ˜¯ä¸€ä¸ªå•ä¾‹, æ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.utils` è®¿é—® */
+	???ä¾?ä¸?äº?è¾???©æ?¹æ??ï¼?helper ??¯ä??ä¸ªå??ä¾?, ??????????????½é??è¿? `cc.assetManager.utils` è®¿é?? */
 	export class Helper {		
 		/**
 		!#en
 		Decode uuid, returns the original uuid
 		
 		!#zh
-		è§£ç  uuidï¼Œè¿”å›åŸå§‹ uuid
+		è§???? uuidï¼?è¿???????å§? uuid
 		@param base64 the encoded uuid
 		
 		@example 
@@ -21368,7 +21368,7 @@ declare namespace cc.AssetManager {
 		Extract uuid from url
 		
 		!#zh
-		ä» url ä¸­æå– uuid
+		ä»? url ä¸­æ????? uuid
 		@param url url
 		
 		@example 
@@ -21383,7 +21383,7 @@ declare namespace cc.AssetManager {
 		Transform uuid to url
 		
 		!#zh
-		è½¬æ¢ uuid ä¸º url
+		è½¬æ?? uuid ä¸? url
 		@param uuid The uuid of asset
 		@param options Some optional parameters
 		
@@ -21402,7 +21402,7 @@ declare namespace cc.AssetManager {
 		Check if the type of asset is scene
 		
 		!#zh
-		æ£€æŸ¥èµ„æºç±»å‹æ˜¯å¦æ˜¯åœºæ™¯
+		æ£???¥è??æº?ç±»å????¯å?¦æ?¯å?ºæ??
 		@param asset asset 
 		*/
 		isScene(asset: any): boolean;		
@@ -21411,7 +21411,7 @@ declare namespace cc.AssetManager {
 		Normalize url, strip './' and '/'
 		
 		!#zh
-		æ ‡å‡†åŒ– url ï¼Œå»é™¤ './' å’Œ '/'
+		????????? url ï¼???»é?? './' ??? '/'
 		@param url url 
 		*/
 		normalize(url: string): string;	
@@ -21420,14 +21420,14 @@ declare namespace cc.AssetManager {
 	Handle the packed asset, include unpacking, loading, cache and so on. It is a singleton. All member can be accessed with `cc.assetManager.packManager`
 	
 	!#zh
-	å¤„ç†æ‰“åŒ…èµ„æºï¼ŒåŒ…æ‹¬æ‹†åŒ…ï¼ŒåŠ è½½ï¼Œç¼“å­˜ç­‰ç­‰ï¼Œè¿™æ˜¯ä¸€ä¸ªå•ä¾‹, æ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManager.packManager` è®¿é—® */
+	å¤??????????èµ?æº?ï¼??????¬æ?????ï¼????è½½ï??ç¼?å­?ç­?ç­?ï¼?è¿???¯ä??ä¸ªå??ä¾?, ??????????????½é??è¿? `cc.assetManager.packManager` è®¿é?? */
 	export class PackManager {		
 		/**
 		!#en
 		Unpack the json, revert to what it was before packing
 		
 		!#zh
-		æ‹†è§£ json åŒ…ï¼Œæ¢å¤ä¸ºæ‰“åŒ…ä¹‹å‰çš„å†…å®¹
+		???è§? json ???ï¼???¢å??ä¸ºæ?????ä¹??????????å®?
 		@param pack The pack
 		@param json The content of pack
 		@param options Some optional parameters
@@ -21446,7 +21446,7 @@ declare namespace cc.AssetManager {
 		Register custom handler if you want to change default behavior or extend packManager to unpack other format pack
 		
 		!#zh
-		å½“ä½ æƒ³ä¿®æ”¹é»˜è®¤è¡Œä¸ºæˆ–è€…æ‹“å±• packManager æ¥æ‹†åˆ†å…¶ä»–æ ¼å¼çš„åŒ…æ—¶å¯ä»¥æ³¨å†Œè‡ªå®šä¹‰çš„ handler
+		å½?ä½???³ä¿®??¹é??è®¤è??ä¸ºæ????????å±? packManager ??¥æ???????¶ä????¼å??????????¶å?¯ä»¥æ³¨å????ªå??ä¹???? handler
 		@param type Extension likes '.bin' or map likes {'.bin': binHandler, '.ab': abHandler}
 		@param handler handler
 		
@@ -21463,7 +21463,7 @@ declare namespace cc.AssetManager {
 		Use corresponding handler to unpack package
 		
 		!#zh
-		ç”¨å¯¹åº”çš„ handler æ¥è¿›è¡Œè§£åŒ…
+		??¨å¯¹åº???? handler ??¥è??è¡?è§????
 		@param pack The uuid of packed assets
 		@param data The packed data
 		@param type The type indicates that which handler should be used to download, such as '.jpg'
@@ -21484,7 +21484,7 @@ declare namespace cc.AssetManager {
 		And then retrieve the corresponding content form it.
 		
 		!#zh
-		ä¸‹è½½è¯·æ±‚å¯¹è±¡ï¼Œå¦‚æœè¯·æ±‚å¯¹è±¡ä¸åœ¨ä»»ä½•åŒ…å†…ï¼Œåˆ™æ­£å¸¸ä¸‹è½½ï¼Œå¦åˆ™ä¸‹è½½å¯¹åº”çš„ package å¹¶è¿›è¡Œæ‹†è§£ï¼Œå¹¶å–å›åŒ…å†…å¯¹åº”çš„å†…å®¹
+		ä¸?è½½è¯·æ±?å¯¹è±¡ï¼?å¦????è¯·æ??å¯¹è±¡ä¸???¨ä»»ä½???????ï¼????æ­?å¸¸ä??è½½ï????¦å??ä¸?è½½å¯¹åº???? package å¹¶è??è¡????è§?ï¼?å¹¶å???????????å¯¹å????????å®?
 		@param item Some item you want to download
 		@param options Some optional parameters
 		@param onComplete Callback when finished
@@ -21503,14 +21503,14 @@ declare namespace cc.AssetManager {
 	Parse the downloaded file, it's a singleton, all member can be accessed with `cc.assetManager.parser`
 	
 	!#zh
-	è§£æå·²ä¸‹è½½çš„æ–‡ä»¶ï¼Œparser æ˜¯ä¸€ä¸ªå•ä¾‹, æ‰€æœ‰æˆå‘˜èƒ½é€šè¿‡ `cc.assetManaager.parser` è®¿é—® */
+	è§????å·²ä??è½½ç?????ä»¶ï??parser ??¯ä??ä¸ªå??ä¾?, ??????????????½é??è¿? `cc.assetManaager.parser` è®¿é?? */
 	export class Parser {		
 		/**
 		!#en
 		Register custom handler if you want to change default behavior or extend parser to parse other format file
 		
 		!#zh
-		å½“ä½ æƒ³ä¿®æ”¹é»˜è®¤è¡Œä¸ºæˆ–è€…æ‹“å±• parser æ¥è§£æå…¶ä»–æ ¼å¼æ–‡ä»¶æ—¶å¯ä»¥æ³¨å†Œè‡ªå®šä¹‰çš„handler
+		å½?ä½???³ä¿®??¹é??è®¤è??ä¸ºæ????????å±? parser ??¥è§£?????¶ä????¼å?????ä»¶æ?¶å?¯ä»¥æ³¨å????ªå??ä¹????handler
 		@param type Extension likes '.jpg' or map likes {'.jpg': jpgHandler, '.png': pngHandler}
 		@param handler The corresponding handler
 		
@@ -21527,7 +21527,7 @@ declare namespace cc.AssetManager {
 		Use corresponding handler to parse file
 		
 		!#zh
-		ä½¿ç”¨å¯¹åº”çš„handleræ¥è§£ææ–‡ä»¶
+		ä½¿ç?¨å¯¹åº????handler??¥è§£??????ä»?
 		@param id The id of file
 		@param file File
 		@param type The corresponding type of file, likes '.jpg'.
@@ -21547,32 +21547,32 @@ declare namespace cc.AssetManager {
 	Pipeline can execute the task for some effect.
 	
 	!#zh
-	ç®¡çº¿èƒ½æ‰§è¡Œä»»åŠ¡è¾¾åˆ°æŸä¸ªæ•ˆæœ */
+	ç®¡çº¿??½æ?§è??ä»»å?¡è¾¾??°æ??ä¸ªæ????? */
 	export class Pipeline {		
 		/** !#en
 		The id of pipeline
 		
 		!#zh
-		ç®¡çº¿çš„ id */
+		ç®¡çº¿??? id */
 		id: number;		
 		/** !#en
 		The name of pipeline
 		
 		!#zh
-		ç®¡çº¿çš„åå­— */
+		ç®¡çº¿??????å­? */
 		name: string;		
 		/** !#en
 		All pipes of pipeline
 		
 		!#zh
-		æ‰€æœ‰çš„ç®¡é“ */
+		?????????ç®¡é?? */
 		pipes: Function[];		
 		/**
 		!#en
 		Create a new pipeline
 		
 		!#zh
-		åˆ›å»ºä¸€ä¸ªç®¡çº¿
+		???å»ºä??ä¸ªç®¡çº?
 		@param name The name of pipeline
 		@param funcs The array of pipe, every pipe must be function which take two parameters, the first is a `Task` flowed in pipeline, the second is complete callback
 		
@@ -21601,7 +21601,7 @@ declare namespace cc.AssetManager {
 		At specific point insert a new pipe to pipeline
 		
 		!#zh
-		åœ¨æŸä¸ªç‰¹å®šçš„ç‚¹ä¸ºç®¡çº¿æ’å…¥ä¸€ä¸ªæ–°çš„ pipe
+		??¨æ??ä¸ªç?¹å???????¹ä¸ºç®¡çº¿?????¥ä??ä¸ªæ?°ç?? pipe
 		@param func The new pipe
 		@param index The specific point you want to insert at.
 		
@@ -21620,7 +21620,7 @@ declare namespace cc.AssetManager {
 		Append a new pipe to the pipeline
 		
 		!#zh
-		æ·»åŠ ä¸€ä¸ªç®¡é“åˆ°ç®¡çº¿ä¸­
+		æ·»å??ä¸?ä¸ªç®¡?????°ç®¡çº¿ä¸­
 		@param func The new pipe
 		
 		@example 
@@ -21638,7 +21638,7 @@ declare namespace cc.AssetManager {
 		Remove pipe which at specific point
 		
 		!#zh
-		ç§»é™¤ç‰¹å®šä½ç½®çš„ç®¡é“
+		ç§»é?¤ç?¹å??ä½?ç½®ç??ç®¡é??
 		@param index The specific point
 		
 		@example 
@@ -21656,7 +21656,7 @@ declare namespace cc.AssetManager {
 		Execute task synchronously
 		
 		!#zh
-		åŒæ­¥æ‰§è¡Œä»»åŠ¡
+		???æ­¥æ?§è??ä»»å??
 		@param task The task will be executed
 		
 		@example 
@@ -21676,7 +21676,7 @@ declare namespace cc.AssetManager {
 		Execute task asynchronously
 		
 		!#zh
-		å¼‚æ­¥æ‰§è¡Œä»»åŠ¡
+		å¼?æ­¥æ?§è??ä»»å??
 		@param task The task will be executed
 		
 		@example 
@@ -21696,76 +21696,76 @@ declare namespace cc.AssetManager {
 	A collection of information about a request
 	
 	!#zh
-	è¯·æ±‚çš„ç›¸å…³ä¿¡æ¯é›†åˆ */
+	è¯·æ???????¸å?³ä¿¡??¯é????? */
 	export class RequestItem {		
 		/** !#en
 		The uuid of request
 		
 		!#zh
-		è¯·æ±‚èµ„æºçš„uuid */
+		è¯·æ??èµ?æº????uuid */
 		uuid: string;		
 		/** !#en
 		The final url of request
 		
 		!#zh
-		è¯·æ±‚çš„æœ€ç»ˆurl */
+		è¯·æ????????ç»?url */
 		url: string;		
 		/** !#en
 		The extension name of asset
 		
 		!#zh
-		èµ„æºçš„æ‰©å±•å */
+		èµ?æº??????©å????? */
 		ext: string;		
 		/** !#en
 		The content of asset
 		
 		!#zh
-		èµ„æºçš„å†…å®¹ */
+		èµ?æº???????å®? */
 		content: any;		
 		/** !#en
 		The file of asset
 		
 		!#zh
-		èµ„æºçš„æ–‡ä»¶ */
+		èµ?æº???????ä»? */
 		file: any;		
 		/** !#en
 		The information of asset
 		
 		!#zh
-		èµ„æºçš„ç›¸å…³ä¿¡æ¯ */
+		èµ?æº??????¸å?³ä¿¡??? */
 		info: any;		
 		/** !#en
 		Whether or not it is native asset
 		
 		!#zh
-		èµ„æºæ˜¯å¦æ˜¯åŸç”Ÿèµ„æº */
+		èµ?æº???¯å?¦æ?¯å?????èµ?æº? */
 		isNative: boolean;		
 		/** !#en
 		Custom options
 		
 		!#zh
-		è‡ªå®šä¹‰å‚æ•° */
+		??ªå??ä¹??????? */
 		options: any;		
 		/**
 		!#en
 		Create a request item
 		
 		!#zh
-		åˆ›å»ºä¸€ä¸ª request item 
+		???å»ºä??ä¸? request item 
 		*/
 		constructor();		
 		/** !#en
 		The id of request, combined from uuid and isNative
 		
 		!#zh
-		è¯·æ±‚çš„ id, ç”± uuid å’Œ isNative ç»„åˆè€Œæˆ */
+		è¯·æ????? id, ??? uuid ??? isNative ç»?????????? */
 		id: string;		
 		/**
 		!#en
 		Recycle this for reuse
 		
 		!#zh
-		å›æ”¶ requestItem ç”¨äºå¤ç”¨ 
+		?????? requestItem ??¨ä??å¤???? 
 		*/
 		recycle(): void;		
 		/**
@@ -21773,7 +21773,7 @@ declare namespace cc.AssetManager {
 		Create a new request item from pool
 		
 		!#zh
-		ä»å¯¹è±¡æ± ä¸­åˆ›å»º requestItem 
+		ä»?å¯¹è±¡æ±?ä¸­å??å»? requestItem 
 		*/
 		static create(): RequestItem;	
 	}	
@@ -21781,7 +21781,7 @@ declare namespace cc.AssetManager {
 	The builtin bundles
 	
 	!#zh
-	å†…ç½® bundle */
+	???ç½? bundle */
 	export enum BuiltinBundleName {		
 		RESOURCES = 0,
 		INTERNAL = 0,
@@ -21792,68 +21792,68 @@ declare namespace cc.AssetManager {
 	Task is used to run in the pipeline for some effect
 	
 	!#zh
-	ä»»åŠ¡ç”¨äºåœ¨ç®¡çº¿ä¸­è¿è¡Œä»¥è¾¾æˆæŸç§æ•ˆæœ */
+	ä»»å?¡ç?¨ä????¨ç®¡çº¿ä¸­è¿?è¡?ä»¥è¾¾??????ç§??????? */
 	export class Task {		
 		/** !#en
 		The id of task
 		
 		!#zh
-		ä»»åŠ¡id */
+		ä»»å?¡id */
 		id: number;		
 		/** !#en
 		The callback when task is completed
 		
 		!#zh
-		å®Œæˆå›è°ƒ */
+		å®???????è°? */
 		onComplete: Function;		
 		/** !#en
 		The callback of progression
 		
 		!#zh
-		è¿›åº¦å›è°ƒ */
+		è¿?åº¦å??è°? */
 		onProgress: Function;		
 		/** !#en
 		The callback when something goes wrong
 		
 		!#zh
-		é”™è¯¯å›è°ƒ */
+		???è¯¯å??è°? */
 		onError: Function;		
 		/** !#en
 		The source of task
 		
 		!#zh
-		ä»»åŠ¡çš„æº */
+		ä»»å?¡ç??æº? */
 		source: any;		
 		/** !#en
 		The output of task
 		
 		!#zh
-		ä»»åŠ¡çš„è¾“å‡º */
+		ä»»å?¡ç??è¾???? */
 		output: any;		
 		/** !#en
 		The input of task
 		
 		!#zh
-		ä»»åŠ¡çš„è¾“å…¥ */
+		ä»»å?¡ç??è¾???? */
 		input: any;		
 		/** !#en
 		The progression of task
 		
 		!#zh
-		ä»»åŠ¡çš„è¿›åº¦ */
+		ä»»å?¡ç??è¿?åº? */
 		progress: any;		
 		/** !#en
 		Custom options
 		
 		!#zh
-		è‡ªå®šä¹‰å‚æ•° */
+		??ªå??ä¹??????? */
 		options: any;		
 		/**
 		!#en
 		Create a new Task
 		
 		!#zh
-		åˆ›å»ºä¸€ä¸ªä»»åŠ¡
+		???å»ºä??ä¸ªä»»???
 		@param options Some optional paramters 
 		*/
 		constructor(options?: {onComplete?: (err: Error, result: any) => void, onError?: () => void, onProgress?: Function, input: any, progress?: any, options?: Record<string, any>});		
@@ -21862,7 +21862,7 @@ declare namespace cc.AssetManager {
 		Set paramters of this task
 		
 		!#zh
-		è®¾ç½®ä»»åŠ¡çš„å‚æ•°
+		è®¾ç½®ä»»å?¡ç????????
 		@param options Some optional paramters
 		
 		@example 
@@ -21877,7 +21877,7 @@ declare namespace cc.AssetManager {
 		Dispatch event
 		
 		!#zh
-		å‘å¸ƒäº‹ä»¶
+		???å¸?äº?ä»?
 		@param event The event name
 		@param param1 Parameter 1
 		@param param2 Parameter 2
@@ -21897,21 +21897,21 @@ declare namespace cc.AssetManager {
 		Recycle this for reuse
 		
 		!#zh
-		å›æ”¶ task ç”¨äºå¤ç”¨ 
+		?????? task ??¨ä??å¤???? 
 		*/
 		recycle(): void;		
 		/** !#en
 		Whether or not this task is completed
 		
 		!#zh
-		æ­¤ä»»åŠ¡æ˜¯å¦å·²ç»å®Œæˆ */
+		æ­¤ä»»??¡æ?¯å?¦å·²ç»?å®???? */
 		isFinish: boolean;		
 		/**
 		!#en
 		Create a new task from pool
 		
 		!#zh
-		ä»å¯¹è±¡æ± ä¸­åˆ›å»º task
+		ä»?å¯¹è±¡æ±?ä¸­å??å»? task
 		@param options Some optional paramters 
 		*/
 		static create(options?: {onComplete?: (err: Error, result: any) => void, onError?: () => void, onProgress?: Function, input: any, progress?: any, options?: Record<string, any>}): Task;	
@@ -21924,7 +21924,7 @@ declare namespace cc.geomUtils {
 	!#en
 	the distance between a point and a plane
 	!#zh
-	è®¡ç®—ç‚¹å’Œå¹³é¢ä¹‹é—´çš„è·ç¦»ã€‚
+	è®¡ç????¹å??å¹³é?¢ä????´ç??è·?ç¦»ã??
 	@param point point
 	@param plane plane 
 	*/
@@ -21933,7 +21933,7 @@ declare namespace cc.geomUtils {
 	!#en
 	the closest point on plane to a given point
 	!#zh
-	è®¡ç®—å¹³é¢ä¸Šæœ€æ¥è¿‘ç»™å®šç‚¹çš„ç‚¹ã€‚
+	è®¡ç??å¹³é?¢ä???????¥è??ç»?å®???¹ç????¹ã??
 	@param out Closest point
 	@param point Given point
 	@param plane plane 
@@ -21943,7 +21943,7 @@ declare namespace cc.geomUtils {
 	!#en
 	the closest point on aabb to a given point
 	!#zh
-	è®¡ç®— aabb ä¸Šæœ€æ¥è¿‘ç»™å®šç‚¹çš„ç‚¹ã€‚
+	è®¡ç?? aabb ä¸??????¥è??ç»?å®???¹ç????¹ã??
 	@param out Closest point.
 	@param point Given point.
 	@param aabb Align the axis around the box. 
@@ -21953,7 +21953,7 @@ declare namespace cc.geomUtils {
 	!#en
 	the closest point on obb to a given point
 	!#zh
-	è®¡ç®— obb ä¸Šæœ€æ¥è¿‘ç»™å®šç‚¹çš„ç‚¹ã€‚
+	è®¡ç?? obb ä¸??????¥è??ç»?å®???¹ç????¹ã??
 	@param out Closest point
 	@param point Given point
 	@param obb Direction box 
@@ -21962,15 +21962,15 @@ declare namespace cc.geomUtils {
 }
 
 /** !#en Some JavaScript decorators which can be accessed with "cc._decorator".
-!#zh ä¸€äº› JavaScript è£…é¥°å™¨ï¼Œç›®å‰å¯ä»¥é€šè¿‡ "cc._decorator" æ¥è®¿é—®ã€‚
-ï¼ˆè¿™äº› API ä»ä¸å®Œå…¨ç¨³å®šï¼Œæœ‰å¯èƒ½éšç€ JavaScript è£…é¥°å™¨çš„æ ‡å‡†å®ç°è€Œè°ƒæ•´ï¼‰ */
+!#zh ä¸?äº? JavaScript è£?é¥°å?¨ï????®å????¯ä»¥???è¿? "cc._decorator" ??¥è®¿??®ã??
+ï¼?è¿?äº? API ä»?ä¸?å®???¨ç¨³å®?ï¼??????¯è?½é????? JavaScript è£?é¥°å?¨ç????????å®???°è??è°???´ï?? */
 declare namespace cc._decorator {	
 	/**
 	!#en
 	Declare the standard [ES6 Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 	as CCClass, please see [Class](../../../manual/en/scripting/class.html) for details.
 	!#zh
-	å°†æ ‡å‡†å†™æ³•çš„ [ES6 Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) å£°æ˜ä¸º CCClassï¼Œå…·ä½“ç”¨æ³•è¯·å‚é˜…[ç±»å‹å®šä¹‰](../../../manual/zh/scripting/class.html)ã€‚
+	å°??????????æ³???? [ES6 Class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) å£°æ??ä¸? CCClassï¼???·ä????¨æ??è¯·å?????[ç±»å??å®?ä¹?](../../../manual/zh/scripting/class.html)???
 	@param name The class name used for serialization.
 	
 	@example 
@@ -21996,7 +21996,7 @@ declare namespace cc._decorator {
 	!#en
 	Declare property for [CCClass](../../../manual/en/scripting/reference/attributes.html).
 	!#zh
-	å®šä¹‰ [CCClass](../../../manual/zh/scripting/reference/attributes.html) æ‰€ç”¨çš„å±æ€§ã€‚
+	å®?ä¹? [CCClass](../../../manual/zh/scripting/reference/attributes.html) ?????¨ç??å±???§ã??
 	@param options an object with some property attributes
 	
 	@example 
@@ -22039,7 +22039,7 @@ declare namespace cc._decorator {
 	    frame = null;
 	}
 	
-	// above is equivalent to (ä¸Šé¢çš„ä»£ç ç›¸å½“äº):
+	// above is equivalent to (ä¸???¢ç??ä»??????¸å??äº?):
 	
 	var NewScript = cc.Class({
 	    properties: {
@@ -22092,8 +22092,8 @@ declare namespace cc._decorator {
 	By default, all components are only executed in play mode,
 	which means they will not have their callback functions executed while the Editor is in edit mode.
 	!#zh
-	å…è®¸ç»§æ‰¿è‡ª Component çš„ CCClass åœ¨ç¼–è¾‘å™¨é‡Œæ‰§è¡Œã€‚<br>
-	é»˜è®¤æƒ…å†µä¸‹ï¼Œæ‰€æœ‰ Component éƒ½åªä¼šåœ¨è¿è¡Œæ—¶æ‰ä¼šæ‰§è¡Œï¼Œä¹Ÿå°±æ˜¯è¯´å®ƒä»¬çš„ç”Ÿå‘½å‘¨æœŸå›è°ƒä¸ä¼šåœ¨ç¼–è¾‘å™¨é‡Œè§¦å‘ã€‚
+	???è®¸ç»§??¿è?? Component ??? CCClass ??¨ç??è¾???¨é????§è?????<br>
+	é»?è®¤æ????µä??ï¼??????? Component ??½å?ªä????¨è??è¡???¶æ??ä¼???§è??ï¼?ä¹?å°±æ?¯è¯´å®?ä»¬ç???????½å?¨æ?????è°?ä¸?ä¼???¨ç??è¾???¨é??è§¦å?????
 	
 	@example 
 	```js
@@ -22112,7 +22112,7 @@ declare namespace cc._decorator {
 	!#en
 	Automatically add required component as a dependency for the CCClass that inherit from component.
 	!#zh
-	ä¸ºå£°æ˜ä¸º CCClass çš„ç»„ä»¶æ·»åŠ ä¾èµ–çš„å…¶å®ƒç»„ä»¶ã€‚å½“ç»„ä»¶æ·»åŠ åˆ°èŠ‚ç‚¹ä¸Šæ—¶ï¼Œå¦‚æœä¾èµ–çš„ç»„ä»¶ä¸å­˜åœ¨ï¼Œå¼•æ“å°†ä¼šè‡ªåŠ¨å°†ä¾èµ–ç»„ä»¶æ·»åŠ åˆ°åŒä¸€ä¸ªèŠ‚ç‚¹ï¼Œé˜²æ­¢è„šæœ¬å‡ºé”™ã€‚è¯¥è®¾ç½®åœ¨è¿è¡Œæ—¶åŒæ ·æœ‰æ•ˆã€‚
+	ä¸ºå£°???ä¸? CCClass ???ç»?ä»¶æ·»???ä¾?èµ??????¶å??ç»?ä»¶ã??å½?ç»?ä»¶æ·»?????°è????¹ä????¶ï??å¦????ä¾?èµ????ç»?ä»¶ä??å­???¨ï??å¼????å°?ä¼???ªå?¨å??ä¾?èµ?ç»?ä»¶æ·»?????°å??ä¸?ä¸ªè????¹ï????²æ­¢?????¬å?ºé?????è¯¥è®¾ç½®å?¨è??è¡???¶å????·æ????????
 	@param requiredComponent requiredComponent
 	
 	@example 
@@ -22131,7 +22131,7 @@ declare namespace cc._decorator {
 	!#en
 	The menu path to register a component to the editors "Component" menu. Eg. "Rendering/CameraCtrl".
 	!#zh
-	å°†å½“å‰ç»„ä»¶æ·»åŠ åˆ°ç»„ä»¶èœå•ä¸­ï¼Œæ–¹ä¾¿ç”¨æˆ·æŸ¥æ‰¾ã€‚ä¾‹å¦‚ "Rendering/CameraCtrl"ã€‚
+	å°?å½????ç»?ä»¶æ·»?????°ç??ä»¶è?????ä¸­ï????¹ä¾¿??¨æ?·æ?¥æ?¾ã??ä¾?å¦? "Rendering/CameraCtrl"???
 	@param path The path is the menu represented like a pathname.
 	                       For example the menu could be "Rendering/CameraCtrl".
 	
@@ -22153,7 +22153,7 @@ declare namespace cc._decorator {
 	Those less than 0 will execute before while those greater than 0 will execute after.
 	The order will only affect onLoad, onEnable, start, update and lateUpdate while onDisable and onDestroy will not be affected.
 	!#zh
-	è®¾ç½®è„šæœ¬ç”Ÿå‘½å‘¨æœŸæ–¹æ³•è°ƒç”¨çš„ä¼˜å…ˆçº§ã€‚ä¼˜å…ˆçº§å°äº 0 çš„ç»„ä»¶å°†ä¼šä¼˜å…ˆæ‰§è¡Œï¼Œä¼˜å…ˆçº§å¤§äº 0 çš„ç»„ä»¶å°†ä¼šå»¶åæ‰§è¡Œã€‚ä¼˜å…ˆçº§ä»…ä¼šå½±å“ onLoad, onEnable, start, update å’Œ lateUpdateï¼Œè€Œ onDisable å’Œ onDestroy ä¸å—å½±å“ã€‚
+	è®¾ç½®?????¬ç????½å?¨æ????¹æ??è°???¨ç??ä¼????çº§ã??ä¼????çº§å??äº? 0 ???ç»?ä»¶å??ä¼?ä¼??????§è??ï¼?ä¼????çº§å¤§äº? 0 ???ç»?ä»¶å??ä¼?å»¶å????§è?????ä¼????çº§ä??ä¼?å½±å?? onLoad, onEnable, start, update ??? lateUpdateï¼???? onDisable ??? onDestroy ä¸????å½±å?????
 	@param order The execution order of lifecycle methods for Component. Those less than 0 will execute before while those greater than 0 will execute after.
 	
 	@example 
@@ -22172,7 +22172,7 @@ declare namespace cc._decorator {
 	!#en
 	Prevents Component of the same type (or subtype) to be added more than once to a Node.
 	!#zh
-	é˜²æ­¢å¤šä¸ªç›¸åŒç±»å‹ï¼ˆæˆ–å­ç±»å‹ï¼‰çš„ç»„ä»¶è¢«æ·»åŠ åˆ°åŒä¸€ä¸ªèŠ‚ç‚¹ã€‚
+	??²æ­¢å¤?ä¸ªç?¸å??ç±»å??ï¼????å­?ç±»å??ï¼????ç»?ä»¶è¢«æ·»å????°å??ä¸?ä¸ªè????¹ã??
 	
 	@example 
 	```js
@@ -22192,7 +22192,7 @@ declare namespace cc._decorator {
 	If specified, the editor's scene view will keep updating this node in 60 fps when it is selected, otherwise, it will update only if necessary.<br>
 	This property is only available if executeInEditMode is true.
 	!#zh
-	å½“æŒ‡å®šäº† "executeInEditMode" ä»¥åï¼ŒplayOnFocus å¯ä»¥åœ¨é€‰ä¸­å½“å‰ç»„ä»¶æ‰€åœ¨çš„èŠ‚ç‚¹æ—¶ï¼Œæé«˜ç¼–è¾‘å™¨çš„åœºæ™¯åˆ·æ–°é¢‘ç‡åˆ° 60 FPSï¼Œå¦åˆ™åœºæ™¯å°±åªä¼šåœ¨å¿…è¦çš„æ—¶å€™è¿›è¡Œé‡ç»˜ã€‚
+	å½????å®?äº? "executeInEditMode" ä»¥å??ï¼?playOnFocus ??¯ä»¥??¨é??ä¸­å?????ç»?ä»¶æ????¨ç???????¹æ?¶ï?????é«?ç¼?è¾???¨ç????ºæ?¯å?·æ?°é???????? 60 FPSï¼???¦å????ºæ?¯å°±??ªä????¨å??è¦??????¶å??è¿?è¡????ç»????
 	
 	@example 
 	```js
@@ -22212,7 +22212,7 @@ declare namespace cc._decorator {
 	!#en
 	Specifying the url of the custom html to draw the component in **Properties**.
 	!#zh
-	è‡ªå®šä¹‰å½“å‰ç»„ä»¶åœ¨ **å±æ€§æ£€æŸ¥å™¨** ä¸­æ¸²æŸ“æ—¶æ‰€ç”¨çš„ç½‘é¡µ urlã€‚
+	??ªå??ä¹?å½????ç»?ä»¶å?? **å±???§æ????¥å??** ä¸­æ¸²?????¶æ????¨ç??ç½?é¡? url???
 	@param url url
 	
 	@example 
@@ -22231,7 +22231,7 @@ declare namespace cc._decorator {
 	!#en
 	The custom documentation URL.
 	!#zh
-	æŒ‡å®šå½“å‰ç»„ä»¶çš„å¸®åŠ©æ–‡æ¡£çš„ urlï¼Œè®¾ç½®è¿‡åï¼Œåœ¨ **å±æ€§æ£€æŸ¥å™¨** ä¸­å°±ä¼šå‡ºç°ä¸€ä¸ªå¸®åŠ©å›¾æ ‡ï¼Œç”¨æˆ·ç‚¹å‡»å°†æ‰“å¼€æŒ‡å®šçš„ç½‘é¡µã€‚
+	???å®?å½????ç»?ä»¶ç??å¸®å?©æ??æ¡???? urlï¼?è®¾ç½®è¿????ï¼???? **å±???§æ????¥å??** ä¸­å°±ä¼???ºç?°ä??ä¸ªå¸®??©å?¾æ??ï¼???¨æ?·ç?¹å?»å?????å¼????å®????ç½?é¡µã??
 	@param url url
 	
 	@example 
@@ -22289,7 +22289,7 @@ declare namespace cc._decorator {
 }
 
 /** !#en This module provides some JavaScript utilities. All members can be accessed with `cc.js`.
-!#zh è¿™ä¸ªæ¨¡å—å°è£…äº† JavaScript ç›¸å…³çš„ä¸€äº›å®ç”¨å‡½æ•°ï¼Œä½ å¯ä»¥é€šè¿‡ `cc.js` æ¥è®¿é—®è¿™ä¸ªæ¨¡å—ã€‚ */
+!#zh è¿?ä¸ªæ¨¡???å°?è£?äº? JavaScript ??¸å?³ç??ä¸?äº?å®???¨å?½æ?°ï??ä½???¯ä»¥???è¿? `cc.js` ??¥è®¿??®è??ä¸ªæ¨¡?????? */
 declare namespace cc.js {	
 	/**
 	Check the obj whether is number or not
@@ -22397,10 +22397,10 @@ declare namespace cc.js {
 	*/
 	export function getClassName(objOrCtor: any|Function): string;	
 	/** !#en All classes registered in the engine, indexed by ID.
-	!#zh å¼•æ“ä¸­å·²æ³¨å†Œçš„æ‰€æœ‰ç±»å‹ï¼Œé€šè¿‡ ID è¿›è¡Œç´¢å¼•ã€‚ */
+	!#zh å¼????ä¸­å·²æ³¨å???????????ç±»å??ï¼????è¿? ID è¿?è¡?ç´¢å????? */
 	export var _registeredClassIds: any;	
 	/** !#en All classes registered in the engine, indexed by name.
-	!#zh å¼•æ“ä¸­å·²æ³¨å†Œçš„æ‰€æœ‰ç±»å‹ï¼Œé€šè¿‡åç§°è¿›è¡Œç´¢å¼•ã€‚ */
+	!#zh å¼????ä¸­å·²æ³¨å???????????ç±»å??ï¼????è¿????ç§°è??è¡?ç´¢å????? */
 	export var _registeredClassNames: any;	
 	/**
 	Register the class by specified name manually
@@ -22453,7 +22453,7 @@ declare namespace cc.js {
 	!#en
 	A simple wrapper of `Object.create(null)` which ensures the return object have no prototype (and thus no inherited members). So we can skip `hasOwnProperty` calls on property lookups. It is a worthwhile optimization than the `{}` literal when `hasOwnProperty` calls are necessary.
 	!#zh
-	è¯¥æ–¹æ³•æ˜¯å¯¹ `Object.create(null)` çš„ç®€å•å°è£…ã€‚`Object.create(null)` ç”¨äºåˆ›å»ºæ—  prototype ï¼ˆä¹Ÿå°±æ— ç»§æ‰¿ï¼‰çš„ç©ºå¯¹è±¡ã€‚è¿™æ ·æˆ‘ä»¬åœ¨è¯¥å¯¹è±¡ä¸ŠæŸ¥æ‰¾å±æ€§æ—¶ï¼Œå°±ä¸ç”¨è¿›è¡Œ `hasOwnProperty` åˆ¤æ–­ã€‚åœ¨éœ€è¦é¢‘ç¹åˆ¤æ–­ `hasOwnProperty` æ—¶ï¼Œä½¿ç”¨è¿™ä¸ªæ–¹æ³•æ€§èƒ½ä¼šæ¯” `{}` æ›´é«˜ã€‚
+	è¯¥æ?¹æ????¯å¯¹ `Object.create(null)` ???ç®????å°?è£????`Object.create(null)` ??¨ä?????å»ºæ?? prototype ï¼?ä¹?å°±æ??ç»§æ?¿ï?????ç©ºå¯¹è±¡ã??è¿???·æ??ä»¬å?¨è¯¥å¯¹è±¡ä¸???¥æ?¾å????§æ?¶ï??å°±ä????¨è??è¡? `hasOwnProperty` ??¤æ?­ã????¨é??è¦?é¢?ç¹???¤æ?? `hasOwnProperty` ??¶ï??ä½¿ç?¨è??ä¸ªæ?¹æ????§è?½ä??æ¯? `{}` ??´é?????
 	@param forceDictMode Apply the delete operator to newly created map object. This causes V8 to put the object in "dictionary mode" and disables creation of hidden classes which are very expensive for objects that are constantly changing shape. 
 	*/
 	export function createMap(forceDictMode?: boolean): any;	
@@ -22521,15 +22521,15 @@ declare namespace cc.js {
 	The implementation of this object pool is very simple,
 	it can helps you to improve your game performance for objects which need frequent release and recreate operations<br/>
 	!#zh
-	é•¿åº¦å›ºå®šçš„å¯¹è±¡ç¼“å­˜æ± ï¼Œå¯ä»¥ç”¨æ¥ç¼“å­˜å„ç§å¯¹è±¡ç±»å‹ã€‚<br/>
-	è¿™ä¸ªå¯¹è±¡æ± çš„å®ç°éå¸¸ç²¾ç®€ï¼Œå®ƒå¯ä»¥å¸®åŠ©æ‚¨æé«˜æ¸¸æˆæ€§èƒ½ï¼Œé€‚ç”¨äºä¼˜åŒ–å¯¹è±¡çš„åå¤åˆ›å»ºå’Œé”€æ¯ã€‚ */
+	??¿åº¦??ºå?????å¯¹è±¡ç¼?å­?æ±?ï¼???¯ä»¥??¨æ?¥ç??å­????ç§?å¯¹è±¡ç±»å?????<br/>
+	è¿?ä¸ªå¯¹è±¡æ?????å®???°é??å¸¸ç²¾ç®?ï¼?å®???¯ä»¥å¸®å?©æ?¨æ??é«?æ¸¸æ????§è?½ï???????¨ä??ä¼????å¯¹è±¡??????å¤????å»ºå?????æ¯???? */
 	export class Pool {		
 		/**
 		!#en
 		Constructor for creating an object pool for the specific object type.
 		You can pass a callback argument for process the cleanup logic when the object is recycled.
 		!#zh
-		ä½¿ç”¨æ„é€ å‡½æ•°æ¥åˆ›å»ºä¸€ä¸ªæŒ‡å®šå¯¹è±¡ç±»å‹çš„å¯¹è±¡æ± ï¼Œæ‚¨å¯ä»¥ä¼ é€’ä¸€ä¸ªå›è°ƒå‡½æ•°ï¼Œç”¨äºå¤„ç†å¯¹è±¡å›æ”¶æ—¶çš„æ¸…ç†é€»è¾‘ã€‚
+		ä½¿ç?¨æ???????½æ?°æ?¥å??å»ºä??ä¸ªæ??å®?å¯¹è±¡ç±»å?????å¯¹è±¡æ±?ï¼???¨å?¯ä»¥ä¼????ä¸?ä¸ªå??è°???½æ?°ï????¨ä??å¤????å¯¹è±¡?????¶æ?¶ç??æ¸??????»è?????
 		@param cleanupFunc the callback method used to process the cleanup logic when the object is recycled.
 		@param size initializes the length of the array 
 		*/
@@ -22539,7 +22539,7 @@ declare namespace cc.js {
 		!#en
 		Get and initialize an object from pool. This method defaults to null and requires the user to implement it.
 		!#zh
-		è·å–å¹¶åˆå§‹åŒ–å¯¹è±¡æ± ä¸­çš„å¯¹è±¡ã€‚è¿™ä¸ªæ–¹æ³•é»˜è®¤ä¸ºç©ºï¼Œéœ€è¦ç”¨æˆ·è‡ªå·±å®ç°ã€‚
+		??·å??å¹¶å??å§????å¯¹è±¡æ±?ä¸­ç??å¯¹è±¡???è¿?ä¸ªæ?¹æ??é»?è®¤ä¸ºç©ºï?????è¦???¨æ?·è?ªå·±å®???°ã??
 		@param params parameters to used to initialize the object 
 		*/
 		get(...params: any[]): any;		
@@ -22547,34 +22547,34 @@ declare namespace cc.js {
 		The current number of available objects, the default is 0, it will gradually increase with the recycle of the object,
 		the maximum will not exceed the size specified when the constructor is called.
 		!#zh
-		å½“å‰å¯ç”¨å¯¹è±¡æ•°é‡ï¼Œä¸€å¼€å§‹é»˜è®¤æ˜¯ 0ï¼Œéšç€å¯¹è±¡çš„å›æ”¶ä¼šé€æ¸å¢å¤§ï¼Œæœ€å¤§ä¸ä¼šè¶…è¿‡è°ƒç”¨æ„é€ å‡½æ•°æ—¶æŒ‡å®šçš„ sizeã€‚ */
+		å½??????¯ç?¨å¯¹è±¡æ?°é??ï¼?ä¸?å¼?å§?é»?è®¤æ?? 0ï¼???????å¯¹è±¡????????¶ä?????æ¸?å¢?å¤§ï?????å¤§ä??ä¼?è¶?è¿?è°???¨æ???????½æ?°æ?¶æ??å®???? size??? */
 		count: number;		
 		/**
 		!#en
 		Get an object from pool, if no available object in the pool, null will be returned.
 		!#zh
-		è·å–å¯¹è±¡æ± ä¸­çš„å¯¹è±¡ï¼Œå¦‚æœå¯¹è±¡æ± æ²¡æœ‰å¯ç”¨å¯¹è±¡ï¼Œåˆ™è¿”å›ç©ºã€‚ 
+		??·å??å¯¹è±¡æ±?ä¸­ç??å¯¹è±¡ï¼?å¦????å¯¹è±¡æ±?æ²¡æ????¯ç?¨å¯¹è±¡ï?????è¿????ç©ºã?? 
 		*/
 		_get(): any;		
 		/**
 		!#en Put an object into the pool.
-		!#zh å‘å¯¹è±¡æ± è¿”è¿˜ä¸€ä¸ªä¸å†éœ€è¦çš„å¯¹è±¡ã€‚ 
+		!#zh ???å¯¹è±¡æ±?è¿?è¿?ä¸?ä¸ªä????????è¦????å¯¹è±¡??? 
 		*/
 		put(): void;		
 		/**
 		!#en Resize the pool.
-		!#zh è®¾ç½®å¯¹è±¡æ± å®¹é‡ã€‚ 
+		!#zh è®¾ç½®å¯¹è±¡æ±?å®¹é????? 
 		*/
 		resize(): void;	
 	}
 }
 
 /** !#en A basic module for creating vertex data for 3D objects. You can access this module by `cc.primitive`.
-!#zh ä¸€ä¸ªåˆ›å»º 3D ç‰©ä½“é¡¶ç‚¹æ•°æ®çš„åŸºç¡€æ¨¡å—ï¼Œä½ å¯ä»¥é€šè¿‡ `cc.primitive` æ¥è®¿é—®è¿™ä¸ªæ¨¡å—ã€‚ */
+!#zh ä¸?ä¸ªå??å»? 3D ??©ä??é¡¶ç?¹æ?°æ?®ç????ºç??æ¨¡å??ï¼?ä½???¯ä»¥???è¿? `cc.primitive` ??¥è®¿??®è??ä¸ªæ¨¡?????? */
 declare namespace cc.primitive {	
 	/**
 	!#en Create box vertex data
-	!#zh åˆ›å»ºé•¿æ–¹ä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºé?¿æ?¹ä??é¡¶ç?¹æ?°æ??
 	@param width width
 	@param height height
 	@param length length
@@ -22583,7 +22583,7 @@ declare namespace cc.primitive {
 	export function box(width: number, height: number, length: number, opts: {widthSegments: number; heightSegments: number; lengthSegments: number; }): cc.VertexData;	
 	/**
 	!#en Create cone vertex data
-	!#zh åˆ›å»ºåœ†é”¥ä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºå????¥ä??é¡¶ç?¹æ?°æ??
 	@param radius radius
 	@param height height
 	@param opts opts 
@@ -22591,7 +22591,7 @@ declare namespace cc.primitive {
 	export function cone(radius: number, height: number, opts: {radialSegments: number; heightSegments: number; capped: boolean; arc: number; }): cc.VertexData;	
 	/**
 	!#en Create cylinder vertex data
-	!#zh åˆ›å»ºåœ†æŸ±ä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºå????±ä??é¡¶ç?¹æ?°æ??
 	@param radiusTop radiusTop
 	@param radiusBottom radiusBottom
 	@param height height
@@ -22600,7 +22600,7 @@ declare namespace cc.primitive {
 	export function cylinder(radiusTop: number, radiusBottom: number, height: number, opts: {radialSegments: number; heightSegments: number; capped: boolean; arc: number; }): cc.VertexData;	
 	/**
 	!#en Create plane vertex data
-	!#zh åˆ›å»ºå¹³å°é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºå¹³??°é¡¶??¹æ?°æ??
 	@param width width
 	@param length length
 	@param opts opts 
@@ -22608,19 +22608,19 @@ declare namespace cc.primitive {
 	export function plane(width: number, length: number, opts: {widthSegments: number; lengthSegments: number; }): cc.VertexData;	
 	/**
 	!#en Create quad vertex data
-	!#zh åˆ›å»ºé¢ç‰‡é¡¶ç‚¹æ•°æ® 
+	!#zh ???å»ºé?¢ç??é¡¶ç?¹æ?°æ?? 
 	*/
 	export function quad(): cc.VertexData;	
 	/**
 	!#en Create sphere vertex data
-	!#zh åˆ›å»ºçƒä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºç??ä½?é¡¶ç?¹æ?°æ??
 	@param radius radius
 	@param opts opts 
 	*/
 	export function sphere(radius: number, opts: {segments: number; }): cc.VertexData;	
 	/**
 	!#en Create torus vertex data
-	!#zh åˆ›å»ºåœ†ç¯é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºå????¯é¡¶??¹æ?°æ??
 	@param radius radius
 	@param tube tube
 	@param opts opts 
@@ -22628,7 +22628,7 @@ declare namespace cc.primitive {
 	export function torus(radius: number, tube: number, opts: {radialSegments: number; tubularSegments: number; arc: number; }): cc.VertexData;	
 	/**
 	!#en Create capsule vertex data
-	!#zh åˆ›å»ºèƒ¶å›Šä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºè?¶å??ä½?é¡¶ç?¹æ?°æ??
 	@param radiusTop radiusTop
 	@param radiusBottom radiusBottom
 	@param height height
@@ -22637,7 +22637,7 @@ declare namespace cc.primitive {
 	export function capsule(radiusTop: number, radiusBottom: number, height: number, opts: {sides: number; heightSegments: number; capped: boolean; arc: number; }): cc.VertexData;	
 	/**
 	!#en Create polyhedron vertex data
-	!#zh åˆ›å»ºå¤šé¢ä½“é¡¶ç‚¹æ•°æ®
+	!#zh ???å»ºå????¢ä??é¡¶ç?¹æ?°æ??
 	@param type type
 	@param Size Size
 	@param opts opts 
@@ -22838,7 +22838,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - è¾¹ç•Œæ¡†ç±»å‹ã€‚
+     * - è¾¹ç??æ¡?ç±»å?????
      * @version DragonBones 5.0
      * @language zh_CN
      */
@@ -22913,7 +22913,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åç§»æ¨¡å¼ã€‚
+     * - ???ç§»æ¨¡å¼????
      * @version DragonBones 5.5
      * @language zh_CN
      */
@@ -22928,7 +22928,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŠ¨ç”»æ·¡å‡ºæ¨¡å¼ã€‚
+     * - ??¨ç?»æ·¡??ºæ¨¡å¼????
      * @version DragonBones 4.5
      * @language zh_CN
      */
@@ -22938,7 +22938,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸æ·¡å‡ºä»»ä½•çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ä¸?æ·¡å?ºä»»ä½??????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         None = 0,
@@ -22947,7 +22947,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å‡ºåŒå±‚çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ·¡å?ºå??å±??????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         SameLayer = 1,
@@ -22956,7 +22956,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å‡ºåŒç»„çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ·¡å?ºå??ç»??????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         SameGroup = 2,
@@ -22965,7 +22965,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å‡ºåŒå±‚å¹¶ä¸”åŒç»„çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ·¡å?ºå??å±?å¹¶ä?????ç»??????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         SameLayerAndGroup = 3,
@@ -22974,7 +22974,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å‡ºæ‰€æœ‰çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ·¡å?ºæ??????????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         All = 4,
@@ -22983,7 +22983,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸æ›¿æ¢åŒåçš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ä¸???¿æ?¢å??????????¨ç?»ç?¶æ?????
          * @language zh_CN
          */
         Single = 5,
@@ -23045,8 +23045,8 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŸºç¡€å¯¹è±¡ï¼Œé€šå¸¸ DragonBones çš„å¯¹è±¡éƒ½ç»§æ‰¿è‡ªè¯¥ç±»ã€‚
-     * æ‰€æœ‰åŸºç¡€å¯¹è±¡çš„å®ä¾‹éƒ½ä¼šç¼“å­˜åˆ°å¯¹è±¡æ± ï¼Œä»¥å‡å°‘é¢‘ç¹ç”³è¯·å†…å­˜æˆ–å†…å­˜å›æ”¶çš„æ€§èƒ½æ¶ˆè€—ã€‚
+     * - ??ºç??å¯¹è±¡ï¼????å¸? DragonBones ???å¯¹è±¡??½ç»§??¿è?ªè¯¥ç±»ã??
+     * ????????ºç??å¯¹è±¡???å®?ä¾???½ä??ç¼?å­???°å¯¹è±¡æ??ï¼?ä»¥å??å°?é¢?ç¹???³è¯·???å­???????å­??????¶ç????§è?½æ????????
      * @version DragonBones 4.5
      * @language zh_CN
      */
@@ -23065,9 +23065,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è®¾ç½®ç‰¹å®šå¯¹è±¡æ± çš„æœ€å¤§ç¼“å­˜æ•°é‡ã€‚
-         * @param objectConstructor - ç‰¹å®šçš„ç±»ã€‚ (ä¸è®¾ç½®åˆ™è®¾ç½®æ‰€æœ‰å¯¹è±¡æ± çš„æœ€å¤§ç¼“å­˜æ•°é‡)
-         * @param maxCount - æœ€å¤§ç¼“å­˜æ•°é‡ã€‚
+         * - è®¾ç½®??¹å??å¯¹è±¡æ±???????å¤§ç??å­???°é?????
+         * @param objectConstructor - ??¹å?????ç±»ã?? (ä¸?è®¾ç½®???è®¾ç½®??????å¯¹è±¡æ±???????å¤§ç??å­???°é??)
+         * @param maxCount - ???å¤§ç??å­???°é?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -23079,8 +23079,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ¸…é™¤ç‰¹å®šå¯¹è±¡æ± çš„ç¼“å­˜å®ä¾‹ã€‚
-         * @param objectConstructor - ç‰¹å®šçš„ç±»ã€‚ (ä¸è®¾ç½®åˆ™æ¸…é™¤æ‰€æœ‰ç¼“å­˜çš„å®ä¾‹)
+         * - æ¸???¤ç?¹å??å¯¹è±¡æ±????ç¼?å­?å®?ä¾????
+         * @param objectConstructor - ??¹å?????ç±»ã?? (ä¸?è®¾ç½®???æ¸???¤æ?????ç¼?å­????å®?ä¾?)
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -23092,8 +23092,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä»å¯¹è±¡æ± ä¸­è·å–ç‰¹å®šç±»çš„å®ä¾‹ã€‚
-         * @param objectConstructor - ç‰¹å®šçš„ç±»ã€‚
+         * - ä»?å¯¹è±¡æ±?ä¸­è?·å????¹å??ç±»ç??å®?ä¾????
+         * @param objectConstructor - ??¹å?????ç±»ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -23106,7 +23106,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ†é…ç»™æ­¤å®ä¾‹çš„å”¯ä¸€æ ‡è¯†å·ã€‚
+         * - ??????ç»?æ­¤å??ä¾??????¯ä?????è¯???·ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -23117,12 +23117,12 @@ declare namespace dragonBones {
          */
         protected abstract _onClear(): void;
         /**
-         * - Clear the object and return it back to object poolã€‚
+         * - Clear the object and return it back to object pool???
          * @version DragonBones 4.5
          * @language en_US
          */
         /**
-         * - æ¸…é™¤è¯¥å®ä¾‹çš„æ‰€æœ‰æ•°æ®å¹¶å°†å…¶è¿”è¿˜å¯¹è±¡æ± ã€‚
+         * - æ¸???¤è¯¥å®?ä¾????????????°æ?®å¹¶å°???¶è??è¿?å¯¹è±¡æ±????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -23158,7 +23158,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - 2D è½¬æ¢çŸ©é˜µã€‚
+     * - 2D è½¬æ?¢ç?©é?µã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -23170,7 +23170,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç¼©æ”¾æˆ–æ—‹è½¬å›¾åƒæ—¶å½±å“åƒç´ æ²¿ x è½´å®šä½çš„å€¼ã€‚
+         * - ç¼©æ?¾æ?????è½¬å?¾å????¶å½±??????ç´?æ²? x è½´å??ä½??????¼ã??
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23183,7 +23183,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ—‹è½¬æˆ–å€¾æ–œå›¾åƒæ—¶å½±å“åƒç´ æ²¿ y è½´å®šä½çš„å€¼ã€‚
+         * - ???è½¬æ????¾æ????¾å????¶å½±??????ç´?æ²? y è½´å??ä½??????¼ã??
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23196,7 +23196,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ—‹è½¬æˆ–å€¾æ–œå›¾åƒæ—¶å½±å“åƒç´ æ²¿ x è½´å®šä½çš„å€¼ã€‚
+         * - ???è½¬æ????¾æ????¾å????¶å½±??????ç´?æ²? x è½´å??ä½??????¼ã??
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23209,7 +23209,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç¼©æ”¾æˆ–æ—‹è½¬å›¾åƒæ—¶å½±å“åƒç´ æ²¿ y è½´å®šä½çš„å€¼ã€‚
+         * - ç¼©æ?¾æ?????è½¬å?¾å????¶å½±??????ç´?æ²? y è½´å??ä½??????¼ã??
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23222,7 +23222,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ²¿ x è½´å¹³ç§»æ¯ä¸ªç‚¹çš„è·ç¦»ã€‚
+         * - æ²? x è½´å¹³ç§»æ??ä¸ªç?¹ç??è·?ç¦»ã??
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23235,7 +23235,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ²¿ y è½´å¹³ç§»æ¯ä¸ªç‚¹çš„è·ç¦»ã€‚
+         * - æ²? y è½´å¹³ç§»æ??ä¸ªç?¹ç??è·?ç¦»ã??
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23261,8 +23261,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è½¬æ¢ä¸ºå•ä½çŸ©é˜µã€‚
-         * è¯¥çŸ©é˜µå…·æœ‰ä»¥ä¸‹å±æ€§ï¼ša=1ã€b=0ã€c=0ã€d=1ã€tx=0ã€ty=0ã€‚
+         * - è½¬æ?¢ä¸º???ä½???©é?µã??
+         * è¯¥ç?©é?µå?·æ??ä»¥ä??å±???§ï??a=1???b=0???c=0???d=1???tx=0???ty=0???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23274,8 +23274,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°†å½“å‰çŸ©é˜µä¸å¦ä¸€ä¸ªçŸ©é˜µç›¸ä¹˜ã€‚
-         * @param value - éœ€è¦ç›¸ä¹˜çš„çŸ©é˜µã€‚
+         * - å°?å½??????©é?µä????¦ä??ä¸ªç?©é?µç?¸ä?????
+         * @param value - ???è¦???¸ä???????©é?µã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23286,7 +23286,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è½¬æ¢ä¸ºé€†çŸ©é˜µã€‚
+         * - è½¬æ?¢ä¸º?????©é?µã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23301,11 +23301,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°†çŸ©é˜µè½¬æ¢åº”ç”¨äºç‰¹å®šç‚¹ã€‚
-         * @param x - æ¨ªåæ ‡ã€‚
-         * @param y - çºµåæ ‡ã€‚
-         * @param result - åº”ç”¨è½¬æ¢ä¹‹åçš„ç‚¹ã€‚
-         * @param delta - æ˜¯å¦å¿½ç•¥ txï¼Œty å¯¹ç‚¹çš„è½¬æ¢ã€‚
+         * - å°???©é?µè½¬??¢å????¨ä????¹å????¹ã??
+         * @param x - æ¨ªå????????
+         * @param y - çºµå????????
+         * @param result - åº???¨è½¬??¢ä??????????¹ã??
+         * @param delta - ??¯å?¦å¿½??? txï¼?ty å¯¹ç?¹ç??è½¬æ?¢ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23353,7 +23353,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - 2D å˜æ¢ã€‚
+     * - 2D ?????¢ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -23392,7 +23392,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ°´å¹³ä½ç§»ã€‚
+         * - æ°´å¹³ä½?ç§»ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23403,7 +23403,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‚ç›´ä½ç§»ã€‚
+         * - ?????´ä??ç§»ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23414,7 +23414,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å€¾æ–œã€‚ ï¼ˆä»¥å¼§åº¦ä¸ºå•ä½ï¼‰
+         * - ??¾æ????? ï¼?ä»¥å¼§åº¦ä¸º???ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23425,7 +23425,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ—‹è½¬ã€‚ ï¼ˆä»¥å¼§åº¦ä¸ºå•ä½ï¼‰
+         * - ???è½¬ã?? ï¼?ä»¥å¼§åº¦ä¸º???ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23436,7 +23436,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ°´å¹³ç¼©æ”¾ã€‚
+         * - æ°´å¹³ç¼©æ?¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23447,7 +23447,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‚ç›´ç¼©æ”¾ã€‚
+         * - ?????´ç¼©??¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23553,7 +23553,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - Point å¯¹è±¡è¡¨ç¤ºäºŒç»´åæ ‡ç³»ç»Ÿä¸­çš„æŸä¸ªä½ç½®ã€‚
+     * - Point å¯¹è±¡è¡¨ç¤ºäº?ç»´å?????ç³»ç??ä¸­ç?????ä¸ªä??ç½®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -23565,7 +23565,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è¯¥ç‚¹çš„æ°´å¹³åæ ‡ã€‚
+         * - è¯¥ç?¹ç??æ°´å¹³?????????
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23578,7 +23578,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è¯¥ç‚¹çš„å‚ç›´åæ ‡ã€‚
+         * - è¯¥ç?¹ç???????´å????????
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23592,9 +23592,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ›å»ºä¸€ä¸ª egret.Point å¯¹è±¡.è‹¥ä¸ä¼ å…¥ä»»ä½•å‚æ•°ï¼Œå°†ä¼šåˆ›å»ºä¸€ä¸ªä½äºï¼ˆ0ï¼Œ0ï¼‰ä½ç½®çš„ç‚¹ã€‚
-         * @param x - è¯¥å¯¹è±¡çš„xå±æ€§å€¼ï¼Œé»˜è®¤ä¸º 0.0ã€‚
-         * @param y - è¯¥å¯¹è±¡çš„yå±æ€§å€¼ï¼Œé»˜è®¤ä¸º 0.0ã€‚
+         * - ???å»ºä??ä¸? egret.Point å¯¹è±¡.??¥ä??ä¼???¥ä»»ä½??????°ï??å°?ä¼????å»ºä??ä¸ªä??äº?ï¼?0ï¼?0ï¼?ä½?ç½®ç????¹ã??
+         * @param x - è¯¥å¯¹è±¡ç??xå±???§å?¼ï??é»?è®¤ä¸º 0.0???
+         * @param y - è¯¥å¯¹è±¡ç??yå±???§å?¼ï??é»?è®¤ä¸º 0.0???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23643,10 +23643,10 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - Rectangle å¯¹è±¡æ˜¯æŒ‰å…¶ä½ç½®ï¼ˆç”±å®ƒå·¦ä¸Šè§’çš„ç‚¹ (x, y) ç¡®å®šï¼‰ä»¥åŠå®½åº¦å’Œé«˜åº¦å®šä¹‰çš„åŒºåŸŸã€‚<br/>
-     * Rectangle ç±»çš„ xã€yã€width å’Œ height å±æ€§ç›¸äº’ç‹¬ç«‹ï¼›æ›´æ”¹ä¸€ä¸ªå±æ€§çš„å€¼ä¸ä¼šå½±å“å…¶ä»–å±æ€§ã€‚
-     * ä½†æ˜¯ï¼Œright å’Œ bottom å±æ€§ä¸è¿™å››ä¸ªå±æ€§æ˜¯æ•´ä½“ç›¸å…³çš„ã€‚ä¾‹å¦‚ï¼Œå¦‚æœæ›´æ”¹ right å±æ€§çš„å€¼ï¼Œåˆ™ width
-     * å±æ€§çš„å€¼å°†å‘ç”Ÿå˜åŒ–ï¼›å¦‚æœæ›´æ”¹ bottom å±æ€§ï¼Œåˆ™ height å±æ€§çš„å€¼å°†å‘ç”Ÿå˜åŒ–ã€‚
+     * - Rectangle å¯¹è±¡??¯æ????¶ä??ç½®ï????±å??å·¦ä??è§??????? (x, y) ç¡®å??ï¼?ä»¥å??å®½åº¦???é«?åº¦å??ä¹??????ºå?????<br/>
+     * Rectangle ç±»ç?? x???y???width ??? height å±???§ç?¸ä????¬ç??ï¼???´æ?¹ä??ä¸ªå????§ç????¼ä??ä¼?å½±å????¶ä??å±???§ã??
+     * ä½???¯ï??right ??? bottom å±???§ä??è¿????ä¸ªå????§æ?¯æ?´ä????¸å?³ç?????ä¾?å¦?ï¼?å¦??????´æ?? right å±???§ç????¼ï????? width
+     * å±???§ç????¼å??????????????ï¼?å¦??????´æ?? bottom å±???§ï????? height å±???§ç????¼å?????????????????
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -23658,7 +23658,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çŸ©å½¢å·¦ä¸Šè§’çš„ x åæ ‡ã€‚
+         * - ??©å½¢å·¦ä??è§???? x ?????????
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23671,7 +23671,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çŸ©å½¢å·¦ä¸Šè§’çš„ y åæ ‡ã€‚
+         * - ??©å½¢å·¦ä??è§???? y ?????????
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -23684,14 +23684,14 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çŸ©å½¢çš„å®½åº¦ï¼ˆä»¥åƒç´ ä¸ºå•ä½ï¼‰ã€‚
+         * - ??©å½¢???å®½åº¦ï¼?ä»¥å??ç´?ä¸ºå??ä½?ï¼????
          * @default 0.0
          * @version DragonBones 3.0
          * @language zh_CN
          */
         width: number;
         /**
-         * - çŸ©å½¢çš„é«˜åº¦ï¼ˆä»¥åƒç´ ä¸ºå•ä½ï¼‰ã€‚
+         * - ??©å½¢???é«?åº¦ï??ä»¥å??ç´?ä¸ºå??ä½?ï¼????
          * @default 0.0
          * @version DragonBones 3.0
          * @language en_US
@@ -23746,7 +23746,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - ç”¨æˆ·è‡ªå®šä¹‰æ•°æ®ã€‚
+     * - ??¨æ?·è?ªå??ä¹???°æ?®ã??
      * @version DragonBones 5.0
      * @language zh_CN
      */
@@ -23758,7 +23758,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è‡ªå®šä¹‰æ•´æ•°ã€‚
+         * - ??ªå??ä¹???´æ?°ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23769,7 +23769,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è‡ªå®šä¹‰æµ®ç‚¹æ•°ã€‚
+         * - ??ªå??ä¹?æµ®ç?¹æ?°ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23780,7 +23780,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è‡ªå®šä¹‰å­—ç¬¦ä¸²ã€‚
+         * - ??ªå??ä¹?å­?ç¬¦ä¸²???
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23810,7 +23810,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–è‡ªå®šä¹‰æ•´æ•°ã€‚
+         * - ??·å????ªå??ä¹???´æ?°ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23821,7 +23821,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–è‡ªå®šä¹‰æµ®ç‚¹æ•°ã€‚
+         * - ??·å????ªå??ä¹?æµ®ç?¹æ?°ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23832,7 +23832,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–è‡ªå®šä¹‰å­—ç¬¦ä¸²ã€‚
+         * - ??·å????ªå??ä¹?å­?ç¬¦ä¸²???
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -23883,8 +23883,8 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - é¾™éª¨æ•°æ®ã€‚
-     * ä¸€ä¸ªé¾™éª¨æ•°æ®åŒ…å«å¤šä¸ªéª¨æ¶æ•°æ®ã€‚
+     * - é¾?éª¨æ?°æ?®ã??
+     * ä¸?ä¸ªé??éª¨æ?°æ?®å????«å??ä¸ªéª¨??¶æ?°æ?®ã??
      * @see dragonBones.ArmatureData
      * @version DragonBones 3.0
      * @language zh_CN
@@ -23901,7 +23901,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¸§é¢‘ã€‚
+         * - ??¨ç?»å¸§é¢????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23912,7 +23912,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ•°æ®ç‰ˆæœ¬ã€‚
+         * - ??°æ?®ç????¬ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23924,8 +23924,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é¾™éª¨æ•°æ®åç§°ã€‚
-         * è¯¥åç§°ä¸é¾™éª¨é¡¹ç›®åä¿æŒä¸€è‡´ã€‚
+         * - é¾?éª¨æ?°æ?®å??ç§°ã??
+         * è¯¥å??ç§°ä??é¾?éª¨é¡¹??®å??ä¿????ä¸???´ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -23950,7 +23950,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€æœ‰çš„éª¨æ¶æ•°æ®åç§°ã€‚
+         * - ?????????éª¨æ?¶æ?°æ?®å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24014,8 +24014,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„éª¨æ¶æ•°æ®ã€‚
-         * @param name - éª¨æ¶æ•°æ®åç§°ã€‚
+         * - ??·å????¹å?????éª¨æ?¶æ?°æ?®ã??
+         * @param name - éª¨æ?¶æ?°æ?®å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24026,7 +24026,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #dragonBones.BaseFactory#removeDragonBonesData()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #dragonBones.BaseFactory#removeDragonBonesData()}???
          * @deprecated
          * @language zh_CN
          */
@@ -24062,7 +24062,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - éª¨æ¶æ•°æ®ã€‚
+     * - éª¨æ?¶æ?°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -24078,7 +24078,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¸§ç‡ã€‚
+         * - ??¨ç?»å¸§??????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24097,7 +24097,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨æ¶åç§°ã€‚
+         * - éª¨æ?¶å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24112,7 +24112,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€æœ‰çš„åŠ¨ç”»æ•°æ®åç§°ã€‚
+         * - ???????????¨ç?»æ?°æ?®å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24159,7 +24159,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é»˜è®¤æ’æ§½æ•°æ®ã€‚
+         * - é»?è®¤æ??æ§½æ?°æ?®ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -24170,7 +24170,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é»˜è®¤åŠ¨ç”»æ•°æ®ã€‚
+         * - é»?è®¤å?¨ç?»æ?°æ?®ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -24248,8 +24248,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„éª¨éª¼æ•°æ®ã€‚
-         * @param name - éª¨éª¼åç§°ã€‚
+         * - ??·å????¹å?????éª¨éª¼??°æ?®ã??
+         * @param name - éª¨éª¼???ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24261,8 +24261,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„æ’æ§½æ•°æ®ã€‚
-         * @param name - æ’æ§½åç§°ã€‚
+         * - ??·å????¹å????????æ§½æ?°æ?®ã??
+         * @param name - ???æ§½å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24278,8 +24278,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš®è‚¤æ•°æ®ã€‚
-         * @param name - çš®è‚¤åç§°ã€‚
+         * - ??·å????¹å????®è?¤æ?°æ?®ã??
+         * @param name - ??®è?¤å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24296,8 +24296,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„åŠ¨ç”»æ•°æ®ã€‚
-         * @param name - åŠ¨ç”»åç§°ã€‚
+         * - ??·å????¹å???????¨ç?»æ?°æ?®ã??
+         * @param name - ??¨ç?»å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24309,7 +24309,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - éª¨éª¼æ•°æ®ã€‚
+     * - éª¨éª¼??°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -24341,7 +24341,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨éª¼é•¿åº¦ã€‚
+         * - éª¨éª¼??¿åº¦???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24352,7 +24352,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨éª¼åç§°ã€‚
+         * - éª¨éª¼???ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24371,7 +24371,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çˆ¶éª¨éª¼æ•°æ®ã€‚
+         * - ??¶éª¨éª¼æ?°æ?®ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24401,7 +24401,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - æ’æ§½æ•°æ®ã€‚
+     * - ???æ§½æ?°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -24435,7 +24435,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½åç§°ã€‚
+         * - ???æ§½å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24454,7 +24454,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çˆ¶éª¨éª¼æ•°æ®ã€‚
+         * - ??¶éª¨éª¼æ?°æ?®ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24579,7 +24579,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - çš®è‚¤æ•°æ®ï¼Œé€šå¸¸ä¸€ä¸ªéª¨æ¶æ•°æ®è‡³å°‘åŒ…å«ä¸€ä¸ªçš®è‚¤æ•°æ®ã€‚
+     * - ??®è?¤æ?°æ?®ï?????å¸¸ä??ä¸ªéª¨??¶æ?°æ?®è?³å???????«ä??ä¸ªç?®è?¤æ?°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -24591,7 +24591,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - çš®è‚¤åç§°ã€‚
+         * - ??®è?¤å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -24761,7 +24761,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - è¾¹ç•Œæ¡†æ•°æ®åŸºç±»ã€‚
+     * - è¾¹ç??æ¡???°æ?®å?ºç±»???
      * @see dragonBones.RectangleData
      * @see dragonBones.EllipseData
      * @see dragonBones.PolygonData
@@ -24775,7 +24775,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è¾¹ç•Œæ¡†ç±»å‹ã€‚
+         * - è¾¹ç??æ¡?ç±»å?????
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -24802,7 +24802,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥è¾¹ç•Œæ¡†æ˜¯å¦åŒ…å«ç‰¹å®šç‚¹ã€‚ï¼ˆæœ¬åœ°åæ ‡ç³»ï¼‰
+         * - æ£???¥è¾¹???æ¡???¯å?¦å????«ç?¹å????¹ã??ï¼???¬å?°å?????ç³»ï??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -24813,7 +24813,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥è¾¹ç•Œæ¡†æ˜¯å¦ä¸ç‰¹å®šçº¿æ®µç›¸äº¤ã€‚ï¼ˆæœ¬åœ°åæ ‡ç³»ï¼‰
+         * - æ£???¥è¾¹???æ¡???¯å?¦ä????¹å??çº¿æ®µ??¸äº¤???ï¼???¬å?°å?????ç³»ï??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -24834,7 +24834,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - çŸ©å½¢è¾¹ç•Œæ¡†æ•°æ®ã€‚
+     * - ??©å½¢è¾¹ç??æ¡???°æ?®ã??
      * @version DragonBones 5.1
      * @language zh_CN
      */
@@ -24886,7 +24886,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - æ¤­åœ†è¾¹ç•Œæ¡†æ•°æ®ã€‚
+     * - æ¤­å??è¾¹ç??æ¡???°æ?®ã??
      * @version DragonBones 5.1
      * @language zh_CN
      */
@@ -24934,7 +24934,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - å¤šè¾¹å½¢è¾¹ç•Œæ¡†æ•°æ®ã€‚
+     * - å¤?è¾¹å½¢è¾¹ç??æ¡???°æ?®ã??
      * @version DragonBones 5.1
      * @language zh_CN
      */
@@ -24967,7 +24967,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¤šè¾¹å½¢é¡¶ç‚¹ã€‚
+         * - å¤?è¾¹å½¢é¡¶ç?¹ã??
          * @version DragonBones 5.1
          * @language zh_CN
          */
@@ -25029,7 +25029,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŠ¨ç”»æ•°æ®ã€‚
+     * - ??¨ç?»æ?°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -25059,7 +25059,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çš„å¸§æ•°ã€‚
+         * - ??¨ç?»ç??å¸§æ?°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25070,7 +25070,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çš„æ’­æ”¾æ¬¡æ•°ã€‚ [0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡]
+         * - ??¨ç?»ç????­æ?¾æ¬¡??°ã?? [0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡]
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25081,7 +25081,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çš„æŒç»­æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??¨ç?»ç?????ç»­æ?¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25096,7 +25096,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çš„æ·¡å…¥æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??¨ç?»ç??æ·¡å?¥æ?¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25111,7 +25111,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»åç§°ã€‚
+         * - ??¨ç?»å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25262,8 +25262,8 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŠ¨ç”»é…ç½®ç”¨æ¥æè¿°æ’­æ”¾ä¸€ä¸ªåŠ¨ç”»çŠ¶æ€æ‰€éœ€è¦çš„å…¨éƒ¨ä¿¡æ¯ã€‚
-     * è¯¥ API ä»åœ¨å®éªŒé˜¶æ®µï¼Œä½¿ç”¨æ—¶å¯èƒ½é­é‡ bug æˆ–ç¨³å®šæ€§æˆ–å…¼å®¹æ€§é—®é¢˜ã€‚
+     * - ??¨ç?»é??ç½®ç?¨æ?¥æ??è¿°æ?­æ?¾ä??ä¸ªå?¨ç?»ç?¶æ????????è¦??????¨é?¨ä¿¡??¯ã??
+     * è¯? API ä»???¨å??éª???¶æ®µï¼?ä½¿ç?¨æ?¶å?¯è?½é?­é?? bug ???ç¨³å????§æ????¼å®¹??§é?®é?????
      * @see dragonBones.AnimationState
      * @beta
      * @version DragonBones 5.0
@@ -25283,8 +25283,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å…¥åŠ¨ç”»çŠ¶æ€æ—¶æ·¡å‡ºå…¶ä»–åŠ¨ç”»çŠ¶æ€çš„æ¨¡å¼ã€‚
-         * è¯¥å±æ€§é€šå¸¸ç”¨æ¥æŒ‡å®šå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ··åˆæ—¶çš„ç›¸äº’æ›¿æ¢å…³ç³»ã€‚
+         * - æ·¡å?¥å?¨ç?»ç?¶æ????¶æ·¡??ºå?¶ä????¨ç?»ç?¶æ?????æ¨¡å?????
+         * è¯¥å????§é??å¸¸ç?¨æ?¥æ??å®?å¤?ä¸ªå?¨ç?»ç?¶æ??æ··å????¶ç????¸ä????¿æ?¢å?³ç³»???
          * @default dragonBones.AnimationFadeOutMode.All
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25319,9 +25319,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€æ˜¯å¦å¯¹æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§æœ‰æ§åˆ¶æƒã€‚
-         * æœ‰æ—¶æ··åˆä¸€ä¸ªåŠ¨ç”»çŠ¶æ€å¹¶ä¸å¸Œæœ›å…¶æ§åˆ¶æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§ï¼Œ
-         * å°¤å…¶æ˜¯å…¶ä»–åŠ¨ç”»çŠ¶æ€æ­£åœ¨æ§åˆ¶è¿™äº›æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§æ—¶ã€‚
+         * - ??¨ç?»ç?¶æ????¯å?¦å¯¹???æ§½ç????¾ç¤ºå¯¹è±¡å±???§æ????§å?¶æ?????
+         * ?????¶æ··???ä¸?ä¸ªå?¨ç?»ç?¶æ??å¹¶ä??å¸??????¶æ?§å?¶æ??æ§½ç????¾ç¤ºå¯¹è±¡å±???§ï??
+         * å°¤å?¶æ?¯å?¶ä????¨ç?»ç?¶æ??æ­???¨æ?§å?¶è??äº????æ§½ç????¾ç¤ºå¯¹è±¡å±???§æ?¶ã??
          * @default true
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25335,8 +25335,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¼€å§‹æ’­æ”¾åŠ¨ç”»çŠ¶æ€æ—¶æ˜¯å¦å°†æ²¡æœ‰åŠ¨ç”»çš„å¯¹è±¡é‡ç½®ä¸ºéª¨æ¶åˆå§‹å€¼ã€‚
-         * é€šå¸¸åœ¨æ··åˆå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ—¶åº”è¯¥å°†è¯¥å±æ€§è®¾ç½®ä¸º falseã€‚
+         * - å¼?å§???­æ?¾å?¨ç?»ç?¶æ????¶æ?¯å?¦å??æ²¡æ????¨ç?»ç??å¯¹è±¡???ç½®ä¸ºéª¨æ?¶å??å§???¼ã??
+         * ???å¸¸å?¨æ··???å¤?ä¸ªå?¨ç?»ç?¶æ????¶å??è¯¥å??è¯¥å????§è®¾ç½®ä¸º false???
          * @default true
          * @version DragonBones 5.1
          * @language zh_CN
@@ -25352,7 +25352,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾æ¬¡æ•°ã€‚ [0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡]
+         * - ??­æ?¾æ¬¡??°ã?? [0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡]
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25366,9 +25366,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆå›¾å±‚ã€‚
-         * å›¾å±‚é«˜çš„åŠ¨ç”»çŠ¶æ€ä¼šä¼˜å…ˆè·å–æ··åˆæƒé‡ã€‚
-         * å½“æ··åˆæƒé‡åˆ†é…è¶…è¿‡ 1 æ—¶ï¼Œå‰©ä½™çš„åŠ¨ç”»çŠ¶æ€å°†ä¸å†è·å¾—æƒé‡åˆ†é…ã€‚
+         * - æ··å????¾å?????
+         * ??¾å??é«??????¨ç?»ç?¶æ??ä¼?ä¼??????·å??æ··å???????????
+         * å½?æ··å??????????????è¶?è¿? 1 ??¶ï????©ä???????¨ç?»ç?¶æ??å°?ä¸??????·å?????????????????
          * @readonly
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25381,7 +25381,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾çš„å¼€å§‹æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??­æ?¾ç??å¼?å§???¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @default 0.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25395,8 +25395,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾çš„æŒç»­æ—¶é—´ã€‚
-         * [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: åŠ¨ç”»åœæ­¢, (0~N]: æŒç»­æ—¶é—´] ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??­æ?¾ç?????ç»­æ?¶é?´ã??
+         * [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??¨ç?»å??æ­?, (0~N]: ???ç»­æ?¶é?´] ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @default -1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25411,9 +25411,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾é€Ÿåº¦ã€‚
-         * è¯¥å€¼ä¸ {@link dragonBones.Animation#timeScale} æ˜¯å åŠ å…³ç³»ã€‚
-         * [(-N~0): å€’è½¬æ’­æ”¾, 0: åœæ­¢æ’­æ”¾, (0~1): æ…¢é€Ÿæ’­æ”¾, 1: æ­£å¸¸æ’­æ”¾, (1~N): å¿«é€Ÿæ’­æ”¾]
+         * - ??­æ?¾é??åº¦ã??
+         * è¯¥å?¼ä?? {@link dragonBones.Animation#timeScale} ??¯å???????³ç³»???
+         * [(-N~0): ???è½¬æ?­æ??, 0: ???æ­¢æ?­æ??, (0~1): ??¢é????­æ??, 1: æ­?å¸¸æ?­æ??, (1~N): å¿«é????­æ?¾]
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -25426,7 +25426,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆæƒé‡ã€‚
+         * - æ··å???????????
          * @default 1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25440,8 +25440,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å…¥æ—¶é—´ã€‚
-         * [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, [0~N]: æ·¡å…¥æ—¶é—´] ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - æ·¡å?¥æ?¶é?´ã??
+         * [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, [0~N]: æ·¡å?¥æ?¶é?´] ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @default -1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25455,8 +25455,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€æ’­æ”¾å®Œæˆåçš„è‡ªåŠ¨æ·¡å‡ºæ—¶é—´ã€‚
-         * [-1: ä¸è‡ªåŠ¨æ·¡å‡º, [0~N]: æ·¡å‡ºæ—¶é—´] ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??¨ç?»ç?¶æ????­æ?¾å?????????????ªå?¨æ·¡??ºæ?¶é?´ã??
+         * [-1: ä¸???ªå?¨æ·¡???, [0~N]: æ·¡å?ºæ?¶é?´] ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @default -1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25468,7 +25468,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€åç§°ã€‚ ï¼ˆå¯ä»¥ä¸åŒäºåŠ¨ç”»æ•°æ®ï¼‰
+         * - ??¨ç?»ç?¶æ?????ç§°ã?? ï¼???¯ä»¥ä¸????äº???¨ç?»æ?°æ?®ï??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -25479,7 +25479,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ•°æ®åç§°ã€‚
+         * - ??¨ç?»æ?°æ?®å??ç§°ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -25492,8 +25492,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆç»„åç§°ã€‚
-         * è¯¥å±æ€§é€šå¸¸ç”¨æ¥æŒ‡å®šå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ··åˆæ—¶çš„ç›¸äº’æ›¿æ¢å…³ç³»ã€‚
+         * - æ··å??ç»????ç§°ã??
+         * è¯¥å????§é??å¸¸ç?¨æ?¥æ??å®?å¤?ä¸ªå?¨ç?»ç?¶æ??æ··å????¶ç????¸ä????¿æ?¢å?³ç³»???
          * @readonly
          * @version DragonBones 5.0
          * @language zh_CN
@@ -25558,7 +25558,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - è´´å›¾é›†æ•°æ®ã€‚
+     * - è´´å?¾é????°æ?®ã??
      * @version DragonBones 3.0
      * @language zh_CN
      */
@@ -25585,7 +25585,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è´´å›¾é›†åç§°ã€‚
+         * - è´´å?¾é?????ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25596,7 +25596,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è´´å›¾é›†å›¾ç‰‡è·¯å¾„ã€‚
+         * - è´´å?¾é????¾ç??è·¯å?????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25673,7 +25673,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - éª¨æ¶ä»£ç†æ¥å£ï¼Œå¯¹æ¥çš„å¼•æ“éœ€è¦å¯¹å…¶è¿›è¡Œå…·ä½“å®ç°ã€‚
+     * - éª¨æ?¶ä»£?????¥å??ï¼?å¯¹æ?¥ç??å¼???????è¦?å¯¹å?¶è??è¡???·ä??å®???°ã??
      * @see dragonBones.Armature
      * @version DragonBones 5.0
      * @language zh_CN
@@ -25705,7 +25705,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é‡Šæ”¾è¯¥å®ä¾‹å’Œéª¨æ¶ã€‚ ï¼ˆéª¨æ¶ä¼šå›æ”¶åˆ°å¯¹è±¡æ± ï¼‰
+         * - ?????¾è¯¥å®?ä¾????éª¨æ?¶ã?? ï¼?éª¨æ?¶ä???????¶å?°å¯¹è±¡æ??ï¼?
          * @example
          * <pre>
          *     removeChild(armatureDisplay);
@@ -25721,7 +25721,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨æ¶ã€‚
+         * - éª¨æ?¶ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -25732,7 +25732,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ’­æ”¾å™¨ã€‚
+         * - ??¨ç?»æ?­æ?¾å?¨ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -25772,7 +25772,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - éª¨æ¶æ˜¯éª¨éª¼åŠ¨ç”»ç³»ç»Ÿçš„æ ¸å¿ƒã€‚
+     * - éª¨æ?¶æ?¯éª¨éª¼å?¨ç?»ç³»ç»??????¸å?????
      * @see dragonBones.ArmatureData
      * @see dragonBones.Bone
      * @see dragonBones.Slot
@@ -25791,8 +25791,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦ç»§æ‰¿çˆ¶éª¨æ¶çš„åŠ¨ç”»æ§åˆ¶ã€‚
-         * å¦‚æœè¯¥å€¼ä¸º trueï¼Œå½“çˆ¶éª¨æ¶æ’­æ”¾åŠ¨ç”»æ—¶ï¼Œä¼šå°è¯•è®©å­éª¨æ¶æ’­æ”¾åŒååŠ¨ç”»ã€‚
+         * - ??¯å?¦ç»§??¿ç?¶éª¨??¶ç????¨ç?»æ?§å?¶ã??
+         * å¦????è¯¥å?¼ä¸º trueï¼?å½???¶éª¨??¶æ?­æ?¾å?¨ç?»æ?¶ï??ä¼?å°?è¯?è®©å??éª¨æ?¶æ?­æ?¾å???????¨ç?»ã??
          * @default true
          * @version DragonBones 4.5
          * @language zh_CN
@@ -25898,7 +25898,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é‡Šæ”¾éª¨æ¶ã€‚ ï¼ˆå›æ”¶åˆ°å¯¹è±¡æ± ï¼‰
+         * - ?????¾éª¨??¶ã?? ï¼??????¶å?°å¯¹è±¡æ??ï¼?
          * @example
          * <pre>
          *     removeChild(armature.display);
@@ -25927,9 +25927,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¼ºåˆ¶ç‰¹å®šéª¨éª¼æˆ–å…¶æ‹¥æœ‰çš„æ’æ§½åœ¨ä¸‹ä¸€å¸§æ›´æ–°å˜æ¢æˆ–æ˜¾ç¤ºå±æ€§ã€‚
-         * @param boneName - éª¨éª¼åç§°ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œå°†æ›´æ–°æ‰€æœ‰éª¨éª¼ï¼‰
-         * @param updateSlot - æ˜¯å¦æ›´æ–°éª¨éª¼çš„æ’æ§½ã€‚ ï¼ˆé»˜è®¤: falseï¼‰
+         * - å¼ºå?¶ç?¹å??éª¨éª¼?????¶æ?¥æ????????æ§½å?¨ä??ä¸?å¸§æ?´æ?°å????¢æ????¾ç¤ºå±???§ã??
+         * @param boneName - éª¨éª¼???ç§°ã?? ï¼?å¦??????ªè®¾ç½®ï??å°???´æ?°æ?????éª¨éª¼ï¼?
+         * @param updateSlot - ??¯å?¦æ?´æ?°éª¨éª¼ç?????æ§½ã?? ï¼?é»?è®?: falseï¼?
          * @see dragonBones.Bone#invalidUpdate()
          * @see dragonBones.Slot#invalidUpdate()
          * @version DragonBones 3.0
@@ -25946,11 +25946,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥ç‰¹å®šç‚¹æ˜¯å¦åœ¨æŸä¸ªæ’æ§½çš„è‡ªå®šä¹‰è¾¹ç•Œæ¡†å†…ã€‚
-         * ç‚¹çš„åæ ‡ç³»ä¸ºéª¨æ¶å†…åæ ‡ç³»ã€‚
-         * è‡ªå®šä¹‰è¾¹ç•Œæ¡†éœ€è¦åœ¨ DragonBones Pro ä¸­è‡ªå®šä¹‰ã€‚
-         * @param x - ç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param y - ç‚¹çš„å‚ç›´åæ ‡ã€‚
+         * - æ£???¥ç?¹å????¹æ?¯å?¦å?¨æ??ä¸ªæ??æ§½ç????ªå??ä¹?è¾¹ç??æ¡???????
+         * ??¹ç????????ç³»ä¸ºéª¨æ?¶å????????ç³»ã??
+         * ??ªå??ä¹?è¾¹ç??æ¡????è¦???? DragonBones Pro ä¸­è?ªå??ä¹????
+         * @param x - ??¹ç??æ°´å¹³?????????
+         * @param y - ??¹ç???????´å????????
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -25971,17 +25971,17 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥ç‰¹å®šçº¿æ®µæ˜¯å¦ä¸éª¨æ¶çš„æŸä¸ªæ’æ§½çš„è‡ªå®šä¹‰è¾¹ç•Œæ¡†ç›¸äº¤ã€‚
-         * çº¿æ®µå’Œäº¤ç‚¹çš„åæ ‡ç³»å‡ä¸ºéª¨æ¶å†…åæ ‡ç³»ã€‚
-         * è‡ªå®šä¹‰è¾¹ç•Œæ¡†éœ€è¦åœ¨ DragonBones Pro ä¸­è‡ªå®šä¹‰ã€‚
-         * @param xA - çº¿æ®µèµ·ç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param yA - çº¿æ®µèµ·ç‚¹çš„å‚ç›´åæ ‡ã€‚
-         * @param xB - çº¿æ®µç»ˆç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param yB - çº¿æ®µç»ˆç‚¹çš„å‚ç›´åæ ‡ã€‚
-         * @param intersectionPointA - çº¿æ®µä»èµ·ç‚¹åˆ°ç»ˆç‚¹ä¸è¾¹ç•Œæ¡†ç›¸äº¤çš„ç¬¬ä¸€ä¸ªäº¤ç‚¹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—äº¤ç‚¹ï¼‰
-         * @param intersectionPointB - çº¿æ®µä»ç»ˆç‚¹åˆ°èµ·ç‚¹ä¸è¾¹ç•Œæ¡†ç›¸äº¤çš„ç¬¬ä¸€ä¸ªäº¤ç‚¹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—äº¤ç‚¹ï¼‰
-         * @param normalRadians - äº¤ç‚¹è¾¹ç•Œæ¡†åˆ‡çº¿çš„æ³•çº¿å¼§åº¦ã€‚ [x: ç¬¬ä¸€ä¸ªäº¤ç‚¹åˆ‡çº¿çš„æ³•çº¿å¼§åº¦, y: ç¬¬äºŒä¸ªäº¤ç‚¹åˆ‡çº¿çš„æ³•çº¿å¼§åº¦] ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—æ³•çº¿ï¼‰
-         * @returns çº¿æ®µä»èµ·ç‚¹åˆ°ç»ˆç‚¹ç›¸äº¤çš„ç¬¬ä¸€ä¸ªè‡ªå®šä¹‰è¾¹ç•Œæ¡†çš„æ’æ§½ã€‚
+         * - æ£???¥ç?¹å??çº¿æ®µ??¯å?¦ä??éª¨æ?¶ç?????ä¸ªæ??æ§½ç????ªå??ä¹?è¾¹ç??æ¡???¸äº¤???
+         * çº¿æ®µ???äº¤ç?¹ç????????ç³»å??ä¸ºéª¨??¶å????????ç³»ã??
+         * ??ªå??ä¹?è¾¹ç??æ¡????è¦???? DragonBones Pro ä¸­è?ªå??ä¹????
+         * @param xA - çº¿æ®µèµ·ç?¹ç??æ°´å¹³?????????
+         * @param yA - çº¿æ®µèµ·ç?¹ç???????´å????????
+         * @param xB - çº¿æ®µç»???¹ç??æ°´å¹³?????????
+         * @param yB - çº¿æ®µç»???¹ç???????´å????????
+         * @param intersectionPointA - çº¿æ®µä»?èµ·ç?¹å?°ç????¹ä??è¾¹ç??æ¡???¸äº¤???ç¬¬ä??ä¸ªäº¤??¹ã?? ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??äº¤ç?¹ï??
+         * @param intersectionPointB - çº¿æ®µä»?ç»???¹å?°èµ·??¹ä??è¾¹ç??æ¡???¸äº¤???ç¬¬ä??ä¸ªäº¤??¹ã?? ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??äº¤ç?¹ï??
+         * @param normalRadians - äº¤ç?¹è¾¹???æ¡????çº¿ç??æ³?çº¿å¼§åº¦ã?? [x: ç¬¬ä??ä¸ªäº¤??¹å??çº¿ç??æ³?çº¿å¼§åº?, y: ç¬¬ä??ä¸ªäº¤??¹å??çº¿ç??æ³?çº¿å¼§åº¦] ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??æ³?çº¿ï??
+         * @returns çº¿æ®µä»?èµ·ç?¹å?°ç????¹ç?¸äº¤???ç¬¬ä??ä¸ªè?ªå??ä¹?è¾¹ç??æ¡???????æ§½ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -26003,8 +26003,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„éª¨éª¼ã€‚
-         * @param name - éª¨éª¼åç§°ã€‚
+         * - ??·å????¹å?????éª¨éª¼???
+         * @param name - éª¨éª¼???ç§°ã??
          * @see dragonBones.Bone
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26018,8 +26018,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é€šè¿‡æ˜¾ç¤ºå¯¹è±¡è·å–ç‰¹å®šçš„éª¨éª¼ã€‚
-         * @param display - æ˜¾ç¤ºå¯¹è±¡ã€‚
+         * - ???è¿???¾ç¤ºå¯¹è±¡??·å????¹å?????éª¨éª¼???
+         * @param display - ??¾ç¤ºå¯¹è±¡???
          * @see dragonBones.Bone
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26033,8 +26033,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„æ’æ§½ã€‚
-         * @param name - æ’æ§½åç§°ã€‚
+         * - ??·å????¹å????????æ§½ã??
+         * @param name - ???æ§½å??ç§°ã??
          * @see dragonBones.Slot
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26048,8 +26048,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é€šè¿‡æ˜¾ç¤ºå¯¹è±¡è·å–ç‰¹å®šçš„æ’æ§½ã€‚
-         * @param display - æ˜¾ç¤ºå¯¹è±¡ã€‚
+         * - ???è¿???¾ç¤ºå¯¹è±¡??·å????¹å????????æ§½ã??
+         * @param display - ??¾ç¤ºå¯¹è±¡???
          * @see dragonBones.Slot
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26082,7 +26082,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–æ‰€æœ‰çš„éª¨éª¼ã€‚
+         * - ??·å???????????éª¨éª¼???
          * @see dragonBones.Bone
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26095,7 +26095,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–æ‰€æœ‰çš„æ’æ§½ã€‚
+         * - ??·å??????????????æ§½ã??
          * @see dragonBones.Slot
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26107,7 +26107,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦å°†éª¨æ¶æ°´å¹³ç¿»è½¬ã€‚
+         * - ??¯å?¦å??éª¨æ?¶æ°´å¹³ç¿»è½¬ã??
          * @version DragonBones 5.5
          * @language zh_CN
          */
@@ -26118,7 +26118,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦å°†éª¨æ¶å‚ç›´ç¿»è½¬ã€‚
+         * - ??¯å?¦å??éª¨æ?¶å????´ç¿»è½¬ã??
          * @version DragonBones 5.5
          * @language zh_CN
          */
@@ -26138,10 +26138,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»ç¼“å­˜å¸§ç‡ï¼Œå½“è®¾ç½®çš„å€¼å¤§äº 0 çš„æ—¶ï¼Œå°†ä¼šå¼€å¯åŠ¨ç”»ç¼“å­˜ã€‚
-         * é€šè¿‡å°†åŠ¨ç”»æ•°æ®ç¼“å­˜åœ¨å†…å­˜ä¸­æ¥æé«˜è¿è¡Œæ€§èƒ½ï¼Œä¼šæœ‰ä¸€å®šçš„å†…å­˜å¼€é”€ã€‚
-         * å¸§ç‡ä¸å®œè®¾ç½®çš„è¿‡é«˜ï¼Œé€šå¸¸è·ŸåŠ¨ç”»çš„å¸§ç‡ç›¸å½“ä¸”ä½äºç¨‹åºè¿è¡Œçš„å¸§ç‡ã€‚
-         * å¼€å¯åŠ¨ç”»ç¼“å­˜åï¼ŒæŸäº›åŠŸèƒ½å°†ä¼šå¤±æ•ˆï¼Œæ¯”å¦‚éª¨éª¼çš„ offset å±æ€§ç­‰ã€‚
+         * - ??¨ç?»ç??å­?å¸§ç??ï¼?å½?è®¾ç½®?????¼å¤§äº? 0 ?????¶ï??å°?ä¼?å¼???¯å?¨ç?»ç??å­????
+         * ???è¿?å°???¨ç?»æ?°æ?®ç??å­???¨å??å­?ä¸­æ?¥æ??é«?è¿?è¡???§è?½ï??ä¼????ä¸?å®???????å­?å¼???????
+         * å¸§ç??ä¸?å®?è®¾ç½®???è¿?é«?ï¼????å¸¸è????¨ç?»ç??å¸§ç????¸å??ä¸?ä½?äº?ç¨?åº?è¿?è¡????å¸§ç?????
+         * å¼???¯å?¨ç?»ç??å­????ï¼????äº??????½å??ä¼?å¤±æ??ï¼?æ¯?å¦?éª¨éª¼??? offset å±???§ç?????
          * @example
          * <pre>
          *     armature.cacheFrameRate = 24;
@@ -26158,7 +26158,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨æ¶åç§°ã€‚
+         * - éª¨æ?¶å??ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26170,7 +26170,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨æ¶æ•°æ®ã€‚
+         * - éª¨æ?¶æ?°æ?®ã??
          * @see dragonBones.ArmatureData
          * @version DragonBones 4.5
          * @language zh_CN
@@ -26183,7 +26183,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ’­æ”¾å™¨ã€‚
+         * - ??¨ç?»æ?­æ?¾å?¨ã??
          * @see dragonBones.Animation
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26199,7 +26199,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è¯¥éª¨æ¶çš„ EventDispatcher å®ä¾‹ã€‚
+         * - è¯¥éª¨??¶ç?? EventDispatcher å®?ä¾????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -26212,9 +26212,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¾ç¤ºå®¹å™¨å®ä¾‹ã€‚
-         * æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡éƒ½ä¼šä»¥æ­¤æ˜¾ç¤ºå®¹å™¨ä¸ºçˆ¶çº§ã€‚
-         * æ ¹æ®æ¸²æŸ“å¼•æ“çš„ä¸åŒï¼Œç±»å‹ä¼šä¸åŒï¼Œé€šå¸¸æ˜¯ DisplayObjectContainer ç±»å‹ã€‚
+         * - ??¾ç¤ºå®¹å?¨å??ä¾????
+         * ???æ§½ç????¾ç¤ºå¯¹è±¡??½ä??ä»¥æ­¤??¾ç¤ºå®¹å?¨ä¸º??¶çº§???
+         * ??¹æ?®æ¸²???å¼???????ä¸????ï¼?ç±»å??ä¼?ä¸????ï¼????å¸¸æ?? DisplayObjectContainer ç±»å?????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26234,7 +26234,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è¯¥éª¨æ¶æ‰€å±çš„çˆ¶æ’æ§½ã€‚
+         * - è¯¥éª¨??¶æ??å±??????¶æ??æ§½ã??
          * @see dragonBones.Slot
          * @version DragonBones 4.5
          * @language zh_CN
@@ -26251,7 +26251,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #eventDispatcher}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #eventDispatcher}???
          * @deprecated
          * @language zh_CN
          */
@@ -26262,7 +26262,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #eventDispatcher}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #eventDispatcher}???
          * @deprecated
          * @language zh_CN
          */
@@ -26273,7 +26273,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #eventDispatcher}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #eventDispatcher}???
          * @deprecated
          * @language zh_CN
          */
@@ -26284,7 +26284,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #cacheFrameRate}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #cacheFrameRate}???
          * @deprecated
          * @language zh_CN
          */
@@ -26295,7 +26295,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #display}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #display}???
          * @deprecated
          * @language zh_CN
          */
@@ -26332,7 +26332,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - å˜æ¢å¯¹è±¡çš„åŸºç±»ã€‚
+     * - ?????¢å¯¹è±¡ç????ºç±»???
      * @see dragonBones.Transform
      * @version DragonBones 4.5
      * @language zh_CN
@@ -26356,7 +26356,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç›¸å¯¹äºéª¨æ¶åæ ‡ç³»çš„çŸ©é˜µã€‚
+         * - ??¸å¯¹äº?éª¨æ?¶å?????ç³»ç????©é?µã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26368,7 +26368,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç›¸å¯¹äºéª¨æ¶åæ ‡ç³»çš„å˜æ¢ã€‚
+         * - ??¸å¯¹äº?éª¨æ?¶å?????ç³»ç???????¢ã??
          * @see #updateGlobalTransform()
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26381,7 +26381,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç›¸å¯¹äºéª¨æ¶æˆ–çˆ¶éª¨éª¼åæ ‡ç³»çš„åç§»å˜æ¢ã€‚
+         * - ??¸å¯¹äº?éª¨æ?¶æ????¶éª¨éª¼å?????ç³»ç?????ç§»å????¢ã??
          * @see #dragonBones.Bone#invalidUpdate()
          * @version DragonBones 3.0
          * @language zh_CN
@@ -26436,8 +26436,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‡ºäºæ€§èƒ½çš„è€ƒè™‘ï¼Œéª¨éª¼æˆ–æ’æ§½çš„ {@link #global} å±æ€§ä¸­çš„æ—‹è½¬æˆ–ç¼©æ”¾å¹¶ä¸æ€»æ˜¯æ­£ç¡®å¯è®¿é—®çš„ï¼Œæœ‰äº›å¼•æ“å¹¶ä¸ä¾èµ–è¿™äº›å±æ€§æ›´æ–°æ¸²æŸ“ï¼Œæ¯”å¦‚ Egretã€‚
-         * ä½¿ç”¨æ­¤æ–¹æ³•å¯ä»¥ä¿è¯è®¿é—®åˆ° {@link #global} å±æ€§ä¸­æ­£ç¡®çš„æ—‹è½¬æˆ–ç¼©æ”¾ã€‚
+         * - ??ºä????§è?½ç????????ï¼?éª¨éª¼??????æ§½ç?? {@link #global} å±???§ä¸­??????è½¬æ??ç¼©æ?¾å¹¶ä¸???»æ?¯æ­£ç¡®å?¯è®¿??®ç??ï¼????äº?å¼????å¹¶ä??ä¾?èµ?è¿?äº?å±???§æ?´æ?°æ¸²???ï¼?æ¯?å¦? Egret???
+         * ä½¿ç?¨æ­¤??¹æ????¯ä»¥ä¿?è¯?è®¿é?®å?? {@link #global} å±???§ä¸­æ­?ç¡®ç?????è½¬æ??ç¼©æ?¾ã??
          * @example
          * <pre>
          *     bone.updateGlobalTransform();
@@ -26453,7 +26453,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€å±çš„éª¨æ¶ã€‚
+         * - ???å±????éª¨æ?¶ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26464,7 +26464,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€å±çš„çˆ¶éª¨éª¼ã€‚
+         * - ???å±??????¶éª¨éª¼ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26505,8 +26505,8 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - éª¨éª¼åœ¨éª¨éª¼åŠ¨ç”»ä½“ç³»ä¸­æ˜¯æœ€é‡è¦çš„é€»è¾‘å•å…ƒä¹‹ä¸€ï¼Œè´Ÿè´£åŠ¨ç”»ä¸­çš„å¹³ç§»ã€æ—‹è½¬ã€ç¼©æ”¾çš„å®ç°ã€‚
-     * ä¸€ä¸ªéª¨æ¶ä¸­å¯ä»¥åŒ…å«å¤šä¸ªéª¨éª¼ã€‚
+     * - éª¨éª¼??¨éª¨éª¼å?¨ç?»ä??ç³»ä¸­??¯æ?????è¦??????»è????????ä¹?ä¸?ï¼?è´?è´???¨ç?»ä¸­???å¹³ç§»??????è½¬ã??ç¼©æ?¾ç??å®???°ã??
+     * ä¸?ä¸ªéª¨??¶ä¸­??¯ä»¥?????«å??ä¸ªéª¨éª¼ã??
      * @see dragonBones.BoneData
      * @see dragonBones.Armature
      * @see dragonBones.Slot
@@ -26522,7 +26522,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åç§»æ¨¡å¼ã€‚
+         * - ???ç§»æ¨¡å¼????
          * @see #offset
          * @version DragonBones 5.5
          * @language zh_CN
@@ -26607,8 +26607,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¼ºåˆ¶éª¨éª¼åœ¨ä¸‹ä¸€å¸§æ›´æ–°å˜æ¢ã€‚
-         * å½“è¯¥éª¨éª¼æ²¡æœ‰åŠ¨ç”»çŠ¶æ€æˆ–å…¶åŠ¨ç”»çŠ¶æ€æ’­æ”¾å®Œæˆæ—¶ï¼Œéª¨éª¼å°†ä¸åœ¨ç»§ç»­æ›´æ–°ï¼Œè€Œæ­¤æ—¶ç”±äºæŸäº›åŸå› å¿…é¡»æ›´æ–°éª¨éª¼æ—¶ï¼Œåˆ™éœ€è¦æ˜¾å¼è°ƒç”¨è¯¥æ–¹æ³•ã€‚
+         * - å¼ºå?¶éª¨éª¼å?¨ä??ä¸?å¸§æ?´æ?°å????¢ã??
+         * å½?è¯¥éª¨éª¼æ²¡?????¨ç?»ç?¶æ???????¶å?¨ç?»ç?¶æ????­æ?¾å???????¶ï??éª¨éª¼å°?ä¸???¨ç»§ç»­æ?´æ?°ï?????æ­¤æ?¶ç?±ä?????äº???????å¿?é¡»æ?´æ?°éª¨éª¼æ?¶ï????????è¦???¾å??è°???¨è¯¥??¹æ?????
          * @example
          * <pre>
          *     let bone = armature.getBone("arm");
@@ -26627,7 +26627,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥è¯¥éª¨éª¼æ˜¯å¦åŒ…å«ç‰¹å®šçš„éª¨éª¼æˆ–æ’æ§½ã€‚
+         * - æ£???¥è¯¥éª¨éª¼??¯å?¦å????«ç?¹å?????éª¨éª¼??????æ§½ã??
          * @see dragonBones.Bone
          * @see dragonBones.Slot
          * @version DragonBones 3.0
@@ -26640,7 +26640,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨éª¼æ•°æ®ã€‚
+         * - éª¨éª¼??°æ?®ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -26653,7 +26653,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ­¤éª¨éª¼æ‰€æœ‰æ’æ§½çš„å¯è§ã€‚
+         * - æ­¤éª¨éª¼æ????????æ§½ç????¯è?????
          * @default true
          * @see dragonBones.Slot#visible
          * @version DragonBones 3.0
@@ -26666,7 +26666,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - éª¨éª¼åç§°ã€‚
+         * - éª¨éª¼???ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -26677,7 +26677,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.Armature#getBones()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.Armature#getBones()}???
          * @deprecated
          * @language zh_CN
          */
@@ -26688,7 +26688,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.Armature#getSlots()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.Armature#getSlots()}???
          * @deprecated
          * @language zh_CN
          */
@@ -26699,7 +26699,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.Armature#getSlot()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.Armature#getSlot()}???
          * @deprecated
          * @language zh_CN
          */
@@ -26816,10 +26816,10 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - æ’æ§½é™„ç€åœ¨éª¨éª¼ä¸Šï¼Œæ§åˆ¶æ˜¾ç¤ºå¯¹è±¡çš„æ˜¾ç¤ºçŠ¶æ€å’Œå±æ€§ã€‚
-     * ä¸€ä¸ªéª¨éª¼ä¸Šå¯ä»¥åŒ…å«å¤šä¸ªæ’æ§½ã€‚
-     * ä¸€ä¸ªæ’æ§½ä¸­å¯ä»¥åŒ…å«å¤šä¸ªæ˜¾ç¤ºå¯¹è±¡ï¼ŒåŒä¸€æ—¶é—´åªèƒ½æ˜¾ç¤ºå…¶ä¸­çš„ä¸€ä¸ªæ˜¾ç¤ºå¯¹è±¡ï¼Œä½†å¯ä»¥åœ¨åŠ¨ç”»æ’­æ”¾çš„è¿‡ç¨‹ä¸­åˆ‡æ¢æ˜¾ç¤ºå¯¹è±¡å®ç°å¸§åŠ¨ç”»ã€‚
-     * æ˜¾ç¤ºå¯¹è±¡å¯ä»¥æ˜¯æ™®é€šçš„å›¾ç‰‡çº¹ç†ï¼Œä¹Ÿå¯ä»¥æ˜¯å­éª¨æ¶çš„æ˜¾ç¤ºå®¹å™¨ï¼Œç½‘æ ¼æ˜¾ç¤ºå¯¹è±¡ï¼Œè¿˜å¯ä»¥æ˜¯è‡ªå®šä¹‰çš„å…¶ä»–æ˜¾ç¤ºå¯¹è±¡ã€‚
+     * - ???æ§½é???????¨éª¨éª¼ä??ï¼???§å?¶æ?¾ç¤ºå¯¹è±¡?????¾ç¤º??¶æ?????å±???§ã??
+     * ä¸?ä¸ªéª¨éª¼ä????¯ä»¥?????«å??ä¸ªæ??æ§½ã??
+     * ä¸?ä¸ªæ??æ§½ä¸­??¯ä»¥?????«å??ä¸ªæ?¾ç¤ºå¯¹è±¡ï¼????ä¸???¶é?´å?ªè?½æ?¾ç¤º??¶ä¸­???ä¸?ä¸ªæ?¾ç¤ºå¯¹è±¡ï¼?ä½???¯ä»¥??¨å?¨ç?»æ?­æ?¾ç??è¿?ç¨?ä¸­å????¢æ?¾ç¤ºå¯¹è±¡å®???°å¸§??¨ç?»ã??
+     * ??¾ç¤ºå¯¹è±¡??¯ä»¥??¯æ?®é???????¾ç??çº¹ç??ï¼?ä¹???¯ä»¥??¯å??éª¨æ?¶ç????¾ç¤ºå®¹å?¨ï??ç½???¼æ?¾ç¤ºå¯¹è±¡ï¼?è¿???¯ä»¥??¯è?ªå??ä¹??????¶ä????¾ç¤ºå¯¹è±¡???
      * @see dragonBones.Armature
      * @see dragonBones.Bone
      * @see dragonBones.SlotData
@@ -26837,7 +26837,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¾ç¤ºå¯¹è±¡å—åˆ°æ§åˆ¶çš„åŠ¨ç”»çŠ¶æ€æˆ–æ··åˆç»„åç§°ï¼Œè®¾ç½®ä¸º null åˆ™è¡¨ç¤ºå—æ‰€æœ‰çš„åŠ¨ç”»çŠ¶æ€æ§åˆ¶ã€‚
+         * - ??¾ç¤ºå¯¹è±¡?????°æ?§å?¶ç????¨ç?»ç?¶æ?????æ··å??ç»????ç§°ï??è®¾ç½®ä¸? null ???è¡¨ç¤º??????????????¨ç?»ç?¶æ????§å?¶ã??
          * @default null
          * @see dragonBones.AnimationState#displayControl
          * @see dragonBones.AnimationState#name
@@ -27125,11 +27125,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥ç‰¹å®šç‚¹æ˜¯å¦åœ¨æ’æ§½çš„è‡ªå®šä¹‰è¾¹ç•Œæ¡†å†…ã€‚
-         * ç‚¹çš„åæ ‡ç³»ä¸ºéª¨æ¶å†…åæ ‡ç³»ã€‚
-         * è‡ªå®šä¹‰è¾¹ç•Œæ¡†éœ€è¦åœ¨ DragonBones Pro ä¸­è‡ªå®šä¹‰ã€‚
-         * @param x - ç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param y - ç‚¹çš„å‚ç›´åæ ‡ã€‚
+         * - æ£???¥ç?¹å????¹æ?¯å?¦å?¨æ??æ§½ç????ªå??ä¹?è¾¹ç??æ¡???????
+         * ??¹ç????????ç³»ä¸ºéª¨æ?¶å????????ç³»ã??
+         * ??ªå??ä¹?è¾¹ç??æ¡????è¦???? DragonBones Pro ä¸­è?ªå??ä¹????
+         * @param x - ??¹ç??æ°´å¹³?????????
+         * @param y - ??¹ç???????´å????????
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -27150,17 +27150,17 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥ç‰¹å®šçº¿æ®µæ˜¯å¦ä¸æ’æ§½çš„è‡ªå®šä¹‰è¾¹ç•Œæ¡†ç›¸äº¤ã€‚
-         * çº¿æ®µå’Œäº¤ç‚¹çš„åæ ‡ç³»å‡ä¸ºéª¨æ¶å†…åæ ‡ç³»ã€‚
-         * è‡ªå®šä¹‰è¾¹ç•Œæ¡†éœ€è¦åœ¨ DragonBones Pro ä¸­è‡ªå®šä¹‰ã€‚
-         * @param xA - çº¿æ®µèµ·ç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param yA - çº¿æ®µèµ·ç‚¹çš„å‚ç›´åæ ‡ã€‚
-         * @param xB - çº¿æ®µç»ˆç‚¹çš„æ°´å¹³åæ ‡ã€‚
-         * @param yB - çº¿æ®µç»ˆç‚¹çš„å‚ç›´åæ ‡ã€‚
-         * @param intersectionPointA - çº¿æ®µä»èµ·ç‚¹åˆ°ç»ˆç‚¹ä¸è¾¹ç•Œæ¡†ç›¸äº¤çš„ç¬¬ä¸€ä¸ªäº¤ç‚¹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—äº¤ç‚¹ï¼‰
-         * @param intersectionPointB - çº¿æ®µä»ç»ˆç‚¹åˆ°èµ·ç‚¹ä¸è¾¹ç•Œæ¡†ç›¸äº¤çš„ç¬¬ä¸€ä¸ªäº¤ç‚¹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—äº¤ç‚¹ï¼‰
-         * @param normalRadians - äº¤ç‚¹è¾¹ç•Œæ¡†åˆ‡çº¿çš„æ³•çº¿å¼§åº¦ã€‚ [x: ç¬¬ä¸€ä¸ªäº¤ç‚¹åˆ‡çº¿çš„æ³•çº¿å¼§åº¦, y: ç¬¬äºŒä¸ªäº¤ç‚¹åˆ‡çº¿çš„æ³•çº¿å¼§åº¦] ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä¸è®¡ç®—æ³•çº¿ï¼‰
-         * @returns ç›¸äº¤çš„æƒ…å†µã€‚ [-1: ä¸ç›¸äº¤ä¸”çº¿æ®µåœ¨åŒ…å›´ç›’å†…, 0: ä¸ç›¸äº¤, 1: ç›¸äº¤ä¸”æœ‰ä¸€ä¸ªäº¤ç‚¹ä¸”ç»ˆç‚¹åœ¨åŒ…å›´ç›’å†…, 2: ç›¸äº¤ä¸”æœ‰ä¸€ä¸ªäº¤ç‚¹ä¸”èµ·ç‚¹åœ¨åŒ…å›´ç›’å†…, 3: ç›¸äº¤ä¸”æœ‰ä¸¤ä¸ªäº¤ç‚¹, N: ç›¸äº¤ä¸”æœ‰ N ä¸ªäº¤ç‚¹]
+         * - æ£???¥ç?¹å??çº¿æ®µ??¯å?¦ä?????æ§½ç????ªå??ä¹?è¾¹ç??æ¡???¸äº¤???
+         * çº¿æ®µ???äº¤ç?¹ç????????ç³»å??ä¸ºéª¨??¶å????????ç³»ã??
+         * ??ªå??ä¹?è¾¹ç??æ¡????è¦???? DragonBones Pro ä¸­è?ªå??ä¹????
+         * @param xA - çº¿æ®µèµ·ç?¹ç??æ°´å¹³?????????
+         * @param yA - çº¿æ®µèµ·ç?¹ç???????´å????????
+         * @param xB - çº¿æ®µç»???¹ç??æ°´å¹³?????????
+         * @param yB - çº¿æ®µç»???¹ç???????´å????????
+         * @param intersectionPointA - çº¿æ®µä»?èµ·ç?¹å?°ç????¹ä??è¾¹ç??æ¡???¸äº¤???ç¬¬ä??ä¸ªäº¤??¹ã?? ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??äº¤ç?¹ï??
+         * @param intersectionPointB - çº¿æ®µä»?ç»???¹å?°èµ·??¹ä??è¾¹ç??æ¡???¸äº¤???ç¬¬ä??ä¸ªäº¤??¹ã?? ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??äº¤ç?¹ï??
+         * @param normalRadians - äº¤ç?¹è¾¹???æ¡????çº¿ç??æ³?çº¿å¼§åº¦ã?? [x: ç¬¬ä??ä¸ªäº¤??¹å??çº¿ç??æ³?çº¿å¼§åº?, y: ç¬¬ä??ä¸ªäº¤??¹å??çº¿ç??æ³?çº¿å¼§åº¦] ï¼?å¦??????ªè®¾ç½®ï?????ä¸?è®¡ç??æ³?çº¿ï??
+         * @returns ??¸äº¤????????µã?? [-1: ä¸???¸äº¤ä¸?çº¿æ®µ??¨å????´ç?????, 0: ä¸???¸äº¤, 1: ??¸äº¤ä¸????ä¸?ä¸ªäº¤??¹ä??ç»???¹å?¨å????´ç?????, 2: ??¸äº¤ä¸????ä¸?ä¸ªäº¤??¹ä??èµ·ç?¹å?¨å????´ç?????, 3: ??¸äº¤ä¸????ä¸¤ä¸ªäº¤ç??, N: ??¸äº¤ä¸???? N ä¸ªäº¤??¹]
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -27180,7 +27180,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¼ºåˆ¶æ’æ§½åœ¨ä¸‹ä¸€å¸§æ›´æ–°æ˜¾ç¤ºå¯¹è±¡çš„çŠ¶æ€ã€‚
+         * - å¼ºå?¶æ??æ§½å?¨ä??ä¸?å¸§æ?´æ?°æ?¾ç¤ºå¯¹è±¡?????¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27192,7 +27192,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡çš„å¯è§ã€‚
+         * - ???æ§½ç????¾ç¤ºå¯¹è±¡?????¯è?????
          * @default true
          * @version DragonBones 5.6
          * @language zh_CN
@@ -27210,7 +27210,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ­¤æ—¶æ˜¾ç¤ºçš„æ˜¾ç¤ºå¯¹è±¡åœ¨æ˜¾ç¤ºåˆ—è¡¨ä¸­çš„ç´¢å¼•ã€‚
+         * - æ­¤æ?¶æ?¾ç¤º?????¾ç¤ºå¯¹è±¡??¨æ?¾ç¤º???è¡¨ä¸­???ç´¢å?????
          * @example
          * <pre>
          *     let slot = armature.getSlot("weapon");
@@ -27228,7 +27228,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½åç§°ã€‚
+         * - ???æ§½å??ç§°ã??
          * @see dragonBones.SlotData#name
          * @version DragonBones 3.0
          * @language zh_CN
@@ -27240,7 +27240,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŒ…å«æ˜¾ç¤ºå¯¹è±¡æˆ–å­éª¨æ¶çš„æ˜¾ç¤ºåˆ—è¡¨ã€‚
+         * - ?????«æ?¾ç¤ºå¯¹è±¡???å­?éª¨æ?¶ç????¾ç¤º???è¡¨ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27252,7 +27252,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½æ•°æ®ã€‚
+         * - ???æ§½æ?°æ?®ã??
          * @see dragonBones.SlotData
          * @version DragonBones 4.5
          * @language zh_CN
@@ -27268,7 +27268,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½æ­¤æ—¶çš„è‡ªå®šä¹‰åŒ…å›´ç›’æ•°æ®ã€‚
+         * - ???æ§½æ­¤??¶ç????ªå??ä¹??????´ç????°æ?®ã??
          * @version DragonBones 5.0
          * @language zh_CN
          */
@@ -27292,7 +27292,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½æ­¤æ—¶æ˜¾ç¤ºçš„æ˜¾ç¤ºå¯¹è±¡ã€‚
+         * - ???æ§½æ­¤??¶æ?¾ç¤º?????¾ç¤ºå¯¹è±¡???
          * @example
          * <pre>
          *     let slot = armature.getSlot("text");
@@ -27313,7 +27313,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’æ§½æ­¤æ—¶æ˜¾ç¤ºçš„å­éª¨æ¶ã€‚
+         * - ???æ§½æ­¤??¶æ?¾ç¤º???å­?éª¨æ?¶ã??
          * @example
          * <pre>
          *     let slot = armature.getSlot("weapon");
@@ -27329,7 +27329,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #display}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #display}???
          * @deprecated
          * @language zh_CN
          */
@@ -27340,7 +27340,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #display}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #display}???
          * @deprecated
          * @language zh_CN
          */
@@ -27458,8 +27458,8 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - æ’­æ”¾åŠ¨ç”»æ¥å£ã€‚ (Armature å’Œ WordClock éƒ½å®ç°äº†è¯¥æ¥å£)
-     * ä»»ä½•å®ç°äº†æ­¤æ¥å£çš„å®ä¾‹éƒ½å¯ä»¥æ·»åŠ åˆ° WorldClock å®ä¾‹ä¸­ï¼Œç”± WorldClock å®ä¾‹ç»Ÿä¸€æ›´æ–°æ—¶é—´ã€‚
+     * - ??­æ?¾å?¨ç?»æ?¥å????? (Armature ??? WordClock ??½å????°ä??è¯¥æ?¥å??)
+     * ä»»ä??å®???°ä??æ­¤æ?¥å?????å®?ä¾???½å?¯ä»¥æ·»å????? WorldClock å®?ä¾?ä¸­ï????? WorldClock å®?ä¾?ç»?ä¸???´æ?°æ?¶é?´ã??
      * @see dragonBones.WorldClock
      * @see dragonBones.Armature
      * @version DragonBones 3.0
@@ -27473,8 +27473,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ›´æ–°æ—¶é—´ã€‚
-         * @param passedTime - å‰è¿›çš„æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??´æ?°æ?¶é?´ã??
+         * @param passedTime - ???è¿??????¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27490,11 +27490,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å½“å‰æ‰€å±çš„ WordClock å®ä¾‹ã€‚
+         * - å½???????å±???? WordClock å®?ä¾????
          * @example
          * <pre>
-         *     armature.clock = factory.clock; // å°†éª¨æ¶æ·»åŠ åˆ°æ—¶é’Ÿã€‚
-         *     armature.clock = null; // å°†éª¨æ¶ä»æ—¶é’Ÿç§»é™¤ã€‚
+         *     armature.clock = factory.clock; // å°?éª¨æ?¶æ·»?????°æ?¶é?????
+         *     armature.clock = null; // å°?éª¨æ?¶ä????¶é??ç§»é?¤ã??
          * </pre>
          * @version DragonBones 5.0
          * @language zh_CN
@@ -27533,7 +27533,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - WorldClock å¯¹åŠ¨ç”»æä¾›æ—¶é’Ÿæ”¯æŒï¼Œä¸ºæ¯ä¸ªåŠ å…¥åˆ°è¯¥å®ä¾‹çš„ IAnimatable å¯¹è±¡æ›´æ–°æ—¶é—´ã€‚
+     * - WorldClock å¯¹å?¨ç?»æ??ä¾???¶é????¯æ??ï¼?ä¸ºæ??ä¸ªå????¥å?°è¯¥å®?ä¾???? IAnimatable å¯¹è±¡??´æ?°æ?¶é?´ã??
      * @see dragonBones.IAnimateble
      * @see dragonBones.Armature
      * @version DragonBones 3.0
@@ -27546,7 +27546,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å½“å‰çš„æ—¶é—´ã€‚ (ä»¥ç§’ä¸ºå•ä½)
+         * - å½?????????¶é?´ã?? (ä»¥ç??ä¸ºå??ä½?)
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27559,8 +27559,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾é€Ÿåº¦ï¼Œç”¨äºæ§åˆ¶åŠ¨ç”»å˜é€Ÿæ’­æ”¾ã€‚
-         * [0: åœæ­¢æ’­æ”¾, (0~1): æ…¢é€Ÿæ’­æ”¾, 1: æ­£å¸¸æ’­æ”¾, (1~N): å¿«é€Ÿæ’­æ”¾]
+         * - ??­æ?¾é??åº¦ï????¨ä????§å?¶å?¨ç?»å???????­æ?¾ã??
+         * [0: ???æ­¢æ?­æ??, (0~1): ??¢é????­æ??, 1: æ­?å¸¸æ?­æ??, (1~N): å¿«é????­æ?¾]
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -27575,8 +27575,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ›å»ºä¸€ä¸ª WorldClock å®ä¾‹ã€‚é€šå¸¸å¹¶ä¸éœ€è¦åˆ›å»º WorldClock å®ä¾‹ã€‚
-         * å½“å¤šä¸ª WorldClock å®ä¾‹ä½¿ç”¨ä¸åŒçš„é€Ÿåº¦è¿è¡Œæ—¶ï¼Œå¯ä»¥å®ç°ä¸€äº›ç‰¹æ®Šçš„åŠ¨ç”»æ•ˆæœï¼Œæ¯”å¦‚å­å¼¹æ—¶é—´ç­‰ã€‚
+         * - ???å»ºä??ä¸? WorldClock å®?ä¾???????å¸¸å¹¶ä¸????è¦????å»? WorldClock å®?ä¾????
+         * å½?å¤?ä¸? WorldClock å®?ä¾?ä½¿ç?¨ä???????????åº¦è??è¡???¶ï????¯ä»¥å®???°ä??äº???¹æ???????¨ç?»æ?????ï¼?æ¯?å¦?å­?å¼¹æ?¶é?´ç?????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27588,8 +27588,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸ºæ‰€æœ‰çš„ IAnimatable å®ä¾‹æ›´æ–°æ—¶é—´ã€‚
-         * @param passedTime - å‰è¿›çš„æ—¶é—´ã€‚ [-1: è‡ªåŠ¨è®¡ç®—å½“å‰å¸§ä¸ä¸Šä¸€å¸§çš„æ—¶é—´å·®, [0~N): å‰è¿›çš„æ—¶é—´] (ä»¥ç§’ä¸ºå•ä½)
+         * - ä¸ºæ???????? IAnimatable å®?ä¾???´æ?°æ?¶é?´ã??
+         * @param passedTime - ???è¿??????¶é?´ã?? [-1: ??ªå?¨è®¡ç®?å½????å¸§ä??ä¸?ä¸?å¸§ç????¶é?´å·®, [0~N): ???è¿??????¶é?´] (ä»¥ç??ä¸ºå??ä½?)
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27601,8 +27601,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦åŒ…å«ç‰¹å®šçš„ IAnimatable å®ä¾‹ã€‚
-         * @param value - IAnimatable å®ä¾‹ã€‚
+         * - æ£???¥æ?¯å?¦å????«ç?¹å????? IAnimatable å®?ä¾????
+         * @param value - IAnimatable å®?ä¾????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27614,8 +27614,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·»åŠ  IAnimatable å®ä¾‹ã€‚
-         * @param value - IAnimatable å®ä¾‹ã€‚
+         * - æ·»å?? IAnimatable å®?ä¾????
+         * @param value - IAnimatable å®?ä¾????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27627,8 +27627,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç§»é™¤ç‰¹å®šçš„ IAnimatable å®ä¾‹ã€‚
-         * @param value - IAnimatable å®ä¾‹ã€‚
+         * - ç§»é?¤ç?¹å????? IAnimatable å®?ä¾????
+         * @param value - IAnimatable å®?ä¾????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27639,7 +27639,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ¸…é™¤æ‰€æœ‰çš„ IAnimatable å®ä¾‹ã€‚
+         * - æ¸???¤æ???????? IAnimatable å®?ä¾????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -27654,7 +27654,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.BaseFactory#clock}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.BaseFactory#clock}???
          * @deprecated
          * @language zh_CN
          */
@@ -27692,7 +27692,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŠ¨ç”»æ’­æ”¾å™¨ç”¨æ¥æ’­æ”¾åŠ¨ç”»æ•°æ®å’Œç®¡ç†åŠ¨ç”»çŠ¶æ€ã€‚
+     * - ??¨ç?»æ?­æ?¾å?¨ç?¨æ?¥æ?­æ?¾å?¨ç?»æ?°æ?®å??ç®¡ç????¨ç?»ç?¶æ?????
      * @see dragonBones.AnimationData
      * @see dragonBones.AnimationState
      * @version DragonBones 3.0
@@ -27707,7 +27707,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€æœ‰åŠ¨ç”»çš„æ’­æ”¾é€Ÿåº¦ã€‚ [0: åœæ­¢æ’­æ”¾, (0~1): æ…¢é€Ÿæ’­æ”¾, 1: æ­£å¸¸æ’­æ”¾, (1~N): å¿«é€Ÿæ’­æ”¾]
+         * - ????????¨ç?»ç????­æ?¾é??åº¦ã?? [0: ???æ­¢æ?­æ??, (0~1): ??¢é????­æ??, 1: æ­?å¸¸æ?­æ??, (1~N): å¿«é????­æ?¾]
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -27744,7 +27744,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ¸…é™¤æ‰€æœ‰çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ¸???¤æ??????????¨ç?»ç?¶æ?????
          * @see dragonBones.AnimationState
          * @version DragonBones 4.5
          * @language zh_CN
@@ -27758,8 +27758,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æš‚åœæŒ‡å®šåŠ¨ç”»çŠ¶æ€çš„æ’­æ”¾ã€‚
-         * @param animationName - åŠ¨ç”»çŠ¶æ€åç§°ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™æš‚åœæ‰€æœ‰åŠ¨ç”»ï¼‰
+         * - ?????????å®???¨ç?»ç?¶æ???????­æ?¾ã??
+         * @param animationName - ??¨ç?»ç?¶æ?????ç§°ã?? ï¼?å¦??????ªè®¾ç½®ï???????????????????¨ç?»ï??
          * @see dragonBones.AnimationState
          * @version DragonBones 3.0
          * @language zh_CN
@@ -27776,10 +27776,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é€šè¿‡æŒ‡å®šçš„åŠ¨ç”»é…ç½®æ¥æ’­æ”¾åŠ¨ç”»ã€‚
-         * è¯¥ API ä»åœ¨å®éªŒé˜¶æ®µï¼Œä½¿ç”¨æ—¶å¯èƒ½é­é‡ bug æˆ–ç¨³å®šæ€§æˆ–å…¼å®¹æ€§é—®é¢˜ã€‚
-         * @param animationConfig - åŠ¨ç”»é…ç½®ã€‚
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ???è¿????å®??????¨ç?»é??ç½®æ?¥æ?­æ?¾å?¨ç?»ã??
+         * è¯? API ä»???¨å??éª???¶æ®µï¼?ä½¿ç?¨æ?¶å?¯è?½é?­é?? bug ???ç¨³å????§æ????¼å®¹??§é?®é?????
+         * @param animationConfig - ??¨ç?»é??ç½®ã??
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @see dragonBones.AnimationConfig
          * @beta
          * @version DragonBones 5.0
@@ -27799,10 +27799,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾æŒ‡å®šåŠ¨ç”»ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™æ’­æ”¾é»˜è®¤åŠ¨ç”»ï¼Œæˆ–å°†æš‚åœçŠ¶æ€åˆ‡æ¢ä¸ºæ’­æ”¾çŠ¶æ€ï¼Œæˆ–é‡æ–°æ’­æ”¾ä¹‹å‰æ’­æ”¾çš„åŠ¨ç”»ï¼‰
-         * @param playTimes - å¾ªç¯æ’­æ”¾æ¬¡æ•°ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ??­æ?¾æ??å®???¨ç?»ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã?? ï¼?å¦??????ªè®¾ç½®ï???????­æ?¾é??è®¤å?¨ç?»ï?????å°?????????¶æ???????¢ä¸º??­æ?¾ç?¶æ??ï¼?????????°æ?­æ?¾ä???????­æ?¾ç????¨ç?»ï??
+         * @param playTimes - å¾ªç?¯æ?­æ?¾æ¬¡??°ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡] ï¼?é»?è®?: -1ï¼?
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @example
          * <pre>
          *     armature.animation.play("walk");
@@ -27829,14 +27829,14 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å…¥æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param fadeInTime - æ·¡å…¥æ—¶é—´ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, [0~N]: æ·¡å…¥æ—¶é—´ (ä»¥ç§’ä¸ºå•ä½)] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @param playTimes - æ’­æ”¾æ¬¡æ•°ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @param layer - æ··åˆå›¾å±‚ï¼Œå›¾å±‚é«˜çš„åŠ¨ç”»çŠ¶æ€ä¼šä¼˜å…ˆè·å–æ··åˆæƒé‡ï¼Œå½“æ··åˆæƒé‡åˆ†é…æ€»å’Œè¶…è¿‡ 1.0 æ—¶ï¼Œå‰©ä½™çš„åŠ¨ç”»çŠ¶æ€å°†ä¸èƒ½å†è·å¾—æƒé‡åˆ†é…ã€‚ ï¼ˆé»˜è®¤: 0ï¼‰
-         * @param group - æ··åˆç»„åç§°ï¼Œè¯¥å±æ€§é€šå¸¸ç”¨æ¥æŒ‡å®šå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ··åˆæ—¶çš„ç›¸äº’æ›¿æ¢å…³ç³»ã€‚ ï¼ˆé»˜è®¤: nullï¼‰
-         * @param fadeOutMode - æ·¡å‡ºæ¨¡å¼ï¼Œè¯¥å±æ€§é€šå¸¸ç”¨æ¥æŒ‡å®šå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ··åˆæ—¶çš„ç›¸äº’æ›¿æ¢æ¨¡å¼ã€‚ ï¼ˆé»˜è®¤: AnimationFadeOutMode.SameLayerAndGroupï¼‰
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - æ·¡å?¥æ?­æ?¾æ??å®??????¨ç?»ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param fadeInTime - æ·¡å?¥æ?¶é?´ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, [0~N]: æ·¡å?¥æ?¶é?? (ä»¥ç??ä¸ºå??ä½?)] ï¼?é»?è®?: -1ï¼?
+         * @param playTimes - ??­æ?¾æ¬¡??°ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡] ï¼?é»?è®?: -1ï¼?
+         * @param layer - æ··å????¾å??ï¼???¾å??é«??????¨ç?»ç?¶æ??ä¼?ä¼??????·å??æ··å????????ï¼?å½?æ··å????????????????»å??è¶?è¿? 1.0 ??¶ï????©ä???????¨ç?»ç?¶æ??å°?ä¸???½å????·å????????????????? ï¼?é»?è®?: 0ï¼?
+         * @param group - æ··å??ç»????ç§°ï??è¯¥å????§é??å¸¸ç?¨æ?¥æ??å®?å¤?ä¸ªå?¨ç?»ç?¶æ??æ··å????¶ç????¸ä????¿æ?¢å?³ç³»??? ï¼?é»?è®?: nullï¼?
+         * @param fadeOutMode - æ·¡å?ºæ¨¡å¼?ï¼?è¯¥å????§é??å¸¸ç?¨æ?¥æ??å®?å¤?ä¸ªå?¨ç?»ç?¶æ??æ··å????¶ç????¸ä????¿æ?¢æ¨¡å¼???? ï¼?é»?è®?: AnimationFadeOutMode.SameLayerAndGroupï¼?
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @example
          * <pre>
          *     armature.animation.fadeIn("walk", 0.3, 0, 0, "normalGroup").resetToPose = false;
@@ -27856,11 +27856,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä»æŒ‡å®šæ—¶é—´å¼€å§‹æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param time - æ’­æ”¾å¼€å§‹çš„æ—¶é—´ã€‚ (ä»¥ç§’ä¸ºå•ä½)
-         * @param playTimes - å¾ªç¯æ’­æ”¾æ¬¡æ•°ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ä»????å®???¶é?´å??å§???­æ?¾æ??å®??????¨ç?»ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param time - ??­æ?¾å??å§??????¶é?´ã?? (ä»¥ç??ä¸ºå??ä½?)
+         * @param playTimes - å¾ªç?¯æ?­æ?¾æ¬¡??°ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡] ï¼?é»?è®?: -1ï¼?
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27875,11 +27875,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä»æŒ‡å®šå¸§å¼€å§‹æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param frame - æ’­æ”¾å¼€å§‹çš„å¸§æ•°ã€‚
-         * @param playTimes - æ’­æ”¾æ¬¡æ•°ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ä»????å®?å¸§å??å§???­æ?¾æ??å®??????¨ç?»ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param frame - ??­æ?¾å??å§????å¸§æ?°ã??
+         * @param playTimes - ??­æ?¾æ¬¡??°ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡] ï¼?é»?è®?: -1ï¼?
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27894,11 +27894,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä»æŒ‡å®šè¿›åº¦å¼€å§‹æ’­æ”¾æŒ‡å®šçš„åŠ¨ç”»ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param progress - å¼€å§‹æ’­æ”¾çš„è¿›åº¦ã€‚
-         * @param playTimes - æ’­æ”¾æ¬¡æ•°ã€‚ [-1: ä½¿ç”¨åŠ¨ç”»æ•°æ®é»˜è®¤å€¼, 0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡] ï¼ˆé»˜è®¤: -1ï¼‰
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ä»????å®?è¿?åº¦å??å§???­æ?¾æ??å®??????¨ç?»ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param progress - å¼?å§???­æ?¾ç??è¿?åº¦ã??
+         * @param playTimes - ??­æ?¾æ¬¡??°ã?? [-1: ä½¿ç?¨å?¨ç?»æ?°æ?®é??è®¤å??, 0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡] ï¼?é»?è®?: -1ï¼?
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27912,10 +27912,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åœ¨æŒ‡å®šæ—¶é—´åœæ­¢æŒ‡å®šåŠ¨ç”»æ’­æ”¾
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param time - åœæ­¢çš„æ—¶é—´ã€‚ (ä»¥ç§’ä¸ºå•ä½)
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ??¨æ??å®???¶é?´å??æ­¢æ??å®???¨ç?»æ?­æ??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param time - ???æ­¢ç????¶é?´ã?? (ä»¥ç??ä¸ºå??ä½?)
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27929,10 +27929,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åœ¨æŒ‡å®šå¸§åœæ­¢æŒ‡å®šåŠ¨ç”»çš„æ’­æ”¾
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param frame - åœæ­¢çš„å¸§æ•°ã€‚
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ??¨æ??å®?å¸§å??æ­¢æ??å®???¨ç?»ç????­æ??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param frame - ???æ­¢ç??å¸§æ?°ã??
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27946,10 +27946,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åœ¨æŒ‡å®šçš„è¿›åº¦åœæ­¢æŒ‡å®šçš„åŠ¨ç”»æ’­æ”¾ã€‚
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
-         * @param progress - åœæ­¢è¿›åº¦ã€‚
-         * @returns æ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ??¨æ??å®????è¿?åº¦å??æ­¢æ??å®??????¨ç?»æ?­æ?¾ã??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
+         * @param progress - ???æ­¢è??åº¦ã??
+         * @returns ??­æ?¾ç????¨ç?»ç?¶æ?????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -27967,8 +27967,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–æŒ‡å®šçš„åŠ¨ç”»çŠ¶æ€
-         * @param animationName - åŠ¨ç”»çŠ¶æ€åç§°ã€‚
+         * - ??·å?????å®??????¨ç?»ç?¶æ??
+         * @param animationName - ??¨ç?»ç?¶æ?????ç§°ã??
          * @example
          * <pre>
          *     armature.animation.play("walk");
@@ -27987,8 +27987,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦åŒ…å«æŒ‡å®šçš„åŠ¨ç”»æ•°æ®
-         * @param animationName - åŠ¨ç”»æ•°æ®åç§°ã€‚
+         * - æ£???¥æ?¯å?¦å????«æ??å®??????¨ç?»æ?°æ??
+         * @param animationName - ??¨ç?»æ?°æ?®å??ç§°ã??
          * @see dragonBones.AnimationData
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28000,7 +28000,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–æ‰€æœ‰çš„åŠ¨ç”»çŠ¶æ€
+         * - ??·å?????????????¨ç?»ç?¶æ??
          * @version DragonBones 5.1
          * @language zh_CN
          */
@@ -28012,7 +28012,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦æœ‰åŠ¨ç”»çŠ¶æ€æ­£åœ¨æ’­æ”¾
+         * - æ£???¥æ?¯å?¦æ????¨ç?»ç?¶æ??æ­???¨æ?­æ??
          * @see dragonBones.AnimationState
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28025,7 +28025,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦æ‰€æœ‰çš„åŠ¨ç”»çŠ¶æ€å‡å·²æ’­æ”¾å®Œæ¯•ã€‚
+         * - æ£???¥æ?¯å?¦æ??????????¨ç?»ç?¶æ?????å·²æ?­æ?¾å??æ¯????
          * @see dragonBones.AnimationState
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28038,7 +28038,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸Šä¸€ä¸ªæ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€åç§°
+         * - ä¸?ä¸?ä¸ªæ?­æ?¾ç????¨ç?»ç?¶æ?????ç§?
          * @see #lastAnimationState
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28050,7 +28050,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€æœ‰åŠ¨ç”»æ•°æ®çš„åç§°
+         * - ????????¨ç?»æ?°æ?®ç?????ç§?
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -28061,7 +28061,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ‰€æœ‰çš„åŠ¨ç”»æ•°æ®ã€‚
+         * - ???????????¨ç?»æ?°æ?®ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -28073,7 +28073,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸€ä¸ªå¯ä»¥å¿«é€Ÿä½¿ç”¨çš„åŠ¨ç”»é…ç½®å®ä¾‹ã€‚
+         * - ä¸?ä¸ªå?¯ä»¥å¿«é??ä½¿ç?¨ç????¨ç?»é??ç½®å??ä¾????
          * @see dragonBones.AnimationConfig
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28086,7 +28086,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ä¸Šä¸€ä¸ªæ’­æ”¾çš„åŠ¨ç”»çŠ¶æ€
+         * - ä¸?ä¸?ä¸ªæ?­æ?¾ç????¨ç?»ç?¶æ??
          * @see dragonBones.AnimationState
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28098,7 +28098,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #play()} {@link #fadeIn()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #play()} {@link #fadeIn()}???
          * @deprecated
          * @language zh_CN
          */
@@ -28109,7 +28109,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #gotoAndStopByTime()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #gotoAndStopByTime()}???
          * @deprecated
          * @language zh_CN
          */
@@ -28120,7 +28120,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #animationNames}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #animationNames}???
          * @deprecated
          * @language zh_CN
          */
@@ -28131,7 +28131,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #animationNames}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #animationNames}???
          * @deprecated
          * @language zh_CN
          */
@@ -28169,7 +28169,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åŠ¨ç”»çŠ¶æ€ç”±æ’­æ”¾åŠ¨ç”»æ•°æ®æ—¶äº§ç”Ÿã€‚
+     * - ??¨ç?»ç?¶æ????±æ?­æ?¾å?¨ç?»æ?°æ?®æ?¶äº§??????
      * @see dragonBones.Animation
      * @see dragonBones.AnimationData
      * @version DragonBones 3.0
@@ -28194,9 +28194,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€æ˜¯å¦å¯¹æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§æœ‰æ§åˆ¶æƒã€‚
-         * æœ‰æ—¶æ··åˆä¸€ä¸ªåŠ¨ç”»çŠ¶æ€å¹¶ä¸å¸Œæœ›å…¶æ§åˆ¶æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§ï¼Œ
-         * å°¤å…¶æ˜¯å…¶ä»–åŠ¨ç”»çŠ¶æ€æ­£åœ¨æ§åˆ¶è¿™äº›æ’æ§½çš„æ˜¾ç¤ºå¯¹è±¡å±æ€§æ—¶ã€‚
+         * - ??¨ç?»ç?¶æ????¯å?¦å¯¹???æ§½ç????¾ç¤ºå¯¹è±¡å±???§æ????§å?¶æ?????
+         * ?????¶æ··???ä¸?ä¸ªå?¨ç?»ç?¶æ??å¹¶ä??å¸??????¶æ?§å?¶æ??æ§½ç????¾ç¤ºå¯¹è±¡å±???§ï??
+         * å°¤å?¶æ?¯å?¶ä????¨ç?»ç?¶æ??æ­???¨æ?§å?¶è??äº????æ§½ç????¾ç¤ºå¯¹è±¡å±???§æ?¶ã??
          * @default true
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28210,8 +28210,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¼€å§‹æ’­æ”¾åŠ¨ç”»çŠ¶æ€æ—¶æ˜¯å¦å°†æ²¡æœ‰åŠ¨ç”»çš„å¯¹è±¡é‡ç½®ä¸ºéª¨æ¶åˆå§‹å€¼ã€‚
-         * é€šå¸¸åœ¨æ··åˆå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ—¶åº”è¯¥å°†è¯¥å±æ€§è®¾ç½®ä¸º falseã€‚
+         * - å¼?å§???­æ?¾å?¨ç?»ç?¶æ????¶æ?¯å?¦å??æ²¡æ????¨ç?»ç??å¯¹è±¡???ç½®ä¸ºéª¨æ?¶å??å§???¼ã??
+         * ???å¸¸å?¨æ··???å¤?ä¸ªå?¨ç?»ç?¶æ????¶å??è¯¥å??è¯¥å????§è®¾ç½®ä¸º false???
          * @default true
          * @version DragonBones 5.1
          * @language zh_CN
@@ -28223,7 +28223,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾æ¬¡æ•°ã€‚ [0: æ— é™å¾ªç¯æ’­æ”¾, [1~N]: å¾ªç¯æ’­æ”¾ N æ¬¡]
+         * - ??­æ?¾æ¬¡??°ã?? [0: ??????å¾ªç?¯æ?­æ??, [1~N]: å¾ªç?¯æ?­æ?? N æ¬¡]
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28237,9 +28237,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆå›¾å±‚ã€‚
-         * å›¾å±‚é«˜çš„åŠ¨ç”»çŠ¶æ€ä¼šä¼˜å…ˆè·å–æ··åˆæƒé‡ã€‚
-         * å½“æ··åˆæƒé‡åˆ†é…è¶…è¿‡ 1 æ—¶ï¼Œå‰©ä½™çš„åŠ¨ç”»çŠ¶æ€å°†ä¸å†è·å¾—æƒé‡åˆ†é…ã€‚
+         * - æ··å????¾å?????
+         * ??¾å??é«??????¨ç?»ç?¶æ??ä¼?ä¼??????·å??æ··å???????????
+         * å½?æ··å??????????????è¶?è¿? 1 ??¶ï????©ä???????¨ç?»ç?¶æ??å°?ä¸??????·å?????????????????
          * @readonly
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28254,9 +28254,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ’­æ”¾é€Ÿåº¦ã€‚
-         * è¯¥å€¼ä¸ {@link dragonBones.Animation#timeScale} æ˜¯å åŠ å…³ç³»ã€‚
-         * [(-N~0): å€’è½¬æ’­æ”¾, 0: åœæ­¢æ’­æ”¾, (0~1): æ…¢é€Ÿæ’­æ”¾, 1: æ­£å¸¸æ’­æ”¾, (1~N): å¿«é€Ÿæ’­æ”¾]
+         * - ??­æ?¾é??åº¦ã??
+         * è¯¥å?¼ä?? {@link dragonBones.Animation#timeScale} ??¯å???????³ç³»???
+         * [(-N~0): ???è½¬æ?­æ??, 0: ???æ­¢æ?­æ??, (0~1): ??¢é????­æ??, 1: æ­?å¸¸æ?­æ??, (1~N): å¿«é????­æ?¾]
          * @default 1.0
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28269,7 +28269,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆæƒé‡ã€‚
+         * - æ··å???????????
          * @default 1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28283,8 +28283,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€æ’­æ”¾å®Œæˆåçš„è‡ªåŠ¨æ·¡å‡ºæ—¶é—´ã€‚
-         * [-1: ä¸è‡ªåŠ¨æ·¡å‡º, [0~N]: æ·¡å‡ºæ—¶é—´] ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??¨ç?»ç?¶æ????­æ?¾å?????????????ªå?¨æ·¡??ºæ?¶é?´ã??
+         * [-1: ä¸???ªå?¨æ·¡???, [0~N]: æ·¡å?ºæ?¶é?´] ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @default -1.0
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28301,7 +28301,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»çŠ¶æ€åç§°ã€‚ ï¼ˆå¯ä»¥ä¸åŒäºåŠ¨ç”»æ•°æ®ï¼‰
+         * - ??¨ç?»ç?¶æ?????ç§°ã?? ï¼???¯ä»¥ä¸????äº???¨ç?»æ?°æ?®ï??
          * @readonly
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28315,8 +28315,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ··åˆç»„åç§°ã€‚
-         * è¯¥å±æ€§é€šå¸¸ç”¨æ¥æŒ‡å®šå¤šä¸ªåŠ¨ç”»çŠ¶æ€æ··åˆæ—¶çš„ç›¸äº’æ›¿æ¢å…³ç³»ã€‚
+         * - æ··å??ç»????ç§°ã??
+         * è¯¥å????§é??å¸¸ç?¨æ?¥æ??å®?å¤?ä¸ªå?¨ç?»ç?¶æ??æ··å????¶ç????¸ä????¿æ?¢å?³ç³»???
          * @readonly
          * @version DragonBones 5.0
          * @language zh_CN
@@ -28416,7 +28416,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç»§ç»­æ’­æ”¾ã€‚
+         * - ç»§ç»­??­æ?¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28427,7 +28427,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æš‚åœæ’­æ”¾ã€‚
+         * - ????????­æ?¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28440,9 +28440,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·¡å‡ºåŠ¨ç”»çŠ¶æ€ã€‚
-         * @param fadeOutTime - æ·¡å‡ºæ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
-         * @param pausePlayhead - æ·¡å‡ºæ—¶æ˜¯å¦æš‚åœæ’­æ”¾ã€‚
+         * - æ·¡å?ºå?¨ç?»ç?¶æ?????
+         * @param fadeOutTime - æ·¡å?ºæ?¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
+         * @param pausePlayhead - æ·¡å?ºæ?¶æ?¯å?¦æ???????­æ?¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28454,8 +28454,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦åŒ…å«ç‰¹å®šéª¨éª¼é®ç½©ã€‚
-         * @param name - éª¨éª¼åç§°ã€‚
+         * - æ£???¥æ?¯å?¦å????«ç?¹å??éª¨éª¼??®ç½©???
+         * @param name - éª¨éª¼???ç§°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28468,9 +28468,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·»åŠ ç‰¹å®šçš„éª¨éª¼é®ç½©ã€‚
-         * @param name - éª¨éª¼åç§°ã€‚
-         * @param recursive - æ˜¯å¦ä¸ºè¯¥éª¨éª¼çš„å­éª¨éª¼æ·»åŠ é®ç½©ã€‚
+         * - æ·»å????¹å?????éª¨éª¼??®ç½©???
+         * @param name - éª¨éª¼???ç§°ã??
+         * @param recursive - ??¯å?¦ä¸ºè¯¥éª¨éª¼ç??å­?éª¨éª¼æ·»å????®ç½©???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28483,9 +28483,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ é™¤ç‰¹å®šéª¨éª¼çš„é®ç½©ã€‚
-         * @param name - éª¨éª¼åç§°ã€‚
-         * @param recursive - æ˜¯å¦åˆ é™¤è¯¥éª¨éª¼çš„å­éª¨éª¼é®ç½©ã€‚
+         * - ?????¤ç?¹å??éª¨éª¼?????®ç½©???
+         * @param name - éª¨éª¼???ç§°ã??
+         * @param recursive - ??¯å?¦å????¤è¯¥éª¨éª¼???å­?éª¨éª¼??®ç½©???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28496,7 +28496,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ é™¤æ‰€æœ‰éª¨éª¼é®ç½©ã€‚
+         * - ?????¤æ?????éª¨éª¼??®ç½©???
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28507,7 +28507,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦æ­£åœ¨æ·¡å…¥ã€‚
+         * - ??¯å?¦æ­£??¨æ·¡??¥ã??
          * @version DragonBones 5.1
          * @language zh_CN
          */
@@ -28518,7 +28518,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦æ­£åœ¨æ·¡å‡ºã€‚
+         * - ??¯å?¦æ­£??¨æ·¡??ºã??
          * @version DragonBones 5.1
          * @language zh_CN
          */
@@ -28529,7 +28529,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦æ·¡å…¥æˆ–æ·¡å‡ºå®Œæ¯•ã€‚
+         * - ??¯å?¦æ·¡??¥æ??æ·¡å?ºå??æ¯????
          * @version DragonBones 5.1
          * @language zh_CN
          */
@@ -28540,7 +28540,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦æ­£åœ¨æ’­æ”¾ã€‚
+         * - ??¯å?¦æ­£??¨æ?­æ?¾ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28551,7 +28551,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ˜¯å¦æ’­æ”¾å®Œæ¯•ã€‚
+         * - ??¯å?¦æ?­æ?¾å??æ¯????
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28562,7 +28562,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²ç»å¾ªç¯æ’­æ”¾çš„æ¬¡æ•°ã€‚
+         * - å·²ç??å¾ªç?¯æ?­æ?¾ç??æ¬¡æ?°ã??
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28573,7 +28573,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ€»æ’­æ”¾æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - ??»æ?­æ?¾æ?¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28584,7 +28584,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å½“å‰æ’­æ”¾çš„æ—¶é—´ã€‚ ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - å½??????­æ?¾ç????¶é?´ã?? ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -28596,7 +28596,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ•°æ®ã€‚
+         * - ??¨ç?»æ?°æ?®ã??
          * @see dragonBones.AnimationData
          * @version DragonBones 3.0
          * @language zh_CN
@@ -28946,7 +28946,7 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - äº‹ä»¶å¯¹è±¡ï¼ŒåŒ…å«æœ‰å…³äº‹ä»¶çš„åŸºæœ¬ä¿¡æ¯ï¼Œå½“å‘ç”Ÿäº‹ä»¶æ—¶ï¼Œè¯¥å®ä¾‹å°†ä½œä¸ºå‚æ•°æˆ–å‚æ•°çš„å‚æ•°ä¼ é€’ç»™äº‹ä»¶ä¾¦å¬å™¨ã€‚
+     * - äº?ä»¶å¯¹è±¡ï???????«æ????³ä??ä»¶ç????ºæ?¬ä¿¡??¯ï??å½???????äº?ä»¶æ?¶ï??è¯¥å??ä¾?å°?ä½?ä¸ºå????°æ???????°ç???????°ä?????ç»?äº?ä»¶ä¾¦??¬å?¨ã??
      * @version DragonBones 4.5
      * @language zh_CN
      */
@@ -28957,7 +28957,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¼€å§‹æ’­æ”¾ã€‚
+         * - ??¨ç?»å??å§???­æ?¾ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -28968,7 +28968,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¾ªç¯æ’­æ”¾å®Œæˆä¸€æ¬¡ã€‚
+         * - ??¨ç?»å¾ª??¯æ?­æ?¾å?????ä¸?æ¬¡ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -28979,7 +28979,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ’­æ”¾å®Œæˆã€‚
+         * - ??¨ç?»æ?­æ?¾å????????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -28990,7 +28990,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ·¡å…¥å¼€å§‹ã€‚
+         * - ??¨ç?»æ·¡??¥å??å§????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29001,7 +29001,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ·¡å…¥å®Œæˆã€‚
+         * - ??¨ç?»æ·¡??¥å????????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29012,7 +29012,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ·¡å‡ºå¼€å§‹ã€‚
+         * - ??¨ç?»æ·¡??ºå??å§????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29023,7 +29023,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»æ·¡å‡ºå®Œæˆã€‚
+         * - ??¨ç?»æ·¡??ºå????????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29034,7 +29034,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¸§äº‹ä»¶ã€‚
+         * - ??¨ç?»å¸§äº?ä»¶ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29045,7 +29045,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åŠ¨ç”»å¸§å£°éŸ³äº‹ä»¶ã€‚
+         * - ??¨ç?»å¸§å£°é?³ä??ä»¶ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29057,18 +29057,18 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å¦‚æœæ˜¯å¸§äº‹ä»¶ï¼Œæ­¤å€¼ç”¨æ¥æè¿°è¯¥äº‹ä»¶åœ¨åŠ¨ç”»æ—¶é—´è½´ä¸­æ‰€å¤„çš„æ—¶é—´ã€‚ï¼ˆä»¥ç§’ä¸ºå•ä½ï¼‰
+         * - å¦??????¯å¸§äº?ä»¶ï??æ­¤å?¼ç?¨æ?¥æ??è¿°è¯¥äº?ä»¶å?¨å?¨ç?»æ?¶é?´è½´ä¸­æ??å¤??????¶é?´ã??ï¼?ä»¥ç??ä¸ºå??ä½?ï¼?
          * @version DragonBones 4.5
          * @language zh_CN
          */
         time: number;
         /**
-         * - The event typeã€‚
+         * - The event type???
          * @version DragonBones 4.5
          * @language en_US
          */
         /**
-         * - äº‹ä»¶ç±»å‹ã€‚
+         * - äº?ä»¶ç±»??????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29079,7 +29079,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - äº‹ä»¶åç§°ã€‚ (å¸§äº‹ä»¶çš„åç§°æˆ–å¸§å£°éŸ³çš„åç§°)
+         * - äº?ä»¶å??ç§°ã?? (å¸§ä??ä»¶ç?????ç§°æ??å¸§å£°??³ç?????ç§?)
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29091,7 +29091,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‘å‡ºè¯¥äº‹ä»¶çš„éª¨æ¶ã€‚
+         * - ?????ºè¯¥äº?ä»¶ç??éª¨æ?¶ã??
          * @see dragonBones.Armature
          * @version DragonBones 4.5
          * @language zh_CN
@@ -29104,7 +29104,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‘å‡ºè¯¥äº‹ä»¶çš„éª¨éª¼ã€‚
+         * - ?????ºè¯¥äº?ä»¶ç??éª¨éª¼???
          * @see dragonBones.Bone
          * @version DragonBones 4.5
          * @language zh_CN
@@ -29117,7 +29117,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‘å‡ºè¯¥äº‹ä»¶çš„æ’æ§½ã€‚
+         * - ?????ºè¯¥äº?ä»¶ç?????æ§½ã??
          * @see dragonBones.Slot
          * @version DragonBones 4.5
          * @language zh_CN
@@ -29130,7 +29130,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å‘å‡ºè¯¥äº‹ä»¶çš„åŠ¨ç”»çŠ¶æ€ã€‚
+         * - ?????ºè¯¥äº?ä»¶ç????¨ç?»ç?¶æ?????
          * @see dragonBones.AnimationState
          * @version DragonBones 4.5
          * @language zh_CN
@@ -29143,7 +29143,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è‡ªå®šä¹‰æ•°æ®ã€‚
+         * - ??ªå??ä¹???°æ?®ã??
          * @see dragonBones.CustomData
          * @version DragonBones 5.0
          * @language zh_CN
@@ -29189,21 +29189,21 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - äº‹ä»¶æ´¾å‘æ¥å£ã€‚
-     * DragonBones çš„äº‹ä»¶æ´¾å‘é€šå¸¸ä¾èµ–äºå¯¹æ¥çš„å¼•æ“æ¥å®ç°ï¼Œè¯¥æ¥å£å®šä¹‰äº†å¯¹æ¥å¼•æ“æ—¶éœ€è¦å®ç°çš„äº‹ä»¶æ–¹æ³•ã€‚
+     * - äº?ä»¶æ´¾?????¥å?????
+     * DragonBones ???äº?ä»¶æ´¾??????å¸¸ä??èµ?äº?å¯¹æ?¥ç??å¼??????¥å????°ï??è¯¥æ?¥å??å®?ä¹?äº?å¯¹æ?¥å???????¶é??è¦?å®???°ç??äº?ä»¶æ?¹æ?????
      * @version DragonBones 4.5
      * @language zh_CN
      */
     interface IEventDispatcher {
         /**
-         * - Checks whether the object has any listeners registered for a specific type of eventã€‚
+         * - Checks whether the object has any listeners registered for a specific type of event???
          * @param type - Event type.
          * @version DragonBones 4.5
          * @language en_US
          */
         /**
-         * - æ£€æŸ¥æ˜¯å¦ä¸ºç‰¹å®šçš„äº‹ä»¶ç±»å‹æ³¨å†Œäº†ä»»ä½•ä¾¦å¬å™¨ã€‚
-         * @param type - äº‹ä»¶ç±»å‹ã€‚
+         * - æ£???¥æ?¯å?¦ä¸º??¹å?????äº?ä»¶ç±»???æ³¨å??äº?ä»»ä??ä¾¦å?¬å?¨ã??
+         * @param type - äº?ä»¶ç±»??????
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29217,9 +29217,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ†æ´¾ç‰¹å®šçš„äº‹ä»¶åˆ°äº‹ä»¶æµä¸­ã€‚
-         * @param type - äº‹ä»¶ç±»å‹ã€‚
-         * @param eventObject - äº‹ä»¶æ•°æ®ã€‚
+         * - ???æ´¾ç?¹å?????äº?ä»¶å?°ä??ä»¶æ??ä¸­ã??
+         * @param type - äº?ä»¶ç±»??????
+         * @param eventObject - äº?ä»¶æ?°æ?®ã??
          * @see dragonBones.EventObject
          * @version DragonBones 4.5
          * @language zh_CN
@@ -29234,10 +29234,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ·»åŠ ç‰¹å®šäº‹ä»¶ç±»å‹çš„äº‹ä»¶ä¾¦å¬å™¨ï¼Œä»¥ä½¿ä¾¦å¬å™¨èƒ½å¤Ÿæ¥æ”¶äº‹ä»¶é€šçŸ¥ã€‚
-         * @param type - äº‹ä»¶ç±»å‹ã€‚
-         * @param listener - äº‹ä»¶ä¾¦å¬å™¨ã€‚
-         * @param thisObject - ä¾¦å¬å‡½æ•°ç»‘å®šçš„ this å¯¹è±¡ã€‚
+         * - æ·»å????¹å??äº?ä»¶ç±»??????äº?ä»¶ä¾¦??¬å?¨ï??ä»¥ä½¿ä¾¦å?¬å?¨è?½å????¥æ?¶ä??ä»¶é????¥ã??
+         * @param type - äº?ä»¶ç±»??????
+         * @param listener - äº?ä»¶ä¾¦??¬å?¨ã??
+         * @param thisObject - ä¾¦å?¬å?½æ?°ç??å®???? this å¯¹è±¡???
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29251,10 +29251,10 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ é™¤ç‰¹å®šäº‹ä»¶ç±»å‹çš„ä¾¦å¬å™¨ã€‚
-         * @param type - äº‹ä»¶ç±»å‹ã€‚
-         * @param listener - äº‹ä»¶ä¾¦å¬å™¨ã€‚
-         * @param thisObject - ä¾¦å¬å‡½æ•°ç»‘å®šçš„ this å¯¹è±¡ã€‚
+         * - ?????¤ç?¹å??äº?ä»¶ç±»??????ä¾¦å?¬å?¨ã??
+         * @param type - äº?ä»¶ç±»??????
+         * @param listener - äº?ä»¶ä¾¦??¬å?¨ã??
+         * @param thisObject - ä¾¦å?¬å?½æ?°ç??å®???? this å¯¹è±¡???
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -29265,7 +29265,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #hasDBEventListener()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #hasDBEventListener()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29276,7 +29276,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #addDBEventListener()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #addDBEventListener()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29287,7 +29287,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #removeDBEventListener()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #removeDBEventListener()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29451,7 +29451,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.BaseFactory#parsetTextureAtlasData()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.BaseFactory#parsetTextureAtlasData()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29462,7 +29462,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.BaseFactory#parsetTextureAtlasData()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.BaseFactory#parsetTextureAtlasData()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29581,7 +29581,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.BaseFactory#parseDragonBonesData()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.BaseFactory#parseDragonBonesData()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29647,7 +29647,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link dragonBones.BaseFactory#parseDragonBonesData()}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link dragonBones.BaseFactory#parseDragonBonesData()}???
          * @deprecated
          * @language zh_CN
          */
@@ -29689,9 +29689,9 @@ declare namespace dragonBones {
      * @language en_US
      */
     /**
-     * - åˆ›å»ºéª¨æ¶çš„å·¥å‚åŸºç±»ã€‚ ï¼ˆé€šå¸¸åªéœ€è¦ä¸€ä¸ªå…¨å±€å·¥å‚å®ä¾‹ï¼‰
-     * å·¥å‚é€šè¿‡è§£æå¹¶æ·»åŠ çš„ DragonBonesData å®ä¾‹å’Œ TextureAtlasData å®ä¾‹æ¥åˆ›å»ºéª¨æ¶ã€‚
-     * å½“æ•°æ®è¢«è§£æè¿‡ä¹‹åï¼Œå·²ç»æ·»åŠ åˆ°å·¥å‚ä¸­ï¼Œåœ¨æ²¡æœ‰è¢«å·¥å‚æ¸…ç†ä¹‹å‰ï¼Œä¸éœ€è¦å†æ¬¡è§£æã€‚
+     * - ???å»ºéª¨??¶ç??å·¥å????ºç±»??? ï¼????å¸¸å?ªé??è¦?ä¸?ä¸ªå?¨å??å·¥å??å®?ä¾?ï¼?
+     * å·¥å?????è¿?è§????å¹¶æ·»?????? DragonBonesData å®?ä¾???? TextureAtlasData å®?ä¾???¥å??å»ºéª¨??¶ã??
+     * å½???°æ?®è¢«è§????è¿?ä¹????ï¼?å·²ç??æ·»å????°å·¥???ä¸­ï????¨æ²¡???è¢«å·¥???æ¸????ä¹????ï¼?ä¸????è¦????æ¬¡è§£??????
      * @see dragonBones.DragonBonesData
      * @see dragonBones.TextureAtlasData
      * @see dragonBones.ArmatureData
@@ -29734,7 +29734,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - åˆ›å»ºä¸€ä¸ªå·¥å‚å®ä¾‹ã€‚ ï¼ˆé€šå¸¸åªéœ€è¦ä¸€ä¸ªå…¨å±€å·¥å‚å®ä¾‹ï¼‰
+         * - ???å»ºä??ä¸ªå·¥???å®?ä¾???? ï¼????å¸¸å?ªé??è¦?ä¸?ä¸ªå?¨å??å·¥å??å®?ä¾?ï¼?
          * @version DragonBones 3.0
          * @language zh_CN
          */
@@ -29793,11 +29793,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°†åŸå§‹æ•°æ®è§£æä¸º DragonBonesData å®ä¾‹ï¼Œå¹¶ç¼“å­˜åˆ°å·¥å‚ä¸­ã€‚
-         * @param rawData - åŸå§‹æ•°æ®ã€‚
-         * @param name - ä¸ºè¯¥å®ä¾‹æŒ‡å®šä¸€ä¸ªç¼“å­˜åç§°ï¼Œä»¥ä¾¿å¯ä»¥é€šè¿‡æ­¤åç§°è·å–è¯¥å®ä¾‹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä½¿ç”¨è¯¥å®ä¾‹ä¸­çš„åç§°ï¼‰
-         * @param scale - ä¸ºæ‰€æœ‰çš„éª¨æ¶æŒ‡å®šä¸€ä¸ªç¼©æ”¾å€¼ã€‚ ï¼ˆé»˜è®¤: 1.0ï¼‰
-         * @returns DragonBonesData å®ä¾‹
+         * - å°????å§???°æ?®è§£???ä¸? DragonBonesData å®?ä¾?ï¼?å¹¶ç??å­???°å·¥???ä¸­ã??
+         * @param rawData - ???å§???°æ?®ã??
+         * @param name - ä¸ºè¯¥å®?ä¾????å®?ä¸?ä¸ªç??å­????ç§°ï??ä»¥ä¾¿??¯ä»¥???è¿?æ­¤å??ç§°è?·å??è¯¥å??ä¾???? ï¼?å¦??????ªè®¾ç½®ï?????ä½¿ç?¨è¯¥å®?ä¾?ä¸­ç?????ç§°ï??
+         * @param scale - ä¸ºæ????????éª¨æ?¶æ??å®?ä¸?ä¸ªç¼©??¾å?¼ã?? ï¼?é»?è®?: 1.0ï¼?
+         * @returns DragonBonesData å®?ä¾?
          * @see #getDragonBonesData()
          * @see #addDragonBonesData()
          * @see #removeDragonBonesData()
@@ -29821,12 +29821,12 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°†åŸå§‹è´´å›¾é›†æ•°æ®å’Œè´´å›¾é›†å¯¹è±¡è§£æä¸º TextureAtlasData å®ä¾‹ï¼Œå¹¶ç¼“å­˜åˆ°å·¥å‚ä¸­ã€‚
-         * @param rawData - åŸå§‹è´´å›¾é›†æ•°æ®ã€‚
-         * @param textureAtlas - è´´å›¾é›†å¯¹è±¡ã€‚
-         * @param name - ä¸ºè¯¥å®ä¾‹æŒ‡å®šä¸€ä¸ªç¼“å­˜åç§°ï¼Œä»¥ä¾¿å¯ä»¥é€šè¿‡æ­¤åç§°è·å–è¯¥å®ä¾‹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä½¿ç”¨è¯¥å®ä¾‹ä¸­çš„åç§°ï¼‰
-         * @param scale - ä¸ºè´´å›¾é›†æŒ‡å®šä¸€ä¸ªç¼©æ”¾å€¼ã€‚ ï¼ˆé»˜è®¤: 1.0ï¼‰
-         * @returns TextureAtlasData å®ä¾‹
+         * - å°????å§?è´´å?¾é????°æ?®å??è´´å?¾é??å¯¹è±¡è§????ä¸? TextureAtlasData å®?ä¾?ï¼?å¹¶ç??å­???°å·¥???ä¸­ã??
+         * @param rawData - ???å§?è´´å?¾é????°æ?®ã??
+         * @param textureAtlas - è´´å?¾é??å¯¹è±¡???
+         * @param name - ä¸ºè¯¥å®?ä¾????å®?ä¸?ä¸ªç??å­????ç§°ï??ä»¥ä¾¿??¯ä»¥???è¿?æ­¤å??ç§°è?·å??è¯¥å??ä¾???? ï¼?å¦??????ªè®¾ç½®ï?????ä½¿ç?¨è¯¥å®?ä¾?ä¸­ç?????ç§°ï??
+         * @param scale - ä¸ºè´´??¾é?????å®?ä¸?ä¸ªç¼©??¾å?¼ã?? ï¼?é»?è®?: 1.0ï¼?
+         * @returns TextureAtlasData å®?ä¾?
          * @see #getTextureAtlasData()
          * @see #addTextureAtlasData()
          * @see #removeTextureAtlasData()
@@ -29851,9 +29851,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„ DragonBonesData å®ä¾‹ã€‚
-         * @param name - DragonBonesData å®ä¾‹çš„ç¼“å­˜åç§°ã€‚
-         * @returns DragonBonesData å®ä¾‹
+         * - ??·å????¹å????? DragonBonesData å®?ä¾????
+         * @param name - DragonBonesData å®?ä¾????ç¼?å­????ç§°ã??
+         * @returns DragonBonesData å®?ä¾?
          * @see #parseDragonBonesData()
          * @see #addDragonBonesData()
          * @see #removeDragonBonesData()
@@ -29874,9 +29874,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°† DragonBonesData å®ä¾‹ç¼“å­˜åˆ°å·¥å‚ä¸­ã€‚
-         * @param data - DragonBonesData å®ä¾‹ã€‚
-         * @param name - ä¸ºè¯¥å®ä¾‹æŒ‡å®šä¸€ä¸ªç¼“å­˜åç§°ï¼Œä»¥ä¾¿å¯ä»¥é€šè¿‡æ­¤åç§°è·å–è¯¥å®ä¾‹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä½¿ç”¨è¯¥å®ä¾‹ä¸­çš„åç§°ï¼‰
+         * - å°? DragonBonesData å®?ä¾?ç¼?å­???°å·¥???ä¸­ã??
+         * @param data - DragonBonesData å®?ä¾????
+         * @param name - ä¸ºè¯¥å®?ä¾????å®?ä¸?ä¸ªç??å­????ç§°ï??ä»¥ä¾¿??¯ä»¥???è¿?æ­¤å??ç§°è?·å??è¯¥å??ä¾???? ï¼?å¦??????ªè®¾ç½®ï?????ä½¿ç?¨è¯¥å®?ä¾?ä¸­ç?????ç§°ï??
          * @see #parseDragonBonesData()
          * @see #getDragonBonesData()
          * @see #removeDragonBonesData()
@@ -29897,9 +29897,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç§»é™¤ DragonBonesData å®ä¾‹ã€‚
-         * @param name - DragonBonesData å®ä¾‹ç¼“å­˜åç§°ã€‚
-         * @param disposeData - æ˜¯å¦é‡Šæ”¾æ•°æ®ã€‚ ï¼ˆé»˜è®¤: trueï¼‰
+         * - ç§»é?? DragonBonesData å®?ä¾????
+         * @param name - DragonBonesData å®?ä¾?ç¼?å­????ç§°ã??
+         * @param disposeData - ??¯å?¦é????¾æ?°æ?®ã?? ï¼?é»?è®?: trueï¼?
          * @see #parseDragonBonesData()
          * @see #getDragonBonesData()
          * @see #addDragonBonesData()
@@ -29919,8 +29919,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„ TextureAtlasData å®ä¾‹åˆ—è¡¨ã€‚
-         * @param name - TextureAtlasData å®ä¾‹ç¼“å­˜åç§°ã€‚
+         * - ??·å????¹å????? TextureAtlasData å®?ä¾????è¡¨ã??
+         * @param name - TextureAtlasData å®?ä¾?ç¼?å­????ç§°ã??
          * @see #parseTextureAtlasData()
          * @see #addTextureAtlasData()
          * @see #removeTextureAtlasData()
@@ -29941,9 +29941,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°† TextureAtlasData å®ä¾‹ç¼“å­˜åˆ°å·¥å‚ä¸­ã€‚
-         * @param data - TextureAtlasData å®ä¾‹ã€‚
-         * @param name - ä¸ºè¯¥å®ä¾‹æŒ‡å®šä¸€ä¸ªç¼“å­˜åç§°ï¼Œä»¥ä¾¿å¯ä»¥é€šè¿‡æ­¤åç§°è·å–è¯¥å®ä¾‹ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä½¿ç”¨è¯¥å®ä¾‹ä¸­çš„åç§°ï¼‰
+         * - å°? TextureAtlasData å®?ä¾?ç¼?å­???°å·¥???ä¸­ã??
+         * @param data - TextureAtlasData å®?ä¾????
+         * @param name - ä¸ºè¯¥å®?ä¾????å®?ä¸?ä¸ªç??å­????ç§°ï??ä»¥ä¾¿??¯ä»¥???è¿?æ­¤å??ç§°è?·å??è¯¥å??ä¾???? ï¼?å¦??????ªè®¾ç½®ï?????ä½¿ç?¨è¯¥å®?ä¾?ä¸­ç?????ç§°ï??
          * @see #parseTextureAtlasData()
          * @see #getTextureAtlasData()
          * @see #removeTextureAtlasData()
@@ -29964,9 +29964,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç§»é™¤ TextureAtlasData å®ä¾‹ã€‚
-         * @param name - TextureAtlasData å®ä¾‹çš„ç¼“å­˜åç§°ã€‚
-         * @param disposeData - æ˜¯å¦é‡Šæ”¾æ•°æ®ã€‚
+         * - ç§»é?? TextureAtlasData å®?ä¾????
+         * @param name - TextureAtlasData å®?ä¾????ç¼?å­????ç§°ã??
+         * @param disposeData - ??¯å?¦é????¾æ?°æ?®ã??
          * @see #parseTextureAtlasData()
          * @see #getTextureAtlasData()
          * @see #addTextureAtlasData()
@@ -29984,9 +29984,9 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - è·å–ç‰¹å®šçš„éª¨æ¶æ•°æ®ã€‚
-         * @param name - éª¨æ¶æ•°æ®åç§°ã€‚
-         * @param dragonBonesName - DragonBonesData å®ä¾‹çš„ç¼“å­˜åç§°ã€‚
+         * - ??·å????¹å?????éª¨æ?¶æ?°æ?®ã??
+         * @param name - éª¨æ?¶æ?°æ?®å??ç§°ã??
+         * @param dragonBonesName - DragonBonesData å®?ä¾????ç¼?å­????ç§°ã??
          * @see dragonBones.ArmatureData
          * @version DragonBones 5.1
          * @language zh_CN
@@ -29999,8 +29999,8 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - æ¸…é™¤ç¼“å­˜çš„æ‰€æœ‰ DragonBonesData å®ä¾‹å’Œ TextureAtlasData å®ä¾‹ã€‚
-         * @param disposeData - æ˜¯å¦é‡Šæ”¾æ•°æ®ã€‚
+         * - æ¸???¤ç??å­?????????? DragonBonesData å®?ä¾???? TextureAtlasData å®?ä¾????
+         * @param disposeData - ??¯å?¦é????¾æ?°æ?®ã??
          * @version DragonBones 4.5
          * @language zh_CN
          */
@@ -30023,11 +30023,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - é€šè¿‡ç¼“å­˜çš„ DragonBonesData å®ä¾‹å’Œ TextureAtlasData å®ä¾‹åˆ›å»ºä¸€ä¸ªéª¨æ¶ã€‚
-         * @param armatureName - éª¨æ¶æ•°æ®åç§°ã€‚
-         * @param dragonBonesName - DragonBonesData å®ä¾‹çš„ç¼“å­˜åç§°ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œå°†æ£€ç´¢æ‰€æœ‰çš„ DragonBonesData å®ä¾‹ï¼Œå½“å¤šä¸ª DragonBonesData å®ä¾‹ä¸­åŒ…å«åŒåçš„éª¨æ¶æ•°æ®æ—¶ï¼Œå¯èƒ½æ— æ³•å‡†ç¡®çš„åˆ›å»ºå‡ºç‰¹å®šçš„éª¨æ¶ï¼‰
-         * @param skinName - çš®è‚¤åç§°ï¼Œå¯ä»¥è®¾ç½®ä¸€ä¸ªå…¶ä»–éª¨æ¶æ•°æ®åç§°æ¥å…±äº«å…¶çš®è‚¤æ•°æ®ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™ä½¿ç”¨é»˜è®¤çš„çš®è‚¤æ•°æ®ï¼‰ã€‚
-         * @returns éª¨æ¶ã€‚
+         * - ???è¿?ç¼?å­???? DragonBonesData å®?ä¾???? TextureAtlasData å®?ä¾????å»ºä??ä¸ªéª¨??¶ã??
+         * @param armatureName - éª¨æ?¶æ?°æ?®å??ç§°ã??
+         * @param dragonBonesName - DragonBonesData å®?ä¾????ç¼?å­????ç§°ã?? ï¼?å¦??????ªè®¾ç½®ï??å°?æ£?ç´¢æ???????? DragonBonesData å®?ä¾?ï¼?å½?å¤?ä¸? DragonBonesData å®?ä¾?ä¸­å????«å????????éª¨æ?¶æ?°æ?®æ?¶ï????¯è?½æ??æ³????ç¡®ç?????å»ºå?ºç?¹å?????éª¨æ?¶ï??
+         * @param skinName - ??®è?¤å??ç§°ï????¯ä»¥è®¾ç½®ä¸?ä¸ªå?¶ä??éª¨æ?¶æ?°æ?®å??ç§°æ?¥å?±äº«??¶ç?®è?¤æ?°æ?®ï??å¦??????ªè®¾ç½®ï?????ä½¿ç?¨é??è®¤ç????®è?¤æ?°æ?®ï?????
+         * @returns éª¨æ?¶ã??
          * @example
          * <pre>
          *     let armature = factory.buildArmature("armatureName", "dragonBonesName");
@@ -30062,14 +30062,14 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç”¨ç‰¹å®šçš„æ˜¾ç¤ºå¯¹è±¡æ•°æ®æ›¿æ¢ç‰¹å®šæ’æ§½å½“å‰çš„æ˜¾ç¤ºå¯¹è±¡æ•°æ®ã€‚
-         * ç”¨ "dragonBonesName/armatureName/slotName/displayName" æŒ‡å®šæ˜¾ç¤ºå¯¹è±¡æ•°æ®ã€‚
-         * @param dragonBonesName - DragonBonesData å®ä¾‹çš„ç¼“å­˜åç§°ã€‚
-         * @param armatureName - éª¨æ¶æ•°æ®åç§°ã€‚
-         * @param slotName - æ’æ§½æ•°æ®åç§°ã€‚
-         * @param displayName - æ˜¾ç¤ºå¯¹è±¡æ•°æ®åç§°ã€‚
-         * @param slot - æ’æ§½ã€‚
-         * @param displayIndex - è¢«æ›¿æ¢çš„æ˜¾ç¤ºå¯¹è±¡æ•°æ®çš„ç´¢å¼•ã€‚ ï¼ˆå¦‚æœæœªè®¾ç½®ï¼Œåˆ™æ›¿æ¢å½“å‰çš„æ˜¾ç¤ºå¯¹è±¡æ•°æ®ï¼‰
+         * - ??¨ç?¹å???????¾ç¤ºå¯¹è±¡??°æ?®æ?¿æ?¢ç?¹å?????æ§½å??????????¾ç¤ºå¯¹è±¡??°æ?®ã??
+         * ??? "dragonBonesName/armatureName/slotName/displayName" ???å®???¾ç¤ºå¯¹è±¡??°æ?®ã??
+         * @param dragonBonesName - DragonBonesData å®?ä¾????ç¼?å­????ç§°ã??
+         * @param armatureName - éª¨æ?¶æ?°æ?®å??ç§°ã??
+         * @param slotName - ???æ§½æ?°æ?®å??ç§°ã??
+         * @param displayName - ??¾ç¤ºå¯¹è±¡??°æ?®å??ç§°ã??
+         * @param slot - ???æ§½ã??
+         * @param displayIndex - è¢«æ?¿æ?¢ç????¾ç¤ºå¯¹è±¡??°æ?®ç??ç´¢å????? ï¼?å¦??????ªè®¾ç½®ï???????¿æ?¢å??????????¾ç¤ºå¯¹è±¡??°æ?®ï??
          * @example
          * <pre>
          *     let slot = armature.getSlot("weapon");
@@ -30103,11 +30103,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å°†ç‰¹å®šçš„çš®è‚¤æ•°æ®å…±äº«ç»™ç‰¹å®šçš„éª¨æ¶ä½¿ç”¨ã€‚
-         * @param armature - éª¨æ¶ã€‚
-         * @param skin - çš®è‚¤æ•°æ®ã€‚
-         * @param isOverride - æ˜¯å¦å®Œå…¨è¦†ç›–åŸæ¥çš„çš®è‚¤ã€‚ ï¼ˆé»˜è®¤: falseï¼‰
-         * @param exclude - ä¸éœ€è¦è¢«æ›¿æ¢çš„æ’æ§½åç§°åˆ—è¡¨ã€‚
+         * - å°???¹å???????®è?¤æ?°æ?®å?±äº«ç»???¹å?????éª¨æ?¶ä½¿??¨ã??
+         * @param armature - éª¨æ?¶ã??
+         * @param skin - ??®è?¤æ?°æ?®ã??
+         * @param isOverride - ??¯å?¦å????¨è??????????¥ç????®è?¤ã?? ï¼?é»?è®?: falseï¼?
+         * @param exclude - ä¸????è¦?è¢«æ?¿æ?¢ç?????æ§½å??ç§°å??è¡¨ã??
          * @example
          * <pre>
          *     let armatureA = factory.buildArmature("armatureA", "dragonBonesA");
@@ -30142,11 +30142,11 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç”¨ç‰¹å®šéª¨æ¶æ•°æ®çš„åŠ¨ç”»æ•°æ®æ›¿æ¢ç‰¹å®šéª¨æ¶ç°æœ‰çš„åŠ¨ç”»æ•°æ®ã€‚
-         * è¿™æ ·å°±èƒ½å®ç°åˆ¶ä½œä¸€ä¸ªéª¨æ¶åŠ¨ç”»æ¨¡æ¿ï¼Œè®©å…¶ä»–æ²¡æœ‰åˆ¶ä½œåŠ¨ç”»çš„éª¨æ¶å…±äº«è¯¥åŠ¨ç”»ã€‚
-         * @param armature - éª¨æ¶ã€‚
-         * @param armatureData - éª¨æ¶æ•°æ®ã€‚
-         * @param isOverride - æ˜¯å¦å®Œå…¨è¦†ç›–åŸæ¥çš„åŠ¨ç”»ã€‚ï¼ˆé»˜è®¤: falseï¼‰ã€‚
+         * - ??¨ç?¹å??éª¨æ?¶æ?°æ?®ç????¨ç?»æ?°æ?®æ?¿æ?¢ç?¹å??éª¨æ?¶ç?°æ???????¨ç?»æ?°æ?®ã??
+         * è¿???·å°±??½å????°å?¶ä??ä¸?ä¸ªéª¨??¶å?¨ç?»æ¨¡??¿ï??è®©å?¶ä??æ²¡æ????¶ä????¨ç?»ç??éª¨æ?¶å?±äº«è¯¥å?¨ç?»ã??
+         * @param armature - éª¨æ?¶ã??
+         * @param armatureData - éª¨æ?¶æ?°æ?®ã??
+         * @param isOverride - ??¯å?¦å????¨è??????????¥ç????¨ç?»ã??ï¼?é»?è®?: falseï¼????
          * @example
          * <pre>
          *     let armatureA = factory.buildArmature("armatureA", "dragonBonesA");
@@ -30175,7 +30175,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - ç”±å¼•æ“é©±åŠ¨çš„ WorldClock å®ä¾‹ã€‚
+         * - ??±å?????é©±å?¨ç?? WorldClock å®?ä¾????
          * @version DragonBones 5.7
          * @language zh_CN
          */
@@ -30190,7 +30190,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #replaceSkin}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #replaceSkin}???
          * @deprecated
          * @language zh_CN
          */
@@ -30201,7 +30201,7 @@ declare namespace dragonBones {
          * @language en_US
          */
         /**
-         * - å·²åºŸå¼ƒï¼Œè¯·å‚è€ƒ {@link #replaceAnimation}ã€‚
+         * - å·²å??å¼?ï¼?è¯·å????? {@link #replaceAnimation}???
          * @deprecated
          * @language zh_CN
          */
@@ -31571,12 +31571,12 @@ declare namespace jsb{
         export function callStaticMethod (className: string, methodName: string, methodSignature: string, ...parameters:any): any;
     }
     /**
-     * ä¸‹è½½ä»»åŠ¡å¯¹è±¡
+     * ä¸?è½½ä»»??¡å¯¹è±?
      */
     export type DownloaderTask = { requestURL: string, storagePath: string, identifier: string };
 
     /**
-     * Http file downloader for jsbï¼
+     * Http file downloader for jsbï¼?
      */
     export class Downloader{
         /**
@@ -31977,7 +31977,7 @@ declare namespace jsb{
          *  @return True if the file exists, false if not.
          */
         export function isFileExist (filename:string):boolean;
-        /**Â©âˆ«
+        /**Â©???
          *  Purges full path caches.
          */
         export function purgeCachedEntries ():void;
