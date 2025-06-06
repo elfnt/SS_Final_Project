@@ -87,14 +87,26 @@ export default class Player extends cc.Component {
             return;
         }
 
-        // --- Logic to handle imposter name color ---
+        // --- FIX STARTS HERE ---
+
+        // 1. Listen for the event (for when it happens in the Lobby)
         this.multiplayerManager.node.on('imposter-assigned', ({ isImposter }) => {
             this.isLocalPlayerImposter = isImposter;
             if (this.playerNameLabel) {
                 this.playerNameLabel.node.color = isImposter ? cc.Color.RED : cc.Color.WHITE;
             }
         }, this);
-        // --- End of imposter logic ---
+        
+        // 2. Immediately check the status (for when a new scene loads)
+        // This ensures the red name is reapplied in the GameScene.
+        if (this.multiplayerManager.isPlayerImposter()) {
+            this.isLocalPlayerImposter = true;
+            if (this.playerNameLabel) {
+                this.playerNameLabel.node.color = cc.Color.RED;
+            }
+        }
+        
+        // --- FIX ENDS HERE ---
 
         if (!this.playerId) {
             cc.error("[Player] PlayerID is not set! Cannot initialize multiplayer features.");
@@ -106,6 +118,8 @@ export default class Player extends cc.Component {
         this.sendCurrentStateToFirebase(true);
     }
     
+    // ... (The rest of your Player.ts file remains exactly the same) ...
+
     private applyCharacterFromSelection() {
         this.selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
         const index = characterMap[this.selectedCharacter] ?? 0;
