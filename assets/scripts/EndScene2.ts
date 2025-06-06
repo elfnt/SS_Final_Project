@@ -12,6 +12,9 @@ export default class EndScene2 extends cc.Component {
     @property(cc.Button)
     continueButton: cc.Button = null;
 
+    // Track any active Firebase references that need cleanup
+    private firebaseRefs: firebase.database.Reference[] = [];
+
     onLoad() {
         // Disable container layout to allow manual positioning
         const containerLayout = this.playersContainer?.getComponent(cc.Layout);
@@ -20,10 +23,51 @@ export default class EndScene2 extends cc.Component {
         // Get imposter data from Firebase or localStorage
         this.getImposterIdAndDisplayResults();
         
-        // Setup continue button
+        // Setup continue button with proper cleanup
         this.continueButton.node.on('click', () => {
-            cc.director.loadScene("MainMenu");
+            // Clean up Firebase listeners before transitioning
+            this.cleanupAllFirebaseListeners();
+            
+            // Add a small delay before scene transition
+            this.scheduleOnce(() => {
+                cc.director.loadScene("MainMenu");
+            }, 0.1);
         });
+    }
+    
+    // Add cleanup method for Firebase listeners
+    cleanupAllFirebaseListeners() {
+        // Turn off any stored references
+        this.firebaseRefs.forEach(ref => {
+            ref.off();
+        });
+        
+        // Clear the array
+        this.firebaseRefs = [];
+        
+        // Get the Firebase manager and detach game listeners
+        try {
+            const firebaseManager = FirebaseManager.getInstance();
+            if (firebaseManager && firebaseManager.database) {
+                const gameId = cc.sys.localStorage.getItem('gameId') || 'default_game';
+                
+                // Detach common listeners that might cause issues
+                const gamePath = `games/${gameId}`;
+                firebaseManager.database.ref(gamePath).off();
+                firebaseManager.database.ref(`${gamePath}/players`).off();
+                firebaseManager.database.ref(`${gamePath}/voting`).off();
+                firebaseManager.database.ref(`${gamePath}/state`).off();
+                firebaseManager.database.ref(`${gamePath}/bridgeButtons`).off();
+                firebaseManager.database.ref(`${gamePath}/imposter`).off();
+            }
+        } catch (e) {
+            cc.error("Error cleaning up Firebase listeners:", e);
+        }
+    }
+    
+    // Make sure to call cleanup when scene is destroyed
+    onDestroy() {
+        this.cleanupAllFirebaseListeners();
     }
     
     private async getImposterIdAndDisplayResults() {
@@ -39,7 +83,12 @@ export default class EndScene2 extends cc.Component {
                 // If not in localStorage, try to get from Firebase
                 const firebaseManager = FirebaseManager.getInstance();
                 const gameId = cc.sys.localStorage.getItem('gameId') || 'default_game';
-                const snapshot = await firebaseManager.database.ref(`games/${gameId}/imposter/id`).once('value');
+                
+                // Store reference for cleanup
+                const imposterRef = firebaseManager.database.ref(`games/${gameId}/imposter/id`);
+                this.firebaseRefs.push(imposterRef);
+                
+                const snapshot = await imposterRef.once('value');
                 imposterId = snapshot.val();
             }
         } catch (e) {
@@ -63,7 +112,7 @@ export default class EndScene2 extends cc.Component {
             const playerNode = cc.instantiate(this.playerPrefab);
             this.playersContainer.addChild(playerNode);
             
-            // Position player with 100 unit spacing
+            // Position player with 150 unit spacing
             const xPos = (index - (players.length - 1) / 2) * 150;
             playerNode.setPosition(cc.v2(xPos, 0));
             
@@ -94,7 +143,9 @@ export default class EndScene2 extends cc.Component {
         });
         
         // Update container
-        this.playersContainer.parent.setContentSize(this.playersContainer.parent.getContentSize());
+        if (this.playersContainer && this.playersContainer.parent) {
+            this.playersContainer.parent.setContentSize(this.playersContainer.parent.getContentSize());
+        }
     }
     
     private getPlayersDataFromCache() {
