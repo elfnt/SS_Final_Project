@@ -137,8 +137,8 @@ export default class BridgeButtonSensor1 extends cc.Component {
 
         if (nodeName === this.boxId) {
             firebase.database.ref(path).set(true)
-                .then(() => cc.log(`[Sensor] 📦 接觸 box 寫入 boxTriggered=true`));
-            this.boxTriggered = true;
+                .then(() => cc.log(`[Sensor] ✅ box 接觸 → boxTriggered = true`))
+                .catch(err => cc.error(`[Sensor] ❌ boxTriggered 寫入失敗`, err));
         }
 
         if (nodeName === "Player") {
@@ -161,19 +161,17 @@ export default class BridgeButtonSensor1 extends cc.Component {
         }
 
         if (nodeName === this.boxId) {
-            // ✅ 當 box 離開感應區 → 將 boxTriggered 設為 false
             const firebase = FirebaseManager.getInstance();
             const path = `boxes/${this.boxId}/boxTriggered`;
 
             firebase.database.ref(path).set(false)
-                .then(() => cc.log(`[Sensor] 📦 離開 box → boxTriggered=false`))
-                .catch(err => cc.error(`[Sensor] ❌ 無法清除 boxTriggered`, err));
-
-            this.boxTriggered = false;
+                .then(() => cc.log(`[Sensor] 📦 離開 box → boxTriggered = false`))
+                .catch(err => cc.error(`[Sensor] ❌ boxTriggered 清除失敗`, err));
         }
 
         this.tryStopBridge();
     }
+
 
 
     private tryStartBridge() {
