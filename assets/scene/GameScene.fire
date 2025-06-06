@@ -83,6 +83,9 @@
         "__id__": 12
       },
       {
+        "__id__": 12
+      },
+      {
         "__id__": 287
       },
       {
@@ -573,8 +576,12 @@
       "__uuid__": "4ebbb73d-e42b-4827-9620-fbd46acc17dd"
     },
     "deathSound": null,
-    "pickUpSound": null,
-    "dropItemSound": null,
+    "pickUpSound": {
+      "__uuid__": "6ab63e69-40a1-495b-ba6c-6c5bb5c9eafa"
+    },
+    "dropItemSound": {
+      "__uuid__": "28eda302-f960-4b71-a2bd-4262823b3daa"
+    },
     "itemDetectRadius": 100,
     "playerName": "Player",
     "syncInterval": 0.1,

@@ -41,7 +41,11 @@ export default class Player extends cc.Component {
     @property([cc.AnimationClip]) characterMoveClips: cc.AnimationClip[] = [];
     @property([cc.AnimationClip]) characterJumpClips: cc.AnimationClip[] = [];
     @property([cc.SpriteFrame]) characterSprites: cc.SpriteFrame[] = [];
+    @property(cc.Prefab) smokeEffectPrefab: cc.Prefab = null;
+    @property(cc.Prefab) walkSmokePrefab: cc.Prefab = null;
 
+    private walkSmokeTimer: number = 0;
+    private walkSmokeInterval: number = 0.12;
     private anim: cc.Animation = null;
     private rb: cc.RigidBody = null;
     private dir = cc.v2(0, 0);
@@ -194,12 +198,35 @@ export default class Player extends cc.Component {
         if (this.rb) this.rb.angularVelocity = 0;
 
         this.updateNamePosition();
-
+        if (this.dir.x !== 0 && this.isOnGround) {
+            this.walkSmokeTimer += dt;
+            if (this.walkSmokeTimer >= this.walkSmokeInterval) {
+                this.spawnWalkSmoke();
+                this.walkSmokeTimer = 0;
+            }
+        } else {
+            this.walkSmokeTimer = this.walkSmokeInterval;
+        }
         this.timeSinceLastSync += dt;
         if (this.timeSinceLastSync >= this.syncInterval) {
             this.sendCurrentStateToFirebase();
             this.timeSinceLastSync = 0;
         }
+    }
+
+    private spawnWalkSmoke() {
+        if (!this.walkSmokePrefab) return;
+
+        const smoke = cc.instantiate(this.walkSmokePrefab);
+
+        // 調整位置：貼腳底下
+        const smokePos = this.node.position.add(cc.v3(0, -10, 0));
+        smoke.setPosition(smokePos);
+
+        this.node.parent.addChild(smoke);
+
+        // 自動銷毀（與粒子效果持續時間一致）
+        this.scheduleOnce(() => smoke.destroy(), 0.4); 
     }
 
     private sendCurrentStateToFirebase(isInitial: boolean = false) {
@@ -375,7 +402,23 @@ export default class Player extends cc.Component {
         if (!this.heldItem) return;
         const db = FirebaseManager.getInstance().database;
         const itemId = this.heldItem.getComponent(ItemController)?.itemId || this.heldItem.name;
-        const dropPos = this.node.position.add(cc.v3(100 * (this.dir.x || this.lastFacing), -10, 0));
+        const dropPos = this.node.position.add(cc.v3(100 * (this.dir.x || this.lastFacing), -30, 0));
+        this.heldItem.parent = this.node.parent;
+        this.heldItem.setPosition(dropPos.x, dropPos.y);
+
+        if (this.smokeEffectPrefab) {
+            const smoke = cc.instantiate(this.smokeEffectPrefab);
+            smoke.setPosition(dropPos);
+            this.node.parent.addChild(smoke);
+            this.scheduleOnce(() => {
+                smoke.destroy();
+            }, 1.5);
+        }
+        if (this.smokeEffectPrefab) {
+            const smoke = cc.instantiate(this.smokeEffectPrefab);
+            smoke.setPosition(dropPos);
+            this.node.parent.addChild(smoke)
+        }
         db.ref(`boxes/${itemId}`).update({
             active: true,
             position: { x: Math.round(dropPos.x), y: Math.round(dropPos.y) }
