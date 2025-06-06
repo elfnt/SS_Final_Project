@@ -1,222 +1,196 @@
-// LobbyManager.ts (from file with isLoadingScene flag)
-import MultiplayerManager, { PlayerState } from './Multiplayer'; //
-import FirebaseManager from './FirebaseManager'; //
+// LobbyManager.ts (Updated)
+import MultiplayerManager, { PlayerState } from './Multiplayer';
+import FirebaseManager from './FirebaseManager';
 
 const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class LobbyManager extends cc.Component {
     @property(cc.Label)
-    gameIdLabel: cc.Label = null; //
+    gameIdLabel: cc.Label = null;
 
     @property(cc.Button)
-    startGameButton: cc.Button = null; //
+    startGameButton: cc.Button = null;
 
     @property(cc.Label)
-    waitingLabel: cc.Label = null; //
+    waitingLabel: cc.Label = null;
     
-    private multiplayerManager: MultiplayerManager = null; //
-    private isWaitingForNextGame: boolean = false; //
-    private isLoadingScene: boolean = false; // Flag to prevent multiple start attempts by this client //
-    private _keyDownHandler: (event: cc.Event.EventKeyboard) => void; //
+    private multiplayerManager: MultiplayerManager = null;
+    private isWaitingForNextGame: boolean = false;
+    private isLoadingScene: boolean = false; // Flag to prevent multiple start attempts
+    private _keyDownHandler: (event: cc.Event.EventKeyboard) => void;
 
 
-    start() { //
-        this._keyDownHandler = (event: cc.Event.EventKeyboard) => { //
-            if (event.keyCode === cc.macro.KEY.s) { //
-                cc.log("[LobbyManager] EMERGENCY START via keyboard shortcut"); //
-                this.onStartGameClicked(); //
+    start() {
+        this._keyDownHandler = (event: cc.Event.EventKeyboard) => {
+            if (event.keyCode === cc.macro.KEY.s) {
+                cc.log("[LobbyManager] EMERGENCY START via keyboard shortcut");
+                this.onStartGameClicked();
             }
         };
-        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this._keyDownHandler, this); //
+        cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this._keyDownHandler, this);
         
-        this.multiplayerManager = MultiplayerManager.getInstance(); //
+        this.multiplayerManager = MultiplayerManager.getInstance();
 
-        if (this.startGameButton) { //
-            this.startGameButton.node.off('click'); //
-            this.startGameButton.node.on('click', () => { //
-                cc.log("[LobbyManager] Start Button clicked."); //
-                this.onStartGameClicked(); //
+        if (this.startGameButton) {
+            cc.log("[LobbyManager] Setting up start button click handler");
+            this.startGameButton.node.off('click');
+            
+            // Use a direct callback to match exactly how the 'S' key works
+            this.startGameButton.node.on('click', () => {
+                cc.log("[LobbyManager] Start button clicked!");
+                this.onStartGameClicked();
             }, this);
-            this.startGameButton.interactable = false; //
-            cc.log("[LobbyManager] Start button click handler registered"); //
+            
+            // Always make the button interactable - just like the 'S' key
+            this.startGameButton.interactable = true;
         }
 
-        if (this.waitingLabel) { //
-            this.waitingLabel.string = "Waiting for players... (0/4)"; //
+        if (this.waitingLabel) {
+            this.waitingLabel.string = "Waiting for players... (0/4)";
         }
 
-        if (this.multiplayerManager) { //
-            this.checkForActiveGame(); //
-
-            this.multiplayerManager.node.on( //
-                MultiplayerManager.EVENT_ONLINE_PLAYERS_UPDATED, //
-                this.onOnlinePlayersUpdated, //
+        if (this.multiplayerManager) {
+            this.checkForActiveGame();
+            this.multiplayerManager.node.on(
+                MultiplayerManager.EVENT_ONLINE_PLAYERS_UPDATED,
+                this.onOnlinePlayersUpdated,
                 this
             );
-            
-            this.multiplayerManager.node.on('waiting-for-next-game', this.onWaitingForNextGame, this); //
-            
-            const initialPlayers = this.multiplayerManager.getOnlinePlayers(); //
-            this.onOnlinePlayersUpdated(initialPlayers || []); //
-        } else { //
-            cc.error("[LobbyManager] MultiplayerManager instance not found."); //
-            if (this.waitingLabel) { //
-                this.waitingLabel.string = "Error: Multiplayer not ready."; //
+            this.multiplayerManager.node.on('waiting-for-next-game', this.onWaitingForNextGame, this);
+            this.onOnlinePlayersUpdated(this.multiplayerManager.getOnlinePlayers() || []);
+        } else {
+            cc.error("[LobbyManager] MultiplayerManager instance not found.");
+            if (this.waitingLabel) {
+                this.waitingLabel.string = "Error: Multiplayer not ready.";
             }
         }
     }
 
-    checkForActiveGame() { //
-        const gameId = "default_game"; //
-        FirebaseManager.getInstance().database.ref(`games/${gameId}`).once('value') //
-            .then(snapshot => { //
-                const gameData = snapshot.val(); //
+    checkForActiveGame() {
+        const gameId = "default_game";
+        FirebaseManager.getInstance().database.ref(`games/${gameId}`).once('value')
+            .then(snapshot => {
+                const gameData = snapshot.val();
                 
-                if (gameData && gameData.state === "active") { //
-                    const localPlayerId = this.multiplayerManager.getLocalPlayerId(); //
-                    const isPlayerInActiveGame = gameData.activePlayers && gameData.activePlayers[localPlayerId]; //
+                if (gameData && gameData.state === "active") {
+                    const localPlayerId = this.multiplayerManager.getLocalPlayerId();
+                    const isPlayerInActiveGame = gameData.activePlayers && gameData.activePlayers[localPlayerId];
                     
-                    if (isPlayerInActiveGame) { //
-                        cc.log("[LobbyManager] Player is in active game player list. Will wait for MM to transition."); //
-                        // MultiplayerManager's listenForGameState should handle the transition for this player
-                    } else { //
-                        cc.log("[LobbyManager] Active game found, but player not in activePlayers list. Waiting for next game."); //
-                        this.onWaitingForNextGame(); //
+                    if (!isPlayerInActiveGame) {
+                        cc.log("[LobbyManager] Active game found, but player not in it. Waiting for next game.");
+                        this.onWaitingForNextGame();
                     }
-                } else { //
-                    cc.log("[LobbyManager] No active game found, proceeding with normal lobby setup."); //
                 }
             })
-            .catch(err => { //
-                cc.error("[LobbyManager] Error checking for active game:", err); //
+            .catch(err => {
+                cc.error("[LobbyManager] Error checking for active game:", err);
             });
     }
 
-    onWaitingForNextGame() { //
-        this.isWaitingForNextGame = true; //
-        if (this.waitingLabel) { //
-            this.waitingLabel.string = "Game in progress. Please wait for next round."; //
+    onWaitingForNextGame() {
+        this.isWaitingForNextGame = true;
+        if (this.waitingLabel) {
+            this.waitingLabel.string = "Game in progress. Please wait for next round.";
         }
-        if (this.startGameButton) { //
-            this.startGameButton.interactable = false; //
+        if (this.startGameButton) {
+            // Even when waiting, keep the button interactive for EMERGENCY start
+            this.startGameButton.interactable = true;
         }
-        this.monitorCurrentGameCompletion(); //
+        this.monitorCurrentGameCompletion();
     }
     
-    monitorCurrentGameCompletion() { //
-        const gameId = "default_game"; //
-        const gameListener = (snapshot: firebase.database.DataSnapshot) => { //
-            const state = snapshot.val(); //
-            if (state === "ended" || state === "waiting") { //
-                cc.log("[LobbyManager] Current game ended or reset to waiting state. Ready for new players."); //
-                this.isWaitingForNextGame = false; //
-                if (this.waitingLabel) { //
-                    const currentPlayers = this.multiplayerManager.getOnlinePlayers(); //
-                    this.waitingLabel.string = `Waiting for players... (${currentPlayers.length}/4)`; //
+    monitorCurrentGameCompletion() {
+        const gameId = "default_game";
+        const gameRef = FirebaseManager.getInstance().database.ref(`games/${gameId}/state`);
+        const gameListener = (snapshot: firebase.database.DataSnapshot) => {
+            const state = snapshot.val();
+            if (state === "ended" || state === "waiting" || !state) {
+                cc.log("[LobbyManager] Current game ended or reset. Ready for new game.");
+                this.isWaitingForNextGame = false;
+                if (this.waitingLabel) {
+                    const currentPlayers = this.multiplayerManager.getOnlinePlayers();
+                    this.waitingLabel.string = `Waiting for players... (${currentPlayers.length}/4)`;
                 }
-                FirebaseManager.getInstance().database.ref(`games/${gameId}/state`).off('value', gameListener); // Detach self //
-                this.onOnlinePlayersUpdated(this.multiplayerManager.getOnlinePlayers() || []); // Re-evaluate button state
+                gameRef.off('value', gameListener); // Detach self
+                this.onOnlinePlayersUpdated(this.multiplayerManager.getOnlinePlayers() || []);
             }
         };
-        FirebaseManager.getInstance().database.ref(`games/${gameId}/state`).on('value', gameListener); //
+        gameRef.on('value', gameListener);
     }
 
-    onOnlinePlayersUpdated(players: PlayerState[]) { //
-        const onlinePlayerCount = players.length; //
+    onOnlinePlayersUpdated(players: PlayerState[]) {
+        const onlinePlayerCount = players.length;
+        cc.log(`[LobbyManager] Online players updated: ${onlinePlayerCount}/4`);
+        if (this.isWaitingForNextGame) return;
 
-        if (!this.isWaitingForNextGame) { //
-            if (this.waitingLabel) { //
-                this.waitingLabel.string = `Players: ${onlinePlayerCount} / 4`; //
-            }
-            if (this.startGameButton) { //
-                const canStart = onlinePlayerCount >= 4; //
-                this.startGameButton.interactable = canStart; //
-                cc.log(`[LobbyManager] Setting start button interactable: ${canStart} (${onlinePlayerCount}/4 players)`); //
-            }
+        if (this.waitingLabel) {
+            this.waitingLabel.string = `Players: ${onlinePlayerCount} / 4`;
         }
-        //cc.log(`[LobbyManager] UI updated. Online players: ${onlinePlayerCount}`); //
+        
+        // No need to toggle button interactable state - always enabled like 'S' key
     }
 
-    onStartGameClicked() { //
-        cc.log("[LobbyManager] onStartGameClicked initiated."); //
-        if (this.isLoadingScene) { //
-            cc.log("[LobbyManager] Scene loading already in progress or game start initiated, ignoring click"); //
-            return; //
+    onStartGameClicked() {
+        cc.log("[LobbyManager] onStartGameClicked initiated.");
+        if (this.isLoadingScene) {
+            cc.log("[LobbyManager] Game start already in progress, ignoring click.");
+            return;
         }
-        if (!this.multiplayerManager) { //
-            cc.error("[LobbyManager] MultiplayerManager not available to start game."); //
-            return; //
+        if (!this.multiplayerManager) {
+            cc.error("[LobbyManager] MultiplayerManager not available to start game.");
+            return;
         }
         
-        const currentOnlinePlayers = this.multiplayerManager.getOnlinePlayers(); //
-        cc.log(`[LobbyManager] Attempting to start game with ${currentOnlinePlayers.length} players`); //
+        const playerCount = this.multiplayerManager.getOnlinePlayers().length;
         
-        if (currentOnlinePlayers.length >= 4) { //
-            this.isLoadingScene = true; // Prevent further clicks by this client //
-            this.startGameButton.interactable = false; // Disable button immediately
+        // Still show the warning but attempt to start anyway (just like 'S' key)
+        if (playerCount < 4) {
+            cc.warn(`[LobbyManager] Not enough players to start the game (${playerCount}/4), but attempting to start anyway.`);
+        } else {
+            cc.log(`[LobbyManager] Starting game with ${playerCount} players.`);
+        }
+        
+        // Proceed with game start
+        this.isLoadingScene = true;
+        
+        // Disable button temporarily while loading to prevent spam-clicking
+        if (this.startGameButton) {
+            this.startGameButton.interactable = false;
+        }
 
-            const gameId = "default_game"; //
-            const hostId = this.multiplayerManager.getLocalPlayerId(); //
-            
-            cc.log(`[LobbyManager] Initiating game start process. Game ID: ${gameId}, Host: ${hostId}`); //
-            
-            const activePlayers = {}; //
-            currentOnlinePlayers.slice(0, 4).forEach(player => { //
-                if (player.id) { //
-                    activePlayers[player.id] = true; //
-                }
-            });
-            
-            FirebaseManager.getInstance().database.ref(`games/${gameId}`).update({ //
-                hostId: hostId, //
-                activePlayers: activePlayers, //
-                state: "waiting" // Set to waiting, assignImposter will set it to active
-            }).then(() => { //
-                cc.log(`[LobbyManager] Game session updated with active players. Requesting imposter assignment...`); //
-                return this.multiplayerManager.assignRandomImposter(); //
-            })
-            .then(imposterId => { //
-                if (imposterId) { //
-                    cc.log(`[LobbyManager] Imposter assigned: ${imposterId}. Firebase state updated. MultiplayerManager will handle scene transition.`); //
-                    // DO NOT call cc.director.loadScene here.
-                    // MultiplayerManager.listenForGameState on ALL clients will detect state:"active"
-                    // and trigger the scene load.
-                } else { //
-                    cc.warn('[LobbyManager] Failed to assign imposter (returned null from MM).'); //
-                    this.isLoadingScene = false; // Reset flag if imposter assignment failed //
-                    this.startGameButton.interactable = (this.multiplayerManager.getOnlinePlayers().length >=4); // Re-enable button if possible
+        cc.log("[LobbyManager] Requesting game start via MultiplayerManager...");
+        
+        this.multiplayerManager.assignRandomImposter()
+            .then(imposterId => {
+                if (imposterId) {
+                    cc.log(`[LobbyManager] Game start process successful. Imposter: ${imposterId}`);
+                    // Scene transition is handled by MultiplayerManager's listener
+                } else {
+                    cc.warn('[LobbyManager] Failed to start game - no imposter assigned.');
+                    this.isLoadingScene = false;
+                    if (this.startGameButton) {
+                        this.startGameButton.interactable = true;
+                    }
                 }
             })
-            .catch(err => { //
-                cc.error('[LobbyManager] Error during game start process:', err); //
-                this.isLoadingScene = false; // Reset flag on error //
-                this.startGameButton.interactable = (this.multiplayerManager.getOnlinePlayers().length >=4); // Re-enable button
+            .catch(err => {
+                cc.error('[LobbyManager] Error during game start process:', err);
+                this.isLoadingScene = false;
+                if (this.startGameButton) {
+                    this.startGameButton.interactable = true;
+                }
             });
-        } else { //
-            cc.warn(`[LobbyManager] Not enough players to start the game: ${currentOnlinePlayers.length}/4`); //
-        }
     }
     
-    onDestroy() { //
-        if (this._keyDownHandler) { //
-            cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this._keyDownHandler, this); //
+    onDestroy() {
+        if (this._keyDownHandler) {
+            cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this._keyDownHandler, this);
         }
-        if (this.startGameButton && this.startGameButton.node && this.startGameButton.node.isValid) { //
-            this.startGameButton.node.off('click'); //
+        if (this.multiplayerManager && this.multiplayerManager.node && this.multiplayerManager.node.isValid) {
+            this.multiplayerManager.node.off(MultiplayerManager.EVENT_ONLINE_PLAYERS_UPDATED, this.onOnlinePlayersUpdated, this);
+            this.multiplayerManager.node.off('waiting-for-next-game', this.onWaitingForNextGame, this);
         }
-        if (this.multiplayerManager && this.multiplayerManager.node && this.multiplayerManager.node.isValid) { //
-            this.multiplayerManager.node.off( //
-                MultiplayerManager.EVENT_ONLINE_PLAYERS_UPDATED, //
-                this.onOnlinePlayersUpdated, //
-                this
-            );
-            this.multiplayerManager.node.off('waiting-for-next-game', this.onWaitingForNextGame, this); //
-             const gameId = "default_game"; //
-             const gameListenerPath = `games/${gameId}/state`; //
-             try { //
-                FirebaseManager.getInstance().database.ref(gameListenerPath).off('value'); // Attempt to remove specific listener by path
-             } catch(e) { /* ignore */ }
-        }
+        // It's good practice to turn off listeners, but the one in monitorCurrentGameCompletion already detaches itself.
     }
 }
