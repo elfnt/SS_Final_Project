@@ -16,7 +16,7 @@ export default class BridgeButtonSensor1 extends cc.Component {
     private playerCount: number = 0;
     private itemCount: number = 0;
     private remotePlayerCount: number = 0;
-
+    private boxTriggered: boolean = false;
     private maxRetry = 10;
     private retryInterval = 0.5;
 
