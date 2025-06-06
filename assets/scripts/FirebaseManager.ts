@@ -9,14 +9,14 @@ export default class FirebaseManager extends cc.Component {
     public auth: firebase.auth.Auth = null;
 
     private firebaseConfig = {
-        apiKey: "AIzaSyAijSWSyEjHUC95bhCwAGIyKZFIDC69xRQ",
-        authDomain: "ssfp-8139e.firebaseapp.com",
-        databaseURL: "https://ssfp-8139e-default-rtdb.firebaseio.com",
-        projectId: "ssfp-8139e",
-        storageBucket: "ssfp-8139e.appspot.com",
-        messagingSenderId: "647323954046",
-        appId: "1:647323954046:web:7058021c9a4cbd782da12f",
-        measurementId: "G-XVETSBJZRP"
+  apiKey: "AIzaSyAXdnKMCukYKbwp3-7zfbs7hNMQTYPCCYI",
+  authDomain: "ssfp-2.firebaseapp.com",
+  databaseURL: "https://ssfp-2-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "ssfp-2",
+  storageBucket: "ssfp-2.firebasestorage.app",
+  messagingSenderId: "513093603084",
+  appId: "1:513093603084:web:6e6b58bac9319c74d6c329",
+  measurementId: "G-YKTZ36J51C"
     };
 
     public static getInstance(): FirebaseManager {
