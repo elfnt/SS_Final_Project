@@ -1300,6 +1300,7 @@
     "remotePlayerPrefab": {
       "__uuid__": "cdd7f682-258d-46ff-aff7-2ea756bb5bd5"
     },
+    "enableImposterMode": true,
     "_id": "21S37iGURNhahmgCPqYQIy"
   },
   {
@@ -1361,8 +1362,8 @@
         0,
         0,
         1,
-        3,
-        3,
+        4,
+        4,
         1
       ]
     },
@@ -1392,6 +1393,8 @@
     "cameraNode": null,
     "jumpSound": null,
     "deathSound": null,
+    "pickUpSound": null,
+    "dropItemSound": null,
     "itemDetectRadius": 100,
     "playerName": "Player",
     "syncInterval": 0.1,
@@ -2033,7 +2036,6 @@
       "__id__": 46
     },
     "waitingLabel": null,
-    "playerSlots": [],
     "_id": "b1PAw9XotLDpMek9zn2VwZ"
   }
 ]
