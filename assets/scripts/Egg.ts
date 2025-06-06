@@ -11,14 +11,14 @@ export default class Egg extends cc.Component {
     @property({ type: cc.SpriteFrame, tooltip: 'Normal egg appearance' }) normalSprite: cc.SpriteFrame = null;
     @property({ type: cc.SpriteFrame, tooltip: 'Cracked egg appearance' }) crackedSprite: cc.SpriteFrame = null;
     @property({ type: cc.SpriteFrame, tooltip: 'Broken egg appearance' }) brokenSprite: cc.SpriteFrame = null;
-    @property maxLife = 100;
+    @property maxLife = 10000;
     @property({ tooltip: 'Enable keyboard debug (C crack / B break)' }) enableDebugControls = true;
     @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
     @property({ type: cc.Prefab, tooltip: '爆炸粒子特效 prefab' }) explosionPrefab: cc.Prefab = null;
 
     private sprite: cc.Sprite = null;
     private velocity = cc.v2(0, 0);
-    private currentLife = 100;
+    private currentLife = 10000;
     private lastY = 0;
     private isAlive = true;
     private lastGroundContact: cc.Node = null;
