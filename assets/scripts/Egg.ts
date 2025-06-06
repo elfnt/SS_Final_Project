@@ -29,6 +29,7 @@ export default class Egg extends cc.Component {
     @property maxLife = 100;
     @property({ tooltip: 'Enable keyboard debug (C crack / B break)' }) enableDebugControls = true;
     @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
+    @property({ type: cc.Prefab, tooltip: '爆炸粒子特效 prefab' }) explosionPrefab: cc.Prefab = null;
 
     private sprite: cc.Sprite = null;
     private velocity = cc.v2(0, 0);
@@ -127,6 +128,12 @@ export default class Egg extends cc.Component {
                 this.die();
             }
             cc.log(`[Egg][${this.eggId}] Fall damage: ${damage}, Remaining life: ${this.currentLife}`);
+            // 🔥 觸發爆炸粒子特效
+            if (this.explosionPrefab) {
+                const explosion = cc.instantiate(this.explosionPrefab);
+                explosion.setPosition(this.node.getPosition()); // 或者改為 contact.getWorldManifold().points[0]
+                this.node.parent.addChild(explosion); // 加到蛋的父節點或 Canvas 上
+            }
         }
         this.lastY = this.node.y;
     }
