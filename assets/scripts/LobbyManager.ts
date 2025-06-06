@@ -164,7 +164,7 @@ export default class LobbyManager extends cc.Component {
         this.multiplayerManager.assignRandomImposter()
             .then(imposterId => {
                 if (imposterId) {
-                    cc.log(`[LobbyManager] Game start process successful. Imposter: ${imposterId}`);
+                    cc.log(`[LobbyManager] Game start process successful. Imposter ID: ${imposterId}`);
                     // Scene transition is handled by MultiplayerManager's listener
                 } else {
                     cc.warn('[LobbyManager] Failed to start game - no imposter assigned.');
