@@ -14,7 +14,7 @@ export default class ItemController extends cc.Component {
         this.initialPosition = this.node.getPosition().clone();
         this.initBoxInFirebase();
         this.listenToFirebase();
-    }
+    }    
     update(dt: number) {
         // 只有「地上可推動」時同步座標
         if (!this.node.active) return;

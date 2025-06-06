@@ -1,6 +1,21 @@
 import FirebaseManager from "./FirebaseManager";
 const { ccclass, property } = cc._decorator;
 
+// --- 線性插值輔助 ---
+function lerp(a: number, b: number, t: number): number {
+    return a + (b - a) * t;
+}
+function lerpVec2(a: cc.Vec2, b: cc.Vec2, t: number): cc.Vec2 {
+    return cc.v2(lerp(a.x, b.x, t), lerp(a.y, b.y, t));
+}
+function lerpAngle(a: number, b: number, t: number): number {
+    // 處理跨 0~360 的插值
+    let diff = b - a;
+    while (diff > 180) diff -= 360;
+    while (diff < -180) diff += 360;
+    return a + diff * t;
+}
+
 @ccclass
 export default class Egg extends cc.Component {
     @property({ tooltip: "Firebase 上的蛋 ID" })
@@ -24,12 +39,20 @@ export default class Egg extends cc.Component {
     private rb: cc.RigidBody = null;
     private respawnPoint: cc.Vec2 = null;
 
-    private syncInterval = 0.1;
+    private syncInterval = 0.05;
     private timeSinceLastSync = 0;
 
     private lastSyncedPos: cc.Vec2 = null;
     private lastSyncedRot: number = 0;
     private lastSyncedLife: number = 0;
+
+    // --- 平滑插值的目標值 ---
+    private targetPos: cc.Vec2 = null;
+    private targetRot: number = 0;
+    private targetLife: number = 100;
+
+    // --- 插值參數 ---
+    private lerpFactor = 0.35; // 插值比例，越大越快跟上遠端，建議0.2~0.5
 
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite) || this.node.getComponentInChildren(cc.Sprite);
@@ -39,6 +62,10 @@ export default class Egg extends cc.Component {
         this.respawnPoint = this.node.getPosition().clone();
         this.currentLife = this.maxLife;
         this.lastY = this.node.y;
+
+        this.targetPos = this.node.getPosition().clone();
+        this.targetRot = this.node.angle;
+        this.targetLife = this.currentLife;
 
         this.initEggInFirebase();
         this.listenToFirebase();
@@ -142,6 +169,25 @@ export default class Egg extends cc.Component {
             }
             this.timeSinceLastSync = 0;
         }
+
+        // ----------- **平滑插值顯示** -----------
+        // 插值 position
+        if (this.targetPos) {
+            let cur = this.node.getPosition();
+            let lerped = lerpVec2(cur, this.targetPos, this.lerpFactor);
+            this.node.setPosition(lerped);
+        }
+        // 插值 rotation
+        if (typeof this.targetRot === "number") {
+            let curA = this.node.angle;
+            let lerpedA = lerpAngle(curA, this.targetRot, this.lerpFactor);
+            this.node.angle = lerpedA;
+        }
+        // 生命值可以直接跳變（不影響體感）
+        if (typeof this.targetLife === "number" && this.currentLife !== this.targetLife) {
+            this.currentLife = this.targetLife;
+            this.updateEggAppearance();
+        }
     }
 
     private initEggInFirebase() {
@@ -168,18 +214,15 @@ export default class Egg extends cc.Component {
             cc.log(`[Egg][${this.eggId}] [監聽] Firebase 狀態：`, data);
             if (!data) return;
 
-            // 只要 fetch 下來的資料跟本地不同就套用
-            if (
-                Math.abs(this.node.x - data.position.x) > 1 ||
-                Math.abs(this.node.y - data.position.y) > 1 ||
-                Math.abs(this.node.angle - (data.rotation || 0)) > 0.5 ||
-                this.currentLife !== data.life
-            ) {
-                this.node.setPosition(data.position.x, data.position.y);
-                this.node.angle = data.rotation || 0;
-                this.currentLife = data.life;
-                this.updateEggAppearance();
-                cc.log(`[Egg][${this.eggId}] [套用] position(${data.position.x}, ${data.position.y}) rotation(${data.rotation}), life(${data.life})`);
+            // 更新「目標狀態」（update 裡插值用）
+            if (data.position) {
+                this.targetPos = cc.v2(data.position.x, data.position.y);
+            }
+            if (typeof data.rotation === "number") {
+                this.targetRot = data.rotation;
+            }
+            if (typeof data.life === "number") {
+                this.targetLife = data.life;
             }
         });
     }
@@ -237,5 +280,10 @@ export default class Egg extends cc.Component {
             collider.enabled = true;
             collider.apply();
         }
+
+        // respawn 也立刻套用到「插值目標」
+        this.targetPos = this.node.getPosition().clone();
+        this.targetRot = this.node.angle;
+        this.targetLife = this.currentLife;
     }
 }
