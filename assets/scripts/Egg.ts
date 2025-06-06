@@ -24,7 +24,7 @@ export default class Egg extends cc.Component {
     private rb: cc.RigidBody = null;
     private respawnPoint: cc.Vec2 = null;
 
-    private syncInterval = 0.1;
+    private syncInterval = 0.02;
     private timeSinceLastSync = 0;
 
     private lastSyncedPos: cc.Vec2 = null;
