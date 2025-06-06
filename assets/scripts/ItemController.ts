@@ -63,7 +63,7 @@ export default class ItemController extends cc.Component {
 
         db.ref(`boxes/${this.itemId}`).on("value", (snapshot) => {
             const box = snapshot.val();
-            cc.log(`[ItemController] ${this.itemId} 狀態：`, box);
+            //cc.log(`[ItemController] ${this.itemId} 狀態：`, box);
 
             if (!box || box.active === false) {
                 // 消失（被撿起或資料不存在）
