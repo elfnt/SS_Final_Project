@@ -15,13 +15,14 @@ export default class ItemController extends cc.Component {
         this.initBoxInFirebase();
         this.listenToFirebase();
     }    
+
     update(dt: number) {
         // 只有「地上可推動」時同步座標
         if (!this.node.active) return;
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
 
-        // 這邊可加 active=true 條件強化嚴謹性
+        // 可加 active=true 條件強化嚴謹性
         db.ref(`boxes/${this.itemId}`).once("value", (snapshot) => {
             const box = snapshot.val();
             if (!box || box.active !== true) return;
@@ -29,12 +30,12 @@ export default class ItemController extends cc.Component {
             const curPos = this.node.getPosition();
             if (
                 !this.lastSentPos ||
-                Math.abs(curPos.x - this.lastSentPos.x) > 1 ||
-                Math.abs(curPos.y - this.lastSentPos.y) > 1
+                Math.abs(curPos.x - this.lastSentPos.x) > 1e-2 ||    // 用小數比較
+                Math.abs(curPos.y - this.lastSentPos.y) > 1e-2
             ) {
                 db.ref(`boxes/${this.itemId}/position`).set({
-                    x: Math.round(curPos.x),
-                    y: Math.round(curPos.y)
+                    x: curPos.x,
+                    y: curPos.y
                 });
                 this.lastSentPos = curPos.clone();
             }
@@ -49,7 +50,7 @@ export default class ItemController extends cc.Component {
             if (!snapshot.exists()) {
                 db.ref(`boxes/${this.itemId}`).set({
                     active: true,
-                    position: { x: Math.round(this.initialPosition.x), y: Math.round(this.initialPosition.y) }
+                    position: { x: this.initialPosition.x, y: this.initialPosition.y }
                 });
                 cc.log(`[ItemController] 初始化 ${this.itemId} 到 Firebase`);
             }
@@ -72,7 +73,9 @@ export default class ItemController extends cc.Component {
             }
             // 顯示在地上
             this.node.active = true;
-            this.node.setPosition(box.position.x, box.position.y);
+            if (box.position) {
+                this.node.setPosition(box.position.x, box.position.y);
+            }
             // 若你需要特效，也可以在這裡加
         });
     }
@@ -83,7 +86,7 @@ export default class ItemController extends cc.Component {
         if (!db) return;
         db.ref(`boxes/${this.itemId}`).set({
             active: true,
-            position: { x: Math.round(this.initialPosition.x), y: Math.round(this.initialPosition.y) }
+            position: { x: this.initialPosition.x, y: this.initialPosition.y }
         });
         this.node.active = true;
         this.node.setPosition(this.initialPosition.x, this.initialPosition.y);
