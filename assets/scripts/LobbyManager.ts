@@ -165,7 +165,40 @@ export default class LobbyManager extends cc.Component {
             .then(imposterId => {
                 if (imposterId) {
                     cc.log(`[LobbyManager] Game start process successful. Imposter ID: ${imposterId}`);
-                    // Scene transition is handled by MultiplayerManager's listener
+                    
+                    // NEW CODE: Properly transfer players from lobby to active game
+                    const gameId = "default_game";
+                    const players = this.multiplayerManager.getOnlinePlayers();
+                    
+                    // Prepare batch updates
+                    const updates = {};
+                    
+                    // Mark all players as active in the game
+                    players.forEach(player => {
+                        updates[`games/${gameId}/activePlayers/${player.id}`] = {
+                            name: player.name,
+                            active: true
+                        };
+                        
+                        // Remove player from lobby list (to prevent rejoining)
+                        updates[`lobby/players/${player.id}`] = null;
+                    });
+                    
+                    // Update game state
+                    updates[`games/${gameId}/state`] = "active";
+                    updates[`games/${gameId}/startTime`] = firebase.database.ServerValue.TIMESTAMP;
+                    updates[`games/${gameId}/playerCount`] = players.length;
+                    
+                    // Apply all updates atomically
+                    FirebaseManager.getInstance().database.ref().update(updates)
+                        .then(() => {
+                            cc.log("[LobbyManager] Successfully transferred players from lobby to game");
+                        })
+                        .catch(error => {
+                            cc.error("[LobbyManager] Error updating player states:", error);
+                        });
+                    
+                    // Scene transition is still handled by MultiplayerManager's listener
                 } else {
                     cc.warn('[LobbyManager] Failed to start game - no imposter assigned.');
                     this.isLoadingScene = false;
