@@ -356,8 +356,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        6207.168,
-        -409.125,
+        -6910.309,
+        232.663,
         0,
         0,
         0,
@@ -814,6 +814,7 @@
       "__id__": 5
     },
     "_enabled": true,
+    "eggId": "egg1",
     "moveSpeed": 5,
     "jumpForce": 10,
     "normalSprite": {
@@ -882,8 +883,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -4448.684,
-        482.754,
+        -7031.146,
+        301.881,
         0,
         0,
         0,
@@ -9545,8 +9546,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        3133.337,
-        -422.826,
+        3136.057,
+        -439.149,
         0,
         0,
         0,
@@ -11528,17 +11529,6 @@
     "_id": "7cyzFwXVFMH76X9ygJQJRR"
   },
   {
-    "__type__": "5e776dR7f1CG57Z4mehlL19",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 282
-    },
-    "_enabled": true,
-    "itemId": "spring1",
-    "_id": "44WZT7h39F5qZPqoAl1ZvT"
-  },
-  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 287
@@ -11701,17 +11691,6 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "aeVid7oZtLNK5f2u/r0UYz"
-  },
-  {
-    "__type__": "5e776dR7f1CG57Z4mehlL19",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 289
-    },
-    "_enabled": true,
-    "itemId": "sponge1",
-    "_id": "cfL0x2toRMf7sZNLymfZcz"
   },
   {
     "__type__": "cc.PrefabInfo",
@@ -11909,17 +11888,6 @@
     "_id": "adbGPEvaxEobA/ZcwuzKRk"
   },
   {
-    "__type__": "5e776dR7f1CG57Z4mehlL19",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 295
-    },
-    "_enabled": true,
-    "itemId": "jumppad1",
-    "_id": "83WGsCL/5Bd4deE0WnO6yR"
-  },
-  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 298
@@ -11994,8 +11962,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 1,
+    "groupIndex": 1,
     "_id": "8azOsk4nVCcomCPyepWQL8"
   },
   {
@@ -12145,8 +12113,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 1,
+    "groupIndex": 1,
     "_id": "e92acE7WlD9Ji6xj7tgrTU"
   },
   {
@@ -12296,8 +12264,8 @@
     "_skewX": 0,
     "_skewY": 0,
     "_is3DNode": false,
-    "_groupIndex": 0,
-    "groupIndex": 0,
+    "_groupIndex": 1,
+    "groupIndex": 1,
     "_id": "435ABGreRL3abVT0hyrDjS"
   },
   {
