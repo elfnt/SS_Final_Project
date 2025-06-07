@@ -1,192 +1,146 @@
+// Egg.ts (Final Authoritative Version)
 import FirebaseManager from "./FirebaseManager";
 const { ccclass, property } = cc._decorator;
 
+function lerpAngle(a: number, b: number, t: number): number {
+    let diff = b - a;
+    while (diff > 180) diff -= 360;
+    while (diff < -180) diff += 360;
+    return a + diff * t;
+}
+
 @ccclass
 export default class Egg extends cc.Component {
-    @property({ tooltip: "Firebase 上的蛋 ID" })
+    @property({ tooltip: "Firebase �W���J ID" })
     eggId: string = "egg1";
 
-    @property moveSpeed = 5;
-    @property jumpForce = 10;
-    @property({ type: cc.SpriteFrame, tooltip: 'Normal egg appearance' }) normalSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame, tooltip: 'Cracked egg appearance' }) crackedSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame, tooltip: 'Broken egg appearance' }) brokenSprite: cc.SpriteFrame = null;
-    @property maxLife = 10000;
-    @property({ tooltip: 'Enable keyboard debug (C crack / B break)' }) enableDebugControls = true;
+    @property({ type: cc.SpriteFrame }) normalSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame }) crackedSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame }) brokenSprite: cc.SpriteFrame = null;
+    @property maxLife = 100;
     @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
-    @property({ type: cc.Prefab, tooltip: '爆炸粒子特效 prefab' }) explosionPrefab: cc.Prefab = null;
+    @property({ tooltip: "���ȳt�� (��ĳ 10-20)" }) lerpSpeed: number = 15;
 
+    private isControlling: boolean = false;
+    private targetPos: cc.Vec2 = null;
+    private targetRot: number = 0;
+    private touchingPlayerIds: Set<string> = new Set();
     private sprite: cc.Sprite = null;
-    private velocity = cc.v2(0, 0);
-    private currentLife = 10000;
+    private currentLife = 100;
     private lastY = 0;
     private isAlive = true;
-    private lastGroundContact: cc.Node = null;
     private rb: cc.RigidBody = null;
     private respawnPoint: cc.Vec2 = null;
-
     private syncInterval = 0.05;
     private timeSinceLastSync = 0;
 
-    private lastSyncedPos: cc.Vec2 = null;
-    private lastSyncedRot: number = 0;
-    private lastSyncedLife: number = 0;
-
     onLoad() {
-        this.sprite = this.getComponent(cc.Sprite) || this.node.getComponentInChildren(cc.Sprite);
-        if (this.sprite && this.normalSprite) this.sprite.spriteFrame = this.normalSprite;
-
+        this.sprite = this.getComponent(cc.Sprite);
         this.rb = this.getComponent(cc.RigidBody);
-        this.respawnPoint = this.node.getPosition().clone();
+        this.respawnPoint = cc.v2(this.node.x, this.node.y);
         this.currentLife = this.maxLife;
         this.lastY = this.node.y;
-
-        this.initEggInFirebase();
+        this.targetPos = cc.v2(this.node.x, this.node.y);
+        this.targetRot = this.node.angle;
+        this.initializeWithTransaction();
         this.listenToFirebase();
-
-        cc.log(`[Egg][${this.eggId}] onLoad called!`);
-    }
-
-    onEnable() {
-        if (this.enableDebugControls) {
-            cc.systemEvent.on(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        }
-    }
-    onDisable() {
-        if (this.enableDebugControls) {
-            cc.systemEvent.off(cc.SystemEvent.EventType.KEY_DOWN, this.onKeyDown, this);
-        }
-    }
-    private onKeyDown(e: cc.Event.EventKeyboard) {
-        if (!this.isAlive) return;
-        switch (e.keyCode) {
-            case cc.macro.KEY.c:
-                this.currentLife = this.maxLife / 2;
-                this.updateEggAppearance();
-                break;
-            case cc.macro.KEY.b:
-                this.currentLife = 0;
-                this.die();
-                break;
-        }
     }
 
     onBeginContact(contact, selfCollider, otherCollider) {
-        const other = otherCollider.node;
-        const name = other.name.toLowerCase();
-        const isSafe = name.includes("spring") || name.includes("sponge");
-        if (isSafe) {
-            cc.log(`[Egg][${this.eggId}] Safe landing on ${other.name}, skipping damage.`);
-            this.lastY = this.node.y;
-            return;
+        const playerComp = otherCollider.node.getComponent("Player") || otherCollider.node.getComponent("Other-Player");
+        if (playerComp?.playerId) {
+            this.touchingPlayerIds.add(playerComp.playerId);
+            this.tryTakeControl(playerComp.playerId);
         }
-        if (other.group !== this.groundGroup) return;
-        if (this.lastGroundContact === other) return;
-        this.lastGroundContact = other;
-
+        if (!this.isControlling || !this.isAlive) return;
+        if (otherCollider.node.group !== this.groundGroup) return;
         const fallHeight = this.lastY - this.node.y;
-        cc.log(`[Egg][${this.eggId}] Fall height: ${fallHeight}`);
-
-        if (fallHeight < 3) {
-            cc.log(`[Egg][${this.eggId}] Fall too short (${fallHeight}), ignoring.`);
-            return;
-        }
         if (fallHeight > 100) {
-            const normalized = Math.min((fallHeight - 100) / 400, 1);
-            const damage = Math.floor(this.maxLife * normalized);
-            this.currentLife = Math.max(0, this.currentLife - damage);
-            this.updateEggAppearance();
-
-            if (this.currentLife <= 0) {
-                this.die();
-            }
-            cc.log(`[Egg][${this.eggId}] Fall damage: ${damage}, Remaining life: ${this.currentLife}`);
-            // 🔥 觸發爆炸粒子特效
-            if (this.explosionPrefab) {
-                const explosion = cc.instantiate(this.explosionPrefab);
-                explosion.setPosition(this.node.getPosition()); // 或者改為 contact.getWorldManifold().points[0]
-                this.node.parent.addChild(explosion); // 加到蛋的父節點或 Canvas 上
+            const damage = Math.floor(this.maxLife * Math.min((fallHeight - 100) / 400, 1));
+            const newLife = Math.max(0, this.currentLife - damage);
+            if (newLife !== this.currentLife) {
+                FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}/life`).set(newLife);
             }
         }
         this.lastY = this.node.y;
     }
+    
     onEndContact(contact, selfCol, otherCol) {
-        if (otherCol.node.group !== this.groundGroup) return;
-        if (this.lastGroundContact === otherCol.node) {
-            this.lastGroundContact = null;
-        }
+        const playerComp = otherCol.node.getComponent("Player") || otherCol.node.getComponent("Other-Player");
+        if (playerComp?.playerId) this.touchingPlayerIds.delete(playerComp.playerId);
+        if (!this.isControlling || otherCol.node.group !== this.groundGroup) return;
         this.lastY = this.node.y;
     }
 
     update(dt: number) {
         if (!this.isAlive) return;
-        if (!this.rb) {
-            this.velocity.y += -20 * dt;
-            let pos = this.node.position;
-            pos.y += this.velocity.y;
-            this.node.setPosition(pos);
-        }
-        if (this.node.y > this.lastY) this.lastY = this.node.y;
-
-        // === 只有蛋有移動/旋轉/生命變化時才同步 ===
-        this.timeSinceLastSync += dt;
-        if (this.timeSinceLastSync >= this.syncInterval) {
-            const curPos = this.node.getPosition();
-            const curRot = this.node.angle;
-            const curLife = this.currentLife;
-
-            if (
-                !this.lastSyncedPos ||
-                Math.abs(curPos.x - this.lastSyncedPos.x) > 1 ||
-                Math.abs(curPos.y - this.lastSyncedPos.y) > 1 ||
-                Math.abs(curRot - this.lastSyncedRot) > 0.5 ||
-                curLife !== this.lastSyncedLife
-            ) {
+        if (this.isControlling) {
+            if (this.node.y > this.lastY) this.lastY = this.node.y;
+            this.timeSinceLastSync += dt;
+            if (this.timeSinceLastSync >= this.syncInterval) {
                 this.syncStateToFirebase();
-                this.lastSyncedPos = curPos.clone();
-                this.lastSyncedRot = curRot;
-                this.lastSyncedLife = curLife;
+                this.timeSinceLastSync = 0;
             }
-            this.timeSinceLastSync = 0;
+        } else {
+            if (this.targetPos) {
+                const targetPos3 = new cc.Vec3(this.targetPos.x, this.targetPos.y, this.node.position.z);
+                this.node.position = this.node.position.lerp(targetPos3, dt * this.lerpSpeed);
+            }
+            if (typeof this.targetRot === "number") this.node.angle = lerpAngle(this.node.angle, this.targetRot, dt * this.lerpSpeed);
         }
     }
-
-    private initEggInFirebase() {
+    
+    private initializeWithTransaction() {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
-        db.ref(`eggs/${this.eggId}`).once("value", (snap) => {
-            if (!snap.exists()) {
-                db.ref(`eggs/${this.eggId}`).set({
-                    life: this.currentLife,
-                    position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
-                    rotation: Math.round(this.node.angle)
-                });
-                cc.log(`[Egg][${this.eggId}] 初始化到 Firebase`);
+        const localId = cc.sys.localStorage.getItem("playerId");
+        const eggRef = db.ref(`eggs/${this.eggId}`);
+        eggRef.transaction((data) => {
+            if (data === null) return {
+                life: this.maxLife,
+                position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
+                rotation: Math.round(this.node.angle),
+                controllerId: localId
+            };
+        }, (error) => { if (error) cc.error('[Egg] Transaction failed!', error); });
+    }
+
+    private tryTakeControl(newPlayerId: string) {
+        const localId = cc.sys.localStorage.getItem("playerId");
+        const ref = FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}/controllerId`);
+        ref.once("value", snapshot => {
+            const currentController = snapshot.val();
+            if ((!currentController || !this.touchingPlayerIds.has(currentController)) && this.touchingPlayerIds.has(newPlayerId) && newPlayerId === localId) {
+                ref.set(newPlayerId);
             }
         });
     }
 
-    // 🚩🚩🚩 這才是所有人都同步的方式，會自動監聽變化
     private listenToFirebase() {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
+        const localId = cc.sys.localStorage.getItem("playerId");
         db.ref(`eggs/${this.eggId}`).on("value", (snap) => {
             const data = snap.val();
-            if (!data) return;
-            if (data.position) this.node.setPosition(data.position.x, data.position.y);
-            if (typeof data.rotation === "number") this.node.angle = data.rotation;
+            if (!data) { this.node.active = false; return; }
+            this.node.active = true;
+            this.isControlling = data.controllerId === localId;
+            if (this.rb) this.rb.enabled = this.isControlling;
             if (typeof data.life === "number" && this.currentLife !== data.life) {
                 this.currentLife = data.life;
                 this.updateEggAppearance();
+                if (this.currentLife <= 0) this.die(); else this.isAlive = true;
+            }
+            if (!this.isControlling) {
+                if (data.position) this.targetPos = cc.v2(data.position.x, data.position.y);
+                if (typeof data.rotation === "number") this.targetRot = data.rotation;
             }
         });
     }
 
     private syncStateToFirebase() {
-        const db = FirebaseManager.getInstance()?.database;
-        if (!db) return;
-        db.ref(`eggs/${this.eggId}`).update({
-            life: this.currentLife,
+        if (!this.isControlling) return;
+        FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}`).update({
             position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
             rotation: Math.round(this.node.angle)
         });
@@ -194,41 +148,28 @@ export default class Egg extends cc.Component {
 
     private updateEggAppearance() {
         if (!this.sprite) return;
-        if (this.currentLife <= 0 && this.brokenSprite) {
-            this.sprite.spriteFrame = this.brokenSprite;
-        } else if (this.currentLife < this.maxLife && this.crackedSprite) {
-            this.sprite.spriteFrame = this.crackedSprite;
-        } else if (this.normalSprite) {
-            this.sprite.spriteFrame = this.normalSprite;
-        }
+        if (this.currentLife <= 0) this.sprite.spriteFrame = this.brokenSprite;
+        else if (this.currentLife < this.maxLife) this.sprite.spriteFrame = this.crackedSprite;
+        else this.sprite.spriteFrame = this.normalSprite;
     }
 
     private die() {
         if (!this.isAlive) return;
         this.isAlive = false;
-        this.currentLife = 0;
-        this.updateEggAppearance();
-        cc.log(`[Egg][${this.eggId}] [死亡] Egg broken. Respawning in 3 seconds...`);
-        this.scheduleOnce(() => this.respawn(), 3);
+        if (this.isControlling) this.scheduleOnce(() => this.respawn(), 3);
     }
 
     public respawn() {
-        this.node.setPosition(this.respawnPoint);
-        if (this.rb) {
-            this.rb.linearVelocity = cc.v2(0, 0);
-            this.rb.angularVelocity = 0;
-            this.rb.awake = true;
-        }
-        this.currentLife = this.maxLife;
-        this.updateEggAppearance();
-        this.isAlive = true;
-        this.velocity = cc.v2(0, 0);
-        this.lastGroundContact = null;
-        this.lastY = this.node.y;
-        const collider = this.getComponent(cc.PhysicsBoxCollider);
-        if (collider) {
-            collider.enabled = true;
-            collider.apply();
-        }
+        if (!this.isControlling) return;
+        FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}`).update({
+            life: this.maxLife,
+            position: { x: Math.round(this.respawnPoint.x), y: Math.round(this.respawnPoint.y) },
+            rotation: 0
+        }).then(() => {
+            this.node.setPosition(this.respawnPoint);
+            this.node.angle = 0;
+            this.lastY = this.node.y;
+            if (this.rb) { this.rb.linearVelocity = cc.v2(0, 0); this.rb.angularVelocity = 0; }
+        });
     }
 }

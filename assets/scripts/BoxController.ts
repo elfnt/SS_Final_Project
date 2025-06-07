@@ -4,22 +4,22 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class BoxLogicController extends cc.Component {
-    @property({ tooltip: "Firebase ä¸Šçš„ box ID" })
+    @property({ tooltip: "Firebase ¤Wªº box ID" })
     boxId: string = "box1";
 
-    @property({ tooltip: "æ˜¯å¦å•Ÿç”¨è‡ªå‹•é‡ç”Ÿï¼ˆy < é–€æª»ï¼‰" })
+    @property({ tooltip: "¬O§_±Ò¥Î¦Û°Ê­«¥Í¡]y < ªùÂe¡^" })
     enableAutoRespawn: boolean = true;
 
-    @property({ tooltip: "y < ? å°±æœƒè§¸ç™¼é‡ç”Ÿ" })
+    @property({ tooltip: "y < ? ´N·|Ä²µo­«¥Í" })
     fallThreshold: number = -1200;
 
-    @property({ tooltip: "é‡ç”Ÿå¾Œåœç”¨å¹¾ç§’ï¼ˆé˜²æ­¢çˆ­å¥ªï¼‰" })
+    @property({ tooltip: "­«¥Í«á°±¥Î´X¬í¡]¨¾¤îª§¹Ü¡^" })
     respawnLockSeconds: number = 0.5;
 
-    @property({ tooltip: "é‡ç”Ÿé è¨­è§’åº¦" })
+    @property({ tooltip: "­«¥Í¹w³]¨¤«×" })
     angleISet: number = 0;
 
-    @property({ type: cc.Label, tooltip: "é¡¯ç¤ºå‰©é¤˜äººæ•¸çš„ Label" })
+    @property({ type: cc.Label, tooltip: "Åã¥Ü³Ñ¾l¤H¼Æªº Label" })
     labelNode: cc.Label = null;
 
     private rb: cc.RigidBody = null;
@@ -41,7 +41,7 @@ export default class BoxLogicController extends cc.Component {
         const localId = cc.sys.localStorage.getItem("playerId");
         const ref = firebase.database.ref(`boxes/${this.boxId}`);
 
-        // âœ… åˆå§‹åŒ– Firebase ç‹€æ…‹
+        // ? ªì©l¤Æ Firebase ª¬ºA
         ref.update({
             isRespawn: true,
             controllerId: localId,
@@ -53,35 +53,41 @@ export default class BoxLogicController extends cc.Component {
             boxTriggered: false,
             status: 0
         }).then(() => {
-            cc.log(`[BoxLogic] âœ… é–‹å±€åˆå§‹åŒ– isRespawn = trueï¼Œä¸¦å¯«å…¥åˆå§‹ä½ç½®`);
+            cc.log(`[BoxLogic] ? ¶}§½ªì©l¤Æ isRespawn = true¡A¨Ã¼g¤Jªì©l¦ì¸m`);
 
-            // âœ… æ›´æ–° node çš„ä½ç½®
+            // ? §ó·s node ªº¦ì¸m
             this.node.setPosition(this.initialPosition);
             this.node.angle = this.angleISet;
 
-            // âœ… å•Ÿå‹• Firebase ç›£è½
+            // ? ±Ò°Ê Firebase ºÊÅ¥
             this.listenToFirebase();
 
-            // âœ… å•Ÿå‹•ä½ç½®ä¸Šå‚³æ’ç¨‹
+            // ? ±Ò°Ê¦ì¸m¤W¶Ç±Æµ{
             this.schedule(() => {
                 if (!this.isRespawning && this.isControlling) {
                     this.tryUploadPosition();
                 }
             }, 0.05);
 
-            // âœ… å»¶é²æ¸…é™¤é‡ç”Ÿç‹€æ…‹
+            // ? ©µ¿ğ²M°£­«¥Íª¬ºA
             setTimeout(() => {
                 ref.update({ isRespawn: false });
                 this.isRespawning = false;
-                cc.log(`[BoxLogic] ğŸ•’ isRespawn = false`);
+                cc.log(`[BoxLogic] ? isRespawn = false`);
             }, this.respawnLockSeconds * 1000);
         });
+
+        cc.systemEvent.on("PLAYER_RESPAWNED", this.onPlayerRespawned, this);
     }
 
+    onDestroy() {
+        cc.systemEvent.off("PLAYER_RESPAWNED", this.onPlayerRespawned, this);
+    }
 
-
-
-
+    private onPlayerRespawned() {
+        cc.log(`[BoxLogic] ? ª±®a­«¥Í¨Æ¥óÄ²µo ¡÷ ÁÙ­ì Box ¦ì¸m`);
+        this.doRespawn();
+    }
 
     start() {
         this.schedule(() => {
@@ -126,7 +132,6 @@ export default class BoxLogicController extends cc.Component {
             const controllerStillTouching = current && this.touchingPlayerIds.has(current);
             const isNewToucher = this.touchingPlayerIds.has(id);
 
-            // âœ… åªæœ‰ã€Œcontroller ä¸åœ¨ç¢°ã€ä¸”ã€Œæ–°ç©å®¶ç¢°åˆ°äº†ã€æ‰æ›æ§åˆ¶æ¬Š
             if (!controllerStillTouching && isNewToucher) {
                 if (id === localId) {
                     this.isControlling = true;
@@ -134,16 +139,15 @@ export default class BoxLogicController extends cc.Component {
                     firebase.database.ref(`boxes/${this.boxId}`).update({
                         controllerId: id
                     });
-                    cc.log(`[BoxLogic] ğŸ® ${id} æˆç‚ºæ–°çš„æ§åˆ¶è€…ï¼ˆåŸæ§åˆ¶è€…å·²é›¢é–‹ï¼‰`);
+                    cc.log(`[BoxLogic] ? ${id} ¦¨¬°·sªº±±¨îªÌ¡]­ì±±¨îªÌ¤wÂ÷¶}¡^`);
                 }
             } else {
-                cc.log(`[BoxLogic] ${id} å˜—è©¦æ¥ç®¡ä½† ${current} ä»ç‚ºæ§åˆ¶è€…æˆ–æ¢ä»¶ä¸ç¬¦`);
+                cc.log(`[BoxLogic] ${id} ¹Á¸Õ±µºŞ¦ı ${current} ¤´¬°±±¨îªÌ©Î±ø¥ó¤£²Å`);
             }
         });
     }
 
-
-   private tryUploadPosition() {
+    private tryUploadPosition() {
         const pos = this.node.getPosition();
         const angle = this.node.angle;
 
@@ -151,7 +155,7 @@ export default class BoxLogicController extends cc.Component {
         const yChanged = !this.lastSentPos || Math.abs(pos.y - this.lastSentPos.y) > 0.5;
         const rotChanged = this.lastSentRot === null || Math.abs(angle - this.lastSentRot) > 1;
 
-        cc.log(`[BoxLogic] ğŸ“¤ å˜—è©¦ä¸Šå‚³ positionï¼ŒxChanged=${xChanged}, yChanged=${yChanged}, rotChanged=${rotChanged}`);
+        cc.log(`[BoxLogic] ? ¹Á¸Õ¤W¶Ç position¡AxChanged=${xChanged}, yChanged=${yChanged}, rotChanged=${rotChanged}`);
 
         if (xChanged || yChanged || rotChanged) {
             this.lastSentPos = pos.clone();
@@ -163,13 +167,12 @@ export default class BoxLogicController extends cc.Component {
                 y: Math.round(pos.y),
                 rotation: Math.round(angle)
             }).then(() => {
-                cc.log(`[BoxLogic] âœ… æˆåŠŸä¸Šå‚³ä½ç½®ï¼š(${pos.x}, ${pos.y}, rot=${angle})`);
+                cc.log(`[BoxLogic] ? ¦¨¥\¤W¶Ç¦ì¸m¡G(${pos.x}, ${pos.y}, rot=${angle})`);
             }).catch((err) => {
-                cc.error(`[BoxLogic] âŒ ä¸Šå‚³ Firebase å¤±æ•—ï¼š`, err);
+                cc.error(`[BoxLogic] ? ¤W¶Ç Firebase ¥¢±Ñ¡G`, err);
             });
         }
     }
-
 
     private listenToFirebase() {
         const firebase = FirebaseManager.getInstance();
@@ -184,11 +187,10 @@ export default class BoxLogicController extends cc.Component {
             this.controllerId = remoteController;
             this.isControlling = (remoteController === localId);
 
-            cc.log(`[BoxLogic] ğŸ” localId=${localId}, controllerId=${remoteController}, isControlling=${this.isControlling}`);
+            cc.log(`[BoxLogic] ? localId=${localId}, controllerId=${remoteController}, isControlling=${this.isControlling}`);
 
             this.isRespawning = !!data.isRespawn;
 
-            // å¦‚æœä¸æ˜¯æ§åˆ¶è€…æ‰åŒæ­¥ä½ç½®
             const pos = data.position;
             if (!this.isControlling && pos && !this.isRespawning) {
                 if (this.rb && this.rb.enabled) this.rb.enabled = false;
@@ -202,7 +204,7 @@ export default class BoxLogicController extends cc.Component {
                         this.rb.awake = true;
                     }
                 }, 0.01);
-                cc.log(`[BoxLogic] â¬‡ï¸ éæ§åˆ¶è€…åŒæ­¥ä½ç½®è‡³ ${pos.x}, ${pos.y}, rot=${pos.rotation}`);
+                cc.log(`[BoxLogic] ?? «D±±¨îªÌ¦P¨B¦ì¸m¦Ü ${pos.x}, ${pos.y}, rot=${pos.rotation}`);
             }
         });
     }
@@ -239,22 +241,6 @@ export default class BoxLogicController extends cc.Component {
             }, this.respawnLockSeconds * 1000);
         });
     }
-
-    private uploadInitialPosition() {
-        const firebase = FirebaseManager.getInstance();
-        const posPath = `boxes/${this.boxId}/position`;
-
-        firebase.database.ref(posPath).set({
-            x: Math.round(this.initialPosition.x),
-            y: Math.round(this.initialPosition.y),
-            rotation: Math.round(this.node.angle)
-        }).then(() => {
-            cc.log(`[BoxLogic] âœ… å¼·åˆ¶è¦†è“‹ Firebase åˆå§‹ä½ç½®ï¼š${posPath}`);
-        }).catch(err => {
-            cc.error(`[BoxLogic] âŒ å¯«å…¥ä½ç½®å¤±æ•—ï¼š`, err);
-        });
-    }
-
 
     private updateRemainingStatus() {
         let remaining: number;

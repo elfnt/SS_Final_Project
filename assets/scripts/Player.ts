@@ -1,11 +1,12 @@
-// Player.ts (Local Player Controller for Multiplayer)
+// Player.ts (Full and Final Code)
 import MultiplayerManager from "./Multiplayer";
 import FirebaseManager from "./FirebaseManager";
 import ItemController from "./ItemController";
+import BoxController from "./BoxController";
 
 const { ccclass, property } = cc._decorator;
 
-declare const firebase: any; // For Firebase v8 SDK (global 'firebase' object)
+declare const firebase: any;
 
 interface PlayerState {
     name: string;
@@ -91,9 +92,6 @@ export default class Player extends cc.Component {
             return;
         }
 
-        // --- FIX STARTS HERE ---
-
-        // 1. Listen for the event (for when it happens in the Lobby)
         this.multiplayerManager.node.on('imposter-assigned', ({ isImposter }) => {
             this.isLocalPlayerImposter = isImposter;
             if (this.playerNameLabel) {
@@ -101,8 +99,6 @@ export default class Player extends cc.Component {
             }
         }, this);
         
-        // 2. Immediately check the status (for when a new scene loads)
-        // This ensures the red name is reapplied in the GameScene.
         if (this.multiplayerManager.isPlayerImposter()) {
             this.isLocalPlayerImposter = true;
             if (this.playerNameLabel) {
@@ -110,8 +106,6 @@ export default class Player extends cc.Component {
             }
         }
         
-        // --- FIX ENDS HERE ---
-
         if (!this.playerId) {
             cc.error("[Player] PlayerID is not set! Cannot initialize multiplayer features.");
             this.enabled = false;
@@ -122,7 +116,136 @@ export default class Player extends cc.Component {
         this.sendCurrentStateToFirebase(true);
     }
     
-    // ... (The rest of your Player.ts file remains exactly the same) ...
+    onDestroy() {
+        this.removeKeyListeners();
+        if (this.multiplayerManager && this.multiplayerManager.node && this.multiplayerManager.node.isValid) {
+            this.multiplayerManager.node.off('imposter-assigned', undefined, this);
+        }
+        if (this.playerId && this.multiplayerManager) {
+            this.multiplayerManager.setLocalPlayerOffline(this.playerId);
+        }
+    }
+
+    update(dt: number) {
+        if (this.isDead || !this.playerId || !this.multiplayerManager) return;
+
+        this.moveHorizontal();
+        this.updateCamera();
+        this.updateAnim();
+        this.detectNearestItem();
+
+        this.node.angle = 0;
+        if (this.rb) this.rb.angularVelocity = 0;
+
+        this.updateNamePosition();
+        if (this.dir.x !== 0 && this.isOnGround) {
+            this.walkSmokeTimer += dt;
+            if (this.walkSmokeTimer >= this.walkSmokeInterval) {
+                this.spawnWalkSmoke();
+                this.walkSmokeTimer = 0;
+            }
+        } else {
+            this.walkSmokeTimer = this.walkSmokeInterval;
+        }
+        this.timeSinceLastSync += dt;
+        if (this.timeSinceLastSync >= this.syncInterval) {
+            this.sendCurrentStateToFirebase();
+            this.timeSinceLastSync = 0;
+        }
+    }
+
+    onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
+        if (this.isDead) return;
+
+        if (otherCol.node.name.toLowerCase().includes("laser")) {
+            const laserCol = otherCol.getComponent(cc.PhysicsBoxCollider);
+            if (laserCol && !laserCol.enabled) {
+                return;
+            }
+            this.die();
+        }
+
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
+            const worldManifold = contact.getWorldManifold();
+            const normal = worldManifold.normal;
+            if (normal.y < -0.5 && contact.isTouching()) {
+                this.isOnGround = true;
+                this.isJumping = false;
+            }
+        }
+    }
+
+    onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
+        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player") {
+            this.isOnGround = false;
+        }
+    }
+
+    private onKeyDown(e: cc.Event.EventKeyboard) {
+        if (this.isDead) return;
+        switch (e.keyCode) {
+            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1;this.node.scaleX = -Math.abs(this.node.scaleX); break;
+            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = Math.abs(this.node.scaleX); break;
+            case cc.macro.KEY.space: if (this.isOnGround) this.jump(); break;
+            case cc.macro.KEY.e:
+                if (this.heldItem) this.dropItem();
+                else if (this.nearestItem) this.pickUpItem(this.nearestItem);
+                break;
+        }
+    }
+
+    private onKeyUp(e: cc.Event.EventKeyboard) {
+        if (this.isDead) return;
+        if ((e.keyCode === cc.macro.KEY.a && this.dir.x === -1) || (e.keyCode === cc.macro.KEY.d && this.dir.x === 1)) this.dir.x = 0;
+    }
+
+    private gatherItems(n: cc.Node, out: cc.Node[]) {
+        if ((n.getComponent(ItemController) || n.getComponent(BoxController)) && n.activeInHierarchy) {
+            out.push(n);
+        }
+        n.children.forEach(c => this.gatherItems(c, out));
+    }
+
+    private pickUpItem(item: cc.Node) {
+        const itemScript = item.getComponent(ItemController);
+        if (!itemScript) {
+            cc.warn("Tried to pick up an object without an ItemController script");
+            return;
+        }
+
+        itemScript.onPickedUpByPlayer();
+
+        this.heldItem = item;
+        this.heldItem.active = false;
+        if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
+    }
+    
+    private dropItem() {
+        if (!this.heldItem) return;
+
+        const itemScript = this.heldItem.getComponent(ItemController);
+        if (!itemScript) {
+            this.heldItem = null;
+            return;
+        }
+
+        const dropPos = this.node.position.add(cc.v3(100 * this.lastFacing, 0, 0));
+
+        itemScript.onDroppedByPlayer(cc.v2(dropPos.x, dropPos.y));
+
+        this.heldItem.parent = this.node.parent;
+        this.heldItem.setPosition(dropPos);
+        this.heldItem.active = true;
+        this.heldItem = null;
+
+        if (this.dropItemSound) cc.audioEngine.playEffect(this.dropItemSound, false);
+        if (this.smokeEffectPrefab) {
+            const smoke = cc.instantiate(this.smokeEffectPrefab);
+            smoke.setPosition(dropPos);
+            this.node.parent.addChild(smoke);
+            this.scheduleOnce(() => { smoke.destroy(); }, 1.5);
+        }
+    }
 
     private applyCharacterFromSelection() {
         this.selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
@@ -176,56 +299,12 @@ export default class Player extends cc.Component {
         .catch(err => cc.error(`[Player] Error setting onDisconnect for ${this.playerId}:`, err));
     }
 
-    onDestroy() {
-        this.removeKeyListeners();
-        if (this.multiplayerManager && this.multiplayerManager.node && this.multiplayerManager.node.isValid) {
-            this.multiplayerManager.node.off('imposter-assigned', undefined, this);
-        }
-        if (this.playerId && this.multiplayerManager) {
-            this.multiplayerManager.setLocalPlayerOffline(this.playerId);
-        }
-    }
-
-    update(dt: number) {
-        if (this.isDead || !this.playerId || !this.multiplayerManager) return;
-
-        this.moveHorizontal();
-        this.updateCamera();
-        this.updateAnim();
-        this.detectNearestItem();
-
-        this.node.angle = 0;
-        if (this.rb) this.rb.angularVelocity = 0;
-
-        this.updateNamePosition();
-        if (this.dir.x !== 0 && this.isOnGround) {
-            this.walkSmokeTimer += dt;
-            if (this.walkSmokeTimer >= this.walkSmokeInterval) {
-                this.spawnWalkSmoke();
-                this.walkSmokeTimer = 0;
-            }
-        } else {
-            this.walkSmokeTimer = this.walkSmokeInterval;
-        }
-        this.timeSinceLastSync += dt;
-        if (this.timeSinceLastSync >= this.syncInterval) {
-            this.sendCurrentStateToFirebase();
-            this.timeSinceLastSync = 0;
-        }
-    }
-
     private spawnWalkSmoke() {
         if (!this.walkSmokePrefab) return;
-
         const smoke = cc.instantiate(this.walkSmokePrefab);
-
-        // 調整位置：貼腳底下
         const smokePos = this.node.position.add(cc.v3(0, -10, 0));
         smoke.setPosition(smokePos);
-
         this.node.parent.addChild(smoke);
-
-        // 自動銷毀（與粒子效果持續時間一致）
         this.scheduleOnce(() => smoke.destroy(), 0.4); 
     }
 
@@ -247,7 +326,6 @@ export default class Player extends cc.Component {
 
     private createNameLabel() {
         if (this.node.getChildByName("PlayerNameLabel")) return;
-
         const lblNode = new cc.Node("PlayerNameLabel");
         this.node.addChild(lblNode);
         this.playerNameLabel = lblNode.addComponent(cc.Label);
@@ -261,7 +339,6 @@ export default class Player extends cc.Component {
         const playerSprite = this.getComponent(cc.Sprite);
         const playerHeight = playerSprite ? playerSprite.node.height * Math.abs(this.node.scaleY) : 64;
         this.playerNameLabel.node.position = cc.v3(0, playerHeight / 2 + 10, 0);
-
         const sX = this.node.scaleX;
         this.playerNameLabel.node.scaleX = Math.abs(this.playerNameLabel.node.scaleX) * (sX === 0 ? 1 : Math.sign(sX));
     }
@@ -287,24 +364,6 @@ export default class Player extends cc.Component {
         cc.systemEvent.off(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
     }
 
-    private onKeyDown(e: cc.Event.EventKeyboard) {
-        if (this.isDead) return;
-        switch (e.keyCode) {
-            case cc.macro.KEY.a: this.dir.x = -1; this.lastFacing = -1;this.node.scaleX = -Math.abs(this.node.scaleX); break;
-            case cc.macro.KEY.d: this.dir.x = 1; this.lastFacing = 1; this.node.scaleX = Math.abs(this.node.scaleX); break;
-            case cc.macro.KEY.space: if (this.isOnGround) this.jump(); break;
-            case cc.macro.KEY.e:
-                if (this.heldItem) this.dropItem();
-                else if (this.nearestItem && this.dir.x === 0) this.pickUpItem(this.nearestItem);
-                break;
-        }
-    }
-
-    private onKeyUp(e: cc.Event.EventKeyboard) {
-        if (this.isDead) return;
-        if ((e.keyCode === cc.macro.KEY.a && this.dir.x === -1) || (e.keyCode === cc.macro.KEY.d && this.dir.x === 1)) this.dir.x = 0;
-    }
-
     private updateCamera() {
          if (this.cameraNode) {
             this.cameraNode.x = this.node.x;
@@ -317,43 +376,16 @@ export default class Player extends cc.Component {
                     : this.isJumping ? "Jump"
                     : this.dir.x !== 0 ? "Move"
                     : "Default";
-    
         if (next === this.currentAnim) return;
-    
         const state = this.anim?.getAnimationState(next);
-        if (!state) {
-            return;
-        }
-    
+        if (!state) return;
         this.anim.play(next);
         this.currentAnim = next;
     }
 
-    onBeginContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
-        if (this.isDead) return;
-
-        if (otherCol.node.name.toLowerCase().includes("laser")) {
-            const laserCol = otherCol.getComponent(cc.PhysicsBoxCollider);
-            if (laserCol && !laserCol.enabled) {
-                return;
-            }
-            this.die();
-        }
-
-        if (otherCol.node.group === "Ground" || otherCol.node.group === "Item" || otherCol.node.group === "Player") {
-            const worldManifold = contact.getWorldManifold();
-            const normal = worldManifold.normal;
-            if (normal.y < -0.5 && contact.isTouching()) {
-                this.isOnGround = true;
-                this.isJumping = false;
-            }
-        }
-    }
-
-    onEndContact(contact: cc.PhysicsContact, selfCol: cc.PhysicsCollider, otherCol: cc.PhysicsCollider) {
-        if (otherCol.node.group === "Ground" || otherCol.node.group === "Player") {
-            this.isOnGround = false;
-        }
+    private highlight(n: cc.Node, on: boolean) {
+        if (!n) return;
+        n.color = on ? cc.Color.YELLOW : cc.Color.WHITE;
     }
 
     private detectNearestItem() {
@@ -369,62 +401,6 @@ export default class Player extends cc.Component {
             this.nearestItem = newNearest;
             if (this.nearestItem) this.highlight(this.nearestItem, true);
         }
-    }
-
-    private gatherItems(n: cc.Node, out: cc.Node[]) {
-        if (n.group === 'Item' && n.activeInHierarchy) out.push(n);
-        n.children.forEach(c => this.gatherItems(c, out));
-    }
-
-    private highlight(n: cc.Node, on: boolean) {
-        if (!n) return;
-        n.color = on ? cc.Color.YELLOW : cc.Color.WHITE;
-    }
-
-    private pickUpItem(item: cc.Node) {
-        const db = FirebaseManager.getInstance().database;
-        const itemId = item.getComponent(ItemController)?.itemId || item.name;
-        db.ref(`boxes/${itemId}`).transaction((box) => {
-            if (box && box.active) {
-                box.active = false;
-                return box;
-            }
-            return;
-        }, (err, committed, snap) => {
-            if (committed) {
-                this.heldItem = item;
-                if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
-            }
-        });
-    }
-    
-    private dropItem() {
-        if (!this.heldItem) return;
-        const db = FirebaseManager.getInstance().database;
-        const itemId = this.heldItem.getComponent(ItemController)?.itemId || this.heldItem.name;
-        const dropPos = this.node.position.add(cc.v3(100 * (this.dir.x || this.lastFacing), -30, 0));
-        this.heldItem.parent = this.node.parent;
-        this.heldItem.setPosition(dropPos.x, dropPos.y);
-
-        if (this.smokeEffectPrefab) {
-            const smoke = cc.instantiate(this.smokeEffectPrefab);
-            smoke.setPosition(dropPos);
-            this.node.parent.addChild(smoke);
-            this.scheduleOnce(() => {
-                smoke.destroy();
-            }, 1.5);
-        }
-        if (this.smokeEffectPrefab) {
-            const smoke = cc.instantiate(this.smokeEffectPrefab);
-            smoke.setPosition(dropPos);
-            this.node.parent.addChild(smoke)
-        }
-        db.ref(`boxes/${itemId}`).update({
-            active: true,
-            position: { x: Math.round(dropPos.x), y: Math.round(dropPos.y) }
-        });
-        this.heldItem = null;
-        if (this.dropItemSound) cc.audioEngine.playEffect(this.dropItemSound, false);
     }
 
     public die() {
