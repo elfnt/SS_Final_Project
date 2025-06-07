@@ -11,49 +11,66 @@ function lerpAngle(a: number, b: number, t: number): number {
 
 @ccclass
 export default class Egg extends cc.Component {
-    @property({ tooltip: "Firebase §W™∫≥J ID" })
+    @property({ tooltip: "Firebase ‰∏äÁöÑËõã ID" })
     eggId: string = "egg1";
 
-    @property({ type: cc.SpriteFrame }) normalSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame }) crackedSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame }) brokenSprite: cc.SpriteFrame = null;
-    @property maxLife = 100;
-    @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
-    @property({ tooltip: "¥°≠»≥t´◊ (´ÿƒ≥ 10-20)" }) lerpSpeed: number = 15;
+    @property({ type: cc.SpriteFrame })
+    normalSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame })
+    crackedSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame })
+    brokenSprite: cc.SpriteFrame = null;
 
+    @property
+    maxLife = 100;
+
+    @property({ tooltip: 'Name of the ground group' })
+    groundGroup = 'Ground';
+
+    @property({ tooltip: "ÊèíÂÄºÈÄüÂ∫¶ (Âª∫Ë≠∞ 10-20)" })
+    lerpSpeed: number = 15;
+
+    // --- State Properties ---
     private isControlling: boolean = false;
     private targetPos: cc.Vec2 = null;
     private targetRot: number = 0;
     private touchingPlayerIds: Set<string> = new Set();
+    
     private sprite: cc.Sprite = null;
     private currentLife = 100;
     private lastY = 0;
     private isAlive = true;
     private rb: cc.RigidBody = null;
     private respawnPoint: cc.Vec2 = null;
+    
     private syncInterval = 0.05;
     private timeSinceLastSync = 0;
 
     onLoad() {
         this.sprite = this.getComponent(cc.Sprite);
         this.rb = this.getComponent(cc.RigidBody);
-        this.respawnPoint = cc.v2(this.node.x, this.node.y);
+        this.respawnPoint = this.node.position.clone();
         this.currentLife = this.maxLife;
         this.lastY = this.node.y;
-        this.targetPos = cc.v2(this.node.x, this.node.y);
+        this.targetPos = this.node.position.clone() as cc.Vec2;
         this.targetRot = this.node.angle;
+        
         this.initializeWithTransaction();
         this.listenToFirebase();
     }
 
     onBeginContact(contact, selfCollider, otherCollider) {
+        // All clients check for touch so they know who is eligible to take control.
         const playerComp = otherCollider.node.getComponent("Player") || otherCollider.node.getComponent("Other-Player");
         if (playerComp?.playerId) {
             this.touchingPlayerIds.add(playerComp.playerId);
             this.tryTakeControl(playerComp.playerId);
         }
+
+        // Only the authoritative controller calculates physics damage.
         if (!this.isControlling || !this.isAlive) return;
         if (otherCollider.node.group !== this.groundGroup) return;
+        
         const fallHeight = this.lastY - this.node.y;
         if (fallHeight > 100) {
             const damage = Math.floor(this.maxLife * Math.min((fallHeight - 100) / 400, 1));
@@ -67,26 +84,37 @@ export default class Egg extends cc.Component {
     
     onEndContact(contact, selfCol, otherCol) {
         const playerComp = otherCol.node.getComponent("Player") || otherCol.node.getComponent("Other-Player");
-        if (playerComp?.playerId) this.touchingPlayerIds.delete(playerComp.playerId);
+        if (playerComp?.playerId) {
+            this.touchingPlayerIds.delete(playerComp.playerId);
+        }
+
         if (!this.isControlling || otherCol.node.group !== this.groundGroup) return;
         this.lastY = this.node.y;
     }
 
     update(dt: number) {
         if (!this.isAlive) return;
+
+        // The core of the synchronization logic: separate paths for controller and remotes.
         if (this.isControlling) {
-            if (this.node.y > this.lastY) this.lastY = this.node.y;
+            // I am the controller. I run physics and send updates to Firebase.
+            if (this.node.y > this.lastY) {
+                this.lastY = this.node.y;
+            }
             this.timeSinceLastSync += dt;
             if (this.timeSinceLastSync >= this.syncInterval) {
                 this.syncStateToFirebase();
                 this.timeSinceLastSync = 0;
             }
         } else {
+            // I am a remote. My physics is disabled. I only follow the controller's state.
             if (this.targetPos) {
-                const targetPos3 = new cc.Vec3(this.targetPos.x, this.targetPos.y, this.node.position.z);
-                this.node.position = this.node.position.lerp(targetPos3, dt * this.lerpSpeed);
+                const targetVec3 = new cc.Vec3(this.targetPos.x, this.targetPos.y, 0);
+                this.node.position = this.node.position.lerp(targetVec3, dt * this.lerpSpeed);
             }
-            if (typeof this.targetRot === "number") this.node.angle = lerpAngle(this.node.angle, this.targetRot, dt * this.lerpSpeed);
+            if (typeof this.targetRot === "number") {
+                this.node.angle = lerpAngle(this.node.angle, this.targetRot, dt * this.lerpSpeed);
+            }
         }
     }
     
@@ -95,21 +123,34 @@ export default class Egg extends cc.Component {
         if (!db) return;
         const localId = cc.sys.localStorage.getItem("playerId");
         const eggRef = db.ref(`eggs/${this.eggId}`);
+
         eggRef.transaction((data) => {
-            if (data === null) return {
-                life: this.maxLife,
-                position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
-                rotation: Math.round(this.node.angle),
-                controllerId: localId
-            };
-        }, (error) => { if (error) cc.error('[Egg] Transaction failed!', error); });
+            if (data === null) {
+                // If the egg doesn't exist in the database, create it.
+                // The first player to do this becomes the initial controller.
+                return {
+                    life: this.maxLife,
+                    position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
+                    rotation: Math.round(this.node.angle),
+                    controllerId: localId
+                };
+            }
+            // If data exists, do nothing (abort the transaction).
+        }, (error) => { 
+            if (error) cc.error('[Egg] Transaction failed!', error);
+        });
     }
 
     private tryTakeControl(newPlayerId: string) {
         const localId = cc.sys.localStorage.getItem("playerId");
         const ref = FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}/controllerId`);
+
         ref.once("value", snapshot => {
             const currentController = snapshot.val();
+            // Take control if:
+            // 1. The current controller is no longer touching the egg.
+            // 2. The new player IS touching the egg.
+            // 3. The new player is ME (this client).
             if ((!currentController || !this.touchingPlayerIds.has(currentController)) && this.touchingPlayerIds.has(newPlayerId) && newPlayerId === localId) {
                 ref.set(newPlayerId);
             }
@@ -120,20 +161,40 @@ export default class Egg extends cc.Component {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
         const localId = cc.sys.localStorage.getItem("playerId");
+
         db.ref(`eggs/${this.eggId}`).on("value", (snap) => {
             const data = snap.val();
-            if (!data) { this.node.active = false; return; }
+            if (!data) {
+                this.node.active = false;
+                return;
+            }
             this.node.active = true;
-            this.isControlling = data.controllerId === localId;
-            if (this.rb) this.rb.enabled = this.isControlling;
+
+            // Update my role based on who Firebase says the controller is.
+            this.isControlling = (data.controllerId === localId);
+            if (this.rb) {
+                this.rb.enabled = this.isControlling;
+            }
+
+            // Sync life value for all clients.
             if (typeof data.life === "number" && this.currentLife !== data.life) {
                 this.currentLife = data.life;
                 this.updateEggAppearance();
-                if (this.currentLife <= 0) this.die(); else this.isAlive = true;
+                if (this.currentLife <= 0) {
+                    this.die();
+                } else {
+                    this.isAlive = true;
+                }
             }
+
+            // If I am a remote, update my target position to follow.
             if (!this.isControlling) {
-                if (data.position) this.targetPos = cc.v2(data.position.x, data.position.y);
-                if (typeof data.rotation === "number") this.targetRot = data.rotation;
+                if (data.position) {
+                    this.targetPos = cc.v2(data.position.x, data.position.y);
+                }
+                if (typeof data.rotation === "number") {
+                    this.targetRot = data.rotation;
+                }
             }
         });
     }
@@ -148,28 +209,41 @@ export default class Egg extends cc.Component {
 
     private updateEggAppearance() {
         if (!this.sprite) return;
-        if (this.currentLife <= 0) this.sprite.spriteFrame = this.brokenSprite;
-        else if (this.currentLife < this.maxLife) this.sprite.spriteFrame = this.crackedSprite;
-        else this.sprite.spriteFrame = this.normalSprite;
+        if (this.currentLife <= 0 && this.brokenSprite) {
+            this.sprite.spriteFrame = this.brokenSprite;
+        } else if (this.currentLife < this.maxLife && this.crackedSprite) {
+            this.sprite.spriteFrame = this.crackedSprite;
+        } else if (this.normalSprite) {
+            this.sprite.spriteFrame = this.normalSprite;
+        }
     }
 
     private die() {
         if (!this.isAlive) return;
         this.isAlive = false;
-        if (this.isControlling) this.scheduleOnce(() => this.respawn(), 3);
+        // The controller is responsible for initiating the respawn process.
+        if (this.isControlling) {
+            this.scheduleOnce(() => this.respawn(), 3);
+        }
     }
 
     public respawn() {
         if (!this.isControlling) return;
+        
+        // The controller tells Firebase that the egg has respawned.
         FirebaseManager.getInstance().database.ref(`eggs/${this.eggId}`).update({
             life: this.maxLife,
             position: { x: Math.round(this.respawnPoint.x), y: Math.round(this.respawnPoint.y) },
             rotation: 0
         }).then(() => {
+            // The controller also resets its own local physics state.
             this.node.setPosition(this.respawnPoint);
             this.node.angle = 0;
             this.lastY = this.node.y;
-            if (this.rb) { this.rb.linearVelocity = cc.v2(0, 0); this.rb.angularVelocity = 0; }
+            if (this.rb) {
+                this.rb.linearVelocity = cc.v2(0, 0);
+                this.rb.angularVelocity = 0;
+            }
         });
     }
 }
