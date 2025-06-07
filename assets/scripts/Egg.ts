@@ -11,24 +11,15 @@ function lerpAngle(a: number, b: number, t: number): number {
 
 @ccclass
 export default class Egg extends cc.Component {
-    @property({ tooltip: "Firebase 銝??????? ID" })
+    @property({ tooltip: "Firebase 上的蛋 ID" })
     eggId: string = "egg1";
 
-    @property({ type: cc.SpriteFrame })
-    normalSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame })
-    crackedSprite: cc.SpriteFrame = null;
-    @property({ type: cc.SpriteFrame })
-    brokenSprite: cc.SpriteFrame = null;
-
-    @property
-    maxLife = 100;
-
-    @property({ tooltip: 'Name of the ground group' })
-    groundGroup = 'Ground';
-
-    @property({ tooltip: "?????潮??摨? (撱箄降 10-20)" })
-    lerpSpeed: number = 15;
+    @property({ type: cc.SpriteFrame }) normalSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame }) crackedSprite: cc.SpriteFrame = null;
+    @property({ type: cc.SpriteFrame }) brokenSprite: cc.SpriteFrame = null;
+    @property maxLife = 100;
+    @property({ tooltip: 'Name of the ground group' }) groundGroup = 'Ground';
+    @property({ tooltip: "插值速度 (建議 10-20)" }) lerpSpeed: number = 15;
 
     // --- State Properties ---
     private isControlling: boolean = false;
@@ -125,17 +116,12 @@ export default class Egg extends cc.Component {
         const eggRef = db.ref(`eggs/${this.eggId}`);
 
         eggRef.transaction((data) => {
-            if (data === null) {
-                // If the egg doesn't exist in the database, create it.
-                // The first player to do this becomes the initial controller.
-                return {
-                    life: this.maxLife,
-                    position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
-                    rotation: Math.round(this.node.angle),
-                    controllerId: localId
-                };
-            }
-            // If data exists, do nothing (abort the transaction).
+            if (data === null) return {
+                life: this.maxLife,
+                position: { x: Math.round(this.node.x), y: Math.round(this.node.y) },
+                rotation: Math.round(this.node.angle),
+                controllerId: localId
+            };
         }, (error) => { 
             if (error) cc.error('[Egg] Transaction failed!', error);
         });
@@ -164,10 +150,7 @@ export default class Egg extends cc.Component {
 
         db.ref(`eggs/${this.eggId}`).on("value", (snap) => {
             const data = snap.val();
-            if (!data) {
-                this.node.active = false;
-                return;
-            }
+            if (!data) { this.node.active = false; return; }
             this.node.active = true;
 
             // Update my role based on who Firebase says the controller is.
@@ -180,21 +163,13 @@ export default class Egg extends cc.Component {
             if (typeof data.life === "number" && this.currentLife !== data.life) {
                 this.currentLife = data.life;
                 this.updateEggAppearance();
-                if (this.currentLife <= 0) {
-                    this.die();
-                } else {
-                    this.isAlive = true;
-                }
+                if (this.currentLife <= 0) this.die(); else this.isAlive = true;
             }
 
             // If I am a remote, update my target position to follow.
             if (!this.isControlling) {
-                if (data.position) {
-                    this.targetPos = cc.v2(data.position.x, data.position.y);
-                }
-                if (typeof data.rotation === "number") {
-                    this.targetRot = data.rotation;
-                }
+                if (data.position) this.targetPos = cc.v2(data.position.x, data.position.y);
+                if (typeof data.rotation === "number") this.targetRot = data.rotation;
             }
         });
     }
@@ -222,10 +197,9 @@ export default class Egg extends cc.Component {
         if (!this.isAlive) return;
         this.isAlive = false;
         // The controller is responsible for initiating the respawn process.
-        if (this.isControlling) {
-            this.scheduleOnce(() => this.respawn(), 3);
-        }
+        if (this.isControlling) this.scheduleOnce(() => this.respawn(), 3);
     }
+
 
     public respawn() {
         if (!this.isControlling) return;
@@ -240,8 +214,8 @@ export default class Egg extends cc.Component {
             this.node.setPosition(this.respawnPoint);
             this.node.angle = 0;
             this.lastY = this.node.y;
-            if (this.rb) {
-                this.rb.linearVelocity = cc.v2(0, 0);
+            if (this.rb) { 
+                this.rb.linearVelocity = cc.v2(0, 0); 
                 this.rb.angularVelocity = 0;
             }
         });

@@ -9,14 +9,14 @@ export default class FirebaseManager extends cc.Component {
     public auth: firebase.auth.Auth = null;
 
     private firebaseConfig = {
-  apiKey: "AIzaSyAXdnKMCukYKbwp3-7zfbs7hNMQTYPCCYI",
-  authDomain: "ssfp-2.firebaseapp.com",
-  databaseURL: "https://ssfp-2-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "ssfp-2",
-  storageBucket: "ssfp-2.firebasestorage.app",
-  messagingSenderId: "513093603084",
-  appId: "1:513093603084:web:6e6b58bac9319c74d6c329",
-  measurementId: "G-YKTZ36J51C"
+        apiKey: "AIzaSyAXdnKMCukYKbwp3-7zfbs7hNMQTYPCCYI",
+        authDomain: "ssfp-2.firebaseapp.com",
+        databaseURL: "https://ssfp-2-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "ssfp-2",
+        storageBucket: "ssfp-2.firebasestorage.app",
+        messagingSenderId: "513093603084",
+        appId: "1:513093603084:web:6e6b58bac9319c74d6c329",
+        measurementId: "G-YKTZ36J51C"
     };
 
     public static getInstance(): FirebaseManager {
@@ -69,8 +69,6 @@ export default class FirebaseManager extends cc.Component {
             const MIN_PLAYERS_TO_START = 4;
             if (playerIds.length < MIN_PLAYERS_TO_START) {
                 cc.warn(`[FirebaseManager] Not enough players: ${playerIds.length}`);
-                // If you want to allow starting with fewer for testing, change MIN_PLAYERS_TO_START
-                // or handle this logic in LobbyManager before calling.
                 return null;
             }
             
@@ -86,7 +84,8 @@ export default class FirebaseManager extends cc.Component {
 
             const randomIndex = Math.floor(Math.random() * selectedPlayerIds.length); 
             const imposterId = selectedPlayerIds[randomIndex];
-            const imposterName = activePlayers[imposterId]?.name || "Unknown";
+            const imposterPlayer = activePlayers[imposterId];
+            const imposterName = (imposterPlayer && imposterPlayer.name) ? imposterPlayer.name : "Unknown";
 
             const newGameState = {
                 hostId: hostId,

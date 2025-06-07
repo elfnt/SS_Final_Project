@@ -1,6 +1,7 @@
-// Player.ts (Full and Final Code)
+// Player.ts (Final Version)
 import MultiplayerManager from "./Multiplayer";
 import FirebaseManager from "./FirebaseManager";
+// --- UPDATED: Import the separate controller scripts ---
 import ItemController from "./ItemController";
 import BoxController from "./BoxController";
 
@@ -199,22 +200,29 @@ export default class Player extends cc.Component {
         if ((e.keyCode === cc.macro.KEY.a && this.dir.x === -1) || (e.keyCode === cc.macro.KEY.d && this.dir.x === 1)) this.dir.x = 0;
     }
 
+    // --- UPDATED: Item interaction logic now uses the correct architecture ---
+
     private gatherItems(n: cc.Node, out: cc.Node[]) {
-        if ((n.getComponent(ItemController) || n.getComponent(BoxController)) && n.activeInHierarchy) {
+        // Correctly find any node that has either an ItemController or a BoxController
+        // NOTE: The class name in your BoxController file is "BoxLogicController"
+        if ((n.getComponent("ItemController") || n.getComponent("BoxLogicController")) && n.activeInHierarchy) {
             out.push(n);
         }
         n.children.forEach(c => this.gatherItems(c, out));
     }
 
     private pickUpItem(item: cc.Node) {
+        // This logic assumes only simple items (with ItemController) are pickupable
         const itemScript = item.getComponent(ItemController);
         if (!itemScript) {
-            cc.warn("Tried to pick up an object without an ItemController script");
             return;
         }
 
+        // The Player script tells the item's script what to do.
+        // It does NOT write to Firebase for the item.
         itemScript.onPickedUpByPlayer();
 
+        // Visually hold the item locally
         this.heldItem = item;
         this.heldItem.active = false;
         if (this.pickUpSound) cc.audioEngine.playEffect(this.pickUpSound, false);
@@ -224,15 +232,17 @@ export default class Player extends cc.Component {
         if (!this.heldItem) return;
 
         const itemScript = this.heldItem.getComponent(ItemController);
-        if (!itemScript) {
-            this.heldItem = null;
-            return;
+        if (!itemScript) { 
+            this.heldItem = null; 
+            return; 
         }
 
         const dropPos = this.node.position.add(cc.v3(100 * this.lastFacing, 0, 0));
 
+        // Tell the item's script where it was dropped.
         itemScript.onDroppedByPlayer(cc.v2(dropPos.x, dropPos.y));
 
+        // Update visual state locally
         this.heldItem.parent = this.node.parent;
         this.heldItem.setPosition(dropPos);
         this.heldItem.active = true;
@@ -246,6 +256,8 @@ export default class Player extends cc.Component {
             this.scheduleOnce(() => { smoke.destroy(); }, 1.5);
         }
     }
+
+    // --- [The rest of the methods below are from your original file and are unchanged] ---
 
     private applyCharacterFromSelection() {
         this.selectedCharacter = cc.sys.localStorage.getItem("selectedCharacter") || "mario";
