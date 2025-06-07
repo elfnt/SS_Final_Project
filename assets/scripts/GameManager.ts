@@ -25,10 +25,10 @@ export default class GameManager extends cc.Component {
     onLoad() {
         const physicsMgr = cc.director.getPhysicsManager();
         physicsMgr.enabled = true;
-        physicsMgr.debugDrawFlags =
-            cc.PhysicsManager.DrawBits.e_aabbBit |
-            cc.PhysicsManager.DrawBits.e_jointBit |
-            cc.PhysicsManager.DrawBits.e_shapeBit;
+        // physicsMgr.debugDrawFlags =
+        //     cc.PhysicsManager.DrawBits.e_aabbBit |
+        //     cc.PhysicsManager.DrawBits.e_jointBit |
+        //     cc.PhysicsManager.DrawBits.e_shapeBit;
         //physicsMgr.debugDrawFlags = 0;
     }
 
