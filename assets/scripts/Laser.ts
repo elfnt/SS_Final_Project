@@ -17,6 +17,7 @@ export default class Laser extends cc.Component {
 
     onLoad() {
         const col = this.node.getComponent(cc.PhysicsBoxCollider);
+        this.originalWidth = this.node.width;
         this.originalHeight = this.node.height;
         if (col) {
             this.originalColliderSize = col.size.clone();
