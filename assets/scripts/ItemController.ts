@@ -1,4 +1,4 @@
-// ItemController.ts (Refactored for Smooth Sync)
+// ItemController.ts (Final Version with Public Methods)
 import FirebaseManager from "./FirebaseManager";
 
 const { ccclass, property } = cc._decorator;
@@ -10,124 +10,106 @@ function lerp(a: number, b: number, t: number): number {
 
 @ccclass
 export default class ItemController extends cc.Component {
-    @property({ tooltip: "Firebase 上的 item ID（每個物品唯一）" })
+    @property({ tooltip: "Firebase 上的 item ID" })
     itemId: string = "item1";
 
-    // --- NEW: Properties for smooth interpolation ---
-    @property({ tooltip: "插值速度，越大越快跟上，建議 5-15" })
-    lerpSpeed: number = 10;
-    
-    private targetPosition: cc.Vec2 = null;
-    // ---
+    @property({ tooltip: "插值速度 (建議 10-20)" })
+    lerpSpeed: number = 15;
 
+    private isControlling: boolean = false;
+    private targetPos: cc.Vec2 = null;
     private rb: cc.RigidBody = null;
     private initialPosition: cc.Vec2 = null;
-    private isControlling: boolean = false;
-
-    private lastSentPos: cc.Vec2 = null;
+    private syncInterval = 0.1;
+    private timeSinceLastSync = 0;
 
     onLoad() {
-        this.initialPosition = this.node.getPosition().clone();
-        this.targetPosition = this.initialPosition.clone();
+        this.initialPosition = cc.v2(this.node.position.x, this.node.position.y);
+        this.targetPos = this.initialPosition.clone();
         this.rb = this.getComponent(cc.RigidBody);
-        
-        this.initItemInFirebase();
+        this.initializeWithTransaction();
         this.listenToFirebase();
     }
 
-    start() {
-        // Schedule position updates only if this client is the controller
-        this.schedule(() => {
-            if (this.isControlling && this.node.active) {
-                this.tryUploadPosition();
-            }
-        }, 0.1); // Can be less frequent for simple items
-    }
-
     update(dt: number) {
-        // Remote client logic: Smoothly interpolate towards the target position
-        if (!this.isControlling && this.node.active && this.targetPosition) {
-            const currentPos = this.node.getPosition();
-            const newPos = currentPos.lerp(this.targetPosition, dt * this.lerpSpeed);
-            this.node.setPosition(newPos);
+        if (!this.node.active) return;
+        if (this.isControlling) {
+            this.timeSinceLastSync += dt;
+            if (this.timeSinceLastSync >= this.syncInterval) {
+                this.syncStateToFirebase();
+                this.timeSinceLastSync = 0;
+            }
+        } else {
+            if (this.targetPos) {
+                const targetPos3 = new cc.Vec3(this.targetPos.x, this.targetPos.y, this.node.position.z);
+                this.node.position = this.node.position.lerp(targetPos3, dt * this.lerpSpeed);
+            }
         }
     }
 
-    private tryUploadPosition() {
-        const curPos = this.node.getPosition();
-        if (
-            !this.lastSentPos ||
-            Math.abs(curPos.x - this.lastSentPos.x) > 1 ||
-            Math.abs(curPos.y - this.lastSentPos.y) > 1
-        ) {
-            const db = FirebaseManager.getInstance()?.database;
-            if (!db) return;
-
-            db.ref(`items/${this.itemId}/position`).set({
-                x: Math.round(curPos.x),
-                y: Math.round(curPos.y)
-            });
-            this.lastSentPos = curPos.clone();
-        }
-    }
-
-    private initItemInFirebase() {
+    private initializeWithTransaction() {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
-
         const localId = cc.sys.localStorage.getItem("playerId");
         const itemRef = db.ref(`items/${this.itemId}`);
-
-        itemRef.once("value", (snapshot) => {
-            if (!snapshot.exists()) {
-                itemRef.set({
-                    active: true,
-                    position: { x: Math.round(this.initialPosition.x), y: Math.round(this.initialPosition.y) },
-                    controllerId: localId // First one here becomes the controller
-                });
-                cc.log(`[ItemController] 初始化 ${this.itemId} 到 Firebase, 控制者為 ${localId}`);
-            }
+        itemRef.transaction((data) => {
+            if (data === null) return {
+                active: true,
+                position: { x: Math.round(this.initialPosition.x), y: Math.round(this.initialPosition.y) },
+                controllerId: localId // First player becomes permanent controller
+            };
         });
     }
 
     private listenToFirebase() {
         const db = FirebaseManager.getInstance()?.database;
         if (!db) return;
-        
         const localId = cc.sys.localStorage.getItem("playerId");
-
         db.ref(`items/${this.itemId}`).on("value", (snapshot) => {
-            const itemData = snapshot.val();
-            if (!itemData) {
-                this.node.active = false;
-                return;
-            }
-
-            this.isControlling = (itemData.controllerId === localId);
-
-            if (this.rb) {
-                // Controller has physics, remote does not
-                this.rb.enabled = this.isControlling;
-            }
-            
-            this.node.active = itemData.active;
-
-            if (!this.isControlling && itemData.position) {
-                // We are a remote client, so update the target position for lerping
-                this.targetPosition = cc.v2(itemData.position.x, itemData.position.y);
-            }
+            const data = snapshot.val();
+            if (!data || data.active === false) { this.node.active = false; return; }
+            this.node.active = true;
+            this.isControlling = (data.controllerId === localId);
+            if (this.rb) this.rb.enabled = this.isControlling;
+            if (!this.isControlling && data.position) this.targetPos = cc.v2(data.position.x, data.position.y);
         });
     }
 
-    public resetToInitial() {
-        if (!this.isControlling) return; // Only controller can reset
-
-        const db = FirebaseManager.getInstance()?.database;
-        if (!db) return;
-        db.ref(`items/${this.itemId}`).update({
-            active: true,
-            position: { x: Math.round(this.initialPosition.x), y: Math.round(this.initialPosition.y) }
+    private syncStateToFirebase() {
+        if (!this.isControlling) return;
+        const curPos = this.node.getPosition();
+        FirebaseManager.getInstance().database.ref(`items/${this.itemId}`).update({
+            'position/x': Math.round(curPos.x),
+            'position/y': Math.round(curPos.y)
         });
-        // The listener will handle the position update for all clients
+    }
+    
+    // --- NEWLY ADDED PUBLIC METHODS FOR PLAYER SCRIPT TO CALL ---
+    /**
+     * Called by the Player script when it wants to pick this item up.
+     */
+    public onPickedUpByPlayer() {
+        // Only the authoritative controller for this item can confirm the pickup in the database.
+        if (!this.isControlling) {
+            console.log(`[ItemController] A remote player picked me up, but I am the controller. Ignoring remote command.`);
+            return;
+        }
+        console.log(`[ItemController] I am the controller and I've been picked up. Updating Firebase.`);
+        FirebaseManager.getInstance().database.ref(`items/${this.itemId}/active`).set(false);
+    }
+    
+    /**
+     * Called by the Player script when it wants to drop this item.
+     * @param dropPos The world position where the item should be dropped.
+     */
+    public onDroppedByPlayer(dropPos: cc.Vec2) {
+        // Only the authoritative controller can set the new position in the database.
+        if (!this.isControlling) return;
+        
+        console.log(`[ItemController] I am the controller and I've been dropped. Updating Firebase.`);
+        FirebaseManager.getInstance().database.ref(`items/${this.itemId}`).update({
+            active: true,
+            position: { x: Math.round(dropPos.x), y: Math.round(dropPos.y) }
+        });
     }
 }

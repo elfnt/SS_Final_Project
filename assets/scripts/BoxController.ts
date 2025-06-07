@@ -61,20 +61,54 @@ export default class BoxLogicController extends cc.Component {
 
         const firebase = FirebaseManager.getInstance();
         const localId = cc.sys.localStorage.getItem("playerId");
+        const ref = firebase.database.ref(`boxes/${this.boxId}`);
 
-        firebase.database.ref(`boxes/${this.boxId}/isRespawn`).set(false);
+        // ? 初始化 Firebase 狀態
+        ref.update({
+            isRespawn: true,
+            controllerId: localId,
+            position: {
+                x: Math.round(this.initialPosition.x),
+                y: Math.round(this.initialPosition.y),
+                rotation: Math.round(this.node.angle)
+            },
+            boxTriggered: false,
+            status: 0
+        }).then(() => {
+            cc.log(`[BoxLogic] ? 開局初始化 isRespawn = true，並寫入初始位置`);
 
-        firebase.database.ref(`boxes/${this.boxId}/controllerId`).once("value", snapshot => {
-            if (!snapshot.exists()) {
-                firebase.database.ref(`boxes/${this.boxId}`).update({
-                    controllerId: localId
-                });
-                cc.log(`[BoxLogic] 初始控制者設為 ${localId}`);
-            }
+            // ? 更新 node 的位置
+            this.node.setPosition(this.initialPosition);
+            this.node.angle = this.angleISet;
+
+            // ? 啟動 Firebase 監聽
+            this.listenToFirebase();
+
+            // ? 啟動位置上傳排程
+            this.schedule(() => {
+                if (!this.isRespawning && this.isControlling) {
+                    this.tryUploadPosition();
+                }
+            }, 0.05);
+
+            // ? 延遲清除重生狀態
+            setTimeout(() => {
+                ref.update({ isRespawn: false });
+                this.isRespawning = false;
+                cc.log(`[BoxLogic] ? isRespawn = false`);
+            }, this.respawnLockSeconds * 1000);
         });
 
-        this.listenToFirebase();
-        this.uploadInitialPosition();
+        cc.systemEvent.on("PLAYER_RESPAWNED", this.onPlayerRespawned, this);
+    }
+
+    onDestroy() {
+        cc.systemEvent.off("PLAYER_RESPAWNED", this.onPlayerRespawned, this);
+    }
+
+    private onPlayerRespawned() {
+        cc.log(`[BoxLogic] ? 玩家重生事件觸發 → 還原 Box 位置`);
+        this.doRespawn();
     }
 
     start() {
@@ -143,10 +177,11 @@ export default class BoxLogicController extends cc.Component {
                     });
                     cc.log(`[BoxLogic] ? ${id} 成為新的控制者（原控制者已離開）`);
                 }
+            } else {
+                cc.log(`[BoxLogic] ${id} 嘗試接管但 ${current} 仍為控制者或條件不符`);
             }
         });
     }
-
 
     private tryUploadPosition() {
         const pos = this.node.getPosition();
@@ -155,6 +190,8 @@ export default class BoxLogicController extends cc.Component {
         const xChanged = !this.lastSentPos || Math.abs(pos.x - this.lastSentPos.x) > 0.5;
         const yChanged = !this.lastSentPos || Math.abs(pos.y - this.lastSentPos.y) > 0.5;
         const rotChanged = this.lastSentRot === null || Math.abs(angle - this.lastSentRot) > 1;
+
+        cc.log(`[BoxLogic] ? 嘗試上傳 position，xChanged=${xChanged}, yChanged=${yChanged}, rotChanged=${rotChanged}`);
 
         if (xChanged || yChanged || rotChanged) {
             this.lastSentPos = pos.clone();
@@ -165,6 +202,10 @@ export default class BoxLogicController extends cc.Component {
                 x: Math.round(pos.x),
                 y: Math.round(pos.y),
                 rotation: Math.round(angle)
+            }).then(() => {
+                cc.log(`[BoxLogic] ? 成功上傳位置：(${pos.x}, ${pos.y}, rot=${angle})`);
+            }).catch((err) => {
+                cc.error(`[BoxLogic] ? 上傳 Firebase 失敗：`, err);
             });
         }
     }
@@ -182,11 +223,7 @@ export default class BoxLogicController extends cc.Component {
             this.controllerId = remoteController;
             this.isControlling = (remoteController === localId);
 
-            // --- CHANGED: This is the core of the new logic ---
-            if (this.rb) {
-                // Controller has physics enabled, remotes do not.
-                this.rb.enabled = this.isControlling;
-            }
+            cc.log(`[BoxLogic] ? localId=${localId}, controllerId=${remoteController}, isControlling=${this.isControlling}`);
 
             this.isRespawning = !!data.isRespawn;
 
@@ -198,10 +235,13 @@ export default class BoxLogicController extends cc.Component {
                 if (typeof pos.rotation === 'number') {
                     this.targetRotation = pos.rotation;
                 }
-            } else if (this.isControlling && data.isRespawn) {
-                // If we ARE the controller and a respawn happened, snap our position.
-                this.node.setPosition(this.initialPosition);
-                this.node.angle = this.angleISet;
+                this.scheduleOnce(() => {
+                    if (this.rb && !this.rb.enabled) {
+                        this.rb.enabled = true;
+                        this.rb.awake = true;
+                    }
+                }, 0.01);
+                cc.log(`[BoxLogic] ?? 非控制者同步位置至 ${pos.x}, ${pos.y}, rot=${pos.rotation}`);
             }
         });
     }
@@ -234,15 +274,6 @@ export default class BoxLogicController extends cc.Component {
                 this.isRespawning = false; // This will also be set by the listener
                 cc.log(`[BoxLogic] isRespawn = false`);
             }, this.respawnLockSeconds * 1000);
-        });
-    }
-
-    private uploadInitialPosition() {
-        const firebase = FirebaseManager.getInstance();
-        firebase.database.ref(`boxes/${this.boxId}/position`).set({
-            x: Math.round(this.initialPosition.x),
-            y: Math.round(this.initialPosition.y),
-            rotation: Math.round(this.node.angle)
         });
     }
 
